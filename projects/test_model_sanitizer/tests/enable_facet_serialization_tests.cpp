@@ -19,10 +19,10 @@
  *
  */
 #include <boost/test/unit_test.hpp>
-#include "dogen.utility/io/vector_io.hpp"
-#include "dogen.utility/test/logging.hpp"
-#include "dogen.utility/test/macros.hpp"
-#include "dogen.utility/test/canned_tests.hpp"
+#include "cpp_ref_impl/utility/io/vector_io.hpp"
+#include "cpp_ref_impl/utility/test/logging.hpp"
+#include "cpp_ref_impl/utility/test/macros.hpp"
+#include "cpp_ref_impl/utility/test/canned_tests.hpp"
 #include "dogen/test_models/enable_facet_serialization/serialization/all_ser.hpp"
 #include "dogen/test_models/test_model_sanitizer/register_types.hpp"
 #include "dogen/test_models/enable_facet_serialization/types/all.hpp"
@@ -64,7 +64,7 @@ std::ostream& operator<<(std::ostream& o, const first_class& v) {
 
 using namespace dogen::test_models::enable_facet_serialization;
 using namespace dogen::test_models::enable_facet_serialization::package1;
-using namespace dogen::utility::test;
+using namespace cpp_ref_impl::utility::test;
 
 BOOST_AUTO_TEST_SUITE(enable_facet_serialization_tests)
 

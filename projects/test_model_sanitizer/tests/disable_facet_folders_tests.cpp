@@ -19,9 +19,9 @@
  *
  */
 #include <boost/test/unit_test.hpp>
-#include "dogen.utility/io/vector_io.hpp"
-#include "dogen.utility/test/logging.hpp"
-#include "dogen.utility/test/canned_tests.hpp"
+#include "cpp_ref_impl/utility/io/vector_io.hpp"
+#include "cpp_ref_impl/utility/test/logging.hpp"
+#include "cpp_ref_impl/utility/test/canned_tests.hpp"
 #include "dogen/test_models/disable_facet_folders/all.hpp"
 #include "dogen/test_models/disable_facet_folders/all_io.hpp"
 #include "dogen/test_models/disable_facet_folders/all_ser.hpp"
@@ -39,7 +39,7 @@ const std::string test_suite("disable_facet_folders_tests");
 
 using namespace dogen::test_models::disable_facet_folders;
 using namespace dogen::test_models::disable_facet_folders::package1;
-using namespace dogen::utility::test;
+using namespace cpp_ref_impl::utility::test;
 
 BOOST_AUTO_TEST_SUITE(disable_facet_folders_tests)
 

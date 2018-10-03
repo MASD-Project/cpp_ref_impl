@@ -19,9 +19,9 @@
  *
  */
 #include <boost/test/unit_test.hpp>
-#include "dogen.utility/io/vector_io.hpp"
-#include "dogen.utility/test/logging.hpp"
-#include "dogen.utility/test/canned_tests.hpp"
+#include "cpp_ref_impl/utility/io/vector_io.hpp"
+#include "cpp_ref_impl/utility/test/logging.hpp"
+#include "cpp_ref_impl/utility/test/canned_tests.hpp"
 #include "dogen/test_models/two_layers_with_objects/types/all.hpp"
 #include "dogen/test_models/two_layers_with_objects/io/all_io.hpp"
 #include "dogen/test_models/two_layers_with_objects/serialization/all_ser.hpp"
@@ -40,7 +40,7 @@ const std::string test_suite("two_layers_with_objects_tests");
 using namespace dogen::test_models::two_layers_with_objects;
 using namespace dogen::test_models::two_layers_with_objects::package_1;
 using namespace dogen::test_models::two_layers_with_objects::Package_2;
-using namespace dogen::utility::test;
+using namespace cpp_ref_impl::utility::test;
 
 BOOST_AUTO_TEST_SUITE(two_layers_with_objects_tests)
 

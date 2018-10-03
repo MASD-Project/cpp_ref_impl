@@ -19,10 +19,10 @@
  *
  */
 #include <boost/test/unit_test.hpp>
-#include "dogen.utility/io/vector_io.hpp"
-#include "dogen.utility/test/logging.hpp"
-#include "dogen.utility/test/canned_tests.hpp"
-#include "dogen.utility/test/io_tester.hpp"
+#include "cpp_ref_impl/utility/io/vector_io.hpp"
+#include "cpp_ref_impl/utility/test/logging.hpp"
+#include "cpp_ref_impl/utility/test/canned_tests.hpp"
+#include "cpp_ref_impl/utility/test/io_tester.hpp"
 #include "dogen/test_models/std_model/types/all.hpp"
 #include "dogen/test_models/std_model/io/all_io.hpp"
 #include "dogen/test_models/std_model/serialization/all_ser.hpp"
@@ -39,7 +39,7 @@ const std::string test_suite("std_model_tests");
 }
 
 using namespace dogen::test_models::std_model;
-using namespace dogen::utility::test;
+using namespace cpp_ref_impl::utility::test;
 
 BOOST_AUTO_TEST_SUITE(std_model_tests)
 
@@ -109,7 +109,7 @@ BOOST_AUTO_TEST_CASE(validate_io) {
 
     class_a a;
     a.prop0("\"\" 'test' \\ \n");
-    using dogen::utility::test::io_tester;
+    using cpp_ref_impl::utility::test::io_tester;
     io_tester<class_a>::inserter_operator_produces_valid_json(a);
 }
 

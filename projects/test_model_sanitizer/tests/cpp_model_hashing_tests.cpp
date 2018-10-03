@@ -20,9 +20,9 @@
  */
 #include <boost/test/unit_test.hpp>
 #include <boost/exception/diagnostic_information.hpp>
-#include "dogen.utility/io/vector_io.hpp"
-#include "dogen.utility/test/logging.hpp"
-#include "dogen.utility/test/canned_tests.hpp"
+#include "cpp_ref_impl/utility/io/vector_io.hpp"
+#include "cpp_ref_impl/utility/test/logging.hpp"
+#include "cpp_ref_impl/utility/test/canned_tests.hpp"
 #include "dogen/test_models/cpp_model/types/all.hpp"
 #include "dogen/test_models/cpp_model/io/all_io.hpp"
 #include "dogen/test_models/cpp_model/serialization/all_ser.hpp"
@@ -39,7 +39,7 @@ const std::string test_suite("cpp_model_hashing_tests");
 }
 
 using namespace dogen::test_models::cpp_model;
-using namespace dogen::utility::test;
+using namespace cpp_ref_impl::utility::test;
 
 BOOST_AUTO_TEST_SUITE(cpp_model_hashing_tests)
 

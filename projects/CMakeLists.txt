@@ -198,6 +198,7 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/projects/split_project/dir/inc/another
     ${CMAKE_SOURCE_DIR}/projects/cpp_98/include
     ${CMAKE_SOURCE_DIR}/projects/lam_model/cpp/include
+    ${CMAKE_SOURCE_DIR}/projects/utility/include
     )
 
 #
@@ -229,3 +230,4 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/seam)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/split_project/some_dir/split_project)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_98)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/lam_model/cpp)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/utility)

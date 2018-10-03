@@ -19,9 +19,9 @@
  *
  */
 #include <boost/test/unit_test.hpp>
-#include "dogen.utility/io/vector_io.hpp"
-#include "dogen.utility/test/logging.hpp"
-#include "dogen.utility/test/canned_tests.hpp"
+#include "cpp_ref_impl/utility/io/vector_io.hpp"
+#include "cpp_ref_impl/utility/test/logging.hpp"
+#include "cpp_ref_impl/utility/test/canned_tests.hpp"
 #include "dogen/test_models/enable_facet_io/types/all.hpp"
 #include "dogen/test_models/enable_facet_io/io/all_io.hpp"
 
@@ -50,7 +50,7 @@ private:
 
 using namespace dogen::test_models::enable_facet_io;
 using namespace dogen::test_models::enable_facet_io::package1;
-using namespace dogen::utility::test;
+using namespace cpp_ref_impl::utility::test;
 
 BOOST_AUTO_TEST_SUITE(enable_facet_io_tests)
 

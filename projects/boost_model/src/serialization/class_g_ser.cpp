@@ -28,11 +28,21 @@
 #include <boost/archive/binary_oarchive.hpp>
 #include <boost/archive/polymorphic_iarchive.hpp>
 #include <boost/archive/polymorphic_oarchive.hpp>
-#include "dogen.utility/serialization/path.hpp"
 #include "dogen/test_models/boost_model/serialization/class_g_ser.hpp"
 
 namespace boost {
 namespace serialization {
+
+template<class Archive>
+void serialize(Archive& ar, boost::filesystem::path& p, const unsigned int/*v*/)
+{
+    std::string s;
+    if(Archive::is_saving::value)
+        s = p.generic_string();
+    ar & boost::serialization::make_nvp("path", s);
+    if(Archive::is_loading::value)
+        p = s;
+}
 
 template<typename Archive>
 inline void save(Archive& ar,

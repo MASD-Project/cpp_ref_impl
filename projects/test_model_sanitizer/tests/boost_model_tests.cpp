@@ -19,9 +19,9 @@
  *
  */
 #include <boost/test/unit_test.hpp>
-#include "dogen.utility/io/vector_io.hpp"
-#include "dogen.utility/test/logging.hpp"
-#include "dogen.utility/test/canned_tests.hpp"
+#include "cpp_ref_impl/utility/io/vector_io.hpp"
+#include "cpp_ref_impl/utility/test/logging.hpp"
+#include "cpp_ref_impl/utility/test/canned_tests.hpp"
 #include "dogen/test_models/boost_model/types/all.hpp"
 #include "dogen/test_models/boost_model/io/all_io.hpp"
 #include "dogen/test_models/boost_model/serialization/all_ser.hpp"
@@ -38,7 +38,7 @@ const std::string test_suite("boost_model_tests");
 }
 
 using namespace dogen::test_models::boost_model;
-using namespace dogen::utility::test;
+using namespace cpp_ref_impl::utility::test;
 
 BOOST_AUTO_TEST_SUITE(boost_model_tests)
 
