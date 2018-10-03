@@ -231,3 +231,4 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/split_project/some_dir/split_projec
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_98)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/lam_model/cpp)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/utility)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/models)
