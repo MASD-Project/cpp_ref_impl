@@ -1,0 +1,34 @@
+{
+  "tagged_values": {
+    "yarn.dia.comment": "true",
+    "yarn.model_modules": "disable_facet_folders",
+    "yarn.external_modules": "dogen::test_models",
+    "yarn.input_language": "cpp",
+    "quilt.cpp.enabled": "true",
+    "quilt.cpp.msbuild.enabled": "false",
+    "quilt.cpp.visual_studio.project.enabled": "false",
+    "quilt.cpp.visual_studio.solution.enabled": "false",
+    "quilt.csharp.enabled": "false",
+    "annotations.profile": "dogen.disable_facet_directories"
+  },
+  "elements": [
+    {
+      "name": "package1",
+      "fallback_element_type": "dogen::module"
+    },
+    {
+      "name": "package1::first_class",
+      "fallback_element_type": "dogen::object",
+      "attributes": [
+        {
+          "name": "public_attribute",
+          "type": "int"
+        },
+        {
+          "name": "private_attribute",
+          "type": "int"
+        }
+      ]
+    }
+  ]
+}

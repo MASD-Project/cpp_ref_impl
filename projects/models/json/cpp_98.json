@@ -1,0 +1,98 @@
+{
+  "documentation": "Tests support for C++ 98.\n",
+  "tagged_values": {
+    "yarn.dia.comment": "true",
+    "yarn.model_modules": "cpp_98",
+    "yarn.external_modules": "dogen::test_models",
+    "yarn.input_language": "cpp",
+    "quilt.cpp.enabled": "true",
+    "quilt.cpp.msbuild.enabled": "false",
+    "quilt.cpp.visual_studio.project.enabled": "false",
+    "quilt.cpp.visual_studio.solution.enabled": "false",
+    "quilt.csharp.enabled": "false",
+    "quilt.cpp.standard": "c++-98",
+    "quilt.cpp.hash.enabled": "false"
+  },
+  "elements": [
+    {
+      "name": "package1",
+      "fallback_element_type": "dogen::module"
+    },
+    {
+      "name": "package1::first_class",
+      "fallback_element_type": "dogen::object",
+      "attributes": [
+        {
+          "name": "public_attribute",
+          "type": "int"
+        },
+        {
+          "name": "private_attribute",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "parent",
+      "fallback_element_type": "dogen::object",
+      "attributes": [
+        {
+          "name": "prop_0",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "child",
+      "parents": [
+        "parent"
+      ],
+      "fallback_element_type": "dogen::object",
+      "attributes": [
+        {
+          "name": "prop_1",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "no_default_ctor",
+      "documentation": "This class does not require a default constructor due to using simple types.\n",
+      "fallback_element_type": "dogen::object",
+      "attributes": [
+        {
+          "name": "prop_0",
+          "type": "std::string"
+        }
+      ]
+    },
+    {
+      "name": "no_properties",
+      "fallback_element_type": "dogen::object"
+    },
+    {
+      "name": "an_enumeration",
+      "stereotypes": [
+        "dogen::enumeration"
+      ],
+      "fallback_element_type": "dogen::object",
+      "attributes": [
+        {
+          "name": "first",
+          "type": ""
+        },
+        {
+          "name": "second",
+          "type": ""
+        }
+      ]
+    },
+    {
+      "name": "an_exception",
+      "stereotypes": [
+        "dogen::exception"
+      ],
+      "fallback_element_type": "dogen::object"
+    }
+  ]
+}
