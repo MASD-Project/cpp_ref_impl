@@ -322,5 +322,4 @@ endif()
 #
 # include all sub directories
 #
-add_subdirectory(${CMAKE_SOURCE_DIR}/build)
 add_subdirectory(${CMAKE_SOURCE_DIR}/projects)
