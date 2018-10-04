@@ -18,13 +18,13 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef DOGEN_TEST_MODELS_COMPRESSED_IO_ALL_IO_HPP
-#define DOGEN_TEST_MODELS_COMPRESSED_IO_ALL_IO_HPP
+#ifndef CPP_REF_IMPL_COMPRESSED_HASH_ALL_HASH_HPP
+#define CPP_REF_IMPL_COMPRESSED_HASH_ALL_HASH_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "dogen/test_models/compressed/io/package1/first_class_io.hpp"
+#include "cpp_ref_impl/compressed/hash/package1/first_class_hash.hpp"
 
 #endif

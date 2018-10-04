@@ -18,24 +18,24 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef DOGEN_TEST_MODELS_COMPRESSED_SERIALIZATION_PACKAGE1_FIRST_CLASS_FWD_SER_HPP
-#define DOGEN_TEST_MODELS_COMPRESSED_SERIALIZATION_PACKAGE1_FIRST_CLASS_FWD_SER_HPP
+#ifndef CPP_REF_IMPL_COMPRESSED_IO_PACKAGE1_FIRST_CLASS_IO_HPP
+#define CPP_REF_IMPL_COMPRESSED_IO_PACKAGE1_FIRST_CLASS_IO_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "dogen/test_models/compressed/types/package1/first_class_fwd.hpp"
+#include <iosfwd>
+#include "cpp_ref_impl/compressed/types/package1/first_class.hpp"
 
-namespace boost {
-namespace serialization {
+namespace cpp_ref_impl {
+namespace compressed {
+namespace package1 {
 
-template<class Archive>
-void save(Archive& ar, const dogen::test_models::compressed::package1::first_class& v, unsigned int version);
+std::ostream&
+operator<<(std::ostream& s,
+     const cpp_ref_impl::compressed::package1::first_class& v);
 
-template<class Archive>
-void load(Archive& ar, dogen::test_models::compressed::package1::first_class& v, unsigned int version);
-
-} }
+} } }
 
 #endif

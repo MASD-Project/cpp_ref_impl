@@ -18,15 +18,13 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef DOGEN_TEST_MODELS_COMPRESSED_ODB_PACKAGE1_FIRST_CLASS_PRAGMAS_HPP
-#define DOGEN_TEST_MODELS_COMPRESSED_ODB_PACKAGE1_FIRST_CLASS_PRAGMAS_HPP
+#ifndef CPP_REF_IMPL_COMPRESSED_TYPES_ALL_HPP
+#define CPP_REF_IMPL_COMPRESSED_TYPES_ALL_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "dogen/test_models/compressed/types/package1/first_class.hpp"
-
-// class has no ODB pragmas defined.
+#include "cpp_ref_impl/compressed/types/package1/first_class.hpp"
 
 #endif

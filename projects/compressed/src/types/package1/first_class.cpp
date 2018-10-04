@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/compressed/types/package1/first_class.hpp"
+#include "cpp_ref_impl/compressed/types/package1/first_class.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace compressed {
 namespace package1 {
 
@@ -68,4 +67,4 @@ void first_class::private_attribute(const int v) {
     private_attribute_ = v;
 }
 
-} } } }
+} } }

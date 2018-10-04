@@ -30,6 +30,6 @@ set(files ${files} ${odb_files})
 
 add_library(compressed STATIC ${files})
 set_target_properties(compressed PROPERTIES
-    OUTPUT_NAME dogen.compressed)
+    OUTPUT_NAME cpp_ref_impl.compressed)
 
 install(TARGETS compressed ARCHIVE DESTINATION lib COMPONENT libraries)

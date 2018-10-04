@@ -18,26 +18,13 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef DOGEN_TEST_MODELS_COMPRESSED_SERIALIZATION_PACKAGE1_FIRST_CLASS_SER_HPP
-#define DOGEN_TEST_MODELS_COMPRESSED_SERIALIZATION_PACKAGE1_FIRST_CLASS_SER_HPP
+#ifndef CPP_REF_IMPL_COMPRESSED_ODB_ALL_PRAGMAS_HPP
+#define CPP_REF_IMPL_COMPRESSED_ODB_ALL_PRAGMAS_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include <boost/serialization/split_free.hpp>
-#include "dogen/test_models/compressed/types/package1/first_class.hpp"
-
-BOOST_SERIALIZATION_SPLIT_FREE(dogen::test_models::compressed::package1::first_class)
-namespace boost {
-namespace serialization {
-
-template<typename Archive>
-void save(Archive& ar, const dogen::test_models::compressed::package1::first_class& v, unsigned int version);
-
-template<typename Archive>
-void load(Archive& ar, dogen::test_models::compressed::package1::first_class& v, unsigned int version);
-
-} }
+#include "cpp_ref_impl/compressed/odb/package1/first_class_pragmas.hpp"
 
 #endif

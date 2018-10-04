@@ -18,37 +18,13 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef DOGEN_TEST_MODELS_COMPRESSED_HASH_PACKAGE1_FIRST_CLASS_HASH_HPP
-#define DOGEN_TEST_MODELS_COMPRESSED_HASH_PACKAGE1_FIRST_CLASS_HASH_HPP
+#ifndef CPP_REF_IMPL_COMPRESSED_SERIALIZATION_ALL_SER_HPP
+#define CPP_REF_IMPL_COMPRESSED_SERIALIZATION_ALL_SER_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include <functional>
-#include "dogen/test_models/compressed/types/package1/first_class.hpp"
+#include "cpp_ref_impl/compressed/serialization/package1/first_class_ser.hpp"
 
-namespace dogen {
-namespace test_models {
-namespace compressed {
-namespace package1 {
-
-struct first_class_hasher {
-public:
-    static std::size_t hash(const first_class& v);
-};
-
-} } } }
-
-namespace std {
-
-template<>
-struct hash<dogen::test_models::compressed::package1::first_class> {
-public:
-    size_t operator()(const dogen::test_models::compressed::package1::first_class& v) const {
-        return dogen::test_models::compressed::package1::first_class_hasher::hash(v);
-    }
-};
-
-}
 #endif
