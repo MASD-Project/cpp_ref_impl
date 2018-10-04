@@ -18,20 +18,24 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef DOGEN_TEST_MODELS_ENABLE_FACET_IO_TYPES_PACKAGE1_FIRST_CLASS_FWD_HPP
-#define DOGEN_TEST_MODELS_ENABLE_FACET_IO_TYPES_PACKAGE1_FIRST_CLASS_FWD_HPP
+#ifndef CPP_REF_IMPL_ENABLE_FACET_IO_IO_PACKAGE1_FIRST_CLASS_IO_HPP
+#define CPP_REF_IMPL_ENABLE_FACET_IO_IO_PACKAGE1_FIRST_CLASS_IO_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-namespace dogen {
-namespace test_models {
+#include <iosfwd>
+#include "cpp_ref_impl/enable_facet_io/types/package1/first_class.hpp"
+
+namespace cpp_ref_impl {
 namespace enable_facet_io {
 namespace package1 {
 
-class first_class;
+std::ostream&
+operator<<(std::ostream& s,
+     const cpp_ref_impl::enable_facet_io::package1::first_class& v);
 
-} } } }
+} } }
 
 #endif

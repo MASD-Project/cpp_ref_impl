@@ -24,6 +24,6 @@ file(GLOB_RECURSE files RELATIVE
 
 add_library(enable_facet_io STATIC ${files})
 set_target_properties(enable_facet_io PROPERTIES
-    OUTPUT_NAME dogen.enable_facet_io)
+    OUTPUT_NAME cpp_ref_impl.enable_facet_io)
 
 install(TARGETS enable_facet_io ARCHIVE DESTINATION lib COMPONENT libraries)

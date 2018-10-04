@@ -18,13 +18,13 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef DOGEN_TEST_MODELS_ENABLE_FACET_IO_IO_ALL_IO_HPP
-#define DOGEN_TEST_MODELS_ENABLE_FACET_IO_IO_ALL_IO_HPP
+#ifndef CPP_REF_IMPL_ENABLE_FACET_IO_TYPES_ALL_HPP
+#define CPP_REF_IMPL_ENABLE_FACET_IO_TYPES_ALL_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "dogen/test_models/enable_facet_io/io/package1/first_class_io.hpp"
+#include "cpp_ref_impl/enable_facet_io/types/package1/first_class.hpp"
 
 #endif
