@@ -87,9 +87,23 @@ if (DOGEN_KNITTER_EXECUTABLE)
     # uncomment the next line if you require compatibility support
     # set(other_options ${other_options} --compatibility-mode)
 
+    #
+    # Output directory is handled separately due to split project
+    # model. We first handle the case of all models, and then the
+    # split model case.
+    #
     set(projects_dir "${CMAKE_SOURCE_DIR}/projects")
-    set(common_arguments --output-directory ${projects_dir}/)
-    set(common_arguments ${common_arguments} ${other_options})
+    set(common_out_dir --output-directory ${projects_dir}/)
+
+    # Note that we create a top-level directory with the project name
+    # just to make the life easier.
+    set(split_top_dir ${projects_dir}/split_project)
+    set(split_out_dir --output-directory ${split_top_dir}/some_dir)
+    set(split_out_dir ${split_out_dir}
+        --cpp-headers-output-directory ${split_top_dir}/dir/inc/another)
+
+    # handle common arguments
+    set(common_arguments ${other_options})
     set(common_arguments ${common_arguments} ${ignore_regexes})
 
     # uncomment to enable probing.

@@ -21,6 +21,12 @@ set(models_dir "${projects_dir}/models/${frontend}")
 
 if (DOGEN_KNITTER_EXECUTABLE)
     foreach(model ${models})
+        if ("${model}" STREQUAL "split_project")
+            set(output_params ${split_out_dir})
+        else()
+            set(output_params ${common_out_dir})
+        endif()
+
         set(target ${model})
         set(target_ext ${target}.${frontend})
         set(target_path ${models_dir}/${target_ext})
@@ -28,7 +34,7 @@ if (DOGEN_KNITTER_EXECUTABLE)
             COMMENT "Knitting ${target_ext} model" VERBATIM
             WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
             COMMAND ${DOGEN_KNITTER_EXECUTABLE}
-            --target ${target_path} ${common_arguments})
+            --target ${target_path} ${common_arguments} ${output_params})
         add_dependencies(knit_all_${frontend} knit_${target_ext})
 
         if (WITH_BENCHMARKS)
@@ -38,7 +44,7 @@ if (DOGEN_KNITTER_EXECUTABLE)
                 COMMAND ${benchmark_command} ${benchmark_repeats}
                 ${benchmark_directory}/${benchmark_prefix}${target}.csv
                 ${DOGEN_KNITTER_EXECUTABLE} --target ${target_path}
-                ${common_arguments})
+                ${common_arguments} ${output_params})
             add_dependencies(benchmark_${frontend}
                 benchmark_knit_${target_ext})
         endif()
