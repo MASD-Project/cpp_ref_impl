@@ -18,13 +18,24 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef DOGEN_TEST_MODELS_DISABLE_FACET_FOLDERS_ALL_HASH_HPP
-#define DOGEN_TEST_MODELS_DISABLE_FACET_FOLDERS_ALL_HASH_HPP
+#ifndef CPP_REF_IMPL_DISABLE_FACET_FOLDERS_PACKAGE1_FIRST_CLASS_IO_HPP
+#define CPP_REF_IMPL_DISABLE_FACET_FOLDERS_PACKAGE1_FIRST_CLASS_IO_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "dogen/test_models/disable_facet_folders/package1/first_class_hash.hpp"
+#include <iosfwd>
+#include "cpp_ref_impl/disable_facet_folders/package1/first_class.hpp"
+
+namespace cpp_ref_impl {
+namespace disable_facet_folders {
+namespace package1 {
+
+std::ostream&
+operator<<(std::ostream& s,
+     const cpp_ref_impl::disable_facet_folders::package1::first_class& v);
+
+} } }
 
 #endif

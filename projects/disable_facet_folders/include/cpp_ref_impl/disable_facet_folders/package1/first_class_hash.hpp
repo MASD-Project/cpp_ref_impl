@@ -18,38 +18,36 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef DOGEN_TEST_MODELS_DISABLE_FACET_FOLDERS_PACKAGE1_FIRST_CLASS_TD_HPP
-#define DOGEN_TEST_MODELS_DISABLE_FACET_FOLDERS_PACKAGE1_FIRST_CLASS_TD_HPP
+#ifndef CPP_REF_IMPL_DISABLE_FACET_FOLDERS_PACKAGE1_FIRST_CLASS_HASH_HPP
+#define CPP_REF_IMPL_DISABLE_FACET_FOLDERS_PACKAGE1_FIRST_CLASS_HASH_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "dogen/test_models/disable_facet_folders/package1/first_class.hpp"
+#include <functional>
+#include "cpp_ref_impl/disable_facet_folders/package1/first_class.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace disable_facet_folders {
 namespace package1 {
 
-class first_class_generator {
+struct first_class_hasher {
 public:
-    first_class_generator();
-
-public:
-    typedef dogen::test_models::disable_facet_folders::package1::first_class result_type;
-
-public:
-    static void populate(const unsigned int position, result_type& v);
-    static result_type create(const unsigned int position);
-    result_type operator()();
-
-private:
-    unsigned int position_;
-public:
-    static result_type* create_ptr(const unsigned int position);
+    static std::size_t hash(const first_class& v);
 };
 
-} } } }
+} } }
 
+namespace std {
+
+template<>
+struct hash<cpp_ref_impl::disable_facet_folders::package1::first_class> {
+public:
+    size_t operator()(const cpp_ref_impl::disable_facet_folders::package1::first_class& v) const {
+        return cpp_ref_impl::disable_facet_folders::package1::first_class_hasher::hash(v);
+    }
+};
+
+}
 #endif

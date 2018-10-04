@@ -18,19 +18,36 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef DOGEN_TEST_MODELS_DISABLE_FACET_FOLDERS_REGISTRAR_SER_HPP
-#define DOGEN_TEST_MODELS_DISABLE_FACET_FOLDERS_REGISTRAR_SER_HPP
+#ifndef CPP_REF_IMPL_DISABLE_FACET_FOLDERS_PACKAGE1_FIRST_CLASS_TD_HPP
+#define CPP_REF_IMPL_DISABLE_FACET_FOLDERS_PACKAGE1_FIRST_CLASS_TD_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-namespace dogen {
-namespace test_models {
-namespace disable_facet_folders {
+#include "cpp_ref_impl/disable_facet_folders/package1/first_class.hpp"
 
-template<typename Archive>
-void register_types(Archive& ar);
+namespace cpp_ref_impl {
+namespace disable_facet_folders {
+namespace package1 {
+
+class first_class_generator {
+public:
+    first_class_generator();
+
+public:
+    typedef cpp_ref_impl::disable_facet_folders::package1::first_class result_type;
+
+public:
+    static void populate(const unsigned int position, result_type& v);
+    static result_type create(const unsigned int position);
+    result_type operator()();
+
+private:
+    unsigned int position_;
+public:
+    static result_type* create_ptr(const unsigned int position);
+};
 
 } } }
 

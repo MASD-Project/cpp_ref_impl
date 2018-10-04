@@ -30,6 +30,6 @@ set(files ${files} ${odb_files})
 
 add_library(disable_facet_folders STATIC ${files})
 set_target_properties(disable_facet_folders PROPERTIES
-    OUTPUT_NAME dogen.disable_facet_folders)
+    OUTPUT_NAME cpp_ref_impl.disable_facet_folders)
 
 install(TARGETS disable_facet_folders ARCHIVE DESTINATION lib COMPONENT libraries)

@@ -18,23 +18,18 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef DOGEN_TEST_MODELS_DISABLE_FACET_FOLDERS_PACKAGE1_FIRST_CLASS_FWD_SER_HPP
-#define DOGEN_TEST_MODELS_DISABLE_FACET_FOLDERS_PACKAGE1_FIRST_CLASS_FWD_SER_HPP
+#ifndef CPP_REF_IMPL_DISABLE_FACET_FOLDERS_REGISTRAR_SER_HPP
+#define CPP_REF_IMPL_DISABLE_FACET_FOLDERS_REGISTRAR_SER_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "dogen/test_models/disable_facet_folders/package1/first_class_fwd.hpp"
+namespace cpp_ref_impl {
+namespace disable_facet_folders {
 
-namespace boost {
-namespace serialization {
-
-template<class Archive>
-void save(Archive& ar, const dogen::test_models::disable_facet_folders::package1::first_class& v, unsigned int version);
-
-template<class Archive>
-void load(Archive& ar, dogen::test_models::disable_facet_folders::package1::first_class& v, unsigned int version);
+template<typename Archive>
+void register_types(Archive& ar);
 
 } }
 
