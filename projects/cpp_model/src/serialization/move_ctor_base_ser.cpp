@@ -45,24 +45,6 @@ void serialize(Archive& ar, boost::filesystem::path& p, const unsigned int/*v*/)
         p = s;
 }
 
-template<typename Archive>
-inline void save(Archive& ar,
-    const boost::filesystem::path& p,
-    const unsigned int /*version*/) {
-    std::string s;
-    s = p.generic_string();
-    ar & boost::serialization::make_nvp("path", s);
-}
-
-template<typename Archive>
-inline void load(Archive& ar,
-    boost::filesystem::path& p,
-    const unsigned int /*version*/) {
-    std::string s;
-    ar & boost::serialization::make_nvp("path", s);
-    p = s;
-}
-
 } }
 
 BOOST_CLASS_TRACKING(
