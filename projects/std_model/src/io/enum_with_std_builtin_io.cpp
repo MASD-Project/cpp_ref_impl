@@ -21,10 +21,9 @@
 #include <string>
 #include <ostream>
 #include <stdexcept>
-#include "dogen/test_models/std_model/io/enum_with_std_builtin_io.hpp"
+#include "cpp_ref_impl/std_model/io/enum_with_std_builtin_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 std::ostream& operator<<(std::ostream& s, const enum_with_std_builtin& v) {
@@ -48,4 +47,4 @@ std::ostream& operator<<(std::ostream& s, const enum_with_std_builtin& v) {
     return s;
 }
 
-} } }
+} }

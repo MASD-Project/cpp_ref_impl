@@ -20,7 +20,7 @@
  */
 #include <ostream>
 #include <boost/algorithm/string.hpp>
-#include "dogen/test_models/std_model/io/class_j_io.hpp"
+#include "cpp_ref_impl/std_model/io/class_j_io.hpp"
 
 namespace std {
 
@@ -83,13 +83,12 @@ inline std::ostream& operator<<(std::ostream& s, const std::vector<std::pair<std
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 std::ostream& operator<<(std::ostream& s, const class_j& v) {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::std_model::class_j\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::std_model::class_j\"" << ", "
       << "\"prop_0\": " << v.prop_0() << ", "
       << "\"prop_1\": " << v.prop_1() << ", "
       << "\"prop_2\": " << v.prop_2()
@@ -97,4 +96,4 @@ std::ostream& operator<<(std::ostream& s, const class_j& v) {
     return(s);
 }
 
-} } }
+} }

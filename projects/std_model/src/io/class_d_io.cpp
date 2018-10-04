@@ -20,9 +20,9 @@
  */
 #include <ostream>
 #include <boost/algorithm/string.hpp>
-#include "dogen/test_models/std_model/io/class_a_io.hpp"
-#include "dogen/test_models/std_model/io/class_d_io.hpp"
-#include "dogen/test_models/std_model/io/pkg1/class_c_io.hpp"
+#include "cpp_ref_impl/std_model/io/class_a_io.hpp"
+#include "cpp_ref_impl/std_model/io/class_d_io.hpp"
+#include "cpp_ref_impl/std_model/io/pkg1/class_c_io.hpp"
 
 inline std::string tidy_up_string(std::string s) {
     boost::replace_all(s, "\r\n", "<new_line>");
@@ -48,7 +48,7 @@ inline std::ostream& operator<<(std::ostream& s, const std::list<std::string>& v
 
 namespace std {
 
-inline std::ostream& operator<<(std::ostream& s, const std::list<dogen::test_models::std_model::class_a>& v) {
+inline std::ostream& operator<<(std::ostream& s, const std::list<cpp_ref_impl::std_model::class_a>& v) {
     s << "[ ";
     for (auto i(v.begin()); i != v.end(); ++i) {
         if (i != v.begin()) s << ", ";
@@ -62,7 +62,7 @@ inline std::ostream& operator<<(std::ostream& s, const std::list<dogen::test_mod
 
 namespace std {
 
-inline std::ostream& operator<<(std::ostream& s, const std::list<dogen::test_models::std_model::pkg1::class_c>& v) {
+inline std::ostream& operator<<(std::ostream& s, const std::list<cpp_ref_impl::std_model::pkg1::class_c>& v) {
     s << "[ ";
     for (auto i(v.begin()); i != v.end(); ++i) {
         if (i != v.begin()) s << ", ";
@@ -102,13 +102,12 @@ inline std::ostream& operator<<(std::ostream& s, const std::list<std::list<unsig
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 std::ostream& operator<<(std::ostream& s, const class_d& v) {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::std_model::class_d\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::std_model::class_d\"" << ", "
       << "\"prop_0\": " << v.prop_0() << ", "
       << "\"prop_1\": " << v.prop_1() << ", "
       << "\"prop_2\": " << v.prop_2() << ", "
@@ -119,4 +118,4 @@ std::ostream& operator<<(std::ostream& s, const class_d& v) {
     return(s);
 }
 
-} } }
+} }

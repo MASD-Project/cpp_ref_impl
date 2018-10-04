@@ -26,16 +26,15 @@
 #include <boost/archive/binary_oarchive.hpp>
 #include <boost/archive/polymorphic_iarchive.hpp>
 #include <boost/archive/polymorphic_oarchive.hpp>
-#include "dogen/test_models/std_model/serialization/derived_ser.hpp"
-#include "dogen/test_models/std_model/serialization/registrar_ser.hpp"
+#include "cpp_ref_impl/std_model/serialization/derived_ser.hpp"
+#include "cpp_ref_impl/std_model/serialization/registrar_ser.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 template<typename Archive>
 void register_types(Archive& ar) {
-    ar.template register_type<dogen::test_models::std_model::derived>();
+    ar.template register_type<cpp_ref_impl::std_model::derived>();
 }
 
 template void register_types(boost::archive::polymorphic_oarchive& ar);
@@ -50,4 +49,4 @@ template void register_types(boost::archive::binary_iarchive& ar);
 template void register_types(boost::archive::xml_oarchive& ar);
 template void register_types(boost::archive::xml_iarchive& ar);
 
-} } }
+} }

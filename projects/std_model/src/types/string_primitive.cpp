@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/std_model/types/string_primitive.hpp"
+#include "cpp_ref_impl/std_model/types/string_primitive.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 string_primitive::string_primitive(const std::string& value)
@@ -58,4 +57,4 @@ string_primitive& string_primitive::operator=(string_primitive other) {
     return *this;
 }
 
-} } }
+} }

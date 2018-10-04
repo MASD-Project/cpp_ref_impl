@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/std_model/types/class_a.hpp"
+#include "cpp_ref_impl/std_model/types/class_a.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 class_a::class_a(
@@ -79,4 +78,4 @@ void class_a::prop1(const std::string&& v) {
     prop1_ = std::move(v);
 }
 
-} } }
+} }

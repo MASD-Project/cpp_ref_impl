@@ -18,13 +18,12 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/std_model/types/class_k.hpp"
+#include "cpp_ref_impl/std_model/types/class_k.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
-class_k::class_k(const dogen::test_models::std_model::string_primitive& prop_0)
+class_k::class_k(const cpp_ref_impl::std_model::string_primitive& prop_0)
     : prop_0_(prop_0) { }
 
 void class_k::swap(class_k& other) noexcept {
@@ -42,20 +41,20 @@ class_k& class_k::operator=(class_k other) {
     return *this;
 }
 
-const dogen::test_models::std_model::string_primitive& class_k::prop_0() const {
+const cpp_ref_impl::std_model::string_primitive& class_k::prop_0() const {
     return prop_0_;
 }
 
-dogen::test_models::std_model::string_primitive& class_k::prop_0() {
+cpp_ref_impl::std_model::string_primitive& class_k::prop_0() {
     return prop_0_;
 }
 
-void class_k::prop_0(const dogen::test_models::std_model::string_primitive& v) {
+void class_k::prop_0(const cpp_ref_impl::std_model::string_primitive& v) {
     prop_0_ = v;
 }
 
-void class_k::prop_0(const dogen::test_models::std_model::string_primitive&& v) {
+void class_k::prop_0(const cpp_ref_impl::std_model::string_primitive&& v) {
     prop_0_ = std::move(v);
 }
 
-} } }
+} }

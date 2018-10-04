@@ -19,13 +19,13 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/std_model/io/class_a_io.hpp"
-#include "dogen/test_models/std_model/io/class_h_io.hpp"
-#include "dogen/test_models/std_model/io/pkg1/class_c_io.hpp"
+#include "cpp_ref_impl/std_model/io/class_a_io.hpp"
+#include "cpp_ref_impl/std_model/io/class_h_io.hpp"
+#include "cpp_ref_impl/std_model/io/pkg1/class_c_io.hpp"
 
 namespace std {
 
-inline std::ostream& operator<<(std::ostream& s, const std::unordered_set<dogen::test_models::std_model::class_a>& v) {
+inline std::ostream& operator<<(std::ostream& s, const std::unordered_set<cpp_ref_impl::std_model::class_a>& v) {
     s << "[ ";
     for (auto i(v.begin()); i != v.end(); ++i) {
         if (i != v.begin()) s << ", ";
@@ -39,7 +39,7 @@ inline std::ostream& operator<<(std::ostream& s, const std::unordered_set<dogen:
 
 namespace std {
 
-inline std::ostream& operator<<(std::ostream& s, const std::unordered_set<dogen::test_models::std_model::pkg1::class_c>& v) {
+inline std::ostream& operator<<(std::ostream& s, const std::unordered_set<cpp_ref_impl::std_model::pkg1::class_c>& v) {
     s << "[ ";
     for (auto i(v.begin()); i != v.end(); ++i) {
         if (i != v.begin()) s << ", ";
@@ -51,17 +51,16 @@ inline std::ostream& operator<<(std::ostream& s, const std::unordered_set<dogen:
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 std::ostream& operator<<(std::ostream& s, const class_h& v) {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::std_model::class_h\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::std_model::class_h\"" << ", "
       << "\"prop_0\": " << v.prop_0() << ", "
       << "\"prop_1\": " << v.prop_1()
       << " }";
     return(s);
 }
 
-} } }
+} }

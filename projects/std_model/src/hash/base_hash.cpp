@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/std_model/hash/base_hash.hpp"
+#include "cpp_ref_impl/std_model/hash/base_hash.hpp"
 
 namespace {
 
@@ -38,8 +38,7 @@ inline std::size_t hash_std_vector_std_string(const std::vector<std::string>& v)
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 std::size_t base_hasher::hash(const base& v) {
@@ -49,4 +48,4 @@ std::size_t base_hasher::hash(const base& v) {
     return seed;
 }
 
-} } }
+} }

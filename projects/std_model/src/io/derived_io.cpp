@@ -19,12 +19,11 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/std_model/io/base_io.hpp"
-#include "dogen/test_models/std_model/io/derived_io.hpp"
-#include "dogen/test_models/std_model/io/pkg1/class_c_io.hpp"
+#include "cpp_ref_impl/std_model/io/base_io.hpp"
+#include "cpp_ref_impl/std_model/io/derived_io.hpp"
+#include "cpp_ref_impl/std_model/io/pkg1/class_c_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 std::ostream& operator<<(std::ostream& s, const derived& v) {
@@ -32,4 +31,4 @@ std::ostream& operator<<(std::ostream& s, const derived& v) {
     return(s);
 }
 
-} } }
+} }

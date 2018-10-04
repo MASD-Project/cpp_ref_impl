@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/std_model/hash/class_j_hash.hpp"
+#include "cpp_ref_impl/std_model/hash/class_j_hash.hpp"
 
 namespace {
 
@@ -62,8 +62,7 @@ inline std::size_t hash_std_vector_std_pair_std_string_int(const std::vector<std
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 std::size_t class_j_hasher::hash(const class_j& v) {
@@ -76,4 +75,4 @@ std::size_t class_j_hasher::hash(const class_j& v) {
     return seed;
 }
 
-} } }
+} }

@@ -20,7 +20,7 @@
  */
 #include <ostream>
 #include <boost/algorithm/string.hpp>
-#include "dogen/test_models/std_model/types/base.hpp"
+#include "cpp_ref_impl/std_model/types/base.hpp"
 
 inline std::string tidy_up_string(std::string s) {
     boost::replace_all(s, "\r\n", "<new_line>");
@@ -44,8 +44,7 @@ inline std::ostream& operator<<(std::ostream& s, const std::vector<std::string>&
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 base::base(const std::vector<std::string>& prop_0)
@@ -53,7 +52,7 @@ base::base(const std::vector<std::string>& prop_0)
 
 void base::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::std_model::base\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::std_model::base\"" << ", "
       << "\"prop_0\": " << prop_0_
       << " }";
 }
@@ -83,4 +82,4 @@ void base::prop_0(const std::vector<std::string>&& v) {
     prop_0_ = std::move(v);
 }
 
-} } }
+} }

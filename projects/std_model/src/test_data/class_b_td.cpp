@@ -19,9 +19,9 @@
  *
  */
 #include <sstream>
-#include "dogen/test_models/std_model/test_data/class_a_td.hpp"
-#include "dogen/test_models/std_model/test_data/class_b_td.hpp"
-#include "dogen/test_models/std_model/test_data/pkg1/class_c_td.hpp"
+#include "cpp_ref_impl/std_model/test_data/class_a_td.hpp"
+#include "cpp_ref_impl/std_model/test_data/class_b_td.hpp"
+#include "cpp_ref_impl/std_model/test_data/pkg1/class_c_td.hpp"
 
 namespace {
 
@@ -39,28 +39,28 @@ std::vector<std::string> create_std_vector_std_string(unsigned int position) {
     return r;
 }
 
-dogen::test_models::std_model::class_a
-create_dogen_test_models_std_model_class_a(const unsigned int position) {
-    return dogen::test_models::std_model::class_a_generator::create(position);
+cpp_ref_impl::std_model::class_a
+create_cpp_ref_impl_std_model_class_a(const unsigned int position) {
+    return cpp_ref_impl::std_model::class_a_generator::create(position);
 }
 
-std::vector<dogen::test_models::std_model::class_a> create_std_vector_dogen_test_models_std_model_class_a(unsigned int position) {
-    std::vector<dogen::test_models::std_model::class_a> r;
+std::vector<cpp_ref_impl::std_model::class_a> create_std_vector_cpp_ref_impl_std_model_class_a(unsigned int position) {
+    std::vector<cpp_ref_impl::std_model::class_a> r;
     for (unsigned int i(0); i < 4; ++i) {
-        r.push_back(create_dogen_test_models_std_model_class_a(position + i));
+        r.push_back(create_cpp_ref_impl_std_model_class_a(position + i));
     }
     return r;
 }
 
-dogen::test_models::std_model::pkg1::class_c
-create_dogen_test_models_std_model_pkg1_class_c(const unsigned int position) {
-    return dogen::test_models::std_model::pkg1::class_c_generator::create(position);
+cpp_ref_impl::std_model::pkg1::class_c
+create_cpp_ref_impl_std_model_pkg1_class_c(const unsigned int position) {
+    return cpp_ref_impl::std_model::pkg1::class_c_generator::create(position);
 }
 
-std::vector<dogen::test_models::std_model::pkg1::class_c> create_std_vector_dogen_test_models_std_model_pkg1_class_c(unsigned int position) {
-    std::vector<dogen::test_models::std_model::pkg1::class_c> r;
+std::vector<cpp_ref_impl::std_model::pkg1::class_c> create_std_vector_cpp_ref_impl_std_model_pkg1_class_c(unsigned int position) {
+    std::vector<cpp_ref_impl::std_model::pkg1::class_c> r;
     for (unsigned int i(0); i < 4; ++i) {
-        r.push_back(create_dogen_test_models_std_model_pkg1_class_c(position + i));
+        r.push_back(create_cpp_ref_impl_std_model_pkg1_class_c(position + i));
     }
     return r;
 }
@@ -87,8 +87,7 @@ std::vector<std::vector<unsigned int> > create_std_vector_std_vector_unsigned_in
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 class_b_generator::class_b_generator() : position_(0) { }
@@ -96,10 +95,10 @@ class_b_generator::class_b_generator() : position_(0) { }
 void class_b_generator::
 populate(const unsigned int position, result_type& v) {
     v.prop_0(create_std_vector_std_string(position + 0));
-    v.prop_1(create_std_vector_dogen_test_models_std_model_class_a(position + 1));
-    v.prop_2(create_std_vector_dogen_test_models_std_model_pkg1_class_c(position + 2));
+    v.prop_1(create_std_vector_cpp_ref_impl_std_model_class_a(position + 1));
+    v.prop_2(create_std_vector_cpp_ref_impl_std_model_pkg1_class_c(position + 2));
     v.prop_3(create_std_vector_unsigned_int(position + 3));
-    v.prop_4(create_std_vector_dogen_test_models_std_model_class_a(position + 4));
+    v.prop_4(create_std_vector_cpp_ref_impl_std_model_class_a(position + 4));
     v.prop_5(create_std_vector_std_vector_unsigned_int(position + 5));
 }
 
@@ -122,4 +121,4 @@ class_b_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

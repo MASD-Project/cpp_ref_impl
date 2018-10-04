@@ -18,16 +18,15 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/std_model/types/class_g.hpp"
+#include "cpp_ref_impl/std_model/types/class_g.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 class_g::class_g(
-    const std::unordered_map<dogen::test_models::std_model::class_a, std::vector<dogen::test_models::std_model::pkg1::class_c> >& prop_0,
-    const std::unordered_map<dogen::test_models::std_model::pkg1::class_c, std::list<dogen::test_models::std_model::class_a> >& prop_1,
-    const std::unordered_map<std::string, dogen::test_models::std_model::class_a>& prop_2)
+    const std::unordered_map<cpp_ref_impl::std_model::class_a, std::vector<cpp_ref_impl::std_model::pkg1::class_c> >& prop_0,
+    const std::unordered_map<cpp_ref_impl::std_model::pkg1::class_c, std::list<cpp_ref_impl::std_model::class_a> >& prop_1,
+    const std::unordered_map<std::string, cpp_ref_impl::std_model::class_a>& prop_2)
     : prop_0_(prop_0),
       prop_1_(prop_1),
       prop_2_(prop_2) { }
@@ -51,52 +50,52 @@ class_g& class_g::operator=(class_g other) {
     return *this;
 }
 
-const std::unordered_map<dogen::test_models::std_model::class_a, std::vector<dogen::test_models::std_model::pkg1::class_c> >& class_g::prop_0() const {
+const std::unordered_map<cpp_ref_impl::std_model::class_a, std::vector<cpp_ref_impl::std_model::pkg1::class_c> >& class_g::prop_0() const {
     return prop_0_;
 }
 
-std::unordered_map<dogen::test_models::std_model::class_a, std::vector<dogen::test_models::std_model::pkg1::class_c> >& class_g::prop_0() {
+std::unordered_map<cpp_ref_impl::std_model::class_a, std::vector<cpp_ref_impl::std_model::pkg1::class_c> >& class_g::prop_0() {
     return prop_0_;
 }
 
-void class_g::prop_0(const std::unordered_map<dogen::test_models::std_model::class_a, std::vector<dogen::test_models::std_model::pkg1::class_c> >& v) {
+void class_g::prop_0(const std::unordered_map<cpp_ref_impl::std_model::class_a, std::vector<cpp_ref_impl::std_model::pkg1::class_c> >& v) {
     prop_0_ = v;
 }
 
-void class_g::prop_0(const std::unordered_map<dogen::test_models::std_model::class_a, std::vector<dogen::test_models::std_model::pkg1::class_c> >&& v) {
+void class_g::prop_0(const std::unordered_map<cpp_ref_impl::std_model::class_a, std::vector<cpp_ref_impl::std_model::pkg1::class_c> >&& v) {
     prop_0_ = std::move(v);
 }
 
-const std::unordered_map<dogen::test_models::std_model::pkg1::class_c, std::list<dogen::test_models::std_model::class_a> >& class_g::prop_1() const {
+const std::unordered_map<cpp_ref_impl::std_model::pkg1::class_c, std::list<cpp_ref_impl::std_model::class_a> >& class_g::prop_1() const {
     return prop_1_;
 }
 
-std::unordered_map<dogen::test_models::std_model::pkg1::class_c, std::list<dogen::test_models::std_model::class_a> >& class_g::prop_1() {
+std::unordered_map<cpp_ref_impl::std_model::pkg1::class_c, std::list<cpp_ref_impl::std_model::class_a> >& class_g::prop_1() {
     return prop_1_;
 }
 
-void class_g::prop_1(const std::unordered_map<dogen::test_models::std_model::pkg1::class_c, std::list<dogen::test_models::std_model::class_a> >& v) {
+void class_g::prop_1(const std::unordered_map<cpp_ref_impl::std_model::pkg1::class_c, std::list<cpp_ref_impl::std_model::class_a> >& v) {
     prop_1_ = v;
 }
 
-void class_g::prop_1(const std::unordered_map<dogen::test_models::std_model::pkg1::class_c, std::list<dogen::test_models::std_model::class_a> >&& v) {
+void class_g::prop_1(const std::unordered_map<cpp_ref_impl::std_model::pkg1::class_c, std::list<cpp_ref_impl::std_model::class_a> >&& v) {
     prop_1_ = std::move(v);
 }
 
-const std::unordered_map<std::string, dogen::test_models::std_model::class_a>& class_g::prop_2() const {
+const std::unordered_map<std::string, cpp_ref_impl::std_model::class_a>& class_g::prop_2() const {
     return prop_2_;
 }
 
-std::unordered_map<std::string, dogen::test_models::std_model::class_a>& class_g::prop_2() {
+std::unordered_map<std::string, cpp_ref_impl::std_model::class_a>& class_g::prop_2() {
     return prop_2_;
 }
 
-void class_g::prop_2(const std::unordered_map<std::string, dogen::test_models::std_model::class_a>& v) {
+void class_g::prop_2(const std::unordered_map<std::string, cpp_ref_impl::std_model::class_a>& v) {
     prop_2_ = v;
 }
 
-void class_g::prop_2(const std::unordered_map<std::string, dogen::test_models::std_model::class_a>&& v) {
+void class_g::prop_2(const std::unordered_map<std::string, cpp_ref_impl::std_model::class_a>&& v) {
     prop_2_ = std::move(v);
 }
 
-} } }
+} }

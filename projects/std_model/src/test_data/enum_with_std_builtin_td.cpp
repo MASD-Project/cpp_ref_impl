@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/std_model/test_data/enum_with_std_builtin_td.hpp"
+#include "cpp_ref_impl/std_model/test_data/enum_with_std_builtin_td.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 enum_with_std_builtin_generator::enum_with_std_builtin_generator() : position_(0) { }
@@ -42,4 +41,4 @@ enum_with_std_builtin_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

@@ -19,19 +19,18 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/std_model/io/class_k_io.hpp"
-#include "dogen/test_models/std_model/io/string_primitive_io.hpp"
+#include "cpp_ref_impl/std_model/io/class_k_io.hpp"
+#include "cpp_ref_impl/std_model/io/string_primitive_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 std::ostream& operator<<(std::ostream& s, const class_k& v) {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::std_model::class_k\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::std_model::class_k\"" << ", "
       << "\"prop_0\": " << v.prop_0()
       << " }";
     return(s);
 }
 
-} } }
+} }

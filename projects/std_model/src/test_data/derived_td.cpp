@@ -18,37 +18,36 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/std_model/test_data/base_td.hpp"
-#include "dogen/test_models/std_model/test_data/derived_td.hpp"
-#include "dogen/test_models/std_model/test_data/pkg1/class_c_td.hpp"
+#include "cpp_ref_impl/std_model/test_data/base_td.hpp"
+#include "cpp_ref_impl/std_model/test_data/derived_td.hpp"
+#include "cpp_ref_impl/std_model/test_data/pkg1/class_c_td.hpp"
 
 namespace {
 
-dogen::test_models::std_model::pkg1::class_c
-create_dogen_test_models_std_model_pkg1_class_c(const unsigned int position) {
-    return dogen::test_models::std_model::pkg1::class_c_generator::create(position);
+cpp_ref_impl::std_model::pkg1::class_c
+create_cpp_ref_impl_std_model_pkg1_class_c(const unsigned int position) {
+    return cpp_ref_impl::std_model::pkg1::class_c_generator::create(position);
 }
 
-std::list<dogen::test_models::std_model::pkg1::class_c> create_std_list_dogen_test_models_std_model_pkg1_class_c(unsigned int position) {
-    std::list<dogen::test_models::std_model::pkg1::class_c> r;
+std::list<cpp_ref_impl::std_model::pkg1::class_c> create_std_list_cpp_ref_impl_std_model_pkg1_class_c(unsigned int position) {
+    std::list<cpp_ref_impl::std_model::pkg1::class_c> r;
     for (unsigned int i(0); i < 4; ++i) {
-        r.push_back(create_dogen_test_models_std_model_pkg1_class_c(position + i));
+        r.push_back(create_cpp_ref_impl_std_model_pkg1_class_c(position + i));
     }
     return r;
 }
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 derived_generator::derived_generator() : position_(0) { }
 
 void derived_generator::
 populate(const unsigned int position, result_type& v) {
-    dogen::test_models::std_model::base_generator::populate(position, v);
-    v.prop_1(create_std_list_dogen_test_models_std_model_pkg1_class_c(position + 0));
+    cpp_ref_impl::std_model::base_generator::populate(position, v);
+    v.prop_1(create_std_list_cpp_ref_impl_std_model_pkg1_class_c(position + 0));
 }
 
 derived_generator::result_type
@@ -70,4 +69,4 @@ derived_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

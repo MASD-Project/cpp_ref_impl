@@ -19,15 +19,14 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/std_model/io/builtins_io.hpp"
+#include "cpp_ref_impl/std_model/io/builtins_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 std::ostream& operator<<(std::ostream& s, const builtins& v) {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::std_model::builtins\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::std_model::builtins\"" << ", "
       << "\"prop_0\": " << "\"" << v.prop_0() << "\"" << ", "
       << "\"prop_1\": " << v.prop_1() << ", "
       << "\"prop_2\": " << v.prop_2() << ", "
@@ -40,4 +39,4 @@ std::ostream& operator<<(std::ostream& s, const builtins& v) {
     return(s);
 }
 
-} } }
+} }

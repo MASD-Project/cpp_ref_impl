@@ -19,7 +19,7 @@
  *
  */
 #include <sstream>
-#include "dogen/test_models/std_model/test_data/class_j_td.hpp"
+#include "cpp_ref_impl/std_model/test_data/class_j_td.hpp"
 
 namespace {
 
@@ -67,8 +67,7 @@ std::vector<std::pair<std::string, int> > create_std_vector_std_pair_std_string_
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 class_j_generator::class_j_generator() : position_(0) { }
@@ -99,4 +98,4 @@ class_j_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

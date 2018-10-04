@@ -18,23 +18,22 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/std_model/types/base.hpp"
-#include "dogen/test_models/std_model/types/some_service.hpp"
+#include "cpp_ref_impl/std_model/types/base.hpp"
+#include "cpp_ref_impl/std_model/types/some_service.hpp"
 
 namespace std {
 
-inline bool operator==(const std::shared_ptr<dogen::test_models::std_model::base>& lhs,
-const std::shared_ptr<dogen::test_models::std_model::base>& rhs) {
+inline bool operator==(const std::shared_ptr<cpp_ref_impl::std_model::base>& lhs,
+    const std::shared_ptr<cpp_ref_impl::std_model::base>& rhs) {
     return (!lhs && !rhs) ||(lhs && rhs && (*lhs == *rhs));
 }
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
-some_service::some_service(const std::shared_ptr<dogen::test_models::std_model::base>& prop_0)
+some_service::some_service(const std::shared_ptr<cpp_ref_impl::std_model::base>& prop_0)
     : prop_0_(prop_0) { }
 
 void some_service::swap(some_service& other) noexcept {
@@ -52,20 +51,20 @@ some_service& some_service::operator=(some_service other) {
     return *this;
 }
 
-const std::shared_ptr<dogen::test_models::std_model::base>& some_service::prop_0() const {
+const std::shared_ptr<cpp_ref_impl::std_model::base>& some_service::prop_0() const {
     return prop_0_;
 }
 
-std::shared_ptr<dogen::test_models::std_model::base>& some_service::prop_0() {
+std::shared_ptr<cpp_ref_impl::std_model::base>& some_service::prop_0() {
     return prop_0_;
 }
 
-void some_service::prop_0(const std::shared_ptr<dogen::test_models::std_model::base>& v) {
+void some_service::prop_0(const std::shared_ptr<cpp_ref_impl::std_model::base>& v) {
     prop_0_ = v;
 }
 
-void some_service::prop_0(const std::shared_ptr<dogen::test_models::std_model::base>&& v) {
+void some_service::prop_0(const std::shared_ptr<cpp_ref_impl::std_model::base>&& v) {
     prop_0_ = std::move(v);
 }
 
-} } }
+} }

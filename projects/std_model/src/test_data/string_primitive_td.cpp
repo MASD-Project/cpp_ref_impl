@@ -19,7 +19,7 @@
  *
  */
 #include <sstream>
-#include "dogen/test_models/std_model/test_data/string_primitive_td.hpp"
+#include "cpp_ref_impl/std_model/test_data/string_primitive_td.hpp"
 
 namespace {
 
@@ -31,8 +31,7 @@ std::string create_std_string(const unsigned int position) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 string_primitive_generator::string_primitive_generator() : position_(0) { }
@@ -61,4 +60,4 @@ string_primitive_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

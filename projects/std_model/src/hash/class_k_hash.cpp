@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/std_model/hash/class_k_hash.hpp"
-#include "dogen/test_models/std_model/hash/string_primitive_hash.hpp"
+#include "cpp_ref_impl/std_model/hash/class_k_hash.hpp"
+#include "cpp_ref_impl/std_model/hash/string_primitive_hash.hpp"
 
 namespace {
 
@@ -31,8 +31,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 std::size_t class_k_hasher::hash(const class_k& v) {
@@ -42,4 +41,4 @@ std::size_t class_k_hasher::hash(const class_k& v) {
     return seed;
 }
 
-} } }
+} }

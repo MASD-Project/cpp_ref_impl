@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/std_model/hash/class_a_hash.hpp"
-#include "dogen/test_models/std_model/hash/class_g_hash.hpp"
-#include "dogen/test_models/std_model/hash/pkg1/class_c_hash.hpp"
+#include "cpp_ref_impl/std_model/hash/class_a_hash.hpp"
+#include "cpp_ref_impl/std_model/hash/class_g_hash.hpp"
+#include "cpp_ref_impl/std_model/hash/pkg1/class_c_hash.hpp"
 
 namespace {
 
@@ -30,7 +30,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
     seed ^= hasher(value) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
 }
 
-inline std::size_t hash_std_vector_dogen_test_models_std_model_pkg1_class_c(const std::vector<dogen::test_models::std_model::pkg1::class_c>& v) {
+inline std::size_t hash_std_vector_cpp_ref_impl_std_model_pkg1_class_c(const std::vector<cpp_ref_impl::std_model::pkg1::class_c>& v) {
     std::size_t seed(0);
     for (const auto i : v) {
         combine(seed, i);
@@ -38,16 +38,16 @@ inline std::size_t hash_std_vector_dogen_test_models_std_model_pkg1_class_c(cons
     return seed;
 }
 
-inline std::size_t hash_std_unordered_map_dogen_test_models_std_model_class_a_std_vector_dogen_test_models_std_model_pkg1_class_c(const std::unordered_map<dogen::test_models::std_model::class_a, std::vector<dogen::test_models::std_model::pkg1::class_c> >& v) {
+inline std::size_t hash_std_unordered_map_cpp_ref_impl_std_model_class_a_std_vector_cpp_ref_impl_std_model_pkg1_class_c(const std::unordered_map<cpp_ref_impl::std_model::class_a, std::vector<cpp_ref_impl::std_model::pkg1::class_c> >& v) {
     std::size_t seed(0);
     for (const auto i : v) {
         combine(seed, i.first);
-        combine(seed, hash_std_vector_dogen_test_models_std_model_pkg1_class_c(i.second));
+        combine(seed, hash_std_vector_cpp_ref_impl_std_model_pkg1_class_c(i.second));
     }
     return seed;
 }
 
-inline std::size_t hash_std_list_dogen_test_models_std_model_class_a(const std::list<dogen::test_models::std_model::class_a>& v) {
+inline std::size_t hash_std_list_cpp_ref_impl_std_model_class_a(const std::list<cpp_ref_impl::std_model::class_a>& v) {
     std::size_t seed(0);
     for (const auto i : v) {
         combine(seed, i);
@@ -55,16 +55,16 @@ inline std::size_t hash_std_list_dogen_test_models_std_model_class_a(const std::
     return seed;
 }
 
-inline std::size_t hash_std_unordered_map_dogen_test_models_std_model_pkg1_class_c_std_list_dogen_test_models_std_model_class_a(const std::unordered_map<dogen::test_models::std_model::pkg1::class_c, std::list<dogen::test_models::std_model::class_a> >& v) {
+inline std::size_t hash_std_unordered_map_cpp_ref_impl_std_model_pkg1_class_c_std_list_cpp_ref_impl_std_model_class_a(const std::unordered_map<cpp_ref_impl::std_model::pkg1::class_c, std::list<cpp_ref_impl::std_model::class_a> >& v) {
     std::size_t seed(0);
     for (const auto i : v) {
         combine(seed, i.first);
-        combine(seed, hash_std_list_dogen_test_models_std_model_class_a(i.second));
+        combine(seed, hash_std_list_cpp_ref_impl_std_model_class_a(i.second));
     }
     return seed;
 }
 
-inline std::size_t hash_std_unordered_map_std_string_dogen_test_models_std_model_class_a(const std::unordered_map<std::string, dogen::test_models::std_model::class_a>& v) {
+inline std::size_t hash_std_unordered_map_std_string_cpp_ref_impl_std_model_class_a(const std::unordered_map<std::string, cpp_ref_impl::std_model::class_a>& v) {
     std::size_t seed(0);
     for (const auto i : v) {
         combine(seed, i.first);
@@ -75,18 +75,17 @@ inline std::size_t hash_std_unordered_map_std_string_dogen_test_models_std_model
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 std::size_t class_g_hasher::hash(const class_g& v) {
     std::size_t seed(0);
 
-    combine(seed, hash_std_unordered_map_dogen_test_models_std_model_class_a_std_vector_dogen_test_models_std_model_pkg1_class_c(v.prop_0()));
-    combine(seed, hash_std_unordered_map_dogen_test_models_std_model_pkg1_class_c_std_list_dogen_test_models_std_model_class_a(v.prop_1()));
-    combine(seed, hash_std_unordered_map_std_string_dogen_test_models_std_model_class_a(v.prop_2()));
+    combine(seed, hash_std_unordered_map_cpp_ref_impl_std_model_class_a_std_vector_cpp_ref_impl_std_model_pkg1_class_c(v.prop_0()));
+    combine(seed, hash_std_unordered_map_cpp_ref_impl_std_model_pkg1_class_c_std_list_cpp_ref_impl_std_model_class_a(v.prop_1()));
+    combine(seed, hash_std_unordered_map_std_string_cpp_ref_impl_std_model_class_a(v.prop_2()));
 
     return seed;
 }
 
-} } }
+} }

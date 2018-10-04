@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/std_model/types/class_j.hpp"
+#include "cpp_ref_impl/std_model/types/class_j.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 class_j::class_j(
@@ -99,4 +98,4 @@ void class_j::prop_2(const std::vector<std::pair<std::string, int> >&& v) {
     prop_2_ = std::move(v);
 }
 
-} } }
+} }

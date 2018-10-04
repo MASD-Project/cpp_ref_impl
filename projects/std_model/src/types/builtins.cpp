@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/std_model/types/builtins.hpp"
+#include "cpp_ref_impl/std_model/types/builtins.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 builtins::builtins()
@@ -145,4 +144,4 @@ void builtins::prop_7(const std::uint64_t v) {
     prop_7_ = v;
 }
 
-} } }
+} }

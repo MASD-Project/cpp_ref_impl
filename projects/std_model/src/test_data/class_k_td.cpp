@@ -18,27 +18,26 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/std_model/test_data/class_k_td.hpp"
-#include "dogen/test_models/std_model/test_data/string_primitive_td.hpp"
+#include "cpp_ref_impl/std_model/test_data/class_k_td.hpp"
+#include "cpp_ref_impl/std_model/test_data/string_primitive_td.hpp"
 
 namespace {
 
-dogen::test_models::std_model::string_primitive
-create_dogen_test_models_std_model_string_primitive(const unsigned int position) {
-    return dogen::test_models::std_model::string_primitive_generator::create(position);
+cpp_ref_impl::std_model::string_primitive
+create_cpp_ref_impl_std_model_string_primitive(const unsigned int position) {
+    return cpp_ref_impl::std_model::string_primitive_generator::create(position);
 }
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 class_k_generator::class_k_generator() : position_(0) { }
 
 void class_k_generator::
 populate(const unsigned int position, result_type& v) {
-    v.prop_0(create_dogen_test_models_std_model_string_primitive(position + 0));
+    v.prop_0(create_cpp_ref_impl_std_model_string_primitive(position + 0));
 }
 
 class_k_generator::result_type
@@ -60,4 +59,4 @@ class_k_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

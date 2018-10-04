@@ -20,7 +20,7 @@
  */
 #include <ostream>
 #include <boost/algorithm/string.hpp>
-#include "dogen/test_models/std_model/io/class_a_io.hpp"
+#include "cpp_ref_impl/std_model/io/class_a_io.hpp"
 
 inline std::string tidy_up_string(std::string s) {
     boost::replace_all(s, "\r\n", "<new_line>");
@@ -30,17 +30,16 @@ inline std::string tidy_up_string(std::string s) {
     return s;
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace std_model {
 
 std::ostream& operator<<(std::ostream& s, const class_a& v) {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::std_model::class_a\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::std_model::class_a\"" << ", "
       << "\"prop0\": " << "\"" << tidy_up_string(v.prop0()) << "\"" << ", "
       << "\"prop1\": " << "\"" << tidy_up_string(v.prop1()) << "\""
       << " }";
     return(s);
 }
 
-} } }
+} }
