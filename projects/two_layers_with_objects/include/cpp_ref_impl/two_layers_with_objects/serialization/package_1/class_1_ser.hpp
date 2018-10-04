@@ -18,39 +18,26 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/two_layers_with_objects/types/Package_2/class_2.hpp"
+#ifndef CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_SERIALIZATION_PACKAGE_1_CLASS_1_SER_HPP
+#define CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_SERIALIZATION_PACKAGE_1_CLASS_1_SER_HPP
 
-namespace cpp_ref_impl {
-namespace two_layers_with_objects {
-namespace Package_2 {
+#if defined(_MSC_VER) && (_MSC_VER >= 1200)
+#pragma once
+#endif
 
-class_2::class_2()
-    : prop_0_(static_cast<int>(0)) { }
+#include <boost/serialization/split_free.hpp>
+#include "cpp_ref_impl/two_layers_with_objects/types/package_1/class_1.hpp"
 
-class_2::class_2(const int prop_0)
-    : prop_0_(prop_0) { }
+BOOST_SERIALIZATION_SPLIT_FREE(cpp_ref_impl::two_layers_with_objects::package_1::class_1)
+namespace boost {
+namespace serialization {
 
-void class_2::swap(class_2& other) noexcept {
-    using std::swap;
-    swap(prop_0_, other.prop_0_);
-}
+template<typename Archive>
+void save(Archive& ar, const cpp_ref_impl::two_layers_with_objects::package_1::class_1& v, unsigned int version);
 
-bool class_2::operator==(const class_2& rhs) const {
-    return prop_0_ == rhs.prop_0_;
-}
+template<typename Archive>
+void load(Archive& ar, cpp_ref_impl::two_layers_with_objects::package_1::class_1& v, unsigned int version);
 
-class_2& class_2::operator=(class_2 other) {
-    using std::swap;
-    swap(*this, other);
-    return *this;
-}
+} }
 
-int class_2::prop_0() const {
-    return prop_0_;
-}
-
-void class_2::prop_0(const int v) {
-    prop_0_ = v;
-}
-
-} } }
+#endif

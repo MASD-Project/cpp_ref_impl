@@ -269,7 +269,7 @@
           <dia:attribute name="string">
             <dia:string>##DOGEN yarn.dia.comment=true
 #DOGEN yarn.model_modules=two_layers_with_objects
-#DOGEN yarn.external_modules=dogen::test_models
+#DOGEN yarn.external_modules=cpp_ref_impl
 #DOGEN yarn.input_language=cpp
 #DOGEN quilt.cpp.enabled=true
 #DOGEN quilt.cpp.msbuild.enabled=false

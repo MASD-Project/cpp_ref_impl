@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/two_layers_with_objects/types/package_1/class_1.hpp"
+#include "cpp_ref_impl/two_layers_with_objects/types/package_1/class_1.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace two_layers_with_objects {
 namespace package_1 {
 
@@ -54,4 +53,4 @@ void class_1::prop_0(const int v) {
     prop_0_ = v;
 }
 
-} } } }
+} } }

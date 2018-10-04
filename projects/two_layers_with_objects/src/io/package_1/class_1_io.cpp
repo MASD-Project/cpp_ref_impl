@@ -19,19 +19,18 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/two_layers_with_objects/io/package_1/class_1_io.hpp"
+#include "cpp_ref_impl/two_layers_with_objects/io/package_1/class_1_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace two_layers_with_objects {
 namespace package_1 {
 
 std::ostream& operator<<(std::ostream& s, const class_1& v) {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::two_layers_with_objects::package_1::class_1\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::two_layers_with_objects::package_1::class_1\"" << ", "
       << "\"prop_0\": " << v.prop_0()
       << " }";
     return(s);
 }
 
-} } } }
+} } }

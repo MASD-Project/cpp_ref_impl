@@ -30,6 +30,6 @@ set(files ${files} ${odb_files})
 
 add_library(two_layers_with_objects STATIC ${files})
 set_target_properties(two_layers_with_objects PROPERTIES
-    OUTPUT_NAME dogen.two_layers_with_objects)
+    OUTPUT_NAME cpp_ref_impl.two_layers_with_objects)
 
 install(TARGETS two_layers_with_objects ARCHIVE DESTINATION lib COMPONENT libraries)

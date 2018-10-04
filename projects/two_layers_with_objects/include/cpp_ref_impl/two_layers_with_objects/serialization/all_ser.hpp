@@ -18,39 +18,14 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/two_layers_with_objects/types/Package_2/class_2.hpp"
+#ifndef CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_SERIALIZATION_ALL_SER_HPP
+#define CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_SERIALIZATION_ALL_SER_HPP
 
-namespace cpp_ref_impl {
-namespace two_layers_with_objects {
-namespace Package_2 {
+#if defined(_MSC_VER) && (_MSC_VER >= 1200)
+#pragma once
+#endif
 
-class_2::class_2()
-    : prop_0_(static_cast<int>(0)) { }
+#include "cpp_ref_impl/two_layers_with_objects/serialization/Package_2/class_2_ser.hpp"
+#include "cpp_ref_impl/two_layers_with_objects/serialization/package_1/class_1_ser.hpp"
 
-class_2::class_2(const int prop_0)
-    : prop_0_(prop_0) { }
-
-void class_2::swap(class_2& other) noexcept {
-    using std::swap;
-    swap(prop_0_, other.prop_0_);
-}
-
-bool class_2::operator==(const class_2& rhs) const {
-    return prop_0_ == rhs.prop_0_;
-}
-
-class_2& class_2::operator=(class_2 other) {
-    using std::swap;
-    swap(*this, other);
-    return *this;
-}
-
-int class_2::prop_0() const {
-    return prop_0_;
-}
-
-void class_2::prop_0(const int v) {
-    prop_0_ = v;
-}
-
-} } }
+#endif

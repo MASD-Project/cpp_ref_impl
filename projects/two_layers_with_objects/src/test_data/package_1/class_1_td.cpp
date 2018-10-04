@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/two_layers_with_objects/test_data/package_1/class_1_td.hpp"
+#include "cpp_ref_impl/two_layers_with_objects/test_data/package_1/class_1_td.hpp"
 
 namespace {
 
@@ -28,8 +28,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace two_layers_with_objects {
 namespace package_1 {
 
@@ -59,4 +58,4 @@ class_1_generator::operator()() {
     return create(position_++);
 }
 
-} } } }
+} } }

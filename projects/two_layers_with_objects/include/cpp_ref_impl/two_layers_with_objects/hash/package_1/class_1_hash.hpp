@@ -18,39 +18,36 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/two_layers_with_objects/types/Package_2/class_2.hpp"
+#ifndef CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_HASH_PACKAGE_1_CLASS_1_HASH_HPP
+#define CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_HASH_PACKAGE_1_CLASS_1_HASH_HPP
+
+#if defined(_MSC_VER) && (_MSC_VER >= 1200)
+#pragma once
+#endif
+
+#include <functional>
+#include "cpp_ref_impl/two_layers_with_objects/types/package_1/class_1.hpp"
 
 namespace cpp_ref_impl {
 namespace two_layers_with_objects {
-namespace Package_2 {
+namespace package_1 {
 
-class_2::class_2()
-    : prop_0_(static_cast<int>(0)) { }
-
-class_2::class_2(const int prop_0)
-    : prop_0_(prop_0) { }
-
-void class_2::swap(class_2& other) noexcept {
-    using std::swap;
-    swap(prop_0_, other.prop_0_);
-}
-
-bool class_2::operator==(const class_2& rhs) const {
-    return prop_0_ == rhs.prop_0_;
-}
-
-class_2& class_2::operator=(class_2 other) {
-    using std::swap;
-    swap(*this, other);
-    return *this;
-}
-
-int class_2::prop_0() const {
-    return prop_0_;
-}
-
-void class_2::prop_0(const int v) {
-    prop_0_ = v;
-}
+struct class_1_hasher {
+public:
+    static std::size_t hash(const class_1& v);
+};
 
 } } }
+
+namespace std {
+
+template<>
+struct hash<cpp_ref_impl::two_layers_with_objects::package_1::class_1> {
+public:
+    size_t operator()(const cpp_ref_impl::two_layers_with_objects::package_1::class_1& v) const {
+        return cpp_ref_impl::two_layers_with_objects::package_1::class_1_hasher::hash(v);
+    }
+};
+
+}
+#endif

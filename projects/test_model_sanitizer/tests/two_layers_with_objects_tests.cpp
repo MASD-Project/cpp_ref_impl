@@ -22,12 +22,13 @@
 #include "cpp_ref_impl/utility/io/vector_io.hpp"
 #include "cpp_ref_impl/utility/test/logging.hpp"
 #include "cpp_ref_impl/utility/test/canned_tests.hpp"
-#include "dogen/test_models/two_layers_with_objects/types/all.hpp"
-#include "dogen/test_models/two_layers_with_objects/io/all_io.hpp"
-#include "dogen/test_models/two_layers_with_objects/serialization/all_ser.hpp"
+#include "cpp_ref_impl/two_layers_with_objects/types/all.hpp"
+#include "cpp_ref_impl/two_layers_with_objects/io/all_io.hpp"
+#include "cpp_ref_impl/two_layers_with_objects/serialization/all_ser.hpp"
+#include "cpp_ref_impl/two_layers_with_objects/test_data/all_td.hpp"
+#include "cpp_ref_impl/two_layers_with_objects/hash/all_hash.hpp"
 #include "dogen/test_models/test_model_sanitizer/register_types.hpp"
-#include "dogen/test_models/two_layers_with_objects/test_data/all_td.hpp"
-#include "dogen/test_models/two_layers_with_objects/hash/all_hash.hpp"
+
 
 namespace {
 
@@ -37,9 +38,9 @@ const std::string test_suite("two_layers_with_objects_tests");
 
 }
 
-using namespace dogen::test_models::two_layers_with_objects;
-using namespace dogen::test_models::two_layers_with_objects::package_1;
-using namespace dogen::test_models::two_layers_with_objects::Package_2;
+using namespace cpp_ref_impl::two_layers_with_objects;
+using namespace cpp_ref_impl::two_layers_with_objects::package_1;
+using namespace cpp_ref_impl::two_layers_with_objects::Package_2;
 using namespace cpp_ref_impl::utility::test;
 
 BOOST_AUTO_TEST_SUITE(two_layers_with_objects_tests)
