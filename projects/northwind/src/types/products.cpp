@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/northwind/types/products.hpp"
+#include "cpp_ref_impl/northwind/types/products.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace northwind {
 
 products::products()
@@ -32,10 +31,10 @@ products::products()
       discontinued_(static_cast<bool>(0)) { }
 
 products::products(
-    const dogen::test_models::northwind::product_id& product_id,
+    const cpp_ref_impl::northwind::product_id& product_id,
     const std::string& product_name,
-    const dogen::test_models::northwind::supplier_id& supplier_id,
-    const dogen::test_models::northwind::category_id& category_id,
+    const cpp_ref_impl::northwind::supplier_id& supplier_id,
+    const cpp_ref_impl::northwind::category_id& category_id,
     const std::string& quantity_per_unit,
     const double unit_price,
     const int units_in_stock,
@@ -86,19 +85,19 @@ products& products::operator=(products other) {
     return *this;
 }
 
-const dogen::test_models::northwind::product_id& products::product_id() const {
+const cpp_ref_impl::northwind::product_id& products::product_id() const {
     return product_id_;
 }
 
-dogen::test_models::northwind::product_id& products::product_id() {
+cpp_ref_impl::northwind::product_id& products::product_id() {
     return product_id_;
 }
 
-void products::product_id(const dogen::test_models::northwind::product_id& v) {
+void products::product_id(const cpp_ref_impl::northwind::product_id& v) {
     product_id_ = v;
 }
 
-void products::product_id(const dogen::test_models::northwind::product_id&& v) {
+void products::product_id(const cpp_ref_impl::northwind::product_id&& v) {
     product_id_ = std::move(v);
 }
 
@@ -118,35 +117,35 @@ void products::product_name(const std::string&& v) {
     product_name_ = std::move(v);
 }
 
-const dogen::test_models::northwind::supplier_id& products::supplier_id() const {
+const cpp_ref_impl::northwind::supplier_id& products::supplier_id() const {
     return supplier_id_;
 }
 
-dogen::test_models::northwind::supplier_id& products::supplier_id() {
+cpp_ref_impl::northwind::supplier_id& products::supplier_id() {
     return supplier_id_;
 }
 
-void products::supplier_id(const dogen::test_models::northwind::supplier_id& v) {
+void products::supplier_id(const cpp_ref_impl::northwind::supplier_id& v) {
     supplier_id_ = v;
 }
 
-void products::supplier_id(const dogen::test_models::northwind::supplier_id&& v) {
+void products::supplier_id(const cpp_ref_impl::northwind::supplier_id&& v) {
     supplier_id_ = std::move(v);
 }
 
-const dogen::test_models::northwind::category_id& products::category_id() const {
+const cpp_ref_impl::northwind::category_id& products::category_id() const {
     return category_id_;
 }
 
-dogen::test_models::northwind::category_id& products::category_id() {
+cpp_ref_impl::northwind::category_id& products::category_id() {
     return category_id_;
 }
 
-void products::category_id(const dogen::test_models::northwind::category_id& v) {
+void products::category_id(const cpp_ref_impl::northwind::category_id& v) {
     category_id_ = v;
 }
 
-void products::category_id(const dogen::test_models::northwind::category_id&& v) {
+void products::category_id(const cpp_ref_impl::northwind::category_id&& v) {
     category_id_ = std::move(v);
 }
 
@@ -206,4 +205,4 @@ void products::discontinued(const bool v) {
     discontinued_ = v;
 }
 
-} } }
+} }

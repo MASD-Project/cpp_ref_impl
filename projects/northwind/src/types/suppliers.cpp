@@ -18,14 +18,13 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/northwind/types/suppliers.hpp"
+#include "cpp_ref_impl/northwind/types/suppliers.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace northwind {
 
 suppliers::suppliers(
-    const dogen::test_models::northwind::supplier_id& supplier_id,
+    const cpp_ref_impl::northwind::supplier_id& supplier_id,
     const std::string& company_name,
     const std::string& contact_name,
     const std::string& contact_title,
@@ -87,19 +86,19 @@ suppliers& suppliers::operator=(suppliers other) {
     return *this;
 }
 
-const dogen::test_models::northwind::supplier_id& suppliers::supplier_id() const {
+const cpp_ref_impl::northwind::supplier_id& suppliers::supplier_id() const {
     return supplier_id_;
 }
 
-dogen::test_models::northwind::supplier_id& suppliers::supplier_id() {
+cpp_ref_impl::northwind::supplier_id& suppliers::supplier_id() {
     return supplier_id_;
 }
 
-void suppliers::supplier_id(const dogen::test_models::northwind::supplier_id& v) {
+void suppliers::supplier_id(const cpp_ref_impl::northwind::supplier_id& v) {
     supplier_id_ = v;
 }
 
-void suppliers::supplier_id(const dogen::test_models::northwind::supplier_id&& v) {
+void suppliers::supplier_id(const cpp_ref_impl::northwind::supplier_id&& v) {
     supplier_id_ = std::move(v);
 }
 
@@ -279,4 +278,4 @@ void suppliers::home_page(const std::string&& v) {
     home_page_ = std::move(v);
 }
 
-} } }
+} }

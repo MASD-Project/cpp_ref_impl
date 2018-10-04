@@ -18,14 +18,13 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/northwind/types/shippers.hpp"
+#include "cpp_ref_impl/northwind/types/shippers.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace northwind {
 
 shippers::shippers(
-    const dogen::test_models::northwind::shipper_id& shipper_id,
+    const cpp_ref_impl::northwind::shipper_id& shipper_id,
     const std::string& company_name,
     const std::string& phone)
     : shipper_id_(shipper_id),
@@ -51,19 +50,19 @@ shippers& shippers::operator=(shippers other) {
     return *this;
 }
 
-const dogen::test_models::northwind::shipper_id& shippers::shipper_id() const {
+const cpp_ref_impl::northwind::shipper_id& shippers::shipper_id() const {
     return shipper_id_;
 }
 
-dogen::test_models::northwind::shipper_id& shippers::shipper_id() {
+cpp_ref_impl::northwind::shipper_id& shippers::shipper_id() {
     return shipper_id_;
 }
 
-void shippers::shipper_id(const dogen::test_models::northwind::shipper_id& v) {
+void shippers::shipper_id(const cpp_ref_impl::northwind::shipper_id& v) {
     shipper_id_ = v;
 }
 
-void shippers::shipper_id(const dogen::test_models::northwind::shipper_id&& v) {
+void shippers::shipper_id(const cpp_ref_impl::northwind::shipper_id&& v) {
     shipper_id_ = std::move(v);
 }
 
@@ -99,4 +98,4 @@ void shippers::phone(const std::string&& v) {
     phone_ = std::move(v);
 }
 
-} } }
+} }

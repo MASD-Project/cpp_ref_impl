@@ -100,7 +100,7 @@ It's objective is to test Dogen integration with ODB.
 
 #DOGEN yarn.dia.comment=true
 #DOGEN yarn.model_modules=northwind
-#DOGEN yarn.external_modules=dogen::test_models
+#DOGEN yarn.external_modules=cpp_ref_impl
 #DOGEN yarn.input_language=cpp
 #DOGEN quilt.cpp.enabled=true
 #DOGEN quilt.cpp.hash.enabled=false

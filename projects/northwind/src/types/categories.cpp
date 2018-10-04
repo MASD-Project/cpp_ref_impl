@@ -18,14 +18,13 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/northwind/types/categories.hpp"
+#include "cpp_ref_impl/northwind/types/categories.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace northwind {
 
 categories::categories(
-    const dogen::test_models::northwind::category_id& category_id,
+    const cpp_ref_impl::northwind::category_id& category_id,
     const std::string& category_name,
     const std::string& description,
     const std::string& picutre)
@@ -55,19 +54,19 @@ categories& categories::operator=(categories other) {
     return *this;
 }
 
-const dogen::test_models::northwind::category_id& categories::category_id() const {
+const cpp_ref_impl::northwind::category_id& categories::category_id() const {
     return category_id_;
 }
 
-dogen::test_models::northwind::category_id& categories::category_id() {
+cpp_ref_impl::northwind::category_id& categories::category_id() {
     return category_id_;
 }
 
-void categories::category_id(const dogen::test_models::northwind::category_id& v) {
+void categories::category_id(const cpp_ref_impl::northwind::category_id& v) {
     category_id_ = v;
 }
 
-void categories::category_id(const dogen::test_models::northwind::category_id&& v) {
+void categories::category_id(const cpp_ref_impl::northwind::category_id&& v) {
     category_id_ = std::move(v);
 }
 
@@ -119,4 +118,4 @@ void categories::picutre(const std::string&& v) {
     picutre_ = std::move(v);
 }
 
-} } }
+} }

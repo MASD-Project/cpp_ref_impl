@@ -19,19 +19,18 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/northwind/io/package/class_0_io.hpp"
+#include "cpp_ref_impl/northwind/io/package/class_0_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace northwind {
 namespace package {
 
 std::ostream& operator<<(std::ostream& s, const class_0& v) {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::northwind::package::class_0\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::northwind::package::class_0\"" << ", "
       << "\"prop_0\": " << v.prop_0()
       << " }";
     return(s);
 }
 
-} } } }
+} } }

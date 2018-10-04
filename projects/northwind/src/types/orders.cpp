@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/northwind/types/orders.hpp"
+#include "cpp_ref_impl/northwind/types/orders.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace northwind {
 
 orders::orders()
@@ -29,9 +28,9 @@ orders::orders()
       freight_(static_cast<double>(0)) { }
 
 orders::orders(
-    const dogen::test_models::northwind::order_id& order_id,
-    const dogen::test_models::northwind::customer_id& customer_id,
-    const dogen::test_models::northwind::employee_id& employee_id,
+    const cpp_ref_impl::northwind::order_id& order_id,
+    const cpp_ref_impl::northwind::customer_id& customer_id,
+    const cpp_ref_impl::northwind::employee_id& employee_id,
     const boost::gregorian::date& order_date,
     const boost::gregorian::date& required_date,
     const boost::gregorian::date& shipped_date,
@@ -99,51 +98,51 @@ orders& orders::operator=(orders other) {
     return *this;
 }
 
-const dogen::test_models::northwind::order_id& orders::order_id() const {
+const cpp_ref_impl::northwind::order_id& orders::order_id() const {
     return order_id_;
 }
 
-dogen::test_models::northwind::order_id& orders::order_id() {
+cpp_ref_impl::northwind::order_id& orders::order_id() {
     return order_id_;
 }
 
-void orders::order_id(const dogen::test_models::northwind::order_id& v) {
+void orders::order_id(const cpp_ref_impl::northwind::order_id& v) {
     order_id_ = v;
 }
 
-void orders::order_id(const dogen::test_models::northwind::order_id&& v) {
+void orders::order_id(const cpp_ref_impl::northwind::order_id&& v) {
     order_id_ = std::move(v);
 }
 
-const dogen::test_models::northwind::customer_id& orders::customer_id() const {
+const cpp_ref_impl::northwind::customer_id& orders::customer_id() const {
     return customer_id_;
 }
 
-dogen::test_models::northwind::customer_id& orders::customer_id() {
+cpp_ref_impl::northwind::customer_id& orders::customer_id() {
     return customer_id_;
 }
 
-void orders::customer_id(const dogen::test_models::northwind::customer_id& v) {
+void orders::customer_id(const cpp_ref_impl::northwind::customer_id& v) {
     customer_id_ = v;
 }
 
-void orders::customer_id(const dogen::test_models::northwind::customer_id&& v) {
+void orders::customer_id(const cpp_ref_impl::northwind::customer_id&& v) {
     customer_id_ = std::move(v);
 }
 
-const dogen::test_models::northwind::employee_id& orders::employee_id() const {
+const cpp_ref_impl::northwind::employee_id& orders::employee_id() const {
     return employee_id_;
 }
 
-dogen::test_models::northwind::employee_id& orders::employee_id() {
+cpp_ref_impl::northwind::employee_id& orders::employee_id() {
     return employee_id_;
 }
 
-void orders::employee_id(const dogen::test_models::northwind::employee_id& v) {
+void orders::employee_id(const cpp_ref_impl::northwind::employee_id& v) {
     employee_id_ = v;
 }
 
-void orders::employee_id(const dogen::test_models::northwind::employee_id&& v) {
+void orders::employee_id(const cpp_ref_impl::northwind::employee_id&& v) {
     employee_id_ = std::move(v);
 }
 
@@ -307,4 +306,4 @@ void orders::ship_country(const std::string&& v) {
     ship_country_ = std::move(v);
 }
 
-} } }
+} }

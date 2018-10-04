@@ -18,15 +18,15 @@
 # MA 02110-1301, USA.
 #
 # epilogue
---odb-epilogue '#include "dogen/test_models/northwind/odb/orders_pragmas.hpp"'
+--odb-epilogue '#include "cpp_ref_impl/northwind/odb/orders_pragmas.hpp"'
 
 # regexes
---include-regex '%(.*).hpp%dogen/test_models/northwind/types/$1.hpp%'
---include-regex '%(^[a-zA-Z0-9_]+)-odb(.*)%dogen/test_models/northwind/odb/$1-odb$2%'
---include-regex '%dogen/test_models/northwind/types/(.*)-odb(.*)%dogen/test_models/northwind/odb/$1-odb$2%'
+--include-regex '%(.*).hpp%cpp_ref_impl/northwind/types/$1.hpp%'
+--include-regex '%(^[a-zA-Z0-9_]+)-odb(.*)%cpp_ref_impl/northwind/odb/$1-odb$2%'
+--include-regex '%cpp_ref_impl/northwind/types/(.*)-odb(.*)%cpp_ref_impl/northwind/odb/$1-odb$2%'
 
 # debug regexes
 # --include-regex-trace
 
 # make the header guards similar to dogen ones
---guard-prefix DOGEN_TEST_MODELS_NORTHWIND_ODB
+--guard-prefix CPP_REF_IMPL_NORTHWIND_ODB

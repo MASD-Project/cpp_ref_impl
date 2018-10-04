@@ -20,8 +20,8 @@
  */
 #include <ostream>
 #include <boost/algorithm/string.hpp>
-#include "dogen/test_models/northwind/io/customers_io.hpp"
-#include "dogen/test_models/northwind/io/customer_id_io.hpp"
+#include "cpp_ref_impl/northwind/io/customers_io.hpp"
+#include "cpp_ref_impl/northwind/io/customer_id_io.hpp"
 
 inline std::string tidy_up_string(std::string s) {
     boost::replace_all(s, "\r\n", "<new_line>");
@@ -31,13 +31,12 @@ inline std::string tidy_up_string(std::string s) {
     return s;
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace northwind {
 
 std::ostream& operator<<(std::ostream& s, const customers& v) {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::northwind::customers\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::northwind::customers\"" << ", "
       << "\"customer_id\": " << v.customer_id() << ", "
       << "\"customer_code\": " << "\"" << tidy_up_string(v.customer_code()) << "\"" << ", "
       << "\"company_name\": " << "\"" << tidy_up_string(v.company_name()) << "\"" << ", "
@@ -54,4 +53,4 @@ std::ostream& operator<<(std::ostream& s, const customers& v) {
     return(s);
 }
 
-} } }
+} }

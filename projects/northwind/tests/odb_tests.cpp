@@ -29,14 +29,14 @@
 #include "dogen.utility/test_data/validating_resolver.hpp"
 #include "dogen.utility/test_data/tds_test_good.hpp"
 #include "dogen.utility/test/logging.hpp"
-#include "dogen/test_models/northwind/types/all.hpp"
-#include "dogen/test_models/northwind/io/all_io.hpp"
-#include "dogen/test_models/northwind/test_data/all_td.hpp"
-// #include "dogen/test_models/northwind/odb/no_keys-odb.hxx"
-// #include "dogen/test_models/northwind/odb/no_keys_2-odb.hxx"
-// #include "dogen/test_models/northwind/odb/primary_key-odb.hxx"
-// #include "dogen/test_models/northwind/odb/primary_key_2-odb.hxx"
-// #include "dogen/test_models/northwind/odb/foreign_key-odb.hxx"
+#include "cpp_ref_impl/northwind/types/all.hpp"
+#include "cpp_ref_impl/northwind/io/all_io.hpp"
+#include "cpp_ref_impl/northwind/test_data/all_td.hpp"
+// #include "cpp_ref_impl/northwind/odb/no_keys-odb.hxx"
+// #include "cpp_ref_impl/northwind/odb/no_keys_2-odb.hxx"
+// #include "cpp_ref_impl/northwind/odb/primary_key-odb.hxx"
+// #include "cpp_ref_impl/northwind/odb/primary_key_2-odb.hxx"
+// #include "cpp_ref_impl/northwind/odb/foreign_key-odb.hxx"
 
 using namespace odb::core;
 

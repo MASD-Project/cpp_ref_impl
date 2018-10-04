@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/northwind/types/package/class_0.hpp"
+#include "cpp_ref_impl/northwind/types/package/class_0.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace northwind {
 namespace package {
 
@@ -54,4 +53,4 @@ void class_0::prop_0(const int v) {
     prop_0_ = v;
 }
 
-} } } }
+} } }

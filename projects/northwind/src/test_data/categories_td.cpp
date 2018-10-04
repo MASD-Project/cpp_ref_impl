@@ -19,14 +19,14 @@
  *
  */
 #include <sstream>
-#include "dogen/test_models/northwind/test_data/categories_td.hpp"
-#include "dogen/test_models/northwind/test_data/category_id_td.hpp"
+#include "cpp_ref_impl/northwind/test_data/categories_td.hpp"
+#include "cpp_ref_impl/northwind/test_data/category_id_td.hpp"
 
 namespace {
 
-dogen::test_models::northwind::category_id
-create_dogen_test_models_northwind_category_id(const unsigned int position) {
-    return dogen::test_models::northwind::category_id_generator::create(position);
+cpp_ref_impl::northwind::category_id
+create_cpp_ref_impl_northwind_category_id(const unsigned int position) {
+    return cpp_ref_impl::northwind::category_id_generator::create(position);
 }
 
 std::string create_std_string(const unsigned int position) {
@@ -37,15 +37,14 @@ std::string create_std_string(const unsigned int position) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace northwind {
 
 categories_generator::categories_generator() : position_(0) { }
 
 void categories_generator::
 populate(const unsigned int position, result_type& v) {
-    v.category_id(create_dogen_test_models_northwind_category_id(position + 0));
+    v.category_id(create_cpp_ref_impl_northwind_category_id(position + 0));
     v.category_name(create_std_string(position + 1));
     v.description(create_std_string(position + 2));
     v.picutre(create_std_string(position + 3));
@@ -70,4 +69,4 @@ categories_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

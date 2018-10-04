@@ -19,18 +19,17 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/northwind/io/non_orm_class_io.hpp"
+#include "cpp_ref_impl/northwind/io/non_orm_class_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace northwind {
 
 std::ostream& operator<<(std::ostream& s, const non_orm_class& v) {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::northwind::non_orm_class\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::northwind::non_orm_class\"" << ", "
       << "\"prop_0\": " << v.prop_0()
       << " }";
     return(s);
 }
 
-} } }
+} }

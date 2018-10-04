@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/northwind/types/non_orm_class.hpp"
+#include "cpp_ref_impl/northwind/types/non_orm_class.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace northwind {
 
 non_orm_class::non_orm_class()
@@ -53,4 +52,4 @@ void non_orm_class::prop_0(const int v) {
     prop_0_ = v;
 }
 
-} } }
+} }

@@ -26,10 +26,9 @@
 #include <boost/archive/binary_oarchive.hpp>
 #include <boost/archive/polymorphic_iarchive.hpp>
 #include <boost/archive/polymorphic_oarchive.hpp>
-#include "dogen/test_models/northwind/serialization/registrar_ser.hpp"
+#include "cpp_ref_impl/northwind/serialization/registrar_ser.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace northwind {
 
 template<typename Archive>
@@ -48,4 +47,4 @@ template void register_types(boost::archive::binary_iarchive&);
 template void register_types(boost::archive::xml_oarchive&);
 template void register_types(boost::archive::xml_iarchive&);
 
-} } }
+} }

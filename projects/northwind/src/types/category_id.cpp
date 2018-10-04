@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/northwind/types/category_id.hpp"
+#include "cpp_ref_impl/northwind/types/category_id.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace northwind {
 
 category_id::category_id(const int value)
@@ -50,4 +49,4 @@ category_id& category_id::operator=(category_id other) {
     return *this;
 }
 
-} } }
+} }

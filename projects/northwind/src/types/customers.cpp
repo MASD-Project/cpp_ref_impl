@@ -18,14 +18,13 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/northwind/types/customers.hpp"
+#include "cpp_ref_impl/northwind/types/customers.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace northwind {
 
 customers::customers(
-    const dogen::test_models::northwind::customer_id& customer_id,
+    const cpp_ref_impl::northwind::customer_id& customer_id,
     const std::string& customer_code,
     const std::string& company_name,
     const std::string& contact_name,
@@ -87,19 +86,19 @@ customers& customers::operator=(customers other) {
     return *this;
 }
 
-const dogen::test_models::northwind::customer_id& customers::customer_id() const {
+const cpp_ref_impl::northwind::customer_id& customers::customer_id() const {
     return customer_id_;
 }
 
-dogen::test_models::northwind::customer_id& customers::customer_id() {
+cpp_ref_impl::northwind::customer_id& customers::customer_id() {
     return customer_id_;
 }
 
-void customers::customer_id(const dogen::test_models::northwind::customer_id& v) {
+void customers::customer_id(const cpp_ref_impl::northwind::customer_id& v) {
     customer_id_ = v;
 }
 
-void customers::customer_id(const dogen::test_models::northwind::customer_id&& v) {
+void customers::customer_id(const cpp_ref_impl::northwind::customer_id&& v) {
     customer_id_ = std::move(v);
 }
 
@@ -279,4 +278,4 @@ void customers::fax(const std::string&& v) {
     fax_ = std::move(v);
 }
 
-} } }
+} }

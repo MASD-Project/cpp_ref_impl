@@ -20,8 +20,8 @@
  */
 #include <ostream>
 #include <boost/algorithm/string.hpp>
-#include "dogen/test_models/northwind/io/shippers_io.hpp"
-#include "dogen/test_models/northwind/io/shipper_id_io.hpp"
+#include "cpp_ref_impl/northwind/io/shippers_io.hpp"
+#include "cpp_ref_impl/northwind/io/shipper_id_io.hpp"
 
 inline std::string tidy_up_string(std::string s) {
     boost::replace_all(s, "\r\n", "<new_line>");
@@ -31,13 +31,12 @@ inline std::string tidy_up_string(std::string s) {
     return s;
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace northwind {
 
 std::ostream& operator<<(std::ostream& s, const shippers& v) {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::northwind::shippers\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::northwind::shippers\"" << ", "
       << "\"shipper_id\": " << v.shipper_id() << ", "
       << "\"company_name\": " << "\"" << tidy_up_string(v.company_name()) << "\"" << ", "
       << "\"phone\": " << "\"" << tidy_up_string(v.phone()) << "\""
@@ -45,4 +44,4 @@ std::ostream& operator<<(std::ostream& s, const shippers& v) {
     return(s);
 }
 
-} } }
+} }

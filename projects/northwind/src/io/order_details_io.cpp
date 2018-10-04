@@ -20,11 +20,10 @@
  */
 #include <ostream>
 #include <boost/io/ios_state.hpp>
-#include "dogen/test_models/northwind/io/order_details_io.hpp"
-#include "dogen/test_models/northwind/io/order_details_key_io.hpp"
+#include "cpp_ref_impl/northwind/io/order_details_io.hpp"
+#include "cpp_ref_impl/northwind/io/order_details_key_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace northwind {
 
 std::ostream& operator<<(std::ostream& s, const order_details& v) {
@@ -35,7 +34,7 @@ std::ostream& operator<<(std::ostream& s, const order_details& v) {
     s.setf(std::ios::showpoint);
 
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::northwind::order_details\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::northwind::order_details\"" << ", "
       << "\"order_details_key\": " << v.order_details_key() << ", "
       << "\"unit_price\": " << v.unit_price() << ", "
       << "\"quantity\": " << v.quantity() << ", "
@@ -44,4 +43,4 @@ std::ostream& operator<<(std::ostream& s, const order_details& v) {
     return(s);
 }
 
-} } }
+} }

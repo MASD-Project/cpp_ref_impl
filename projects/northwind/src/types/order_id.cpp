@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/northwind/types/order_id.hpp"
+#include "cpp_ref_impl/northwind/types/order_id.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace northwind {
 
 order_id::order_id(const int value)
@@ -50,4 +49,4 @@ order_id& order_id::operator=(order_id other) {
     return *this;
 }
 
-} } }
+} }

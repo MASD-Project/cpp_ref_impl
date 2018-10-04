@@ -19,20 +19,19 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/northwind/io/supplier_id_io.hpp"
+#include "cpp_ref_impl/northwind/io/supplier_id_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace northwind {
 
 std::ostream& operator<<(std::ostream& s, const supplier_id& v) {
 
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::northwind::supplier_id\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::northwind::supplier_id\"" << ", "
       << "\"value\": " << v.value()
       << " }";
 
     return s;
 }
 
-} } }
+} }

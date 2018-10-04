@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/northwind/types/product_id.hpp"
+#include "cpp_ref_impl/northwind/types/product_id.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace northwind {
 
 product_id::product_id(const int value)
@@ -50,4 +49,4 @@ product_id& product_id::operator=(product_id other) {
     return *this;
 }
 
-} } }
+} }

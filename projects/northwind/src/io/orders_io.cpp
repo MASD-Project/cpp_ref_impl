@@ -22,10 +22,10 @@
 #include <boost/io/ios_state.hpp>
 #include <boost/algorithm/string.hpp>
 #include <boost/date_time/gregorian/gregorian.hpp>
-#include "dogen/test_models/northwind/io/orders_io.hpp"
-#include "dogen/test_models/northwind/io/order_id_io.hpp"
-#include "dogen/test_models/northwind/io/customer_id_io.hpp"
-#include "dogen/test_models/northwind/io/employee_id_io.hpp"
+#include "cpp_ref_impl/northwind/io/orders_io.hpp"
+#include "cpp_ref_impl/northwind/io/order_id_io.hpp"
+#include "cpp_ref_impl/northwind/io/customer_id_io.hpp"
+#include "cpp_ref_impl/northwind/io/employee_id_io.hpp"
 
 inline std::string tidy_up_string(std::string s) {
     boost::replace_all(s, "\r\n", "<new_line>");
@@ -35,8 +35,7 @@ inline std::string tidy_up_string(std::string s) {
     return s;
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace northwind {
 
 std::ostream& operator<<(std::ostream& s, const orders& v) {
@@ -47,7 +46,7 @@ std::ostream& operator<<(std::ostream& s, const orders& v) {
     s.setf(std::ios::showpoint);
 
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::northwind::orders\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::northwind::orders\"" << ", "
       << "\"order_id\": " << v.order_id() << ", "
       << "\"customer_id\": " << v.customer_id() << ", "
       << "\"employee_id\": " << v.employee_id() << ", "
@@ -66,4 +65,4 @@ std::ostream& operator<<(std::ostream& s, const orders& v) {
     return(s);
 }
 
-} } }
+} }

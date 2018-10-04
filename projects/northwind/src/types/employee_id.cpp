@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/northwind/types/employee_id.hpp"
+#include "cpp_ref_impl/northwind/types/employee_id.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace northwind {
 
 employee_id::employee_id(const int value)
@@ -50,4 +49,4 @@ employee_id& employee_id::operator=(employee_id other) {
     return *this;
 }
 
-} } }
+} }

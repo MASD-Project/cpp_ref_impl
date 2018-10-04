@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/northwind/types/shipper_id.hpp"
+#include "cpp_ref_impl/northwind/types/shipper_id.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace northwind {
 
 shipper_id::shipper_id(const int value)
@@ -50,4 +49,4 @@ shipper_id& shipper_id::operator=(shipper_id other) {
     return *this;
 }
 
-} } }
+} }

@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/northwind/test_data/package/class_0_td.hpp"
+#include "cpp_ref_impl/northwind/test_data/package/class_0_td.hpp"
 
 namespace {
 
@@ -28,8 +28,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace northwind {
 namespace package {
 
@@ -59,4 +58,4 @@ class_0_generator::operator()() {
     return create(position_++);
 }
 
-} } } }
+} } }
