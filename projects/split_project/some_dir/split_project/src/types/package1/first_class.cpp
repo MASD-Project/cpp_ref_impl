@@ -1,7 +1,6 @@
-#include "dogen/test_models/split_project/types/package1/first_class.hpp"
+#include "cpp_ref_impl/split_project/types/package1/first_class.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace split_project {
 namespace package1 {
 
@@ -48,4 +47,4 @@ void first_class::private_attribute(const int v) {
     private_attribute_ = v;
 }
 
-} } } }
+} } }

@@ -1,4 +1,4 @@
-#include "dogen/test_models/split_project/hash/package1/first_class_hash.hpp"
+#include "cpp_ref_impl/split_project/hash/package1/first_class_hash.hpp"
 
 namespace {
 
@@ -10,8 +10,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace split_project {
 namespace package1 {
 
@@ -24,4 +23,4 @@ std::size_t first_class_hasher::hash(const first_class& v) {
     return seed;
 }
 
-} } } }
+} } }

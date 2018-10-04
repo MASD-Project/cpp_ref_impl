@@ -11,6 +11,6 @@ set(files ${files} ${odb_files})
 
 add_library(split_project STATIC ${files})
 set_target_properties(split_project PROPERTIES
-    OUTPUT_NAME dogen.split_project)
+    OUTPUT_NAME cpp_ref_impl.split_project)
 
 install(TARGETS split_project ARCHIVE DESTINATION lib COMPONENT libraries)
