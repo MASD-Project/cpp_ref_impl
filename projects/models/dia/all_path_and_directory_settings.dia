@@ -275,9 +275,7 @@
 #DOGEN annotations.profile=dogen
 #DOGEN yarn.input_language=language_agnostic
 #DOGEN yarn.output_language=cpp
-#DOGEN yarn.output_language=csharp
 #DOGEN quilt.cpp.enabled=true
-#DOGEN quilt.csharp.enabled=true
 #DOGEN quilt.cpp.msbuild.enabled=false
 #DOGEN quilt.cpp.visual_studio.project.enabled=false
 #DOGEN quilt.cpp.visual_studio.solution.enabled=false
@@ -341,25 +339,7 @@
 #DOGEN quilt.cpp.types.primitive_header.postfix=0_5_4
 #DOGEN quilt.cpp.types.primitive_implementation.postfix=0_5_5
 #DOGEN quilt.cpp.types.master_header.postfix=0_5_6
-#DOGEN quilt.cpp.types.forward_declarations.postfix=0_5_7
-#DOGEN quilt.csharp.directory=csharp_backend
-#DOGEN quilt.csharp.test_data.directory=test_data_dir
-#DOGEN quilt.csharp.test_data.postfix=the_test_data
-#DOGEN quilt.csharp.test_data.class.postfix=1_0_0
-#DOGEN quilt.csharp.test_data.assistant.postfix=1_0_1
-#DOGEN quilt.csharp.test_data.enum.postfix=1_0_2
-#DOGEN quilt.csharp.test_data.primitive.postfix=1_0_3
-#DOGEN quilt.csharp.io.directory=io_dir
-#DOGEN quilt.csharp.io.postfix=the_io
-#DOGEN quilt.csharp.io.class.postfix=2_0_0
-#DOGEN quilt.csharp.io.assistant.postfix=2_0_1
-#DOGEN quilt.csharp.io.enum.postfix=2_0_2
-#DOGEN quilt.csharp.io.primitive.postfix=2_0_3
-#DOGEN quilt.csharp.types.directory=types_dir
-#DOGEN quilt.csharp.types.postfix=the_types
-#DOGEN quilt.csharp.types.class.postfix=1_1_0
-#DOGEN quilt.csharp.types.enum.postfix=1_1_2
-#DOGEN quilt.csharp.types.primitive.postfix=1_1_3#</dia:string>
+#DOGEN quilt.cpp.types.forward_declarations.postfix=0_5_7#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="monospace" style="0" name="Courier"/>
