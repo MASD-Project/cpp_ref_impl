@@ -43,34 +43,4 @@ if (DOGEN_KNITTER_EXECUTABLE)
                 benchmark_knit_${target_ext})
         endif()
     endforeach()
-
-    set(target northwind)
-    set(target_ext ${target}.${frontend})
-    set(target_path ${models_dir}/${target_ext})
-    add_custom_target(knit_${target_ext}
-        COMMENT "Knitting ${target_ext} model" VERBATIM
-        WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-        COMMAND ${DOGEN_KNITTER_EXECUTABLE}
-        --target ${target_path} --output-dir ${projects_dir}/dogen.test_models
-        ${other_options} ${ignore_regexes}
-        --ignore-files-matching-regex .*sql
-        --ignore-files-matching-regex .*-odb.*)
-    add_dependencies(knit_all_${frontend} knit_${target_ext})
-
-    if (WITH_BENCHMARKS)
-        set(target northwind)
-        set(target_ext ${target}.${frontend})
-        set(target_path ${models_dir}/${target_ext})
-        add_custom_target(benchmark_knit_${target}.${frontend}
-            COMMENT "Benchmarking knitting ${target_ext} model" VERBATIM
-            WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-            COMMAND ${benchmark_command} ${benchmark_repeats}
-            ${benchmark_directory}/${benchmark_prefix}${target}.csv
-            ${DOGEN_KNITTER_EXECUTABLE} --target ${target_ext}
-            --output-dir ${projects_dir}/dogen.test_models
-            ${other_options} ${ignore_regexes}
-            --ignore-files-matching-regex .*sql
-            --ignore-files-matching-regex .*-odb.*)
-        add_dependencies(benchmark_${frontend} benchmark_knit_${target_ext})
-    endif()
 endif()

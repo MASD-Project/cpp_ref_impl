@@ -78,7 +78,8 @@ if (DOGEN_KNITTER_EXECUTABLE)
     set(ignore_regexes ${ignore_regexes} ${ig_flg} .*/tests/.*)
     set(ignore_regexes ${ignore_regexes} ${ig_flg} .*/poly-stitch.el)
     set(ignore_regexes ${ignore_regexes} ${ig_flg} .*/*.py)
-
+    set(ignore_regexes ${ignore_regexes} ${ig_flg} .*sql)
+    set(ignore_regexes ${ignore_regexes} ${ig_flg} .*-odb.*)
 
     set(other_options --log-level ${DOGEN_LOG_LEVEL})
     set(other_options ${other_options} --delete-extra-files)
@@ -95,8 +96,9 @@ if (DOGEN_KNITTER_EXECUTABLE)
     # set(common_arguments ${common_arguments} "--probe-all")
     # set(common_arguments ${common_arguments} "--probe-stats-org-mode")
 
-    # main input models
+    # input models
     set(models all_path_and_directory_settings)
+    set(models ${models} northwind)
     set(models ${models} boost_model)
     set(models ${models} class_without_name)
     set(models ${models} CMakeLists)
@@ -118,10 +120,6 @@ if (DOGEN_KNITTER_EXECUTABLE)
     set(models ${models} std_model)
     set(models ${models} two_empty_layers)
     set(models ${models} two_layers_with_objects)
-
-    # models that are not yet ready
-    # set(models ${models} pleat)
-    # set(models ${models} dart)
 endif()
 
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/dia)
