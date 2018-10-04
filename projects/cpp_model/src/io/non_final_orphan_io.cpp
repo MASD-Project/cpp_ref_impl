@@ -19,18 +19,17 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/cpp_model/io/non_final_orphan_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/non_final_orphan_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const non_final_orphan& v) {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::non_final_orphan\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::non_final_orphan\"" << ", "
       << "\"prop_0\": " << v.prop_0()
       << " }";
     return(s);
 }
 
-} } }
+} }

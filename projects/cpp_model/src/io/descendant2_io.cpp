@@ -20,11 +20,10 @@
  */
 #include <ostream>
 #include <boost/io/ios_state.hpp>
-#include "dogen/test_models/cpp_model/io/base_io.hpp"
-#include "dogen/test_models/cpp_model/io/descendant2_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/base_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/descendant2_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const descendant2& v) {
@@ -32,4 +31,4 @@ std::ostream& operator<<(std::ostream& s, const descendant2& v) {
     return(s);
 }
 
-} } }
+} }

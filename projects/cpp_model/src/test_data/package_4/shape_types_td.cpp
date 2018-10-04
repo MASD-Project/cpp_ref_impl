@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/test_data/package_4/shape_types_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/package_4/shape_types_td.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 namespace package_4 {
 
@@ -43,4 +42,4 @@ shape_types_generator::operator()() {
     return create(position_++);
 }
 
-} } } }
+} } }

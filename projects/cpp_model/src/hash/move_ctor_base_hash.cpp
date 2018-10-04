@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/hash/move_ctor_base_hash.hpp"
+#include "cpp_ref_impl/cpp_model/hash/move_ctor_base_hash.hpp"
 
 namespace {
 
@@ -36,8 +36,7 @@ inline std::size_t hash_boost_filesystem_path(const boost::filesystem::path& v) 
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::size_t move_ctor_base_hasher::hash(const move_ctor_base& v) {
@@ -47,4 +46,4 @@ std::size_t move_ctor_base_hasher::hash(const move_ctor_base& v) {
     return seed;
 }
 
-} } }
+} }

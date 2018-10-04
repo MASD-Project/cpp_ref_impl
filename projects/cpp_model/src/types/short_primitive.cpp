@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/short_primitive.hpp"
+#include "cpp_ref_impl/cpp_model/types/short_primitive.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 short_primitive::short_primitive(const short value)
@@ -50,4 +49,4 @@ short_primitive& short_primitive::operator=(short_primitive other) {
     return *this;
 }
 
-} } }
+} }

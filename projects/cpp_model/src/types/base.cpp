@@ -19,15 +19,14 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/cpp_model/types/base.hpp"
+#include "cpp_ref_impl/cpp_model/types/base.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 void base::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::base\"" << " }";
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::base\"" << " }";
 }
 
 void base::swap(base&) noexcept {
@@ -37,4 +36,4 @@ bool base::compare(const base& /*rhs*/) const {
     return true;
 }
 
-} } }
+} }

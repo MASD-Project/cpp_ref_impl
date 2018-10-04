@@ -19,10 +19,9 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/cpp_model/types/move_ctor_base.hpp"
+#include "cpp_ref_impl/cpp_model/types/move_ctor_base.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 move_ctor_base::move_ctor_base(move_ctor_base&& rhs)
@@ -33,7 +32,7 @@ move_ctor_base::move_ctor_base(const boost::filesystem::path& prop_0)
 
 void move_ctor_base::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::move_ctor_base\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::move_ctor_base\"" << ", "
       << "\"prop_0\": " << "\"" << prop_0_.generic_string() << "\""
       << " }";
 }
@@ -63,4 +62,4 @@ void move_ctor_base::prop_0(const boost::filesystem::path&& v) {
     prop_0_ = std::move(v);
 }
 
-} } }
+} }

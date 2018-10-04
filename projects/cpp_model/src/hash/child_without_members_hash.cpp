@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/hash/child_without_members_hash.hpp"
-#include "dogen/test_models/cpp_model/hash/parent_without_members_hash.hpp"
+#include "cpp_ref_impl/cpp_model/hash/child_without_members_hash.hpp"
+#include "cpp_ref_impl/cpp_model/hash/parent_without_members_hash.hpp"
 
 namespace {
 
@@ -31,15 +31,14 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::size_t child_without_members_hasher::hash(const child_without_members& v) {
     std::size_t seed(0);
 
-    combine(seed, dynamic_cast<const dogen::test_models::cpp_model::parent_without_members&>(v));
+    combine(seed, dynamic_cast<const cpp_ref_impl::cpp_model::parent_without_members&>(v));
     return seed;
 }
 
-} } }
+} }

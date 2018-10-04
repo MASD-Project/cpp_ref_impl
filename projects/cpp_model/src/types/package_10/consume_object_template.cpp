@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/package_10/consume_object_template.hpp"
+#include "cpp_ref_impl/cpp_model/types/package_10/consume_object_template.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 namespace package_10 {
 
@@ -54,4 +53,4 @@ void consume_object_template::prop_0(const int v) {
     prop_0_ = v;
 }
 
-} } } }
+} } }

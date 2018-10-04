@@ -19,41 +19,40 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/cpp_model/types/child_of_a_child1.hpp"
-#include "dogen/test_models/cpp_model/io/third_child_with_members_io.hpp"
+#include "cpp_ref_impl/cpp_model/types/child_of_a_child1.hpp"
+#include "cpp_ref_impl/cpp_model/io/third_child_with_members_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 child_of_a_child1::child_of_a_child1(
     const int prop_0,
     const unsigned int prop_1)
-    : dogen::test_models::cpp_model::third_child_with_members(
+    : cpp_ref_impl::cpp_model::third_child_with_members(
       prop_0,
       prop_1) { }
 
 void child_of_a_child1::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::child_of_a_child1\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::child_of_a_child1\"" << ", "
       << "\"__parent_0__\": ";
-    dogen::test_models::cpp_model::third_child_with_members::to_stream(s);
+    cpp_ref_impl::cpp_model::third_child_with_members::to_stream(s);
     s << " }";
 }
 
 void child_of_a_child1::swap(child_of_a_child1& other) noexcept {
-    dogen::test_models::cpp_model::third_child_with_members::swap(other);
+    cpp_ref_impl::cpp_model::third_child_with_members::swap(other);
 
 }
 
-bool child_of_a_child1::equals(const dogen::test_models::cpp_model::parent_with_members& other) const {
+bool child_of_a_child1::equals(const cpp_ref_impl::cpp_model::parent_with_members& other) const {
     const child_of_a_child1* const p(dynamic_cast<const child_of_a_child1* const>(&other));
     if (!p) return false;
     return *this == *p;
 }
 
 bool child_of_a_child1::operator==(const child_of_a_child1& rhs) const {
-    return dogen::test_models::cpp_model::third_child_with_members::compare(rhs);
+    return cpp_ref_impl::cpp_model::third_child_with_members::compare(rhs);
 }
 
 child_of_a_child1& child_of_a_child1::operator=(child_of_a_child1 other) {
@@ -62,4 +61,4 @@ child_of_a_child1& child_of_a_child1::operator=(child_of_a_child1 other) {
     return *this;
 }
 
-} } }
+} }

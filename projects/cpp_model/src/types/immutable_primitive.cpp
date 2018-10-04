@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/immutable_primitive.hpp"
+#include "cpp_ref_impl/cpp_model/types/immutable_primitive.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 immutable_primitive::immutable_primitive(const short value)
@@ -35,4 +34,4 @@ bool immutable_primitive::operator==(const immutable_primitive& rhs) const {
     return value_ == rhs.value_;
 }
 
-} } }
+} }

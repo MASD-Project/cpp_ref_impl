@@ -18,12 +18,11 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/test_data/child_with_members_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/child_without_members_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/parent_without_members_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/child_with_members_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/child_without_members_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/parent_without_members_td.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 void parent_without_members_generator::
@@ -33,8 +32,8 @@ populate(const unsigned int /*position*/, result_type& /*v*/) {
 parent_without_members_generator::result_type*
 parent_without_members_generator::create_ptr(const unsigned int position) {
     if ((position % 1) == 0)
-        return dogen::test_models::cpp_model::child_without_members_generator::create_ptr(position);
-    return dogen::test_models::cpp_model::child_with_members_generator::create_ptr(position);
+        return cpp_ref_impl::cpp_model::child_without_members_generator::create_ptr(position);
+    return cpp_ref_impl::cpp_model::child_with_members_generator::create_ptr(position);
 }
 
-} } }
+} }

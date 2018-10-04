@@ -19,20 +19,19 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/cpp_model/io/uint_primitive_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/uint_primitive_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const uint_primitive& v) {
 
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::uint_primitive\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::uint_primitive\"" << ", "
       << "\"value\": " << v.value()
       << " }";
 
     return s;
 }
 
-} } }
+} }

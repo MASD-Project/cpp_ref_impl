@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/test_data/class_0_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/class_0_td.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 class_0_generator::class_0_generator() : position_(0) { }
@@ -48,4 +47,4 @@ class_0_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/double_primitive.hpp"
+#include "cpp_ref_impl/cpp_model/types/double_primitive.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 double_primitive::double_primitive(const double value)
@@ -50,4 +49,4 @@ double_primitive& double_primitive::operator=(double_primitive other) {
     return *this;
 }
 
-} } }
+} }

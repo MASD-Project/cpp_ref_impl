@@ -19,23 +19,22 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/cpp_model/io/base_io.hpp"
-#include "dogen/test_models/cpp_model/types/descendant1.hpp"
+#include "cpp_ref_impl/cpp_model/io/base_io.hpp"
+#include "cpp_ref_impl/cpp_model/types/descendant1.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 void descendant1::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::descendant1\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::descendant1\"" << ", "
       << "\"__parent_0__\": ";
-    dogen::test_models::cpp_model::base::to_stream(s);
+    cpp_ref_impl::cpp_model::base::to_stream(s);
     s << " }";
 }
 
 void descendant1::swap(descendant1& other) noexcept {
-    dogen::test_models::cpp_model::base::swap(other);
+    cpp_ref_impl::cpp_model::base::swap(other);
 
 }
 
@@ -43,4 +42,4 @@ bool descendant1::compare(const descendant1& /*rhs*/) const {
     return true;
 }
 
-} } }
+} }

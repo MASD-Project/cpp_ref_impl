@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/bool_primitive.hpp"
+#include "cpp_ref_impl/cpp_model/types/bool_primitive.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 bool_primitive::bool_primitive(const bool value)
@@ -50,4 +49,4 @@ bool_primitive& bool_primitive::operator=(bool_primitive other) {
     return *this;
 }
 
-} } }
+} }

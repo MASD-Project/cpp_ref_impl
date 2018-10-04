@@ -19,26 +19,25 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/cpp_model/io/consumer_io.hpp"
-#include "dogen/test_models/cpp_model/io/int_primitive_io.hpp"
-#include "dogen/test_models/cpp_model/io/bool_primitive_io.hpp"
-#include "dogen/test_models/cpp_model/io/char_primitive_io.hpp"
-#include "dogen/test_models/cpp_model/io/long_primitive_io.hpp"
-#include "dogen/test_models/cpp_model/io/uint_primitive_io.hpp"
-#include "dogen/test_models/cpp_model/io/float_primitive_io.hpp"
-#include "dogen/test_models/cpp_model/io/short_primitive_io.hpp"
-#include "dogen/test_models/cpp_model/io/uchar_primitive_io.hpp"
-#include "dogen/test_models/cpp_model/io/ulong_primitive_io.hpp"
-#include "dogen/test_models/cpp_model/io/double_primitive_io.hpp"
-#include "dogen/test_models/cpp_model/io/ushort_primitive_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/consumer_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/int_primitive_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/bool_primitive_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/char_primitive_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/long_primitive_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/uint_primitive_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/float_primitive_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/short_primitive_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/uchar_primitive_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/ulong_primitive_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/double_primitive_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/ushort_primitive_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const consumer& v) {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::consumer\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::consumer\"" << ", "
       << "\"prop0\": " << v.prop0() << ", "
       << "\"prop1\": " << v.prop1() << ", "
       << "\"prop2\": " << v.prop2() << ", "
@@ -54,4 +53,4 @@ std::ostream& operator<<(std::ostream& s, const consumer& v) {
     return(s);
 }
 
-} } }
+} }

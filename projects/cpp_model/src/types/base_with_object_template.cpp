@@ -20,7 +20,7 @@
  */
 #include <ostream>
 #include <boost/algorithm/string.hpp>
-#include "dogen/test_models/cpp_model/types/base_with_object_template.hpp"
+#include "cpp_ref_impl/cpp_model/types/base_with_object_template.hpp"
 
 inline std::string tidy_up_string(std::string s) {
     boost::replace_all(s, "\r\n", "<new_line>");
@@ -30,8 +30,7 @@ inline std::string tidy_up_string(std::string s) {
     return s;
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 base_with_object_template::base_with_object_template()
@@ -45,7 +44,7 @@ base_with_object_template::base_with_object_template(
 
 void base_with_object_template::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::base_with_object_template\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::base_with_object_template\"" << ", "
       << "\"prop_2\": " << prop_2_ << ", "
       << "\"prop_0\": " << "\"" << tidy_up_string(prop_0_) << "\""
       << " }";
@@ -86,4 +85,4 @@ void base_with_object_template::prop_0(const std::string&& v) {
     prop_0_ = std::move(v);
 }
 
-} } }
+} }

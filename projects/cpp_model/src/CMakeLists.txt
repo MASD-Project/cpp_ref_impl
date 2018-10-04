@@ -30,6 +30,6 @@ set(files ${files} ${odb_files})
 
 add_library(cpp_model STATIC ${files})
 set_target_properties(cpp_model PROPERTIES
-    OUTPUT_NAME dogen.cpp_model)
+    OUTPUT_NAME cpp_ref_impl.cpp_model)
 
 install(TARGETS cpp_model ARCHIVE DESTINATION lib COMPONENT libraries)

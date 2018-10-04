@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/long_primitive.hpp"
+#include "cpp_ref_impl/cpp_model/types/long_primitive.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 long_primitive::long_primitive(const long value)
@@ -50,4 +49,4 @@ long_primitive& long_primitive::operator=(long_primitive other) {
     return *this;
 }
 
-} } }
+} }

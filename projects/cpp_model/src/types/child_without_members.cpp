@@ -19,22 +19,21 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/cpp_model/types/child_without_members.hpp"
-#include "dogen/test_models/cpp_model/io/parent_without_members_io.hpp"
+#include "cpp_ref_impl/cpp_model/types/child_without_members.hpp"
+#include "cpp_ref_impl/cpp_model/io/parent_without_members_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 void child_without_members::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::child_without_members\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::child_without_members\"" << ", "
       << "\"__parent_0__\": ";
-    dogen::test_models::cpp_model::parent_without_members::to_stream(s);
+    cpp_ref_impl::cpp_model::parent_without_members::to_stream(s);
     s << " }";
 }
 
-bool child_without_members::equals(const dogen::test_models::cpp_model::parent_without_members& other) const {
+bool child_without_members::equals(const cpp_ref_impl::cpp_model::parent_without_members& other) const {
     const child_without_members* const p(dynamic_cast<const child_without_members* const>(&other));
     if (!p) return false;
     return *this == *p;
@@ -44,4 +43,4 @@ bool child_without_members::operator==(const child_without_members& /*rhs*/) con
     return true;
 }
 
-} } }
+} }

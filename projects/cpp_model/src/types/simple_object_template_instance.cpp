@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/simple_object_template_instance.hpp"
+#include "cpp_ref_impl/cpp_model/types/simple_object_template_instance.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 simple_object_template_instance::simple_object_template_instance()
@@ -30,7 +29,7 @@ simple_object_template_instance::simple_object_template_instance()
 
 simple_object_template_instance::simple_object_template_instance(
     const int prop_0,
-    const dogen::test_models::cpp_model::value& prop_1,
+    const cpp_ref_impl::cpp_model::value& prop_1,
     const int prop_10)
     : prop_0_(prop_0),
       prop_1_(prop_1),
@@ -63,19 +62,19 @@ void simple_object_template_instance::prop_0(const int v) {
     prop_0_ = v;
 }
 
-const dogen::test_models::cpp_model::value& simple_object_template_instance::prop_1() const {
+const cpp_ref_impl::cpp_model::value& simple_object_template_instance::prop_1() const {
     return prop_1_;
 }
 
-dogen::test_models::cpp_model::value& simple_object_template_instance::prop_1() {
+cpp_ref_impl::cpp_model::value& simple_object_template_instance::prop_1() {
     return prop_1_;
 }
 
-void simple_object_template_instance::prop_1(const dogen::test_models::cpp_model::value& v) {
+void simple_object_template_instance::prop_1(const cpp_ref_impl::cpp_model::value& v) {
     prop_1_ = v;
 }
 
-void simple_object_template_instance::prop_1(const dogen::test_models::cpp_model::value&& v) {
+void simple_object_template_instance::prop_1(const cpp_ref_impl::cpp_model::value&& v) {
     prop_1_ = std::move(v);
 }
 
@@ -87,4 +86,4 @@ void simple_object_template_instance::prop_10(const int v) {
     prop_10_ = v;
 }
 
-} } }
+} }

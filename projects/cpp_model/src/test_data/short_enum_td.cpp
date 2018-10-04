@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/test_data/short_enum_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/short_enum_td.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 short_enum_generator::short_enum_generator() : position_(0) { }
@@ -42,4 +41,4 @@ short_enum_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

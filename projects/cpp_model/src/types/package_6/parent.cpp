@@ -19,10 +19,9 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/cpp_model/types/package_6/parent.hpp"
+#include "cpp_ref_impl/cpp_model/types/package_6/parent.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 namespace package_6 {
 
@@ -34,7 +33,7 @@ parent::parent(const unsigned int prop_0)
 
 void parent::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::package_6::parent\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::package_6::parent\"" << ", "
       << "\"prop_0\": " << prop_0_
       << " }";
 }
@@ -56,4 +55,4 @@ void parent::prop_0(const unsigned int v) {
     prop_0_ = v;
 }
 
-} } } }
+} } }

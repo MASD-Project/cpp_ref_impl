@@ -27,14 +27,14 @@
 #include <boost/archive/binary_oarchive.hpp>
 #include <boost/archive/polymorphic_iarchive.hpp>
 #include <boost/archive/polymorphic_oarchive.hpp>
-#include "dogen/test_models/cpp_model/serialization/builtins_ser.hpp"
+#include "cpp_ref_impl/cpp_model/serialization/builtins_ser.hpp"
 
 namespace boost {
 namespace serialization {
 
 template<typename Archive>
 void save(Archive& ar,
-    const dogen::test_models::cpp_model::builtins& v,
+    const cpp_ref_impl::cpp_model::builtins& v,
     const unsigned int /*version*/) {
     ar << make_nvp("bool_property", v.bool_property_);
     ar << make_nvp("char_property", v.char_property_);
@@ -53,7 +53,7 @@ void save(Archive& ar,
 
 template<typename Archive>
 void load(Archive& ar,
-    dogen::test_models::cpp_model::builtins& v,
+    cpp_ref_impl::cpp_model::builtins& v,
     const unsigned int /*version*/) {
     ar >> make_nvp("bool_property", v.bool_property_);
     ar >> make_nvp("char_property", v.char_property_);
@@ -75,16 +75,16 @@ void load(Archive& ar,
 namespace boost {
 namespace serialization {
 
-template void save(archive::polymorphic_oarchive& ar, const dogen::test_models::cpp_model::builtins& v, unsigned int version);
-template void load(archive::polymorphic_iarchive& ar, dogen::test_models::cpp_model::builtins& v, unsigned int version);
+template void save(archive::polymorphic_oarchive& ar, const cpp_ref_impl::cpp_model::builtins& v, unsigned int version);
+template void load(archive::polymorphic_iarchive& ar, cpp_ref_impl::cpp_model::builtins& v, unsigned int version);
 
-template void save(archive::text_oarchive& ar, const dogen::test_models::cpp_model::builtins& v, unsigned int version);
-template void load(archive::text_iarchive& ar, dogen::test_models::cpp_model::builtins& v, unsigned int version);
+template void save(archive::text_oarchive& ar, const cpp_ref_impl::cpp_model::builtins& v, unsigned int version);
+template void load(archive::text_iarchive& ar, cpp_ref_impl::cpp_model::builtins& v, unsigned int version);
 
-template void save(archive::binary_oarchive& ar, const dogen::test_models::cpp_model::builtins& v, unsigned int version);
-template void load(archive::binary_iarchive& ar, dogen::test_models::cpp_model::builtins& v, unsigned int version);
+template void save(archive::binary_oarchive& ar, const cpp_ref_impl::cpp_model::builtins& v, unsigned int version);
+template void load(archive::binary_iarchive& ar, cpp_ref_impl::cpp_model::builtins& v, unsigned int version);
 
-template void save(archive::xml_oarchive& ar, const dogen::test_models::cpp_model::builtins& v, unsigned int version);
-template void load(archive::xml_iarchive& ar, dogen::test_models::cpp_model::builtins& v, unsigned int version);
+template void save(archive::xml_oarchive& ar, const cpp_ref_impl::cpp_model::builtins& v, unsigned int version);
+template void load(archive::xml_iarchive& ar, cpp_ref_impl::cpp_model::builtins& v, unsigned int version);
 
 } }

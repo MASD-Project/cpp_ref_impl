@@ -18,14 +18,13 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/multi_line.hpp"
+#include "cpp_ref_impl/cpp_model/types/multi_line.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 bool multi_line::operator==(const multi_line& /*rhs*/) const {
     return true;
 }
 
-} } }
+} }

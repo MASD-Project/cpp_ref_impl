@@ -18,41 +18,40 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/test_data/a_class_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/book_types_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/colour_types_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/package_4/shape_types_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/a_class_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/book_types_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/colour_types_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/package_4/shape_types_td.hpp"
 
 namespace {
 
-dogen::test_models::cpp_model::colour_types
-create_dogen_test_models_cpp_model_colour_types(const unsigned int position) {
-    return dogen::test_models::cpp_model::colour_types_generator::create(position);
+cpp_ref_impl::cpp_model::colour_types
+create_cpp_ref_impl_cpp_model_colour_types(const unsigned int position) {
+    return cpp_ref_impl::cpp_model::colour_types_generator::create(position);
 }
 
-dogen::test_models::cpp_model::book_types
-create_dogen_test_models_cpp_model_book_types(const unsigned int position) {
-    return dogen::test_models::cpp_model::book_types_generator::create(position);
+cpp_ref_impl::cpp_model::book_types
+create_cpp_ref_impl_cpp_model_book_types(const unsigned int position) {
+    return cpp_ref_impl::cpp_model::book_types_generator::create(position);
 }
 
-dogen::test_models::cpp_model::package_4::shape_types
-create_dogen_test_models_cpp_model_package_4_shape_types(const unsigned int position) {
-    return dogen::test_models::cpp_model::package_4::shape_types_generator::create(position);
+cpp_ref_impl::cpp_model::package_4::shape_types
+create_cpp_ref_impl_cpp_model_package_4_shape_types(const unsigned int position) {
+    return cpp_ref_impl::cpp_model::package_4::shape_types_generator::create(position);
 }
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 a_class_generator::a_class_generator() : position_(0) { }
 
 void a_class_generator::
 populate(const unsigned int position, result_type& v) {
-    v.colour_type(create_dogen_test_models_cpp_model_colour_types(position + 0));
-    v.book_type(create_dogen_test_models_cpp_model_book_types(position + 1));
-    v.shape_type(create_dogen_test_models_cpp_model_package_4_shape_types(position + 2));
+    v.colour_type(create_cpp_ref_impl_cpp_model_colour_types(position + 0));
+    v.book_type(create_cpp_ref_impl_cpp_model_book_types(position + 1));
+    v.shape_type(create_cpp_ref_impl_cpp_model_package_4_shape_types(position + 2));
 }
 
 a_class_generator::result_type
@@ -74,4 +73,4 @@ a_class_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

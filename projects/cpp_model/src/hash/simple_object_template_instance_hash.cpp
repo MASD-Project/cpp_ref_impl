@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/hash/value_hash.hpp"
-#include "dogen/test_models/cpp_model/hash/simple_object_template_instance_hash.hpp"
+#include "cpp_ref_impl/cpp_model/hash/value_hash.hpp"
+#include "cpp_ref_impl/cpp_model/hash/simple_object_template_instance_hash.hpp"
 
 namespace {
 
@@ -31,8 +31,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::size_t simple_object_template_instance_hasher::hash(const simple_object_template_instance& v) {
@@ -45,4 +44,4 @@ std::size_t simple_object_template_instance_hasher::hash(const simple_object_tem
     return seed;
 }
 
-} } }
+} }

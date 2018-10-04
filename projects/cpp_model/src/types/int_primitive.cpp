@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/int_primitive.hpp"
+#include "cpp_ref_impl/cpp_model/types/int_primitive.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 int_primitive::int_primitive(const int value)
@@ -50,4 +49,4 @@ int_primitive& int_primitive::operator=(int_primitive other) {
     return *this;
 }
 
-} } }
+} }

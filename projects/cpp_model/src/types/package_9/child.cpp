@@ -19,11 +19,10 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/cpp_model/io/parent_outside_io.hpp"
-#include "dogen/test_models/cpp_model/types/package_9/child.hpp"
+#include "cpp_ref_impl/cpp_model/io/parent_outside_io.hpp"
+#include "cpp_ref_impl/cpp_model/types/package_9/child.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 namespace package_9 {
 
@@ -33,34 +32,34 @@ child::child()
 child::child(
     const int prop_0,
     const int prop_1)
-    : dogen::test_models::cpp_model::parent_outside(prop_0),
+    : cpp_ref_impl::cpp_model::parent_outside(prop_0),
       prop_1_(prop_1) { }
 
 void child::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::package_9::child\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::package_9::child\"" << ", "
       << "\"__parent_0__\": ";
-    dogen::test_models::cpp_model::parent_outside::to_stream(s);
+    cpp_ref_impl::cpp_model::parent_outside::to_stream(s);
     s << ", "
       << "\"prop_1\": " << prop_1_
       << " }";
 }
 
 void child::swap(child& other) noexcept {
-    dogen::test_models::cpp_model::parent_outside::swap(other);
+    cpp_ref_impl::cpp_model::parent_outside::swap(other);
 
     using std::swap;
     swap(prop_1_, other.prop_1_);
 }
 
-bool child::equals(const dogen::test_models::cpp_model::parent_outside& other) const {
+bool child::equals(const cpp_ref_impl::cpp_model::parent_outside& other) const {
     const child* const p(dynamic_cast<const child* const>(&other));
     if (!p) return false;
     return *this == *p;
 }
 
 bool child::operator==(const child& rhs) const {
-    return dogen::test_models::cpp_model::parent_outside::compare(rhs) &&
+    return cpp_ref_impl::cpp_model::parent_outside::compare(rhs) &&
         prop_1_ == rhs.prop_1_;
 }
 
@@ -78,4 +77,4 @@ void child::prop_1(const int v) {
     prop_1_ = v;
 }
 
-} } } }
+} } }

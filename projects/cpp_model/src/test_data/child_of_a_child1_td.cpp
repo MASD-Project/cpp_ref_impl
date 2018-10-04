@@ -18,18 +18,17 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/test_data/child_of_a_child1_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/third_child_with_members_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/child_of_a_child1_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/third_child_with_members_td.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 child_of_a_child1_generator::child_of_a_child1_generator() : position_(0) { }
 
 void child_of_a_child1_generator::
 populate(const unsigned int position, result_type& v) {
-    dogen::test_models::cpp_model::third_child_with_members_generator::populate(position, v);
+    cpp_ref_impl::cpp_model::third_child_with_members_generator::populate(position, v);
 }
 
 child_of_a_child1_generator::result_type
@@ -51,4 +50,4 @@ child_of_a_child1_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

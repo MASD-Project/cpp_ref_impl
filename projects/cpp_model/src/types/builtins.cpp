@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/builtins.hpp"
+#include "cpp_ref_impl/cpp_model/types/builtins.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 builtins::builtins()
@@ -210,4 +209,4 @@ void builtins::float_property(const float v) {
     float_property_ = v;
 }
 
-} } }
+} }

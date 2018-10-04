@@ -18,14 +18,13 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/immutable_zero.hpp"
+#include "cpp_ref_impl/cpp_model/types/immutable_zero.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 bool immutable_zero::operator==(const immutable_zero& /*rhs*/) const {
     return true;
 }
 
-} } }
+} }

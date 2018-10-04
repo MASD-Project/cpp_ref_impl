@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/hash/one_line_hash.hpp"
+#include "cpp_ref_impl/cpp_model/hash/one_line_hash.hpp"
 
 namespace {
 
@@ -30,8 +30,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::size_t one_line_hasher::hash(const one_line& v) {
@@ -44,4 +43,4 @@ std::size_t one_line_hasher::hash(const one_line& v) {
     return seed;
 }
 
-} } }
+} }

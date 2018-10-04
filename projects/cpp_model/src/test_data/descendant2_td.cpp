@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/test_data/base_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/descendant2_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/base_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/descendant2_td.hpp"
 
 namespace {
 
@@ -29,15 +29,14 @@ bool create_bool(const unsigned int position) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 descendant2_generator::descendant2_generator() : position_(0) { }
 
 void descendant2_generator::
 populate(const unsigned int position, result_type& v) {
-    dogen::test_models::cpp_model::base_generator::populate(position, v);
+    cpp_ref_impl::cpp_model::base_generator::populate(position, v);
     v.prop_0(create_bool(position + 0));
 }
 
@@ -60,4 +59,4 @@ descendant2_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

@@ -18,14 +18,13 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/service_interface.hpp"
+#include "cpp_ref_impl/cpp_model/types/service_interface.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 bool service_interface::operator==(const service_interface& /*rhs*/) const {
     return true;
 }
 
-} } }
+} }

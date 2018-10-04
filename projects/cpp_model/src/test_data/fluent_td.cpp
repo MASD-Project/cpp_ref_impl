@@ -19,8 +19,8 @@
  *
  */
 #include <sstream>
-#include "dogen/test_models/cpp_model/test_data/value_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/fluent_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/value_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/fluent_td.hpp"
 
 namespace {
 
@@ -34,15 +34,14 @@ std::string create_std_string(const unsigned int position) {
     return s.str();
 }
 
-dogen::test_models::cpp_model::value
-create_dogen_test_models_cpp_model_value(const unsigned int position) {
-    return dogen::test_models::cpp_model::value_generator::create(position);
+cpp_ref_impl::cpp_model::value
+create_cpp_ref_impl_cpp_model_value(const unsigned int position) {
+    return cpp_ref_impl::cpp_model::value_generator::create(position);
 }
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 fluent_generator::fluent_generator() : position_(0) { }
@@ -51,7 +50,7 @@ void fluent_generator::
 populate(const unsigned int position, result_type& v) {
     v.prop_0(create_unsigned_int(position + 0));
     v.prop_1(create_std_string(position + 1));
-    v.prop_2(create_dogen_test_models_cpp_model_value(position + 2));
+    v.prop_2(create_cpp_ref_impl_cpp_model_value(position + 2));
 }
 
 fluent_generator::result_type
@@ -73,4 +72,4 @@ fluent_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

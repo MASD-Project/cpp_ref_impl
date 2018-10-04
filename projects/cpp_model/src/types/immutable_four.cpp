@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/immutable_four.hpp"
+#include "cpp_ref_impl/cpp_model/types/immutable_four.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 immutable_four::immutable_four()
@@ -30,8 +29,8 @@ immutable_four::immutable_four()
 immutable_four::immutable_four(
     const bool prop_0,
     const std::string& prop_1,
-    const dogen::test_models::cpp_model::value& prop_2,
-    const dogen::test_models::cpp_model::immutable_one_builtin& prop_3)
+    const cpp_ref_impl::cpp_model::value& prop_2,
+    const cpp_ref_impl::cpp_model::immutable_one_builtin& prop_3)
     : prop_0_(prop_0),
       prop_1_(prop_1),
       prop_2_(prop_2),
@@ -52,12 +51,12 @@ const std::string& immutable_four::prop_1() const {
     return prop_1_;
 }
 
-const dogen::test_models::cpp_model::value& immutable_four::prop_2() const {
+const cpp_ref_impl::cpp_model::value& immutable_four::prop_2() const {
     return prop_2_;
 }
 
-const dogen::test_models::cpp_model::immutable_one_builtin& immutable_four::prop_3() const {
+const cpp_ref_impl::cpp_model::immutable_one_builtin& immutable_four::prop_3() const {
     return prop_3_;
 }
 
-} } }
+} }

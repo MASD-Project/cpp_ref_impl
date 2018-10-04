@@ -21,7 +21,7 @@
 #include <ostream>
 #include <boost/io/ios_state.hpp>
 #include <boost/algorithm/string.hpp>
-#include "dogen/test_models/cpp_model/io/immutable_two_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/immutable_two_io.hpp"
 
 inline std::string tidy_up_string(std::string s) {
     boost::replace_all(s, "\r\n", "<new_line>");
@@ -31,8 +31,7 @@ inline std::string tidy_up_string(std::string s) {
     return s;
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const immutable_two& v) {
@@ -43,11 +42,11 @@ std::ostream& operator<<(std::ostream& s, const immutable_two& v) {
     s.setf(std::ios::showpoint);
 
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::immutable_two\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::immutable_two\"" << ", "
       << "\"prop_0\": " << v.prop_0() << ", "
       << "\"prop_1\": " << "\"" << tidy_up_string(v.prop_1()) << "\""
       << " }";
     return(s);
 }
 
-} } }
+} }

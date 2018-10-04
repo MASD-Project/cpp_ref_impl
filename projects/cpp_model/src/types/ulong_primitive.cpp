@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/ulong_primitive.hpp"
+#include "cpp_ref_impl/cpp_model/types/ulong_primitive.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 ulong_primitive::ulong_primitive(const unsigned long value)
@@ -50,4 +49,4 @@ ulong_primitive& ulong_primitive::operator=(ulong_primitive other) {
     return *this;
 }
 
-} } }
+} }

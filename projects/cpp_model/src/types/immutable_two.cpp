@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/immutable_two.hpp"
+#include "cpp_ref_impl/cpp_model/types/immutable_two.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 immutable_two::immutable_two()
@@ -46,4 +45,4 @@ const std::string& immutable_two::prop_1() const {
     return prop_1_;
 }
 
-} } }
+} }

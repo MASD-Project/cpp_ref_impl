@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/multi_object_template_instance.hpp"
+#include "cpp_ref_impl/cpp_model/types/multi_object_template_instance.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 multi_object_template_instance::multi_object_template_instance()
@@ -100,4 +99,4 @@ void multi_object_template_instance::prop_10(const int v) {
     prop_10_ = v;
 }
 
-} } }
+} }

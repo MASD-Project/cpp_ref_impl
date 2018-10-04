@@ -27,25 +27,25 @@
 #include <boost/archive/binary_oarchive.hpp>
 #include <boost/archive/polymorphic_iarchive.hpp>
 #include <boost/archive/polymorphic_oarchive.hpp>
-#include "dogen/test_models/cpp_model/serialization/consumer_ser.hpp"
-#include "dogen/test_models/cpp_model/serialization/int_primitive_ser.hpp"
-#include "dogen/test_models/cpp_model/serialization/bool_primitive_ser.hpp"
-#include "dogen/test_models/cpp_model/serialization/char_primitive_ser.hpp"
-#include "dogen/test_models/cpp_model/serialization/long_primitive_ser.hpp"
-#include "dogen/test_models/cpp_model/serialization/uint_primitive_ser.hpp"
-#include "dogen/test_models/cpp_model/serialization/float_primitive_ser.hpp"
-#include "dogen/test_models/cpp_model/serialization/short_primitive_ser.hpp"
-#include "dogen/test_models/cpp_model/serialization/uchar_primitive_ser.hpp"
-#include "dogen/test_models/cpp_model/serialization/ulong_primitive_ser.hpp"
-#include "dogen/test_models/cpp_model/serialization/double_primitive_ser.hpp"
-#include "dogen/test_models/cpp_model/serialization/ushort_primitive_ser.hpp"
+#include "cpp_ref_impl/cpp_model/serialization/consumer_ser.hpp"
+#include "cpp_ref_impl/cpp_model/serialization/int_primitive_ser.hpp"
+#include "cpp_ref_impl/cpp_model/serialization/bool_primitive_ser.hpp"
+#include "cpp_ref_impl/cpp_model/serialization/char_primitive_ser.hpp"
+#include "cpp_ref_impl/cpp_model/serialization/long_primitive_ser.hpp"
+#include "cpp_ref_impl/cpp_model/serialization/uint_primitive_ser.hpp"
+#include "cpp_ref_impl/cpp_model/serialization/float_primitive_ser.hpp"
+#include "cpp_ref_impl/cpp_model/serialization/short_primitive_ser.hpp"
+#include "cpp_ref_impl/cpp_model/serialization/uchar_primitive_ser.hpp"
+#include "cpp_ref_impl/cpp_model/serialization/ulong_primitive_ser.hpp"
+#include "cpp_ref_impl/cpp_model/serialization/double_primitive_ser.hpp"
+#include "cpp_ref_impl/cpp_model/serialization/ushort_primitive_ser.hpp"
 
 namespace boost {
 namespace serialization {
 
 template<typename Archive>
 void save(Archive& ar,
-    const dogen::test_models::cpp_model::consumer& v,
+    const cpp_ref_impl::cpp_model::consumer& v,
     const unsigned int /*version*/) {
     ar << make_nvp("prop0", v.prop0_);
     ar << make_nvp("prop1", v.prop1_);
@@ -62,7 +62,7 @@ void save(Archive& ar,
 
 template<typename Archive>
 void load(Archive& ar,
-    dogen::test_models::cpp_model::consumer& v,
+    cpp_ref_impl::cpp_model::consumer& v,
     const unsigned int /*version*/) {
     ar >> make_nvp("prop0", v.prop0_);
     ar >> make_nvp("prop1", v.prop1_);
@@ -82,16 +82,16 @@ void load(Archive& ar,
 namespace boost {
 namespace serialization {
 
-template void save(archive::polymorphic_oarchive& ar, const dogen::test_models::cpp_model::consumer& v, unsigned int version);
-template void load(archive::polymorphic_iarchive& ar, dogen::test_models::cpp_model::consumer& v, unsigned int version);
+template void save(archive::polymorphic_oarchive& ar, const cpp_ref_impl::cpp_model::consumer& v, unsigned int version);
+template void load(archive::polymorphic_iarchive& ar, cpp_ref_impl::cpp_model::consumer& v, unsigned int version);
 
-template void save(archive::text_oarchive& ar, const dogen::test_models::cpp_model::consumer& v, unsigned int version);
-template void load(archive::text_iarchive& ar, dogen::test_models::cpp_model::consumer& v, unsigned int version);
+template void save(archive::text_oarchive& ar, const cpp_ref_impl::cpp_model::consumer& v, unsigned int version);
+template void load(archive::text_iarchive& ar, cpp_ref_impl::cpp_model::consumer& v, unsigned int version);
 
-template void save(archive::binary_oarchive& ar, const dogen::test_models::cpp_model::consumer& v, unsigned int version);
-template void load(archive::binary_iarchive& ar, dogen::test_models::cpp_model::consumer& v, unsigned int version);
+template void save(archive::binary_oarchive& ar, const cpp_ref_impl::cpp_model::consumer& v, unsigned int version);
+template void load(archive::binary_iarchive& ar, cpp_ref_impl::cpp_model::consumer& v, unsigned int version);
 
-template void save(archive::xml_oarchive& ar, const dogen::test_models::cpp_model::consumer& v, unsigned int version);
-template void load(archive::xml_iarchive& ar, dogen::test_models::cpp_model::consumer& v, unsigned int version);
+template void save(archive::xml_oarchive& ar, const cpp_ref_impl::cpp_model::consumer& v, unsigned int version);
+template void load(archive::xml_iarchive& ar, cpp_ref_impl::cpp_model::consumer& v, unsigned int version);
 
 } }

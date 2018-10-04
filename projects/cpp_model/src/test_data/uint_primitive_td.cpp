@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/test_data/uint_primitive_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/uint_primitive_td.hpp"
 
 namespace {
 
@@ -28,8 +28,7 @@ unsigned int create_unsigned_int(const unsigned int position) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 uint_primitive_generator::uint_primitive_generator() : position_(0) { }
@@ -58,4 +57,4 @@ uint_primitive_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

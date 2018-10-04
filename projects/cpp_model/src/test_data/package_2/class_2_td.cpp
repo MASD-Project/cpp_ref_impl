@@ -18,26 +18,25 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/test_data/class_1_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/package_2/class_1_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/package_2/class_2_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/class_1_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/package_2/class_1_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/package_2/class_2_td.hpp"
 
 namespace {
 
-dogen::test_models::cpp_model::package_2::class_1
-create_dogen_test_models_cpp_model_package_2_class_1(const unsigned int position) {
-    return dogen::test_models::cpp_model::package_2::class_1_generator::create(position);
+cpp_ref_impl::cpp_model::package_2::class_1
+create_cpp_ref_impl_cpp_model_package_2_class_1(const unsigned int position) {
+    return cpp_ref_impl::cpp_model::package_2::class_1_generator::create(position);
 }
 
-dogen::test_models::cpp_model::class_1
-create_dogen_test_models_cpp_model_class_1(const unsigned int position) {
-    return dogen::test_models::cpp_model::class_1_generator::create(position);
+cpp_ref_impl::cpp_model::class_1
+create_cpp_ref_impl_cpp_model_class_1(const unsigned int position) {
+    return cpp_ref_impl::cpp_model::class_1_generator::create(position);
 }
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 namespace package_2 {
 
@@ -45,8 +44,8 @@ class_2_generator::class_2_generator() : position_(0) { }
 
 void class_2_generator::
 populate(const unsigned int position, result_type& v) {
-    v.prop_0(create_dogen_test_models_cpp_model_package_2_class_1(position + 0));
-    v.prop_1(create_dogen_test_models_cpp_model_class_1(position + 1));
+    v.prop_0(create_cpp_ref_impl_cpp_model_package_2_class_1(position + 0));
+    v.prop_1(create_cpp_ref_impl_cpp_model_class_1(position + 1));
 }
 
 class_2_generator::result_type
@@ -68,4 +67,4 @@ class_2_generator::operator()() {
     return create(position_++);
 }
 
-} } } }
+} } }

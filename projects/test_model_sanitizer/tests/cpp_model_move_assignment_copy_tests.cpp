@@ -23,12 +23,12 @@
 #include "cpp_ref_impl/utility/io/vector_io.hpp"
 #include "cpp_ref_impl/utility/test/logging.hpp"
 #include "cpp_ref_impl/utility/test/canned_tests.hpp"
-#include "dogen/test_models/cpp_model/types/all.hpp"
-#include "dogen/test_models/cpp_model/io/all_io.hpp"
-#include "dogen/test_models/cpp_model/serialization/all_ser.hpp"
+#include "cpp_ref_impl/cpp_model/types/all.hpp"
+#include "cpp_ref_impl/cpp_model/io/all_io.hpp"
+#include "cpp_ref_impl/cpp_model/serialization/all_ser.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/all_td.hpp"
+#include "cpp_ref_impl/cpp_model/hash/all_hash.hpp"
 #include "dogen/test_models/test_model_sanitizer/register_types.hpp"
-#include "dogen/test_models/cpp_model/test_data/all_td.hpp"
-#include "dogen/test_models/cpp_model/hash/all_hash.hpp"
 
 namespace {
 
@@ -38,7 +38,7 @@ const std::string test_suite("cpp_model_tests");
 
 }
 
-using namespace dogen::test_models::cpp_model;
+using namespace cpp_ref_impl::cpp_model;
 using namespace cpp_ref_impl::utility::test;
 
 BOOST_AUTO_TEST_SUITE(cpp_model_move_assignment_copy_tests)

@@ -20,20 +20,19 @@
  */
 #include <ostream>
 #include <boost/io/ios_state.hpp>
-#include "dogen/test_models/cpp_model/io/float_primitive_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/float_primitive_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const float_primitive& v) {
 
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::float_primitive\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::float_primitive\"" << ", "
       << "\"value\": " << v.value()
       << " }";
 
     return s;
 }
 
-} } }
+} }

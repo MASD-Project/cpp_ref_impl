@@ -19,7 +19,7 @@
  *
  */
 #include <sstream>
-#include "dogen/test_models/cpp_model/test_data/multi_object_template_instance_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/multi_object_template_instance_td.hpp"
 
 namespace {
 
@@ -35,8 +35,7 @@ std::string create_std_string(const unsigned int position) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 multi_object_template_instance_generator::multi_object_template_instance_generator() : position_(0) { }
@@ -68,4 +67,4 @@ multi_object_template_instance_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

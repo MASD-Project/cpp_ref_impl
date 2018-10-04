@@ -20,10 +20,9 @@
  */
 #include <ostream>
 #include <boost/io/ios_state.hpp>
-#include "dogen/test_models/cpp_model/io/immutable_one_builtin_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/immutable_one_builtin_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const immutable_one_builtin& v) {
@@ -34,10 +33,10 @@ std::ostream& operator<<(std::ostream& s, const immutable_one_builtin& v) {
     s.setf(std::ios::showpoint);
 
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::immutable_one_builtin\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::immutable_one_builtin\"" << ", "
       << "\"prop_0\": " << v.prop_0()
       << " }";
     return(s);
 }
 
-} } }
+} }

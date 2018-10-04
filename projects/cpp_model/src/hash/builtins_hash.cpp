@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/hash/builtins_hash.hpp"
+#include "cpp_ref_impl/cpp_model/hash/builtins_hash.hpp"
 
 namespace {
 
@@ -30,8 +30,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::size_t builtins_hasher::hash(const builtins& v) {
@@ -54,4 +53,4 @@ std::size_t builtins_hasher::hash(const builtins& v) {
     return seed;
 }
 
-} } }
+} }

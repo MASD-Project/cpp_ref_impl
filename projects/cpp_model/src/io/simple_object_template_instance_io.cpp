@@ -19,16 +19,15 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/cpp_model/io/value_io.hpp"
-#include "dogen/test_models/cpp_model/io/simple_object_template_instance_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/value_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/simple_object_template_instance_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const simple_object_template_instance& v) {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::simple_object_template_instance\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::simple_object_template_instance\"" << ", "
       << "\"prop_0\": " << v.prop_0() << ", "
       << "\"prop_1\": " << v.prop_1() << ", "
       << "\"prop_10\": " << v.prop_10()
@@ -36,4 +35,4 @@ std::ostream& operator<<(std::ostream& s, const simple_object_template_instance&
     return(s);
 }
 
-} } }
+} }

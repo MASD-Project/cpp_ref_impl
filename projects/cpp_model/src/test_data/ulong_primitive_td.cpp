@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/test_data/ulong_primitive_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/ulong_primitive_td.hpp"
 
 namespace {
 
@@ -28,8 +28,7 @@ unsigned long create_unsigned_long(const unsigned int position) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 ulong_primitive_generator::ulong_primitive_generator() : position_(0) { }
@@ -58,4 +57,4 @@ ulong_primitive_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

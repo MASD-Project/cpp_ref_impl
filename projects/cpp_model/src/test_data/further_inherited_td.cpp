@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/test_data/further_inherited_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/base_with_object_template_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/further_inherited_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/base_with_object_template_td.hpp"
 
 namespace {
 
@@ -29,15 +29,14 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 further_inherited_generator::further_inherited_generator() : position_(0) { }
 
 void further_inherited_generator::
 populate(const unsigned int position, result_type& v) {
-    dogen::test_models::cpp_model::base_with_object_template_generator::populate(position, v);
+    cpp_ref_impl::cpp_model::base_with_object_template_generator::populate(position, v);
     v.prop_3(create_int(position + 0));
     v.prop_1(create_int(position + 1));
 }
@@ -61,4 +60,4 @@ further_inherited_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

@@ -19,10 +19,9 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/cpp_model/types/parent_outside.hpp"
+#include "cpp_ref_impl/cpp_model/types/parent_outside.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 parent_outside::parent_outside()
@@ -33,7 +32,7 @@ parent_outside::parent_outside(const int prop_0)
 
 void parent_outside::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::parent_outside\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::parent_outside\"" << ", "
       << "\"prop_0\": " << prop_0_
       << " }";
 }
@@ -55,4 +54,4 @@ void parent_outside::prop_0(const int v) {
     prop_0_ = v;
 }
 
-} } }
+} }

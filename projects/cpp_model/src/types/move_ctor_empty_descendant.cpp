@@ -19,37 +19,36 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/cpp_model/io/move_ctor_base_io.hpp"
-#include "dogen/test_models/cpp_model/types/move_ctor_empty_descendant.hpp"
+#include "cpp_ref_impl/cpp_model/io/move_ctor_base_io.hpp"
+#include "cpp_ref_impl/cpp_model/types/move_ctor_empty_descendant.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 move_ctor_empty_descendant::move_ctor_empty_descendant(const boost::filesystem::path& prop_0)
-    : dogen::test_models::cpp_model::move_ctor_base(prop_0) { }
+    : cpp_ref_impl::cpp_model::move_ctor_base(prop_0) { }
 
 void move_ctor_empty_descendant::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::move_ctor_empty_descendant\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::move_ctor_empty_descendant\"" << ", "
       << "\"__parent_0__\": ";
-    dogen::test_models::cpp_model::move_ctor_base::to_stream(s);
+    cpp_ref_impl::cpp_model::move_ctor_base::to_stream(s);
     s << " }";
 }
 
 void move_ctor_empty_descendant::swap(move_ctor_empty_descendant& other) noexcept {
-    dogen::test_models::cpp_model::move_ctor_base::swap(other);
+    cpp_ref_impl::cpp_model::move_ctor_base::swap(other);
 
 }
 
-bool move_ctor_empty_descendant::equals(const dogen::test_models::cpp_model::move_ctor_base& other) const {
+bool move_ctor_empty_descendant::equals(const cpp_ref_impl::cpp_model::move_ctor_base& other) const {
     const move_ctor_empty_descendant* const p(dynamic_cast<const move_ctor_empty_descendant* const>(&other));
     if (!p) return false;
     return *this == *p;
 }
 
 bool move_ctor_empty_descendant::operator==(const move_ctor_empty_descendant& rhs) const {
-    return dogen::test_models::cpp_model::move_ctor_base::compare(rhs);
+    return cpp_ref_impl::cpp_model::move_ctor_base::compare(rhs);
 }
 
 move_ctor_empty_descendant& move_ctor_empty_descendant::operator=(move_ctor_empty_descendant other) {
@@ -58,4 +57,4 @@ move_ctor_empty_descendant& move_ctor_empty_descendant::operator=(move_ctor_empt
     return *this;
 }
 
-} } }
+} }

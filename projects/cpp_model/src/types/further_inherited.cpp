@@ -19,11 +19,10 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/cpp_model/types/further_inherited.hpp"
-#include "dogen/test_models/cpp_model/io/base_with_object_template_io.hpp"
+#include "cpp_ref_impl/cpp_model/types/further_inherited.hpp"
+#include "cpp_ref_impl/cpp_model/io/base_with_object_template_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 further_inherited::further_inherited()
@@ -35,7 +34,7 @@ further_inherited::further_inherited(
     const std::string& prop_0,
     const int prop_3,
     const int prop_1)
-    : dogen::test_models::cpp_model::base_with_object_template(
+    : cpp_ref_impl::cpp_model::base_with_object_template(
       prop_2,
       prop_0),
       prop_3_(prop_3),
@@ -43,9 +42,9 @@ further_inherited::further_inherited(
 
 void further_inherited::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::further_inherited\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::further_inherited\"" << ", "
       << "\"__parent_0__\": ";
-    dogen::test_models::cpp_model::base_with_object_template::to_stream(s);
+    cpp_ref_impl::cpp_model::base_with_object_template::to_stream(s);
     s << ", "
       << "\"prop_3\": " << prop_3_ << ", "
       << "\"prop_1\": " << prop_1_
@@ -53,21 +52,21 @@ void further_inherited::to_stream(std::ostream& s) const {
 }
 
 void further_inherited::swap(further_inherited& other) noexcept {
-    dogen::test_models::cpp_model::base_with_object_template::swap(other);
+    cpp_ref_impl::cpp_model::base_with_object_template::swap(other);
 
     using std::swap;
     swap(prop_3_, other.prop_3_);
     swap(prop_1_, other.prop_1_);
 }
 
-bool further_inherited::equals(const dogen::test_models::cpp_model::base_with_object_template& other) const {
+bool further_inherited::equals(const cpp_ref_impl::cpp_model::base_with_object_template& other) const {
     const further_inherited* const p(dynamic_cast<const further_inherited* const>(&other));
     if (!p) return false;
     return *this == *p;
 }
 
 bool further_inherited::operator==(const further_inherited& rhs) const {
-    return dogen::test_models::cpp_model::base_with_object_template::compare(rhs) &&
+    return cpp_ref_impl::cpp_model::base_with_object_template::compare(rhs) &&
         prop_3_ == rhs.prop_3_ &&
         prop_1_ == rhs.prop_1_;
 }
@@ -94,4 +93,4 @@ void further_inherited::prop_1(const int v) {
     prop_1_ = v;
 }
 
-} } }
+} }

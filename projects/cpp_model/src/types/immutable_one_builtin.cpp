@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/immutable_one_builtin.hpp"
+#include "cpp_ref_impl/cpp_model/types/immutable_one_builtin.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 immutable_one_builtin::immutable_one_builtin()
@@ -38,4 +37,4 @@ bool immutable_one_builtin::prop_0() const {
     return prop_0_;
 }
 
-} } }
+} }

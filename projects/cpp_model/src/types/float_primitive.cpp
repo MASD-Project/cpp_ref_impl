@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/float_primitive.hpp"
+#include "cpp_ref_impl/cpp_model/types/float_primitive.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 float_primitive::float_primitive(const float value)
@@ -50,4 +49,4 @@ float_primitive& float_primitive::operator=(float_primitive other) {
     return *this;
 }
 
-} } }
+} }

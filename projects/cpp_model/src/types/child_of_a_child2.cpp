@@ -19,11 +19,10 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/cpp_model/types/child_of_a_child2.hpp"
-#include "dogen/test_models/cpp_model/io/third_child_with_members_io.hpp"
+#include "cpp_ref_impl/cpp_model/types/child_of_a_child2.hpp"
+#include "cpp_ref_impl/cpp_model/io/third_child_with_members_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 child_of_a_child2::child_of_a_child2()
@@ -33,36 +32,36 @@ child_of_a_child2::child_of_a_child2(
     const int prop_0,
     const unsigned int prop_1,
     const unsigned int prop_2)
-    : dogen::test_models::cpp_model::third_child_with_members(
+    : cpp_ref_impl::cpp_model::third_child_with_members(
       prop_0,
       prop_1),
       prop_2_(prop_2) { }
 
 void child_of_a_child2::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::child_of_a_child2\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::child_of_a_child2\"" << ", "
       << "\"__parent_0__\": ";
-    dogen::test_models::cpp_model::third_child_with_members::to_stream(s);
+    cpp_ref_impl::cpp_model::third_child_with_members::to_stream(s);
     s << ", "
       << "\"prop_2\": " << prop_2_
       << " }";
 }
 
 void child_of_a_child2::swap(child_of_a_child2& other) noexcept {
-    dogen::test_models::cpp_model::third_child_with_members::swap(other);
+    cpp_ref_impl::cpp_model::third_child_with_members::swap(other);
 
     using std::swap;
     swap(prop_2_, other.prop_2_);
 }
 
-bool child_of_a_child2::equals(const dogen::test_models::cpp_model::parent_with_members& other) const {
+bool child_of_a_child2::equals(const cpp_ref_impl::cpp_model::parent_with_members& other) const {
     const child_of_a_child2* const p(dynamic_cast<const child_of_a_child2* const>(&other));
     if (!p) return false;
     return *this == *p;
 }
 
 bool child_of_a_child2::operator==(const child_of_a_child2& rhs) const {
-    return dogen::test_models::cpp_model::third_child_with_members::compare(rhs) &&
+    return cpp_ref_impl::cpp_model::third_child_with_members::compare(rhs) &&
         prop_2_ == rhs.prop_2_;
 }
 
@@ -80,4 +79,4 @@ void child_of_a_child2::prop_2(const unsigned int v) {
     prop_2_ = v;
 }
 
-} } }
+} }

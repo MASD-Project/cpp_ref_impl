@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/test_data/immutable_primitive_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/immutable_primitive_td.hpp"
 
 namespace {
 
@@ -28,8 +28,7 @@ short create_short(const unsigned int position) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 immutable_primitive_generator::immutable_primitive_generator() : position_(0) { }
@@ -49,4 +48,4 @@ immutable_primitive_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

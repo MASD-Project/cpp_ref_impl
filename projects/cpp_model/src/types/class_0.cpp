@@ -18,14 +18,13 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/class_0.hpp"
+#include "cpp_ref_impl/cpp_model/types/class_0.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 bool class_0::operator==(const class_0& /*rhs*/) const {
     return true;
 }
 
-} } }
+} }

@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/test_data/non_final_orphan_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/non_final_orphan_td.hpp"
 
 namespace {
 
@@ -28,8 +28,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 non_final_orphan_generator::non_final_orphan_generator() : position_(0) { }
@@ -58,4 +57,4 @@ non_final_orphan_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/package_1/class_4.hpp"
+#include "cpp_ref_impl/cpp_model/types/package_1/class_4.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 namespace package_1 {
 
@@ -54,4 +53,4 @@ void class_4::prop_0(const int v) {
     prop_0_ = v;
 }
 
-} } } }
+} } }

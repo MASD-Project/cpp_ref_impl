@@ -19,8 +19,8 @@
  *
  */
 #include <sstream>
-#include "dogen/test_models/cpp_model/test_data/move_ctor_base_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/move_ctor_descendant_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/move_ctor_base_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/move_ctor_descendant_td.hpp"
 
 namespace {
 
@@ -33,15 +33,14 @@ create_boost_filesystem_path(const unsigned int position) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 move_ctor_descendant_generator::move_ctor_descendant_generator() : position_(0) { }
 
 void move_ctor_descendant_generator::
 populate(const unsigned int position, result_type& v) {
-    dogen::test_models::cpp_model::move_ctor_base_generator::populate(position, v);
+    cpp_ref_impl::cpp_model::move_ctor_base_generator::populate(position, v);
     v.prop_1(create_boost_filesystem_path(position + 0));
 }
 
@@ -64,4 +63,4 @@ move_ctor_descendant_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

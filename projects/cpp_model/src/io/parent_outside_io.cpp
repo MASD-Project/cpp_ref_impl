@@ -19,10 +19,9 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/cpp_model/io/parent_outside_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/parent_outside_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const parent_outside& v) {
@@ -30,4 +29,4 @@ std::ostream& operator<<(std::ostream& s, const parent_outside& v) {
     return(s);
 }
 
-} } }
+} }

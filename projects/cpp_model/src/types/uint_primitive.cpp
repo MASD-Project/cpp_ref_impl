@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/uint_primitive.hpp"
+#include "cpp_ref_impl/cpp_model/types/uint_primitive.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 uint_primitive::uint_primitive(const unsigned int value)
@@ -50,4 +49,4 @@ uint_primitive& uint_primitive::operator=(uint_primitive other) {
     return *this;
 }
 
-} } }
+} }

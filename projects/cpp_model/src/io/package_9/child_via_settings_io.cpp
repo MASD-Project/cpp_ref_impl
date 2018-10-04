@@ -19,11 +19,10 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/cpp_model/io/parent_outside_io.hpp"
-#include "dogen/test_models/cpp_model/io/package_9/child_via_settings_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/parent_outside_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/package_9/child_via_settings_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 namespace package_9 {
 
@@ -32,4 +31,4 @@ std::ostream& operator<<(std::ostream& s, const child_via_settings& v) {
     return(s);
 }
 
-} } } }
+} } }

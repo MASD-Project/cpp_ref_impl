@@ -21,10 +21,9 @@
 #include <string>
 #include <ostream>
 #include <stdexcept>
-#include "dogen/test_models/cpp_model/io/hex_flags_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/hex_flags_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const hex_flags& v) {
@@ -54,4 +53,4 @@ std::ostream& operator<<(std::ostream& s, const hex_flags& v) {
     return s;
 }
 
-} } }
+} }

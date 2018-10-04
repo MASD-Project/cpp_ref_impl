@@ -20,7 +20,7 @@
  */
 #include <ostream>
 #include <boost/algorithm/string.hpp>
-#include "dogen/test_models/cpp_model/io/second_descendant_object_template_instance_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/second_descendant_object_template_instance_io.hpp"
 
 inline std::string tidy_up_string(std::string s) {
     boost::replace_all(s, "\r\n", "<new_line>");
@@ -30,13 +30,12 @@ inline std::string tidy_up_string(std::string s) {
     return s;
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const second_descendant_object_template_instance& v) {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::second_descendant_object_template_instance\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::second_descendant_object_template_instance\"" << ", "
       << "\"prop_2\": " << v.prop_2() << ", "
       << "\"prop_0\": " << "\"" << tidy_up_string(v.prop_0()) << "\"" << ", "
       << "\"prop_10\": " << v.prop_10()
@@ -44,4 +43,4 @@ std::ostream& operator<<(std::ostream& s, const second_descendant_object_templat
     return(s);
 }
 
-} } }
+} }

@@ -18,97 +18,96 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/test_data/consumer_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/int_primitive_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/bool_primitive_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/char_primitive_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/long_primitive_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/uint_primitive_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/float_primitive_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/short_primitive_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/uchar_primitive_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/ulong_primitive_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/double_primitive_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/ushort_primitive_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/consumer_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/int_primitive_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/bool_primitive_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/char_primitive_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/long_primitive_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/uint_primitive_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/float_primitive_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/short_primitive_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/uchar_primitive_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/ulong_primitive_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/double_primitive_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/ushort_primitive_td.hpp"
 
 namespace {
 
-dogen::test_models::cpp_model::short_primitive
-create_dogen_test_models_cpp_model_short_primitive(const unsigned int position) {
-    return dogen::test_models::cpp_model::short_primitive_generator::create(position);
+cpp_ref_impl::cpp_model::short_primitive
+create_cpp_ref_impl_cpp_model_short_primitive(const unsigned int position) {
+    return cpp_ref_impl::cpp_model::short_primitive_generator::create(position);
 }
 
-dogen::test_models::cpp_model::ushort_primitive
-create_dogen_test_models_cpp_model_ushort_primitive(const unsigned int position) {
-    return dogen::test_models::cpp_model::ushort_primitive_generator::create(position);
+cpp_ref_impl::cpp_model::ushort_primitive
+create_cpp_ref_impl_cpp_model_ushort_primitive(const unsigned int position) {
+    return cpp_ref_impl::cpp_model::ushort_primitive_generator::create(position);
 }
 
-dogen::test_models::cpp_model::long_primitive
-create_dogen_test_models_cpp_model_long_primitive(const unsigned int position) {
-    return dogen::test_models::cpp_model::long_primitive_generator::create(position);
+cpp_ref_impl::cpp_model::long_primitive
+create_cpp_ref_impl_cpp_model_long_primitive(const unsigned int position) {
+    return cpp_ref_impl::cpp_model::long_primitive_generator::create(position);
 }
 
-dogen::test_models::cpp_model::ulong_primitive
-create_dogen_test_models_cpp_model_ulong_primitive(const unsigned int position) {
-    return dogen::test_models::cpp_model::ulong_primitive_generator::create(position);
+cpp_ref_impl::cpp_model::ulong_primitive
+create_cpp_ref_impl_cpp_model_ulong_primitive(const unsigned int position) {
+    return cpp_ref_impl::cpp_model::ulong_primitive_generator::create(position);
 }
 
-dogen::test_models::cpp_model::int_primitive
-create_dogen_test_models_cpp_model_int_primitive(const unsigned int position) {
-    return dogen::test_models::cpp_model::int_primitive_generator::create(position);
+cpp_ref_impl::cpp_model::int_primitive
+create_cpp_ref_impl_cpp_model_int_primitive(const unsigned int position) {
+    return cpp_ref_impl::cpp_model::int_primitive_generator::create(position);
 }
 
-dogen::test_models::cpp_model::uint_primitive
-create_dogen_test_models_cpp_model_uint_primitive(const unsigned int position) {
-    return dogen::test_models::cpp_model::uint_primitive_generator::create(position);
+cpp_ref_impl::cpp_model::uint_primitive
+create_cpp_ref_impl_cpp_model_uint_primitive(const unsigned int position) {
+    return cpp_ref_impl::cpp_model::uint_primitive_generator::create(position);
 }
 
-dogen::test_models::cpp_model::char_primitive
-create_dogen_test_models_cpp_model_char_primitive(const unsigned int position) {
-    return dogen::test_models::cpp_model::char_primitive_generator::create(position);
+cpp_ref_impl::cpp_model::char_primitive
+create_cpp_ref_impl_cpp_model_char_primitive(const unsigned int position) {
+    return cpp_ref_impl::cpp_model::char_primitive_generator::create(position);
 }
 
-dogen::test_models::cpp_model::uchar_primitive
-create_dogen_test_models_cpp_model_uchar_primitive(const unsigned int position) {
-    return dogen::test_models::cpp_model::uchar_primitive_generator::create(position);
+cpp_ref_impl::cpp_model::uchar_primitive
+create_cpp_ref_impl_cpp_model_uchar_primitive(const unsigned int position) {
+    return cpp_ref_impl::cpp_model::uchar_primitive_generator::create(position);
 }
 
-dogen::test_models::cpp_model::double_primitive
-create_dogen_test_models_cpp_model_double_primitive(const unsigned int position) {
-    return dogen::test_models::cpp_model::double_primitive_generator::create(position);
+cpp_ref_impl::cpp_model::double_primitive
+create_cpp_ref_impl_cpp_model_double_primitive(const unsigned int position) {
+    return cpp_ref_impl::cpp_model::double_primitive_generator::create(position);
 }
 
-dogen::test_models::cpp_model::float_primitive
-create_dogen_test_models_cpp_model_float_primitive(const unsigned int position) {
-    return dogen::test_models::cpp_model::float_primitive_generator::create(position);
+cpp_ref_impl::cpp_model::float_primitive
+create_cpp_ref_impl_cpp_model_float_primitive(const unsigned int position) {
+    return cpp_ref_impl::cpp_model::float_primitive_generator::create(position);
 }
 
-dogen::test_models::cpp_model::bool_primitive
-create_dogen_test_models_cpp_model_bool_primitive(const unsigned int position) {
-    return dogen::test_models::cpp_model::bool_primitive_generator::create(position);
+cpp_ref_impl::cpp_model::bool_primitive
+create_cpp_ref_impl_cpp_model_bool_primitive(const unsigned int position) {
+    return cpp_ref_impl::cpp_model::bool_primitive_generator::create(position);
 }
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 consumer_generator::consumer_generator() : position_(0) { }
 
 void consumer_generator::
 populate(const unsigned int position, result_type& v) {
-    v.prop0(create_dogen_test_models_cpp_model_short_primitive(position + 0));
-    v.prop1(create_dogen_test_models_cpp_model_ushort_primitive(position + 1));
-    v.prop2(create_dogen_test_models_cpp_model_long_primitive(position + 2));
-    v.prop3(create_dogen_test_models_cpp_model_ulong_primitive(position + 3));
-    v.prop4(create_dogen_test_models_cpp_model_int_primitive(position + 4));
-    v.prop5(create_dogen_test_models_cpp_model_uint_primitive(position + 5));
-    v.prop6(create_dogen_test_models_cpp_model_char_primitive(position + 6));
-    v.prop7(create_dogen_test_models_cpp_model_uchar_primitive(position + 7));
-    v.prop8(create_dogen_test_models_cpp_model_double_primitive(position + 8));
-    v.prop9(create_dogen_test_models_cpp_model_float_primitive(position + 9));
-    v.prop10(create_dogen_test_models_cpp_model_bool_primitive(position + 10));
+    v.prop0(create_cpp_ref_impl_cpp_model_short_primitive(position + 0));
+    v.prop1(create_cpp_ref_impl_cpp_model_ushort_primitive(position + 1));
+    v.prop2(create_cpp_ref_impl_cpp_model_long_primitive(position + 2));
+    v.prop3(create_cpp_ref_impl_cpp_model_ulong_primitive(position + 3));
+    v.prop4(create_cpp_ref_impl_cpp_model_int_primitive(position + 4));
+    v.prop5(create_cpp_ref_impl_cpp_model_uint_primitive(position + 5));
+    v.prop6(create_cpp_ref_impl_cpp_model_char_primitive(position + 6));
+    v.prop7(create_cpp_ref_impl_cpp_model_uchar_primitive(position + 7));
+    v.prop8(create_cpp_ref_impl_cpp_model_double_primitive(position + 8));
+    v.prop9(create_cpp_ref_impl_cpp_model_float_primitive(position + 9));
+    v.prop10(create_cpp_ref_impl_cpp_model_bool_primitive(position + 10));
 }
 
 consumer_generator::result_type
@@ -130,4 +129,4 @@ consumer_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

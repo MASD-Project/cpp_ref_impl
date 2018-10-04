@@ -20,10 +20,9 @@
  */
 #include <ostream>
 #include <boost/algorithm/string.hpp>
-#include "dogen/test_models/cpp_model/io/base_with_object_template_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/base_with_object_template_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const base_with_object_template& v) {
@@ -31,4 +30,4 @@ std::ostream& operator<<(std::ostream& s, const base_with_object_template& v) {
     return(s);
 }
 
-} } }
+} }

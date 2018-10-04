@@ -18,13 +18,12 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/test_data/base_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/descendant2_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/descendant3_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/non_final_leaf_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/base_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/descendant2_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/descendant3_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/non_final_leaf_td.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 void base_generator::
@@ -34,10 +33,10 @@ populate(const unsigned int /*position*/, result_type& /*v*/) {
 base_generator::result_type*
 base_generator::create_ptr(const unsigned int position) {
     if ((position % 2) == 0)
-        return dogen::test_models::cpp_model::descendant3_generator::create_ptr(position);
+        return cpp_ref_impl::cpp_model::descendant3_generator::create_ptr(position);
     if ((position % 2) == 1)
-        return dogen::test_models::cpp_model::non_final_leaf_generator::create_ptr(position);
-    return dogen::test_models::cpp_model::descendant2_generator::create_ptr(position);
+        return cpp_ref_impl::cpp_model::non_final_leaf_generator::create_ptr(position);
+    return cpp_ref_impl::cpp_model::descendant2_generator::create_ptr(position);
 }
 
-} } }
+} }

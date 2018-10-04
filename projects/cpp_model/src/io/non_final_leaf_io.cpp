@@ -19,11 +19,10 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/cpp_model/io/descendant1_io.hpp"
-#include "dogen/test_models/cpp_model/io/non_final_leaf_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/descendant1_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/non_final_leaf_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const non_final_leaf& v) {
@@ -31,4 +30,4 @@ std::ostream& operator<<(std::ostream& s, const non_final_leaf& v) {
     return(s);
 }
 
-} } }
+} }

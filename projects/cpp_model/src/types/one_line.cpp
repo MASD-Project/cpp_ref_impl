@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/one_line.hpp"
+#include "cpp_ref_impl/cpp_model/types/one_line.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 one_line::one_line()
@@ -80,4 +79,4 @@ void one_line::prop_2(const int v) {
     prop_2_ = v;
 }
 
-} } }
+} }

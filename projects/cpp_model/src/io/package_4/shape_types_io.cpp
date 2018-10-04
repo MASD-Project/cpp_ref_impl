@@ -21,10 +21,9 @@
 #include <string>
 #include <ostream>
 #include <stdexcept>
-#include "dogen/test_models/cpp_model/io/package_4/shape_types_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/package_4/shape_types_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 namespace package_4 {
 
@@ -55,4 +54,4 @@ std::ostream& operator<<(std::ostream& s, const shape_types& v) {
     return s;
 }
 
-} } } }
+} } }

@@ -19,18 +19,17 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/cpp_model/io/a_class_io.hpp"
-#include "dogen/test_models/cpp_model/io/book_types_io.hpp"
-#include "dogen/test_models/cpp_model/io/colour_types_io.hpp"
-#include "dogen/test_models/cpp_model/io/package_4/shape_types_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/a_class_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/book_types_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/colour_types_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/package_4/shape_types_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const a_class& v) {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::a_class\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::a_class\"" << ", "
       << "\"colour_type\": " << v.colour_type() << ", "
       << "\"book_type\": " << v.book_type() << ", "
       << "\"shape_type\": " << v.shape_type()
@@ -38,4 +37,4 @@ std::ostream& operator<<(std::ostream& s, const a_class& v) {
     return(s);
 }
 
-} } }
+} }

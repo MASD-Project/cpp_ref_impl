@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/test_data/multi_line_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/multi_line_td.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 multi_line_generator::multi_line_generator() : position_(0) { }
@@ -48,4 +47,4 @@ multi_line_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

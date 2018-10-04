@@ -19,19 +19,18 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/cpp_model/io/descendant1_io.hpp"
-#include "dogen/test_models/cpp_model/types/base_visitor.hpp"
-#include "dogen/test_models/cpp_model/types/non_final_leaf.hpp"
+#include "cpp_ref_impl/cpp_model/io/descendant1_io.hpp"
+#include "cpp_ref_impl/cpp_model/types/base_visitor.hpp"
+#include "cpp_ref_impl/cpp_model/types/non_final_leaf.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 non_final_leaf::non_final_leaf()
     : prop_0_(static_cast<int>(0)) { }
 
 non_final_leaf::non_final_leaf(const int prop_0)
-    : dogen::test_models::cpp_model::descendant1(),
+    : cpp_ref_impl::cpp_model::descendant1(),
       prop_0_(prop_0) { }
 
 void non_final_leaf::accept(const base_visitor& v) const {
@@ -52,29 +51,29 @@ void non_final_leaf::accept(base_visitor& v) {
 
 void non_final_leaf::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::non_final_leaf\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::non_final_leaf\"" << ", "
       << "\"__parent_0__\": ";
-    dogen::test_models::cpp_model::descendant1::to_stream(s);
+    cpp_ref_impl::cpp_model::descendant1::to_stream(s);
     s << ", "
       << "\"prop_0\": " << prop_0_
       << " }";
 }
 
 void non_final_leaf::swap(non_final_leaf& other) noexcept {
-    dogen::test_models::cpp_model::descendant1::swap(other);
+    cpp_ref_impl::cpp_model::descendant1::swap(other);
 
     using std::swap;
     swap(prop_0_, other.prop_0_);
 }
 
-bool non_final_leaf::equals(const dogen::test_models::cpp_model::base& other) const {
+bool non_final_leaf::equals(const cpp_ref_impl::cpp_model::base& other) const {
     const non_final_leaf* const p(dynamic_cast<const non_final_leaf* const>(&other));
     if (!p) return false;
     return *this == *p;
 }
 
 bool non_final_leaf::operator==(const non_final_leaf& rhs) const {
-    return dogen::test_models::cpp_model::descendant1::compare(rhs) &&
+    return cpp_ref_impl::cpp_model::descendant1::compare(rhs) &&
         prop_0_ == rhs.prop_0_;
 }
 
@@ -92,4 +91,4 @@ void non_final_leaf::prop_0(const int v) {
     prop_0_ = v;
 }
 
-} } }
+} }

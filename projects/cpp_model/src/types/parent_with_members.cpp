@@ -19,10 +19,9 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/cpp_model/types/parent_with_members.hpp"
+#include "cpp_ref_impl/cpp_model/types/parent_with_members.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 parent_with_members::parent_with_members()
@@ -33,7 +32,7 @@ parent_with_members::parent_with_members(const int prop_0)
 
 void parent_with_members::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::parent_with_members\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::parent_with_members\"" << ", "
       << "\"prop_0\": " << prop_0_
       << " }";
 }
@@ -55,4 +54,4 @@ void parent_with_members::prop_0(const int v) {
     prop_0_ = v;
 }
 
-} } }
+} }

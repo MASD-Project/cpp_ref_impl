@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/test_data/descendant1_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/non_final_leaf_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/descendant1_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/non_final_leaf_td.hpp"
 
 namespace {
 
@@ -29,15 +29,14 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 non_final_leaf_generator::non_final_leaf_generator() : position_(0) { }
 
 void non_final_leaf_generator::
 populate(const unsigned int position, result_type& v) {
-    dogen::test_models::cpp_model::descendant1_generator::populate(position, v);
+    cpp_ref_impl::cpp_model::descendant1_generator::populate(position, v);
     v.prop_0(create_int(position + 0));
 }
 
@@ -60,4 +59,4 @@ non_final_leaf_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

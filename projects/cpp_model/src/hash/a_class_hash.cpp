@@ -18,10 +18,10 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/hash/a_class_hash.hpp"
-#include "dogen/test_models/cpp_model/hash/book_types_hash.hpp"
-#include "dogen/test_models/cpp_model/hash/colour_types_hash.hpp"
-#include "dogen/test_models/cpp_model/hash/package_4/shape_types_hash.hpp"
+#include "cpp_ref_impl/cpp_model/hash/a_class_hash.hpp"
+#include "cpp_ref_impl/cpp_model/hash/book_types_hash.hpp"
+#include "cpp_ref_impl/cpp_model/hash/colour_types_hash.hpp"
+#include "cpp_ref_impl/cpp_model/hash/package_4/shape_types_hash.hpp"
 
 namespace {
 
@@ -33,8 +33,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::size_t a_class_hasher::hash(const a_class& v) {
@@ -47,4 +46,4 @@ std::size_t a_class_hasher::hash(const a_class& v) {
     return seed;
 }
 
-} } }
+} }

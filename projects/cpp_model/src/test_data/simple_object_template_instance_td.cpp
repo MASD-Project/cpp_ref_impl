@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/test_data/value_td.hpp"
-#include "dogen/test_models/cpp_model/test_data/simple_object_template_instance_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/value_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/simple_object_template_instance_td.hpp"
 
 namespace {
 
@@ -27,15 +27,14 @@ int create_int(const unsigned int position) {
     return static_cast<int>(position);
 }
 
-dogen::test_models::cpp_model::value
-create_dogen_test_models_cpp_model_value(const unsigned int position) {
-    return dogen::test_models::cpp_model::value_generator::create(position);
+cpp_ref_impl::cpp_model::value
+create_cpp_ref_impl_cpp_model_value(const unsigned int position) {
+    return cpp_ref_impl::cpp_model::value_generator::create(position);
 }
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 simple_object_template_instance_generator::simple_object_template_instance_generator() : position_(0) { }
@@ -43,7 +42,7 @@ simple_object_template_instance_generator::simple_object_template_instance_gener
 void simple_object_template_instance_generator::
 populate(const unsigned int position, result_type& v) {
     v.prop_0(create_int(position + 0));
-    v.prop_1(create_dogen_test_models_cpp_model_value(position + 1));
+    v.prop_1(create_cpp_ref_impl_cpp_model_value(position + 1));
     v.prop_10(create_int(position + 2));
 }
 
@@ -66,4 +65,4 @@ simple_object_template_instance_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

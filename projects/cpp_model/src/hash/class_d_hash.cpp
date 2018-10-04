@@ -18,15 +18,14 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/hash/class_d_hash.hpp"
+#include "cpp_ref_impl/cpp_model/hash/class_d_hash.hpp"
 
 namespace {
 
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::size_t class_d_hasher::hash(const class_d&) {
@@ -34,4 +33,4 @@ std::size_t class_d_hasher::hash(const class_d&) {
     return seed;
 }
 
-} } }
+} }

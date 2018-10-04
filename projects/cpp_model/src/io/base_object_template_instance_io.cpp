@@ -19,18 +19,17 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/cpp_model/io/base_object_template_instance_io.hpp"
+#include "cpp_ref_impl/cpp_model/io/base_object_template_instance_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const base_object_template_instance& v) {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::base_object_template_instance\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::base_object_template_instance\"" << ", "
       << "\"prop_0\": " << v.prop_0()
       << " }";
     return(s);
 }
 
-} } }
+} }

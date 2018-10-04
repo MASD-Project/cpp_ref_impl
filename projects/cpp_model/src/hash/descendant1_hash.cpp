@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/hash/base_hash.hpp"
-#include "dogen/test_models/cpp_model/hash/descendant1_hash.hpp"
+#include "cpp_ref_impl/cpp_model/hash/base_hash.hpp"
+#include "cpp_ref_impl/cpp_model/hash/descendant1_hash.hpp"
 
 namespace {
 
@@ -31,15 +31,14 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::size_t descendant1_hasher::hash(const descendant1& v) {
     std::size_t seed(0);
 
-    combine(seed, dynamic_cast<const dogen::test_models::cpp_model::base&>(v));
+    combine(seed, dynamic_cast<const cpp_ref_impl::cpp_model::base&>(v));
     return seed;
 }
 
-} } }
+} }

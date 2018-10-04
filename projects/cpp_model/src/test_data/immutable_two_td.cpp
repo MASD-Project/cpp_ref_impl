@@ -19,7 +19,7 @@
  *
  */
 #include <sstream>
-#include "dogen/test_models/cpp_model/test_data/immutable_two_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/immutable_two_td.hpp"
 
 namespace {
 
@@ -35,8 +35,7 @@ std::string create_std_string(const unsigned int position) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 immutable_two_generator::immutable_two_generator() : position_(0) { }
@@ -59,4 +58,4 @@ immutable_two_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

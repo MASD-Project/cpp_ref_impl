@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/hash/ushort_primitive_hash.hpp"
+#include "cpp_ref_impl/cpp_model/hash/ushort_primitive_hash.hpp"
 
 namespace {
 
@@ -30,8 +30,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 std::size_t ushort_primitive_hasher::hash(const ushort_primitive& v) {
@@ -40,4 +39,4 @@ std::size_t ushort_primitive_hasher::hash(const ushort_primitive& v) {
     return seed;
 }
 
-} } }
+} }

@@ -19,11 +19,10 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/cpp_model/io/parent_with_members_io.hpp"
-#include "dogen/test_models/cpp_model/types/third_child_with_members.hpp"
+#include "cpp_ref_impl/cpp_model/io/parent_with_members_io.hpp"
+#include "cpp_ref_impl/cpp_model/types/third_child_with_members.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 third_child_with_members::third_child_with_members()
@@ -32,28 +31,28 @@ third_child_with_members::third_child_with_members()
 third_child_with_members::third_child_with_members(
     const int prop_0,
     const unsigned int prop_1)
-    : dogen::test_models::cpp_model::parent_with_members(prop_0),
+    : cpp_ref_impl::cpp_model::parent_with_members(prop_0),
       prop_1_(prop_1) { }
 
 void third_child_with_members::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::cpp_model::third_child_with_members\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::third_child_with_members\"" << ", "
       << "\"__parent_0__\": ";
-    dogen::test_models::cpp_model::parent_with_members::to_stream(s);
+    cpp_ref_impl::cpp_model::parent_with_members::to_stream(s);
     s << ", "
       << "\"prop_1\": " << prop_1_
       << " }";
 }
 
 void third_child_with_members::swap(third_child_with_members& other) noexcept {
-    dogen::test_models::cpp_model::parent_with_members::swap(other);
+    cpp_ref_impl::cpp_model::parent_with_members::swap(other);
 
     using std::swap;
     swap(prop_1_, other.prop_1_);
 }
 
 bool third_child_with_members::compare(const third_child_with_members& rhs) const {
-    return dogen::test_models::cpp_model::parent_with_members::compare(rhs) &&
+    return cpp_ref_impl::cpp_model::parent_with_members::compare(rhs) &&
         prop_1_ == rhs.prop_1_;
 }
 
@@ -65,4 +64,4 @@ void third_child_with_members::prop_1(const unsigned int v) {
     prop_1_ = v;
 }
 
-} } }
+} }

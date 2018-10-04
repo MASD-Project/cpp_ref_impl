@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/uchar_primitive.hpp"
+#include "cpp_ref_impl/cpp_model/types/uchar_primitive.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 uchar_primitive::uchar_primitive(const unsigned char value)
@@ -50,4 +49,4 @@ uchar_primitive& uchar_primitive::operator=(uchar_primitive other) {
     return *this;
 }
 
-} } }
+} }

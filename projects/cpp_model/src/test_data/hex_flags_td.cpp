@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/test_data/hex_flags_td.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/hex_flags_td.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 hex_flags_generator::hex_flags_generator() : position_(0) { }
@@ -42,4 +41,4 @@ hex_flags_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

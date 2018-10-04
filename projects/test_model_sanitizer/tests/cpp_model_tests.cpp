@@ -23,12 +23,12 @@
 #include "cpp_ref_impl/utility/io/vector_io.hpp"
 #include "cpp_ref_impl/utility/test/logging.hpp"
 #include "cpp_ref_impl/utility/test/canned_tests.hpp"
-#include "dogen/test_models/cpp_model/types/all.hpp"
-#include "dogen/test_models/cpp_model/io/all_io.hpp"
-#include "dogen/test_models/cpp_model/serialization/all_ser.hpp"
+#include "cpp_ref_impl/cpp_model/types/all.hpp"
+#include "cpp_ref_impl/cpp_model/io/all_io.hpp"
+#include "cpp_ref_impl/cpp_model/serialization/all_ser.hpp"
+#include "cpp_ref_impl/cpp_model/test_data/all_td.hpp"
+#include "cpp_ref_impl/cpp_model/hash/all_hash.hpp"
 #include "dogen/test_models/test_model_sanitizer/register_types.hpp"
-#include "dogen/test_models/cpp_model/test_data/all_td.hpp"
-#include "dogen/test_models/cpp_model/hash/all_hash.hpp"
 
 namespace {
 
@@ -37,56 +37,56 @@ const std::string test_module("test_model_sanitizer");
 const std::string test_suite("cpp_model_tests");
 
 class mock_visitor
-    : public dogen::test_models::cpp_model::base_visitor {
+    : public cpp_ref_impl::cpp_model::base_visitor {
 public:
     mock_visitor() { reset(); }
 
 public:
-    using dogen::test_models::cpp_model::base_visitor::visit;
+    using cpp_ref_impl::cpp_model::base_visitor::visit;
 
 public:
     virtual void visit(
-        const dogen::test_models::cpp_model::descendant2&
+        const cpp_ref_impl::cpp_model::descendant2&
         ) const override {
         visited |= 0x02;
     }
 
     virtual void visit(
-        const dogen::test_models::cpp_model::descendant2&) override {
+        const cpp_ref_impl::cpp_model::descendant2&) override {
         visited |= 0x04;
     }
 
     virtual void visit(
-        dogen::test_models::cpp_model::descendant2&) const override {
+        cpp_ref_impl::cpp_model::descendant2&) const override {
         visited |= 0x08;
     }
 
     virtual void visit(
-        dogen::test_models::cpp_model::descendant2&
+        cpp_ref_impl::cpp_model::descendant2&
         ) override {
         visited |= 0x10;
     }
 
     virtual void visit(
-        const dogen::test_models::cpp_model::descendant3&
+        const cpp_ref_impl::cpp_model::descendant3&
         ) const override {
         visited |= 0x20;
     }
 
     virtual void visit(
-        const dogen::test_models::cpp_model::descendant3&) override {
+        const cpp_ref_impl::cpp_model::descendant3&) override {
         visited |= 0x30;
     }
 
     virtual void visit(
-        dogen::test_models::cpp_model::descendant3& d
+        cpp_ref_impl::cpp_model::descendant3& d
         ) const override {
         d.prop_0(true);
         visited |= 0x40;
     }
 
     virtual void visit(
-        dogen::test_models::cpp_model::descendant3& d) override {
+        cpp_ref_impl::cpp_model::descendant3& d) override {
         d.prop_0(true);
         visited |= 0x50;
     }
@@ -98,7 +98,7 @@ public:
 
 }
 
-using namespace dogen::test_models::cpp_model;
+using namespace cpp_ref_impl::cpp_model;
 using namespace cpp_ref_impl::utility::test;
 
 BOOST_AUTO_TEST_SUITE(cpp_model_tests)

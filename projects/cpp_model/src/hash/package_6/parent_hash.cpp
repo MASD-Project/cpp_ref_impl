@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/hash/package_6/parent_hash.hpp"
+#include "cpp_ref_impl/cpp_model/hash/package_6/parent_hash.hpp"
 
 namespace {
 
@@ -30,8 +30,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 namespace package_6 {
 
@@ -42,4 +41,4 @@ std::size_t parent_hasher::hash(const parent& v) {
     return seed;
 }
 
-} } } }
+} } }

@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/char_primitive.hpp"
+#include "cpp_ref_impl/cpp_model/types/char_primitive.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 char_primitive::char_primitive(const char value)
@@ -50,4 +49,4 @@ char_primitive& char_primitive::operator=(char_primitive other) {
     return *this;
 }
 
-} } }
+} }

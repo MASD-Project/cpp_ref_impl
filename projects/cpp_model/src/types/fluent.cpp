@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/cpp_model/types/fluent.hpp"
+#include "cpp_ref_impl/cpp_model/types/fluent.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_model {
 
 fluent::fluent()
@@ -30,7 +29,7 @@ fluent::fluent()
 fluent::fluent(
     const unsigned int prop_0,
     const std::string& prop_1,
-    const dogen::test_models::cpp_model::value& prop_2)
+    const cpp_ref_impl::cpp_model::value& prop_2)
     : prop_0_(prop_0),
       prop_1_(prop_1),
       prop_2_(prop_2) { }
@@ -81,22 +80,22 @@ fluent& fluent::prop_1(const std::string&& v) {
     return *this;
 }
 
-const dogen::test_models::cpp_model::value& fluent::prop_2() const {
+const cpp_ref_impl::cpp_model::value& fluent::prop_2() const {
     return prop_2_;
 }
 
-dogen::test_models::cpp_model::value& fluent::prop_2() {
+cpp_ref_impl::cpp_model::value& fluent::prop_2() {
     return prop_2_;
 }
 
-fluent& fluent::prop_2(const dogen::test_models::cpp_model::value& v) {
+fluent& fluent::prop_2(const cpp_ref_impl::cpp_model::value& v) {
     prop_2_ = v;
     return *this;
 }
 
-fluent& fluent::prop_2(const dogen::test_models::cpp_model::value&& v) {
+fluent& fluent::prop_2(const cpp_ref_impl::cpp_model::value&& v) {
     prop_2_ = std::move(v);
     return *this;
 }
 
-} } }
+} }
