@@ -18,15 +18,19 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef DOGEN_TEST_MODELS_DISABLE_CMAKELISTS_ODB_PACKAGE1_FIRST_CLASS_PRAGMAS_HPP
-#define DOGEN_TEST_MODELS_DISABLE_CMAKELISTS_ODB_PACKAGE1_FIRST_CLASS_PRAGMAS_HPP
+#ifndef CPP_REF_IMPL_DISABLE_CMAKELISTS_TYPES_PACKAGE1_FIRST_CLASS_FWD_HPP
+#define CPP_REF_IMPL_DISABLE_CMAKELISTS_TYPES_PACKAGE1_FIRST_CLASS_FWD_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "dogen/test_models/disable_cmakelists/types/package1/first_class.hpp"
+namespace cpp_ref_impl {
+namespace disable_cmakelists {
+namespace package1 {
 
-// class has no ODB pragmas defined.
+class first_class;
+
+} } }
 
 #endif

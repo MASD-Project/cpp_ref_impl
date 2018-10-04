@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/disable_cmakelists/hash/package1/first_class_hash.hpp"
+#include "cpp_ref_impl/disable_cmakelists/hash/package1/first_class_hash.hpp"
 
 namespace {
 
@@ -30,8 +30,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace disable_cmakelists {
 namespace package1 {
 
@@ -44,4 +43,4 @@ std::size_t first_class_hasher::hash(const first_class& v) {
     return seed;
 }
 
-} } } }
+} } }

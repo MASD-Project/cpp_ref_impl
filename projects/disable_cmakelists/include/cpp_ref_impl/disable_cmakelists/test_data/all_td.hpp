@@ -18,13 +18,13 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef DOGEN_TEST_MODELS_DISABLE_CMAKELISTS_SERIALIZATION_ALL_SER_HPP
-#define DOGEN_TEST_MODELS_DISABLE_CMAKELISTS_SERIALIZATION_ALL_SER_HPP
+#ifndef CPP_REF_IMPL_DISABLE_CMAKELISTS_TEST_DATA_ALL_TD_HPP
+#define CPP_REF_IMPL_DISABLE_CMAKELISTS_TEST_DATA_ALL_TD_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "dogen/test_models/disable_cmakelists/serialization/package1/first_class_ser.hpp"
+#include "cpp_ref_impl/disable_cmakelists/test_data/package1/first_class_td.hpp"
 
 #endif

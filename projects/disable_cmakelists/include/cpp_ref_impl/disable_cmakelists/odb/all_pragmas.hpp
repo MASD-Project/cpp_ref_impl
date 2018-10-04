@@ -18,37 +18,13 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef DOGEN_TEST_MODELS_DISABLE_CMAKELISTS_HASH_PACKAGE1_FIRST_CLASS_HASH_HPP
-#define DOGEN_TEST_MODELS_DISABLE_CMAKELISTS_HASH_PACKAGE1_FIRST_CLASS_HASH_HPP
+#ifndef CPP_REF_IMPL_DISABLE_CMAKELISTS_ODB_ALL_PRAGMAS_HPP
+#define CPP_REF_IMPL_DISABLE_CMAKELISTS_ODB_ALL_PRAGMAS_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include <functional>
-#include "dogen/test_models/disable_cmakelists/types/package1/first_class.hpp"
+#include "cpp_ref_impl/disable_cmakelists/odb/package1/first_class_pragmas.hpp"
 
-namespace dogen {
-namespace test_models {
-namespace disable_cmakelists {
-namespace package1 {
-
-struct first_class_hasher {
-public:
-    static std::size_t hash(const first_class& v);
-};
-
-} } } }
-
-namespace std {
-
-template<>
-struct hash<dogen::test_models::disable_cmakelists::package1::first_class> {
-public:
-    size_t operator()(const dogen::test_models::disable_cmakelists::package1::first_class& v) const {
-        return dogen::test_models::disable_cmakelists::package1::first_class_hasher::hash(v);
-    }
-};
-
-}
 #endif
