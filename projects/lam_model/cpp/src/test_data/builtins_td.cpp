@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/lam_model/test_data/builtins_td.hpp"
+#include "cpp_ref_impl/lam_model/test_data/builtins_td.hpp"
 
 namespace {
 
@@ -64,8 +64,7 @@ bool create_bool(const unsigned int position) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace lam_model {
 
 builtins_generator::builtins_generator() : position_(0) { }
@@ -103,4 +102,4 @@ builtins_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

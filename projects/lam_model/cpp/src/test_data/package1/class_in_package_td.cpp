@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/lam_model/test_data/package1/class_in_package_td.hpp"
+#include "cpp_ref_impl/lam_model/test_data/package1/class_in_package_td.hpp"
 
 namespace {
 
@@ -28,8 +28,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace lam_model {
 namespace package1 {
 
@@ -59,4 +58,4 @@ class_in_package_generator::operator()() {
     return create(position_++);
 }
 
-} } } }
+} } }

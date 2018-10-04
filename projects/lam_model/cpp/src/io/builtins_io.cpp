@@ -20,10 +20,9 @@
  */
 #include <ostream>
 #include <boost/io/ios_state.hpp>
-#include "dogen/test_models/lam_model/io/builtins_io.hpp"
+#include "cpp_ref_impl/lam_model/io/builtins_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace lam_model {
 
 std::ostream& operator<<(std::ostream& s, const builtins& v) {
@@ -34,7 +33,7 @@ std::ostream& operator<<(std::ostream& s, const builtins& v) {
     s.setf(std::ios::showpoint);
 
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::lam_model::builtins\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::lam_model::builtins\"" << ", "
       << "\"prop_0\": " << "\"" << v.prop_0() << "\"" << ", "
       << "\"prop_1\": " << "\"" << v.prop_1() << "\"" << ", "
       << "\"prop_2\": " << "\"" << v.prop_2() << "\"" << ", "
@@ -49,4 +48,4 @@ std::ostream& operator<<(std::ostream& s, const builtins& v) {
     return(s);
 }
 
-} } }
+} }

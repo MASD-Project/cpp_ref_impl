@@ -30,6 +30,6 @@ set(files ${files} ${odb_files})
 
 add_library(lam_model STATIC ${files})
 set_target_properties(lam_model PROPERTIES
-    OUTPUT_NAME dogen.lam_model)
+    OUTPUT_NAME cpp_ref_impl.lam_model)
 
 install(TARGETS lam_model ARCHIVE DESTINATION lib COMPONENT libraries)

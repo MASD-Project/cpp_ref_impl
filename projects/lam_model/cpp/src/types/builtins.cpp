@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/lam_model/types/builtins.hpp"
+#include "cpp_ref_impl/lam_model/types/builtins.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace lam_model {
 
 builtins::builtins()
@@ -171,4 +170,4 @@ void builtins::prop_9(const bool v) {
     prop_9_ = v;
 }
 
-} } }
+} }

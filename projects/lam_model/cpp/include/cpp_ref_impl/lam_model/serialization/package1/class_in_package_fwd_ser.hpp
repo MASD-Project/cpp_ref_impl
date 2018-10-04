@@ -18,39 +18,24 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/lam_model/types/package1/class_in_package.hpp"
+#ifndef CPP_REF_IMPL_LAM_MODEL_SERIALIZATION_PACKAGE1_CLASS_IN_PACKAGE_FWD_SER_HPP
+#define CPP_REF_IMPL_LAM_MODEL_SERIALIZATION_PACKAGE1_CLASS_IN_PACKAGE_FWD_SER_HPP
 
-namespace cpp_ref_impl {
-namespace lam_model {
-namespace package1 {
+#if defined(_MSC_VER) && (_MSC_VER >= 1200)
+#pragma once
+#endif
 
-class_in_package::class_in_package()
-    : prop_0_(static_cast<int>(0)) { }
+#include "cpp_ref_impl/lam_model/types/package1/class_in_package_fwd.hpp"
 
-class_in_package::class_in_package(const int prop_0)
-    : prop_0_(prop_0) { }
+namespace boost {
+namespace serialization {
 
-void class_in_package::swap(class_in_package& other) noexcept {
-    using std::swap;
-    swap(prop_0_, other.prop_0_);
-}
+template<class Archive>
+void save(Archive& ar, const cpp_ref_impl::lam_model::package1::class_in_package& v, unsigned int version);
 
-bool class_in_package::operator==(const class_in_package& rhs) const {
-    return prop_0_ == rhs.prop_0_;
-}
+template<class Archive>
+void load(Archive& ar, cpp_ref_impl::lam_model::package1::class_in_package& v, unsigned int version);
 
-class_in_package& class_in_package::operator=(class_in_package other) {
-    using std::swap;
-    swap(*this, other);
-    return *this;
-}
+} }
 
-int class_in_package::prop_0() const {
-    return prop_0_;
-}
-
-void class_in_package::prop_0(const int v) {
-    prop_0_ = v;
-}
-
-} } }
+#endif

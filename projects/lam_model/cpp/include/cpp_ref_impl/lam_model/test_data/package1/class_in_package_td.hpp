@@ -18,39 +18,37 @@
  * MA 02110-1301, USA.
  *
  */
+#ifndef CPP_REF_IMPL_LAM_MODEL_TEST_DATA_PACKAGE1_CLASS_IN_PACKAGE_TD_HPP
+#define CPP_REF_IMPL_LAM_MODEL_TEST_DATA_PACKAGE1_CLASS_IN_PACKAGE_TD_HPP
+
+#if defined(_MSC_VER) && (_MSC_VER >= 1200)
+#pragma once
+#endif
+
 #include "cpp_ref_impl/lam_model/types/package1/class_in_package.hpp"
 
 namespace cpp_ref_impl {
 namespace lam_model {
 namespace package1 {
 
-class_in_package::class_in_package()
-    : prop_0_(static_cast<int>(0)) { }
+class class_in_package_generator {
+public:
+    class_in_package_generator();
 
-class_in_package::class_in_package(const int prop_0)
-    : prop_0_(prop_0) { }
+public:
+    typedef cpp_ref_impl::lam_model::package1::class_in_package result_type;
 
-void class_in_package::swap(class_in_package& other) noexcept {
-    using std::swap;
-    swap(prop_0_, other.prop_0_);
-}
+public:
+    static void populate(const unsigned int position, result_type& v);
+    static result_type create(const unsigned int position);
+    result_type operator()();
 
-bool class_in_package::operator==(const class_in_package& rhs) const {
-    return prop_0_ == rhs.prop_0_;
-}
-
-class_in_package& class_in_package::operator=(class_in_package other) {
-    using std::swap;
-    swap(*this, other);
-    return *this;
-}
-
-int class_in_package::prop_0() const {
-    return prop_0_;
-}
-
-void class_in_package::prop_0(const int v) {
-    prop_0_ = v;
-}
+private:
+    unsigned int position_;
+public:
+    static result_type* create_ptr(const unsigned int position);
+};
 
 } } }
+
+#endif

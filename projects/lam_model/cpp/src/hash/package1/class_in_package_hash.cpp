@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/lam_model/hash/package1/class_in_package_hash.hpp"
+#include "cpp_ref_impl/lam_model/hash/package1/class_in_package_hash.hpp"
 
 namespace {
 
@@ -30,8 +30,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace lam_model {
 namespace package1 {
 
@@ -42,4 +41,4 @@ std::size_t class_in_package_hasher::hash(const class_in_package& v) {
     return seed;
 }
 
-} } } }
+} } }
