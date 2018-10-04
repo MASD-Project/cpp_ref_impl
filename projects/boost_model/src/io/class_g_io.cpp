@@ -19,7 +19,7 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/boost_model/io/class_g_io.hpp"
+#include "cpp_ref_impl/boost_model/io/class_g_io.hpp"
 
 namespace std {
 
@@ -35,17 +35,16 @@ inline std::ostream& operator<<(std::ostream& s, const std::list<boost::filesyst
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 std::ostream& operator<<(std::ostream& s, const class_g& v) {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::boost_model::class_g\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::boost_model::class_g\"" << ", "
       << "\"prop_0\": " << "\"" << v.prop_0().generic_string() << "\"" << ", "
       << "\"prop_1\": " << v.prop_1()
       << " }";
     return(s);
 }
 
-} } }
+} }

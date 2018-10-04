@@ -19,18 +19,17 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/boost_model/io/class_a_io.hpp"
+#include "cpp_ref_impl/boost_model/io/class_a_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 std::ostream& operator<<(std::ostream& s, const class_a& v) {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::boost_model::class_a\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::boost_model::class_a\"" << ", "
       << "\"prop_0\": " << v.prop_0()
       << " }";
     return(s);
 }
 
-} } }
+} }

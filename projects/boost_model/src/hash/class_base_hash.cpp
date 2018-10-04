@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/boost_model/hash/class_base_hash.hpp"
+#include "cpp_ref_impl/boost_model/hash/class_base_hash.hpp"
 
 namespace {
 
@@ -30,8 +30,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 std::size_t class_base_hasher::hash(const class_base& v) {
@@ -41,4 +40,4 @@ std::size_t class_base_hasher::hash(const class_base& v) {
     return seed;
 }
 
-} } }
+} }

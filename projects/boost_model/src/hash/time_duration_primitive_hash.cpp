@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/boost_model/hash/time_duration_primitive_hash.hpp"
+#include "cpp_ref_impl/boost_model/hash/time_duration_primitive_hash.hpp"
 
 namespace {
 
@@ -36,8 +36,7 @@ inline std::size_t hash_boost_posix_time_time_duration(const boost::posix_time::
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 std::size_t time_duration_primitive_hasher::hash(const time_duration_primitive& v) {
@@ -46,4 +45,4 @@ std::size_t time_duration_primitive_hasher::hash(const time_duration_primitive& 
     return seed;
 }
 
-} } }
+} }

@@ -19,9 +19,9 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/boost_model/io/class_a_io.hpp"
-#include "dogen/test_models/boost_model/io/class_d_io.hpp"
-#include "dogen/test_models/boost_model/io/pkg1/class_c_io.hpp"
+#include "cpp_ref_impl/boost_model/io/class_a_io.hpp"
+#include "cpp_ref_impl/boost_model/io/class_d_io.hpp"
+#include "cpp_ref_impl/boost_model/io/pkg1/class_c_io.hpp"
 
 namespace boost {
 
@@ -40,7 +40,7 @@ inline std::ostream& operator<<(std::ostream& s, const boost::optional<int>& v) 
 
 namespace boost {
 
-inline std::ostream& operator<<(std::ostream& s, const boost::optional<dogen::test_models::boost_model::class_a>& v) {
+inline std::ostream& operator<<(std::ostream& s, const boost::optional<cpp_ref_impl::boost_model::class_a>& v) {
     s << "{ " << "\"__type__\": " << "\"boost::optional\"" << ", ";
 
     if (v)
@@ -55,7 +55,7 @@ inline std::ostream& operator<<(std::ostream& s, const boost::optional<dogen::te
 
 namespace boost {
 
-inline std::ostream& operator<<(std::ostream& s, const boost::optional<dogen::test_models::boost_model::pkg1::class_c>& v) {
+inline std::ostream& operator<<(std::ostream& s, const boost::optional<cpp_ref_impl::boost_model::pkg1::class_c>& v) {
     s << "{ " << "\"__type__\": " << "\"boost::optional\"" << ", ";
 
     if (v)
@@ -70,7 +70,7 @@ inline std::ostream& operator<<(std::ostream& s, const boost::optional<dogen::te
 
 namespace std {
 
-inline std::ostream& operator<<(std::ostream& s, const std::vector<dogen::test_models::boost_model::class_a>& v) {
+inline std::ostream& operator<<(std::ostream& s, const std::vector<cpp_ref_impl::boost_model::class_a>& v) {
     s << "[ ";
     for (auto i(v.begin()); i != v.end(); ++i) {
         if (i != v.begin()) s << ", ";
@@ -84,7 +84,7 @@ inline std::ostream& operator<<(std::ostream& s, const std::vector<dogen::test_m
 
 namespace boost {
 
-inline std::ostream& operator<<(std::ostream& s, const boost::optional<std::vector<dogen::test_models::boost_model::class_a> >& v) {
+inline std::ostream& operator<<(std::ostream& s, const boost::optional<std::vector<cpp_ref_impl::boost_model::class_a> >& v) {
     s << "{ " << "\"__type__\": " << "\"boost::optional\"" << ", ";
 
     if (v)
@@ -97,13 +97,12 @@ inline std::ostream& operator<<(std::ostream& s, const boost::optional<std::vect
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 std::ostream& operator<<(std::ostream& s, const class_d& v) {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::boost_model::class_d\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::boost_model::class_d\"" << ", "
       << "\"prop_0\": " << v.prop_0() << ", "
       << "\"prop_1\": " << v.prop_1() << ", "
       << "\"prop_2\": " << v.prop_2() << ", "
@@ -112,4 +111,4 @@ std::ostream& operator<<(std::ostream& s, const class_d& v) {
     return(s);
 }
 
-} } }
+} }

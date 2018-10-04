@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/boost_model/hash/class_f_hash.hpp"
+#include "cpp_ref_impl/boost_model/hash/class_f_hash.hpp"
 
 namespace {
 
@@ -74,8 +74,7 @@ inline std::size_t hash_std_list_boost_posix_time_time_duration(const std::list<
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 std::size_t class_f_hasher::hash(const class_f& v) {
@@ -91,4 +90,4 @@ std::size_t class_f_hasher::hash(const class_f& v) {
     return seed;
 }
 
-} } }
+} }

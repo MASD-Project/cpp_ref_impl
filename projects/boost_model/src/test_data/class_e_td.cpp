@@ -19,8 +19,8 @@
  *
  */
 #include <sstream>
-#include "dogen/test_models/boost_model/test_data/class_e_td.hpp"
-#include "dogen/test_models/boost_model/test_data/class_derived_td.hpp"
+#include "cpp_ref_impl/boost_model/test_data/class_e_td.hpp"
+#include "cpp_ref_impl/boost_model/test_data/class_derived_td.hpp"
 
 namespace {
 
@@ -44,29 +44,29 @@ create_boost_variant_int_double(unsigned int position) {
     return r;
 }
 
-dogen::test_models::boost_model::class_derived
-create_dogen_test_models_boost_model_class_derived(const unsigned int position) {
-    return dogen::test_models::boost_model::class_derived_generator::create(position);
+cpp_ref_impl::boost_model::class_derived
+create_cpp_ref_impl_boost_model_class_derived(const unsigned int position) {
+    return cpp_ref_impl::boost_model::class_derived_generator::create(position);
 }
 
-boost::variant<int, dogen::test_models::boost_model::class_derived, double>
-create_boost_variant_int_dogen_test_models_boost_model_class_derived_double(unsigned int position) {
-    boost::variant<int, dogen::test_models::boost_model::class_derived, double> r;
+boost::variant<int, cpp_ref_impl::boost_model::class_derived, double>
+create_boost_variant_int_cpp_ref_impl_boost_model_class_derived_double(unsigned int position) {
+    boost::variant<int, cpp_ref_impl::boost_model::class_derived, double> r;
 
     if (position == 0 || ((position % 3) == 0))
         r = create_int(position);
     else if (position == 1 || ((position % 4) == 0))
-        r = create_dogen_test_models_boost_model_class_derived(position);
+        r = create_cpp_ref_impl_boost_model_class_derived(position);
     else if ((position % 2) == 0)
         r = create_double(position);
 
     return r;
 }
 
-std::vector<boost::variant<int, dogen::test_models::boost_model::class_derived, double> > create_std_vector_boost_variant_int_dogen_test_models_boost_model_class_derived_double(unsigned int position) {
-    std::vector<boost::variant<int, dogen::test_models::boost_model::class_derived, double> > r;
+std::vector<boost::variant<int, cpp_ref_impl::boost_model::class_derived, double> > create_std_vector_boost_variant_int_cpp_ref_impl_boost_model_class_derived_double(unsigned int position) {
+    std::vector<boost::variant<int, cpp_ref_impl::boost_model::class_derived, double> > r;
     for (unsigned int i(0); i < 4; ++i) {
-        r.push_back(create_boost_variant_int_dogen_test_models_boost_model_class_derived_double(position + i));
+        r.push_back(create_boost_variant_int_cpp_ref_impl_boost_model_class_derived_double(position + i));
     }
     return r;
 }
@@ -97,8 +97,7 @@ create_boost_variant_int_std_string_char(unsigned int position) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 class_e_generator::class_e_generator() : position_(0) { }
@@ -106,8 +105,8 @@ class_e_generator::class_e_generator() : position_(0) { }
 void class_e_generator::
 populate(const unsigned int position, result_type& v) {
     v.prop_0(create_boost_variant_int_double(position + 0));
-    v.prop_1(create_boost_variant_int_dogen_test_models_boost_model_class_derived_double(position + 1));
-    v.prop_2(create_std_vector_boost_variant_int_dogen_test_models_boost_model_class_derived_double(position + 2));
+    v.prop_1(create_boost_variant_int_cpp_ref_impl_boost_model_class_derived_double(position + 1));
+    v.prop_2(create_std_vector_boost_variant_int_cpp_ref_impl_boost_model_class_derived_double(position + 2));
     v.prop_3(create_boost_variant_int_std_string_char(position + 3));
 }
 
@@ -130,4 +129,4 @@ class_e_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

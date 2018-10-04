@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/boost_model/types/ptime_primitive.hpp"
+#include "cpp_ref_impl/boost_model/types/ptime_primitive.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 ptime_primitive::ptime_primitive(const boost::posix_time::ptime& value)
@@ -58,4 +57,4 @@ ptime_primitive& ptime_primitive::operator=(ptime_primitive other) {
     return *this;
 }
 
-} } }
+} }

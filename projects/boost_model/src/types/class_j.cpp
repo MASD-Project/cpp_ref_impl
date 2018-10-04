@@ -18,16 +18,15 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/boost_model/types/class_j.hpp"
+#include "cpp_ref_impl/boost_model/types/class_j.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 class_j::class_j(
-    const dogen::test_models::boost_model::ptime_primitive& prop_0,
-    const dogen::test_models::boost_model::time_duration_primitive& prop_1,
-    const dogen::test_models::boost_model::date_primitive& prop_2)
+    const cpp_ref_impl::boost_model::ptime_primitive& prop_0,
+    const cpp_ref_impl::boost_model::time_duration_primitive& prop_1,
+    const cpp_ref_impl::boost_model::date_primitive& prop_2)
     : prop_0_(prop_0),
       prop_1_(prop_1),
       prop_2_(prop_2) { }
@@ -51,52 +50,52 @@ class_j& class_j::operator=(class_j other) {
     return *this;
 }
 
-const dogen::test_models::boost_model::ptime_primitive& class_j::prop_0() const {
+const cpp_ref_impl::boost_model::ptime_primitive& class_j::prop_0() const {
     return prop_0_;
 }
 
-dogen::test_models::boost_model::ptime_primitive& class_j::prop_0() {
+cpp_ref_impl::boost_model::ptime_primitive& class_j::prop_0() {
     return prop_0_;
 }
 
-void class_j::prop_0(const dogen::test_models::boost_model::ptime_primitive& v) {
+void class_j::prop_0(const cpp_ref_impl::boost_model::ptime_primitive& v) {
     prop_0_ = v;
 }
 
-void class_j::prop_0(const dogen::test_models::boost_model::ptime_primitive&& v) {
+void class_j::prop_0(const cpp_ref_impl::boost_model::ptime_primitive&& v) {
     prop_0_ = std::move(v);
 }
 
-const dogen::test_models::boost_model::time_duration_primitive& class_j::prop_1() const {
+const cpp_ref_impl::boost_model::time_duration_primitive& class_j::prop_1() const {
     return prop_1_;
 }
 
-dogen::test_models::boost_model::time_duration_primitive& class_j::prop_1() {
+cpp_ref_impl::boost_model::time_duration_primitive& class_j::prop_1() {
     return prop_1_;
 }
 
-void class_j::prop_1(const dogen::test_models::boost_model::time_duration_primitive& v) {
+void class_j::prop_1(const cpp_ref_impl::boost_model::time_duration_primitive& v) {
     prop_1_ = v;
 }
 
-void class_j::prop_1(const dogen::test_models::boost_model::time_duration_primitive&& v) {
+void class_j::prop_1(const cpp_ref_impl::boost_model::time_duration_primitive&& v) {
     prop_1_ = std::move(v);
 }
 
-const dogen::test_models::boost_model::date_primitive& class_j::prop_2() const {
+const cpp_ref_impl::boost_model::date_primitive& class_j::prop_2() const {
     return prop_2_;
 }
 
-dogen::test_models::boost_model::date_primitive& class_j::prop_2() {
+cpp_ref_impl::boost_model::date_primitive& class_j::prop_2() {
     return prop_2_;
 }
 
-void class_j::prop_2(const dogen::test_models::boost_model::date_primitive& v) {
+void class_j::prop_2(const cpp_ref_impl::boost_model::date_primitive& v) {
     prop_2_ = v;
 }
 
-void class_j::prop_2(const dogen::test_models::boost_model::date_primitive&& v) {
+void class_j::prop_2(const cpp_ref_impl::boost_model::date_primitive&& v) {
     prop_2_ = std::move(v);
 }
 
-} } }
+} }

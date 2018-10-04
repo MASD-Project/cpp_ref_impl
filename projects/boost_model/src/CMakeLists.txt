@@ -30,6 +30,6 @@ set(files ${files} ${odb_files})
 
 add_library(boost_model STATIC ${files})
 set_target_properties(boost_model PROPERTIES
-    OUTPUT_NAME dogen.boost_model)
+    OUTPUT_NAME cpp_ref_impl.boost_model)
 
 install(TARGETS boost_model ARCHIVE DESTINATION lib COMPONENT libraries)

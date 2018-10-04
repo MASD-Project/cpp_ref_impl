@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/boost_model/test_data/class_base_td.hpp"
-#include "dogen/test_models/boost_model/test_data/class_derived_td.hpp"
+#include "cpp_ref_impl/boost_model/test_data/class_base_td.hpp"
+#include "cpp_ref_impl/boost_model/test_data/class_derived_td.hpp"
 
 namespace {
 
@@ -29,8 +29,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 void class_base_generator::
@@ -40,7 +39,7 @@ populate(const unsigned int position, result_type& v) {
 
 class_base_generator::result_type*
 class_base_generator::create_ptr(const unsigned int position) {
-    return dogen::test_models::boost_model::class_derived_generator::create_ptr(position);
+    return cpp_ref_impl::boost_model::class_derived_generator::create_ptr(position);
 }
 
-} } }
+} }

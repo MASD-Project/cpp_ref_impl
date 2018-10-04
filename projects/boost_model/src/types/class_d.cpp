@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/boost_model/types/class_d.hpp"
+#include "cpp_ref_impl/boost_model/types/class_d.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 class_d::class_d(class_d&& rhs)
@@ -32,9 +31,9 @@ class_d::class_d(class_d&& rhs)
 
 class_d::class_d(
     const boost::optional<int>& prop_0,
-    const boost::optional<dogen::test_models::boost_model::class_a>& prop_1,
-    const boost::optional<dogen::test_models::boost_model::pkg1::class_c>& prop_2,
-    const boost::optional<std::vector<dogen::test_models::boost_model::class_a> >& prop_3)
+    const boost::optional<cpp_ref_impl::boost_model::class_a>& prop_1,
+    const boost::optional<cpp_ref_impl::boost_model::pkg1::class_c>& prop_2,
+    const boost::optional<std::vector<cpp_ref_impl::boost_model::class_a> >& prop_3)
     : prop_0_(prop_0),
       prop_1_(prop_1),
       prop_2_(prop_2),
@@ -77,52 +76,52 @@ void class_d::prop_0(const boost::optional<int>&& v) {
     prop_0_ = std::move(v);
 }
 
-const boost::optional<dogen::test_models::boost_model::class_a>& class_d::prop_1() const {
+const boost::optional<cpp_ref_impl::boost_model::class_a>& class_d::prop_1() const {
     return prop_1_;
 }
 
-boost::optional<dogen::test_models::boost_model::class_a>& class_d::prop_1() {
+boost::optional<cpp_ref_impl::boost_model::class_a>& class_d::prop_1() {
     return prop_1_;
 }
 
-void class_d::prop_1(const boost::optional<dogen::test_models::boost_model::class_a>& v) {
+void class_d::prop_1(const boost::optional<cpp_ref_impl::boost_model::class_a>& v) {
     prop_1_ = v;
 }
 
-void class_d::prop_1(const boost::optional<dogen::test_models::boost_model::class_a>&& v) {
+void class_d::prop_1(const boost::optional<cpp_ref_impl::boost_model::class_a>&& v) {
     prop_1_ = std::move(v);
 }
 
-const boost::optional<dogen::test_models::boost_model::pkg1::class_c>& class_d::prop_2() const {
+const boost::optional<cpp_ref_impl::boost_model::pkg1::class_c>& class_d::prop_2() const {
     return prop_2_;
 }
 
-boost::optional<dogen::test_models::boost_model::pkg1::class_c>& class_d::prop_2() {
+boost::optional<cpp_ref_impl::boost_model::pkg1::class_c>& class_d::prop_2() {
     return prop_2_;
 }
 
-void class_d::prop_2(const boost::optional<dogen::test_models::boost_model::pkg1::class_c>& v) {
+void class_d::prop_2(const boost::optional<cpp_ref_impl::boost_model::pkg1::class_c>& v) {
     prop_2_ = v;
 }
 
-void class_d::prop_2(const boost::optional<dogen::test_models::boost_model::pkg1::class_c>&& v) {
+void class_d::prop_2(const boost::optional<cpp_ref_impl::boost_model::pkg1::class_c>&& v) {
     prop_2_ = std::move(v);
 }
 
-const boost::optional<std::vector<dogen::test_models::boost_model::class_a> >& class_d::prop_3() const {
+const boost::optional<std::vector<cpp_ref_impl::boost_model::class_a> >& class_d::prop_3() const {
     return prop_3_;
 }
 
-boost::optional<std::vector<dogen::test_models::boost_model::class_a> >& class_d::prop_3() {
+boost::optional<std::vector<cpp_ref_impl::boost_model::class_a> >& class_d::prop_3() {
     return prop_3_;
 }
 
-void class_d::prop_3(const boost::optional<std::vector<dogen::test_models::boost_model::class_a> >& v) {
+void class_d::prop_3(const boost::optional<std::vector<cpp_ref_impl::boost_model::class_a> >& v) {
     prop_3_ = v;
 }
 
-void class_d::prop_3(const boost::optional<std::vector<dogen::test_models::boost_model::class_a> >&& v) {
+void class_d::prop_3(const boost::optional<std::vector<cpp_ref_impl::boost_model::class_a> >&& v) {
     prop_3_ = std::move(v);
 }
 
-} } }
+} }

@@ -18,23 +18,22 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/boost_model/types/class_a.hpp"
-#include "dogen/test_models/boost_model/types/some_service.hpp"
+#include "cpp_ref_impl/boost_model/types/class_a.hpp"
+#include "cpp_ref_impl/boost_model/types/some_service.hpp"
 
 namespace boost {
 
-inline bool operator==(const boost::shared_ptr<dogen::test_models::boost_model::class_a>& lhs,
-const boost::shared_ptr<dogen::test_models::boost_model::class_a>& rhs) {
+inline bool operator==(const boost::shared_ptr<cpp_ref_impl::boost_model::class_a>& lhs,
+const boost::shared_ptr<cpp_ref_impl::boost_model::class_a>& rhs) {
     return (!lhs && !rhs) ||(lhs && rhs && (*lhs == *rhs));
 }
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
-some_service::some_service(const boost::shared_ptr<dogen::test_models::boost_model::class_a>& prop_0)
+some_service::some_service(const boost::shared_ptr<cpp_ref_impl::boost_model::class_a>& prop_0)
     : prop_0_(prop_0) { }
 
 void some_service::swap(some_service& other) noexcept {
@@ -52,20 +51,20 @@ some_service& some_service::operator=(some_service other) {
     return *this;
 }
 
-const boost::shared_ptr<dogen::test_models::boost_model::class_a>& some_service::prop_0() const {
+const boost::shared_ptr<cpp_ref_impl::boost_model::class_a>& some_service::prop_0() const {
     return prop_0_;
 }
 
-boost::shared_ptr<dogen::test_models::boost_model::class_a>& some_service::prop_0() {
+boost::shared_ptr<cpp_ref_impl::boost_model::class_a>& some_service::prop_0() {
     return prop_0_;
 }
 
-void some_service::prop_0(const boost::shared_ptr<dogen::test_models::boost_model::class_a>& v) {
+void some_service::prop_0(const boost::shared_ptr<cpp_ref_impl::boost_model::class_a>& v) {
     prop_0_ = v;
 }
 
-void some_service::prop_0(const boost::shared_ptr<dogen::test_models::boost_model::class_a>&& v) {
+void some_service::prop_0(const boost::shared_ptr<cpp_ref_impl::boost_model::class_a>&& v) {
     prop_0_ = std::move(v);
 }
 
-} } }
+} }

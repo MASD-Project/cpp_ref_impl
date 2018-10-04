@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/boost_model/test_data/class_f_td.hpp"
+#include "cpp_ref_impl/boost_model/test_data/class_f_td.hpp"
 
 namespace {
 
@@ -74,8 +74,7 @@ std::list<boost::posix_time::time_duration> create_std_list_boost_posix_time_tim
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 class_f_generator::class_f_generator() : position_(0) { }
@@ -109,4 +108,4 @@ class_f_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

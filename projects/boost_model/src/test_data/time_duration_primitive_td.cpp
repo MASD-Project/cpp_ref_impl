@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/boost_model/test_data/time_duration_primitive_td.hpp"
+#include "cpp_ref_impl/boost_model/test_data/time_duration_primitive_td.hpp"
 
 namespace {
 
@@ -32,8 +32,7 @@ create_boost_posix_time_time_duration(const unsigned int position) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 time_duration_primitive_generator::time_duration_primitive_generator() : position_(0) { }
@@ -62,4 +61,4 @@ time_duration_primitive_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

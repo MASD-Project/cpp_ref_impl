@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/boost_model/types/class_h.hpp"
+#include "cpp_ref_impl/boost_model/types/class_h.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 class_h::class_h(class_h&& rhs)
@@ -61,4 +60,4 @@ void class_h::prop_0(const boost::property_tree::ptree&& v) {
     prop_0_ = std::move(v);
 }
 
-} } }
+} }

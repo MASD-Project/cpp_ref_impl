@@ -18,41 +18,40 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/boost_model/test_data/class_j_td.hpp"
-#include "dogen/test_models/boost_model/test_data/date_primitive_td.hpp"
-#include "dogen/test_models/boost_model/test_data/ptime_primitive_td.hpp"
-#include "dogen/test_models/boost_model/test_data/time_duration_primitive_td.hpp"
+#include "cpp_ref_impl/boost_model/test_data/class_j_td.hpp"
+#include "cpp_ref_impl/boost_model/test_data/date_primitive_td.hpp"
+#include "cpp_ref_impl/boost_model/test_data/ptime_primitive_td.hpp"
+#include "cpp_ref_impl/boost_model/test_data/time_duration_primitive_td.hpp"
 
 namespace {
 
-dogen::test_models::boost_model::ptime_primitive
-create_dogen_test_models_boost_model_ptime_primitive(const unsigned int position) {
-    return dogen::test_models::boost_model::ptime_primitive_generator::create(position);
+cpp_ref_impl::boost_model::ptime_primitive
+create_cpp_ref_impl_boost_model_ptime_primitive(const unsigned int position) {
+    return cpp_ref_impl::boost_model::ptime_primitive_generator::create(position);
 }
 
-dogen::test_models::boost_model::time_duration_primitive
-create_dogen_test_models_boost_model_time_duration_primitive(const unsigned int position) {
-    return dogen::test_models::boost_model::time_duration_primitive_generator::create(position);
+cpp_ref_impl::boost_model::time_duration_primitive
+create_cpp_ref_impl_boost_model_time_duration_primitive(const unsigned int position) {
+    return cpp_ref_impl::boost_model::time_duration_primitive_generator::create(position);
 }
 
-dogen::test_models::boost_model::date_primitive
-create_dogen_test_models_boost_model_date_primitive(const unsigned int position) {
-    return dogen::test_models::boost_model::date_primitive_generator::create(position);
+cpp_ref_impl::boost_model::date_primitive
+create_cpp_ref_impl_boost_model_date_primitive(const unsigned int position) {
+    return cpp_ref_impl::boost_model::date_primitive_generator::create(position);
 }
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 class_j_generator::class_j_generator() : position_(0) { }
 
 void class_j_generator::
 populate(const unsigned int position, result_type& v) {
-    v.prop_0(create_dogen_test_models_boost_model_ptime_primitive(position + 0));
-    v.prop_1(create_dogen_test_models_boost_model_time_duration_primitive(position + 1));
-    v.prop_2(create_dogen_test_models_boost_model_date_primitive(position + 2));
+    v.prop_0(create_cpp_ref_impl_boost_model_ptime_primitive(position + 0));
+    v.prop_1(create_cpp_ref_impl_boost_model_time_duration_primitive(position + 1));
+    v.prop_2(create_cpp_ref_impl_boost_model_date_primitive(position + 2));
 }
 
 class_j_generator::result_type
@@ -74,4 +73,4 @@ class_j_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

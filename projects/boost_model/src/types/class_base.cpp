@@ -19,10 +19,9 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/boost_model/types/class_base.hpp"
+#include "cpp_ref_impl/boost_model/types/class_base.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 class_base::class_base()
@@ -33,7 +32,7 @@ class_base::class_base(const int prop_0)
 
 void class_base::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::boost_model::class_base\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::boost_model::class_base\"" << ", "
       << "\"prop_0\": " << prop_0_
       << " }";
 }
@@ -55,4 +54,4 @@ void class_base::prop_0(const int v) {
     prop_0_ = v;
 }
 
-} } }
+} }

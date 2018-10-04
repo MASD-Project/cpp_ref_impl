@@ -20,20 +20,19 @@
  */
 #include <ostream>
 #include <boost/date_time/posix_time/posix_time.hpp>
-#include "dogen/test_models/boost_model/io/ptime_primitive_io.hpp"
+#include "cpp_ref_impl/boost_model/io/ptime_primitive_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 std::ostream& operator<<(std::ostream& s, const ptime_primitive& v) {
 
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::boost_model::ptime_primitive\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::boost_model::ptime_primitive\"" << ", "
       << "\"value\": " << "\"" << v.value() << "\""
       << " }";
 
     return s;
 }
 
-} } }
+} }

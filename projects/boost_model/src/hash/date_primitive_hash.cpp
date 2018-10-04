@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/boost_model/hash/date_primitive_hash.hpp"
+#include "cpp_ref_impl/boost_model/hash/date_primitive_hash.hpp"
 
 namespace {
 
@@ -36,8 +36,7 @@ inline std::size_t hash_boost_gregorian_date(const boost::gregorian::date& v) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 std::size_t date_primitive_hasher::hash(const date_primitive& v) {
@@ -46,4 +45,4 @@ std::size_t date_primitive_hasher::hash(const date_primitive& v) {
     return seed;
 }
 
-} } }
+} }

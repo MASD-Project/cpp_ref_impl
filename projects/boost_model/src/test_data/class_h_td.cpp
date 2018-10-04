@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/boost_model/test_data/class_h_td.hpp"
+#include "cpp_ref_impl/boost_model/test_data/class_h_td.hpp"
 
 namespace {
 
@@ -34,8 +34,7 @@ create_boost_property_tree_ptree(const unsigned int position) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 class_h_generator::class_h_generator() : position_(0) { }
@@ -64,4 +63,4 @@ class_h_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

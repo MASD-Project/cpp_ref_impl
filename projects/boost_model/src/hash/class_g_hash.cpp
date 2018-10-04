@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/boost_model/hash/class_g_hash.hpp"
+#include "cpp_ref_impl/boost_model/hash/class_g_hash.hpp"
 
 namespace {
 
@@ -44,8 +44,7 @@ inline std::size_t hash_std_list_boost_filesystem_path(const std::list<boost::fi
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 std::size_t class_g_hasher::hash(const class_g& v) {
@@ -57,4 +56,4 @@ std::size_t class_g_hasher::hash(const class_g& v) {
     return seed;
 }
 
-} } }
+} }

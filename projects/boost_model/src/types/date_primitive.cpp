@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/boost_model/types/date_primitive.hpp"
+#include "cpp_ref_impl/boost_model/types/date_primitive.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 date_primitive::date_primitive(const boost::gregorian::date& value)
@@ -58,4 +57,4 @@ date_primitive& date_primitive::operator=(date_primitive other) {
     return *this;
 }
 
-} } }
+} }

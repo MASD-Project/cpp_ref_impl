@@ -19,11 +19,10 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/boost_model/io/class_base_io.hpp"
-#include "dogen/test_models/boost_model/types/class_derived.hpp"
+#include "cpp_ref_impl/boost_model/io/class_base_io.hpp"
+#include "cpp_ref_impl/boost_model/types/class_derived.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 class_derived::class_derived()
@@ -32,34 +31,34 @@ class_derived::class_derived()
 class_derived::class_derived(
     const int prop_0,
     const int prop_1)
-    : dogen::test_models::boost_model::class_base(prop_0),
+    : cpp_ref_impl::boost_model::class_base(prop_0),
       prop_1_(prop_1) { }
 
 void class_derived::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::boost_model::class_derived\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::boost_model::class_derived\"" << ", "
       << "\"__parent_0__\": ";
-    dogen::test_models::boost_model::class_base::to_stream(s);
+    cpp_ref_impl::boost_model::class_base::to_stream(s);
     s << ", "
       << "\"prop_1\": " << prop_1_
       << " }";
 }
 
 void class_derived::swap(class_derived& other) noexcept {
-    dogen::test_models::boost_model::class_base::swap(other);
+    cpp_ref_impl::boost_model::class_base::swap(other);
 
     using std::swap;
     swap(prop_1_, other.prop_1_);
 }
 
-bool class_derived::equals(const dogen::test_models::boost_model::class_base& other) const {
+bool class_derived::equals(const cpp_ref_impl::boost_model::class_base& other) const {
     const class_derived* const p(dynamic_cast<const class_derived* const>(&other));
     if (!p) return false;
     return *this == *p;
 }
 
 bool class_derived::operator==(const class_derived& rhs) const {
-    return dogen::test_models::boost_model::class_base::compare(rhs) &&
+    return cpp_ref_impl::boost_model::class_base::compare(rhs) &&
         prop_1_ == rhs.prop_1_;
 }
 
@@ -77,4 +76,4 @@ void class_derived::prop_1(const int v) {
     prop_1_ = v;
 }
 
-} } }
+} }

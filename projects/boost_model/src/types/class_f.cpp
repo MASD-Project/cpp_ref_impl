@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/boost_model/types/class_f.hpp"
+#include "cpp_ref_impl/boost_model/types/class_f.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 class_f::class_f(class_f&& rhs)
@@ -167,4 +166,4 @@ void class_f::prop_5(const std::list<boost::posix_time::time_duration>&& v) {
     prop_5_ = std::move(v);
 }
 
-} } }
+} }

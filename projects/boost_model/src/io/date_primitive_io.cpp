@@ -20,20 +20,19 @@
  */
 #include <ostream>
 #include <boost/date_time/gregorian/gregorian.hpp>
-#include "dogen/test_models/boost_model/io/date_primitive_io.hpp"
+#include "cpp_ref_impl/boost_model/io/date_primitive_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace boost_model {
 
 std::ostream& operator<<(std::ostream& s, const date_primitive& v) {
 
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::boost_model::date_primitive\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::boost_model::date_primitive\"" << ", "
       << "\"value\": " << "\"" << v.value() << "\""
       << " }";
 
     return s;
 }
 
-} } }
+} }
