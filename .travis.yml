@@ -1,0 +1,93 @@
+# -*- mode: yaml; tab-width: 4; indent-tabs-mode: nil -*-
+#
+# Copyright (C) 2012 Kitanda <info@kitanda.co.uk>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+# MA 02110-1301, USA.
+#
+sudo: required
+dist: trusty
+language: cpp
+cache: ccache
+
+git:
+  depth: 2
+
+matrix:
+  include:
+    #
+    # OSX Clang
+    #
+    - os: osx
+      compiler: clang
+      osx_image: xcode8
+      env: BUILD_TYPE=Release COMPILER="clang"
+    - os: osx
+      compiler: clang
+      osx_image: xcode8
+      env: BUILD_TYPE=Debug COMPILER="clang"
+    #
+    # Linux GCC
+    #
+    - os: linux
+      compiler: gcc
+      env: BUILD_TYPE=Release COMPILER="gcc"
+    - os: linux
+      compiler: gcc
+      env: BUILD_TYPE=Debug COMPILER="gcc"
+    #
+    # Linux Clang
+    #
+    - os: linux
+      compiler: clang
+      env: BUILD_TYPE=Release COMPILER="clang"
+    - os: linux
+      compiler: clang
+      env: BUILD_TYPE=Debug COMPILER="clang"
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+
+install:
+  - export SCRIPTS_DIR=${TRAVIS_BUILD_DIR}/build/scripts
+  - source ${SCRIPTS_DIR}/travis.install.${TRAVIS_OS_NAME}.sh
+
+script:
+  - JOBS=2
+  - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then
+       export TARGET="run_all_tests";
+       export THIRD_PARTY="/tmp/dogen_deps/local";
+    fi
+  - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
+        export TARGET="run_all_tests";
+        export PATH="/usr/local/opt/ccache/libexec:$PATH";
+        export THIRD_PARTY="/tmp/dogen_deps/dogen_deps_clang_7_3_0_osx_amd64";
+    fi
+  - ${SCRIPTS_DIR}/build.${TRAVIS_OS_NAME}.sh ${BUILD_TYPE} ${JOBS} ${COMPILER} ${THIRD_PARTY} ${TARGET}
+
+notifications:
+  email:
+    recipients:
+      - marco.craveiro@gmail.com
+    on_success: change
+    on_failure: always
+
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/2fa0f80689a9ca56e699
+    on_success: always
+    on_failure: always
