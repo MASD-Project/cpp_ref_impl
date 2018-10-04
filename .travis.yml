@@ -73,7 +73,6 @@ script:
        export THIRD_PARTY="/tmp/dogen_deps/local";
     fi
   - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
-        # export TARGET="run_all_tests"; # FIXME: tests borked at present
         export PATH="/usr/local/opt/ccache/libexec:$PATH";
         export THIRD_PARTY="/tmp/dogen_deps/dogen_deps_clang_7_3_0_osx_amd64";
     fi
