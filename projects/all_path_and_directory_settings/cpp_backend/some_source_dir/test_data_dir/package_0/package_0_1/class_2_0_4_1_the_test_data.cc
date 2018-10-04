@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/all_path_and_directory_settings/test_data_dir/package_0/package_0_1/class_2_0_4_0_the_test_data.hh"
+#include "cpp_ref_impl/all_path_and_directory_settings/test_data_dir/package_0/package_0_1/class_2_0_4_0_the_test_data.hh"
 
 namespace {
 
@@ -28,8 +28,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace all_path_and_directory_settings {
 namespace package_0 {
 namespace package_0_1 {
@@ -60,4 +59,4 @@ class_2_generator::operator()() {
     return create(position_++);
 }
 
-} } } } }
+} } } }

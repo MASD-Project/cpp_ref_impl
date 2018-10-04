@@ -19,18 +19,17 @@
  *
  */
 #include <ostream>
-#include "dogen/test_models/all_path_and_directory_settings/io_dir/class_0_0_1_0_the_io.hh"
+#include "cpp_ref_impl/all_path_and_directory_settings/io_dir/class_0_0_1_0_the_io.hh"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace all_path_and_directory_settings {
 
 std::ostream& operator<<(std::ostream& s, const class_0& v) {
     s << " { "
-      << "\"__type__\": " << "\"dogen::test_models::all_path_and_directory_settings::class_0\"" << ", "
+      << "\"__type__\": " << "\"cpp_ref_impl::all_path_and_directory_settings::class_0\"" << ", "
       << "\"prop_0\": " << v.prop_0()
       << " }";
     return(s);
 }
 
-} } }
+} }

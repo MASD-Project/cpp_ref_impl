@@ -18,27 +18,26 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/all_path_and_directory_settings/hash_dir/package_0/class_1_0_0_0_the_hash.hh"
+#ifndef CPP_REF_IMPL_ALL_PATH_AND_DIRECTORY_SETTINGS_SERIALIZATION_DIR_CLASS_0_0_3_0_THE_SERIALIZATION_HH
+#define CPP_REF_IMPL_ALL_PATH_AND_DIRECTORY_SETTINGS_SERIALIZATION_DIR_CLASS_0_0_3_0_THE_SERIALIZATION_HH
 
-namespace {
+#if defined(_MSC_VER) && (_MSC_VER >= 1200)
+#pragma once
+#endif
 
-template <typename HashableType>
-inline void combine(std::size_t& seed, const HashableType& value) {
-    std::hash<HashableType> hasher;
-    seed ^= hasher(value) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
-}
+#include <boost/serialization/split_free.hpp>
+#include "cpp_ref_impl/all_path_and_directory_settings/types_dir/class_0_0_5_0_the_types.hh"
 
-}
+BOOST_SERIALIZATION_SPLIT_FREE(cpp_ref_impl::all_path_and_directory_settings::class_0)
+namespace boost {
+namespace serialization {
 
-namespace cpp_ref_impl {
-namespace all_path_and_directory_settings {
-namespace package_0 {
+template<typename Archive>
+void save(Archive& ar, const cpp_ref_impl::all_path_and_directory_settings::class_0& v, unsigned int version);
 
-std::size_t class_1_hasher::hash(const class_1& v) {
-    std::size_t seed(0);
+template<typename Archive>
+void load(Archive& ar, cpp_ref_impl::all_path_and_directory_settings::class_0& v, unsigned int version);
 
-    combine(seed, v.prop_0());
-    return seed;
-}
+} }
 
-} } }
+#endif

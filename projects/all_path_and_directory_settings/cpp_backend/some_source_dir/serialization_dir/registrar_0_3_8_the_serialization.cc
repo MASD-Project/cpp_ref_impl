@@ -26,10 +26,9 @@
 #include <boost/archive/binary_oarchive.hpp>
 #include <boost/archive/polymorphic_iarchive.hpp>
 #include <boost/archive/polymorphic_oarchive.hpp>
-#include "dogen/test_models/all_path_and_directory_settings/serialization_dir/registrar_0_3_7_the_serialization.hh"
+#include "cpp_ref_impl/all_path_and_directory_settings/serialization_dir/registrar_0_3_7_the_serialization.hh"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace all_path_and_directory_settings {
 
 template<typename Archive>
@@ -48,4 +47,4 @@ template void register_types(boost::archive::binary_iarchive&);
 template void register_types(boost::archive::xml_oarchive&);
 template void register_types(boost::archive::xml_iarchive&);
 
-} } }
+} }

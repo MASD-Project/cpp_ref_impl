@@ -18,27 +18,38 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/all_path_and_directory_settings/hash_dir/package_0/class_1_0_0_0_the_hash.hh"
+#ifndef CPP_REF_IMPL_ALL_PATH_AND_DIRECTORY_SETTINGS_TEST_DATA_DIR_PACKAGE_0_PACKAGE_0_1_CLASS_2_0_4_0_THE_TEST_DATA_HH
+#define CPP_REF_IMPL_ALL_PATH_AND_DIRECTORY_SETTINGS_TEST_DATA_DIR_PACKAGE_0_PACKAGE_0_1_CLASS_2_0_4_0_THE_TEST_DATA_HH
 
-namespace {
+#if defined(_MSC_VER) && (_MSC_VER >= 1200)
+#pragma once
+#endif
 
-template <typename HashableType>
-inline void combine(std::size_t& seed, const HashableType& value) {
-    std::hash<HashableType> hasher;
-    seed ^= hasher(value) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
-}
-
-}
+#include "cpp_ref_impl/all_path_and_directory_settings/types_dir/package_0/package_0_1/class_2_0_5_0_the_types.hh"
 
 namespace cpp_ref_impl {
 namespace all_path_and_directory_settings {
 namespace package_0 {
+namespace package_0_1 {
 
-std::size_t class_1_hasher::hash(const class_1& v) {
-    std::size_t seed(0);
+class class_2_generator {
+public:
+    class_2_generator();
 
-    combine(seed, v.prop_0());
-    return seed;
-}
+public:
+    typedef cpp_ref_impl::all_path_and_directory_settings::package_0::package_0_1::class_2 result_type;
 
-} } }
+public:
+    static void populate(const unsigned int position, result_type& v);
+    static result_type create(const unsigned int position);
+    result_type operator()();
+
+private:
+    unsigned int position_;
+public:
+    static result_type* create_ptr(const unsigned int position);
+};
+
+} } } }
+
+#endif

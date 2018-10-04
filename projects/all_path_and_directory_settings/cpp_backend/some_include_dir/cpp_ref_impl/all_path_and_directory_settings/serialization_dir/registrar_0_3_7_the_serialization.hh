@@ -18,27 +18,19 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/all_path_and_directory_settings/hash_dir/package_0/class_1_0_0_0_the_hash.hh"
+#ifndef CPP_REF_IMPL_ALL_PATH_AND_DIRECTORY_SETTINGS_SERIALIZATION_DIR_REGISTRAR_0_3_7_THE_SERIALIZATION_HH
+#define CPP_REF_IMPL_ALL_PATH_AND_DIRECTORY_SETTINGS_SERIALIZATION_DIR_REGISTRAR_0_3_7_THE_SERIALIZATION_HH
 
-namespace {
-
-template <typename HashableType>
-inline void combine(std::size_t& seed, const HashableType& value) {
-    std::hash<HashableType> hasher;
-    seed ^= hasher(value) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
-}
-
-}
+#if defined(_MSC_VER) && (_MSC_VER >= 1200)
+#pragma once
+#endif
 
 namespace cpp_ref_impl {
 namespace all_path_and_directory_settings {
-namespace package_0 {
 
-std::size_t class_1_hasher::hash(const class_1& v) {
-    std::size_t seed(0);
+template<typename Archive>
+void register_types(Archive& ar);
 
-    combine(seed, v.prop_0());
-    return seed;
-}
+} }
 
-} } }
+#endif

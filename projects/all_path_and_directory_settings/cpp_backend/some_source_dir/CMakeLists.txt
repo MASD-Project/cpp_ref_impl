@@ -30,6 +30,6 @@ set(files ${files} ${odb_files})
 
 add_library(all_path_and_directory_settings STATIC ${files})
 set_target_properties(all_path_and_directory_settings PROPERTIES
-    OUTPUT_NAME dogen.all_path_and_directory_settings)
+    OUTPUT_NAME cpp_ref_impl.all_path_and_directory_settings)
 
 install(TARGETS all_path_and_directory_settings ARCHIVE DESTINATION lib COMPONENT libraries)

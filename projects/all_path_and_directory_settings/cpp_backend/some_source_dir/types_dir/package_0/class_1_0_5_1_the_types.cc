@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "dogen/test_models/all_path_and_directory_settings/types_dir/package_0/class_1_0_5_0_the_types.hh"
+#include "cpp_ref_impl/all_path_and_directory_settings/types_dir/package_0/class_1_0_5_0_the_types.hh"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace all_path_and_directory_settings {
 namespace package_0 {
 
@@ -54,4 +53,4 @@ void class_1::prop_0(const int v) {
     prop_0_ = v;
 }
 
-} } } }
+} } }
