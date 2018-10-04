@@ -1,4 +1,4 @@
-#include "dogen/test_models/flat_directory_mode/hash/package1/first_class_hash.hpp"
+#include "cpp_ref_impl/flat_directory_mode/hash/package1/first_class_hash.hpp"
 
 namespace {
 
@@ -10,8 +10,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace flat_directory_mode {
 namespace package1 {
 
@@ -24,4 +23,4 @@ std::size_t first_class_hasher::hash(const first_class& v) {
     return seed;
 }
 
-} } } }
+} } }

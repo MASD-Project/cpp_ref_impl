@@ -1,7 +1,6 @@
-#include "dogen/test_models/flat_directory_mode/types/package1/first_class.hpp"
+#include "cpp_ref_impl/flat_directory_mode/types/package1/first_class.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace flat_directory_mode {
 namespace package1 {
 
@@ -48,4 +47,4 @@ void first_class::private_attribute(const int v) {
     private_attribute_ = v;
 }
 
-} } } }
+} } }

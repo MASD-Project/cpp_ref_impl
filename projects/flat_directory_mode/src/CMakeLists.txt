@@ -11,6 +11,6 @@ set(files ${files} ${odb_files})
 
 add_library(flat_directory_mode STATIC ${files})
 set_target_properties(flat_directory_mode PROPERTIES
-    OUTPUT_NAME dogen.flat_directory_mode)
+    OUTPUT_NAME cpp_ref_impl.flat_directory_mode)
 
 install(TARGETS flat_directory_mode ARCHIVE DESTINATION lib COMPONENT libraries)

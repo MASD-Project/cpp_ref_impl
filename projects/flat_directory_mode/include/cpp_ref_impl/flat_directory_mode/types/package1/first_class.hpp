@@ -1,15 +1,14 @@
-#ifndef DOGEN_TEST_MODELS_FLAT_DIRECTORY_MODE_TYPES_PACKAGE1_FIRST_CLASS_HPP
-#define DOGEN_TEST_MODELS_FLAT_DIRECTORY_MODE_TYPES_PACKAGE1_FIRST_CLASS_HPP
+#ifndef CPP_REF_IMPL_FLAT_DIRECTORY_MODE_TYPES_PACKAGE1_FIRST_CLASS_HPP
+#define CPP_REF_IMPL_FLAT_DIRECTORY_MODE_TYPES_PACKAGE1_FIRST_CLASS_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <algorithm>
-#include "dogen/test_models/flat_directory_mode/serialization/package1/first_class_fwd_ser.hpp"
+#include "cpp_ref_impl/flat_directory_mode/serialization/package1/first_class_fwd_ser.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace flat_directory_mode {
 namespace package1 {
 
@@ -29,10 +28,10 @@ public:
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const dogen::test_models::flat_directory_mode::package1::first_class& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::flat_directory_mode::package1::first_class& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, dogen::test_models::flat_directory_mode::package1::first_class& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::flat_directory_mode::package1::first_class& v, unsigned int version);
 
 public:
     int public_attribute() const;
@@ -56,14 +55,14 @@ private:
     int private_attribute_;
 };
 
-} } } }
+} } }
 
 namespace std {
 
 template<>
 inline void swap(
-    dogen::test_models::flat_directory_mode::package1::first_class& lhs,
-    dogen::test_models::flat_directory_mode::package1::first_class& rhs) {
+    cpp_ref_impl::flat_directory_mode::package1::first_class& lhs,
+    cpp_ref_impl::flat_directory_mode::package1::first_class& rhs) {
     lhs.swap(rhs);
 }
 

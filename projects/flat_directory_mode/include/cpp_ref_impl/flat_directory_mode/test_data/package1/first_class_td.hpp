@@ -1,14 +1,13 @@
-#ifndef DOGEN_TEST_MODELS_FLAT_DIRECTORY_MODE_TEST_DATA_PACKAGE1_FIRST_CLASS_TD_HPP
-#define DOGEN_TEST_MODELS_FLAT_DIRECTORY_MODE_TEST_DATA_PACKAGE1_FIRST_CLASS_TD_HPP
+#ifndef CPP_REF_IMPL_FLAT_DIRECTORY_MODE_TEST_DATA_PACKAGE1_FIRST_CLASS_TD_HPP
+#define CPP_REF_IMPL_FLAT_DIRECTORY_MODE_TEST_DATA_PACKAGE1_FIRST_CLASS_TD_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "dogen/test_models/flat_directory_mode/types/package1/first_class.hpp"
+#include "cpp_ref_impl/flat_directory_mode/types/package1/first_class.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace flat_directory_mode {
 namespace package1 {
 
@@ -17,7 +16,7 @@ public:
     first_class_generator();
 
 public:
-    typedef dogen::test_models::flat_directory_mode::package1::first_class result_type;
+    typedef cpp_ref_impl::flat_directory_mode::package1::first_class result_type;
 
 public:
     static void populate(const unsigned int position, result_type& v);
@@ -30,6 +29,6 @@ public:
     static result_type* create_ptr(const unsigned int position);
 };
 
-} } } }
+} } }
 
 #endif
