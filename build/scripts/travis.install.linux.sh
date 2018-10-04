@@ -21,9 +21,6 @@
 #
 # deps
 #
-# dropbox="https://www.dropbox.com/s/trikqhe5uw3orjk/dogen_deps_gcc_5.3_linux_amd64_v9.tar.bz2?dl=0"
-# version=9
-# package="dogen_deps_gcc_5.3_linux_amd64_v${version}.tar.bz2"
 dropbox="https://www.dropbox.com/s/lco0kn2wsjbmpjf/hedgr_deps_ubuntu_14.04_amd64_v1.tgz?dl=0"
 version=1
 package="hedgr_deps_ubuntu_14.04_amd64_v${version}.tgz"
@@ -42,16 +39,6 @@ ls ${extract_dir}/*
 #
 sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 sudo apt-get update -qq
-
-if [ "${WITH_CSHARP}" == "1" ]; then
-    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
-    echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list
-    sudo apt-get update -qq
-
-    sudo apt-get install mono-devel nuget
-    mono --version
-    xbuild /version
-fi
 
 #
 # clang
@@ -99,6 +86,3 @@ rm -rf ${cmake_output} /tmp/${cmake_name}
 # coverage
 #
 sudo pip install cpp-coveralls==0.3.12
-
-sudo apt-get clean
-echo "Cleaned cache."
