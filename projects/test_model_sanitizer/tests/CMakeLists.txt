@@ -61,7 +61,6 @@ target_link_libraries(${tests_name}
     std_model
     boost_model
     utility
-    ${LIBXML2_LIBRARIES}
     ${CMAKE_REQUIRED_LIBRARIES}
     ${Boost_LIBRARIES})
 
