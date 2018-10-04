@@ -18,24 +18,13 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef DOGEN_TEST_MODELS_ENABLE_FACET_SERIALIZATION_SERIALIZATION_PACKAGE1_FIRST_CLASS_FWD_SER_HPP
-#define DOGEN_TEST_MODELS_ENABLE_FACET_SERIALIZATION_SERIALIZATION_PACKAGE1_FIRST_CLASS_FWD_SER_HPP
+#ifndef CPP_REF_IMPL_ENABLE_FACET_SERIALIZATION_TYPES_ALL_HPP
+#define CPP_REF_IMPL_ENABLE_FACET_SERIALIZATION_TYPES_ALL_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "dogen/test_models/enable_facet_serialization/types/package1/first_class_fwd.hpp"
-
-namespace boost {
-namespace serialization {
-
-template<class Archive>
-void save(Archive& ar, const dogen::test_models::enable_facet_serialization::package1::first_class& v, unsigned int version);
-
-template<class Archive>
-void load(Archive& ar, dogen::test_models::enable_facet_serialization::package1::first_class& v, unsigned int version);
-
-} }
+#include "cpp_ref_impl/enable_facet_serialization/types/package1/first_class.hpp"
 
 #endif
