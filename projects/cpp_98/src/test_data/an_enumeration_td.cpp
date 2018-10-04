@@ -1,7 +1,6 @@
-#include "dogen/test_models/cpp_98/test_data/an_enumeration_td.hpp"
+#include "cpp_ref_impl/cpp_98/test_data/an_enumeration_td.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_98 {
 
 an_enumeration_generator::an_enumeration_generator() : position_(0) { }
@@ -22,4 +21,4 @@ an_enumeration_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }

@@ -1,4 +1,4 @@
-#include "dogen/test_models/cpp_98/test_data/package1/first_class_td.hpp"
+#include "cpp_ref_impl/cpp_98/test_data/package1/first_class_td.hpp"
 
 namespace {
 
@@ -8,8 +8,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_98 {
 namespace package1 {
 
@@ -40,4 +39,4 @@ first_class_generator::operator()() {
     return create(position_++);
 }
 
-} } } }
+} } }

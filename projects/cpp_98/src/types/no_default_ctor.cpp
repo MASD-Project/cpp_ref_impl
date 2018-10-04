@@ -1,7 +1,6 @@
-#include "dogen/test_models/cpp_98/types/no_default_ctor.hpp"
+#include "cpp_ref_impl/cpp_98/types/no_default_ctor.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_98 {
 
 no_default_ctor::no_default_ctor()
@@ -37,4 +36,4 @@ void no_default_ctor::prop_0(const std::string& v) {
     prop_0_ = v;
 }
 
-} } }
+} }

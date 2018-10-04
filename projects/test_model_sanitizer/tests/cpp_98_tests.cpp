@@ -21,10 +21,10 @@
 #include <boost/test/unit_test.hpp>
 #include "cpp_ref_impl/utility/test/logging.hpp"
 #include "cpp_ref_impl/utility/test/canned_tests.hpp"
-#include "dogen/test_models/cpp_98/types/all.hpp"
-#include "dogen/test_models/cpp_98/io/all_io.hpp"
-#include "dogen/test_models/cpp_98/serialization/all_ser.hpp"
-#include "dogen/test_models/cpp_98/test_data/all_td.hpp"
+#include "cpp_ref_impl/cpp_98/types/all.hpp"
+#include "cpp_ref_impl/cpp_98/io/all_io.hpp"
+#include "cpp_ref_impl/cpp_98/serialization/all_ser.hpp"
+#include "cpp_ref_impl/cpp_98/test_data/all_td.hpp"
 #include "dogen/test_models/test_model_sanitizer/register_types.hpp"
 
 namespace {
@@ -34,8 +34,8 @@ const std::string test_suite("cpp_98_tests");
 
 }
 
-using namespace dogen::test_models::cpp_98;
-using namespace dogen::test_models::cpp_98::package1;
+using namespace cpp_ref_impl::cpp_98;
+using namespace cpp_ref_impl::cpp_98::package1;
 using namespace cpp_ref_impl::utility::test;
 
 BOOST_AUTO_TEST_SUITE(cpp_98_tests)

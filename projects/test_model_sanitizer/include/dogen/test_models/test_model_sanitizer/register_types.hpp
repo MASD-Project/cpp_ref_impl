@@ -27,24 +27,25 @@
 
 #include "cpp_ref_impl/boost_model/serialization/registrar_ser.hpp"
 #include "cpp_ref_impl/compressed/serialization/registrar_ser.hpp"
+#include "cpp_ref_impl/cpp_98/serialization/registrar_ser.hpp"
 #include "dogen/test_models/disable_cmakelists/serialization/registrar_ser.hpp"
 #include "dogen/test_models/disable_facet_folders/registrar_ser.hpp"
 #include "dogen/test_models/std_model/serialization/registrar_ser.hpp"
 #include "dogen/test_models/cpp_model/serialization/registrar_ser.hpp"
-#include "dogen/test_models/cpp_98/serialization/registrar_ser.hpp"
 #include "dogen/test_models/enable_facet_serialization/serialization/registrar_ser.hpp"
 #include "dogen/test_models/two_layers_with_objects/serialization/registrar_ser.hpp"
 
 template<typename Archive> void register_types(Archive& ar) {
     cpp_ref_impl::boost_model::register_types<Archive>(ar);
     cpp_ref_impl::compressed::register_types<Archive>(ar);
+    cpp_ref_impl::cpp_98::register_types<Archive>(ar);
     dogen::test_models::disable_cmakelists::register_types<Archive>(ar);
     dogen::test_models::disable_facet_folders::register_types<Archive>(ar);
     dogen::test_models::std_model::register_types<Archive>(ar);
     dogen::test_models::enable_facet_serialization::register_types<Archive>(ar);
     dogen::test_models::two_layers_with_objects::register_types<Archive>(ar);
     dogen::test_models::cpp_model::register_types<Archive>(ar);
-    dogen::test_models::cpp_98::register_types<Archive>(ar);
+
 }
 
 #endif

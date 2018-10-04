@@ -1,10 +1,9 @@
 #include <string>
 #include <ostream>
 #include <stdexcept>
-#include "dogen/test_models/cpp_98/io/an_enumeration_io.hpp"
+#include "cpp_ref_impl/cpp_98/io/an_enumeration_io.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_98 {
 
 std::ostream& operator<<(std::ostream& s, const an_enumeration& v) {
@@ -28,4 +27,4 @@ std::ostream& operator<<(std::ostream& s, const an_enumeration& v) {
     return s;
 }
 
-} } }
+} }

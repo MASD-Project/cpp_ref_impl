@@ -1,7 +1,6 @@
-#include "dogen/test_models/cpp_98/test_data/no_properties_td.hpp"
+#include "cpp_ref_impl/cpp_98/test_data/no_properties_td.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace cpp_98 {
 
 no_properties_generator::no_properties_generator() : position_(0) { }
@@ -28,4 +27,4 @@ no_properties_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+} }
