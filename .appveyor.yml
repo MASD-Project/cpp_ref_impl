@@ -1,0 +1,42 @@
+version: 1.0.8.{build}
+
+branches:
+    only:
+        - master
+
+environment:
+  matrix:
+    - compiler: msvc
+
+configuration:
+  - Release
+  - Debug
+
+platform:
+  - x64
+
+clone_depth: 1
+
+install:
+  - ps: $project_dir="$pwd";
+  - ps: .\build\scripts\appveyor.install.windows.ps1
+
+build_script:
+  - ps: $build_type="$env:configuration";
+  - ps: $third_party="$env:temp\dogen_deps\dogen_deps_vc14_windows_amd64";
+  - ps: $target = "ALL_BUILD rat";
+  - ps: cd $project_dir
+  - ps: .\build\scripts\build.windows.ps1 -build_type $build_type -compiler $env:compiler -third_party $third_party -target $target
+
+notifications:
+  - provider: Webhook
+    url: https://webhooks.gitter.im/e/558942cd80151ffa05dd
+    on_build_success: true
+    on_build_failure: true
+    on_build_status_changed: true
+  - provider: Email
+    to:
+      - marco.craveiro@gmail.com
+    on_build_success: false
+    on_build_failure: true
+    on_build_status_changed: true
