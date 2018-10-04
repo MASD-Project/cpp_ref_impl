@@ -91,7 +91,6 @@ if ($build_type -eq "Release") {
 # CMake setup
 #
 $cmake_defines="-DCMAKE_BUILD_TYPE=${build_type}"
-$cmake_defines="${cmake_defines} -DWITH_LATEX=OFF"
 $cmake_defines="${cmake_defines} -DWITH_MINIMAL_PACKAGING=ON"
 
 #
