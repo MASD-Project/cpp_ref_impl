@@ -14,7 +14,7 @@ objective of a MASD reference implementation is to exercise all of the
 available functionality within Dogen and to unit test it to ensure it
 works as specified. The models used to generate the reference
 implementation are available under
-[Src/Models](https://github.com/MASD-Project/cpp_ref_impl/tree/master/Src/Models). As
+[projects/models](https://github.com/MASD-Project/cpp_ref_impl/tree/master/projects/models). As
 the objective of the reference implementation is to exercise Dogen as
 much as possible, the models are available in both Dia and JSON
 formats.
