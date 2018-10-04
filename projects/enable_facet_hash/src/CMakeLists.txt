@@ -24,6 +24,6 @@ file(GLOB_RECURSE files RELATIVE
 
 add_library(enable_facet_hash STATIC ${files})
 set_target_properties(enable_facet_hash PROPERTIES
-    OUTPUT_NAME dogen.enable_facet_hash)
+    OUTPUT_NAME cpp_ref_impl.enable_facet_hash)
 
 install(TARGETS enable_facet_hash ARCHIVE DESTINATION lib COMPONENT libraries)

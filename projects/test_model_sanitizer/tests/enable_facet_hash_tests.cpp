@@ -22,7 +22,7 @@
 #include "cpp_ref_impl/utility/io/vector_io.hpp"
 #include "cpp_ref_impl/utility/test/logging.hpp"
 #include "cpp_ref_impl/utility/test/canned_tests.hpp"
-#include "dogen/test_models/enable_facet_hash/types/all.hpp"
+#include "cpp_ref_impl/enable_facet_hash/types/all.hpp"
 
 namespace {
 
@@ -32,7 +32,7 @@ const std::string test_suite("enable_facet_hash_tests");
 
 class first_class_generator {
 public:
-    typedef dogen::test_models::enable_facet_hash::package1::first_class result_type;
+    typedef cpp_ref_impl::enable_facet_hash::package1::first_class result_type;
 
 public:
     result_type operator()() {
@@ -50,17 +50,16 @@ private:
 namespace std {
 
 template<>
-class hash<dogen::test_models::enable_facet_hash::package1::first_class> {
+class hash<cpp_ref_impl::enable_facet_hash::package1::first_class> {
 public:
-    size_t operator()(const dogen::test_models::enable_facet_hash::package1::first_class& v) const {
+    size_t operator()(const cpp_ref_impl::enable_facet_hash::package1::first_class& v) const {
         return v.public_attribute();
     }
 };
 
 }
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace enable_facet_hash {
 namespace package1 {
 
@@ -69,10 +68,10 @@ std::ostream& operator<<(std::ostream& o, const first_class& v) {
     return o;
 }
 
-} } } }
+} } }
 
-using namespace dogen::test_models::enable_facet_hash;
-using namespace dogen::test_models::enable_facet_hash::package1;
+using namespace cpp_ref_impl::enable_facet_hash;
+using namespace cpp_ref_impl::enable_facet_hash::package1;
 using namespace cpp_ref_impl::utility::test;
 
 BOOST_AUTO_TEST_SUITE(enable_facet_hash_tests)

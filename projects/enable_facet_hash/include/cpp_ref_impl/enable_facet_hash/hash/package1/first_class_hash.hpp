@@ -18,18 +18,17 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef DOGEN_TEST_MODELS_ENABLE_FACET_HASH_HASH_PACKAGE1_FIRST_CLASS_HASH_HPP
-#define DOGEN_TEST_MODELS_ENABLE_FACET_HASH_HASH_PACKAGE1_FIRST_CLASS_HASH_HPP
+#ifndef CPP_REF_IMPL_ENABLE_FACET_HASH_HASH_PACKAGE1_FIRST_CLASS_HASH_HPP
+#define CPP_REF_IMPL_ENABLE_FACET_HASH_HASH_PACKAGE1_FIRST_CLASS_HASH_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <functional>
-#include "dogen/test_models/enable_facet_hash/types/package1/first_class.hpp"
+#include "cpp_ref_impl/enable_facet_hash/types/package1/first_class.hpp"
 
-namespace dogen {
-namespace test_models {
+namespace cpp_ref_impl {
 namespace enable_facet_hash {
 namespace package1 {
 
@@ -38,15 +37,15 @@ public:
     static std::size_t hash(const first_class& v);
 };
 
-} } } }
+} } }
 
 namespace std {
 
 template<>
-struct hash<dogen::test_models::enable_facet_hash::package1::first_class> {
+struct hash<cpp_ref_impl::enable_facet_hash::package1::first_class> {
 public:
-    size_t operator()(const dogen::test_models::enable_facet_hash::package1::first_class& v) const {
-        return dogen::test_models::enable_facet_hash::package1::first_class_hasher::hash(v);
+    size_t operator()(const cpp_ref_impl::enable_facet_hash::package1::first_class& v) const {
+        return cpp_ref_impl::enable_facet_hash::package1::first_class_hasher::hash(v);
     }
 };
 
