@@ -74,6 +74,7 @@ find_package(Boost 1.61 REQUIRED COMPONENTS
     filesystem
     program_options
     unit_test_framework
+    regex
     )
 
 if (Boost_FOUND)
