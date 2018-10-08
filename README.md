@@ -90,7 +90,7 @@ cmake --build . --config Release --target ALL_BUILD
 
 If you are **not** using vcpkg, you can omit
 ```-DCMAKE_TOOLCHAIN_FILE```. However if the dependencies are not on
-the standard paths, you **must not* forget to set
+the standard paths, you **must not** forget to set
 ```CMAKE_INCLUDE_PATH``` and ```CMAKE_LIBRARY_PATH``` accordingly:
 
 ```
