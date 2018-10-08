@@ -90,19 +90,19 @@ cmake --build . --config Release --target ALL_BUILD
 
 If you are **not** using vcpkg, you can omit
 ```-DCMAKE_TOOLCHAIN_FILE```. However if the dependencies are not on
-the standard paths, you **must not*** forget to set
+the standard paths, you **must not* forget to set
 ```CMAKE_INCLUDE_PATH``` and ```CMAKE_LIBRARY_PATH``` accordingly:
 
 ```
 CMAKE_INCLUDE_PATH=/my/include/path CMAKE_LIBRARY_PATH=/my/lib/path cmake ../..
 ```
 
-# Running Tests
+## Running Tests
 
 If you'd like to run the project tests, execute the target
 ```run_all_tests``` or its abbreviation ```rat```.
 
-# Regenerating Models
+## Regenerating Models
 
 If you'd like to run Dogen to regenerate all models, you can do so by
 using the target ```knit_all``` or its abbreviation ```ka```. This is
