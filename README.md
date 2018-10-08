@@ -59,8 +59,8 @@ not targeting ORM support. Once you have all dependencies set up, you can then
 clone the repository and create the build directory:
 
 ```
-git clone git@github.com:MASD-Project/dogen.git
-cd dogen/build
+git clone https://github.com/MASD-Project/cpp_ref_impl.git
+cd cpp_ref_impl/build
 mkdir output
 cd output
 ```
@@ -93,8 +93,33 @@ If you are **not** using vcpkg, you can omit
 the standard paths, you **must not*** forget to set
 ```CMAKE_INCLUDE_PATH``` and ```CMAKE_LIBRARY_PATH``` accordingly:
 
-``` CMAKE_INCLUDE_PATH=/my/boost/include/path
-CMAKE_LIBRARY_PATH=/my/boost/lib/path cmake ../..  ```
+```
+CMAKE_INCLUDE_PATH=/my/include/path CMAKE_LIBRARY_PATH=/my/lib/path cmake ../..
+```
+
+# Running Tests
+
+If you'd like to run the project tests, execute the target
+```run_all_tests``` or its abbreviation ```rat```.
+
+# Regenerating Models
+
+If you'd like to run Dogen to regenerate all models, you can do so by
+using the target ```knit_all``` or its abbreviation ```ka```. This is
+useful, for example, to update the Reference Implementation to the
+latest version of Dogen, or just to see how Dogen works. However, note
+that Dogen must be on the path for the target to become available. If you
+installed Dogen via a package, it's probably already in the right
+location. If not, you need to tell CMake of its location by setting
+```CMAKE_PROGRAM_PATH```:
+
+```
+CMAKE_PROGRAM_PATH=/path/to/dogen/binary cmake ../..
+```
+
+After regeneration, you can then use ```git diff``` to inspect the
+differences produced by regeneration, if any. The build directory
+contains all of the logs, under the directory ```log```.
 
 # Reporting Problems
 
