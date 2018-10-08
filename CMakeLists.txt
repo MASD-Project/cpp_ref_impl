@@ -67,16 +67,12 @@ set(BOOST_ALL_DYN_LINK OFF)
 # these require patches.
 find_package(Boost 1.61 REQUIRED COMPONENTS
     system
-    chrono
     serialization
     date_time
-    thread
     log
     filesystem
     program_options
     unit_test_framework
-    regex
-    atomic
     )
 
 if (Boost_FOUND)
