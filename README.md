@@ -4,6 +4,10 @@
 [![Build Status](https://travis-ci.org/MASD-Project/cpp_ref_impl.svg?branch=master)](https://travis-ci.org/MASD-Project/cpp_ref_impl)
 [![Build Status](https://img.shields.io/appveyor/ci/mcraveiro/cpp-ref-impl.svg?label=windows)](https://ci.appveyor.com/project/mcraveiro/cpp-ref-impl)
 [![codecov](https://codecov.io/gh/MASD-Project/cpp_ref_impl/branch/master/graph/badge.svg)](https://codecov.io/gh/MASD-Project/cpp_ref_impl)
+[![C++](https://img.shields.io/badge/std-c++14-blue.svg)](https://en.wikipedia.org/wiki/C%2B%2B14)
+[![msvc2015](https://img.shields.io/badge/MSVC-2015-ff69b4.svg)](https://visualstudio.microsoft.com/vs/older-downloads/)
+[![gcc-6.3.0](https://img.shields.io/badge/GCC-6.3.0-ff69b4.svg)](https://www.gnu.org/software/gcc/gcc-6)
+[![clang-3.7](https://img.shields.io/badge/CLANG-3.7-ff69b4.svg)](http://releases.llvm.org/3.7.0/tools/clang/docs/ReleaseNotes.html)
 
 # MASD C++ Reference Implementation
 
