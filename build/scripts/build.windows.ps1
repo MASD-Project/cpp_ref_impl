@@ -82,7 +82,7 @@ $cmake_defines="-DCMAKE_BUILD_TYPE=${build_type}"
 $cmake_defines="${cmake_defines} -DWITH_MINIMAL_PACKAGING=ON"
 
 # Handle vcpkg.
-if (Test-Path env:CMAKE_TOOLCHAIN_FILE)) {
+if (Test-Path env:CMAKE_TOOLCHAIN_FILE) {
     $toolchain_file=$env:CMAKE_TOOLCHAIN_FILE
     $cmake_defines="${cmake_defines} -DCMAKE_TOOLCHAIN_FILE=${toolchain_file}"
     $cmake_defines="${cmake_defines} -DVCPKG_TARGET_TRIPLET=x64-windows-static"
