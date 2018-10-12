@@ -28,14 +28,22 @@ clone_depth: 1
 install:
   - ps: $project_dir="$pwd";
   - ps: .\build\scripts\appveyor.install.windows.ps1
-  - ps: $env:CMAKE_MAKE_PROGRAM = "c:\third_party\installs\Ninja\ninja.exe"
+  - ps: $env:Path += ";C:\third_party\installs\Ninja"
   - ps: $env:CMAKE_TOOLCHAIN_FILE = "c:\third_party\installs\vcpkg-export\scripts\buildsystems\vcpkg.cmake"
+
+before_build:
+  - if DEFINED MSVC_SETUP_PATH call "%MSVC_SETUP_PATH%" %MSVC_SETUP_ARG%
+  - cd %APPVEYOR_BUILD_FOLDER%
 
 build_script:
   - ps: $build_type="$env:configuration";
-  - ps: $target = "ALL_BUILD";
-  - ps: cd $project_dir
   - ps: $compiler = $env:compiler;
+  - ps: if ($compiler -eq "msvc") {
+            $target = "ALL_BUILD run_windows_green_tests";
+        } elseif ($compiler -eq "clang-cl") {
+            $target = "all run_windows_green_tests";
+        }
+  - ps: cd $project_dir
   - ps: .\build\scripts\build.windows.ps1 -build_type $build_type -compiler $compiler -target $target
 
 notifications:
