@@ -39,7 +39,10 @@ write-host "* Product directory: ${product_dir}";
 # Compiler
 #
 if ($compiler -eq "msvc") {
-    $generator="Visual Studio 14 2015 Win64";
+    $generator="Visual Studio 15 2017 Win64";
+    write-host "* compiler: ${compiler}";
+} elseif ($compiler -eq "clang-cl") {
+    $generator="Ninja";
     write-host "* compiler: ${compiler}";
 } else {
     write-host "* Unrecognised compiler: ${compiler}";
@@ -80,18 +83,21 @@ if (!(Test-Path -Path $build_type_dir)) {
     New-Item -ItemType directory -Path $build_type_dir | Out-Null
 }
 
-cd ${build_type_dir}
-if ($build_type -eq "Release") {
-    conan install ${product_dir} -s compiler="Visual Studio" -s compiler.version=14 -s arch=x86_64
-} elseif ($build_type -eq "Debug") {
-    conan install ${product_dir} -s compiler="Visual Studio" -s compiler.version=14 -s arch=x86_64 -s build_type=Debug -s compiler.runtime=MDd
-}
+Set-Location -Path ${build_type_dir} | Out-Null
+Write-Host "Build directory: ${build_type_dir}"
 
 #
 # CMake setup
 #
+$toolchain_file="c:\third_party\installs\vcpkg-export\scripts\buildsystems\vcpkg.cmake"
 $cmake_defines="-DCMAKE_BUILD_TYPE=${build_type}"
 $cmake_defines="${cmake_defines} -DWITH_MINIMAL_PACKAGING=ON"
+$cmake_defines="${cmake_defines} -DCMAKE_TOOLCHAIN_FILE=${toolchain_file}"
+$cmake_defines="${cmake_defines} -DVCPKG_TARGET_TRIPLET=x64-windows-static"
+if ($compiler -eq "clang-cl") {
+    $cmake_defines="${cmake_defines} -DCMAKE_C_COMPILER=clang-cl.exe"
+    $cmake_defines="${cmake_defines} -DCMAKE_CXX_COMPILER=clang-cl.exe"
+}
 
 #
 # Build

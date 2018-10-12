@@ -17,34 +17,53 @@
 # MA 02110-1301, USA.
 #
 
-$dropbox="https://www.dropbox.com/s/ntz6moq7kg9a8m7"
-$version=4
-$package="dogen_deps_vc14_windows_amd64_v${version}.7z"
-$input_location="${dropbox}/${package}"
-$output_location="$env:temp/${package}"
-$extract_dir="$env:temp/dogen_deps"
+#
+# Top-level directories used by install
+#
+$top_level_dir="C:\third_party"
+New-Item -ItemType directory -Path $top_level_dir | Out-Null
 
-build\scripts\wget.exe --quiet --no-check-certificate ${input_location} -O ${output_location}
+$installs_dir="$top_level_dir\installs"
+New-Item -ItemType directory -Path $installs_dir | Out-Null
 
-write-host "URL: ${input_location}"
-write-host "Dogen deps: ${output_location}"
-mkdir ${extract_dir} | Out-Null
-cd ${extract_dir}
-7z x ../${package} > $null;
+$downloads_dir="$top_level_dir\downloads"
+New-Item -ItemType directory -Path $downloads_dir | Out-Null
 
 #
-# conan
+# vcpkg dependencies. Important: when updating the package remember to
+# generate the dropbox link or else we will still point to the old
+# package.
 #
-write-host "Installing conan..."
-$env:PYTHON = "C:/Python27"
-$env:PATH += ";$env:PYTHON/Scripts"
-pip.exe install conan
-$env:PATH += ";C:\Program Files (x86)\Conan\conan"
-conan --version
-conan remote add bincrafters https://api.bintray.com/conan/bincrafters/public-conan
+$vcpkg_dropbox_link="s/5nfh9e0ifwbolmv"
+$vcpkg_folder="vcpkg-export-20181011-200956"
+$vcpkg_package="${vcpkg_folder}.zip"
+$vcpkg_input_location="https://www.dropbox.com/${vcpkg_dropbox_link}/${vcpkg_package}?dl=0"
+$vcpkg_downloads_location="${downloads_dir}\${vcpkg_package}"
+$vcpkg_installs_dir="$installs_dir"
+$vcpkg_final_folder="vcpkg-export"
+
+# Note: we don't seem to be able to download from dropbox using DownloadFile 
+# so we use wget instead.
+# appveyor DownloadFile $vcpkg_input_location -FileName $vcpkg_downloads_location
+build\scripts\wget.exe --quiet --no-check-certificate $vcpkg_input_location -O $vcpkg_downloads_location
+
+Write-Host "URL: $vcpkg_input_location"
+Write-Host "Download location: $vcpkg_downloads_location"
+Set-Location -Path $vcpkg_installs_dir | Out-Null
+7z x $vcpkg_downloads_location > $null;
+Rename-Item -Path $vcpkg_installs_dir/$vcpkg_folder -newName $vcpkg_installs_dir/$vcpkg_final_folder | Out-Null
 
 #
-# cmake
+# Ninja
 #
-cinst cmake --version 3.4.3
-cmake --version
+$ninja_package="ninja-win.zip"
+$ninja_input_location="https://github.com/ninja-build/ninja/releases/download/v1.6.0/${ninja_package}"
+$ninja_installs_dir="$installs_dir\Ninja"
+$ninja_downloads_location="${downloads_dir}/${ninja_package}"
+
+appveyor DownloadFile $ninja_input_location -FileName $ninja_downloads_location
+Write-Host "URL: $ninja_input_location"
+Write-Host "Download location: $ninja_downloads_location"
+New-Item -ItemType directory -Path $ninja_installs_dir | Out-Null
+Set-Location -Path $ninja_installs_dir | Out-Null
+7z x $ninja_downloads_location > $null
