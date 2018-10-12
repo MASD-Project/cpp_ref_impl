@@ -9,8 +9,8 @@ image:
 
 environment:
   matrix:
-    - compiler: msvc
     - compiler: clang-cl
+    - compiler: msvc
 
 matrix:
   allow_failures:
