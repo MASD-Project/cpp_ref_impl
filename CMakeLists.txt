@@ -129,17 +129,6 @@ if (WITH_COVERALLS)
 endif()
 
 #
-# setup git
-#
-find_program(GIT_COMMAND NAMES git)
-if (GIT_COMMAND)
-    message(STATUS "Found git (${GIT_COMMAND})...")
-else()
-    message(FATAL_ERROR "git not found.")
-endif()
-
-
-#
 # setup jq, for JSON validation.
 #
 find_program(JQ_COMMAND NAMES jq)
@@ -151,14 +140,6 @@ else()
     message(STATUS "jq not found, disabling JSON validation.")
     set(WITH_JSON_VALIDATION "off")
 endif()
-
-# hash of the top commit
-execute_process(COMMAND ${GIT_COMMAND} rev-list -n 1 HEAD
-    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-    ERROR_VARIABLE git_error
-    OUTPUT_VARIABLE CURRENT_GIT_COMMIT
-    RESULT_VARIABLE ret_var
-    OUTPUT_STRIP_TRAILING_WHITESPACE)
 
 #
 # useful vars
