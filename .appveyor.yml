@@ -4,6 +4,9 @@ branches:
     only:
         - master
 
+image:
+  - Visual Studio 2017
+
 environment:
   matrix:
     - compiler: msvc
