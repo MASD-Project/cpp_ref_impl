@@ -28,15 +28,15 @@ formats.
 
 # Building
 
-In order to build the C++ Reference Implementation you will need a C++
-toolchain. On Linux and OSX, you'll need a moderately recent
-compiler - such as [GCC 6](https://www.gnu.org/software/gcc/gcc-6) or
-[Clang 3.7](https://www.gnu.org/software/gcc/gcc-6) - and
+In order to build Dogen you will need a C++ toolchain. On Linux and
+OSX, you'll need a recent compiler with C++ 17 support, such as [GCC
+8](https://www.gnu.org/software/gcc/gcc-8) or [Clang
+7](https://img.shields.io/badge/CLANG-7-cyan.svg) - and
 [Ninja](https://ninja-build.org/manual.html) or [GNU
 Make](https://www.gnu.org/software/make/). On Windows you'll need
 [Visual Studio
-2015](https://visualstudio.microsoft.com/vs/older-downloads/) or
-later. Note though that we try to always use the most recent releases
+2017](https://visualstudio.microsoft.com/vs/whatsnew/). Older
+compilers may work, but we try to always use the most recent releases
 in MASD. So, if you can, please try using to those.
 
 MASD C++ Reference Implementation has the following additional
