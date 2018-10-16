@@ -1,14 +1,16 @@
 [![Licence](https://img.shields.io/badge/license-GPL_3-green.svg?dummy)](https://raw.githubusercontent.com/MASD-Project/cpp_ref_impl/master/LICENCE)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FMASD-Project%2Fcpp_ref_impl.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FMASD-Project%2Fcpp_ref_impl?ref=badge_shield)
 [![Status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat)](https://github.com/MASD-Project/cpp_ref_impl/pulse/monthly)
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/MASD-Project/Lobby)
 [![Build Status](https://travis-ci.org/MASD-Project/cpp_ref_impl.svg?branch=master)](https://travis-ci.org/MASD-Project/cpp_ref_impl)
 [![Build Status](https://img.shields.io/appveyor/ci/mcraveiro/cpp-ref-impl.svg?label=windows)](https://ci.appveyor.com/project/mcraveiro/cpp-ref-impl)
+[![Coverage Status](https://coveralls.io/repos/github/MASD-Project/cpp_ref_impl/badge.svg?branch=master)](https://coveralls.io/github/MASD-Project/cpp_ref_impl?branch=master)
 [![codecov](https://codecov.io/gh/MASD-Project/cpp_ref_impl/branch/master/graph/badge.svg)](https://codecov.io/gh/MASD-Project/cpp_ref_impl)
-[![C++](https://img.shields.io/badge/std-c++14-blue.svg)](https://en.wikipedia.org/wiki/C%2B%2B14)
-[![msvc2015](https://img.shields.io/badge/MSVC-2015-ff69b4.svg)](https://visualstudio.microsoft.com/vs/older-downloads/)
-[![gcc-6.3.0](https://img.shields.io/badge/GCC-6.3.0-ff69b4.svg)](https://www.gnu.org/software/gcc/gcc-6)
-[![clang-3.7](https://img.shields.io/badge/CLANG-3.7-ff69b4.svg)](http://releases.llvm.org/3.7.0/tools/clang/docs/ReleaseNotes.html)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FMASD-Project%2Fcpp_ref_impl.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FMASD-Project%2Fcpp_ref_impl?ref=badge_shield)
+[![Language](https://img.shields.io/badge/Language-C++-cyan.svg)](https://www.openhub.net/p/dogen/analyses/latest/languages_summary)
+[![C++](https://img.shields.io/badge/std-C++17-cyan.svg)](https://en.wikipedia.org/wiki/C%2B%2B17)
+[![gcc-8](https://img.shields.io/badge/GCC-8-cyan.svg)](https://www.gnu.org/software/gcc/gcc-8)
+[![clang-7](https://img.shields.io/badge/CLANG-7-cyan.svg)](http://releases.llvm.org/7.0.0/tools/clang/docs/ReleaseNotes.html)
+[![msvc2017](https://img.shields.io/badge/MSVC-2017-cyan.svg)](https://visualstudio.microsoft.com/vs/whatsnew/)
 
 # MASD C++ Reference Implementation
 
@@ -35,13 +37,14 @@ Make](https://www.gnu.org/software/make/). On Windows you'll need
 [Visual Studio
 2015](https://visualstudio.microsoft.com/vs/older-downloads/) or
 later. Note though that we try to always use the most recent releases
-with Dogen so, if you can, stick to those.
+in MASD. So, if you can, please try using to those.
 
-Dogen has the following additional dependencies, across all operative systems:
+MASD C++ Reference Implementation has the following additional
+dependencies, across all operative systems:
 
 | Name   | Type      | Version                | Description                             |
 |--------|-----------|------------------------|-----------------------------------------|
-| [CMake](https://cmake.org/)  | Mandatory | 3.3 or later.  | Required to generate the build files.   |
+| [CMake](https://cmake.org/)  | Mandatory | 3.12 or later.  | Required to generate the build files.Earlier versions may also work.  |
 | [Boost](https://boost.org)  | Mandatory | 1.61 or later. | Earlier versions may also work, but patches are required. **Very Important**: We link statically against Boost at present, so be sure to build and install the static libraries.|
 | [LibXml2](http://xmlsoft.org/) | Mandatory | 2.9.4 | Earlier versions may work but haven't been tested.|
 | [ODB](https://www.codesynthesis.com/products/odb/) | Optional | 2.4.0 | Required to build the ORM model. |
@@ -58,11 +61,28 @@ then run:
 ```
 ./vcpkg install libxml2 boost-system boost-serialization boost-date-time boost-log boost-filesystem boost-program-options boost-test libodb libodb-pgsql
 ```
-Warning: the default vcpkg triplet on windows [is
-32-bit](https://github.com/Microsoft/vcpkg/issues/1254). Also, note
-that you can skip the ODB libs (e.g. ```libodb libodb-pgsql```) if you
-are not targeting ORM support. Once you have all dependencies set up,
-you can then clone the repository and create the build directory:
+
+---
+**Notes**
+
+
+- The default vcpkg triplet on windows [is 32-bit
+dynamic](https://github.com/Microsoft/vcpkg/issues/1254) whereas we
+build with ```--triplet x64-windows-static```. If you are experiencing
+[weird and wonderful build
+errors](https://github.com/Microsoft/vcpkg/issues/4447), check your
+triplet.
+- If you are on OSX, you probably should rely on the system's LibXML2
+(e.g. remove it from the vpkg list above) or else you may see [some
+interesting linking
+errors](https://github.com/Microsoft/vcpkg/issues/4476) related to ```iconv```.
+- You can skip the ODB libs (e.g. ```libodb libodb-pgsql```) if you
+are not targeting ORM support.
+
+---
+
+Once you have all dependencies set up, you can then clone the
+repository and create the build directory:
 
 ```
 git clone https://github.com/MASD-Project/cpp_ref_impl.git
@@ -94,14 +114,19 @@ cmake -DCMAKE_TOOLCHAIN_FILE=${PATH_TO_VCPKG_DIR}/vcpkg/scripts/buildsystems/vcp
 cmake --build . --config Release --target ALL_BUILD
 ```
 
-If you are **not** using vcpkg, you can omit
+---
+**Notes**
+
+On all platforms, if you are **not** using vcpkg, you can omit
 ```-DCMAKE_TOOLCHAIN_FILE```. However if the dependencies are not on
-the standard paths, you **must not** forget to set
-```CMAKE_INCLUDE_PATH``` and ```CMAKE_LIBRARY_PATH``` accordingly:
+the standard paths, you must then set ```CMAKE_INCLUDE_PATH``` and ```CMAKE_LIBRARY_PATH```
+accordingly, e.g.:
 
 ```
-CMAKE_INCLUDE_PATH=/my/include/path CMAKE_LIBRARY_PATH=/my/lib/path cmake ../..
+CMAKE_INCLUDE_PATH=/my/boost/include/path CMAKE_LIBRARY_PATH=/my/boost/lib/path cmake ../..
 ```
+
+---
 
 ## Running Tests
 
