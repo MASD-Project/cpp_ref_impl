@@ -55,15 +55,15 @@ echo "* Product directory: ${product_dir}"
 compiler="$1"
 shift
 if [[ "x${compiler}" = "x" ]]; then
-    compiler="gcc";
+    compiler="gcc8";
     echo "* Compiler: ${compiler} (default)"
     export CC=gcc-8
     export CXX=g++-8
-elif [ "${compiler}" = "gcc" ]; then
+elif [ "${compiler}" = "gcc8" ]; then
     echo "* Compiler: ${compiler}"
     export CC=gcc-8
     export CXX=g++-8
-elif [ "${compiler}" = "clang" ]; then
+elif [ "${compiler}" = "clang7" ]; then
     echo "* Compiler: ${compiler}"
     export CC=clang-7
     export CXX=clang++-7
@@ -74,20 +74,6 @@ elif [ "${compiler}" = "clang6" ]; then
 else
     echo "* Unrecognised compiler: ${compiler}"
     exit
-fi
-
-#
-# Additional directory for includes and libs.
-#
-third_party="$1"
-shift
-if [[ "x$third_party" = "x" ]]; then
-    third_party="";
-    echo "* Third party: NOT PROVIDED"
-else
-    echo "* Third party: ${third_party}"
-    export CMAKE_INCLUDE_PATH=${third_party}/include
-    export CMAKE_LIBRARY_PATH=${third_party}/lib
 fi
 
 #
@@ -139,7 +125,7 @@ fi
 #
 # Build
 #
-echo "* Starting build."
+echo "* Starting C++ build."
 cd ${build_type_dir}
 cmake ${product_dir} -G Ninja ${cmake_defines} && ninja -j${number_of_jobs} ${target}
 if [ $? -ne 0 ]; then
