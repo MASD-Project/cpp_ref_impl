@@ -8,6 +8,7 @@
 [![msvc2015](https://img.shields.io/badge/MSVC-2015-ff69b4.svg)](https://visualstudio.microsoft.com/vs/older-downloads/)
 [![gcc-6.3.0](https://img.shields.io/badge/GCC-6.3.0-ff69b4.svg)](https://www.gnu.org/software/gcc/gcc-6)
 [![clang-3.7](https://img.shields.io/badge/CLANG-3.7-ff69b4.svg)](http://releases.llvm.org/3.7.0/tools/clang/docs/ReleaseNotes.html)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FMASD-Project%2Fcpp_ref_impl.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FMASD-Project%2Fcpp_ref_impl?ref=badge_shield)
 
 # MASD C++ Reference Implementation
 
@@ -138,3 +139,7 @@ better. Examples of issues with the generated code:
 
 Issues can be submitted using [github
 Issues](https://github.com/MASD-Project/cpp_ref_impl/issues).
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FMASD-Project%2Fcpp_ref_impl.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FMASD-Project%2Fcpp_ref_impl?ref=badge_large)
