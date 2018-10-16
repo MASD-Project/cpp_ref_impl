@@ -1,8 +1,4 @@
-version: 1.0.9.{build}
-
-branches:
-    only:
-        - master
+version: 1.0.10.{build}
 
 image:
   - Visual Studio 2017
@@ -10,7 +6,13 @@ image:
 environment:
   matrix:
     - compiler: clang-cl
+      generator: Ninja
+      build_group: Experimental
+      msvc_setup_path: C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat
+      msvc_setup_arg: x86_amd64
     - compiler: msvc
+      generator: Visual Studio 15 2017 Win64
+      build_group: Continuous
 
 matrix:
   allow_failures:
@@ -30,21 +32,16 @@ install:
   - ps: .\build\scripts\appveyor.install.windows.ps1
   - ps: $env:Path += ";C:\third_party\installs\Ninja"
   - ps: $env:CMAKE_TOOLCHAIN_FILE = "c:\third_party\installs\vcpkg-export\scripts\buildsystems\vcpkg.cmake"
+  - ps: $env:VCPKG_TARGET_TRIPLET = "x64-windows-static"
 
 before_build:
-  - if DEFINED MSVC_SETUP_PATH call "%MSVC_SETUP_PATH%" %MSVC_SETUP_ARG%
+  - if DEFINED msvc_setup_path call "%msvc_setup_path%" %msvc_setup_arg%
   - cd %APPVEYOR_BUILD_FOLDER%
 
 build_script:
-  - ps: $build_type="$env:configuration";
-  - ps: $compiler = $env:compiler;
-  - ps: if ($compiler -eq "msvc") {
-            $target = "ALL_BUILD run_windows_green_tests";
-        } elseif ($compiler -eq "clang-cl") {
-            $target = "all run_windows_green_tests";
-        }
+  - ps: $env:BUILD_PROVIDER = "appveyor"
   - ps: cd $project_dir
-  - ps: .\build\scripts\build.windows.ps1 -build_type $build_type -compiler $compiler -target $target
+  - ps: ctest --extra-verbose --script ".ctest.cmake,configuration_type=$env:configuration,generator=$env:generator,compiler=$env:compiler,build_group=$env:build_group";
 
 notifications:
   - provider: Webhook

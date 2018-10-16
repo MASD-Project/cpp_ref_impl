@@ -33,13 +33,18 @@ vcpkg_final_folder="vcpkg-export"
 wget --no-check-certificate ${vcpkg_input_location} -O ${vcpkg_output_location}
 unzip -q ${vcpkg_output_location} -d ${vcpkg_extract_dir}
 mv ${vcpkg_extract_dir}/${vcpkg_folder} ${vcpkg_extract_dir}/${vcpkg_final_folder}
-ls ${vcpkg_extract_dir}/${vcpkg_final_folder}
+echo "vcpkg version: ${vcpkg_folder}"
 
 #
 # common repos
 #
 sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 sudo apt-get update -qq
+
+#
+# kcov deps
+#
+sudo apt-get install -qq libcurl4-openssl-dev zlib1g-dev libdw-dev libiberty-dev
 
 #
 # clang
@@ -89,5 +94,17 @@ which cmake
 cmake --version
 rm -rf ${cmake_output} /tmp/${cmake_name}
 
+#
+# kcov
+#
+kcov_input_location="https://www.dropbox.com/s/66rs4s4606a9iut/kcov?dl=0"
+kcov_output_location="/tmp/kcov"
+wget --no-check-certificate ${kcov_input_location} -O ${kcov_output_location}
+chmod +x ${kcov_output_location}
+${kcov_output_location} --version
+
+#
+# Clean cache
+#
 sudo apt-get clean
 echo "Cleaned cache."

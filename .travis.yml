@@ -33,29 +33,30 @@ matrix:
     - os: osx
       compiler: clang
       osx_image: xcode10
-      env: BUILD_TYPE=Release COMPILER="clang"
+      env: configuration=Release compiler="clang" generator="Unix Makefiles" build_group="Continuous"
     - os: osx
       compiler: clang
       osx_image: xcode10
-      env: BUILD_TYPE=Debug COMPILER="clang"
+      env: configuration=Debug compiler="clang" generator="Unix Makefiles" build_group="Continuous"
     #
     # Linux GCC
     #
     - os: linux
       compiler: gcc
-      env: BUILD_TYPE=Release COMPILER="gcc"
+      env: deploy="1" configuration=Release compiler="gcc8" generator="Ninja" build_group="Continuous"
     - os: linux
       compiler: gcc
-      env: BUILD_TYPE=Debug COMPILER="gcc"
+      env: configuration=Debug compiler="gcc8" generator="Ninja" build_group="Continuous"
     #
     # Linux Clang
     #
     - os: linux
       compiler: clang
-      env: BUILD_TYPE=Release COMPILER="clang"
+      env: configuration=Release compiler="clang7" generator="Ninja" build_group="Continuous"
     - os: linux
       compiler: clang
       env: BUILD_TYPE=Debug COMPILER="clang"
+      env: coverage=1 configuration=Debug compiler="clang7" generator="Ninja" build_group="Continuous"
 
 addons:
   apt:
@@ -68,16 +69,21 @@ install:
 
 script:
   - JOBS=2
-  - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then
-       export CMAKE_TOOLCHAIN_FILE="/tmp/vcpkg-export/scripts/buildsystems/vcpkg.cmake"
-       export TARGET="run_all_tests";
-       export THIRD_PARTY="/tmp/dogen_deps/local";
-    fi
+  - export BUILD_PROVIDER=travis
+  - export CMAKE_TOOLCHAIN_FILE="/tmp/vcpkg-export/scripts/buildsystems/vcpkg.cmake";
   - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
         export PATH="/usr/local/opt/ccache/libexec:$PATH";
-        export THIRD_PARTY="/tmp/dogen_deps/dogen_deps_clang_7_3_0_osx_amd64";
     fi
-  - ${SCRIPTS_DIR}/build.${TRAVIS_OS_NAME}.sh ${BUILD_TYPE} ${JOBS} ${COMPILER} ${THIRD_PARTY} ${TARGET}
+  - ctest --extra-verbose --script ".ctest.cmake,configuration_type=${configuration},generator=${generator},compiler=${compiler},number_of_jobs=${JOBS},build_group=${build_group}";
+
+after_success:
+  - if [[ "x${coverage}" == "x1" ]]; then
+       tests="`'ls' ${TRAVIS_BUILD_DIR}/build/output/${compiler}/${configuration}/stage/bin/*.tests`";
+       for test in ${tests}; do
+           /tmp/kcov --exclude-pattern=/tests/ --include-pattern=/projects/ --coveralls-id=${TRAVIS_JOB_ID} ${TRAVIS_BUILD_DIR}/build/output/${compiler}/${configuration}/stage/coverage ${test};
+       done;
+       bash <(curl -s https://codecov.io/bash) -s ${TRAVIS_BUILD_DIR}/build/output/${compiler}/${configuration}/stage/coverage;
+    fi
 
 notifications:
   email:
