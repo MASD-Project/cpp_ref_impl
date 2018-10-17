@@ -165,7 +165,3 @@ better. Examples of issues with the generated code:
 
 Issues can be submitted using [github
 Issues](https://github.com/MASD-Project/cpp_ref_impl/issues).
-
-
-## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FMASD-Project%2Fcpp_ref_impl.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FMASD-Project%2Fcpp_ref_impl?ref=badge_large)
