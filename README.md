@@ -60,7 +60,7 @@ documentation](https://github.com/Microsoft/vcpkg/blob/master/README.md),
 then run:
 
 ```
-./vcpkg install libxml2 boost-system boost-serialization boost-date-time boost-log boost-filesystem boost-program-options boost-test libodb libodb-pgsql
+./vcpkg install libxml2 boost-system boost-serialization boost-date-time boost-log boost-filesystem boost-program-options boost-test boost-di libodb libodb-pgsql
 ```
 
 ---
@@ -77,6 +77,11 @@ triplet.
 (e.g. remove it from the vpkg list above) or else you may see [some
 interesting linking
 errors](https://github.com/Microsoft/vcpkg/issues/4476) related to ```iconv```.
+- Remember that the recommended compiler for OSX is Homebrew's GCC. If
+  you do decide to use Clang, beware that for some reason [boost does
+  not
+  default](https://github.com/Microsoft/vcpkg/issues/4476#issuecomment-430175834)
+  to C++ 14. You'll need to add ```cxxstd=14```.
 - You can skip the ODB libs (e.g. ```libodb libodb-pgsql```) if you
 are not targeting ORM support.
 
