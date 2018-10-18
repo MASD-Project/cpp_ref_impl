@@ -23,8 +23,8 @@
 # generate the dropbox link or else we will still point to the old
 # package.
 #
-vcpkg_dropbox_link="s/x774lnajro2jltx"
-vcpkg_folder="vcpkg-export-20181011-135828"
+vcpkg_dropbox_link="s/8uq5obv9bcbr7u4"
+vcpkg_folder="vcpkg-export-20181018-151503"
 vcpkg_package="${vcpkg_folder}.zip"
 vcpkg_input_location="https://www.dropbox.com/${vcpkg_dropbox_link}/${vcpkg_package}?dl=0"
 vcpkg_output_location="/tmp/${vcpkg_package}"
