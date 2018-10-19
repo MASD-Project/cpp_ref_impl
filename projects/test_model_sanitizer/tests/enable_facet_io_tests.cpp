@@ -38,7 +38,7 @@ public:
 public:
     result_type operator()() {
         result_type r;
-        r.public_attribute(15 + pos_++);
+        r.public_attribute(static_cast<int>(15 + pos_++));
         return r;
     }
 

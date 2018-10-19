@@ -37,7 +37,7 @@ public:
 public:
     result_type operator()() {
         result_type r;
-        r.public_attribute(15 + pos_++);
+        r.public_attribute(static_cast<int>(15 + pos_++));
         return r;
     }
 
@@ -53,7 +53,7 @@ template<>
 class hash<cpp_ref_impl::enable_facet_hash::package1::first_class> {
 public:
     size_t operator()(const cpp_ref_impl::enable_facet_hash::package1::first_class& v) const {
-        return v.public_attribute();
+        return static_cast<size_t>(v.public_attribute());
     }
 };
 
