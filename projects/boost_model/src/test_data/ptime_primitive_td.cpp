@@ -24,7 +24,7 @@ namespace {
 
 boost::posix_time::ptime
 create_boost_posix_time_ptime(const unsigned int position) {
-    unsigned int day(1 + (position % 27));
+    const auto day(static_cast<unsigned short>(1 + (position % 27)));
     using boost::gregorian::date;
     using boost::posix_time::ptime;
     using boost::posix_time::time_duration;
