@@ -23,7 +23,8 @@
 namespace {
 
 std::int8_t create_std_int8_t(const unsigned int position) {
-    return static_cast<std::int8_t>(((position % 95) + 32) == 34) ? 35 : ((position % 95) + 32);
+    const auto num(((position % 95) + 32) == 34 ? 35 : ((position % 95) + 32));
+    return static_cast<std::int8_t>(num);
 }
 
 std::int16_t create_std_int16_t(const unsigned int position) {
@@ -39,7 +40,8 @@ std::int64_t create_std_int64_t(const unsigned int position) {
 }
 
 std::uint8_t create_std_uint8_t(const unsigned int position) {
-    return static_cast<std::uint8_t>(((position % 95) + 32) == 34) ? 35 : ((position % 95) + 32);
+    const auto num(((position % 95) + 32) == 34 ? 35 : ((position % 95) + 32));
+    return static_cast<std::uint8_t>(num);
 }
 
 std::uint16_t create_std_uint16_t(const unsigned int position) {

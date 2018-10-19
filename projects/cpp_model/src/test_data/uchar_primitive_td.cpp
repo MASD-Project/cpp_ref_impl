@@ -23,7 +23,8 @@
 namespace {
 
 unsigned char create_unsigned_char(const unsigned int position) {
-    return static_cast<unsigned char>(((position % 95) + 32) == 34) ? 35 : ((position % 95) + 32);
+    const auto num(((position % 95) + 32) == 34 ? 35 : ((position % 95) + 32));
+    return static_cast<unsigned char>(num);
 }
 
 }

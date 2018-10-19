@@ -23,15 +23,18 @@
 namespace {
 
 char create_char(const unsigned int position) {
-    return static_cast<char>(((position % 95) + 32) == 34) ? 35 : ((position % 95) + 32);
+    const auto num(((position % 95) + 32) == 34 ? 35 : ((position % 95) + 32));
+    return static_cast<char>(num);
 }
 
 unsigned char create_unsigned_char(const unsigned int position) {
-    return static_cast<unsigned char>(((position % 95) + 32) == 34) ? 35 : ((position % 95) + 32);
+    const auto num(((position % 95) + 32) == 34 ? 35 : ((position % 95) + 32));
+    return static_cast<unsigned char>(num);
 }
 
 std::int8_t create_std_int8_t(const unsigned int position) {
-    return static_cast<std::int8_t>(((position % 95) + 32) == 34) ? 35 : ((position % 95) + 32);
+    const auto num(((position % 95) + 32) == 34 ? 35 : ((position % 95) + 32));
+    return static_cast<std::int8_t>(num);
 }
 
 std::int16_t create_std_int16_t(const unsigned int position) {

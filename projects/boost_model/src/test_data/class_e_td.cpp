@@ -78,7 +78,8 @@ std::string create_std_string(const unsigned int position) {
 }
 
 char create_char(const unsigned int position) {
-    return static_cast<char>(((position % 95) + 32) == 34) ? 35 : ((position % 95) + 32);
+    const auto num(((position % 95) + 32) == 34 ? 35 : ((position % 95) + 32));
+    return static_cast<char>(num);
 }
 
 boost::variant<int, std::string, char>
