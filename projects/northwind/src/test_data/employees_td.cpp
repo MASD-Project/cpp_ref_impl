@@ -37,7 +37,7 @@ std::string create_std_string(const unsigned int position) {
 
 boost::gregorian::date
 create_boost_gregorian_date(const unsigned int position) {
-    unsigned int day(1 + (position % 27));
+    const auto day(static_cast<unsigned short>(1 + (position % 27)));
     boost::gregorian::date r(2002, 2, day);
     return r;
 }

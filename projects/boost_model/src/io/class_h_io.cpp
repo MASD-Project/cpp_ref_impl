@@ -19,7 +19,6 @@
  *
  */
 #include <ostream>
-#include <sstream>
 #include <boost/algorithm/string.hpp>
 #include <boost/property_tree/json_parser.hpp>
 #include "cpp_ref_impl/boost_model/io/class_h_io.hpp"
