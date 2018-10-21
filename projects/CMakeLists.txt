@@ -178,6 +178,11 @@ elseif(CMAKE_CXX_COMPILER_ID MATCHES "MSVC" OR
             "${CMAKE_SHARED_LINKER_FLAGS_RELEASE} /NODEFAULTLIB:libcmtd")
         set(CMAKE_EXE_LINKER_FLAGS_RELEASE
             "${CMAKE_EXE_LINKER_FLAGS_RELEASE} /NODEFAULTLIB:libcmtd")
+    elseif(UNIX AND NOT APPLE)
+        set(CMAKE_EXE_LINKER_FLAGS
+            "${CMAKE_EXE_LINKER_FLAGS} -Wl,-fuse-ld=gold")
+        set(CMAKE_SHARED_LINKER_FLAGS
+            "${CMAKE_SHARED_LINKER_FLAGS} -Wl,-fuse-ld=gold")
     endif()
 
     set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG}" CACHE STRING "MSVC C Debug MT flags " FORCE)
