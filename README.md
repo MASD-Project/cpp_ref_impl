@@ -2,16 +2,17 @@
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FMASD-Project%2Fcpp_ref_impl.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FMASD-Project%2Fcpp_ref_impl?ref=badge_shield)
 [![Status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat)](https://github.com/MASD-Project/cpp_ref_impl/pulse/monthly)
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/MASD-Project/Lobby)
+[![Issues](https://img.shields.io/github/issues/MASD-Project/dogen.svg)](https://github.com/MASD-Project/cpp_ref_impl/issues)
+[![Build Dashboard](https://img.shields.io/badge/cdash-dashboard-00cc00.svg)](https://my.cdash.org/index.php?project=MASD+Project+-+C%2B%2B+Reference+Implementation)
 [![Build Status](https://travis-ci.org/MASD-Project/cpp_ref_impl.svg?branch=master)](https://travis-ci.org/MASD-Project/cpp_ref_impl)
 [![Build Status](https://img.shields.io/appveyor/ci/mcraveiro/cpp-ref-impl.svg?label=windows)](https://ci.appveyor.com/project/mcraveiro/cpp-ref-impl)
 [![Coverage Status](https://coveralls.io/repos/github/MASD-Project/cpp_ref_impl/badge.svg?branch=master)](https://coveralls.io/github/MASD-Project/cpp_ref_impl?branch=master)
 [![codecov](https://codecov.io/gh/MASD-Project/cpp_ref_impl/branch/master/graph/badge.svg)](https://codecov.io/gh/MASD-Project/cpp_ref_impl)
-[![Build Dashboard](https://img.shields.io/badge/cdash-dashboard-blue.svg)](https://my.cdash.org/index.php?project=MASD+Project+-+C%2B%2B+Reference+Implementation)
-[![Language](https://img.shields.io/badge/Language-C++-cyan.svg)](https://www.openhub.net/p/dogen/analyses/latest/languages_summary)
-[![C++](https://img.shields.io/badge/std-C++17-cyan.svg)](https://en.wikipedia.org/wiki/C%2B%2B17)
-[![gcc-8](https://img.shields.io/badge/GCC-8-cyan.svg)](https://www.gnu.org/software/gcc/gcc-8)
-[![clang-7](https://img.shields.io/badge/CLANG-7-cyan.svg)](http://releases.llvm.org/7.0.0/tools/clang/docs/ReleaseNotes.html)
-[![msvc2017](https://img.shields.io/badge/MSVC-2017-cyan.svg)](https://visualstudio.microsoft.com/vs/whatsnew/)
+[![Language](https://img.shields.io/badge/Language-C++-blue.svg)](https://www.openhub.net/p/dogen/analyses/latest/languages_summary)
+[![C++](https://img.shields.io/badge/std-C++17-blue.svg)](https://en.wikipedia.org/wiki/C%2B%2B17)
+[![gcc-8](https://img.shields.io/badge/GCC-8-blue.svg)](https://www.gnu.org/software/gcc/gcc-8)
+[![clang-7](https://img.shields.io/badge/CLANG-7-blue.svg)](http://releases.llvm.org/7.0.0/tools/clang/docs/ReleaseNotes.html)
+[![msvc2017](https://img.shields.io/badge/MSVC-2017-blue.svg)](https://visualstudio.microsoft.com/vs/whatsnew/)
 
 # MASD C++ Reference Implementation
 
@@ -49,7 +50,6 @@ dependencies, across all operative systems:
 | [Boost](https://boost.org)  | Mandatory | 1.61 or later. | Earlier versions may also work, but patches are required. **Very Important**: We link statically against Boost at present, so be sure to build and install the static libraries.|
 | [LibXml2](http://xmlsoft.org/) | Mandatory | 2.9.4 | Earlier versions may work but haven't been tested.|
 | [ODB](https://www.codesynthesis.com/products/odb/) | Optional | 2.4.0 | Required to build the ORM model. |
-| [Doxygen](http://www.doxygen.nl/) | Optional | Any recent | Required to build the source code documentation. |
 
 Though the C++ Reference Implementation should build fine with package
 manager supplied libraries - or even with hand-built dependencies -
