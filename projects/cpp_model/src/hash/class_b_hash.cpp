@@ -31,8 +31,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::size_t class_b_hasher::hash(const class_b& v) {
     std::size_t seed(0);
@@ -41,4 +40,4 @@ std::size_t class_b_hasher::hash(const class_b& v) {
     return seed;
 }
 
-} }
+}

@@ -28,10 +28,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/all_path_and_directory_settings/serialization_dir/package_0/package_0_1/class_2_0_3_6_the_serialization.hh"
 
-namespace cpp_ref_impl {
-namespace all_path_and_directory_settings {
-namespace package_0 {
-namespace package_0_1 {
+namespace cpp_ref_impl::all_path_and_directory_settings::package_0::package_0_1 {
 
 class class_2 final {
 public:
@@ -70,7 +67,7 @@ private:
     int prop_0_;
 };
 
-} } } }
+}
 
 namespace std {
 

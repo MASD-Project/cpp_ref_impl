@@ -28,8 +28,7 @@
 #include "cpp_ref_impl/northwind/types/order_details.hpp"
 #include "cpp_ref_impl/northwind/odb/order_details_key_pragmas.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 #ifdef ODB_COMPILER
 
@@ -43,6 +42,6 @@ namespace northwind {
 
 #endif
 
-} }
+}
 
 #endif

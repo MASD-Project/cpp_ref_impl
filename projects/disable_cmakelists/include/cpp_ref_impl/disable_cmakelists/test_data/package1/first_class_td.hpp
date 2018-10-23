@@ -27,9 +27,7 @@
 
 #include "cpp_ref_impl/disable_cmakelists/types/package1/first_class.hpp"
 
-namespace cpp_ref_impl {
-namespace disable_cmakelists {
-namespace package1 {
+namespace cpp_ref_impl::disable_cmakelists::package1 {
 
 class first_class_generator {
 public:
@@ -49,6 +47,6 @@ public:
     static result_type* create_ptr(const unsigned int position);
 };
 
-} } }
+}
 
 #endif

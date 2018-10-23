@@ -28,8 +28,7 @@
 #include <string>
 #include <boost/exception/info.hpp>
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 /**
  * @brief this is an exception
@@ -49,6 +48,6 @@ private:
     const std::string message_;
 };
 
-} }
+}
 
 #endif

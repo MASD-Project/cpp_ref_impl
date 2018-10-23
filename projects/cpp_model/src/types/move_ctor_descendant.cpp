@@ -22,8 +22,7 @@
 #include "cpp_ref_impl/cpp_model/io/move_ctor_base_io.hpp"
 #include "cpp_ref_impl/cpp_model/types/move_ctor_descendant.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 move_ctor_descendant::move_ctor_descendant(move_ctor_descendant&& rhs)
     : cpp_ref_impl::cpp_model::move_ctor_base(
@@ -86,4 +85,4 @@ void move_ctor_descendant::prop_1(const boost::filesystem::path&& v) {
     prop_1_ = std::move(v);
 }
 
-} }
+}

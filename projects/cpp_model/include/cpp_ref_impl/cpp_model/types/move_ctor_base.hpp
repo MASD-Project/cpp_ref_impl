@@ -30,8 +30,7 @@
 #include <boost/filesystem/path.hpp>
 #include "cpp_ref_impl/cpp_model/serialization/move_ctor_base_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 /**
  * @brief Base class for scenario that tests code generated move contructors.
@@ -88,6 +87,6 @@ inline bool operator==(const move_ctor_base& lhs, const move_ctor_base& rhs) {
     return lhs.equals(rhs);
 }
 
-} }
+}
 
 #endif

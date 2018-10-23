@@ -25,11 +25,10 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 class customers;
 
-} }
+}
 
 #endif

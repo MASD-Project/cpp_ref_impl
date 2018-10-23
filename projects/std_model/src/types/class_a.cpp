@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/std_model/types/class_a.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class_a::class_a(
     const std::string& prop0,
@@ -78,4 +77,4 @@ void class_a::prop1(const std::string&& v) {
     prop1_ = std::move(v);
 }
 
-} }
+}

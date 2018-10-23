@@ -29,9 +29,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/cpp_model/serialization/package_7/parent_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_7 {
+namespace cpp_ref_impl::cpp_model::package_7 {
 
 class parent {
 public:
@@ -78,6 +76,6 @@ inline bool operator==(const parent& lhs, const parent& rhs) {
     return lhs.equals(rhs);
 }
 
-} } }
+}
 
 #endif

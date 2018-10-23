@@ -8,9 +8,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/split_project/serialization/package1/first_class_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace split_project {
-namespace package1 {
+namespace cpp_ref_impl::split_project::package1 {
 
 class first_class final {
 public:
@@ -55,7 +53,7 @@ private:
     int private_attribute_;
 };
 
-} } }
+}
 
 namespace std {
 

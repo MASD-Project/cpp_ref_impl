@@ -22,13 +22,11 @@
 #include "cpp_ref_impl/cpp_model/io/parent_outside_io.hpp"
 #include "cpp_ref_impl/cpp_model/io/package_9/child_via_settings_io.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_9 {
+namespace cpp_ref_impl::cpp_model::package_9 {
 
 std::ostream& operator<<(std::ostream& s, const child_via_settings& v) {
     v.to_stream(s);
     return(s);
 }
 
-} } }
+}

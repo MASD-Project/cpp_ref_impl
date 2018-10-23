@@ -28,9 +28,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/cpp_model/serialization/package_2/class_1_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_2 {
+namespace cpp_ref_impl::cpp_model::package_2 {
 
 class class_1 final {
 public:
@@ -69,7 +67,7 @@ private:
     int prop_0_;
 };
 
-} } }
+}
 
 namespace std {
 

@@ -31,8 +31,7 @@
 #include "cpp_ref_impl/boost_model/serialization/class_j_fwd_ser.hpp"
 #include "cpp_ref_impl/boost_model/types/time_duration_primitive.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class class_j final {
 public:
@@ -86,7 +85,7 @@ private:
     cpp_ref_impl::boost_model::date_primitive prop_2_;
 };
 
-} }
+}
 
 namespace std {
 

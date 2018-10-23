@@ -25,12 +25,11 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 template<typename Archive>
 void register_types(Archive& ar);
 
-} }
+}
 
 #endif

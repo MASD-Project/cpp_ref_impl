@@ -22,8 +22,7 @@
 #include "cpp_ref_impl/cpp_model/io/value_io.hpp"
 #include "cpp_ref_impl/cpp_model/io/simple_object_template_instance_io.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const simple_object_template_instance& v) {
     s << " { "
@@ -35,4 +34,4 @@ std::ostream& operator<<(std::ostream& s, const simple_object_template_instance&
     return(s);
 }
 
-} }
+}

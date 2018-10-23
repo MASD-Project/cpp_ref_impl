@@ -28,14 +28,12 @@
 #include <iosfwd>
 #include "cpp_ref_impl/cpp_model/types/package_10/consume_object_template.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_10 {
+namespace cpp_ref_impl::cpp_model::package_10 {
 
 std::ostream&
 operator<<(std::ostream& s,
      const cpp_ref_impl::cpp_model::package_10::consume_object_template& v);
 
-} } }
+}
 
 #endif

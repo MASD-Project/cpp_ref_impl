@@ -21,8 +21,7 @@
 #include <ostream>
 #include "cpp_ref_impl/cpp_model/io/immutable_zero_io.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const immutable_zero&) {
     s << " { "
@@ -30,4 +29,4 @@ std::ostream& operator<<(std::ostream& s, const immutable_zero&) {
     return(s);
 }
 
-} }
+}

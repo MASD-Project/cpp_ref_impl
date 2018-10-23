@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/cpp_model/types/immutable_two.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 struct immutable_two_hasher {
 public:
     static std::size_t hash(const immutable_two& v);
 };
 
-} }
+}
 
 namespace std {
 

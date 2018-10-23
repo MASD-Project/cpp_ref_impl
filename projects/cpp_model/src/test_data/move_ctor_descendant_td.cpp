@@ -33,8 +33,7 @@ create_boost_filesystem_path(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 move_ctor_descendant_generator::move_ctor_descendant_generator() : position_(0) { }
 
@@ -63,4 +62,4 @@ move_ctor_descendant_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

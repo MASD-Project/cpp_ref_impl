@@ -30,8 +30,7 @@
 #include "cpp_ref_impl/cpp_model/types/base.hpp"
 #include "cpp_ref_impl/cpp_model/serialization/descendant2_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class descendant2 final : public cpp_ref_impl::cpp_model::base {
 public:
@@ -84,7 +83,7 @@ private:
     bool prop_0_;
 };
 
-} }
+}
 
 namespace std {
 

@@ -29,8 +29,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/std_model/serialization/string_primitive_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 /**
  * @brief Test a primitive with an underlying string.
  */
@@ -80,7 +79,7 @@ private:
     std::string value_;
 };
 
-} }
+}
 
 namespace std {
 

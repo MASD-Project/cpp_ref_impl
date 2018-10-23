@@ -28,16 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/cpp_model/types/package_8/child_via_settings.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_8 {
+namespace cpp_ref_impl::cpp_model::package_8 {
 
 struct child_via_settings_hasher {
 public:
     static std::size_t hash(const child_via_settings& v);
 };
 
-} } }
+}
 
 namespace std {
 

@@ -22,8 +22,7 @@
 #include "cpp_ref_impl/cpp_model/io/parent_with_members_io.hpp"
 #include "cpp_ref_impl/cpp_model/types/second_child_without_members.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 second_child_without_members::second_child_without_members(const int prop_0)
     : cpp_ref_impl::cpp_model::parent_with_members(prop_0) { }
@@ -57,4 +56,4 @@ second_child_without_members& second_child_without_members::operator=(second_chi
     return *this;
 }
 
-} }
+}

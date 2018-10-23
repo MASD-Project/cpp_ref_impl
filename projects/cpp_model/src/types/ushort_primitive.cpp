@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/ushort_primitive.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 ushort_primitive::ushort_primitive(const unsigned short value)
     : value_(value) { }
@@ -49,4 +48,4 @@ ushort_primitive& ushort_primitive::operator=(ushort_primitive other) {
     return *this;
 }
 
-} }
+}

@@ -28,8 +28,7 @@ unsigned int create_unsigned_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class_a_generator::class_a_generator() : position_(0) { }
 
@@ -57,4 +56,4 @@ class_a_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

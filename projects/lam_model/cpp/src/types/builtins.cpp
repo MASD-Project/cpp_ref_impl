@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/lam_model/types/builtins.hpp"
 
-namespace cpp_ref_impl {
-namespace lam_model {
+namespace cpp_ref_impl::lam_model {
 
 builtins::builtins()
     : prop_0_(static_cast<char>(0)),
@@ -170,4 +169,4 @@ void builtins::prop_9(const bool v) {
     prop_9_ = v;
 }
 
-} }
+}

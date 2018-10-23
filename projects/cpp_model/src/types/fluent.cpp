@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/fluent.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 fluent::fluent()
     : prop_0_(static_cast<unsigned int>(0)) { }
@@ -98,4 +97,4 @@ fluent& fluent::prop_2(const cpp_ref_impl::cpp_model::value&& v) {
     return *this;
 }
 
-} }
+}

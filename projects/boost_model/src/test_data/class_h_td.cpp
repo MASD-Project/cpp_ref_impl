@@ -34,8 +34,7 @@ create_boost_property_tree_ptree(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class_h_generator::class_h_generator() : position_(0) { }
 
@@ -63,4 +62,4 @@ class_h_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

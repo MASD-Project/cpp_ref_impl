@@ -87,8 +87,7 @@ std::vector<std::vector<unsigned int> > create_std_vector_std_vector_unsigned_in
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class_b_generator::class_b_generator() : position_(0) { }
 
@@ -121,4 +120,4 @@ class_b_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

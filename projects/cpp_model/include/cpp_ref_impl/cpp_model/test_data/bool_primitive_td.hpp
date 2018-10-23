@@ -27,8 +27,7 @@
 
 #include "cpp_ref_impl/cpp_model/types/bool_primitive.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class bool_primitive_generator {
 public:
@@ -49,6 +48,6 @@ public:
     static result_type* create_ptr(const unsigned int position);
 };
 
-} }
+}
 
 #endif

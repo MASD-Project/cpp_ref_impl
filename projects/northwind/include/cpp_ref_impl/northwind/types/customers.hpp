@@ -30,8 +30,7 @@
 #include "cpp_ref_impl/northwind/types/customer_id.hpp"
 #include "cpp_ref_impl/northwind/serialization/customers_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 class customers final {
 public:
@@ -148,7 +147,7 @@ private:
     std::string fax_;
 };
 
-} }
+}
 
 namespace std {
 

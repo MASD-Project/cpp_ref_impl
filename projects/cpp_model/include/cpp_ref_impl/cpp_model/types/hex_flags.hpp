@@ -25,8 +25,7 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 /**
  * @brief This is an example of an enumeration using hex flags.
@@ -39,6 +38,6 @@ enum class hex_flags : unsigned int {
     right = 0x08
 };
 
-} }
+}
 
 #endif

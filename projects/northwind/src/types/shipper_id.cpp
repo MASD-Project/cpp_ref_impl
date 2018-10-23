@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/northwind/types/shipper_id.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 shipper_id::shipper_id(const int value)
     : value_(value) { }
@@ -49,4 +48,4 @@ shipper_id& shipper_id::operator=(shipper_id other) {
     return *this;
 }
 
-} }
+}

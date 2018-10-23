@@ -44,8 +44,7 @@ inline std::ostream& operator<<(std::ostream& s, const std::vector<std::string>&
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 base::base(const std::vector<std::string>& prop_0)
     : prop_0_(prop_0) { }
@@ -82,4 +81,4 @@ void base::prop_0(const std::vector<std::string>&& v) {
     prop_0_ = std::move(v);
 }
 
-} }
+}

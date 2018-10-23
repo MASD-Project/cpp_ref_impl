@@ -105,8 +105,7 @@ inline std::size_t hash_boost_variant_int_std_string_char(const boost::variant<i
 
 }
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 std::size_t class_e_hasher::hash(const class_e& v) {
     std::size_t seed(0);
@@ -119,4 +118,4 @@ std::size_t class_e_hasher::hash(const class_e& v) {
     return seed;
 }
 
-} }
+}

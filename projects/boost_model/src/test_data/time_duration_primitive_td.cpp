@@ -32,8 +32,7 @@ create_boost_posix_time_time_duration(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 time_duration_primitive_generator::time_duration_primitive_generator() : position_(0) { }
 
@@ -61,4 +60,4 @@ time_duration_primitive_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

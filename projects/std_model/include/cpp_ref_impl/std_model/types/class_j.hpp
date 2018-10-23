@@ -31,8 +31,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/std_model/serialization/class_j_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class class_j final {
 public:
@@ -86,7 +85,7 @@ private:
     std::vector<std::pair<std::string, int> > prop_2_;
 };
 
-} }
+}
 
 namespace std {
 

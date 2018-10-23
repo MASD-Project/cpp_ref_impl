@@ -34,8 +34,7 @@ create_cpp_ref_impl_cpp_model_value(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 simple_object_template_instance_generator::simple_object_template_instance_generator() : position_(0) { }
 
@@ -65,4 +64,4 @@ simple_object_template_instance_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

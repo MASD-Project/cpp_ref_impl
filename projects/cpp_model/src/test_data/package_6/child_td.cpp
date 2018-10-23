@@ -29,9 +29,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_6 {
+namespace cpp_ref_impl::cpp_model::package_6 {
 
 child_generator::child_generator() : position_(0) { }
 
@@ -60,4 +58,4 @@ child_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+}

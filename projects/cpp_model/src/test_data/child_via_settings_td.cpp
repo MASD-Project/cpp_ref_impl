@@ -29,8 +29,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 child_via_settings_generator::child_via_settings_generator() : position_(0) { }
 
@@ -59,4 +58,4 @@ child_via_settings_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

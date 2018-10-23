@@ -96,8 +96,7 @@ create_cpp_ref_impl_boost_model_pkg1_class_c(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class_b_generator::class_b_generator() : position_(0) { }
 
@@ -131,4 +130,4 @@ class_b_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

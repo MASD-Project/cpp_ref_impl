@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/cpp_model/types/value.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 struct value_hasher {
 public:
     static std::size_t hash(const value& v);
 };
 
-} }
+}
 
 namespace std {
 

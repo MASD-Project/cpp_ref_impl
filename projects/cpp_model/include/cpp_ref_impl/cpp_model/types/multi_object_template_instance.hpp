@@ -29,8 +29,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/cpp_model/serialization/multi_object_template_instance_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 /**
  * @brief Type that instantiates more than one object template.
@@ -110,7 +109,7 @@ private:
     int prop_10_;
 };
 
-} }
+}
 
 namespace std {
 

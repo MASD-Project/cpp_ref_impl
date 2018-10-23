@@ -42,9 +42,7 @@ std::vector<cpp_ref_impl::std_model::class_a> create_std_vector_cpp_ref_impl_std
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
-namespace pkg1 {
+namespace cpp_ref_impl::std_model::pkg1 {
 
 class_c_generator::class_c_generator() : position_(0) { }
 
@@ -73,4 +71,4 @@ class_c_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+}

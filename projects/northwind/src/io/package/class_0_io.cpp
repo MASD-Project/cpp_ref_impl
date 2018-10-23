@@ -21,9 +21,7 @@
 #include <ostream>
 #include "cpp_ref_impl/northwind/io/package/class_0_io.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
-namespace package {
+namespace cpp_ref_impl::northwind::package {
 
 std::ostream& operator<<(std::ostream& s, const class_0& v) {
     s << " { "
@@ -33,4 +31,4 @@ std::ostream& operator<<(std::ostream& s, const class_0& v) {
     return(s);
 }
 
-} } }
+}

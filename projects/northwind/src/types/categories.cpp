@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/northwind/types/categories.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 categories::categories(
     const cpp_ref_impl::northwind::category_id& category_id,
@@ -118,4 +117,4 @@ void categories::picutre(const std::string&& v) {
     picutre_ = std::move(v);
 }
 
-} }
+}

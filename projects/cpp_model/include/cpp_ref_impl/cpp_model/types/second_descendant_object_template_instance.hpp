@@ -29,8 +29,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/cpp_model/serialization/second_descendant_object_template_instance_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 /**
  * @brief Second descendant instance
@@ -100,7 +99,7 @@ private:
     int prop_10_;
 };
 
-} }
+}
 
 namespace std {
 

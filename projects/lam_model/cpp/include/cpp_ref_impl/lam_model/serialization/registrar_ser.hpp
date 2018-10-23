@@ -25,12 +25,11 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace lam_model {
+namespace cpp_ref_impl::lam_model {
 
 template<typename Archive>
 void register_types(Archive& ar);
 
-} }
+}
 
 #endif

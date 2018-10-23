@@ -25,11 +25,10 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class move_ctor_empty_descendant;
 
-} }
+}
 
 #endif

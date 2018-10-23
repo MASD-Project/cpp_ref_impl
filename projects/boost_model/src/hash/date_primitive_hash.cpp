@@ -36,8 +36,7 @@ inline std::size_t hash_boost_gregorian_date(const boost::gregorian::date& v) {
 
 }
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 std::size_t date_primitive_hasher::hash(const date_primitive& v) {
     std::size_t seed(0);
@@ -45,4 +44,4 @@ std::size_t date_primitive_hasher::hash(const date_primitive& v) {
     return seed;
 }
 
-} }
+}

@@ -32,8 +32,7 @@
 #include "cpp_ref_impl/northwind/types/supplier_id.hpp"
 #include "cpp_ref_impl/northwind/serialization/products_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 class products final {
 public:
@@ -128,7 +127,7 @@ private:
     bool discontinued_;
 };
 
-} }
+}
 
 namespace std {
 

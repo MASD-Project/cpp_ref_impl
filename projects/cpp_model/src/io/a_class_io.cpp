@@ -24,8 +24,7 @@
 #include "cpp_ref_impl/cpp_model/io/colour_types_io.hpp"
 #include "cpp_ref_impl/cpp_model/io/package_4/shape_types_io.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const a_class& v) {
     s << " { "
@@ -37,4 +36,4 @@ std::ostream& operator<<(std::ostream& s, const a_class& v) {
     return(s);
 }
 
-} }
+}

@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/cpp_model/types/float_primitive.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 struct float_primitive_hasher {
 public:
     static std::size_t hash(const float_primitive& v);
 };
 
-} }
+}
 
 namespace std {
 

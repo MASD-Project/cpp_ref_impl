@@ -7,9 +7,7 @@
 
 #include "cpp_ref_impl/flat_directory_mode/types/package1/first_class.hpp"
 
-namespace cpp_ref_impl {
-namespace flat_directory_mode {
-namespace package1 {
+namespace cpp_ref_impl::flat_directory_mode::package1 {
 
 class first_class_generator {
 public:
@@ -29,6 +27,6 @@ public:
     static result_type* create_ptr(const unsigned int position);
 };
 
-} } }
+}
 
 #endif

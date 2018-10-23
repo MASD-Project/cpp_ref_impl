@@ -67,8 +67,7 @@ std::unordered_map<cpp_ref_impl::std_model::class_a, cpp_ref_impl::std_model::pk
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class_f_generator::class_f_generator() : position_(0) { }
 
@@ -98,4 +97,4 @@ class_f_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

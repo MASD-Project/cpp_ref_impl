@@ -31,8 +31,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 std::size_t class_derived_hasher::hash(const class_derived& v) {
     std::size_t seed(0);
@@ -43,4 +42,4 @@ std::size_t class_derived_hasher::hash(const class_derived& v) {
     return seed;
 }
 
-} }
+}

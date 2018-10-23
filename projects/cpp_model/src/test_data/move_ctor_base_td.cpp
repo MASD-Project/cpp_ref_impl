@@ -34,8 +34,7 @@ create_boost_filesystem_path(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 void move_ctor_base_generator::
 populate(const unsigned int position, result_type& v) {
@@ -49,4 +48,4 @@ move_ctor_base_generator::create_ptr(const unsigned int position) {
     return cpp_ref_impl::cpp_model::move_ctor_descendant_generator::create_ptr(position);
 }
 
-} }
+}

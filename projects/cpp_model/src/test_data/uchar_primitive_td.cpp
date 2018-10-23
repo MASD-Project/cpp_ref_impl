@@ -29,8 +29,7 @@ unsigned char create_unsigned_char(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 uchar_primitive_generator::uchar_primitive_generator() : position_(0) { }
 
@@ -58,4 +57,4 @@ uchar_primitive_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

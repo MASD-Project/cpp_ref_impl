@@ -28,9 +28,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace all_path_and_directory_settings {
-namespace package_0 {
+namespace cpp_ref_impl::all_path_and_directory_settings::package_0 {
 
 class_1_generator::class_1_generator() : position_(0) { }
 
@@ -58,4 +56,4 @@ class_1_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+}

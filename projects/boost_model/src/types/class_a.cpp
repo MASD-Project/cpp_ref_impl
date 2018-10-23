@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/boost_model/types/class_a.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class_a::class_a()
     : prop_0_(static_cast<unsigned int>(0)) { }
@@ -52,4 +51,4 @@ void class_a::prop_0(const unsigned int v) {
     prop_0_ = v;
 }
 
-} }
+}

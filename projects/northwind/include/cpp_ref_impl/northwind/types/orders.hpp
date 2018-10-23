@@ -33,8 +33,7 @@
 #include "cpp_ref_impl/northwind/types/employee_id.hpp"
 #include "cpp_ref_impl/northwind/serialization/orders_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 class orders final {
 public:
@@ -163,7 +162,7 @@ private:
     std::string ship_country_;
 };
 
-} }
+}
 
 namespace std {
 

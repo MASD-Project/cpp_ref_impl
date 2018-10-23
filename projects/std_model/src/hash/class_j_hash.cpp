@@ -62,8 +62,7 @@ inline std::size_t hash_std_vector_std_pair_std_string_int(const std::vector<std
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 std::size_t class_j_hasher::hash(const class_j& v) {
     std::size_t seed(0);
@@ -75,4 +74,4 @@ std::size_t class_j_hasher::hash(const class_j& v) {
     return seed;
 }
 
-} }
+}

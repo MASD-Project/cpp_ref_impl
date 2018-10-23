@@ -25,12 +25,11 @@ namespace {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::size_t parent_without_members_hasher::hash(const parent_without_members&) {
     std::size_t seed(0);
     return seed;
 }
 
-} }
+}

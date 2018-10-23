@@ -8,9 +8,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace split_project {
-namespace package1 {
+namespace cpp_ref_impl::split_project::package1 {
 
 first_class_generator::first_class_generator() : position_(0) { }
 
@@ -39,4 +37,4 @@ first_class_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+}

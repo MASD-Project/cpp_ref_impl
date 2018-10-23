@@ -25,12 +25,10 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace two_layers_with_objects {
-namespace package_1 {
+namespace cpp_ref_impl::two_layers_with_objects::package_1 {
 
 class class_1;
 
-} } }
+}
 
 #endif

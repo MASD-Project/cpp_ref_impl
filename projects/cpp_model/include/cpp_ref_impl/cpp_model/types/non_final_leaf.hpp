@@ -30,8 +30,7 @@
 #include "cpp_ref_impl/cpp_model/types/descendant1.hpp"
 #include "cpp_ref_impl/cpp_model/serialization/non_final_leaf_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class non_final_leaf : public cpp_ref_impl::cpp_model::descendant1 {
 public:
@@ -84,7 +83,7 @@ private:
     int prop_0_;
 };
 
-} }
+}
 
 namespace std {
 

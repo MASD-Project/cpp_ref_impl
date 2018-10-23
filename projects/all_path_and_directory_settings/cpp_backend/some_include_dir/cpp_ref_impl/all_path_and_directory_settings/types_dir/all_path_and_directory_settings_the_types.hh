@@ -25,14 +25,10 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-
 /**
  * @brief This model tests all settings related to paths and file names.
  */
-namespace all_path_and_directory_settings {
-}
-
+namespace cpp_ref_impl::all_path_and_directory_settings {
 }
 
 #endif

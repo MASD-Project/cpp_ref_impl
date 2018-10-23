@@ -103,6 +103,7 @@ It's objective is to test Dogen integration with ODB.
 #DOGEN yarn.external_modules=cpp_ref_impl
 #DOGEN yarn.input_language=cpp
 #DOGEN quilt.cpp.enabled=true
+#DOGEN quilt.cpp.standard=c++-17
 #DOGEN quilt.cpp.hash.enabled=false
 #DOGEN quilt.cpp.visual_studio.project.enabled=false
 #DOGEN quilt.cpp.visual_studio.solution.enabled=false

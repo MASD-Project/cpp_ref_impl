@@ -29,8 +29,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/cpp_model/serialization/multiple_parents_object_template_instance_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 /**
  * @brief Instantiates object template MultipleParentsObjectTemplate.
@@ -120,7 +119,7 @@ private:
     int prop_10_;
 };
 
-} }
+}
 
 namespace std {
 

@@ -30,8 +30,7 @@
 #include "cpp_ref_impl/boost_model/types/class_base.hpp"
 #include "cpp_ref_impl/boost_model/serialization/class_derived_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class class_derived final : public cpp_ref_impl::boost_model::class_base {
 public:
@@ -79,7 +78,7 @@ private:
     int prop_1_;
 };
 
-} }
+}
 
 namespace std {
 

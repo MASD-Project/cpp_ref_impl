@@ -23,8 +23,7 @@
 #include <stdexcept>
 #include "cpp_ref_impl/cpp_model/io/short_enum_io.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const short_enum& v) {
     s << "{ " << "\"__type__\": " << "\"short_enum\", " << "\"value\": ";
@@ -47,4 +46,4 @@ std::ostream& operator<<(std::ostream& s, const short_enum& v) {
     return s;
 }
 
-} }
+}

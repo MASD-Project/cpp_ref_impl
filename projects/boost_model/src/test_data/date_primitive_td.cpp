@@ -31,8 +31,7 @@ create_boost_gregorian_date(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 date_primitive_generator::date_primitive_generator() : position_(0) { }
 
@@ -60,4 +59,4 @@ date_primitive_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

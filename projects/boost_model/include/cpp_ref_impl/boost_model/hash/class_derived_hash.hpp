@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/boost_model/types/class_derived.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 struct class_derived_hasher {
 public:
     static std::size_t hash(const class_derived& v);
 };
 
-} }
+}
 
 namespace std {
 

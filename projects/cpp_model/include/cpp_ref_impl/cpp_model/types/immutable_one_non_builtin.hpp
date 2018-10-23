@@ -29,8 +29,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/cpp_model/serialization/immutable_one_non_builtin_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 /**
  * @brief Immutable class with one pod property
@@ -66,6 +65,6 @@ private:
     std::string prop_0_;
 };
 
-} }
+}
 
 #endif

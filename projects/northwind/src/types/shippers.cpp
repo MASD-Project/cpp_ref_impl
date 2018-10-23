@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/northwind/types/shippers.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 shippers::shippers(
     const cpp_ref_impl::northwind::shipper_id& shipper_id,
@@ -98,4 +97,4 @@ void shippers::phone(const std::string&& v) {
     phone_ = std::move(v);
 }
 
-} }
+}

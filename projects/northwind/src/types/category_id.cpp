@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/northwind/types/category_id.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 category_id::category_id(const int value)
     : value_(value) { }
@@ -49,4 +48,4 @@ category_id& category_id::operator=(category_id other) {
     return *this;
 }
 
-} }
+}

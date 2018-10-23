@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/northwind/types/customer_id.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 customer_id::customer_id(const int value)
     : value_(value) { }
@@ -49,4 +48,4 @@ customer_id& customer_id::operator=(customer_id other) {
     return *this;
 }
 
-} }
+}

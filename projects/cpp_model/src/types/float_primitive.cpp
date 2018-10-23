@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/float_primitive.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 float_primitive::float_primitive(const float value)
     : value_(value) { }
@@ -49,4 +48,4 @@ float_primitive& float_primitive::operator=(float_primitive other) {
     return *this;
 }
 
-} }
+}

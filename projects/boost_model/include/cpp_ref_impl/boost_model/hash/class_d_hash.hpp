@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/boost_model/types/class_d.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 struct class_d_hasher {
 public:
     static std::size_t hash(const class_d& v);
 };
 
-} }
+}
 
 namespace std {
 

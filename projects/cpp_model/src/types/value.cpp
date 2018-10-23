@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/value.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 value::value()
     : prop_0_(static_cast<int>(0)) { }
@@ -52,4 +51,4 @@ void value::prop_0(const int v) {
     prop_0_ = v;
 }
 
-} }
+}

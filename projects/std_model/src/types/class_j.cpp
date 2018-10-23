@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/std_model/types/class_j.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class_j::class_j(
     const std::pair<int, int>& prop_0,
@@ -98,4 +97,4 @@ void class_j::prop_2(const std::vector<std::pair<std::string, int> >&& v) {
     prop_2_ = std::move(v);
 }
 
-} }
+}

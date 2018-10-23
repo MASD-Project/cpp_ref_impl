@@ -23,12 +23,11 @@
 #include "cpp_ref_impl/std_model/io/derived_io.hpp"
 #include "cpp_ref_impl/std_model/io/pkg1/class_c_io.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 std::ostream& operator<<(std::ostream& s, const derived& v) {
     v.to_stream(s);
     return(s);
 }
 
-} }
+}

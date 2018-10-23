@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/boost_model/types/class_g.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class_g::class_g(class_g&& rhs)
     : prop_0_(std::move(rhs.prop_0_)),
@@ -82,4 +81,4 @@ void class_g::prop_1(const std::list<boost::filesystem::path>&& v) {
     prop_1_ = std::move(v);
 }
 
-} }
+}

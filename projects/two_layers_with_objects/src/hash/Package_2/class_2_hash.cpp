@@ -30,9 +30,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl {
-namespace two_layers_with_objects {
-namespace Package_2 {
+namespace cpp_ref_impl::two_layers_with_objects::Package_2 {
 
 std::size_t class_2_hasher::hash(const class_2& v) {
     std::size_t seed(0);
@@ -41,4 +39,4 @@ std::size_t class_2_hasher::hash(const class_2& v) {
     return seed;
 }
 
-} } }
+}

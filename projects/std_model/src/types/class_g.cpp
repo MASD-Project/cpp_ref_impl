@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/std_model/types/class_g.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class_g::class_g(
     const std::unordered_map<cpp_ref_impl::std_model::class_a, std::vector<cpp_ref_impl::std_model::pkg1::class_c> >& prop_0,
@@ -98,4 +97,4 @@ void class_g::prop_2(const std::unordered_map<std::string, cpp_ref_impl::std_mod
     prop_2_ = std::move(v);
 }
 
-} }
+}

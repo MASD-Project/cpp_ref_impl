@@ -28,8 +28,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 descendant_object_template_instance_generator::descendant_object_template_instance_generator() : position_(0) { }
 
@@ -58,4 +57,4 @@ descendant_object_template_instance_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

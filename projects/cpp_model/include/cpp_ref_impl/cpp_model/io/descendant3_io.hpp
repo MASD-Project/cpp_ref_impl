@@ -28,13 +28,12 @@
 #include <iosfwd>
 #include "cpp_ref_impl/cpp_model/types/descendant3.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream&
 operator<<(std::ostream& s,
      const cpp_ref_impl::cpp_model::descendant3& v);
 
-} }
+}
 
 #endif

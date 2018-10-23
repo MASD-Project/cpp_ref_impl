@@ -21,8 +21,7 @@
 #include <ostream>
 #include "cpp_ref_impl/northwind/io/non_orm_class_io.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 std::ostream& operator<<(std::ostream& s, const non_orm_class& v) {
     s << " { "
@@ -32,4 +31,4 @@ std::ostream& operator<<(std::ostream& s, const non_orm_class& v) {
     return(s);
 }
 
-} }
+}

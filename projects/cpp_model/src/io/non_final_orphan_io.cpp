@@ -21,8 +21,7 @@
 #include <ostream>
 #include "cpp_ref_impl/cpp_model/io/non_final_orphan_io.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const non_final_orphan& v) {
     s << " { "
@@ -32,4 +31,4 @@ std::ostream& operator<<(std::ostream& s, const non_final_orphan& v) {
     return(s);
 }
 
-} }
+}

@@ -27,8 +27,7 @@
 
 #include "cpp_ref_impl/cpp_model/types/move_ctor_descendant.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class move_ctor_descendant_generator {
 public:
@@ -48,6 +47,6 @@ public:
     static result_type* create_ptr(const unsigned int position);
 };
 
-} }
+}
 
 #endif

@@ -25,8 +25,7 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 enum class colour_types : unsigned int {
     invalid = 0, ///< Represents an uninitialised enum
@@ -36,6 +35,6 @@ enum class colour_types : unsigned int {
     gray = 4 ///< another comment
 };
 
-} }
+}
 
 #endif

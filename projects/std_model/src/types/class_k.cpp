@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/std_model/types/class_k.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class_k::class_k(const cpp_ref_impl::std_model::string_primitive& prop_0)
     : prop_0_(prop_0) { }
@@ -57,4 +56,4 @@ void class_k::prop_0(const cpp_ref_impl::std_model::string_primitive&& v) {
     prop_0_ = std::move(v);
 }
 
-} }
+}

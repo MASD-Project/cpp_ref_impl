@@ -25,11 +25,10 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace lam_model {
+namespace cpp_ref_impl::lam_model {
 
 class builtins;
 
-} }
+}
 
 #endif

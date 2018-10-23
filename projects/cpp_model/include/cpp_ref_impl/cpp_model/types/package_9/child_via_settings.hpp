@@ -30,9 +30,7 @@
 #include "cpp_ref_impl/cpp_model/types/parent_outside.hpp"
 #include "cpp_ref_impl/cpp_model/serialization/package_9/child_via_settings_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_9 {
+namespace cpp_ref_impl::cpp_model::package_9 {
 
 class child_via_settings final : public cpp_ref_impl::cpp_model::parent_outside {
 public:
@@ -80,7 +78,7 @@ private:
     int prop_1_;
 };
 
-} } }
+}
 
 namespace std {
 

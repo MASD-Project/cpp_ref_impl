@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/cpp_model/types/second_child_without_members.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 struct second_child_without_members_hasher {
 public:
     static std::size_t hash(const second_child_without_members& v);
 };
 
-} }
+}
 
 namespace std {
 

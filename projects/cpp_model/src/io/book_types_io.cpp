@@ -23,8 +23,7 @@
 #include <stdexcept>
 #include "cpp_ref_impl/cpp_model/io/book_types_io.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const book_types& v) {
     s << "{ " << "\"__type__\": " << "\"book_types\", " << "\"value\": ";
@@ -50,4 +49,4 @@ std::ostream& operator<<(std::ostream& s, const book_types& v) {
     return s;
 }
 
-} }
+}

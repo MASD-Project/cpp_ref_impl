@@ -28,16 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/cpp_model/types/package_6/child.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_6 {
+namespace cpp_ref_impl::cpp_model::package_6 {
 
 struct child_hasher {
 public:
     static std::size_t hash(const child& v);
 };
 
-} } }
+}
 
 namespace std {
 

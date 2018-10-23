@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/test_data/immutable_zero_td.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 immutable_zero_generator::immutable_zero_generator() : position_(0) { }
 
@@ -42,4 +41,4 @@ immutable_zero_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

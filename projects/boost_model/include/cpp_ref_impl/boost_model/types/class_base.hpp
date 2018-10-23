@@ -29,8 +29,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/boost_model/serialization/class_base_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class class_base {
 public:
@@ -77,6 +76,6 @@ inline bool operator==(const class_base& lhs, const class_base& rhs) {
     return lhs.equals(rhs);
 }
 
-} }
+}
 
 #endif

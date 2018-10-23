@@ -39,8 +39,7 @@
 #include "cpp_ref_impl/cpp_model/types/ushort_primitive.hpp"
 #include "cpp_ref_impl/cpp_model/serialization/consumer_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 /**
  * @brief This type makes use of all primitves in this test model.
@@ -153,7 +152,7 @@ private:
     cpp_ref_impl::cpp_model::bool_primitive prop10_;
 };
 
-} }
+}
 
 namespace std {
 

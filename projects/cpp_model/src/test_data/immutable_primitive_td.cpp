@@ -28,8 +28,7 @@ short create_short(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 immutable_primitive_generator::immutable_primitive_generator() : position_(0) { }
 
@@ -48,4 +47,4 @@ immutable_primitive_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

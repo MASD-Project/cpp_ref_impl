@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/boost_model/types/class_d.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class_d::class_d(class_d&& rhs)
     : prop_0_(std::move(rhs.prop_0_)),
@@ -124,4 +123,4 @@ void class_d::prop_3(const boost::optional<std::vector<cpp_ref_impl::boost_model
     prop_3_ = std::move(v);
 }
 
-} }
+}

@@ -25,11 +25,10 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class class_e;
 
-} }
+}
 
 #endif

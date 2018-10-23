@@ -27,8 +27,7 @@
 
 #include <cstdint>
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 enum class enum_with_std_builtin : std::int8_t {
     invalid = 0, ///< Represents an uninitialised enum
@@ -36,6 +35,6 @@ enum class enum_with_std_builtin : std::int8_t {
     another_enumerator = 2
 };
 
-} }
+}
 
 #endif

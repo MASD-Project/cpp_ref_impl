@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/one_line.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 one_line::one_line()
     : prop_0_(static_cast<int>(0)),
@@ -79,4 +78,4 @@ void one_line::prop_2(const int v) {
     prop_2_ = v;
 }
 
-} }
+}

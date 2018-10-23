@@ -28,13 +28,12 @@
 #include <iosfwd>
 #include "cpp_ref_impl/cpp_model/types/parent_with_members.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream&
 operator<<(std::ostream& s,
      const cpp_ref_impl::cpp_model::parent_with_members& v);
 
-} }
+}
 
 #endif

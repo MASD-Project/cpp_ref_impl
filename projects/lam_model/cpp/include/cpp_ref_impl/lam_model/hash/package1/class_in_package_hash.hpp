@@ -28,16 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/lam_model/types/package1/class_in_package.hpp"
 
-namespace cpp_ref_impl {
-namespace lam_model {
-namespace package1 {
+namespace cpp_ref_impl::lam_model::package1 {
 
 struct class_in_package_hasher {
 public:
     static std::size_t hash(const class_in_package& v);
 };
 
-} } }
+}
 
 namespace std {
 

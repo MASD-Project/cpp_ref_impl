@@ -20,9 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/package_1/class_5.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_1 {
+namespace cpp_ref_impl::cpp_model::package_1 {
 
 class_5::class_5()
     : prop_0_(static_cast<int>(0)) { }
@@ -53,4 +51,4 @@ void class_5::prop_0(const int v) {
     prop_0_ = v;
 }
 
-} } }
+}

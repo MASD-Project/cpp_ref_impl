@@ -29,8 +29,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/cpp_model/serialization/immutable_two_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class immutable_two final {
 public:
@@ -70,6 +69,6 @@ private:
     std::string prop_1_;
 };
 
-} }
+}
 
 #endif

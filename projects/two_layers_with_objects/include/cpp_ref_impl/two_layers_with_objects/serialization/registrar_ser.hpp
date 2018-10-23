@@ -25,12 +25,11 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace two_layers_with_objects {
+namespace cpp_ref_impl::two_layers_with_objects {
 
 template<typename Archive>
 void register_types(Archive& ar);
 
-} }
+}
 
 #endif

@@ -25,12 +25,10 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_8 {
+namespace cpp_ref_impl::cpp_model::package_8 {
 
 class child;
 
-} } }
+}
 
 #endif

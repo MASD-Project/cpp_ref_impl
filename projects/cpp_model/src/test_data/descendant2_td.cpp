@@ -29,8 +29,7 @@ bool create_bool(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 descendant2_generator::descendant2_generator() : position_(0) { }
 
@@ -59,4 +58,4 @@ descendant2_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

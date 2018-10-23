@@ -27,9 +27,7 @@
 
 #include "cpp_ref_impl/northwind/types/package/class_0.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
-namespace package {
+namespace cpp_ref_impl::northwind::package {
 
 #ifdef ODB_COMPILER
 
@@ -37,6 +35,6 @@ namespace package {
 
 #endif
 
-} } }
+}
 
 #endif

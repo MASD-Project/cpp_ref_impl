@@ -28,14 +28,12 @@
 #include <iosfwd>
 #include "cpp_ref_impl/std_model/types/pkg1/class_c.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
-namespace pkg1 {
+namespace cpp_ref_impl::std_model::pkg1 {
 
 std::ostream&
 operator<<(std::ostream& s,
      const cpp_ref_impl::std_model::pkg1::class_c& v);
 
-} } }
+}
 
 #endif

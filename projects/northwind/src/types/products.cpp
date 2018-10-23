@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/northwind/types/products.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 products::products()
     : unit_price_(static_cast<double>(0)),
@@ -205,4 +204,4 @@ void products::discontinued(const bool v) {
     discontinued_ = v;
 }
 
-} }
+}

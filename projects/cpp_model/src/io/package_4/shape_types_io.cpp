@@ -23,9 +23,7 @@
 #include <stdexcept>
 #include "cpp_ref_impl/cpp_model/io/package_4/shape_types_io.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_4 {
+namespace cpp_ref_impl::cpp_model::package_4 {
 
 std::ostream& operator<<(std::ostream& s, const shape_types& v) {
     s << "{ " << "\"__type__\": " << "\"shape_types\", " << "\"value\": ";
@@ -54,4 +52,4 @@ std::ostream& operator<<(std::ostream& s, const shape_types& v) {
     return s;
 }
 
-} } }
+}

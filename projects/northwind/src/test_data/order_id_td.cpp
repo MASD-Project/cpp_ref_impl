@@ -28,8 +28,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 order_id_generator::order_id_generator() : position_(0) { }
 
@@ -57,4 +56,4 @@ order_id_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

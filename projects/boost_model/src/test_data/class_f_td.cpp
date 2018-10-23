@@ -74,8 +74,7 @@ std::list<boost::posix_time::time_duration> create_std_list_boost_posix_time_tim
 
 }
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class_f_generator::class_f_generator() : position_(0) { }
 
@@ -108,4 +107,4 @@ class_f_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

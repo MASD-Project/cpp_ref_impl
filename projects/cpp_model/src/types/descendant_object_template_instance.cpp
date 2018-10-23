@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/descendant_object_template_instance.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 descendant_object_template_instance::descendant_object_template_instance()
     : prop_1_(static_cast<int>(0)),
@@ -66,4 +65,4 @@ void descendant_object_template_instance::prop_0(const int v) {
     prop_0_ = v;
 }
 
-} }
+}

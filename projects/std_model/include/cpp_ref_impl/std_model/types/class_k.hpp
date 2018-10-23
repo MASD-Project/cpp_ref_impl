@@ -29,8 +29,7 @@
 #include "cpp_ref_impl/std_model/types/string_primitive.hpp"
 #include "cpp_ref_impl/std_model/serialization/class_k_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class class_k final {
 public:
@@ -69,7 +68,7 @@ private:
     cpp_ref_impl::std_model::string_primitive prop_0_;
 };
 
-} }
+}
 
 namespace std {
 

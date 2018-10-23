@@ -27,9 +27,7 @@
 
 #include "cpp_ref_impl/lam_model/types/package1/class_in_package.hpp"
 
-namespace cpp_ref_impl {
-namespace lam_model {
-namespace package1 {
+namespace cpp_ref_impl::lam_model::package1 {
 
 class class_in_package_generator {
 public:
@@ -49,6 +47,6 @@ public:
     static result_type* create_ptr(const unsigned int position);
 };
 
-} } }
+}
 
 #endif

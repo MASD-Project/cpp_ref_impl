@@ -28,14 +28,12 @@
 #include <iosfwd>
 #include "cpp_ref_impl/cpp_model/types/package_8/child_via_settings.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_8 {
+namespace cpp_ref_impl::cpp_model::package_8 {
 
 std::ostream&
 operator<<(std::ostream& s,
      const cpp_ref_impl::cpp_model::package_8::child_via_settings& v);
 
-} } }
+}
 
 #endif

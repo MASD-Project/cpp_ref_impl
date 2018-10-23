@@ -21,9 +21,7 @@
 #include <ostream>
 #include "cpp_ref_impl/lam_model/io/package1/class_in_package_io.hpp"
 
-namespace cpp_ref_impl {
-namespace lam_model {
-namespace package1 {
+namespace cpp_ref_impl::lam_model::package1 {
 
 std::ostream& operator<<(std::ostream& s, const class_in_package& v) {
     s << " { "
@@ -33,4 +31,4 @@ std::ostream& operator<<(std::ostream& s, const class_in_package& v) {
     return(s);
 }
 
-} } }
+}

@@ -21,8 +21,7 @@
 #include <ostream>
 #include "cpp_ref_impl/cpp_model/io/descendant_object_template_instance_io.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const descendant_object_template_instance& v) {
     s << " { "
@@ -33,4 +32,4 @@ std::ostream& operator<<(std::ostream& s, const descendant_object_template_insta
     return(s);
 }
 
-} }
+}

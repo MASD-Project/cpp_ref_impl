@@ -28,8 +28,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 one_line_generator::one_line_generator() : position_(0) { }
 
@@ -59,4 +58,4 @@ one_line_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

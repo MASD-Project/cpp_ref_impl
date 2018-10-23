@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/cpp_model/types/parent_outside.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 struct parent_outside_hasher {
 public:
     static std::size_t hash(const parent_outside& v);
 };
 
-} }
+}
 
 namespace std {
 

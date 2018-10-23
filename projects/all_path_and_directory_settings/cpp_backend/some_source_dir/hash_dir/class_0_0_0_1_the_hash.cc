@@ -30,8 +30,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl {
-namespace all_path_and_directory_settings {
+namespace cpp_ref_impl::all_path_and_directory_settings {
 
 std::size_t class_0_hasher::hash(const class_0& v) {
     std::size_t seed(0);
@@ -40,4 +39,4 @@ std::size_t class_0_hasher::hash(const class_0& v) {
     return seed;
 }
 
-} }
+}

@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/northwind/types/order_details_key.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 order_details_key::order_details_key(
     const cpp_ref_impl::northwind::order_id& order_id,
@@ -78,4 +77,4 @@ void order_details_key::product_id(const cpp_ref_impl::northwind::product_id&& v
     product_id_ = std::move(v);
 }
 
-} }
+}

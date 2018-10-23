@@ -28,8 +28,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/cpp_model/serialization/int_primitive_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 /**
  * @brief Test a primitive with an underlying int.
  */
@@ -77,7 +76,7 @@ private:
     int value_;
 };
 
-} }
+}
 
 namespace std {
 

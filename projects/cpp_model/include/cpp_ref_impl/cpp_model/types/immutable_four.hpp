@@ -31,8 +31,7 @@
 #include "cpp_ref_impl/cpp_model/types/immutable_one_builtin.hpp"
 #include "cpp_ref_impl/cpp_model/serialization/immutable_four_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 /**
  * @brief Immutable class with non-immutable and immutable pods as properties.
@@ -83,6 +82,6 @@ private:
     cpp_ref_impl::cpp_model::immutable_one_builtin prop_3_;
 };
 
-} }
+}
 
 #endif

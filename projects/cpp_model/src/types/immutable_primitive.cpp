@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/immutable_primitive.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 immutable_primitive::immutable_primitive(const short value)
     : value_(value) { }
@@ -34,4 +33,4 @@ bool immutable_primitive::operator==(const immutable_primitive& rhs) const {
     return value_ == rhs.value_;
 }
 
-} }
+}

@@ -31,8 +31,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/std_model/serialization/base_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class base {
 public:
@@ -79,6 +78,6 @@ inline bool operator==(const base& lhs, const base& rhs) {
     return lhs.equals(rhs);
 }
 
-} }
+}
 
 #endif

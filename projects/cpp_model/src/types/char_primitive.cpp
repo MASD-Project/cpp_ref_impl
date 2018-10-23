@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/char_primitive.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 char_primitive::char_primitive(const char value)
     : value_(value) { }
@@ -49,4 +48,4 @@ char_primitive& char_primitive::operator=(char_primitive other) {
     return *this;
 }
 
-} }
+}

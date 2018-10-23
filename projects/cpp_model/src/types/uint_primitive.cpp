@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/uint_primitive.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 uint_primitive::uint_primitive(const unsigned int value)
     : value_(value) { }
@@ -49,4 +48,4 @@ uint_primitive& uint_primitive::operator=(uint_primitive other) {
     return *this;
 }
 
-} }
+}

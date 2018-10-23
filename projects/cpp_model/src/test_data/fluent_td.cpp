@@ -41,8 +41,7 @@ create_cpp_ref_impl_cpp_model_value(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 fluent_generator::fluent_generator() : position_(0) { }
 
@@ -72,4 +71,4 @@ fluent_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

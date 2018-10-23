@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/cpp_model/types/move_ctor_empty_descendant.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 struct move_ctor_empty_descendant_hasher {
 public:
     static std::size_t hash(const move_ctor_empty_descendant& v);
 };
 
-} }
+}
 
 namespace std {
 

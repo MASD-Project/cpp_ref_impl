@@ -22,8 +22,7 @@
 #include "cpp_ref_impl/std_model/io/class_k_io.hpp"
 #include "cpp_ref_impl/std_model/io/string_primitive_io.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 std::ostream& operator<<(std::ostream& s, const class_k& v) {
     s << " { "
@@ -33,4 +32,4 @@ std::ostream& operator<<(std::ostream& s, const class_k& v) {
     return(s);
 }
 
-} }
+}

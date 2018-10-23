@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/double_primitive.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 double_primitive::double_primitive(const double value)
     : value_(value) { }
@@ -49,4 +48,4 @@ double_primitive& double_primitive::operator=(double_primitive other) {
     return *this;
 }
 
-} }
+}

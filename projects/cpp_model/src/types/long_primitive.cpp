@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/long_primitive.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 long_primitive::long_primitive(const long value)
     : value_(value) { }
@@ -49,4 +48,4 @@ long_primitive& long_primitive::operator=(long_primitive other) {
     return *this;
 }
 
-} }
+}

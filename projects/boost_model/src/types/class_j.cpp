@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/boost_model/types/class_j.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class_j::class_j(
     const cpp_ref_impl::boost_model::ptime_primitive& prop_0,
@@ -98,4 +97,4 @@ void class_j::prop_2(const cpp_ref_impl::boost_model::date_primitive&& v) {
     prop_2_ = std::move(v);
 }
 
-} }
+}

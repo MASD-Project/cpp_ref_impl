@@ -28,16 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/disable_facet_folders/package1/first_class.hpp"
 
-namespace cpp_ref_impl {
-namespace disable_facet_folders {
-namespace package1 {
+namespace cpp_ref_impl::disable_facet_folders::package1 {
 
 struct first_class_hasher {
 public:
     static std::size_t hash(const first_class& v);
 };
 
-} } }
+}
 
 namespace std {
 

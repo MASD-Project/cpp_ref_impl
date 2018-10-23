@@ -22,12 +22,11 @@
 #include "cpp_ref_impl/boost_model/io/class_base_io.hpp"
 #include "cpp_ref_impl/boost_model/io/class_derived_io.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 std::ostream& operator<<(std::ostream& s, const class_derived& v) {
     v.to_stream(s);
     return(s);
 }
 
-} }
+}

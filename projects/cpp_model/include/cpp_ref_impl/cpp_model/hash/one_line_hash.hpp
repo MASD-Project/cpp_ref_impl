@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/cpp_model/types/one_line.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 struct one_line_hasher {
 public:
     static std::size_t hash(const one_line& v);
 };
 
-} }
+}
 
 namespace std {
 

@@ -22,8 +22,7 @@
 #include "cpp_ref_impl/cpp_model/io/base_io.hpp"
 #include "cpp_ref_impl/cpp_model/types/descendant1.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 void descendant1::to_stream(std::ostream& s) const {
     s << " { "
@@ -42,4 +41,4 @@ bool descendant1::compare(const descendant1& /*rhs*/) const {
     return true;
 }
 
-} }
+}

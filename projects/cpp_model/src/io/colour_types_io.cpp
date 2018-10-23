@@ -23,8 +23,7 @@
 #include <stdexcept>
 #include "cpp_ref_impl/cpp_model/io/colour_types_io.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const colour_types& v) {
     s << "{ " << "\"__type__\": " << "\"colour_types\", " << "\"value\": ";
@@ -53,4 +52,4 @@ std::ostream& operator<<(std::ostream& s, const colour_types& v) {
     return s;
 }
 
-} }
+}

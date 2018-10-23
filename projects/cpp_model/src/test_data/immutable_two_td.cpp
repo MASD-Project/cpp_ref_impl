@@ -35,8 +35,7 @@ std::string create_std_string(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 immutable_two_generator::immutable_two_generator() : position_(0) { }
 
@@ -58,4 +57,4 @@ immutable_two_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

@@ -28,13 +28,12 @@
 #include <iosfwd>
 #include "cpp_ref_impl/cpp_model/types/multiple_parents_object_template_instance.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream&
 operator<<(std::ostream& s,
      const cpp_ref_impl::cpp_model::multiple_parents_object_template_instance& v);
 
-} }
+}
 
 #endif

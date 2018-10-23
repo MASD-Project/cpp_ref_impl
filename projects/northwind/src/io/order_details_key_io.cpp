@@ -23,8 +23,7 @@
 #include "cpp_ref_impl/northwind/io/product_id_io.hpp"
 #include "cpp_ref_impl/northwind/io/order_details_key_io.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 std::ostream& operator<<(std::ostream& s, const order_details_key& v) {
     s << " { "
@@ -35,4 +34,4 @@ std::ostream& operator<<(std::ostream& s, const order_details_key& v) {
     return(s);
 }
 
-} }
+}

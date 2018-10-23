@@ -59,8 +59,7 @@ inline std::size_t hash_std_unordered_map_cpp_ref_impl_std_model_class_a_cpp_ref
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 std::size_t class_f_hasher::hash(const class_f& v) {
     std::size_t seed(0);
@@ -72,4 +71,4 @@ std::size_t class_f_hasher::hash(const class_f& v) {
     return seed;
 }
 
-} }
+}

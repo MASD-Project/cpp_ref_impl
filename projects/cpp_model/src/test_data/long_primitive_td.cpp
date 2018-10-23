@@ -28,8 +28,7 @@ long create_long(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 long_primitive_generator::long_primitive_generator() : position_(0) { }
 
@@ -57,4 +56,4 @@ long_primitive_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

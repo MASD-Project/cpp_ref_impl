@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/ulong_primitive.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 ulong_primitive::ulong_primitive(const unsigned long value)
     : value_(value) { }
@@ -49,4 +48,4 @@ ulong_primitive& ulong_primitive::operator=(ulong_primitive other) {
     return *this;
 }
 
-} }
+}

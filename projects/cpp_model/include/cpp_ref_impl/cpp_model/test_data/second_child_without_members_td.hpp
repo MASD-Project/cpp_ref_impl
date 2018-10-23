@@ -27,8 +27,7 @@
 
 #include "cpp_ref_impl/cpp_model/types/second_child_without_members.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class second_child_without_members_generator {
 public:
@@ -48,6 +47,6 @@ public:
     static result_type* create_ptr(const unsigned int position);
 };
 
-} }
+}
 
 #endif

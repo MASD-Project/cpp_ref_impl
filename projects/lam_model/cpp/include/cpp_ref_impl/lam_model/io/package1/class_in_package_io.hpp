@@ -28,14 +28,12 @@
 #include <iosfwd>
 #include "cpp_ref_impl/lam_model/types/package1/class_in_package.hpp"
 
-namespace cpp_ref_impl {
-namespace lam_model {
-namespace package1 {
+namespace cpp_ref_impl::lam_model::package1 {
 
 std::ostream&
 operator<<(std::ostream& s,
      const cpp_ref_impl::lam_model::package1::class_in_package& v);
 
-} } }
+}
 
 #endif

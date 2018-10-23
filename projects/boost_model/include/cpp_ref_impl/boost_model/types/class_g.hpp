@@ -30,8 +30,7 @@
 #include <boost/filesystem/path.hpp>
 #include "cpp_ref_impl/boost_model/serialization/class_g_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class class_g final {
 public:
@@ -80,7 +79,7 @@ private:
     std::list<boost::filesystem::path> prop_1_;
 };
 
-} }
+}
 
 namespace std {
 

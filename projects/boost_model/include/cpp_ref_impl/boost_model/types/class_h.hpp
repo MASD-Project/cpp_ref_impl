@@ -29,8 +29,7 @@
 #include <boost/property_tree/ptree.hpp>
 #include "cpp_ref_impl/boost_model/serialization/class_h_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class class_h final {
 public:
@@ -71,7 +70,7 @@ private:
     boost::property_tree::ptree prop_0_;
 };
 
-} }
+}
 
 namespace std {
 

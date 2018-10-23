@@ -28,11 +28,10 @@
 #include <iosfwd>
 #include "cpp_ref_impl/cpp_model/types/book_types.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const book_types& v);
 
-} }
+}
 
 #endif

@@ -30,8 +30,7 @@ inline std::string tidy_up_string(std::string s) {
     return s;
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const multi_object_template_instance& v) {
     s << " { "
@@ -44,4 +43,4 @@ std::ostream& operator<<(std::ostream& s, const multi_object_template_instance& 
     return(s);
 }
 
-} }
+}

@@ -39,8 +39,7 @@ std::list<cpp_ref_impl::std_model::pkg1::class_c> create_std_list_cpp_ref_impl_s
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 derived_generator::derived_generator() : position_(0) { }
 
@@ -69,4 +68,4 @@ derived_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

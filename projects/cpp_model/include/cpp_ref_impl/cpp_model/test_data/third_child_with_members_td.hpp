@@ -27,8 +27,7 @@
 
 #include "cpp_ref_impl/cpp_model/types/third_child_with_members.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class third_child_with_members_generator {
 public:
@@ -43,6 +42,6 @@ public:
     static result_type* create_ptr(const unsigned int position);
 };
 
-} }
+}
 
 #endif

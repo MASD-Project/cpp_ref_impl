@@ -22,8 +22,7 @@
 #include "cpp_ref_impl/cpp_model/types/child_with_members.hpp"
 #include "cpp_ref_impl/cpp_model/io/parent_without_members_io.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 child_with_members::child_with_members()
     : prop_0_(static_cast<unsigned int>(0)) { }
@@ -74,4 +73,4 @@ void child_with_members::prop_0(const unsigned int v) {
     prop_0_ = v;
 }
 
-} }
+}

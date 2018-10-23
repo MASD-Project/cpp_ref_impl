@@ -28,12 +28,11 @@
 #include <iosfwd>
 #include "cpp_ref_impl/northwind/types/customer_id.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 std::ostream&
 operator<<(std::ostream& s, const cpp_ref_impl::northwind::customer_id& v);
 
-} }
+}
 
 #endif

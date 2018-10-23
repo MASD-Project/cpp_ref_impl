@@ -25,11 +25,10 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace all_path_and_directory_settings {
+namespace cpp_ref_impl::all_path_and_directory_settings {
 
 class class_0;
 
-} }
+}
 
 #endif

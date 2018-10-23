@@ -28,13 +28,12 @@
 #include <iosfwd>
 #include "cpp_ref_impl/cpp_model/types/move_ctor_empty_descendant.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream&
 operator<<(std::ostream& s,
      const cpp_ref_impl::cpp_model::move_ctor_empty_descendant& v);
 
-} }
+}
 
 #endif

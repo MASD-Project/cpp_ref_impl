@@ -29,8 +29,7 @@
 #include "cpp_ref_impl/std_model/serialization/derived_ser.hpp"
 #include "cpp_ref_impl/std_model/serialization/registrar_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 template<typename Archive>
 void register_types(Archive& ar) {
@@ -49,4 +48,4 @@ template void register_types(boost::archive::binary_iarchive& ar);
 template void register_types(boost::archive::xml_oarchive& ar);
 template void register_types(boost::archive::xml_iarchive& ar);
 
-} }
+}

@@ -21,8 +21,7 @@
 #include <ostream>
 #include "cpp_ref_impl/cpp_model/types/move_ctor_base.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 move_ctor_base::move_ctor_base(move_ctor_base&& rhs)
     : prop_0_(std::move(rhs.prop_0_)) { }
@@ -62,4 +61,4 @@ void move_ctor_base::prop_0(const boost::filesystem::path&& v) {
     prop_0_ = std::move(v);
 }
 
-} }
+}

@@ -21,8 +21,7 @@
 #include <ostream>
 #include "cpp_ref_impl/all_path_and_directory_settings/io_dir/class_0_0_1_0_the_io.hh"
 
-namespace cpp_ref_impl {
-namespace all_path_and_directory_settings {
+namespace cpp_ref_impl::all_path_and_directory_settings {
 
 std::ostream& operator<<(std::ostream& s, const class_0& v) {
     s << " { "
@@ -32,4 +31,4 @@ std::ostream& operator<<(std::ostream& s, const class_0& v) {
     return(s);
 }
 
-} }
+}

@@ -102,8 +102,7 @@ inline std::ostream& operator<<(std::ostream& s, const std::deque<std::deque<uns
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 std::ostream& operator<<(std::ostream& s, const class_e& v) {
     s << " { "
@@ -118,4 +117,4 @@ std::ostream& operator<<(std::ostream& s, const class_e& v) {
     return(s);
 }
 
-} }
+}

@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/northwind/types/customers.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 customers::customers(
     const cpp_ref_impl::northwind::customer_id& customer_id,
@@ -278,4 +277,4 @@ void customers::fax(const std::string&& v) {
     fax_ = std::move(v);
 }
 
-} }
+}

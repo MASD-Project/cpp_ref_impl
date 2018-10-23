@@ -28,9 +28,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/cpp_model/serialization/package_10/consume_object_template_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_10 {
+namespace cpp_ref_impl::cpp_model::package_10 {
 
 class consume_object_template final {
 public:
@@ -69,7 +67,7 @@ private:
     int prop_0_;
 };
 
-} } }
+}
 
 namespace std {
 

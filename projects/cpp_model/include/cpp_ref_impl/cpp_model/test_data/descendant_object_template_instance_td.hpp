@@ -27,8 +27,7 @@
 
 #include "cpp_ref_impl/cpp_model/types/descendant_object_template_instance.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class descendant_object_template_instance_generator {
 public:
@@ -48,6 +47,6 @@ public:
     static result_type* create_ptr(const unsigned int position);
 };
 
-} }
+}
 
 #endif

@@ -29,8 +29,7 @@
 #include "cpp_ref_impl/cpp_model/types/descendant3_fwd.hpp"
 #include "cpp_ref_impl/cpp_model/types/non_final_leaf_fwd.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 /**
  * @brief Visitor for base
@@ -73,6 +72,6 @@ public:
 
 inline base_visitor::~base_visitor() noexcept { }
 
-} }
+}
 
 #endif

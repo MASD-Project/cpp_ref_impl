@@ -25,14 +25,13 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 enum class test_all_knobs {
     an_enumerator,
     another_enumerator ///< A comment.
 };
 
-} }
+}
 
 #endif

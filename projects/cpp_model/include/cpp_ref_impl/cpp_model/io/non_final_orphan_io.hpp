@@ -28,13 +28,12 @@
 #include <iosfwd>
 #include "cpp_ref_impl/cpp_model/types/non_final_orphan.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream&
 operator<<(std::ostream& s,
      const cpp_ref_impl::cpp_model::non_final_orphan& v);
 
-} }
+}
 
 #endif

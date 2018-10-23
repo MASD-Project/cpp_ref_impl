@@ -20,9 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/test_data/package_4/shape_types_td.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_4 {
+namespace cpp_ref_impl::cpp_model::package_4 {
 
 shape_types_generator::shape_types_generator() : position_(0) { }
 void shape_types_generator::
@@ -42,4 +40,4 @@ shape_types_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+}

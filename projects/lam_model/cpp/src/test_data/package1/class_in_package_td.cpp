@@ -28,9 +28,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace lam_model {
-namespace package1 {
+namespace cpp_ref_impl::lam_model::package1 {
 
 class_in_package_generator::class_in_package_generator() : position_(0) { }
 
@@ -58,4 +56,4 @@ class_in_package_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+}

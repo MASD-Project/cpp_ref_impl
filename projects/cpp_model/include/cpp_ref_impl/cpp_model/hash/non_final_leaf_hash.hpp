@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/cpp_model/types/non_final_leaf.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 struct non_final_leaf_hasher {
 public:
     static std::size_t hash(const non_final_leaf& v);
 };
 
-} }
+}
 
 namespace std {
 

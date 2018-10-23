@@ -21,8 +21,7 @@
 #include <ostream>
 #include "cpp_ref_impl/cpp_model/types/parent_without_members.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 void parent_without_members::to_stream(std::ostream& s) const {
     s << " { "
@@ -36,4 +35,4 @@ bool parent_without_members::compare(const parent_without_members& /*rhs*/) cons
     return true;
 }
 
-} }
+}

@@ -72,8 +72,7 @@ inline std::size_t hash_std_vector_std_vector_unsigned_int(const std::vector<std
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 std::size_t class_b_hasher::hash(const class_b& v) {
     std::size_t seed(0);
@@ -88,4 +87,4 @@ std::size_t class_b_hasher::hash(const class_b& v) {
     return seed;
 }
 
-} }
+}

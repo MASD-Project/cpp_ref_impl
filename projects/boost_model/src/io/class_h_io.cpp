@@ -23,8 +23,7 @@
 #include <boost/property_tree/json_parser.hpp>
 #include "cpp_ref_impl/boost_model/io/class_h_io.hpp"
 
-namespace boost {
-namespace property_tree {
+namespace boost::property_tree {
 
 inline std::ostream& operator<<(std::ostream& s, const boost::property_tree::ptree& v) {
     std::ostringstream ss;
@@ -38,10 +37,9 @@ inline std::ostream& operator<<(std::ostream& s, const boost::property_tree::ptr
     return s;
 }
 
-} }
+}
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 std::ostream& operator<<(std::ostream& s, const class_h& v) {
     s << " { "
@@ -51,4 +49,4 @@ std::ostream& operator<<(std::ostream& s, const class_h& v) {
     return(s);
 }
 
-} }
+}

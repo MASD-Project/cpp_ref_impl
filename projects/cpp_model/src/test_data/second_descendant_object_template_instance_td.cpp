@@ -35,8 +35,7 @@ std::string create_std_string(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 second_descendant_object_template_instance_generator::second_descendant_object_template_instance_generator() : position_(0) { }
 
@@ -66,4 +65,4 @@ second_descendant_object_template_instance_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

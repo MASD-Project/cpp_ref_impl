@@ -31,8 +31,7 @@
 #include "cpp_ref_impl/cpp_model/types/package_4/shape_types.hpp"
 #include "cpp_ref_impl/cpp_model/serialization/a_class_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class a_class final {
 public:
@@ -82,7 +81,7 @@ private:
     cpp_ref_impl::cpp_model::package_4::shape_types shape_type_;
 };
 
-} }
+}
 
 namespace std {
 

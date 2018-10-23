@@ -27,9 +27,7 @@
 
 #include "cpp_ref_impl/all_path_and_directory_settings/types_dir/package_0/class_1_0_5_0_the_types.hh"
 
-namespace cpp_ref_impl {
-namespace all_path_and_directory_settings {
-namespace package_0 {
+namespace cpp_ref_impl::all_path_and_directory_settings::package_0 {
 
 class class_1_generator {
 public:
@@ -49,6 +47,6 @@ public:
     static result_type* create_ptr(const unsigned int position);
 };
 
-} } }
+}
 
 #endif

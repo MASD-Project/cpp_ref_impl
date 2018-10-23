@@ -28,8 +28,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/cpp_model/serialization/class_c_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class class_c final {
 public:
@@ -54,6 +53,6 @@ public:
 
 };
 
-} }
+}
 
 #endif

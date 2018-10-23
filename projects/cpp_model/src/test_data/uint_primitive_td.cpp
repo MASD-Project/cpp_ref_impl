@@ -28,8 +28,7 @@ unsigned int create_unsigned_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 uint_primitive_generator::uint_primitive_generator() : position_(0) { }
 
@@ -57,4 +56,4 @@ uint_primitive_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

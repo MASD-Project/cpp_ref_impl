@@ -28,14 +28,12 @@
 #include <iosfwd>
 #include "cpp_ref_impl/enable_facet_io/types/package1/first_class.hpp"
 
-namespace cpp_ref_impl {
-namespace enable_facet_io {
-namespace package1 {
+namespace cpp_ref_impl::enable_facet_io::package1 {
 
 std::ostream&
 operator<<(std::ostream& s,
      const cpp_ref_impl::enable_facet_io::package1::first_class& v);
 
-} } }
+}
 
 #endif

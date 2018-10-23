@@ -21,8 +21,7 @@
 #include <ostream>
 #include "cpp_ref_impl/northwind/io/shipper_id_io.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 std::ostream& operator<<(std::ostream& s, const shipper_id& v) {
 
@@ -34,4 +33,4 @@ std::ostream& operator<<(std::ostream& s, const shipper_id& v) {
     return s;
 }
 
-} }
+}

@@ -30,8 +30,7 @@
 #include "cpp_ref_impl/cpp_model/types/move_ctor_base.hpp"
 #include "cpp_ref_impl/cpp_model/serialization/move_ctor_empty_descendant_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 /**
  * @brief Descendant class for scenario that tests code generated move contructors.
@@ -72,7 +71,7 @@ public:
 
 };
 
-} }
+}
 
 namespace std {
 

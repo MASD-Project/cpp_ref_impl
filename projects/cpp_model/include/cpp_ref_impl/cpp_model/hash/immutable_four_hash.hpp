@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/cpp_model/types/immutable_four.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 struct immutable_four_hasher {
 public:
     static std::size_t hash(const immutable_four& v);
 };
 
-} }
+}
 
 namespace std {
 

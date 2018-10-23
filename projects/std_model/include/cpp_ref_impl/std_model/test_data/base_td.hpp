@@ -27,8 +27,7 @@
 
 #include "cpp_ref_impl/std_model/types/base.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class base_generator {
 public:
@@ -43,6 +42,6 @@ public:
     static result_type* create_ptr(const unsigned int position);
 };
 
-} }
+}
 
 #endif

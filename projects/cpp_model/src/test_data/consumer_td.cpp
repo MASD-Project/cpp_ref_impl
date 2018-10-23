@@ -90,8 +90,7 @@ create_cpp_ref_impl_cpp_model_bool_primitive(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 consumer_generator::consumer_generator() : position_(0) { }
 
@@ -129,4 +128,4 @@ consumer_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

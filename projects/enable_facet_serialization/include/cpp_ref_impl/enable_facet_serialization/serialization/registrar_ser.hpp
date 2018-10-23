@@ -25,12 +25,11 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace enable_facet_serialization {
+namespace cpp_ref_impl::enable_facet_serialization {
 
 template<typename Archive>
 void register_types(Archive& ar);
 
-} }
+}
 
 #endif

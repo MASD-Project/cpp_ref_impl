@@ -30,9 +30,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl {
-namespace lam_model {
-namespace package1 {
+namespace cpp_ref_impl::lam_model::package1 {
 
 std::size_t class_in_package_hasher::hash(const class_in_package& v) {
     std::size_t seed(0);
@@ -41,4 +39,4 @@ std::size_t class_in_package_hasher::hash(const class_in_package& v) {
     return seed;
 }
 
-} } }
+}

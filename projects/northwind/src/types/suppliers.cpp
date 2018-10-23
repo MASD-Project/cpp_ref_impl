@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/northwind/types/suppliers.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 suppliers::suppliers(
     const cpp_ref_impl::northwind::supplier_id& supplier_id,
@@ -278,4 +277,4 @@ void suppliers::home_page(const std::string&& v) {
     home_page_ = std::move(v);
 }
 
-} }
+}

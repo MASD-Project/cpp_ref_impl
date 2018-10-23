@@ -28,9 +28,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace two_layers_with_objects {
-namespace package_1 {
+namespace cpp_ref_impl::two_layers_with_objects::package_1 {
 
 class_1_generator::class_1_generator() : position_(0) { }
 
@@ -58,4 +56,4 @@ class_1_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+}

@@ -38,8 +38,7 @@ inline std::size_t hash_boost_posix_time_ptime(const boost::posix_time::ptime& v
 
 }
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 std::size_t ptime_primitive_hasher::hash(const ptime_primitive& v) {
     std::size_t seed(0);
@@ -47,4 +46,4 @@ std::size_t ptime_primitive_hasher::hash(const ptime_primitive& v) {
     return seed;
 }
 
-} }
+}

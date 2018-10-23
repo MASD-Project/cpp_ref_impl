@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/immutable_two.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 immutable_two::immutable_two()
     : prop_0_(static_cast<bool>(0)) { }
@@ -45,4 +44,4 @@ const std::string& immutable_two::prop_1() const {
     return prop_1_;
 }
 
-} }
+}

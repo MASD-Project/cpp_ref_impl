@@ -30,8 +30,7 @@
 #include "cpp_ref_impl/cpp_model/types/base.hpp"
 #include "cpp_ref_impl/cpp_model/serialization/descendant1_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class descendant1 : public cpp_ref_impl::cpp_model::base {
 public:
@@ -68,6 +67,6 @@ inline bool operator==(const descendant1& lhs, const descendant1& rhs) {
     return lhs.equals(rhs);
 }
 
-} }
+}
 
 #endif

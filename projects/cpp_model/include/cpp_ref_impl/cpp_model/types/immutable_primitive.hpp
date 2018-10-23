@@ -28,8 +28,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/cpp_model/serialization/immutable_primitive_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 /**
  * @brief Test for a primitive which is also immutable.
  */
@@ -77,6 +76,6 @@ private:
     short value_;
 };
 
-} }
+}
 
 #endif

@@ -29,8 +29,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/std_model/serialization/builtins_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class builtins final {
 public:
@@ -105,7 +104,7 @@ private:
     std::uint64_t prop_7_;
 };
 
-} }
+}
 
 namespace std {
 

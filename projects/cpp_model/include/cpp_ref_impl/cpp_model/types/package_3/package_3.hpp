@@ -25,15 +25,10 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-
 /**
  * @brief package
  */
-namespace package_3 {
+namespace cpp_ref_impl::cpp_model {
 }
-
-} }
 
 #endif

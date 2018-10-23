@@ -83,8 +83,7 @@ inline std::ostream& operator<<(std::ostream& s, const std::vector<std::pair<std
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 std::ostream& operator<<(std::ostream& s, const class_j& v) {
     s << " { "
@@ -96,4 +95,4 @@ std::ostream& operator<<(std::ostream& s, const class_j& v) {
     return(s);
 }
 
-} }
+}

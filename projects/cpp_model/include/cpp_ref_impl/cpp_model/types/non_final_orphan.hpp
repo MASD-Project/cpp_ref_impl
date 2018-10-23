@@ -28,8 +28,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/cpp_model/serialization/non_final_orphan_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class non_final_orphan {
 public:
@@ -68,7 +67,7 @@ private:
     int prop_0_;
 };
 
-} }
+}
 
 namespace std {
 

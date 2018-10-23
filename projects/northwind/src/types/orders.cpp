@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/northwind/types/orders.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 orders::orders()
     : ship_via_(static_cast<int>(0)),
@@ -306,4 +305,4 @@ void orders::ship_country(const std::string&& v) {
     ship_country_ = std::move(v);
 }
 
-} }
+}

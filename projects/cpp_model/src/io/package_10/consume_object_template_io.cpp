@@ -21,9 +21,7 @@
 #include <ostream>
 #include "cpp_ref_impl/cpp_model/io/package_10/consume_object_template_io.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_10 {
+namespace cpp_ref_impl::cpp_model::package_10 {
 
 std::ostream& operator<<(std::ostream& s, const consume_object_template& v) {
     s << " { "
@@ -33,4 +31,4 @@ std::ostream& operator<<(std::ostream& s, const consume_object_template& v) {
     return(s);
 }
 
-} } }
+}

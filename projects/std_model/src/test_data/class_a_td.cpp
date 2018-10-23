@@ -31,8 +31,7 @@ std::string create_std_string(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class_a_generator::class_a_generator() : position_(0) { }
 
@@ -61,4 +60,4 @@ class_a_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

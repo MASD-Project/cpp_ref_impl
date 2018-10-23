@@ -32,8 +32,7 @@
 #include "cpp_ref_impl/boost_model/types/class_derived.hpp"
 #include "cpp_ref_impl/boost_model/serialization/class_e_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class class_e final {
 public:
@@ -96,7 +95,7 @@ private:
     boost::variant<int, std::string, char> prop_3_;
 };
 
-} }
+}
 
 namespace std {
 

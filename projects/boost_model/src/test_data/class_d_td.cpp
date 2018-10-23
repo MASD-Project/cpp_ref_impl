@@ -76,8 +76,7 @@ create_boost_optional_std_vector_cpp_ref_impl_boost_model_class_a(unsigned int p
 
 }
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class_d_generator::class_d_generator() : position_(0) { }
 
@@ -108,4 +107,4 @@ class_d_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

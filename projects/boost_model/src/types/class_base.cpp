@@ -21,8 +21,7 @@
 #include <ostream>
 #include "cpp_ref_impl/boost_model/types/class_base.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class_base::class_base()
     : prop_0_(static_cast<int>(0)) { }
@@ -54,4 +53,4 @@ void class_base::prop_0(const int v) {
     prop_0_ = v;
 }
 
-} }
+}

@@ -23,12 +23,11 @@
 #include "cpp_ref_impl/cpp_model/io/descendant1_io.hpp"
 #include "cpp_ref_impl/cpp_model/io/descendant3_io.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const descendant3& v) {
     v.to_stream(s);
     return(s);
 }
 
-} }
+}

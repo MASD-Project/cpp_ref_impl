@@ -27,9 +27,7 @@
 
 #include "cpp_ref_impl/cpp_model/types/package_7/parent.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_7 {
+namespace cpp_ref_impl::cpp_model::package_7 {
 
 class parent_generator {
 public:
@@ -44,6 +42,6 @@ public:
     static result_type* create_ptr(const unsigned int position);
 };
 
-} } }
+}
 
 #endif

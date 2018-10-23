@@ -27,8 +27,7 @@
 
 #include "cpp_ref_impl/cpp_model/types/hex_flags.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class hex_flags_generator {
 public:
@@ -46,6 +45,6 @@ private:
     unsigned int position_;
 };
 
-} }
+}
 
 #endif

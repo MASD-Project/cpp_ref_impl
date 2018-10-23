@@ -37,8 +37,7 @@ std::string create_std_string(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 suppliers_generator::suppliers_generator() : position_(0) { }
 
@@ -77,4 +76,4 @@ suppliers_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

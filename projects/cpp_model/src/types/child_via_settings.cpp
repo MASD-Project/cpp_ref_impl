@@ -22,8 +22,7 @@
 #include "cpp_ref_impl/cpp_model/types/child_via_settings.hpp"
 #include "cpp_ref_impl/cpp_model/io/parent_with_members_io.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 child_via_settings::child_via_settings()
     : prop_1_(static_cast<int>(0)) { }
@@ -76,4 +75,4 @@ void child_via_settings::prop_1(const int v) {
     prop_1_ = v;
 }
 
-} }
+}

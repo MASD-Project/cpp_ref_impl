@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/cpp_model/types/descendant3.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 struct descendant3_hasher {
 public:
     static std::size_t hash(const descendant3& v);
 };
 
-} }
+}
 
 namespace std {
 

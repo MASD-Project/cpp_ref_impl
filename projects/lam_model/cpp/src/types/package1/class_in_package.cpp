@@ -20,9 +20,7 @@
  */
 #include "cpp_ref_impl/lam_model/types/package1/class_in_package.hpp"
 
-namespace cpp_ref_impl {
-namespace lam_model {
-namespace package1 {
+namespace cpp_ref_impl::lam_model::package1 {
 
 class_in_package::class_in_package()
     : prop_0_(static_cast<int>(0)) { }
@@ -53,4 +51,4 @@ void class_in_package::prop_0(const int v) {
     prop_0_ = v;
 }
 
-} } }
+}

@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/boost_model/types/date_primitive.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 date_primitive::date_primitive(const boost::gregorian::date& value)
     : value_(value) { }
@@ -57,4 +56,4 @@ date_primitive& date_primitive::operator=(date_primitive other) {
     return *this;
 }
 
-} }
+}

@@ -28,9 +28,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/northwind/serialization/package/class_0_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
-namespace package {
+namespace cpp_ref_impl::northwind::package {
 
 class class_0 final {
 public:
@@ -69,7 +67,7 @@ private:
     int prop_0_;
 };
 
-} } }
+}
 
 namespace std {
 

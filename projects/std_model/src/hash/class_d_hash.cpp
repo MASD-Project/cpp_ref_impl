@@ -72,8 +72,7 @@ inline std::size_t hash_std_list_std_list_unsigned_int(const std::list<std::list
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 std::size_t class_d_hasher::hash(const class_d& v) {
     std::size_t seed(0);
@@ -88,4 +87,4 @@ std::size_t class_d_hasher::hash(const class_d& v) {
     return seed;
 }
 
-} }
+}

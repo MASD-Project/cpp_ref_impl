@@ -5,12 +5,11 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace split_project {
+namespace cpp_ref_impl::split_project {
 
 template<typename Archive>
 void register_types(Archive& ar);
 
-} }
+}
 
 #endif

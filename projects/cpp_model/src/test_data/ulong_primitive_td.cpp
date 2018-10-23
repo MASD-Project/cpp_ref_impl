@@ -28,8 +28,7 @@ unsigned long create_unsigned_long(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 ulong_primitive_generator::ulong_primitive_generator() : position_(0) { }
 
@@ -57,4 +56,4 @@ ulong_primitive_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

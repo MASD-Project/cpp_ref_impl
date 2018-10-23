@@ -28,8 +28,7 @@ double create_double(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 double_primitive_generator::double_primitive_generator() : position_(0) { }
 
@@ -57,4 +56,4 @@ double_primitive_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

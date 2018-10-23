@@ -28,8 +28,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/boost_model/serialization/class_a_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class class_a final {
 public:
@@ -68,7 +67,7 @@ private:
     unsigned int prop_0_;
 };
 
-} }
+}
 
 namespace std {
 

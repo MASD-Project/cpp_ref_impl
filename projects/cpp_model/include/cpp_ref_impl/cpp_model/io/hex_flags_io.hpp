@@ -28,11 +28,10 @@
 #include <iosfwd>
 #include "cpp_ref_impl/cpp_model/types/hex_flags.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const hex_flags& v);
 
-} }
+}
 
 #endif

@@ -30,8 +30,7 @@
 #include "cpp_ref_impl/cpp_model/types/parent_with_members.hpp"
 #include "cpp_ref_impl/cpp_model/serialization/third_child_with_members_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class third_child_with_members : public cpp_ref_impl::cpp_model::parent_with_members {
 public:
@@ -80,6 +79,6 @@ inline bool operator==(const third_child_with_members& lhs, const third_child_wi
     return lhs.equals(rhs);
 }
 
-} }
+}
 
 #endif

@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/consumer.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 consumer::consumer(
     const cpp_ref_impl::cpp_model::short_primitive& prop0,
@@ -258,4 +257,4 @@ void consumer::prop10(const cpp_ref_impl::cpp_model::bool_primitive&& v) {
     prop10_ = std::move(v);
 }
 
-} }
+}

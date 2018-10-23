@@ -21,8 +21,7 @@
 #include <ostream>
 #include "cpp_ref_impl/cpp_model/io/long_primitive_io.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const long_primitive& v) {
 
@@ -34,4 +33,4 @@ std::ostream& operator<<(std::ostream& s, const long_primitive& v) {
     return s;
 }
 
-} }
+}

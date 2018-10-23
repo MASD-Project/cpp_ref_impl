@@ -28,9 +28,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace northwind {
-namespace package {
+namespace cpp_ref_impl::northwind::package {
 
 class_0_generator::class_0_generator() : position_(0) { }
 
@@ -58,4 +56,4 @@ class_0_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+}

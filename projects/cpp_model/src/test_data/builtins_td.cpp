@@ -78,8 +78,7 @@ float create_float(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 builtins_generator::builtins_generator() : position_(0) { }
 
@@ -119,4 +118,4 @@ builtins_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

@@ -76,8 +76,7 @@ inline std::size_t hash_std_vector_boost_shared_ptr_cpp_ref_impl_boost_model_cla
 
 }
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 std::size_t class_b_hasher::hash(const class_b& v) {
     std::size_t seed(0);
@@ -93,4 +92,4 @@ std::size_t class_b_hasher::hash(const class_b& v) {
     return seed;
 }
 
-} }
+}

@@ -23,8 +23,7 @@
 #include <stdexcept>
 #include "cpp_ref_impl/cpp_model/io/test_all_knobs_io.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const test_all_knobs& v) {
     s << "{ " << "\"__type__\": " << "\"test_all_knobs\", " << "\"value\": ";
@@ -44,4 +43,4 @@ std::ostream& operator<<(std::ostream& s, const test_all_knobs& v) {
     return s;
 }
 
-} }
+}

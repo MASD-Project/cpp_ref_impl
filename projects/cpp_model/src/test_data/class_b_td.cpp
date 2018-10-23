@@ -30,8 +30,7 @@ create_cpp_ref_impl_cpp_model_class_a(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class_b_generator::class_b_generator() : position_(0) { }
 
@@ -59,4 +58,4 @@ class_b_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

@@ -42,8 +42,7 @@ create_cpp_ref_impl_boost_model_date_primitive(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class_j_generator::class_j_generator() : position_(0) { }
 
@@ -73,4 +72,4 @@ class_j_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

@@ -23,8 +23,7 @@
 #include "cpp_ref_impl/northwind/io/order_details_io.hpp"
 #include "cpp_ref_impl/northwind/io/order_details_key_io.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 std::ostream& operator<<(std::ostream& s, const order_details& v) {
     boost::io::ios_flags_saver ifs(s);
@@ -43,4 +42,4 @@ std::ostream& operator<<(std::ostream& s, const order_details& v) {
     return(s);
 }
 
-} }
+}

@@ -67,8 +67,7 @@ bool create_bool(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace lam_model {
+namespace cpp_ref_impl::lam_model {
 
 builtins_generator::builtins_generator() : position_(0) { }
 
@@ -105,4 +104,4 @@ builtins_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

@@ -28,13 +28,12 @@
 #include <iosfwd>
 #include "cpp_ref_impl/std_model/types/class_k.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 std::ostream&
 operator<<(std::ostream& s,
      const cpp_ref_impl::std_model::class_k& v);
 
-} }
+}
 
 #endif

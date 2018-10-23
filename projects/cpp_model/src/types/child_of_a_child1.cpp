@@ -22,8 +22,7 @@
 #include "cpp_ref_impl/cpp_model/types/child_of_a_child1.hpp"
 #include "cpp_ref_impl/cpp_model/io/third_child_with_members_io.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 child_of_a_child1::child_of_a_child1(
     const int prop_0,
@@ -61,4 +60,4 @@ child_of_a_child1& child_of_a_child1::operator=(child_of_a_child1 other) {
     return *this;
 }
 
-} }
+}

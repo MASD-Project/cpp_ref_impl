@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/cpp_model/types/third_child_with_members.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 struct third_child_with_members_hasher {
 public:
     static std::size_t hash(const third_child_with_members& v);
 };
 
-} }
+}
 
 namespace std {
 

@@ -30,8 +30,7 @@
 #include "cpp_ref_impl/cpp_model/types/parent_without_members.hpp"
 #include "cpp_ref_impl/cpp_model/serialization/child_with_members_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class child_with_members final : public cpp_ref_impl::cpp_model::parent_without_members {
 public:
@@ -77,7 +76,7 @@ private:
     unsigned int prop_0_;
 };
 
-} }
+}
 
 namespace std {
 

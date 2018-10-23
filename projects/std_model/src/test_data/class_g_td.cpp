@@ -83,8 +83,7 @@ std::unordered_map<std::string, cpp_ref_impl::std_model::class_a> create_std_uno
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class_g_generator::class_g_generator() : position_(0) { }
 
@@ -114,4 +113,4 @@ class_g_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

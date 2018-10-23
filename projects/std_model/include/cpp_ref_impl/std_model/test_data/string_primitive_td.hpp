@@ -27,8 +27,7 @@
 
 #include "cpp_ref_impl/std_model/types/string_primitive.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class string_primitive_generator {
 public:
@@ -49,6 +48,6 @@ public:
     static result_type* create_ptr(const unsigned int position);
 };
 
-} }
+}
 
 #endif

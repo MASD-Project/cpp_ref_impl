@@ -25,12 +25,10 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_9 {
+namespace cpp_ref_impl::cpp_model::package_9 {
 
 class child_via_settings;
 
-} } }
+}
 
 #endif

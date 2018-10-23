@@ -30,8 +30,7 @@
 #include "cpp_ref_impl/northwind/types/category_id.hpp"
 #include "cpp_ref_impl/northwind/serialization/categories_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 class categories final {
 public:
@@ -92,7 +91,7 @@ private:
     std::string picutre_;
 };
 
-} }
+}
 
 namespace std {
 

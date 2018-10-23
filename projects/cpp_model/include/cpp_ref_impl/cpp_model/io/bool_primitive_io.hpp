@@ -28,12 +28,11 @@
 #include <iosfwd>
 #include "cpp_ref_impl/cpp_model/types/bool_primitive.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream&
 operator<<(std::ostream& s, const cpp_ref_impl::cpp_model::bool_primitive& v);
 
-} }
+}
 
 #endif

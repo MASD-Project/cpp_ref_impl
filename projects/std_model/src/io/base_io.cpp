@@ -22,12 +22,11 @@
 #include <boost/algorithm/string.hpp>
 #include "cpp_ref_impl/std_model/io/base_io.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 std::ostream& operator<<(std::ostream& s, const base& v) {
     v.to_stream(s);
     return(s);
 }
 
-} }
+}

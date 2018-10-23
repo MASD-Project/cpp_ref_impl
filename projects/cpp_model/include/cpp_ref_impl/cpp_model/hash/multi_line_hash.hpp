@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/cpp_model/types/multi_line.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 struct multi_line_hasher {
 public:
     static std::size_t hash(const multi_line& v);
 };
 
-} }
+}
 
 namespace std {
 

@@ -31,8 +31,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::size_t third_child_with_members_hasher::hash(const third_child_with_members& v) {
     std::size_t seed(0);
@@ -43,4 +42,4 @@ std::size_t third_child_with_members_hasher::hash(const third_child_with_members
     return seed;
 }
 
-} }
+}

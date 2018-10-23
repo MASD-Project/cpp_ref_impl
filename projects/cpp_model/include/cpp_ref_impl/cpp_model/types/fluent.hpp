@@ -30,8 +30,7 @@
 #include "cpp_ref_impl/cpp_model/types/value.hpp"
 #include "cpp_ref_impl/cpp_model/serialization/fluent_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 /**
  * @brief Tests the fluent scenario across the different types of properties.
@@ -88,7 +87,7 @@ private:
     cpp_ref_impl::cpp_model::value prop_2_;
 };
 
-} }
+}
 
 namespace std {
 

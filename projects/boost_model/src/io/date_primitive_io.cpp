@@ -22,8 +22,7 @@
 #include <boost/date_time/gregorian/gregorian.hpp>
 #include "cpp_ref_impl/boost_model/io/date_primitive_io.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 std::ostream& operator<<(std::ostream& s, const date_primitive& v) {
 
@@ -35,4 +34,4 @@ std::ostream& operator<<(std::ostream& s, const date_primitive& v) {
     return s;
 }
 
-} }
+}

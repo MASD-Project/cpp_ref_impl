@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/cpp_model/types/move_ctor_base.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 struct move_ctor_base_hasher {
 public:
     static std::size_t hash(const move_ctor_base& v);
 };
 
-} }
+}
 
 namespace std {
 

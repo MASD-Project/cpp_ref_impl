@@ -20,9 +20,7 @@
  */
 #include "cpp_ref_impl/two_layers_with_objects/types/Package_2/class_2.hpp"
 
-namespace cpp_ref_impl {
-namespace two_layers_with_objects {
-namespace Package_2 {
+namespace cpp_ref_impl::two_layers_with_objects::Package_2 {
 
 class_2::class_2()
     : prop_0_(static_cast<int>(0)) { }
@@ -53,4 +51,4 @@ void class_2::prop_0(const int v) {
     prop_0_ = v;
 }
 
-} } }
+}

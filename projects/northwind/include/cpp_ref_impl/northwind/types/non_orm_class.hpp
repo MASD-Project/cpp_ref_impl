@@ -28,8 +28,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/northwind/serialization/non_orm_class_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 /**
  * @brief test the ODB behaviour for non-ORM classes.
@@ -71,7 +70,7 @@ private:
     int prop_0_;
 };
 
-} }
+}
 
 namespace std {
 

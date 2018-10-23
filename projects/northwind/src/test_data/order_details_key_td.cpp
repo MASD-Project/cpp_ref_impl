@@ -36,8 +36,7 @@ create_cpp_ref_impl_northwind_product_id(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 order_details_key_generator::order_details_key_generator() : position_(0) { }
 
@@ -66,4 +65,4 @@ order_details_key_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

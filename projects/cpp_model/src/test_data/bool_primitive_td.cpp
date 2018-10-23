@@ -28,8 +28,7 @@ bool create_bool(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 bool_primitive_generator::bool_primitive_generator() : position_(0) { }
 
@@ -57,4 +56,4 @@ bool_primitive_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

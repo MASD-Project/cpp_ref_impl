@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/builtins.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 builtins::builtins()
     : bool_property_(static_cast<bool>(0)),
@@ -209,4 +208,4 @@ void builtins::float_property(const float v) {
     float_property_ = v;
 }
 
-} }
+}

@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/std_model/types/string_primitive.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 string_primitive::string_primitive(const std::string& value)
     : value_(value) { }
@@ -57,4 +56,4 @@ string_primitive& string_primitive::operator=(string_primitive other) {
     return *this;
 }
 
-} }
+}

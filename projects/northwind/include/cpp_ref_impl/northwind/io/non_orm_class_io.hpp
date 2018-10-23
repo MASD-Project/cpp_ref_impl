@@ -28,13 +28,12 @@
 #include <iosfwd>
 #include "cpp_ref_impl/northwind/types/non_orm_class.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 std::ostream&
 operator<<(std::ostream& s,
      const cpp_ref_impl::northwind::non_orm_class& v);
 
-} }
+}
 
 #endif

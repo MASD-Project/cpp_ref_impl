@@ -1,9 +1,7 @@
 #include <ostream>
 #include "cpp_ref_impl/split_project/io/package1/first_class_io.hpp"
 
-namespace cpp_ref_impl {
-namespace split_project {
-namespace package1 {
+namespace cpp_ref_impl::split_project::package1 {
 
 std::ostream& operator<<(std::ostream& s, const first_class& v) {
     s << " { "
@@ -14,4 +12,4 @@ std::ostream& operator<<(std::ostream& s, const first_class& v) {
     return(s);
 }
 
-} } }
+}

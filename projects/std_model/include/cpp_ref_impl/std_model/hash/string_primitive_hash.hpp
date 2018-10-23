@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/std_model/types/string_primitive.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 struct string_primitive_hasher {
 public:
     static std::size_t hash(const string_primitive& v);
 };
 
-} }
+}
 
 namespace std {
 

@@ -27,9 +27,7 @@
 
 #include "cpp_ref_impl/cpp_model/types/package_1/class_2.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_1 {
+namespace cpp_ref_impl::cpp_model::package_1 {
 
 class class_2_generator {
 public:
@@ -49,6 +47,6 @@ public:
     static result_type* create_ptr(const unsigned int position);
 };
 
-} } }
+}
 
 #endif

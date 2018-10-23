@@ -34,8 +34,7 @@ inline std::string tidy_up_string(std::string s) {
     return s;
 }
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 std::ostream& operator<<(std::ostream& s, const products& v) {
     boost::io::ios_flags_saver ifs(s);
@@ -60,4 +59,4 @@ std::ostream& operator<<(std::ostream& s, const products& v) {
     return(s);
 }
 
-} }
+}

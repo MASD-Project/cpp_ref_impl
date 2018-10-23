@@ -30,9 +30,7 @@
 #include "cpp_ref_impl/std_model/types/class_a.hpp"
 #include "cpp_ref_impl/std_model/serialization/pkg1/class_c_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
-namespace pkg1 {
+namespace cpp_ref_impl::std_model::pkg1 {
 
 class class_c final {
 public:
@@ -79,7 +77,7 @@ private:
     std::vector<cpp_ref_impl::std_model::class_a> prop_1_;
 };
 
-} } }
+}
 
 namespace std {
 

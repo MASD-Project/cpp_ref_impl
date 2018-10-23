@@ -21,8 +21,7 @@
 #include <ostream>
 #include "cpp_ref_impl/cpp_model/types/base.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 void base::to_stream(std::ostream& s) const {
     s << " { "
@@ -36,4 +35,4 @@ bool base::compare(const base& /*rhs*/) const {
     return true;
 }
 
-} }
+}

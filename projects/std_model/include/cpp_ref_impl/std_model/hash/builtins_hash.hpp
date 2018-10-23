@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/std_model/types/builtins.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 struct builtins_hasher {
 public:
     static std::size_t hash(const builtins& v);
 };
 
-} }
+}
 
 namespace std {
 

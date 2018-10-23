@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/test_data/short_enum_td.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 short_enum_generator::short_enum_generator() : position_(0) { }
 void short_enum_generator::
@@ -41,4 +40,4 @@ short_enum_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

@@ -87,8 +87,7 @@ std::list<std::list<unsigned int> > create_std_list_std_list_unsigned_int(unsign
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class_d_generator::class_d_generator() : position_(0) { }
 
@@ -121,4 +120,4 @@ class_d_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

@@ -28,13 +28,12 @@
 #include <iosfwd>
 #include "cpp_ref_impl/all_path_and_directory_settings/types_dir/class_0_0_5_0_the_types.hh"
 
-namespace cpp_ref_impl {
-namespace all_path_and_directory_settings {
+namespace cpp_ref_impl::all_path_and_directory_settings {
 
 std::ostream&
 operator<<(std::ostream& s,
      const cpp_ref_impl::all_path_and_directory_settings::class_0& v);
 
-} }
+}
 
 #endif

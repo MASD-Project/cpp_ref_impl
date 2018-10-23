@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/cpp_model/types/child_of_a_child2.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 struct child_of_a_child2_hasher {
 public:
     static std::size_t hash(const child_of_a_child2& v);
 };
 
-} }
+}
 
 namespace std {
 

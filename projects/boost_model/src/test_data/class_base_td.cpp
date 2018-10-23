@@ -29,8 +29,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 void class_base_generator::
 populate(const unsigned int position, result_type& v) {
@@ -42,4 +41,4 @@ class_base_generator::create_ptr(const unsigned int position) {
     return cpp_ref_impl::boost_model::class_derived_generator::create_ptr(position);
 }
 
-} }
+}

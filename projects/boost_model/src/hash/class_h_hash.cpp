@@ -41,8 +41,7 @@ inline std::size_t hash_boost_property_tree_ptree(const boost::property_tree::pt
 
 }
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 std::size_t class_h_hasher::hash(const class_h& v) {
     std::size_t seed(0);
@@ -51,4 +50,4 @@ std::size_t class_h_hasher::hash(const class_h& v) {
     return seed;
 }
 
-} }
+}

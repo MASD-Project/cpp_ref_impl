@@ -30,9 +30,7 @@
 #include "cpp_ref_impl/cpp_model/types/package_2/class_1.hpp"
 #include "cpp_ref_impl/cpp_model/serialization/package_2/class_2_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_2 {
+namespace cpp_ref_impl::cpp_model::package_2 {
 
 class class_2 final {
 public:
@@ -79,7 +77,7 @@ private:
     cpp_ref_impl::cpp_model::class_1 prop_1_;
 };
 
-} } }
+}
 
 namespace std {
 

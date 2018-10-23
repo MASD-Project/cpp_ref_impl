@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/cpp_model/types/base_with_object_template.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 struct base_with_object_template_hasher {
 public:
     static std::size_t hash(const base_with_object_template& v);
 };
 
-} }
+}
 
 namespace std {
 

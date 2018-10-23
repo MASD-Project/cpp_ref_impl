@@ -25,9 +25,7 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_4 {
+namespace cpp_ref_impl::cpp_model::package_4 {
 
 enum class shape_types : unsigned int {
     invalid = 0, ///< Represents an uninitialised enum
@@ -37,6 +35,6 @@ enum class shape_types : unsigned int {
     circle = 4
 };
 
-} } }
+}
 
 #endif

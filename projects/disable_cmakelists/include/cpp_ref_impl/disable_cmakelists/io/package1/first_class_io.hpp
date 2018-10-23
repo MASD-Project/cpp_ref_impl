@@ -28,14 +28,12 @@
 #include <iosfwd>
 #include "cpp_ref_impl/disable_cmakelists/types/package1/first_class.hpp"
 
-namespace cpp_ref_impl {
-namespace disable_cmakelists {
-namespace package1 {
+namespace cpp_ref_impl::disable_cmakelists::package1 {
 
 std::ostream&
 operator<<(std::ostream& s,
      const cpp_ref_impl::disable_cmakelists::package1::first_class& v);
 
-} } }
+}
 
 #endif

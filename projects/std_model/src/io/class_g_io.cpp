@@ -114,8 +114,7 @@ inline std::ostream& operator<<(std::ostream& s, const std::unordered_map<std::s
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 std::ostream& operator<<(std::ostream& s, const class_g& v) {
     s << " { "
@@ -127,4 +126,4 @@ std::ostream& operator<<(std::ostream& s, const class_g& v) {
     return(s);
 }
 
-} }
+}

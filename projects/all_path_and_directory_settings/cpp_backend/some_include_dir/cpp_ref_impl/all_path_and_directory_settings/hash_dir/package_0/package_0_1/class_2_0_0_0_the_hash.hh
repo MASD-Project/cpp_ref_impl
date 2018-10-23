@@ -28,17 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/all_path_and_directory_settings/types_dir/package_0/package_0_1/class_2_0_5_0_the_types.hh"
 
-namespace cpp_ref_impl {
-namespace all_path_and_directory_settings {
-namespace package_0 {
-namespace package_0_1 {
+namespace cpp_ref_impl::all_path_and_directory_settings::package_0::package_0_1 {
 
 struct class_2_hasher {
 public:
     static std::size_t hash(const class_2& v);
 };
 
-} } } }
+}
 
 namespace std {
 

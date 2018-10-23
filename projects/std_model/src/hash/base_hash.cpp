@@ -38,8 +38,7 @@ inline std::size_t hash_std_vector_std_string(const std::vector<std::string>& v)
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 std::size_t base_hasher::hash(const base& v) {
     std::size_t seed(0);
@@ -48,4 +47,4 @@ std::size_t base_hasher::hash(const base& v) {
     return seed;
 }
 
-} }
+}

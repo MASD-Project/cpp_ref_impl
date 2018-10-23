@@ -29,8 +29,7 @@
 #include "cpp_ref_impl/cpp_model/types/class_a.hpp"
 #include "cpp_ref_impl/cpp_model/serialization/class_b_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class class_b final {
 public:
@@ -69,7 +68,7 @@ private:
     cpp_ref_impl::cpp_model::class_a prop_0_;
 };
 
-} }
+}
 
 namespace std {
 

@@ -29,8 +29,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/cpp_model/serialization/parent_outside_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class parent_outside {
 public:
@@ -77,6 +76,6 @@ inline bool operator==(const parent_outside& lhs, const parent_outside& rhs) {
     return lhs.equals(rhs);
 }
 
-} }
+}
 
 #endif

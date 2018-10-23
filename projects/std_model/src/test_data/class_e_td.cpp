@@ -87,8 +87,7 @@ std::deque<std::deque<unsigned int> > create_std_deque_std_deque_unsigned_int(un
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class_e_generator::class_e_generator() : position_(0) { }
 
@@ -121,4 +120,4 @@ class_e_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

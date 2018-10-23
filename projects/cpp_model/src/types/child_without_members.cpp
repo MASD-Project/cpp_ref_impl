@@ -22,8 +22,7 @@
 #include "cpp_ref_impl/cpp_model/types/child_without_members.hpp"
 #include "cpp_ref_impl/cpp_model/io/parent_without_members_io.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 void child_without_members::to_stream(std::ostream& s) const {
     s << " { "
@@ -43,4 +42,4 @@ bool child_without_members::operator==(const child_without_members& /*rhs*/) con
     return true;
 }
 
-} }
+}

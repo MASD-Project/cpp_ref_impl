@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/boost_model/types/class_h.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class_h::class_h(class_h&& rhs)
     : prop_0_(std::move(rhs.prop_0_)) { }
@@ -60,4 +59,4 @@ void class_h::prop_0(const boost::property_tree::ptree&& v) {
     prop_0_ = std::move(v);
 }
 
-} }
+}

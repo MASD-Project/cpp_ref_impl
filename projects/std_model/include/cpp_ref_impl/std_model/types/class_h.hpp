@@ -33,8 +33,7 @@
 #include "cpp_ref_impl/std_model/hash/pkg1/class_c_hash.hpp"
 #include "cpp_ref_impl/std_model/serialization/class_h_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class class_h final {
 public:
@@ -81,7 +80,7 @@ private:
     std::unordered_set<cpp_ref_impl::std_model::pkg1::class_c> prop_1_;
 };
 
-} }
+}
 
 namespace std {
 

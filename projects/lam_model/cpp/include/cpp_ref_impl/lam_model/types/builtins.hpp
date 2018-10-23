@@ -29,8 +29,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/lam_model/serialization/builtins_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace lam_model {
+namespace cpp_ref_impl::lam_model {
 
 class builtins final {
 public:
@@ -115,7 +114,7 @@ private:
     bool prop_9_;
 };
 
-} }
+}
 
 namespace std {
 

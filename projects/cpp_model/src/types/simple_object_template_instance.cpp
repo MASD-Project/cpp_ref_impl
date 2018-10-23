@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/simple_object_template_instance.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 simple_object_template_instance::simple_object_template_instance()
     : prop_0_(static_cast<int>(0)),
@@ -86,4 +85,4 @@ void simple_object_template_instance::prop_10(const int v) {
     prop_10_ = v;
 }
 
-} }
+}

@@ -25,12 +25,11 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace disable_facet_folders {
+namespace cpp_ref_impl::disable_facet_folders {
 
 template<typename Archive>
 void register_types(Archive& ar);
 
-} }
+}
 
 #endif

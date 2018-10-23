@@ -30,8 +30,7 @@ create_cpp_ref_impl_std_model_string_primitive(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class_k_generator::class_k_generator() : position_(0) { }
 
@@ -59,4 +58,4 @@ class_k_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

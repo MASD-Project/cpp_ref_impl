@@ -30,8 +30,7 @@
 #include "cpp_ref_impl/cpp_model/types/parent_with_members.hpp"
 #include "cpp_ref_impl/cpp_model/serialization/second_child_without_members_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class second_child_without_members final : public cpp_ref_impl::cpp_model::parent_with_members {
 public:
@@ -69,7 +68,7 @@ public:
 
 };
 
-} }
+}
 
 namespace std {
 

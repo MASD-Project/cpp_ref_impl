@@ -36,9 +36,7 @@ inline std::ostream& operator<<(std::ostream& s, const std::vector<cpp_ref_impl:
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
-namespace pkg1 {
+namespace cpp_ref_impl::std_model::pkg1 {
 
 std::ostream& operator<<(std::ostream& s, const class_c& v) {
     s << " { "
@@ -49,4 +47,4 @@ std::ostream& operator<<(std::ostream& s, const class_c& v) {
     return(s);
 }
 
-} } }
+}

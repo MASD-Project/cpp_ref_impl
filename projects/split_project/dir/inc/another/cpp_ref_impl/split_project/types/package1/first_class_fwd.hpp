@@ -5,12 +5,10 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace split_project {
-namespace package1 {
+namespace cpp_ref_impl::split_project::package1 {
 
 class first_class;
 
-} } }
+}
 
 #endif

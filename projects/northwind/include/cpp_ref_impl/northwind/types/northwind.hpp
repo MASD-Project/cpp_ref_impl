@@ -25,16 +25,12 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-
 /**
  * @brief The Northwind model is a "transliteration" of Microsoft's
  * Northwind database, provided as a sample for Access and SQL Server.
  * It's objective is to test Dogen integration with ODB.
  */
-namespace northwind {
-}
-
+namespace cpp_ref_impl::northwind {
 }
 
 #endif

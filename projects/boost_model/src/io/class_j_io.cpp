@@ -24,8 +24,7 @@
 #include "cpp_ref_impl/boost_model/io/ptime_primitive_io.hpp"
 #include "cpp_ref_impl/boost_model/io/time_duration_primitive_io.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 std::ostream& operator<<(std::ostream& s, const class_j& v) {
     s << " { "
@@ -37,4 +36,4 @@ std::ostream& operator<<(std::ostream& s, const class_j& v) {
     return(s);
 }
 
-} }
+}

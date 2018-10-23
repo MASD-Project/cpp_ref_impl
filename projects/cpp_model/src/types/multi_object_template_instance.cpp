@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/multi_object_template_instance.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 multi_object_template_instance::multi_object_template_instance()
     : prop_1_(static_cast<int>(0)),
@@ -99,4 +98,4 @@ void multi_object_template_instance::prop_10(const int v) {
     prop_10_ = v;
 }
 
-} }
+}

@@ -28,8 +28,7 @@ float create_float(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 float_primitive_generator::float_primitive_generator() : position_(0) { }
 
@@ -57,4 +56,4 @@ float_primitive_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

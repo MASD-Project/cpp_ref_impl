@@ -58,8 +58,7 @@ std::uint64_t create_std_uint64_t(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 builtins_generator::builtins_generator() : position_(0) { }
 
@@ -94,4 +93,4 @@ builtins_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

@@ -20,11 +20,10 @@
  */
 #include "cpp_ref_impl/cpp_model/types/class_0.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 bool class_0::operator==(const class_0& /*rhs*/) const {
     return true;
 }
 
-} }
+}

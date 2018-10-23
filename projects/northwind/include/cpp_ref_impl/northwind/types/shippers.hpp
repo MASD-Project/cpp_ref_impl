@@ -30,8 +30,7 @@
 #include "cpp_ref_impl/northwind/types/shipper_id.hpp"
 #include "cpp_ref_impl/northwind/serialization/shippers_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 class shippers final {
 public:
@@ -85,7 +84,7 @@ private:
     std::string phone_;
 };
 
-} }
+}
 
 namespace std {
 

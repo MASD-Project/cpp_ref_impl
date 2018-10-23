@@ -25,12 +25,10 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace all_path_and_directory_settings {
-namespace package_0 {
+namespace cpp_ref_impl::all_path_and_directory_settings::package_0 {
 
 class class_1;
 
-} } }
+}
 
 #endif

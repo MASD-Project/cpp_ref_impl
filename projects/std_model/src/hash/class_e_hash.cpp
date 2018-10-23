@@ -72,8 +72,7 @@ inline std::size_t hash_std_deque_std_deque_unsigned_int(const std::deque<std::d
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 std::size_t class_e_hasher::hash(const class_e& v) {
     std::size_t seed(0);
@@ -88,4 +87,4 @@ std::size_t class_e_hasher::hash(const class_e& v) {
     return seed;
 }
 
-} }
+}

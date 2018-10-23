@@ -47,8 +47,7 @@ create_cpp_ref_impl_cpp_model_immutable_one_builtin(const unsigned int position)
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 immutable_four_generator::immutable_four_generator() : position_(0) { }
 
@@ -72,4 +71,4 @@ immutable_four_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

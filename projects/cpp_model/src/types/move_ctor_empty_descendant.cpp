@@ -22,8 +22,7 @@
 #include "cpp_ref_impl/cpp_model/io/move_ctor_base_io.hpp"
 #include "cpp_ref_impl/cpp_model/types/move_ctor_empty_descendant.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 move_ctor_empty_descendant::move_ctor_empty_descendant(const boost::filesystem::path& prop_0)
     : cpp_ref_impl::cpp_model::move_ctor_base(prop_0) { }
@@ -57,4 +56,4 @@ move_ctor_empty_descendant& move_ctor_empty_descendant::operator=(move_ctor_empt
     return *this;
 }
 
-} }
+}

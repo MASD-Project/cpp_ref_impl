@@ -80,8 +80,7 @@ inline std::size_t hash_boost_optional_std_vector_cpp_ref_impl_boost_model_class
 
 }
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 std::size_t class_d_hasher::hash(const class_d& v) {
     std::size_t seed(0);
@@ -94,4 +93,4 @@ std::size_t class_d_hasher::hash(const class_d& v) {
     return seed;
 }
 
-} }
+}

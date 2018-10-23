@@ -22,8 +22,7 @@
 #include "cpp_ref_impl/boost_model/io/class_base_io.hpp"
 #include "cpp_ref_impl/boost_model/types/class_derived.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class_derived::class_derived()
     : prop_1_(static_cast<int>(0)) { }
@@ -76,4 +75,4 @@ void class_derived::prop_1(const int v) {
     prop_1_ = v;
 }
 
-} }
+}

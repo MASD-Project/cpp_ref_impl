@@ -28,13 +28,12 @@
 #include <iosfwd>
 #include "cpp_ref_impl/lam_model/types/builtins.hpp"
 
-namespace cpp_ref_impl {
-namespace lam_model {
+namespace cpp_ref_impl::lam_model {
 
 std::ostream&
 operator<<(std::ostream& s,
      const cpp_ref_impl::lam_model::builtins& v);
 
-} }
+}
 
 #endif

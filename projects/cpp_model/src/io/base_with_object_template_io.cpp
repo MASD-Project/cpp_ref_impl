@@ -22,12 +22,11 @@
 #include <boost/algorithm/string.hpp>
 #include "cpp_ref_impl/cpp_model/io/base_with_object_template_io.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const base_with_object_template& v) {
     v.to_stream(s);
     return(s);
 }
 
-} }
+}

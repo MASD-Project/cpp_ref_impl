@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/non_final_orphan.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 non_final_orphan::non_final_orphan()
     : prop_0_(static_cast<int>(0)) { }
@@ -52,4 +51,4 @@ void non_final_orphan::prop_0(const int v) {
     prop_0_ = v;
 }
 
-} }
+}

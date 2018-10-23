@@ -160,8 +160,7 @@ inline std::ostream& operator<<(std::ostream& s, const boost::variant<int, std::
 
 }
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 std::ostream& operator<<(std::ostream& s, const class_e& v) {
     boost::io::ios_flags_saver ifs(s);
@@ -180,4 +179,4 @@ std::ostream& operator<<(std::ostream& s, const class_e& v) {
     return(s);
 }
 
-} }
+}

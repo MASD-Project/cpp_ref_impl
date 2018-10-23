@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/immutable_one_non_builtin.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 immutable_one_non_builtin::immutable_one_non_builtin(const std::string& prop_0)
     : prop_0_(prop_0) { }
@@ -34,4 +33,4 @@ const std::string& immutable_one_non_builtin::prop_0() const {
     return prop_0_;
 }
 
-} }
+}

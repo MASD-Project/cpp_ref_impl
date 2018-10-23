@@ -27,9 +27,7 @@
 
 #include <algorithm>
 
-namespace cpp_ref_impl {
-namespace enable_facet_types {
-namespace package1 {
+namespace cpp_ref_impl::enable_facet_types::package1 {
 
 class first_class final {
 public:
@@ -67,7 +65,7 @@ private:
     int private_attribute_;
 };
 
-} } }
+}
 
 namespace std {
 

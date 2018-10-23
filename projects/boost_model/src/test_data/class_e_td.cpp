@@ -98,8 +98,7 @@ create_boost_variant_int_std_string_char(unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class_e_generator::class_e_generator() : position_(0) { }
 
@@ -130,4 +129,4 @@ class_e_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

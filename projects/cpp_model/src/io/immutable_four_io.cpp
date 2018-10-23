@@ -33,8 +33,7 @@ inline std::string tidy_up_string(std::string s) {
     return s;
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const immutable_four& v) {
     boost::io::ios_flags_saver ifs(s);
@@ -53,4 +52,4 @@ std::ostream& operator<<(std::ostream& s, const immutable_four& v) {
     return(s);
 }
 
-} }
+}

@@ -30,9 +30,7 @@ unsigned int create_unsigned_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_6 {
+namespace cpp_ref_impl::cpp_model::package_6 {
 
 void parent_generator::
 populate(const unsigned int position, result_type& v) {
@@ -46,4 +44,4 @@ parent_generator::create_ptr(const unsigned int position) {
     return cpp_ref_impl::cpp_model::package_6::child_generator::create_ptr(position);
 }
 
-} } }
+}

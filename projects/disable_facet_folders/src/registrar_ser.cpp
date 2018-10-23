@@ -28,8 +28,7 @@
 #include <boost/archive/polymorphic_oarchive.hpp>
 #include "cpp_ref_impl/disable_facet_folders/registrar_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace disable_facet_folders {
+namespace cpp_ref_impl::disable_facet_folders {
 
 template<typename Archive>
 void register_types(Archive&) {
@@ -47,4 +46,4 @@ template void register_types(boost::archive::binary_iarchive&);
 template void register_types(boost::archive::xml_oarchive&);
 template void register_types(boost::archive::xml_iarchive&);
 
-} }
+}

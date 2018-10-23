@@ -28,8 +28,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 category_id_generator::category_id_generator() : position_(0) { }
 
@@ -57,4 +56,4 @@ category_id_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

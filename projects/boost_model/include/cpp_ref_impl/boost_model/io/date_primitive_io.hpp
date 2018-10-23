@@ -28,12 +28,11 @@
 #include <iosfwd>
 #include "cpp_ref_impl/boost_model/types/date_primitive.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 std::ostream&
 operator<<(std::ostream& s, const cpp_ref_impl::boost_model::date_primitive& v);
 
-} }
+}
 
 #endif

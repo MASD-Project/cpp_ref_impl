@@ -42,8 +42,7 @@ create_cpp_ref_impl_cpp_model_package_4_shape_types(const unsigned int position)
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 a_class_generator::a_class_generator() : position_(0) { }
 
@@ -73,4 +72,4 @@ a_class_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

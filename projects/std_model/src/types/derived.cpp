@@ -37,8 +37,7 @@ inline std::ostream& operator<<(std::ostream& s, const std::list<cpp_ref_impl::s
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 derived::derived(
     const std::vector<std::string>& prop_0,
@@ -96,4 +95,4 @@ void derived::prop_1(const std::list<cpp_ref_impl::std_model::pkg1::class_c>&& v
     prop_1_ = std::move(v);
 }
 
-} }
+}

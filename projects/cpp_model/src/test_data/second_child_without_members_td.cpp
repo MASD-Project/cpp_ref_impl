@@ -21,8 +21,7 @@
 #include "cpp_ref_impl/cpp_model/test_data/parent_with_members_td.hpp"
 #include "cpp_ref_impl/cpp_model/test_data/second_child_without_members_td.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 second_child_without_members_generator::second_child_without_members_generator() : position_(0) { }
 
@@ -50,4 +49,4 @@ second_child_without_members_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

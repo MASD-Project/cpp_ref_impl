@@ -67,8 +67,7 @@ std::vector<std::pair<std::string, int> > create_std_vector_std_pair_std_string_
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class_j_generator::class_j_generator() : position_(0) { }
 
@@ -98,4 +97,4 @@ class_j_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/std_model/test_data/enum_with_std_builtin_td.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 enum_with_std_builtin_generator::enum_with_std_builtin_generator() : position_(0) { }
 void enum_with_std_builtin_generator::
@@ -41,4 +40,4 @@ enum_with_std_builtin_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

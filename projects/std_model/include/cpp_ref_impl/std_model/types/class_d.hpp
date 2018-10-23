@@ -32,8 +32,7 @@
 #include "cpp_ref_impl/std_model/types/pkg1/class_c.hpp"
 #include "cpp_ref_impl/std_model/serialization/class_d_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class class_d final {
 public:
@@ -108,7 +107,7 @@ private:
     std::list<std::list<unsigned int> > prop_5_;
 };
 
-} }
+}
 
 namespace std {
 

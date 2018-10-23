@@ -20,9 +20,7 @@
  */
 #include "cpp_ref_impl/northwind/types/package/class_0.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
-namespace package {
+namespace cpp_ref_impl::northwind::package {
 
 class_0::class_0()
     : prop_0_(static_cast<int>(0)) { }
@@ -53,4 +51,4 @@ void class_0::prop_0(const int v) {
     prop_0_ = v;
 }
 
-} } }
+}

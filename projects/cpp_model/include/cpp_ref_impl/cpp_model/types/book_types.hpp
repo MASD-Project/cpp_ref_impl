@@ -25,8 +25,7 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 /**
  * @brief this is a brief comment
@@ -40,6 +39,6 @@ enum class book_types : unsigned int {
     bad = 3
 };
 
-} }
+}
 
 #endif

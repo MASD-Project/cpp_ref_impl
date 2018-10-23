@@ -22,8 +22,7 @@
 #include <boost/date_time/posix_time/posix_time.hpp>
 #include "cpp_ref_impl/boost_model/io/ptime_primitive_io.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 std::ostream& operator<<(std::ostream& s, const ptime_primitive& v) {
 
@@ -35,4 +34,4 @@ std::ostream& operator<<(std::ostream& s, const ptime_primitive& v) {
     return s;
 }
 
-} }
+}

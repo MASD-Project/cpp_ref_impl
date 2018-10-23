@@ -27,8 +27,7 @@
 
 #include "cpp_ref_impl/northwind/types/category_id.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 #ifdef ODB_COMPILER
 
@@ -38,6 +37,6 @@ namespace northwind {
 
 #endif
 
-} }
+}
 
 #endif

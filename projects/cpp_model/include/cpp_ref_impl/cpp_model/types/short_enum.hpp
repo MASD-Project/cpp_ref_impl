@@ -25,8 +25,7 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 enum class short_enum : short {
     invalid = 0, ///< Represents an uninitialised enum
@@ -34,6 +33,6 @@ enum class short_enum : short {
     another_enumerator = 2
 };
 
-} }
+}
 
 #endif

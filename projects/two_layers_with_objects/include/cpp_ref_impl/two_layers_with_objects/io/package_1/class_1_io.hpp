@@ -28,14 +28,12 @@
 #include <iosfwd>
 #include "cpp_ref_impl/two_layers_with_objects/types/package_1/class_1.hpp"
 
-namespace cpp_ref_impl {
-namespace two_layers_with_objects {
-namespace package_1 {
+namespace cpp_ref_impl::two_layers_with_objects::package_1 {
 
 std::ostream&
 operator<<(std::ostream& s,
      const cpp_ref_impl::two_layers_with_objects::package_1::class_1& v);
 
-} } }
+}
 
 #endif

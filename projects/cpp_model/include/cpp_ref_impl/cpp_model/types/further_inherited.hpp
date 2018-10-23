@@ -30,8 +30,7 @@
 #include "cpp_ref_impl/cpp_model/types/base_with_object_template.hpp"
 #include "cpp_ref_impl/cpp_model/serialization/further_inherited_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 /**
  * @brief Descendant class that instantiates an object template which is a descendant
@@ -99,7 +98,7 @@ private:
     int prop_1_;
 };
 
-} }
+}
 
 namespace std {
 

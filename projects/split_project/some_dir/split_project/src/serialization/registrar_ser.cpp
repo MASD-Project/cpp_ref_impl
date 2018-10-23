@@ -8,8 +8,7 @@
 #include <boost/archive/polymorphic_oarchive.hpp>
 #include "cpp_ref_impl/split_project/serialization/registrar_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace split_project {
+namespace cpp_ref_impl::split_project {
 
 template<typename Archive>
 void register_types(Archive&) {
@@ -27,4 +26,4 @@ template void register_types(boost::archive::binary_iarchive&);
 template void register_types(boost::archive::xml_oarchive&);
 template void register_types(boost::archive::xml_iarchive&);
 
-} }
+}

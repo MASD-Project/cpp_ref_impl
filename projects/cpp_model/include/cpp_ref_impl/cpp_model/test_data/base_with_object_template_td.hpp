@@ -27,8 +27,7 @@
 
 #include "cpp_ref_impl/cpp_model/types/base_with_object_template.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class base_with_object_template_generator {
 public:
@@ -43,6 +42,6 @@ public:
     static result_type* create_ptr(const unsigned int position);
 };
 
-} }
+}
 
 #endif

@@ -28,9 +28,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/enable_facet_serialization/serialization/package1/first_class_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace enable_facet_serialization {
-namespace package1 {
+namespace cpp_ref_impl::enable_facet_serialization::package1 {
 
 class first_class final {
 public:
@@ -75,7 +73,7 @@ private:
     int private_attribute_;
 };
 
-} } }
+}
 
 namespace std {
 

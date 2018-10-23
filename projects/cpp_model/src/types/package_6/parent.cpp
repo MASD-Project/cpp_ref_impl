@@ -21,9 +21,7 @@
 #include <ostream>
 #include "cpp_ref_impl/cpp_model/types/package_6/parent.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_6 {
+namespace cpp_ref_impl::cpp_model::package_6 {
 
 parent::parent()
     : prop_0_(static_cast<unsigned int>(0)) { }
@@ -55,4 +53,4 @@ void parent::prop_0(const unsigned int v) {
     prop_0_ = v;
 }
 
-} } }
+}

@@ -49,8 +49,7 @@ const boost::shared_ptr<cpp_ref_impl::boost_model::class_base>& rhs) {
 
 }
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class_b::class_b(
     const boost::shared_ptr<cpp_ref_impl::boost_model::class_a>& prop_0,
@@ -207,4 +206,4 @@ void class_b::prop_6(const cpp_ref_impl::boost_model::pkg1::class_c&& v) {
     prop_6_ = std::move(v);
 }
 
-} }
+}

@@ -22,8 +22,7 @@
 #include "cpp_ref_impl/cpp_model/io/parent_with_members_io.hpp"
 #include "cpp_ref_impl/cpp_model/types/third_child_with_members.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 third_child_with_members::third_child_with_members()
     : prop_1_(static_cast<unsigned int>(0)) { }
@@ -64,4 +63,4 @@ void third_child_with_members::prop_1(const unsigned int v) {
     prop_1_ = v;
 }
 
-} }
+}

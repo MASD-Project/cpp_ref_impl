@@ -28,8 +28,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/cpp_model/serialization/builtins_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class builtins final {
 public:
@@ -129,7 +128,7 @@ private:
     float float_property_;
 };
 
-} }
+}
 
 namespace std {
 

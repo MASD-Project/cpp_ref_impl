@@ -35,8 +35,7 @@ create_boost_posix_time_ptime(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 ptime_primitive_generator::ptime_primitive_generator() : position_(0) { }
 
@@ -64,4 +63,4 @@ ptime_primitive_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

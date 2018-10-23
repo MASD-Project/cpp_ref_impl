@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/immutable_one_builtin.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 immutable_one_builtin::immutable_one_builtin()
     : prop_0_(static_cast<bool>(0)) { }
@@ -37,4 +36,4 @@ bool immutable_one_builtin::prop_0() const {
     return prop_0_;
 }
 
-} }
+}

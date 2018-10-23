@@ -25,12 +25,11 @@ namespace {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::size_t class_d_hasher::hash(const class_d&) {
     std::size_t seed(0);
     return seed;
 }
 
-} }
+}

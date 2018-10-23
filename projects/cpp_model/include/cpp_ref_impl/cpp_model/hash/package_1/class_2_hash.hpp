@@ -28,16 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/cpp_model/types/package_1/class_2.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_1 {
+namespace cpp_ref_impl::cpp_model::package_1 {
 
 struct class_2_hasher {
 public:
     static std::size_t hash(const class_2& v);
 };
 
-} } }
+}
 
 namespace std {
 

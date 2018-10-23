@@ -31,8 +31,7 @@
 #include <boost/date_time/posix_time/posix_time_types.hpp>
 #include "cpp_ref_impl/boost_model/serialization/class_f_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class class_f final {
 public:
@@ -109,7 +108,7 @@ private:
     std::list<boost::posix_time::time_duration> prop_5_;
 };
 
-} }
+}
 
 namespace std {
 

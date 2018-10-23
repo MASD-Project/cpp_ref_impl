@@ -32,8 +32,7 @@
 #include "cpp_ref_impl/std_model/types/pkg1/class_c.hpp"
 #include "cpp_ref_impl/std_model/serialization/derived_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class derived final : public cpp_ref_impl::std_model::base {
 public:
@@ -81,7 +80,7 @@ private:
     std::list<cpp_ref_impl::std_model::pkg1::class_c> prop_1_;
 };
 
-} }
+}
 
 namespace std {
 

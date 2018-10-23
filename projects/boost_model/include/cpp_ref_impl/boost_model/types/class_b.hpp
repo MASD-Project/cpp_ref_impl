@@ -34,8 +34,7 @@
 #include "cpp_ref_impl/boost_model/types/class_base_fwd.hpp"
 #include "cpp_ref_impl/boost_model/serialization/class_b_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class class_b final {
 public:
@@ -117,7 +116,7 @@ private:
     cpp_ref_impl::boost_model::pkg1::class_c prop_6_;
 };
 
-} }
+}
 
 namespace std {
 

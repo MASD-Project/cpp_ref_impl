@@ -29,8 +29,7 @@
 #include <boost/date_time/gregorian/gregorian_types.hpp>
 #include "cpp_ref_impl/boost_model/serialization/date_primitive_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 /**
  * @brief Test a primitive with an underlying time_duration.
  */
@@ -80,7 +79,7 @@ private:
     boost::gregorian::date value_;
 };
 
-} }
+}
 
 namespace std {
 

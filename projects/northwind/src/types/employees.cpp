@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/northwind/types/employees.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 employees::employees(
     const cpp_ref_impl::northwind::employee_id& employee_id,
@@ -378,4 +377,4 @@ void employees::reports_to(const cpp_ref_impl::northwind::employee_id&& v) {
     reports_to_ = std::move(v);
 }
 
-} }
+}

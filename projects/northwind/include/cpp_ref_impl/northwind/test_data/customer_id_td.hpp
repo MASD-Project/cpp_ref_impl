@@ -27,8 +27,7 @@
 
 #include "cpp_ref_impl/northwind/types/customer_id.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 class customer_id_generator {
 public:
@@ -49,6 +48,6 @@ public:
     static result_type* create_ptr(const unsigned int position);
 };
 
-} }
+}
 
 #endif

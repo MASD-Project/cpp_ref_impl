@@ -28,9 +28,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/two_layers_with_objects/serialization/Package_2/class_2_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace two_layers_with_objects {
-namespace Package_2 {
+namespace cpp_ref_impl::two_layers_with_objects::Package_2 {
 
 class class_2 final {
 public:
@@ -69,7 +67,7 @@ private:
     int prop_0_;
 };
 
-} } }
+}
 
 namespace std {
 

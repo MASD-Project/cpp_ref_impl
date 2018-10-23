@@ -28,8 +28,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/northwind/serialization/product_id_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 class product_id final {
 public:
     product_id() = default;
@@ -74,7 +73,7 @@ private:
     int value_;
 };
 
-} }
+}
 
 namespace std {
 

@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/cpp_model/types/non_final_orphan.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 struct non_final_orphan_hasher {
 public:
     static std::size_t hash(const non_final_orphan& v);
 };
 
-} }
+}
 
 namespace std {
 

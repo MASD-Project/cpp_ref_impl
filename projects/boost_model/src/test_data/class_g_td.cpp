@@ -40,8 +40,7 @@ std::list<boost::filesystem::path> create_std_list_boost_filesystem_path(unsigne
 
 }
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class_g_generator::class_g_generator() : position_(0) { }
 
@@ -70,4 +69,4 @@ class_g_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

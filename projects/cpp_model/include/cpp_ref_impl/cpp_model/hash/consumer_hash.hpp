@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/cpp_model/types/consumer.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 struct consumer_hasher {
 public:
     static std::size_t hash(const consumer& v);
 };
 
-} }
+}
 
 namespace std {
 

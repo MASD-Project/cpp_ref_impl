@@ -23,8 +23,7 @@
 #include "cpp_ref_impl/cpp_model/types/base_visitor.hpp"
 #include "cpp_ref_impl/cpp_model/types/non_final_leaf.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 non_final_leaf::non_final_leaf()
     : prop_0_(static_cast<int>(0)) { }
@@ -91,4 +90,4 @@ void non_final_leaf::prop_0(const int v) {
     prop_0_ = v;
 }
 
-} }
+}

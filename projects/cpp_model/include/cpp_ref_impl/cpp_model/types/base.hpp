@@ -30,8 +30,7 @@
 #include "cpp_ref_impl/cpp_model/types/base_visitor_fwd.hpp"
 #include "cpp_ref_impl/cpp_model/serialization/base_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class base {
 public:
@@ -74,6 +73,6 @@ inline bool operator==(const base& lhs, const base& rhs) {
     return lhs.equals(rhs);
 }
 
-} }
+}
 
 #endif

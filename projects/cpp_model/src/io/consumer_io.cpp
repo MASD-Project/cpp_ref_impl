@@ -32,8 +32,7 @@
 #include "cpp_ref_impl/cpp_model/io/double_primitive_io.hpp"
 #include "cpp_ref_impl/cpp_model/io/ushort_primitive_io.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const consumer& v) {
     s << " { "
@@ -53,4 +52,4 @@ std::ostream& operator<<(std::ostream& s, const consumer& v) {
     return(s);
 }
 
-} }
+}

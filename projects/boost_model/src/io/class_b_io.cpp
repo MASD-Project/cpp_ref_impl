@@ -118,8 +118,7 @@ inline std::ostream& operator<<(std::ostream& s, const std::vector<boost::shared
 
 }
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 std::ostream& operator<<(std::ostream& s, const class_b& v) {
     s << " { "
@@ -135,4 +134,4 @@ std::ostream& operator<<(std::ostream& s, const class_b& v) {
     return(s);
 }
 
-} }
+}

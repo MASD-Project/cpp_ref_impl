@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/class_b.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class_b::class_b(const cpp_ref_impl::cpp_model::class_a& prop_0)
     : prop_0_(prop_0) { }
@@ -57,4 +56,4 @@ void class_b::prop_0(const cpp_ref_impl::cpp_model::class_a&& v) {
     prop_0_ = std::move(v);
 }
 
-} }
+}

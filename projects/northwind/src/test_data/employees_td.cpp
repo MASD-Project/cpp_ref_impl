@@ -44,8 +44,7 @@ create_boost_gregorian_date(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 employees_generator::employees_generator() : position_(0) { }
 
@@ -89,4 +88,4 @@ employees_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

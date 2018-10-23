@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/std_model/types/builtins.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 builtins::builtins()
     : prop_0_(static_cast<std::int8_t>(0)),
@@ -144,4 +143,4 @@ void builtins::prop_7(const std::uint64_t v) {
     prop_7_ = v;
 }
 
-} }
+}

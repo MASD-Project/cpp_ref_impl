@@ -29,8 +29,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/cpp_model/serialization/parent_without_members_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class parent_without_members {
 public:
@@ -67,6 +66,6 @@ inline bool operator==(const parent_without_members& lhs, const parent_without_m
     return lhs.equals(rhs);
 }
 
-} }
+}
 
 #endif

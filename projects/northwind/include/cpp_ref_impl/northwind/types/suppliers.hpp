@@ -30,8 +30,7 @@
 #include "cpp_ref_impl/northwind/types/supplier_id.hpp"
 #include "cpp_ref_impl/northwind/serialization/suppliers_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 class suppliers final {
 public:
@@ -148,7 +147,7 @@ private:
     std::string home_page_;
 };
 
-} }
+}
 
 namespace std {
 

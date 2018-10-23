@@ -40,8 +40,7 @@ std::vector<std::string> create_std_vector_std_string(unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 void base_generator::
 populate(const unsigned int position, result_type& v) {
@@ -53,4 +52,4 @@ base_generator::create_ptr(const unsigned int position) {
     return cpp_ref_impl::std_model::derived_generator::create_ptr(position);
 }
 
-} }
+}

@@ -52,8 +52,7 @@ std::unordered_set<cpp_ref_impl::std_model::pkg1::class_c> create_std_unordered_
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class_h_generator::class_h_generator() : position_(0) { }
 
@@ -82,4 +81,4 @@ class_h_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/test_data/hex_flags_td.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 hex_flags_generator::hex_flags_generator() : position_(0) { }
 void hex_flags_generator::
@@ -41,4 +40,4 @@ hex_flags_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

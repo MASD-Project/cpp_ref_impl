@@ -10,9 +10,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl {
-namespace split_project {
-namespace package1 {
+namespace cpp_ref_impl::split_project::package1 {
 
 std::size_t first_class_hasher::hash(const first_class& v) {
     std::size_t seed(0);
@@ -23,4 +21,4 @@ std::size_t first_class_hasher::hash(const first_class& v) {
     return seed;
 }
 
-} } }
+}

@@ -28,8 +28,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/cpp_model/serialization/descendant_object_template_instance_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 /**
  * @brief This class instantiates the DescendantObjectTemplate obje.
@@ -82,7 +81,7 @@ private:
     int prop_0_;
 };
 
-} }
+}
 
 namespace std {
 

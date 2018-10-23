@@ -27,8 +27,7 @@
 
 #include "cpp_ref_impl/boost_model/types/time_duration_primitive.hpp"
 
-namespace cpp_ref_impl {
-namespace boost_model {
+namespace cpp_ref_impl::boost_model {
 
 class time_duration_primitive_generator {
 public:
@@ -49,6 +48,6 @@ public:
     static result_type* create_ptr(const unsigned int position);
 };
 
-} }
+}
 
 #endif

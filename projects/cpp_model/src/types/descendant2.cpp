@@ -24,8 +24,7 @@
 #include "cpp_ref_impl/cpp_model/types/descendant2.hpp"
 #include "cpp_ref_impl/cpp_model/types/base_visitor.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 descendant2::descendant2()
     : prop_0_(static_cast<bool>(0)) { }
@@ -98,4 +97,4 @@ void descendant2::prop_0(const bool v) {
     prop_0_ = v;
 }
 
-} }
+}

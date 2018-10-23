@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/std_model/types/class_e.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class_e::class_e(
     const std::deque<std::string>& prop_0,
@@ -158,4 +157,4 @@ void class_e::prop_5(const std::deque<std::deque<unsigned int> >&& v) {
     prop_5_ = std::move(v);
 }
 
-} }
+}

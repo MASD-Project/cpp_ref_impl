@@ -30,8 +30,7 @@
 #include "cpp_ref_impl/cpp_model/types/third_child_with_members.hpp"
 #include "cpp_ref_impl/cpp_model/serialization/child_of_a_child2_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 class child_of_a_child2 final : public cpp_ref_impl::cpp_model::third_child_with_members {
 public:
@@ -80,7 +79,7 @@ private:
     unsigned int prop_2_;
 };
 
-} }
+}
 
 namespace std {
 

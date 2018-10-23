@@ -25,11 +25,10 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 enum class enum_with_std_builtin : int8_t;
 
-} }
+}
 
 #endif

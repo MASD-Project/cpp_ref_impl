@@ -22,8 +22,7 @@
 #include "cpp_ref_impl/cpp_model/test_data/child_without_members_td.hpp"
 #include "cpp_ref_impl/cpp_model/test_data/parent_without_members_td.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 void parent_without_members_generator::
 populate(const unsigned int /*position*/, result_type& /*v*/) {
@@ -36,4 +35,4 @@ parent_without_members_generator::create_ptr(const unsigned int position) {
     return cpp_ref_impl::cpp_model::child_with_members_generator::create_ptr(position);
 }
 
-} }
+}

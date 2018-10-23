@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/std_model/types/derived.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 struct derived_hasher {
 public:
     static std::size_t hash(const derived& v);
 };
 
-} }
+}
 
 namespace std {
 

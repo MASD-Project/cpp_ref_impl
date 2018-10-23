@@ -30,8 +30,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/cpp_model/serialization/base_with_object_template_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 /**
  * @brief Base class that instantiates a derived object template.
@@ -99,6 +98,6 @@ inline bool operator==(const base_with_object_template& lhs, const base_with_obj
     return lhs.equals(rhs);
 }
 
-} }
+}
 
 #endif

@@ -48,8 +48,7 @@ inline std::size_t hash_std_unordered_set_cpp_ref_impl_std_model_pkg1_class_c(co
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 std::size_t class_h_hasher::hash(const class_h& v) {
     std::size_t seed(0);
@@ -60,4 +59,4 @@ std::size_t class_h_hasher::hash(const class_h& v) {
     return seed;
 }
 
-} }
+}

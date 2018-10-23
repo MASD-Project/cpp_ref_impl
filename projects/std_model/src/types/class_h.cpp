@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/std_model/types/class_h.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class_h::class_h(
     const std::unordered_set<cpp_ref_impl::std_model::class_a>& prop_0,
@@ -78,4 +77,4 @@ void class_h::prop_1(const std::unordered_set<cpp_ref_impl::std_model::pkg1::cla
     prop_1_ = std::move(v);
 }
 
-} }
+}

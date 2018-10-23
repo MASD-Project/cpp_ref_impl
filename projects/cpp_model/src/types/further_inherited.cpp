@@ -22,8 +22,7 @@
 #include "cpp_ref_impl/cpp_model/types/further_inherited.hpp"
 #include "cpp_ref_impl/cpp_model/io/base_with_object_template_io.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 further_inherited::further_inherited()
     : prop_3_(static_cast<int>(0)),
@@ -93,4 +92,4 @@ void further_inherited::prop_1(const int v) {
     prop_1_ = v;
 }
 
-} }
+}

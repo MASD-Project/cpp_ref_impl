@@ -61,8 +61,7 @@ bool create_bool(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 products_generator::products_generator() : position_(0) { }
 
@@ -99,4 +98,4 @@ products_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

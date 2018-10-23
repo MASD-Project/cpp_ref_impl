@@ -21,8 +21,7 @@
 #include "cpp_ref_impl/cpp_model/test_data/move_ctor_base_td.hpp"
 #include "cpp_ref_impl/cpp_model/test_data/move_ctor_empty_descendant_td.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 move_ctor_empty_descendant_generator::move_ctor_empty_descendant_generator() : position_(0) { }
 
@@ -50,4 +49,4 @@ move_ctor_empty_descendant_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

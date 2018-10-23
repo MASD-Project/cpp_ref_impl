@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/a_class.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 a_class::a_class()
     : colour_type_(static_cast<cpp_ref_impl::cpp_model::colour_types>(0)),
@@ -79,4 +78,4 @@ void a_class::shape_type(const cpp_ref_impl::cpp_model::package_4::shape_types v
     shape_type_ = v;
 }
 
-} }
+}

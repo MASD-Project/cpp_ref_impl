@@ -22,8 +22,7 @@
 #include <boost/io/ios_state.hpp>
 #include "cpp_ref_impl/cpp_model/io/double_primitive_io.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const double_primitive& v) {
 
@@ -35,4 +34,4 @@ std::ostream& operator<<(std::ostream& s, const double_primitive& v) {
     return s;
 }
 
-} }
+}

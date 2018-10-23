@@ -21,9 +21,7 @@
 #include <ostream>
 #include "cpp_ref_impl/enable_facet_io/io/package1/first_class_io.hpp"
 
-namespace cpp_ref_impl {
-namespace enable_facet_io {
-namespace package1 {
+namespace cpp_ref_impl::enable_facet_io::package1 {
 
 std::ostream& operator<<(std::ostream& s, const first_class& v) {
     s << " { "
@@ -34,4 +32,4 @@ std::ostream& operator<<(std::ostream& s, const first_class& v) {
     return(s);
 }
 
-} } }
+}

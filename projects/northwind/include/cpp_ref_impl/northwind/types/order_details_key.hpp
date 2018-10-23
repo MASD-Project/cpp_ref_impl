@@ -30,8 +30,7 @@
 #include "cpp_ref_impl/northwind/types/product_id.hpp"
 #include "cpp_ref_impl/northwind/serialization/order_details_key_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 class order_details_key final {
 public:
@@ -78,7 +77,7 @@ private:
     cpp_ref_impl::northwind::product_id product_id_;
 };
 
-} }
+}
 
 namespace std {
 

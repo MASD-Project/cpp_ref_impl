@@ -5,12 +5,11 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace flat_directory_mode {
+namespace cpp_ref_impl::flat_directory_mode {
 
 template<typename Archive>
 void register_types(Archive& ar);
 
-} }
+}
 
 #endif

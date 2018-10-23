@@ -31,8 +31,7 @@
 #include "cpp_ref_impl/northwind/types/employee_id.hpp"
 #include "cpp_ref_impl/northwind/serialization/employees_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 class employees final {
 public:
@@ -184,7 +183,7 @@ private:
     cpp_ref_impl::northwind::employee_id reports_to_;
 };
 
-} }
+}
 
 namespace std {
 

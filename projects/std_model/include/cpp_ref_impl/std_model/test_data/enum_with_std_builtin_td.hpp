@@ -27,8 +27,7 @@
 
 #include "cpp_ref_impl/std_model/types/enum_with_std_builtin.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class enum_with_std_builtin_generator {
 public:
@@ -46,6 +45,6 @@ private:
     unsigned int position_;
 };
 
-} }
+}
 
 #endif

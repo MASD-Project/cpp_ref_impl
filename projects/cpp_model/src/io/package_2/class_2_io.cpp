@@ -23,9 +23,7 @@
 #include "cpp_ref_impl/cpp_model/io/package_2/class_1_io.hpp"
 #include "cpp_ref_impl/cpp_model/io/package_2/class_2_io.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_2 {
+namespace cpp_ref_impl::cpp_model::package_2 {
 
 std::ostream& operator<<(std::ostream& s, const class_2& v) {
     s << " { "
@@ -36,4 +34,4 @@ std::ostream& operator<<(std::ostream& s, const class_2& v) {
     return(s);
 }
 
-} } }
+}

@@ -30,8 +30,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::size_t second_descendant_object_template_instance_hasher::hash(const second_descendant_object_template_instance& v) {
     std::size_t seed(0);
@@ -43,4 +42,4 @@ std::size_t second_descendant_object_template_instance_hasher::hash(const second
     return seed;
 }
 
-} }
+}

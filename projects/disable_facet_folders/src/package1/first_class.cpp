@@ -20,9 +20,7 @@
  */
 #include "cpp_ref_impl/disable_facet_folders/package1/first_class.hpp"
 
-namespace cpp_ref_impl {
-namespace disable_facet_folders {
-namespace package1 {
+namespace cpp_ref_impl::disable_facet_folders::package1 {
 
 first_class::first_class()
     : public_attribute_(static_cast<int>(0)),
@@ -67,4 +65,4 @@ void first_class::private_attribute(const int v) {
     private_attribute_ = v;
 }
 
-} } }
+}

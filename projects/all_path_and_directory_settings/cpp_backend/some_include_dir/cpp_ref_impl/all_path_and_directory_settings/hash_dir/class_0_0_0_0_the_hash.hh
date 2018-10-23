@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/all_path_and_directory_settings/types_dir/class_0_0_5_0_the_types.hh"
 
-namespace cpp_ref_impl {
-namespace all_path_and_directory_settings {
+namespace cpp_ref_impl::all_path_and_directory_settings {
 
 struct class_0_hasher {
 public:
     static std::size_t hash(const class_0& v);
 };
 
-} }
+}
 
 namespace std {
 

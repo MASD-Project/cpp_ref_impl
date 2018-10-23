@@ -28,8 +28,7 @@
 #include "cpp_ref_impl/northwind/types/customers.hpp"
 #include "cpp_ref_impl/northwind/odb/customer_id_pragmas.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 #ifdef ODB_COMPILER
 
@@ -48,6 +47,6 @@ namespace northwind {
 
 #endif
 
-} }
+}
 
 #endif

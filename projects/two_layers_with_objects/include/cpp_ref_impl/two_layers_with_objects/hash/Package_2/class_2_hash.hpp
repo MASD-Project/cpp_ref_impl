@@ -28,16 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/two_layers_with_objects/types/Package_2/class_2.hpp"
 
-namespace cpp_ref_impl {
-namespace two_layers_with_objects {
-namespace Package_2 {
+namespace cpp_ref_impl::two_layers_with_objects::Package_2 {
 
 struct class_2_hasher {
 public:
     static std::size_t hash(const class_2& v);
 };
 
-} } }
+}
 
 namespace std {
 

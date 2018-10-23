@@ -33,8 +33,7 @@
 #include "cpp_ref_impl/std_model/types/pkg1/class_c.hpp"
 #include "cpp_ref_impl/std_model/serialization/class_f_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class class_f final {
 public:
@@ -88,7 +87,7 @@ private:
     std::unordered_map<cpp_ref_impl::std_model::class_a, cpp_ref_impl::std_model::pkg1::class_c> prop_2_;
 };
 
-} }
+}
 
 namespace std {
 

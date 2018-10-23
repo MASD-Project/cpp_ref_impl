@@ -20,9 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/package_2/class_2.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_2 {
+namespace cpp_ref_impl::cpp_model::package_2 {
 
 class_2::class_2(
     const cpp_ref_impl::cpp_model::package_2::class_1& prop_0,
@@ -79,4 +77,4 @@ void class_2::prop_1(const cpp_ref_impl::cpp_model::class_1&& v) {
     prop_1_ = std::move(v);
 }
 
-} } }
+}

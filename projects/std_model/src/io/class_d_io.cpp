@@ -102,8 +102,7 @@ inline std::ostream& operator<<(std::ostream& s, const std::list<std::list<unsig
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 std::ostream& operator<<(std::ostream& s, const class_d& v) {
     s << " { "
@@ -118,4 +117,4 @@ std::ostream& operator<<(std::ostream& s, const class_d& v) {
     return(s);
 }
 
-} }
+}

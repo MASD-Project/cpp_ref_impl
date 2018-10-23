@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/std_model/types/class_j.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 struct class_j_hasher {
 public:
     static std::size_t hash(const class_j& v);
 };
 
-} }
+}
 
 namespace std {
 

@@ -28,9 +28,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/lam_model/serialization/package1/class_in_package_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace lam_model {
-namespace package1 {
+namespace cpp_ref_impl::lam_model::package1 {
 
 class class_in_package final {
 public:
@@ -69,7 +67,7 @@ private:
     int prop_0_;
 };
 
-} } }
+}
 
 namespace std {
 

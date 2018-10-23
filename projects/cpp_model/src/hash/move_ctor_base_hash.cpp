@@ -36,8 +36,7 @@ inline std::size_t hash_boost_filesystem_path(const boost::filesystem::path& v) 
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::size_t move_ctor_base_hasher::hash(const move_ctor_base& v) {
     std::size_t seed(0);
@@ -46,4 +45,4 @@ std::size_t move_ctor_base_hasher::hash(const move_ctor_base& v) {
     return seed;
 }
 
-} }
+}

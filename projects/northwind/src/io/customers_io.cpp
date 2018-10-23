@@ -31,8 +31,7 @@ inline std::string tidy_up_string(std::string s) {
     return s;
 }
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 std::ostream& operator<<(std::ostream& s, const customers& v) {
     s << " { "
@@ -53,4 +52,4 @@ std::ostream& operator<<(std::ostream& s, const customers& v) {
     return(s);
 }
 
-} }
+}

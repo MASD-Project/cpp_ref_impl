@@ -31,8 +31,7 @@ unsigned int create_unsigned_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 void third_child_with_members_generator::
 populate(const unsigned int position, result_type& v) {
@@ -47,4 +46,4 @@ third_child_with_members_generator::create_ptr(const unsigned int position) {
     return cpp_ref_impl::cpp_model::child_of_a_child1_generator::create_ptr(position);
 }
 
-} }
+}

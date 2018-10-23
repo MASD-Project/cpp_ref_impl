@@ -20,11 +20,10 @@
  */
 #include "cpp_ref_impl/cpp_model/types/immutable_zero.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 bool immutable_zero::operator==(const immutable_zero& /*rhs*/) const {
     return true;
 }
 
-} }
+}

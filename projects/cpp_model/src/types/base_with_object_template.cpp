@@ -30,8 +30,7 @@ inline std::string tidy_up_string(std::string s) {
     return s;
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 base_with_object_template::base_with_object_template()
     : prop_2_(static_cast<int>(0)) { }
@@ -85,4 +84,4 @@ void base_with_object_template::prop_0(const std::string&& v) {
     prop_0_ = std::move(v);
 }
 
-} }
+}

@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/types/immutable_four.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 immutable_four::immutable_four()
     : prop_0_(static_cast<bool>(0)) { }
@@ -59,4 +58,4 @@ const cpp_ref_impl::cpp_model::immutable_one_builtin& immutable_four::prop_3() c
     return prop_3_;
 }
 
-} }
+}

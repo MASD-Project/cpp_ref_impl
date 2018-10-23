@@ -30,8 +30,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 std::size_t builtins_hasher::hash(const builtins& v) {
     std::size_t seed(0);
@@ -48,4 +47,4 @@ std::size_t builtins_hasher::hash(const builtins& v) {
     return seed;
 }
 
-} }
+}

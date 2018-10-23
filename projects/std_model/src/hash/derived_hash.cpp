@@ -40,8 +40,7 @@ inline std::size_t hash_std_list_cpp_ref_impl_std_model_pkg1_class_c(const std::
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 std::size_t derived_hasher::hash(const derived& v) {
     std::size_t seed(0);
@@ -52,4 +51,4 @@ std::size_t derived_hasher::hash(const derived& v) {
     return seed;
 }
 
-} }
+}

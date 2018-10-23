@@ -28,8 +28,7 @@
 #include <algorithm>
 #include "cpp_ref_impl/cpp_model/serialization/one_line_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 /**
  * @brief this is the brief comment
@@ -94,7 +93,7 @@ private:
     int prop_2_;
 };
 
-} }
+}
 
 namespace std {
 

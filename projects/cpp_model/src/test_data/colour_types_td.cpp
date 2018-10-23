@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/cpp_model/test_data/colour_types_td.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 colour_types_generator::colour_types_generator() : position_(0) { }
 void colour_types_generator::
@@ -41,4 +40,4 @@ colour_types_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

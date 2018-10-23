@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/northwind/types/employee_id.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 employee_id::employee_id(const int value)
     : value_(value) { }
@@ -49,4 +48,4 @@ employee_id& employee_id::operator=(employee_id other) {
     return *this;
 }
 
-} }
+}

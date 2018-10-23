@@ -25,12 +25,10 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace disable_cmakelists {
-namespace package1 {
+namespace cpp_ref_impl::disable_cmakelists::package1 {
 
 class first_class;
 
-} } }
+}
 
 #endif

@@ -29,8 +29,7 @@
 #include "cpp_ref_impl/northwind/types/order_details_key.hpp"
 #include "cpp_ref_impl/northwind/serialization/order_details_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 class order_details final {
 public:
@@ -87,7 +86,7 @@ private:
     double discount_;
 };
 
-} }
+}
 
 namespace std {
 

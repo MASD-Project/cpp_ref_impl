@@ -29,8 +29,7 @@
 #include "cpp_ref_impl/cpp_model/types/value.hpp"
 #include "cpp_ref_impl/cpp_model/serialization/simple_object_template_instance_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 /**
  * @brief This class instantiates the simple object template.
@@ -100,7 +99,7 @@ private:
     int prop_10_;
 };
 
-} }
+}
 
 namespace std {
 

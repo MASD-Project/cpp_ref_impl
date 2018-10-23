@@ -28,15 +28,14 @@
 #include <functional>
 #include "cpp_ref_impl/std_model/types/base.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 struct base_hasher {
 public:
     static std::size_t hash(const base& v);
 };
 
-} }
+}
 
 namespace std {
 

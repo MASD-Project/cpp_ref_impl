@@ -21,8 +21,7 @@
 #include <ostream>
 #include "cpp_ref_impl/std_model/io/builtins_io.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 std::ostream& operator<<(std::ostream& s, const builtins& v) {
     s << " { "
@@ -39,4 +38,4 @@ std::ostream& operator<<(std::ostream& s, const builtins& v) {
     return(s);
 }
 
-} }
+}

@@ -25,12 +25,10 @@
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace enable_facet_io {
-namespace package1 {
+namespace cpp_ref_impl::enable_facet_io::package1 {
 
 class first_class;
 
-} } }
+}
 
 #endif

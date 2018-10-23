@@ -8,16 +8,14 @@
 #include <functional>
 #include "cpp_ref_impl/split_project/types/package1/first_class.hpp"
 
-namespace cpp_ref_impl {
-namespace split_project {
-namespace package1 {
+namespace cpp_ref_impl::split_project::package1 {
 
 struct first_class_hasher {
 public:
     static std::size_t hash(const first_class& v);
 };
 
-} } }
+}
 
 namespace std {
 

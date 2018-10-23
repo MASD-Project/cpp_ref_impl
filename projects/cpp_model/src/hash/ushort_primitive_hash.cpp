@@ -30,8 +30,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 std::size_t ushort_primitive_hasher::hash(const ushort_primitive& v) {
     std::size_t seed(0);
@@ -39,4 +38,4 @@ std::size_t ushort_primitive_hasher::hash(const ushort_primitive& v) {
     return seed;
 }
 
-} }
+}

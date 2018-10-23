@@ -28,9 +28,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
-namespace package_10 {
+namespace cpp_ref_impl::cpp_model::package_10 {
 
 consume_object_template_generator::consume_object_template_generator() : position_(0) { }
 
@@ -58,4 +56,4 @@ consume_object_template_generator::operator()() {
     return create(position_++);
 }
 
-} } }
+}

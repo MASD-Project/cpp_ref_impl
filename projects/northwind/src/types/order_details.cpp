@@ -20,8 +20,7 @@
  */
 #include "cpp_ref_impl/northwind/types/order_details.hpp"
 
-namespace cpp_ref_impl {
-namespace northwind {
+namespace cpp_ref_impl::northwind {
 
 order_details::order_details()
     : unit_price_(static_cast<double>(0)),
@@ -99,4 +98,4 @@ void order_details::discount(const double v) {
     discount_ = v;
 }
 
-} }
+}

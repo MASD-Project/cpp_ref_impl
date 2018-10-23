@@ -39,9 +39,7 @@ inline std::size_t hash_std_vector_cpp_ref_impl_std_model_class_a(const std::vec
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
-namespace pkg1 {
+namespace cpp_ref_impl::std_model::pkg1 {
 
 std::size_t class_c_hasher::hash(const class_c& v) {
     std::size_t seed(0);
@@ -52,4 +50,4 @@ std::size_t class_c_hasher::hash(const class_c& v) {
     return seed;
 }
 
-} } }
+}

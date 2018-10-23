@@ -36,8 +36,7 @@
 #include "cpp_ref_impl/std_model/hash/pkg1/class_c_hash.hpp"
 #include "cpp_ref_impl/std_model/serialization/class_g_fwd_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace cpp_ref_impl::std_model {
 
 class class_g final {
 public:
@@ -91,7 +90,7 @@ private:
     std::unordered_map<std::string, cpp_ref_impl::std_model::class_a> prop_2_;
 };
 
-} }
+}
 
 namespace std {
 

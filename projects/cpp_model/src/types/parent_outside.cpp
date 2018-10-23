@@ -21,8 +21,7 @@
 #include <ostream>
 #include "cpp_ref_impl/cpp_model/types/parent_outside.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace cpp_ref_impl::cpp_model {
 
 parent_outside::parent_outside()
     : prop_0_(static_cast<int>(0)) { }
@@ -54,4 +53,4 @@ void parent_outside::prop_0(const int v) {
     prop_0_ = v;
 }
 
-} }
+}
