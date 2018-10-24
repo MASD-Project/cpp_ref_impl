@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/enable_facet_hash/types/package1/first_class.hpp"
+#include "masd.cpp_ref_impl.enable_facet_hash/types/package1/first_class.hpp"
 
-namespace cpp_ref_impl::enable_facet_hash::package1 {
+namespace masd::cpp_ref_impl::enable_facet_hash::package1 {
 
 first_class::first_class()
     : public_attribute_(static_cast<int>(0)),

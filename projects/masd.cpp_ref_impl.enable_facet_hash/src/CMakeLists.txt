@@ -22,8 +22,8 @@ file(GLOB_RECURSE files RELATIVE
     "${CMAKE_CURRENT_SOURCE_DIR}/"
     "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
 
-add_library(enable_facet_hash STATIC ${files})
-set_target_properties(enable_facet_hash PROPERTIES
-    OUTPUT_NAME cpp_ref_impl.enable_facet_hash)
+add_library(masd_cpp_ref_impl_enable_facet_hash STATIC ${files})
+set_target_properties(masd_cpp_ref_impl_enable_facet_hash PROPERTIES
+    OUTPUT_NAME masd_cpp_ref_impl_enable_facet_hash)
 
-install(TARGETS enable_facet_hash ARCHIVE DESTINATION lib COMPONENT libraries)
+install(TARGETS masd_cpp_ref_impl_enable_facet_hash ARCHIVE DESTINATION lib COMPONENT libraries)

@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_ENABLE_FACET_HASH_TYPES_PACKAGE1_FIRST_CLASS_HPP
-#define CPP_REF_IMPL_ENABLE_FACET_HASH_TYPES_PACKAGE1_FIRST_CLASS_HPP
+#ifndef MASD_CPP_REF_IMPL_ENABLE_FACET_HASH_TYPES_PACKAGE1_FIRST_CLASS_HPP
+#define MASD_CPP_REF_IMPL_ENABLE_FACET_HASH_TYPES_PACKAGE1_FIRST_CLASS_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -27,7 +27,7 @@
 
 #include <algorithm>
 
-namespace cpp_ref_impl::enable_facet_hash::package1 {
+namespace masd::cpp_ref_impl::enable_facet_hash::package1 {
 
 class first_class final {
 public:
@@ -71,8 +71,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::enable_facet_hash::package1::first_class& lhs,
-    cpp_ref_impl::enable_facet_hash::package1::first_class& rhs) {
+    masd::cpp_ref_impl::enable_facet_hash::package1::first_class& lhs,
+    masd::cpp_ref_impl::enable_facet_hash::package1::first_class& rhs) {
     lhs.swap(rhs);
 }
 
