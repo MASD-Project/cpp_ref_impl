@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_STD_MODEL_TYPES_SOME_SERVICE_HPP
-#define CPP_REF_IMPL_STD_MODEL_TYPES_SOME_SERVICE_HPP
+#ifndef MASD_CPP_REF_IMPL_STD_MODEL_TYPES_SOME_SERVICE_HPP
+#define MASD_CPP_REF_IMPL_STD_MODEL_TYPES_SOME_SERVICE_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -29,8 +29,7 @@
 #include <algorithm>
 #include "masd.cpp_ref_impl.std_model/types/base_fwd.hpp"
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 class some_service final {
 public:
@@ -62,14 +61,14 @@ private:
     std::shared_ptr<cpp_ref_impl::std_model::base> prop_0_;
 };
 
-} }
+}
 
 namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::std_model::some_service& lhs,
-    cpp_ref_impl::std_model::some_service& rhs) {
+    masd::cpp_ref_impl::std_model::some_service& lhs,
+    masd::cpp_ref_impl::std_model::some_service& rhs) {
     lhs.swap(rhs);
 }
 

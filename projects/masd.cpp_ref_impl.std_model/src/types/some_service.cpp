@@ -18,20 +18,19 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/std_model/types/base.hpp"
-#include "cpp_ref_impl/std_model/types/some_service.hpp"
+#include "masd.cpp_ref_impl.std_model/types/base.hpp"
+#include "masd.cpp_ref_impl.std_model/types/some_service.hpp"
 
 namespace std {
 
-inline bool operator==(const std::shared_ptr<cpp_ref_impl::std_model::base>& lhs,
-    const std::shared_ptr<cpp_ref_impl::std_model::base>& rhs) {
+inline bool operator==(const std::shared_ptr<masd::cpp_ref_impl::std_model::base>& lhs,
+    const std::shared_ptr<masd::cpp_ref_impl::std_model::base>& rhs) {
     return (!lhs && !rhs) ||(lhs && rhs && (*lhs == *rhs));
 }
 
 }
 
-namespace cpp_ref_impl {
-namespace std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 some_service::some_service(const std::shared_ptr<cpp_ref_impl::std_model::base>& prop_0)
     : prop_0_(prop_0) { }
@@ -67,4 +66,4 @@ void some_service::prop_0(const std::shared_ptr<cpp_ref_impl::std_model::base>&&
     prop_0_ = std::move(v);
 }
 
-} }
+}

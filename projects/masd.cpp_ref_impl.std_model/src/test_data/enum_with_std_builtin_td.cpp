@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/std_model/test_data/enum_with_std_builtin_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/enum_with_std_builtin_td.hpp"
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 enum_with_std_builtin_generator::enum_with_std_builtin_generator() : position_(0) { }
 void enum_with_std_builtin_generator::

@@ -20,9 +20,9 @@
  */
 #include <ostream>
 #include <boost/algorithm/string.hpp>
-#include "cpp_ref_impl/std_model/io/class_a_io.hpp"
-#include "cpp_ref_impl/std_model/io/class_f_io.hpp"
-#include "cpp_ref_impl/std_model/io/pkg1/class_c_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/class_a_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/class_f_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/pkg1/class_c_io.hpp"
 
 inline std::string tidy_up_string(std::string s) {
     boost::replace_all(s, "\r\n", "<new_line>");
@@ -52,7 +52,7 @@ inline std::ostream& operator<<(std::ostream& s, const std::unordered_map<std::s
 
 namespace std {
 
-inline std::ostream& operator<<(std::ostream& s, const std::unordered_map<std::string, cpp_ref_impl::std_model::class_a>& v) {
+inline std::ostream& operator<<(std::ostream& s, const std::unordered_map<std::string, masd::cpp_ref_impl::std_model::class_a>& v) {
     s << "[";
     for (auto i(v.begin()); i != v.end(); ++i) {
         if (i != v.begin()) s << ", ";
@@ -70,7 +70,7 @@ inline std::ostream& operator<<(std::ostream& s, const std::unordered_map<std::s
 
 namespace std {
 
-inline std::ostream& operator<<(std::ostream& s, const std::unordered_map<cpp_ref_impl::std_model::class_a, cpp_ref_impl::std_model::pkg1::class_c>& v) {
+inline std::ostream& operator<<(std::ostream& s, const std::unordered_map<masd::cpp_ref_impl::std_model::class_a, masd::cpp_ref_impl::std_model::pkg1::class_c>& v) {
     s << "[";
     for (auto i(v.begin()); i != v.end(); ++i) {
         if (i != v.begin()) s << ", ";
@@ -86,11 +86,11 @@ inline std::ostream& operator<<(std::ostream& s, const std::unordered_map<cpp_re
 
 }
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 std::ostream& operator<<(std::ostream& s, const class_f& v) {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::std_model::class_f\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::std_model::class_f\"" << ", "
       << "\"prop_0\": " << v.prop_0() << ", "
       << "\"prop_1\": " << v.prop_1() << ", "
       << "\"prop_2\": " << v.prop_2()

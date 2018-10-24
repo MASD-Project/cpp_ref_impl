@@ -19,9 +19,9 @@
  *
  */
 #include <sstream>
-#include "cpp_ref_impl/std_model/test_data/class_a_td.hpp"
-#include "cpp_ref_impl/std_model/test_data/class_d_td.hpp"
-#include "cpp_ref_impl/std_model/test_data/pkg1/class_c_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/class_a_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/class_d_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/pkg1/class_c_td.hpp"
 
 namespace {
 
@@ -39,28 +39,28 @@ std::list<std::string> create_std_list_std_string(unsigned int position) {
     return r;
 }
 
-cpp_ref_impl::std_model::class_a
-create_cpp_ref_impl_std_model_class_a(const unsigned int position) {
-    return cpp_ref_impl::std_model::class_a_generator::create(position);
+masd::cpp_ref_impl::std_model::class_a
+create_masd_cpp_ref_impl_std_model_class_a(const unsigned int position) {
+    return masd::cpp_ref_impl::std_model::class_a_generator::create(position);
 }
 
-std::list<cpp_ref_impl::std_model::class_a> create_std_list_cpp_ref_impl_std_model_class_a(unsigned int position) {
-    std::list<cpp_ref_impl::std_model::class_a> r;
+std::list<masd::cpp_ref_impl::std_model::class_a> create_std_list_masd_cpp_ref_impl_std_model_class_a(unsigned int position) {
+    std::list<masd::cpp_ref_impl::std_model::class_a> r;
     for (unsigned int i(0); i < 4; ++i) {
-        r.push_back(create_cpp_ref_impl_std_model_class_a(position + i));
+        r.push_back(create_masd_cpp_ref_impl_std_model_class_a(position + i));
     }
     return r;
 }
 
-cpp_ref_impl::std_model::pkg1::class_c
-create_cpp_ref_impl_std_model_pkg1_class_c(const unsigned int position) {
-    return cpp_ref_impl::std_model::pkg1::class_c_generator::create(position);
+masd::cpp_ref_impl::std_model::pkg1::class_c
+create_masd_cpp_ref_impl_std_model_pkg1_class_c(const unsigned int position) {
+    return masd::cpp_ref_impl::std_model::pkg1::class_c_generator::create(position);
 }
 
-std::list<cpp_ref_impl::std_model::pkg1::class_c> create_std_list_cpp_ref_impl_std_model_pkg1_class_c(unsigned int position) {
-    std::list<cpp_ref_impl::std_model::pkg1::class_c> r;
+std::list<masd::cpp_ref_impl::std_model::pkg1::class_c> create_std_list_masd_cpp_ref_impl_std_model_pkg1_class_c(unsigned int position) {
+    std::list<masd::cpp_ref_impl::std_model::pkg1::class_c> r;
     for (unsigned int i(0); i < 4; ++i) {
-        r.push_back(create_cpp_ref_impl_std_model_pkg1_class_c(position + i));
+        r.push_back(create_masd_cpp_ref_impl_std_model_pkg1_class_c(position + i));
     }
     return r;
 }
@@ -87,17 +87,17 @@ std::list<std::list<unsigned int> > create_std_list_std_list_unsigned_int(unsign
 
 }
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 class_d_generator::class_d_generator() : position_(0) { }
 
 void class_d_generator::
 populate(const unsigned int position, result_type& v) {
     v.prop_0(create_std_list_std_string(position + 0));
-    v.prop_1(create_std_list_cpp_ref_impl_std_model_class_a(position + 1));
-    v.prop_2(create_std_list_cpp_ref_impl_std_model_pkg1_class_c(position + 2));
+    v.prop_1(create_std_list_masd_cpp_ref_impl_std_model_class_a(position + 1));
+    v.prop_2(create_std_list_masd_cpp_ref_impl_std_model_pkg1_class_c(position + 2));
     v.prop_3(create_std_list_unsigned_int(position + 3));
-    v.prop_4(create_std_list_cpp_ref_impl_std_model_class_a(position + 4));
+    v.prop_4(create_std_list_masd_cpp_ref_impl_std_model_class_a(position + 4));
     v.prop_5(create_std_list_std_list_unsigned_int(position + 5));
 }
 

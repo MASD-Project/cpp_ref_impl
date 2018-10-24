@@ -20,7 +20,7 @@
  */
 #include <ostream>
 #include <boost/algorithm/string.hpp>
-#include "cpp_ref_impl/std_model/io/string_primitive_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/string_primitive_io.hpp"
 
 inline std::string tidy_up_string(std::string s) {
     boost::replace_all(s, "\r\n", "<new_line>");
@@ -30,12 +30,12 @@ inline std::string tidy_up_string(std::string s) {
     return s;
 }
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 std::ostream& operator<<(std::ostream& s, const string_primitive& v) {
 
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::std_model::string_primitive\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::std_model::string_primitive\"" << ", "
       << "\"value\": " << "\"" << tidy_up_string(v.value()) << "\""
       << " }";
 

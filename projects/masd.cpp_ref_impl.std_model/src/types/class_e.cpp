@@ -18,16 +18,16 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/std_model/types/class_e.hpp"
+#include "masd.cpp_ref_impl.std_model/types/class_e.hpp"
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 class_e::class_e(
     const std::deque<std::string>& prop_0,
-    const std::deque<cpp_ref_impl::std_model::class_a>& prop_1,
-    const std::deque<cpp_ref_impl::std_model::pkg1::class_c>& prop_2,
+    const std::deque<masd::cpp_ref_impl::std_model::class_a>& prop_1,
+    const std::deque<masd::cpp_ref_impl::std_model::pkg1::class_c>& prop_2,
     const std::deque<unsigned int>& prop_3,
-    const std::deque<cpp_ref_impl::std_model::class_a>& prop_4,
+    const std::deque<masd::cpp_ref_impl::std_model::class_a>& prop_4,
     const std::deque<std::deque<unsigned int> >& prop_5)
     : prop_0_(prop_0),
       prop_1_(prop_1),
@@ -77,35 +77,35 @@ void class_e::prop_0(const std::deque<std::string>&& v) {
     prop_0_ = std::move(v);
 }
 
-const std::deque<cpp_ref_impl::std_model::class_a>& class_e::prop_1() const {
+const std::deque<masd::cpp_ref_impl::std_model::class_a>& class_e::prop_1() const {
     return prop_1_;
 }
 
-std::deque<cpp_ref_impl::std_model::class_a>& class_e::prop_1() {
+std::deque<masd::cpp_ref_impl::std_model::class_a>& class_e::prop_1() {
     return prop_1_;
 }
 
-void class_e::prop_1(const std::deque<cpp_ref_impl::std_model::class_a>& v) {
+void class_e::prop_1(const std::deque<masd::cpp_ref_impl::std_model::class_a>& v) {
     prop_1_ = v;
 }
 
-void class_e::prop_1(const std::deque<cpp_ref_impl::std_model::class_a>&& v) {
+void class_e::prop_1(const std::deque<masd::cpp_ref_impl::std_model::class_a>&& v) {
     prop_1_ = std::move(v);
 }
 
-const std::deque<cpp_ref_impl::std_model::pkg1::class_c>& class_e::prop_2() const {
+const std::deque<masd::cpp_ref_impl::std_model::pkg1::class_c>& class_e::prop_2() const {
     return prop_2_;
 }
 
-std::deque<cpp_ref_impl::std_model::pkg1::class_c>& class_e::prop_2() {
+std::deque<masd::cpp_ref_impl::std_model::pkg1::class_c>& class_e::prop_2() {
     return prop_2_;
 }
 
-void class_e::prop_2(const std::deque<cpp_ref_impl::std_model::pkg1::class_c>& v) {
+void class_e::prop_2(const std::deque<masd::cpp_ref_impl::std_model::pkg1::class_c>& v) {
     prop_2_ = v;
 }
 
-void class_e::prop_2(const std::deque<cpp_ref_impl::std_model::pkg1::class_c>&& v) {
+void class_e::prop_2(const std::deque<masd::cpp_ref_impl::std_model::pkg1::class_c>&& v) {
     prop_2_ = std::move(v);
 }
 
@@ -125,19 +125,19 @@ void class_e::prop_3(const std::deque<unsigned int>&& v) {
     prop_3_ = std::move(v);
 }
 
-const std::deque<cpp_ref_impl::std_model::class_a>& class_e::prop_4() const {
+const std::deque<masd::cpp_ref_impl::std_model::class_a>& class_e::prop_4() const {
     return prop_4_;
 }
 
-std::deque<cpp_ref_impl::std_model::class_a>& class_e::prop_4() {
+std::deque<masd::cpp_ref_impl::std_model::class_a>& class_e::prop_4() {
     return prop_4_;
 }
 
-void class_e::prop_4(const std::deque<cpp_ref_impl::std_model::class_a>& v) {
+void class_e::prop_4(const std::deque<masd::cpp_ref_impl::std_model::class_a>& v) {
     prop_4_ = v;
 }
 
-void class_e::prop_4(const std::deque<cpp_ref_impl::std_model::class_a>&& v) {
+void class_e::prop_4(const std::deque<masd::cpp_ref_impl::std_model::class_a>&& v) {
     prop_4_ = std::move(v);
 }
 

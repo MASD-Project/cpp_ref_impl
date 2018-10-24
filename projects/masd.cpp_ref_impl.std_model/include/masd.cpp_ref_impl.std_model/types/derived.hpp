@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_STD_MODEL_TYPES_DERIVED_HPP
-#define CPP_REF_IMPL_STD_MODEL_TYPES_DERIVED_HPP
+#ifndef MASD_CPP_REF_IMPL_STD_MODEL_TYPES_DERIVED_HPP
+#define MASD_CPP_REF_IMPL_STD_MODEL_TYPES_DERIVED_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -28,13 +28,13 @@
 #include <list>
 #include <iosfwd>
 #include <algorithm>
-#include "cpp_ref_impl/std_model/types/base.hpp"
-#include "cpp_ref_impl/std_model/types/pkg1/class_c.hpp"
-#include "cpp_ref_impl/std_model/serialization/derived_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.std_model/types/base.hpp"
+#include "masd.cpp_ref_impl.std_model/types/pkg1/class_c.hpp"
+#include "masd.cpp_ref_impl.std_model/serialization/derived_fwd_ser.hpp"
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
-class derived final : public cpp_ref_impl::std_model::base {
+class derived final : public masd::cpp_ref_impl::std_model::base {
 public:
     derived() = default;
     derived(const derived&) = default;
@@ -45,23 +45,23 @@ public:
 public:
     derived(
         const std::vector<std::string>& prop_0,
-        const std::list<cpp_ref_impl::std_model::pkg1::class_c>& prop_1);
+        const std::list<masd::cpp_ref_impl::std_model::pkg1::class_c>& prop_1);
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::std_model::derived& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::std_model::derived& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::std_model::derived& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::std_model::derived& v, unsigned int version);
 
 public:
     void to_stream(std::ostream& s) const override;
 
 public:
-    const std::list<cpp_ref_impl::std_model::pkg1::class_c>& prop_1() const;
-    std::list<cpp_ref_impl::std_model::pkg1::class_c>& prop_1();
-    void prop_1(const std::list<cpp_ref_impl::std_model::pkg1::class_c>& v);
-    void prop_1(const std::list<cpp_ref_impl::std_model::pkg1::class_c>&& v);
+    const std::list<masd::cpp_ref_impl::std_model::pkg1::class_c>& prop_1() const;
+    std::list<masd::cpp_ref_impl::std_model::pkg1::class_c>& prop_1();
+    void prop_1(const std::list<masd::cpp_ref_impl::std_model::pkg1::class_c>& v);
+    void prop_1(const std::list<masd::cpp_ref_impl::std_model::pkg1::class_c>&& v);
 
 public:
     bool operator==(const derived& rhs) const;
@@ -70,14 +70,14 @@ public:
     }
 
 public:
-    bool equals(const cpp_ref_impl::std_model::base& other) const override;
+    bool equals(const masd::cpp_ref_impl::std_model::base& other) const override;
 
 public:
     void swap(derived& other) noexcept;
     derived& operator=(derived other);
 
 private:
-    std::list<cpp_ref_impl::std_model::pkg1::class_c> prop_1_;
+    std::list<masd::cpp_ref_impl::std_model::pkg1::class_c> prop_1_;
 };
 
 }
@@ -86,8 +86,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::std_model::derived& lhs,
-    cpp_ref_impl::std_model::derived& rhs) {
+    masd::cpp_ref_impl::std_model::derived& lhs,
+    masd::cpp_ref_impl::std_model::derived& rhs) {
     lhs.swap(rhs);
 }
 

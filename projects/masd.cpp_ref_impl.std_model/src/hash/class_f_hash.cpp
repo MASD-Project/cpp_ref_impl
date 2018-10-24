@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/std_model/hash/class_a_hash.hpp"
-#include "cpp_ref_impl/std_model/hash/class_f_hash.hpp"
-#include "cpp_ref_impl/std_model/hash/pkg1/class_c_hash.hpp"
+#include "masd.cpp_ref_impl.std_model/hash/class_a_hash.hpp"
+#include "masd.cpp_ref_impl.std_model/hash/class_f_hash.hpp"
+#include "masd.cpp_ref_impl.std_model/hash/pkg1/class_c_hash.hpp"
 
 namespace {
 
@@ -39,7 +39,7 @@ inline std::size_t hash_std_unordered_map_std_string_std_string(const std::unord
     return seed;
 }
 
-inline std::size_t hash_std_unordered_map_std_string_cpp_ref_impl_std_model_class_a(const std::unordered_map<std::string, cpp_ref_impl::std_model::class_a>& v) {
+inline std::size_t hash_std_unordered_map_std_string_masd_cpp_ref_impl_std_model_class_a(const std::unordered_map<std::string, masd::cpp_ref_impl::std_model::class_a>& v) {
     std::size_t seed(0);
     for (const auto i : v) {
         combine(seed, i.first);
@@ -48,7 +48,7 @@ inline std::size_t hash_std_unordered_map_std_string_cpp_ref_impl_std_model_clas
     return seed;
 }
 
-inline std::size_t hash_std_unordered_map_cpp_ref_impl_std_model_class_a_cpp_ref_impl_std_model_pkg1_class_c(const std::unordered_map<cpp_ref_impl::std_model::class_a, cpp_ref_impl::std_model::pkg1::class_c>& v) {
+inline std::size_t hash_std_unordered_map_masd_cpp_ref_impl_std_model_class_a_masd_cpp_ref_impl_std_model_pkg1_class_c(const std::unordered_map<masd::cpp_ref_impl::std_model::class_a, masd::cpp_ref_impl::std_model::pkg1::class_c>& v) {
     std::size_t seed(0);
     for (const auto i : v) {
         combine(seed, i.first);
@@ -59,14 +59,14 @@ inline std::size_t hash_std_unordered_map_cpp_ref_impl_std_model_class_a_cpp_ref
 
 }
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 std::size_t class_f_hasher::hash(const class_f& v) {
     std::size_t seed(0);
 
     combine(seed, hash_std_unordered_map_std_string_std_string(v.prop_0()));
-    combine(seed, hash_std_unordered_map_std_string_cpp_ref_impl_std_model_class_a(v.prop_1()));
-    combine(seed, hash_std_unordered_map_cpp_ref_impl_std_model_class_a_cpp_ref_impl_std_model_pkg1_class_c(v.prop_2()));
+    combine(seed, hash_std_unordered_map_std_string_masd_cpp_ref_impl_std_model_class_a(v.prop_1()));
+    combine(seed, hash_std_unordered_map_masd_cpp_ref_impl_std_model_class_a_masd_cpp_ref_impl_std_model_pkg1_class_c(v.prop_2()));
 
     return seed;
 }

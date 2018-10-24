@@ -19,7 +19,7 @@
  *
  */
 #include <sstream>
-#include "cpp_ref_impl/std_model/test_data/class_a_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/class_a_td.hpp"
 
 namespace {
 
@@ -31,7 +31,7 @@ std::string create_std_string(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 class_a_generator::class_a_generator() : position_(0) { }
 

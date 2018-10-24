@@ -18,28 +18,28 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_STD_MODEL_TYPES_ALL_HPP
-#define CPP_REF_IMPL_STD_MODEL_TYPES_ALL_HPP
+#ifndef MASD_CPP_REF_IMPL_STD_MODEL_TYPES_ALL_HPP
+#define MASD_CPP_REF_IMPL_STD_MODEL_TYPES_ALL_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/std_model/types/base.hpp"
-#include "cpp_ref_impl/std_model/types/class_a.hpp"
-#include "cpp_ref_impl/std_model/types/class_b.hpp"
-#include "cpp_ref_impl/std_model/types/class_d.hpp"
-#include "cpp_ref_impl/std_model/types/class_e.hpp"
-#include "cpp_ref_impl/std_model/types/class_f.hpp"
-#include "cpp_ref_impl/std_model/types/class_g.hpp"
-#include "cpp_ref_impl/std_model/types/class_h.hpp"
-#include "cpp_ref_impl/std_model/types/class_j.hpp"
-#include "cpp_ref_impl/std_model/types/class_k.hpp"
-#include "cpp_ref_impl/std_model/types/derived.hpp"
-#include "cpp_ref_impl/std_model/types/builtins.hpp"
-#include "cpp_ref_impl/std_model/types/pkg1/class_c.hpp"
-#include "cpp_ref_impl/std_model/types/some_service.hpp"
-#include "cpp_ref_impl/std_model/types/string_primitive.hpp"
-#include "cpp_ref_impl/std_model/types/enum_with_std_builtin.hpp"
+#include "masd.cpp_ref_impl.std_model/types/base.hpp"
+#include "masd.cpp_ref_impl.std_model/types/class_a.hpp"
+#include "masd.cpp_ref_impl.std_model/types/class_b.hpp"
+#include "masd.cpp_ref_impl.std_model/types/class_d.hpp"
+#include "masd.cpp_ref_impl.std_model/types/class_e.hpp"
+#include "masd.cpp_ref_impl.std_model/types/class_f.hpp"
+#include "masd.cpp_ref_impl.std_model/types/class_g.hpp"
+#include "masd.cpp_ref_impl.std_model/types/class_h.hpp"
+#include "masd.cpp_ref_impl.std_model/types/class_j.hpp"
+#include "masd.cpp_ref_impl.std_model/types/class_k.hpp"
+#include "masd.cpp_ref_impl.std_model/types/derived.hpp"
+#include "masd.cpp_ref_impl.std_model/types/builtins.hpp"
+#include "masd.cpp_ref_impl.std_model/types/pkg1/class_c.hpp"
+#include "masd.cpp_ref_impl.std_model/types/some_service.hpp"
+#include "masd.cpp_ref_impl.std_model/types/string_primitive.hpp"
+#include "masd.cpp_ref_impl.std_model/types/enum_with_std_builtin.hpp"
 
 #endif

@@ -18,27 +18,27 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_STD_MODEL_IO_ALL_IO_HPP
-#define CPP_REF_IMPL_STD_MODEL_IO_ALL_IO_HPP
+#ifndef MASD_CPP_REF_IMPL_STD_MODEL_IO_ALL_IO_HPP
+#define MASD_CPP_REF_IMPL_STD_MODEL_IO_ALL_IO_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/std_model/io/base_io.hpp"
-#include "cpp_ref_impl/std_model/io/class_a_io.hpp"
-#include "cpp_ref_impl/std_model/io/class_b_io.hpp"
-#include "cpp_ref_impl/std_model/io/class_d_io.hpp"
-#include "cpp_ref_impl/std_model/io/class_e_io.hpp"
-#include "cpp_ref_impl/std_model/io/class_f_io.hpp"
-#include "cpp_ref_impl/std_model/io/class_g_io.hpp"
-#include "cpp_ref_impl/std_model/io/class_h_io.hpp"
-#include "cpp_ref_impl/std_model/io/class_j_io.hpp"
-#include "cpp_ref_impl/std_model/io/class_k_io.hpp"
-#include "cpp_ref_impl/std_model/io/derived_io.hpp"
-#include "cpp_ref_impl/std_model/io/builtins_io.hpp"
-#include "cpp_ref_impl/std_model/io/pkg1/class_c_io.hpp"
-#include "cpp_ref_impl/std_model/io/string_primitive_io.hpp"
-#include "cpp_ref_impl/std_model/io/enum_with_std_builtin_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/base_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/class_a_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/class_b_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/class_d_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/class_e_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/class_f_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/class_g_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/class_h_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/class_j_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/class_k_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/derived_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/builtins_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/pkg1/class_c_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/string_primitive_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/enum_with_std_builtin_io.hpp"
 
 #endif

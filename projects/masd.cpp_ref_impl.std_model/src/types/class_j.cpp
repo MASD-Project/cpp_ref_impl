@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/std_model/types/class_j.hpp"
+#include "masd.cpp_ref_impl.std_model/types/class_j.hpp"
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 class_j::class_j(
     const std::pair<int, int>& prop_0,

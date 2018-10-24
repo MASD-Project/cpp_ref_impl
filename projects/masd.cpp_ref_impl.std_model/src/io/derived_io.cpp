@@ -19,11 +19,11 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/std_model/io/base_io.hpp"
-#include "cpp_ref_impl/std_model/io/derived_io.hpp"
-#include "cpp_ref_impl/std_model/io/pkg1/class_c_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/base_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/derived_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/pkg1/class_c_io.hpp"
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 std::ostream& operator<<(std::ostream& s, const derived& v) {
     v.to_stream(s);

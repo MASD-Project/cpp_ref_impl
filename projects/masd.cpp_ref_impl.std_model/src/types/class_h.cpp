@@ -18,13 +18,13 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/std_model/types/class_h.hpp"
+#include "masd.cpp_ref_impl.std_model/types/class_h.hpp"
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 class_h::class_h(
-    const std::unordered_set<cpp_ref_impl::std_model::class_a>& prop_0,
-    const std::unordered_set<cpp_ref_impl::std_model::pkg1::class_c>& prop_1)
+    const std::unordered_set<masd::cpp_ref_impl::std_model::class_a>& prop_0,
+    const std::unordered_set<masd::cpp_ref_impl::std_model::pkg1::class_c>& prop_1)
     : prop_0_(prop_0),
       prop_1_(prop_1) { }
 
@@ -45,35 +45,35 @@ class_h& class_h::operator=(class_h other) {
     return *this;
 }
 
-const std::unordered_set<cpp_ref_impl::std_model::class_a>& class_h::prop_0() const {
+const std::unordered_set<masd::cpp_ref_impl::std_model::class_a>& class_h::prop_0() const {
     return prop_0_;
 }
 
-std::unordered_set<cpp_ref_impl::std_model::class_a>& class_h::prop_0() {
+std::unordered_set<masd::cpp_ref_impl::std_model::class_a>& class_h::prop_0() {
     return prop_0_;
 }
 
-void class_h::prop_0(const std::unordered_set<cpp_ref_impl::std_model::class_a>& v) {
+void class_h::prop_0(const std::unordered_set<masd::cpp_ref_impl::std_model::class_a>& v) {
     prop_0_ = v;
 }
 
-void class_h::prop_0(const std::unordered_set<cpp_ref_impl::std_model::class_a>&& v) {
+void class_h::prop_0(const std::unordered_set<masd::cpp_ref_impl::std_model::class_a>&& v) {
     prop_0_ = std::move(v);
 }
 
-const std::unordered_set<cpp_ref_impl::std_model::pkg1::class_c>& class_h::prop_1() const {
+const std::unordered_set<masd::cpp_ref_impl::std_model::pkg1::class_c>& class_h::prop_1() const {
     return prop_1_;
 }
 
-std::unordered_set<cpp_ref_impl::std_model::pkg1::class_c>& class_h::prop_1() {
+std::unordered_set<masd::cpp_ref_impl::std_model::pkg1::class_c>& class_h::prop_1() {
     return prop_1_;
 }
 
-void class_h::prop_1(const std::unordered_set<cpp_ref_impl::std_model::pkg1::class_c>& v) {
+void class_h::prop_1(const std::unordered_set<masd::cpp_ref_impl::std_model::pkg1::class_c>& v) {
     prop_1_ = v;
 }
 
-void class_h::prop_1(const std::unordered_set<cpp_ref_impl::std_model::pkg1::class_c>&& v) {
+void class_h::prop_1(const std::unordered_set<masd::cpp_ref_impl::std_model::pkg1::class_c>&& v) {
     prop_1_ = std::move(v);
 }
 

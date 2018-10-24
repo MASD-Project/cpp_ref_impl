@@ -18,27 +18,27 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_STD_MODEL_TEST_DATA_ALL_TD_HPP
-#define CPP_REF_IMPL_STD_MODEL_TEST_DATA_ALL_TD_HPP
+#ifndef MASD_CPP_REF_IMPL_STD_MODEL_TEST_DATA_ALL_TD_HPP
+#define MASD_CPP_REF_IMPL_STD_MODEL_TEST_DATA_ALL_TD_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/std_model/test_data/base_td.hpp"
-#include "cpp_ref_impl/std_model/test_data/class_a_td.hpp"
-#include "cpp_ref_impl/std_model/test_data/class_b_td.hpp"
-#include "cpp_ref_impl/std_model/test_data/class_d_td.hpp"
-#include "cpp_ref_impl/std_model/test_data/class_e_td.hpp"
-#include "cpp_ref_impl/std_model/test_data/class_f_td.hpp"
-#include "cpp_ref_impl/std_model/test_data/class_g_td.hpp"
-#include "cpp_ref_impl/std_model/test_data/class_h_td.hpp"
-#include "cpp_ref_impl/std_model/test_data/class_j_td.hpp"
-#include "cpp_ref_impl/std_model/test_data/class_k_td.hpp"
-#include "cpp_ref_impl/std_model/test_data/derived_td.hpp"
-#include "cpp_ref_impl/std_model/test_data/builtins_td.hpp"
-#include "cpp_ref_impl/std_model/test_data/pkg1/class_c_td.hpp"
-#include "cpp_ref_impl/std_model/test_data/string_primitive_td.hpp"
-#include "cpp_ref_impl/std_model/test_data/enum_with_std_builtin_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/base_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/class_a_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/class_b_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/class_d_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/class_e_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/class_f_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/class_g_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/class_h_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/class_j_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/class_k_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/derived_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/builtins_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/pkg1/class_c_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/string_primitive_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/enum_with_std_builtin_td.hpp"
 
 #endif

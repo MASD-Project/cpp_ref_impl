@@ -18,18 +18,18 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_STD_MODEL_TYPES_CLASS_K_HPP
-#define CPP_REF_IMPL_STD_MODEL_TYPES_CLASS_K_HPP
+#ifndef MASD_CPP_REF_IMPL_STD_MODEL_TYPES_CLASS_K_HPP
+#define MASD_CPP_REF_IMPL_STD_MODEL_TYPES_CLASS_K_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <algorithm>
-#include "cpp_ref_impl/std_model/types/string_primitive.hpp"
-#include "cpp_ref_impl/std_model/serialization/class_k_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.std_model/types/string_primitive.hpp"
+#include "masd.cpp_ref_impl.std_model/serialization/class_k_fwd_ser.hpp"
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 class class_k final {
 public:
@@ -39,20 +39,20 @@ public:
     ~class_k() = default;
 
 public:
-    explicit class_k(const cpp_ref_impl::std_model::string_primitive& prop_0);
+    explicit class_k(const masd::cpp_ref_impl::std_model::string_primitive& prop_0);
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::std_model::class_k& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::std_model::class_k& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::std_model::class_k& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::std_model::class_k& v, unsigned int version);
 
 public:
-    const cpp_ref_impl::std_model::string_primitive& prop_0() const;
-    cpp_ref_impl::std_model::string_primitive& prop_0();
-    void prop_0(const cpp_ref_impl::std_model::string_primitive& v);
-    void prop_0(const cpp_ref_impl::std_model::string_primitive&& v);
+    const masd::cpp_ref_impl::std_model::string_primitive& prop_0() const;
+    masd::cpp_ref_impl::std_model::string_primitive& prop_0();
+    void prop_0(const masd::cpp_ref_impl::std_model::string_primitive& v);
+    void prop_0(const masd::cpp_ref_impl::std_model::string_primitive&& v);
 
 public:
     bool operator==(const class_k& rhs) const;
@@ -65,7 +65,7 @@ public:
     class_k& operator=(class_k other);
 
 private:
-    cpp_ref_impl::std_model::string_primitive prop_0_;
+    masd::cpp_ref_impl::std_model::string_primitive prop_0_;
 };
 
 }
@@ -74,8 +74,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::std_model::class_k& lhs,
-    cpp_ref_impl::std_model::class_k& rhs) {
+    masd::cpp_ref_impl::std_model::class_k& lhs,
+    masd::cpp_ref_impl::std_model::class_k& rhs) {
     lhs.swap(rhs);
 }
 

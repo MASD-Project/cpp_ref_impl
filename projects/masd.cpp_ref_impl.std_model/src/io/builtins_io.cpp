@@ -19,13 +19,13 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/std_model/io/builtins_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/builtins_io.hpp"
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 std::ostream& operator<<(std::ostream& s, const builtins& v) {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::std_model::builtins\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::std_model::builtins\"" << ", "
       << "\"prop_0\": " << "\"" << v.prop_0() << "\"" << ", "
       << "\"prop_1\": " << v.prop_1() << ", "
       << "\"prop_2\": " << v.prop_2() << ", "

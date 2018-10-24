@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_STD_MODEL_TYPES_BASE_HPP
-#define CPP_REF_IMPL_STD_MODEL_TYPES_BASE_HPP
+#ifndef MASD_CPP_REF_IMPL_STD_MODEL_TYPES_BASE_HPP
+#define MASD_CPP_REF_IMPL_STD_MODEL_TYPES_BASE_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -29,9 +29,9 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-#include "cpp_ref_impl/std_model/serialization/base_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.std_model/serialization/base_fwd_ser.hpp"
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 class base {
 public:
@@ -46,10 +46,10 @@ public:
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::std_model::base& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::std_model::base& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::std_model::base& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::std_model::base& v, unsigned int version);
 
 public:
     virtual void to_stream(std::ostream& s) const;

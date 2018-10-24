@@ -19,12 +19,12 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/std_model/io/class_a_io.hpp"
-#include "cpp_ref_impl/std_model/io/pkg1/class_c_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/class_a_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/pkg1/class_c_io.hpp"
 
 namespace std {
 
-inline std::ostream& operator<<(std::ostream& s, const std::vector<cpp_ref_impl::std_model::class_a>& v) {
+inline std::ostream& operator<<(std::ostream& s, const std::vector<masd::cpp_ref_impl::std_model::class_a>& v) {
     s << "[ ";
     for (auto i(v.begin()); i != v.end(); ++i) {
         if (i != v.begin()) s << ", ";
@@ -36,11 +36,11 @@ inline std::ostream& operator<<(std::ostream& s, const std::vector<cpp_ref_impl:
 
 }
 
-namespace cpp_ref_impl::std_model::pkg1 {
+namespace masd::cpp_ref_impl::std_model::pkg1 {
 
 std::ostream& operator<<(std::ostream& s, const class_c& v) {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::std_model::pkg1::class_c\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::std_model::pkg1::class_c\"" << ", "
       << "\"prop_0\": " << v.prop_0() << ", "
       << "\"prop_1\": " << v.prop_1()
       << " }";

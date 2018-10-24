@@ -18,48 +18,48 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/std_model/test_data/class_a_td.hpp"
-#include "cpp_ref_impl/std_model/test_data/class_h_td.hpp"
-#include "cpp_ref_impl/std_model/test_data/pkg1/class_c_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/class_a_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/class_h_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/pkg1/class_c_td.hpp"
 
 namespace {
 
-cpp_ref_impl::std_model::class_a
-create_cpp_ref_impl_std_model_class_a(const unsigned int position) {
-    return cpp_ref_impl::std_model::class_a_generator::create(position);
+masd::cpp_ref_impl::std_model::class_a
+create_masd_cpp_ref_impl_std_model_class_a(const unsigned int position) {
+    return masd::cpp_ref_impl::std_model::class_a_generator::create(position);
 }
 
-std::unordered_set<cpp_ref_impl::std_model::class_a> create_std_unordered_set_cpp_ref_impl_std_model_class_a(unsigned int position) {
-    std::unordered_set<cpp_ref_impl::std_model::class_a> r;
+std::unordered_set<masd::cpp_ref_impl::std_model::class_a> create_std_unordered_set_masd_cpp_ref_impl_std_model_class_a(unsigned int position) {
+    std::unordered_set<masd::cpp_ref_impl::std_model::class_a> r;
     for (unsigned int i(0); i < 4; ++i) {
-        r.insert(create_cpp_ref_impl_std_model_class_a(position + i));
+        r.insert(create_masd_cpp_ref_impl_std_model_class_a(position + i));
     }
     return r;
 }
 
-cpp_ref_impl::std_model::pkg1::class_c
-create_cpp_ref_impl_std_model_pkg1_class_c(const unsigned int position) {
-    return cpp_ref_impl::std_model::pkg1::class_c_generator::create(position);
+masd::cpp_ref_impl::std_model::pkg1::class_c
+create_masd_cpp_ref_impl_std_model_pkg1_class_c(const unsigned int position) {
+    return masd::cpp_ref_impl::std_model::pkg1::class_c_generator::create(position);
 }
 
-std::unordered_set<cpp_ref_impl::std_model::pkg1::class_c> create_std_unordered_set_cpp_ref_impl_std_model_pkg1_class_c(unsigned int position) {
-    std::unordered_set<cpp_ref_impl::std_model::pkg1::class_c> r;
+std::unordered_set<masd::cpp_ref_impl::std_model::pkg1::class_c> create_std_unordered_set_masd_cpp_ref_impl_std_model_pkg1_class_c(unsigned int position) {
+    std::unordered_set<masd::cpp_ref_impl::std_model::pkg1::class_c> r;
     for (unsigned int i(0); i < 4; ++i) {
-        r.insert(create_cpp_ref_impl_std_model_pkg1_class_c(position + i));
+        r.insert(create_masd_cpp_ref_impl_std_model_pkg1_class_c(position + i));
     }
     return r;
 }
 
 }
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 class_h_generator::class_h_generator() : position_(0) { }
 
 void class_h_generator::
 populate(const unsigned int position, result_type& v) {
-    v.prop_0(create_std_unordered_set_cpp_ref_impl_std_model_class_a(position + 0));
-    v.prop_1(create_std_unordered_set_cpp_ref_impl_std_model_pkg1_class_c(position + 1));
+    v.prop_0(create_std_unordered_set_masd_cpp_ref_impl_std_model_class_a(position + 0));
+    v.prop_1(create_std_unordered_set_masd_cpp_ref_impl_std_model_pkg1_class_c(position + 1));
 }
 
 class_h_generator::result_type

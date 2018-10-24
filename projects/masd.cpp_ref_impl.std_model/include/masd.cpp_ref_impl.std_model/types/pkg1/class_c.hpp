@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_STD_MODEL_TYPES_PKG1_CLASS_C_HPP
-#define CPP_REF_IMPL_STD_MODEL_TYPES_PKG1_CLASS_C_HPP
+#ifndef MASD_CPP_REF_IMPL_STD_MODEL_TYPES_PKG1_CLASS_C_HPP
+#define MASD_CPP_REF_IMPL_STD_MODEL_TYPES_PKG1_CLASS_C_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -27,10 +27,10 @@
 
 #include <vector>
 #include <algorithm>
-#include "cpp_ref_impl/std_model/types/class_a.hpp"
-#include "cpp_ref_impl/std_model/serialization/pkg1/class_c_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.std_model/types/class_a.hpp"
+#include "masd.cpp_ref_impl.std_model/serialization/pkg1/class_c_fwd_ser.hpp"
 
-namespace cpp_ref_impl::std_model::pkg1 {
+namespace masd::cpp_ref_impl::std_model::pkg1 {
 
 class class_c final {
 public:
@@ -44,23 +44,23 @@ public:
 public:
     class_c(
         const int prop_0,
-        const std::vector<cpp_ref_impl::std_model::class_a>& prop_1);
+        const std::vector<masd::cpp_ref_impl::std_model::class_a>& prop_1);
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::std_model::pkg1::class_c& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::std_model::pkg1::class_c& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::std_model::pkg1::class_c& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::std_model::pkg1::class_c& v, unsigned int version);
 
 public:
     int prop_0() const;
     void prop_0(const int v);
 
-    const std::vector<cpp_ref_impl::std_model::class_a>& prop_1() const;
-    std::vector<cpp_ref_impl::std_model::class_a>& prop_1();
-    void prop_1(const std::vector<cpp_ref_impl::std_model::class_a>& v);
-    void prop_1(const std::vector<cpp_ref_impl::std_model::class_a>&& v);
+    const std::vector<masd::cpp_ref_impl::std_model::class_a>& prop_1() const;
+    std::vector<masd::cpp_ref_impl::std_model::class_a>& prop_1();
+    void prop_1(const std::vector<masd::cpp_ref_impl::std_model::class_a>& v);
+    void prop_1(const std::vector<masd::cpp_ref_impl::std_model::class_a>&& v);
 
 public:
     bool operator==(const class_c& rhs) const;
@@ -74,7 +74,7 @@ public:
 
 private:
     int prop_0_;
-    std::vector<cpp_ref_impl::std_model::class_a> prop_1_;
+    std::vector<masd::cpp_ref_impl::std_model::class_a> prop_1_;
 };
 
 }
@@ -83,8 +83,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::std_model::pkg1::class_c& lhs,
-    cpp_ref_impl::std_model::pkg1::class_c& rhs) {
+    masd::cpp_ref_impl::std_model::pkg1::class_c& lhs,
+    masd::cpp_ref_impl::std_model::pkg1::class_c& rhs) {
     lhs.swap(rhs);
 }
 

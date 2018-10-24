@@ -19,14 +19,14 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/std_model/io/class_k_io.hpp"
-#include "cpp_ref_impl/std_model/io/string_primitive_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/class_k_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/string_primitive_io.hpp"
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 std::ostream& operator<<(std::ostream& s, const class_k& v) {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::std_model::class_k\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::std_model::class_k\"" << ", "
       << "\"prop_0\": " << v.prop_0()
       << " }";
     return(s);

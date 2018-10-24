@@ -18,18 +18,18 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_STD_MODEL_SERIALIZATION_ENUM_WITH_STD_BUILTIN_SER_HPP
-#define CPP_REF_IMPL_STD_MODEL_SERIALIZATION_ENUM_WITH_STD_BUILTIN_SER_HPP
+#ifndef MASD_CPP_REF_IMPL_STD_MODEL_SERIALIZATION_ENUM_WITH_STD_BUILTIN_SER_HPP
+#define MASD_CPP_REF_IMPL_STD_MODEL_SERIALIZATION_ENUM_WITH_STD_BUILTIN_SER_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <boost/serialization/nvp.hpp>
-#include "cpp_ref_impl/std_model/types/enum_with_std_builtin.hpp"
+#include "masd.cpp_ref_impl.std_model/types/enum_with_std_builtin.hpp"
 
 template<class Archive>
-void serialize(Archive& ar, cpp_ref_impl::std_model::enum_with_std_builtin& v, unsigned int /*version*/){
+void serialize(Archive& ar, masd::cpp_ref_impl::std_model::enum_with_std_builtin& v, unsigned int /*version*/){
     using boost::serialization::make_nvp;
     ar & make_nvp("enum_with_std_builtin", v);
 }

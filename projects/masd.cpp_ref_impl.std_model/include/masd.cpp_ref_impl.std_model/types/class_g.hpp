@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_STD_MODEL_TYPES_CLASS_G_HPP
-#define CPP_REF_IMPL_STD_MODEL_TYPES_CLASS_G_HPP
+#ifndef MASD_CPP_REF_IMPL_STD_MODEL_TYPES_CLASS_G_HPP
+#define MASD_CPP_REF_IMPL_STD_MODEL_TYPES_CLASS_G_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -30,13 +30,13 @@
 #include <vector>
 #include <algorithm>
 #include <unordered_map>
-#include "cpp_ref_impl/std_model/types/class_a.hpp"
-#include "cpp_ref_impl/std_model/hash/class_a_hash.hpp"
-#include "cpp_ref_impl/std_model/types/pkg1/class_c.hpp"
-#include "cpp_ref_impl/std_model/hash/pkg1/class_c_hash.hpp"
-#include "cpp_ref_impl/std_model/serialization/class_g_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.std_model/types/class_a.hpp"
+#include "masd.cpp_ref_impl.std_model/hash/class_a_hash.hpp"
+#include "masd.cpp_ref_impl.std_model/types/pkg1/class_c.hpp"
+#include "masd.cpp_ref_impl.std_model/hash/pkg1/class_c_hash.hpp"
+#include "masd.cpp_ref_impl.std_model/serialization/class_g_fwd_ser.hpp"
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 class class_g final {
 public:
@@ -47,32 +47,32 @@ public:
 
 public:
     class_g(
-        const std::unordered_map<cpp_ref_impl::std_model::class_a, std::vector<cpp_ref_impl::std_model::pkg1::class_c> >& prop_0,
-        const std::unordered_map<cpp_ref_impl::std_model::pkg1::class_c, std::list<cpp_ref_impl::std_model::class_a> >& prop_1,
-        const std::unordered_map<std::string, cpp_ref_impl::std_model::class_a>& prop_2);
+        const std::unordered_map<masd::cpp_ref_impl::std_model::class_a, std::vector<masd::cpp_ref_impl::std_model::pkg1::class_c> >& prop_0,
+        const std::unordered_map<masd::cpp_ref_impl::std_model::pkg1::class_c, std::list<masd::cpp_ref_impl::std_model::class_a> >& prop_1,
+        const std::unordered_map<std::string, masd::cpp_ref_impl::std_model::class_a>& prop_2);
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::std_model::class_g& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::std_model::class_g& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::std_model::class_g& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::std_model::class_g& v, unsigned int version);
 
 public:
-    const std::unordered_map<cpp_ref_impl::std_model::class_a, std::vector<cpp_ref_impl::std_model::pkg1::class_c> >& prop_0() const;
-    std::unordered_map<cpp_ref_impl::std_model::class_a, std::vector<cpp_ref_impl::std_model::pkg1::class_c> >& prop_0();
-    void prop_0(const std::unordered_map<cpp_ref_impl::std_model::class_a, std::vector<cpp_ref_impl::std_model::pkg1::class_c> >& v);
-    void prop_0(const std::unordered_map<cpp_ref_impl::std_model::class_a, std::vector<cpp_ref_impl::std_model::pkg1::class_c> >&& v);
+    const std::unordered_map<masd::cpp_ref_impl::std_model::class_a, std::vector<masd::cpp_ref_impl::std_model::pkg1::class_c> >& prop_0() const;
+    std::unordered_map<masd::cpp_ref_impl::std_model::class_a, std::vector<masd::cpp_ref_impl::std_model::pkg1::class_c> >& prop_0();
+    void prop_0(const std::unordered_map<masd::cpp_ref_impl::std_model::class_a, std::vector<masd::cpp_ref_impl::std_model::pkg1::class_c> >& v);
+    void prop_0(const std::unordered_map<masd::cpp_ref_impl::std_model::class_a, std::vector<masd::cpp_ref_impl::std_model::pkg1::class_c> >&& v);
 
-    const std::unordered_map<cpp_ref_impl::std_model::pkg1::class_c, std::list<cpp_ref_impl::std_model::class_a> >& prop_1() const;
-    std::unordered_map<cpp_ref_impl::std_model::pkg1::class_c, std::list<cpp_ref_impl::std_model::class_a> >& prop_1();
-    void prop_1(const std::unordered_map<cpp_ref_impl::std_model::pkg1::class_c, std::list<cpp_ref_impl::std_model::class_a> >& v);
-    void prop_1(const std::unordered_map<cpp_ref_impl::std_model::pkg1::class_c, std::list<cpp_ref_impl::std_model::class_a> >&& v);
+    const std::unordered_map<masd::cpp_ref_impl::std_model::pkg1::class_c, std::list<masd::cpp_ref_impl::std_model::class_a> >& prop_1() const;
+    std::unordered_map<masd::cpp_ref_impl::std_model::pkg1::class_c, std::list<masd::cpp_ref_impl::std_model::class_a> >& prop_1();
+    void prop_1(const std::unordered_map<masd::cpp_ref_impl::std_model::pkg1::class_c, std::list<masd::cpp_ref_impl::std_model::class_a> >& v);
+    void prop_1(const std::unordered_map<masd::cpp_ref_impl::std_model::pkg1::class_c, std::list<masd::cpp_ref_impl::std_model::class_a> >&& v);
 
-    const std::unordered_map<std::string, cpp_ref_impl::std_model::class_a>& prop_2() const;
-    std::unordered_map<std::string, cpp_ref_impl::std_model::class_a>& prop_2();
-    void prop_2(const std::unordered_map<std::string, cpp_ref_impl::std_model::class_a>& v);
-    void prop_2(const std::unordered_map<std::string, cpp_ref_impl::std_model::class_a>&& v);
+    const std::unordered_map<std::string, masd::cpp_ref_impl::std_model::class_a>& prop_2() const;
+    std::unordered_map<std::string, masd::cpp_ref_impl::std_model::class_a>& prop_2();
+    void prop_2(const std::unordered_map<std::string, masd::cpp_ref_impl::std_model::class_a>& v);
+    void prop_2(const std::unordered_map<std::string, masd::cpp_ref_impl::std_model::class_a>&& v);
 
 public:
     bool operator==(const class_g& rhs) const;
@@ -85,9 +85,9 @@ public:
     class_g& operator=(class_g other);
 
 private:
-    std::unordered_map<cpp_ref_impl::std_model::class_a, std::vector<cpp_ref_impl::std_model::pkg1::class_c> > prop_0_;
-    std::unordered_map<cpp_ref_impl::std_model::pkg1::class_c, std::list<cpp_ref_impl::std_model::class_a> > prop_1_;
-    std::unordered_map<std::string, cpp_ref_impl::std_model::class_a> prop_2_;
+    std::unordered_map<masd::cpp_ref_impl::std_model::class_a, std::vector<masd::cpp_ref_impl::std_model::pkg1::class_c> > prop_0_;
+    std::unordered_map<masd::cpp_ref_impl::std_model::pkg1::class_c, std::list<masd::cpp_ref_impl::std_model::class_a> > prop_1_;
+    std::unordered_map<std::string, masd::cpp_ref_impl::std_model::class_a> prop_2_;
 };
 
 }
@@ -96,8 +96,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::std_model::class_g& lhs,
-    cpp_ref_impl::std_model::class_g& rhs) {
+    masd::cpp_ref_impl::std_model::class_g& lhs,
+    masd::cpp_ref_impl::std_model::class_g& rhs) {
     lhs.swap(rhs);
 }
 

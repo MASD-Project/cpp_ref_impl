@@ -18,25 +18,25 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/std_model/test_data/class_k_td.hpp"
-#include "cpp_ref_impl/std_model/test_data/string_primitive_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/class_k_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/string_primitive_td.hpp"
 
 namespace {
 
-cpp_ref_impl::std_model::string_primitive
-create_cpp_ref_impl_std_model_string_primitive(const unsigned int position) {
-    return cpp_ref_impl::std_model::string_primitive_generator::create(position);
+masd::cpp_ref_impl::std_model::string_primitive
+create_masd_cpp_ref_impl_std_model_string_primitive(const unsigned int position) {
+    return masd::cpp_ref_impl::std_model::string_primitive_generator::create(position);
 }
 
 }
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 class_k_generator::class_k_generator() : position_(0) { }
 
 void class_k_generator::
 populate(const unsigned int position, result_type& v) {
-    v.prop_0(create_cpp_ref_impl_std_model_string_primitive(position + 0));
+    v.prop_0(create_masd_cpp_ref_impl_std_model_string_primitive(position + 0));
 }
 
 class_k_generator::result_type

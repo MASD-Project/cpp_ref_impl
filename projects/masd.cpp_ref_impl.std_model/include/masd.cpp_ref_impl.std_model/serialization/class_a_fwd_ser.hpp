@@ -18,23 +18,23 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_STD_MODEL_SERIALIZATION_CLASS_A_FWD_SER_HPP
-#define CPP_REF_IMPL_STD_MODEL_SERIALIZATION_CLASS_A_FWD_SER_HPP
+#ifndef MASD_CPP_REF_IMPL_STD_MODEL_SERIALIZATION_CLASS_A_FWD_SER_HPP
+#define MASD_CPP_REF_IMPL_STD_MODEL_SERIALIZATION_CLASS_A_FWD_SER_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/std_model/types/class_a_fwd.hpp"
+#include "masd.cpp_ref_impl.std_model/types/class_a_fwd.hpp"
 
 namespace boost {
 namespace serialization {
 
 template<class Archive>
-void save(Archive& ar, const cpp_ref_impl::std_model::class_a& v, unsigned int version);
+void save(Archive& ar, const masd::cpp_ref_impl::std_model::class_a& v, unsigned int version);
 
 template<class Archive>
-void load(Archive& ar, cpp_ref_impl::std_model::class_a& v, unsigned int version);
+void load(Archive& ar, masd::cpp_ref_impl::std_model::class_a& v, unsigned int version);
 
 } }
 

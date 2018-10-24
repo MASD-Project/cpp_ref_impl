@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/std_model/hash/base_hash.hpp"
-#include "cpp_ref_impl/std_model/hash/derived_hash.hpp"
-#include "cpp_ref_impl/std_model/hash/pkg1/class_c_hash.hpp"
+#include "masd.cpp_ref_impl.std_model/hash/base_hash.hpp"
+#include "masd.cpp_ref_impl.std_model/hash/derived_hash.hpp"
+#include "masd.cpp_ref_impl.std_model/hash/pkg1/class_c_hash.hpp"
 
 namespace {
 
@@ -30,7 +30,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
     seed ^= hasher(value) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
 }
 
-inline std::size_t hash_std_list_cpp_ref_impl_std_model_pkg1_class_c(const std::list<cpp_ref_impl::std_model::pkg1::class_c>& v) {
+inline std::size_t hash_std_list_masd_cpp_ref_impl_std_model_pkg1_class_c(const std::list<masd::cpp_ref_impl::std_model::pkg1::class_c>& v) {
     std::size_t seed(0);
     for (const auto i : v) {
         combine(seed, i);
@@ -40,14 +40,14 @@ inline std::size_t hash_std_list_cpp_ref_impl_std_model_pkg1_class_c(const std::
 
 }
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 std::size_t derived_hasher::hash(const derived& v) {
     std::size_t seed(0);
 
-    combine(seed, dynamic_cast<const cpp_ref_impl::std_model::base&>(v));
+    combine(seed, dynamic_cast<const masd::cpp_ref_impl::std_model::base&>(v));
 
-    combine(seed, hash_std_list_cpp_ref_impl_std_model_pkg1_class_c(v.prop_1()));
+    combine(seed, hash_std_list_masd_cpp_ref_impl_std_model_pkg1_class_c(v.prop_1()));
     return seed;
 }
 

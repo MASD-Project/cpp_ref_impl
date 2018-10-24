@@ -18,16 +18,16 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_STD_MODEL_ODB_ENUM_WITH_STD_BUILTIN_PRAGMAS_HPP
-#define CPP_REF_IMPL_STD_MODEL_ODB_ENUM_WITH_STD_BUILTIN_PRAGMAS_HPP
+#ifndef MASD_CPP_REF_IMPL_STD_MODEL_ODB_ENUM_WITH_STD_BUILTIN_PRAGMAS_HPP
+#define MASD_CPP_REF_IMPL_STD_MODEL_ODB_ENUM_WITH_STD_BUILTIN_PRAGMAS_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/std_model/types/enum_with_std_builtin.hpp"
+#include "masd.cpp_ref_impl.std_model/types/enum_with_std_builtin.hpp"
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 #ifdef ODB_COMPILER
 

@@ -18,17 +18,17 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_STD_MODEL_HASH_CLASS_F_HASH_HPP
-#define CPP_REF_IMPL_STD_MODEL_HASH_CLASS_F_HASH_HPP
+#ifndef MASD_CPP_REF_IMPL_STD_MODEL_HASH_CLASS_F_HASH_HPP
+#define MASD_CPP_REF_IMPL_STD_MODEL_HASH_CLASS_F_HASH_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <functional>
-#include "cpp_ref_impl/std_model/types/class_f.hpp"
+#include "masd.cpp_ref_impl.std_model/types/class_f.hpp"
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 struct class_f_hasher {
 public:
@@ -40,10 +40,10 @@ public:
 namespace std {
 
 template<>
-struct hash<cpp_ref_impl::std_model::class_f> {
+struct hash<masd::cpp_ref_impl::std_model::class_f> {
 public:
-    size_t operator()(const cpp_ref_impl::std_model::class_f& v) const {
-        return cpp_ref_impl::std_model::class_f_hasher::hash(v);
+    size_t operator()(const masd::cpp_ref_impl::std_model::class_f& v) const {
+        return masd::cpp_ref_impl::std_model::class_f_hasher::hash(v);
     }
 };
 

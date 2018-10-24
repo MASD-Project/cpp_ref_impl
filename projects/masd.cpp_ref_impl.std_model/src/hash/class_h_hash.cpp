@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/std_model/hash/class_a_hash.hpp"
-#include "cpp_ref_impl/std_model/hash/class_h_hash.hpp"
-#include "cpp_ref_impl/std_model/hash/pkg1/class_c_hash.hpp"
+#include "masd.cpp_ref_impl.std_model/hash/class_a_hash.hpp"
+#include "masd.cpp_ref_impl.std_model/hash/class_h_hash.hpp"
+#include "masd.cpp_ref_impl.std_model/hash/pkg1/class_c_hash.hpp"
 
 namespace {
 
@@ -30,7 +30,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
     seed ^= hasher(value) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
 }
 
-inline std::size_t hash_std_unordered_set_cpp_ref_impl_std_model_class_a(const std::unordered_set<cpp_ref_impl::std_model::class_a>& v) {
+inline std::size_t hash_std_unordered_set_masd_cpp_ref_impl_std_model_class_a(const std::unordered_set<masd::cpp_ref_impl::std_model::class_a>& v) {
     std::size_t seed(0);
     for (const auto i : v) {
         combine(seed, i);
@@ -38,7 +38,7 @@ inline std::size_t hash_std_unordered_set_cpp_ref_impl_std_model_class_a(const s
     return seed;
 }
 
-inline std::size_t hash_std_unordered_set_cpp_ref_impl_std_model_pkg1_class_c(const std::unordered_set<cpp_ref_impl::std_model::pkg1::class_c>& v) {
+inline std::size_t hash_std_unordered_set_masd_cpp_ref_impl_std_model_pkg1_class_c(const std::unordered_set<masd::cpp_ref_impl::std_model::pkg1::class_c>& v) {
     std::size_t seed(0);
     for (const auto i : v) {
         combine(seed, i);
@@ -48,13 +48,13 @@ inline std::size_t hash_std_unordered_set_cpp_ref_impl_std_model_pkg1_class_c(co
 
 }
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 std::size_t class_h_hasher::hash(const class_h& v) {
     std::size_t seed(0);
 
-    combine(seed, hash_std_unordered_set_cpp_ref_impl_std_model_class_a(v.prop_0()));
-    combine(seed, hash_std_unordered_set_cpp_ref_impl_std_model_pkg1_class_c(v.prop_1()));
+    combine(seed, hash_std_unordered_set_masd_cpp_ref_impl_std_model_class_a(v.prop_0()));
+    combine(seed, hash_std_unordered_set_masd_cpp_ref_impl_std_model_pkg1_class_c(v.prop_1()));
 
     return seed;
 }

@@ -20,7 +20,7 @@
  */
 #include <ostream>
 #include <boost/algorithm/string.hpp>
-#include "cpp_ref_impl/std_model/io/class_j_io.hpp"
+#include "masd.cpp_ref_impl.std_model/io/class_j_io.hpp"
 
 namespace std {
 
@@ -83,11 +83,11 @@ inline std::ostream& operator<<(std::ostream& s, const std::vector<std::pair<std
 
 }
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 std::ostream& operator<<(std::ostream& s, const class_j& v) {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::std_model::class_j\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::std_model::class_j\"" << ", "
       << "\"prop_0\": " << v.prop_0() << ", "
       << "\"prop_1\": " << v.prop_1() << ", "
       << "\"prop_2\": " << v.prop_2()

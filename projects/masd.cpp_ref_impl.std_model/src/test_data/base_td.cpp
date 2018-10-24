@@ -19,8 +19,8 @@
  *
  */
 #include <sstream>
-#include "cpp_ref_impl/std_model/test_data/base_td.hpp"
-#include "cpp_ref_impl/std_model/test_data/derived_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/base_td.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/derived_td.hpp"
 
 namespace {
 
@@ -40,7 +40,7 @@ std::vector<std::string> create_std_vector_std_string(unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 void base_generator::
 populate(const unsigned int position, result_type& v) {
@@ -49,7 +49,7 @@ populate(const unsigned int position, result_type& v) {
 
 base_generator::result_type*
 base_generator::create_ptr(const unsigned int position) {
-    return cpp_ref_impl::std_model::derived_generator::create_ptr(position);
+    return masd::cpp_ref_impl::std_model::derived_generator::create_ptr(position);
 }
 
 }

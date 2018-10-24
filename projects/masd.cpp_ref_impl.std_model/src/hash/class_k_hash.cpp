@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/std_model/hash/class_k_hash.hpp"
-#include "cpp_ref_impl/std_model/hash/string_primitive_hash.hpp"
+#include "masd.cpp_ref_impl.std_model/hash/class_k_hash.hpp"
+#include "masd.cpp_ref_impl.std_model/hash/string_primitive_hash.hpp"
 
 namespace {
 
@@ -31,7 +31,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 std::size_t class_k_hasher::hash(const class_k& v) {
     std::size_t seed(0);

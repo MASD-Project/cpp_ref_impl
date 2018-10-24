@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/std_model/types/string_primitive.hpp"
+#include "masd.cpp_ref_impl.std_model/types/string_primitive.hpp"
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 string_primitive::string_primitive(const std::string& value)
     : value_(value) { }

@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_STD_MODEL_TYPES_CLASS_E_HPP
-#define CPP_REF_IMPL_STD_MODEL_TYPES_CLASS_E_HPP
+#ifndef MASD_CPP_REF_IMPL_STD_MODEL_TYPES_CLASS_E_HPP
+#define MASD_CPP_REF_IMPL_STD_MODEL_TYPES_CLASS_E_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -28,11 +28,11 @@
 #include <string>
 #include <algorithm>
 #include <deque>
-#include "cpp_ref_impl/std_model/types/class_a.hpp"
-#include "cpp_ref_impl/std_model/types/pkg1/class_c.hpp"
-#include "cpp_ref_impl/std_model/serialization/class_e_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.std_model/types/class_a.hpp"
+#include "masd.cpp_ref_impl.std_model/types/pkg1/class_c.hpp"
+#include "masd.cpp_ref_impl.std_model/serialization/class_e_fwd_ser.hpp"
 
-namespace cpp_ref_impl::std_model {
+namespace masd::cpp_ref_impl::std_model {
 
 class class_e final {
 public:
@@ -44,18 +44,18 @@ public:
 public:
     class_e(
         const std::deque<std::string>& prop_0,
-        const std::deque<cpp_ref_impl::std_model::class_a>& prop_1,
-        const std::deque<cpp_ref_impl::std_model::pkg1::class_c>& prop_2,
+        const std::deque<masd::cpp_ref_impl::std_model::class_a>& prop_1,
+        const std::deque<masd::cpp_ref_impl::std_model::pkg1::class_c>& prop_2,
         const std::deque<unsigned int>& prop_3,
-        const std::deque<cpp_ref_impl::std_model::class_a>& prop_4,
+        const std::deque<masd::cpp_ref_impl::std_model::class_a>& prop_4,
         const std::deque<std::deque<unsigned int> >& prop_5);
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::std_model::class_e& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::std_model::class_e& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::std_model::class_e& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::std_model::class_e& v, unsigned int version);
 
 public:
     const std::deque<std::string>& prop_0() const;
@@ -63,25 +63,25 @@ public:
     void prop_0(const std::deque<std::string>& v);
     void prop_0(const std::deque<std::string>&& v);
 
-    const std::deque<cpp_ref_impl::std_model::class_a>& prop_1() const;
-    std::deque<cpp_ref_impl::std_model::class_a>& prop_1();
-    void prop_1(const std::deque<cpp_ref_impl::std_model::class_a>& v);
-    void prop_1(const std::deque<cpp_ref_impl::std_model::class_a>&& v);
+    const std::deque<masd::cpp_ref_impl::std_model::class_a>& prop_1() const;
+    std::deque<masd::cpp_ref_impl::std_model::class_a>& prop_1();
+    void prop_1(const std::deque<masd::cpp_ref_impl::std_model::class_a>& v);
+    void prop_1(const std::deque<masd::cpp_ref_impl::std_model::class_a>&& v);
 
-    const std::deque<cpp_ref_impl::std_model::pkg1::class_c>& prop_2() const;
-    std::deque<cpp_ref_impl::std_model::pkg1::class_c>& prop_2();
-    void prop_2(const std::deque<cpp_ref_impl::std_model::pkg1::class_c>& v);
-    void prop_2(const std::deque<cpp_ref_impl::std_model::pkg1::class_c>&& v);
+    const std::deque<masd::cpp_ref_impl::std_model::pkg1::class_c>& prop_2() const;
+    std::deque<masd::cpp_ref_impl::std_model::pkg1::class_c>& prop_2();
+    void prop_2(const std::deque<masd::cpp_ref_impl::std_model::pkg1::class_c>& v);
+    void prop_2(const std::deque<masd::cpp_ref_impl::std_model::pkg1::class_c>&& v);
 
     const std::deque<unsigned int>& prop_3() const;
     std::deque<unsigned int>& prop_3();
     void prop_3(const std::deque<unsigned int>& v);
     void prop_3(const std::deque<unsigned int>&& v);
 
-    const std::deque<cpp_ref_impl::std_model::class_a>& prop_4() const;
-    std::deque<cpp_ref_impl::std_model::class_a>& prop_4();
-    void prop_4(const std::deque<cpp_ref_impl::std_model::class_a>& v);
-    void prop_4(const std::deque<cpp_ref_impl::std_model::class_a>&& v);
+    const std::deque<masd::cpp_ref_impl::std_model::class_a>& prop_4() const;
+    std::deque<masd::cpp_ref_impl::std_model::class_a>& prop_4();
+    void prop_4(const std::deque<masd::cpp_ref_impl::std_model::class_a>& v);
+    void prop_4(const std::deque<masd::cpp_ref_impl::std_model::class_a>&& v);
 
     const std::deque<std::deque<unsigned int> >& prop_5() const;
     std::deque<std::deque<unsigned int> >& prop_5();
@@ -100,10 +100,10 @@ public:
 
 private:
     std::deque<std::string> prop_0_;
-    std::deque<cpp_ref_impl::std_model::class_a> prop_1_;
-    std::deque<cpp_ref_impl::std_model::pkg1::class_c> prop_2_;
+    std::deque<masd::cpp_ref_impl::std_model::class_a> prop_1_;
+    std::deque<masd::cpp_ref_impl::std_model::pkg1::class_c> prop_2_;
     std::deque<unsigned int> prop_3_;
-    std::deque<cpp_ref_impl::std_model::class_a> prop_4_;
+    std::deque<masd::cpp_ref_impl::std_model::class_a> prop_4_;
     std::deque<std::deque<unsigned int> > prop_5_;
 };
 
@@ -113,8 +113,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::std_model::class_e& lhs,
-    cpp_ref_impl::std_model::class_e& rhs) {
+    masd::cpp_ref_impl::std_model::class_e& lhs,
+    masd::cpp_ref_impl::std_model::class_e& rhs) {
     lhs.swap(rhs);
 }
 
