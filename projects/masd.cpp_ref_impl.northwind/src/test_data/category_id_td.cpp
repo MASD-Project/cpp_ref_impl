@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/northwind/test_data/category_id_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/category_id_td.hpp"
 
 namespace {
 
@@ -28,7 +28,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 category_id_generator::category_id_generator() : position_(0) { }
 

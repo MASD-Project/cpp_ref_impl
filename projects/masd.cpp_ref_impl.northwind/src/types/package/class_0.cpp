@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/northwind/types/package/class_0.hpp"
+#include "masd.cpp_ref_impl.northwind/types/package/class_0.hpp"
 
-namespace cpp_ref_impl::northwind::package {
+namespace masd::cpp_ref_impl::northwind::package {
 
 class_0::class_0()
     : prop_0_(static_cast<int>(0)) { }

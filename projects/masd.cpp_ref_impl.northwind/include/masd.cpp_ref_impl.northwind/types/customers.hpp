@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_NORTHWIND_TYPES_CUSTOMERS_HPP
-#define CPP_REF_IMPL_NORTHWIND_TYPES_CUSTOMERS_HPP
+#ifndef MASD_CPP_REF_IMPL_NORTHWIND_TYPES_CUSTOMERS_HPP
+#define MASD_CPP_REF_IMPL_NORTHWIND_TYPES_CUSTOMERS_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -27,10 +27,10 @@
 
 #include <string>
 #include <algorithm>
-#include "cpp_ref_impl/northwind/types/customer_id.hpp"
-#include "cpp_ref_impl/northwind/serialization/customers_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/types/customer_id.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/customers_fwd_ser.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 class customers final {
 public:
@@ -41,7 +41,7 @@ public:
 
 public:
     customers(
-        const cpp_ref_impl::northwind::customer_id& customer_id,
+        const masd::cpp_ref_impl::northwind::customer_id& customer_id,
         const std::string& customer_code,
         const std::string& company_name,
         const std::string& contact_name,
@@ -56,16 +56,16 @@ public:
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::northwind::customers& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::northwind::customers& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::northwind::customers& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::northwind::customers& v, unsigned int version);
 
 public:
-    const cpp_ref_impl::northwind::customer_id& customer_id() const;
-    cpp_ref_impl::northwind::customer_id& customer_id();
-    void customer_id(const cpp_ref_impl::northwind::customer_id& v);
-    void customer_id(const cpp_ref_impl::northwind::customer_id&& v);
+    const masd::cpp_ref_impl::northwind::customer_id& customer_id() const;
+    masd::cpp_ref_impl::northwind::customer_id& customer_id();
+    void customer_id(const masd::cpp_ref_impl::northwind::customer_id& v);
+    void customer_id(const masd::cpp_ref_impl::northwind::customer_id&& v);
 
     const std::string& customer_code() const;
     std::string& customer_code();
@@ -133,7 +133,7 @@ public:
     customers& operator=(customers other);
 
 private:
-    cpp_ref_impl::northwind::customer_id customer_id_;
+    masd::cpp_ref_impl::northwind::customer_id customer_id_;
     std::string customer_code_;
     std::string company_name_;
     std::string contact_name_;
@@ -153,8 +153,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::northwind::customers& lhs,
-    cpp_ref_impl::northwind::customers& rhs) {
+    masd::cpp_ref_impl::northwind::customers& lhs,
+    masd::cpp_ref_impl::northwind::customers& rhs) {
     lhs.swap(rhs);
 }
 

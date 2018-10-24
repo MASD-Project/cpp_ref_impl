@@ -18,19 +18,19 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_NORTHWIND_TYPES_ORDER_DETAILS_KEY_HPP
-#define CPP_REF_IMPL_NORTHWIND_TYPES_ORDER_DETAILS_KEY_HPP
+#ifndef MASD_CPP_REF_IMPL_NORTHWIND_TYPES_ORDER_DETAILS_KEY_HPP
+#define MASD_CPP_REF_IMPL_NORTHWIND_TYPES_ORDER_DETAILS_KEY_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <algorithm>
-#include "cpp_ref_impl/northwind/types/order_id.hpp"
-#include "cpp_ref_impl/northwind/types/product_id.hpp"
-#include "cpp_ref_impl/northwind/serialization/order_details_key_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/types/order_id.hpp"
+#include "masd.cpp_ref_impl.northwind/types/product_id.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/order_details_key_fwd_ser.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 class order_details_key final {
 public:
@@ -41,26 +41,26 @@ public:
 
 public:
     order_details_key(
-        const cpp_ref_impl::northwind::order_id& order_id,
-        const cpp_ref_impl::northwind::product_id& product_id);
+        const masd::cpp_ref_impl::northwind::order_id& order_id,
+        const masd::cpp_ref_impl::northwind::product_id& product_id);
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::northwind::order_details_key& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::northwind::order_details_key& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::northwind::order_details_key& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::northwind::order_details_key& v, unsigned int version);
 
 public:
-    const cpp_ref_impl::northwind::order_id& order_id() const;
-    cpp_ref_impl::northwind::order_id& order_id();
-    void order_id(const cpp_ref_impl::northwind::order_id& v);
-    void order_id(const cpp_ref_impl::northwind::order_id&& v);
+    const masd::cpp_ref_impl::northwind::order_id& order_id() const;
+    masd::cpp_ref_impl::northwind::order_id& order_id();
+    void order_id(const masd::cpp_ref_impl::northwind::order_id& v);
+    void order_id(const masd::cpp_ref_impl::northwind::order_id&& v);
 
-    const cpp_ref_impl::northwind::product_id& product_id() const;
-    cpp_ref_impl::northwind::product_id& product_id();
-    void product_id(const cpp_ref_impl::northwind::product_id& v);
-    void product_id(const cpp_ref_impl::northwind::product_id&& v);
+    const masd::cpp_ref_impl::northwind::product_id& product_id() const;
+    masd::cpp_ref_impl::northwind::product_id& product_id();
+    void product_id(const masd::cpp_ref_impl::northwind::product_id& v);
+    void product_id(const masd::cpp_ref_impl::northwind::product_id&& v);
 
 public:
     bool operator==(const order_details_key& rhs) const;
@@ -73,8 +73,8 @@ public:
     order_details_key& operator=(order_details_key other);
 
 private:
-    cpp_ref_impl::northwind::order_id order_id_;
-    cpp_ref_impl::northwind::product_id product_id_;
+    masd::cpp_ref_impl::northwind::order_id order_id_;
+    masd::cpp_ref_impl::northwind::product_id product_id_;
 };
 
 }
@@ -83,8 +83,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::northwind::order_details_key& lhs,
-    cpp_ref_impl::northwind::order_details_key& rhs) {
+    masd::cpp_ref_impl::northwind::order_details_key& lhs,
+    masd::cpp_ref_impl::northwind::order_details_key& rhs) {
     lhs.swap(rhs);
 }
 

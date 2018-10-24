@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_NORTHWIND_TYPES_NORTHWIND_HPP
-#define CPP_REF_IMPL_NORTHWIND_TYPES_NORTHWIND_HPP
+#ifndef MASD_CPP_REF_IMPL_NORTHWIND_TYPES_NORTHWIND_HPP
+#define MASD_CPP_REF_IMPL_NORTHWIND_TYPES_NORTHWIND_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -30,7 +30,7 @@
  * Northwind database, provided as a sample for Access and SQL Server.
  * It's objective is to test Dogen integration with ODB.
  */
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 }
 
 #endif

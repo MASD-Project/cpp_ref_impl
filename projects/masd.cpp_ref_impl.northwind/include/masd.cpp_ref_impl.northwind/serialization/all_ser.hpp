@@ -18,30 +18,30 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_NORTHWIND_SERIALIZATION_ALL_SER_HPP
-#define CPP_REF_IMPL_NORTHWIND_SERIALIZATION_ALL_SER_HPP
+#ifndef MASD_CPP_REF_IMPL_NORTHWIND_SERIALIZATION_ALL_SER_HPP
+#define MASD_CPP_REF_IMPL_NORTHWIND_SERIALIZATION_ALL_SER_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/northwind/serialization/orders_ser.hpp"
-#include "cpp_ref_impl/northwind/serialization/order_id_ser.hpp"
-#include "cpp_ref_impl/northwind/serialization/products_ser.hpp"
-#include "cpp_ref_impl/northwind/serialization/shippers_ser.hpp"
-#include "cpp_ref_impl/northwind/serialization/customers_ser.hpp"
-#include "cpp_ref_impl/northwind/serialization/employees_ser.hpp"
-#include "cpp_ref_impl/northwind/serialization/suppliers_ser.hpp"
-#include "cpp_ref_impl/northwind/serialization/categories_ser.hpp"
-#include "cpp_ref_impl/northwind/serialization/product_id_ser.hpp"
-#include "cpp_ref_impl/northwind/serialization/shipper_id_ser.hpp"
-#include "cpp_ref_impl/northwind/serialization/category_id_ser.hpp"
-#include "cpp_ref_impl/northwind/serialization/customer_id_ser.hpp"
-#include "cpp_ref_impl/northwind/serialization/employee_id_ser.hpp"
-#include "cpp_ref_impl/northwind/serialization/supplier_id_ser.hpp"
-#include "cpp_ref_impl/northwind/serialization/non_orm_class_ser.hpp"
-#include "cpp_ref_impl/northwind/serialization/order_details_ser.hpp"
-#include "cpp_ref_impl/northwind/serialization/package/class_0_ser.hpp"
-#include "cpp_ref_impl/northwind/serialization/order_details_key_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/orders_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/order_id_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/products_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/shippers_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/customers_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/employees_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/suppliers_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/categories_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/product_id_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/shipper_id_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/category_id_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/customer_id_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/employee_id_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/supplier_id_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/non_orm_class_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/order_details_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/package/class_0_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/order_details_key_ser.hpp"
 
 #endif

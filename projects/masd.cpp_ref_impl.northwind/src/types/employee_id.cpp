@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/northwind/types/employee_id.hpp"
+#include "masd.cpp_ref_impl.northwind/types/employee_id.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 employee_id::employee_id(const int value)
     : value_(value) { }

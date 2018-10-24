@@ -18,30 +18,30 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_NORTHWIND_ODB_ALL_PRAGMAS_HPP
-#define CPP_REF_IMPL_NORTHWIND_ODB_ALL_PRAGMAS_HPP
+#ifndef MASD_CPP_REF_IMPL_NORTHWIND_ODB_ALL_PRAGMAS_HPP
+#define MASD_CPP_REF_IMPL_NORTHWIND_ODB_ALL_PRAGMAS_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/northwind/odb/orders_pragmas.hpp"
-#include "cpp_ref_impl/northwind/odb/order_id_pragmas.hpp"
-#include "cpp_ref_impl/northwind/odb/products_pragmas.hpp"
-#include "cpp_ref_impl/northwind/odb/shippers_pragmas.hpp"
-#include "cpp_ref_impl/northwind/odb/customers_pragmas.hpp"
-#include "cpp_ref_impl/northwind/odb/employees_pragmas.hpp"
-#include "cpp_ref_impl/northwind/odb/suppliers_pragmas.hpp"
-#include "cpp_ref_impl/northwind/odb/categories_pragmas.hpp"
-#include "cpp_ref_impl/northwind/odb/product_id_pragmas.hpp"
-#include "cpp_ref_impl/northwind/odb/shipper_id_pragmas.hpp"
-#include "cpp_ref_impl/northwind/odb/category_id_pragmas.hpp"
-#include "cpp_ref_impl/northwind/odb/customer_id_pragmas.hpp"
-#include "cpp_ref_impl/northwind/odb/employee_id_pragmas.hpp"
-#include "cpp_ref_impl/northwind/odb/supplier_id_pragmas.hpp"
-#include "cpp_ref_impl/northwind/odb/non_orm_class_pragmas.hpp"
-#include "cpp_ref_impl/northwind/odb/order_details_pragmas.hpp"
-#include "cpp_ref_impl/northwind/odb/package/class_0_pragmas.hpp"
-#include "cpp_ref_impl/northwind/odb/order_details_key_pragmas.hpp"
+#include "masd.cpp_ref_impl.northwind/odb/orders_pragmas.hpp"
+#include "masd.cpp_ref_impl.northwind/odb/order_id_pragmas.hpp"
+#include "masd.cpp_ref_impl.northwind/odb/products_pragmas.hpp"
+#include "masd.cpp_ref_impl.northwind/odb/shippers_pragmas.hpp"
+#include "masd.cpp_ref_impl.northwind/odb/customers_pragmas.hpp"
+#include "masd.cpp_ref_impl.northwind/odb/employees_pragmas.hpp"
+#include "masd.cpp_ref_impl.northwind/odb/suppliers_pragmas.hpp"
+#include "masd.cpp_ref_impl.northwind/odb/categories_pragmas.hpp"
+#include "masd.cpp_ref_impl.northwind/odb/product_id_pragmas.hpp"
+#include "masd.cpp_ref_impl.northwind/odb/shipper_id_pragmas.hpp"
+#include "masd.cpp_ref_impl.northwind/odb/category_id_pragmas.hpp"
+#include "masd.cpp_ref_impl.northwind/odb/customer_id_pragmas.hpp"
+#include "masd.cpp_ref_impl.northwind/odb/employee_id_pragmas.hpp"
+#include "masd.cpp_ref_impl.northwind/odb/supplier_id_pragmas.hpp"
+#include "masd.cpp_ref_impl.northwind/odb/non_orm_class_pragmas.hpp"
+#include "masd.cpp_ref_impl.northwind/odb/order_details_pragmas.hpp"
+#include "masd.cpp_ref_impl.northwind/odb/package/class_0_pragmas.hpp"
+#include "masd.cpp_ref_impl.northwind/odb/order_details_key_pragmas.hpp"
 
 #endif

@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/northwind/types/category_id.hpp"
+#include "masd.cpp_ref_impl.northwind/types/category_id.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 category_id::category_id(const int value)
     : value_(value) { }

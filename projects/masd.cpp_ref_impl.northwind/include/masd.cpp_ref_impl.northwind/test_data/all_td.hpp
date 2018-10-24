@@ -18,30 +18,30 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_NORTHWIND_TEST_DATA_ALL_TD_HPP
-#define CPP_REF_IMPL_NORTHWIND_TEST_DATA_ALL_TD_HPP
+#ifndef MASD_CPP_REF_IMPL_NORTHWIND_TEST_DATA_ALL_TD_HPP
+#define MASD_CPP_REF_IMPL_NORTHWIND_TEST_DATA_ALL_TD_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/northwind/test_data/orders_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/order_id_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/products_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/shippers_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/customers_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/employees_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/suppliers_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/categories_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/product_id_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/shipper_id_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/category_id_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/customer_id_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/employee_id_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/supplier_id_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/non_orm_class_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/order_details_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/package/class_0_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/order_details_key_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/orders_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/order_id_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/products_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/shippers_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/customers_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/employees_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/suppliers_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/categories_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/product_id_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/shipper_id_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/category_id_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/customer_id_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/employee_id_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/supplier_id_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/non_orm_class_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/order_details_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/package/class_0_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/order_details_key_td.hpp"
 
 #endif

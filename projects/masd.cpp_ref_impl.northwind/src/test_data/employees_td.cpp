@@ -19,14 +19,14 @@
  *
  */
 #include <sstream>
-#include "cpp_ref_impl/northwind/test_data/employees_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/employee_id_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/employees_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/employee_id_td.hpp"
 
 namespace {
 
-cpp_ref_impl::northwind::employee_id
-create_cpp_ref_impl_northwind_employee_id(const unsigned int position) {
-    return cpp_ref_impl::northwind::employee_id_generator::create(position);
+masd::cpp_ref_impl::northwind::employee_id
+create_masd_cpp_ref_impl_northwind_employee_id(const unsigned int position) {
+    return masd::cpp_ref_impl::northwind::employee_id_generator::create(position);
 }
 
 std::string create_std_string(const unsigned int position) {
@@ -44,13 +44,13 @@ create_boost_gregorian_date(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 employees_generator::employees_generator() : position_(0) { }
 
 void employees_generator::
 populate(const unsigned int position, result_type& v) {
-    v.employee_id(create_cpp_ref_impl_northwind_employee_id(position + 0));
+    v.employee_id(create_masd_cpp_ref_impl_northwind_employee_id(position + 0));
     v.last_name(create_std_string(position + 1));
     v.first_name(create_std_string(position + 2));
     v.title(create_std_string(position + 3));
@@ -66,7 +66,7 @@ populate(const unsigned int position, result_type& v) {
     v.extension(create_std_string(position + 13));
     v.photo(create_std_string(position + 14));
     v.notes(create_std_string(position + 15));
-    v.reports_to(create_cpp_ref_impl_northwind_employee_id(position + 16));
+    v.reports_to(create_masd_cpp_ref_impl_northwind_employee_id(position + 16));
 }
 
 employees_generator::result_type

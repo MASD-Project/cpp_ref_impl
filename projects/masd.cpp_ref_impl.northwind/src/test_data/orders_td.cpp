@@ -19,26 +19,26 @@
  *
  */
 #include <sstream>
-#include "cpp_ref_impl/northwind/test_data/orders_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/order_id_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/customer_id_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/employee_id_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/orders_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/order_id_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/customer_id_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/employee_id_td.hpp"
 
 namespace {
 
-cpp_ref_impl::northwind::order_id
-create_cpp_ref_impl_northwind_order_id(const unsigned int position) {
-    return cpp_ref_impl::northwind::order_id_generator::create(position);
+masd::cpp_ref_impl::northwind::order_id
+create_masd_cpp_ref_impl_northwind_order_id(const unsigned int position) {
+    return masd::cpp_ref_impl::northwind::order_id_generator::create(position);
 }
 
-cpp_ref_impl::northwind::customer_id
-create_cpp_ref_impl_northwind_customer_id(const unsigned int position) {
-    return cpp_ref_impl::northwind::customer_id_generator::create(position);
+masd::cpp_ref_impl::northwind::customer_id
+create_masd_cpp_ref_impl_northwind_customer_id(const unsigned int position) {
+    return masd::cpp_ref_impl::northwind::customer_id_generator::create(position);
 }
 
-cpp_ref_impl::northwind::employee_id
-create_cpp_ref_impl_northwind_employee_id(const unsigned int position) {
-    return cpp_ref_impl::northwind::employee_id_generator::create(position);
+masd::cpp_ref_impl::northwind::employee_id
+create_masd_cpp_ref_impl_northwind_employee_id(const unsigned int position) {
+    return masd::cpp_ref_impl::northwind::employee_id_generator::create(position);
 }
 
 boost::gregorian::date
@@ -64,15 +64,15 @@ std::string create_std_string(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 orders_generator::orders_generator() : position_(0) { }
 
 void orders_generator::
 populate(const unsigned int position, result_type& v) {
-    v.order_id(create_cpp_ref_impl_northwind_order_id(position + 0));
-    v.customer_id(create_cpp_ref_impl_northwind_customer_id(position + 1));
-    v.employee_id(create_cpp_ref_impl_northwind_employee_id(position + 2));
+    v.order_id(create_masd_cpp_ref_impl_northwind_order_id(position + 0));
+    v.customer_id(create_masd_cpp_ref_impl_northwind_customer_id(position + 1));
+    v.employee_id(create_masd_cpp_ref_impl_northwind_employee_id(position + 2));
     v.order_date(create_boost_gregorian_date(position + 3));
     v.required_date(create_boost_gregorian_date(position + 4));
     v.shipped_date(create_boost_gregorian_date(position + 5));

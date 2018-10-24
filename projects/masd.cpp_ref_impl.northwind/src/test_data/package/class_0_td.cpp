@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/northwind/test_data/package/class_0_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/package/class_0_td.hpp"
 
 namespace {
 
@@ -28,7 +28,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::northwind::package {
+namespace masd::cpp_ref_impl::northwind::package {
 
 class_0_generator::class_0_generator() : position_(0) { }
 

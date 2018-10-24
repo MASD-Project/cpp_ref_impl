@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/northwind/types/customer_id.hpp"
+#include "masd.cpp_ref_impl.northwind/types/customer_id.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 customer_id::customer_id(const int value)
     : value_(value) { }

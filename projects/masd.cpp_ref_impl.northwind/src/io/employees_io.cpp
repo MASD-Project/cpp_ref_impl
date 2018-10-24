@@ -21,8 +21,8 @@
 #include <ostream>
 #include <boost/algorithm/string.hpp>
 #include <boost/date_time/gregorian/gregorian.hpp>
-#include "cpp_ref_impl/northwind/io/employees_io.hpp"
-#include "cpp_ref_impl/northwind/io/employee_id_io.hpp"
+#include "masd.cpp_ref_impl.northwind/io/employees_io.hpp"
+#include "masd.cpp_ref_impl.northwind/io/employee_id_io.hpp"
 
 inline std::string tidy_up_string(std::string s) {
     boost::replace_all(s, "\r\n", "<new_line>");
@@ -32,11 +32,11 @@ inline std::string tidy_up_string(std::string s) {
     return s;
 }
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 std::ostream& operator<<(std::ostream& s, const employees& v) {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::northwind::employees\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::northwind::employees\"" << ", "
       << "\"employee_id\": " << v.employee_id() << ", "
       << "\"last_name\": " << "\"" << tidy_up_string(v.last_name()) << "\"" << ", "
       << "\"first_name\": " << "\"" << tidy_up_string(v.first_name()) << "\"" << ", "

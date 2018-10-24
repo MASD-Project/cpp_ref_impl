@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_NORTHWIND_TYPES_ORDERS_HPP
-#define CPP_REF_IMPL_NORTHWIND_TYPES_ORDERS_HPP
+#ifndef MASD_CPP_REF_IMPL_NORTHWIND_TYPES_ORDERS_HPP
+#define MASD_CPP_REF_IMPL_NORTHWIND_TYPES_ORDERS_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -28,12 +28,12 @@
 #include <string>
 #include <algorithm>
 #include <boost/date_time/gregorian/gregorian_types.hpp>
-#include "cpp_ref_impl/northwind/types/order_id.hpp"
-#include "cpp_ref_impl/northwind/types/customer_id.hpp"
-#include "cpp_ref_impl/northwind/types/employee_id.hpp"
-#include "cpp_ref_impl/northwind/serialization/orders_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/types/order_id.hpp"
+#include "masd.cpp_ref_impl.northwind/types/customer_id.hpp"
+#include "masd.cpp_ref_impl.northwind/types/employee_id.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/orders_fwd_ser.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 class orders final {
 public:
@@ -46,9 +46,9 @@ public:
 
 public:
     orders(
-        const cpp_ref_impl::northwind::order_id& order_id,
-        const cpp_ref_impl::northwind::customer_id& customer_id,
-        const cpp_ref_impl::northwind::employee_id& employee_id,
+        const masd::cpp_ref_impl::northwind::order_id& order_id,
+        const masd::cpp_ref_impl::northwind::customer_id& customer_id,
+        const masd::cpp_ref_impl::northwind::employee_id& employee_id,
         const boost::gregorian::date& order_date,
         const boost::gregorian::date& required_date,
         const boost::gregorian::date& shipped_date,
@@ -63,26 +63,26 @@ public:
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::northwind::orders& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::northwind::orders& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::northwind::orders& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::northwind::orders& v, unsigned int version);
 
 public:
-    const cpp_ref_impl::northwind::order_id& order_id() const;
-    cpp_ref_impl::northwind::order_id& order_id();
-    void order_id(const cpp_ref_impl::northwind::order_id& v);
-    void order_id(const cpp_ref_impl::northwind::order_id&& v);
+    const masd::cpp_ref_impl::northwind::order_id& order_id() const;
+    masd::cpp_ref_impl::northwind::order_id& order_id();
+    void order_id(const masd::cpp_ref_impl::northwind::order_id& v);
+    void order_id(const masd::cpp_ref_impl::northwind::order_id&& v);
 
-    const cpp_ref_impl::northwind::customer_id& customer_id() const;
-    cpp_ref_impl::northwind::customer_id& customer_id();
-    void customer_id(const cpp_ref_impl::northwind::customer_id& v);
-    void customer_id(const cpp_ref_impl::northwind::customer_id&& v);
+    const masd::cpp_ref_impl::northwind::customer_id& customer_id() const;
+    masd::cpp_ref_impl::northwind::customer_id& customer_id();
+    void customer_id(const masd::cpp_ref_impl::northwind::customer_id& v);
+    void customer_id(const masd::cpp_ref_impl::northwind::customer_id&& v);
 
-    const cpp_ref_impl::northwind::employee_id& employee_id() const;
-    cpp_ref_impl::northwind::employee_id& employee_id();
-    void employee_id(const cpp_ref_impl::northwind::employee_id& v);
-    void employee_id(const cpp_ref_impl::northwind::employee_id&& v);
+    const masd::cpp_ref_impl::northwind::employee_id& employee_id() const;
+    masd::cpp_ref_impl::northwind::employee_id& employee_id();
+    void employee_id(const masd::cpp_ref_impl::northwind::employee_id& v);
+    void employee_id(const masd::cpp_ref_impl::northwind::employee_id&& v);
 
     const boost::gregorian::date& order_date() const;
     boost::gregorian::date& order_date();
@@ -146,9 +146,9 @@ public:
     orders& operator=(orders other);
 
 private:
-    cpp_ref_impl::northwind::order_id order_id_;
-    cpp_ref_impl::northwind::customer_id customer_id_;
-    cpp_ref_impl::northwind::employee_id employee_id_;
+    masd::cpp_ref_impl::northwind::order_id order_id_;
+    masd::cpp_ref_impl::northwind::customer_id customer_id_;
+    masd::cpp_ref_impl::northwind::employee_id employee_id_;
     boost::gregorian::date order_date_;
     boost::gregorian::date required_date_;
     boost::gregorian::date shipped_date_;
@@ -168,8 +168,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::northwind::orders& lhs,
-    cpp_ref_impl::northwind::orders& rhs) {
+    masd::cpp_ref_impl::northwind::orders& lhs,
+    masd::cpp_ref_impl::northwind::orders& rhs) {
     lhs.swap(rhs);
 }
 

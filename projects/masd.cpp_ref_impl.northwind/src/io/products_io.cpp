@@ -21,10 +21,10 @@
 #include <ostream>
 #include <boost/io/ios_state.hpp>
 #include <boost/algorithm/string.hpp>
-#include "cpp_ref_impl/northwind/io/products_io.hpp"
-#include "cpp_ref_impl/northwind/io/product_id_io.hpp"
-#include "cpp_ref_impl/northwind/io/category_id_io.hpp"
-#include "cpp_ref_impl/northwind/io/supplier_id_io.hpp"
+#include "masd.cpp_ref_impl.northwind/io/products_io.hpp"
+#include "masd.cpp_ref_impl.northwind/io/product_id_io.hpp"
+#include "masd.cpp_ref_impl.northwind/io/category_id_io.hpp"
+#include "masd.cpp_ref_impl.northwind/io/supplier_id_io.hpp"
 
 inline std::string tidy_up_string(std::string s) {
     boost::replace_all(s, "\r\n", "<new_line>");
@@ -34,7 +34,7 @@ inline std::string tidy_up_string(std::string s) {
     return s;
 }
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 std::ostream& operator<<(std::ostream& s, const products& v) {
     boost::io::ios_flags_saver ifs(s);
@@ -44,7 +44,7 @@ std::ostream& operator<<(std::ostream& s, const products& v) {
     s.setf(std::ios::showpoint);
 
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::northwind::products\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::northwind::products\"" << ", "
       << "\"product_id\": " << v.product_id() << ", "
       << "\"product_name\": " << "\"" << tidy_up_string(v.product_name()) << "\"" << ", "
       << "\"supplier_id\": " << v.supplier_id() << ", "

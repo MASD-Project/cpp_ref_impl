@@ -19,13 +19,13 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/northwind/io/non_orm_class_io.hpp"
+#include "masd.cpp_ref_impl.northwind/io/non_orm_class_io.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 std::ostream& operator<<(std::ostream& s, const non_orm_class& v) {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::northwind::non_orm_class\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::northwind::non_orm_class\"" << ", "
       << "\"prop_0\": " << v.prop_0()
       << " }";
     return(s);

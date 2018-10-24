@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/northwind/types/shipper_id.hpp"
+#include "masd.cpp_ref_impl.northwind/types/shipper_id.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 shipper_id::shipper_id(const int value)
     : value_(value) { }

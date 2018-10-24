@@ -18,13 +18,13 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/northwind/types/order_details_key.hpp"
+#include "masd.cpp_ref_impl.northwind/types/order_details_key.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 order_details_key::order_details_key(
-    const cpp_ref_impl::northwind::order_id& order_id,
-    const cpp_ref_impl::northwind::product_id& product_id)
+    const masd::cpp_ref_impl::northwind::order_id& order_id,
+    const masd::cpp_ref_impl::northwind::product_id& product_id)
     : order_id_(order_id),
       product_id_(product_id) { }
 
@@ -45,35 +45,35 @@ order_details_key& order_details_key::operator=(order_details_key other) {
     return *this;
 }
 
-const cpp_ref_impl::northwind::order_id& order_details_key::order_id() const {
+const masd::cpp_ref_impl::northwind::order_id& order_details_key::order_id() const {
     return order_id_;
 }
 
-cpp_ref_impl::northwind::order_id& order_details_key::order_id() {
+masd::cpp_ref_impl::northwind::order_id& order_details_key::order_id() {
     return order_id_;
 }
 
-void order_details_key::order_id(const cpp_ref_impl::northwind::order_id& v) {
+void order_details_key::order_id(const masd::cpp_ref_impl::northwind::order_id& v) {
     order_id_ = v;
 }
 
-void order_details_key::order_id(const cpp_ref_impl::northwind::order_id&& v) {
+void order_details_key::order_id(const masd::cpp_ref_impl::northwind::order_id&& v) {
     order_id_ = std::move(v);
 }
 
-const cpp_ref_impl::northwind::product_id& order_details_key::product_id() const {
+const masd::cpp_ref_impl::northwind::product_id& order_details_key::product_id() const {
     return product_id_;
 }
 
-cpp_ref_impl::northwind::product_id& order_details_key::product_id() {
+masd::cpp_ref_impl::northwind::product_id& order_details_key::product_id() {
     return product_id_;
 }
 
-void order_details_key::product_id(const cpp_ref_impl::northwind::product_id& v) {
+void order_details_key::product_id(const masd::cpp_ref_impl::northwind::product_id& v) {
     product_id_ = v;
 }
 
-void order_details_key::product_id(const cpp_ref_impl::northwind::product_id&& v) {
+void order_details_key::product_id(const masd::cpp_ref_impl::northwind::product_id&& v) {
     product_id_ = std::move(v);
 }
 

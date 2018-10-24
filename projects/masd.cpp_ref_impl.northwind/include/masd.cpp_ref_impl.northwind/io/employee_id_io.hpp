@@ -18,20 +18,20 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_NORTHWIND_IO_EMPLOYEE_ID_IO_HPP
-#define CPP_REF_IMPL_NORTHWIND_IO_EMPLOYEE_ID_IO_HPP
+#ifndef MASD_CPP_REF_IMPL_NORTHWIND_IO_EMPLOYEE_ID_IO_HPP
+#define MASD_CPP_REF_IMPL_NORTHWIND_IO_EMPLOYEE_ID_IO_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <iosfwd>
-#include "cpp_ref_impl/northwind/types/employee_id.hpp"
+#include "masd.cpp_ref_impl.northwind/types/employee_id.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 std::ostream&
-operator<<(std::ostream& s, const cpp_ref_impl::northwind::employee_id& v);
+operator<<(std::ostream& s, const masd::cpp_ref_impl::northwind::employee_id& v);
 
 }
 

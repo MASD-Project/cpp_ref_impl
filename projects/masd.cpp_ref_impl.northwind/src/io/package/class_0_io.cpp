@@ -19,13 +19,13 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/northwind/io/package/class_0_io.hpp"
+#include "masd.cpp_ref_impl.northwind/io/package/class_0_io.hpp"
 
-namespace cpp_ref_impl::northwind::package {
+namespace masd::cpp_ref_impl::northwind::package {
 
 std::ostream& operator<<(std::ostream& s, const class_0& v) {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::northwind::package::class_0\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::northwind::package::class_0\"" << ", "
       << "\"prop_0\": " << v.prop_0()
       << " }";
     return(s);

@@ -19,14 +19,14 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/northwind/io/employee_id_io.hpp"
+#include "masd.cpp_ref_impl.northwind/io/employee_id_io.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 std::ostream& operator<<(std::ostream& s, const employee_id& v) {
 
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::northwind::employee_id\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::northwind::employee_id\"" << ", "
       << "\"value\": " << v.value()
       << " }";
 

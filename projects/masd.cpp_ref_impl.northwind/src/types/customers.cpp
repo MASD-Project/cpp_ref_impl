@@ -18,12 +18,12 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/northwind/types/customers.hpp"
+#include "masd.cpp_ref_impl.northwind/types/customers.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 customers::customers(
-    const cpp_ref_impl::northwind::customer_id& customer_id,
+    const masd::cpp_ref_impl::northwind::customer_id& customer_id,
     const std::string& customer_code,
     const std::string& company_name,
     const std::string& contact_name,
@@ -85,19 +85,19 @@ customers& customers::operator=(customers other) {
     return *this;
 }
 
-const cpp_ref_impl::northwind::customer_id& customers::customer_id() const {
+const masd::cpp_ref_impl::northwind::customer_id& customers::customer_id() const {
     return customer_id_;
 }
 
-cpp_ref_impl::northwind::customer_id& customers::customer_id() {
+masd::cpp_ref_impl::northwind::customer_id& customers::customer_id() {
     return customer_id_;
 }
 
-void customers::customer_id(const cpp_ref_impl::northwind::customer_id& v) {
+void customers::customer_id(const masd::cpp_ref_impl::northwind::customer_id& v) {
     customer_id_ = v;
 }
 
-void customers::customer_id(const cpp_ref_impl::northwind::customer_id&& v) {
+void customers::customer_id(const masd::cpp_ref_impl::northwind::customer_id&& v) {
     customer_id_ = std::move(v);
 }
 

@@ -22,10 +22,10 @@
 #include <boost/io/ios_state.hpp>
 #include <boost/algorithm/string.hpp>
 #include <boost/date_time/gregorian/gregorian.hpp>
-#include "cpp_ref_impl/northwind/io/orders_io.hpp"
-#include "cpp_ref_impl/northwind/io/order_id_io.hpp"
-#include "cpp_ref_impl/northwind/io/customer_id_io.hpp"
-#include "cpp_ref_impl/northwind/io/employee_id_io.hpp"
+#include "masd.cpp_ref_impl.northwind/io/orders_io.hpp"
+#include "masd.cpp_ref_impl.northwind/io/order_id_io.hpp"
+#include "masd.cpp_ref_impl.northwind/io/customer_id_io.hpp"
+#include "masd.cpp_ref_impl.northwind/io/employee_id_io.hpp"
 
 inline std::string tidy_up_string(std::string s) {
     boost::replace_all(s, "\r\n", "<new_line>");
@@ -35,7 +35,7 @@ inline std::string tidy_up_string(std::string s) {
     return s;
 }
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 std::ostream& operator<<(std::ostream& s, const orders& v) {
     boost::io::ios_flags_saver ifs(s);
@@ -45,7 +45,7 @@ std::ostream& operator<<(std::ostream& s, const orders& v) {
     s.setf(std::ios::showpoint);
 
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::northwind::orders\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::northwind::orders\"" << ", "
       << "\"order_id\": " << v.order_id() << ", "
       << "\"customer_id\": " << v.customer_id() << ", "
       << "\"employee_id\": " << v.employee_id() << ", "

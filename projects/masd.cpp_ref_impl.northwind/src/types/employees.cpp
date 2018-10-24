@@ -18,12 +18,12 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/northwind/types/employees.hpp"
+#include "masd.cpp_ref_impl.northwind/types/employees.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 employees::employees(
-    const cpp_ref_impl::northwind::employee_id& employee_id,
+    const masd::cpp_ref_impl::northwind::employee_id& employee_id,
     const std::string& last_name,
     const std::string& first_name,
     const std::string& title,
@@ -39,7 +39,7 @@ employees::employees(
     const std::string& extension,
     const std::string& photo,
     const std::string& notes,
-    const cpp_ref_impl::northwind::employee_id& reports_to)
+    const masd::cpp_ref_impl::northwind::employee_id& reports_to)
     : employee_id_(employee_id),
       last_name_(last_name),
       first_name_(first_name),
@@ -105,19 +105,19 @@ employees& employees::operator=(employees other) {
     return *this;
 }
 
-const cpp_ref_impl::northwind::employee_id& employees::employee_id() const {
+const masd::cpp_ref_impl::northwind::employee_id& employees::employee_id() const {
     return employee_id_;
 }
 
-cpp_ref_impl::northwind::employee_id& employees::employee_id() {
+masd::cpp_ref_impl::northwind::employee_id& employees::employee_id() {
     return employee_id_;
 }
 
-void employees::employee_id(const cpp_ref_impl::northwind::employee_id& v) {
+void employees::employee_id(const masd::cpp_ref_impl::northwind::employee_id& v) {
     employee_id_ = v;
 }
 
-void employees::employee_id(const cpp_ref_impl::northwind::employee_id&& v) {
+void employees::employee_id(const masd::cpp_ref_impl::northwind::employee_id&& v) {
     employee_id_ = std::move(v);
 }
 
@@ -361,19 +361,19 @@ void employees::notes(const std::string&& v) {
     notes_ = std::move(v);
 }
 
-const cpp_ref_impl::northwind::employee_id& employees::reports_to() const {
+const masd::cpp_ref_impl::northwind::employee_id& employees::reports_to() const {
     return reports_to_;
 }
 
-cpp_ref_impl::northwind::employee_id& employees::reports_to() {
+masd::cpp_ref_impl::northwind::employee_id& employees::reports_to() {
     return reports_to_;
 }
 
-void employees::reports_to(const cpp_ref_impl::northwind::employee_id& v) {
+void employees::reports_to(const masd::cpp_ref_impl::northwind::employee_id& v) {
     reports_to_ = v;
 }
 
-void employees::reports_to(const cpp_ref_impl::northwind::employee_id&& v) {
+void employees::reports_to(const masd::cpp_ref_impl::northwind::employee_id&& v) {
     reports_to_ = std::move(v);
 }
 

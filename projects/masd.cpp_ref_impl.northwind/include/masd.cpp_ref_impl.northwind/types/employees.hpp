@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_NORTHWIND_TYPES_EMPLOYEES_HPP
-#define CPP_REF_IMPL_NORTHWIND_TYPES_EMPLOYEES_HPP
+#ifndef MASD_CPP_REF_IMPL_NORTHWIND_TYPES_EMPLOYEES_HPP
+#define MASD_CPP_REF_IMPL_NORTHWIND_TYPES_EMPLOYEES_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -28,10 +28,10 @@
 #include <string>
 #include <algorithm>
 #include <boost/date_time/gregorian/gregorian_types.hpp>
-#include "cpp_ref_impl/northwind/types/employee_id.hpp"
-#include "cpp_ref_impl/northwind/serialization/employees_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/types/employee_id.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/employees_fwd_ser.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 class employees final {
 public:
@@ -42,7 +42,7 @@ public:
 
 public:
     employees(
-        const cpp_ref_impl::northwind::employee_id& employee_id,
+        const masd::cpp_ref_impl::northwind::employee_id& employee_id,
         const std::string& last_name,
         const std::string& first_name,
         const std::string& title,
@@ -58,20 +58,20 @@ public:
         const std::string& extension,
         const std::string& photo,
         const std::string& notes,
-        const cpp_ref_impl::northwind::employee_id& reports_to);
+        const masd::cpp_ref_impl::northwind::employee_id& reports_to);
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::northwind::employees& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::northwind::employees& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::northwind::employees& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::northwind::employees& v, unsigned int version);
 
 public:
-    const cpp_ref_impl::northwind::employee_id& employee_id() const;
-    cpp_ref_impl::northwind::employee_id& employee_id();
-    void employee_id(const cpp_ref_impl::northwind::employee_id& v);
-    void employee_id(const cpp_ref_impl::northwind::employee_id&& v);
+    const masd::cpp_ref_impl::northwind::employee_id& employee_id() const;
+    masd::cpp_ref_impl::northwind::employee_id& employee_id();
+    void employee_id(const masd::cpp_ref_impl::northwind::employee_id& v);
+    void employee_id(const masd::cpp_ref_impl::northwind::employee_id&& v);
 
     const std::string& last_name() const;
     std::string& last_name();
@@ -148,10 +148,10 @@ public:
     void notes(const std::string& v);
     void notes(const std::string&& v);
 
-    const cpp_ref_impl::northwind::employee_id& reports_to() const;
-    cpp_ref_impl::northwind::employee_id& reports_to();
-    void reports_to(const cpp_ref_impl::northwind::employee_id& v);
-    void reports_to(const cpp_ref_impl::northwind::employee_id&& v);
+    const masd::cpp_ref_impl::northwind::employee_id& reports_to() const;
+    masd::cpp_ref_impl::northwind::employee_id& reports_to();
+    void reports_to(const masd::cpp_ref_impl::northwind::employee_id& v);
+    void reports_to(const masd::cpp_ref_impl::northwind::employee_id&& v);
 
 public:
     bool operator==(const employees& rhs) const;
@@ -164,7 +164,7 @@ public:
     employees& operator=(employees other);
 
 private:
-    cpp_ref_impl::northwind::employee_id employee_id_;
+    masd::cpp_ref_impl::northwind::employee_id employee_id_;
     std::string last_name_;
     std::string first_name_;
     std::string title_;
@@ -180,7 +180,7 @@ private:
     std::string extension_;
     std::string photo_;
     std::string notes_;
-    cpp_ref_impl::northwind::employee_id reports_to_;
+    masd::cpp_ref_impl::northwind::employee_id reports_to_;
 };
 
 }
@@ -189,8 +189,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::northwind::employees& lhs,
-    cpp_ref_impl::northwind::employees& rhs) {
+    masd::cpp_ref_impl::northwind::employees& lhs,
+    masd::cpp_ref_impl::northwind::employees& rhs) {
     lhs.swap(rhs);
 }
 

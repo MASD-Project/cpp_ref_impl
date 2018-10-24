@@ -18,18 +18,18 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_NORTHWIND_TYPES_ORDER_DETAILS_HPP
-#define CPP_REF_IMPL_NORTHWIND_TYPES_ORDER_DETAILS_HPP
+#ifndef MASD_CPP_REF_IMPL_NORTHWIND_TYPES_ORDER_DETAILS_HPP
+#define MASD_CPP_REF_IMPL_NORTHWIND_TYPES_ORDER_DETAILS_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <algorithm>
-#include "cpp_ref_impl/northwind/types/order_details_key.hpp"
-#include "cpp_ref_impl/northwind/serialization/order_details_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/types/order_details_key.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/order_details_fwd_ser.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 class order_details final {
 public:
@@ -42,23 +42,23 @@ public:
 
 public:
     order_details(
-        const cpp_ref_impl::northwind::order_details_key& order_details_key,
+        const masd::cpp_ref_impl::northwind::order_details_key& order_details_key,
         const double unit_price,
         const int quantity,
         const double discount);
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::northwind::order_details& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::northwind::order_details& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::northwind::order_details& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::northwind::order_details& v, unsigned int version);
 
 public:
-    const cpp_ref_impl::northwind::order_details_key& order_details_key() const;
-    cpp_ref_impl::northwind::order_details_key& order_details_key();
-    void order_details_key(const cpp_ref_impl::northwind::order_details_key& v);
-    void order_details_key(const cpp_ref_impl::northwind::order_details_key&& v);
+    const masd::cpp_ref_impl::northwind::order_details_key& order_details_key() const;
+    masd::cpp_ref_impl::northwind::order_details_key& order_details_key();
+    void order_details_key(const masd::cpp_ref_impl::northwind::order_details_key& v);
+    void order_details_key(const masd::cpp_ref_impl::northwind::order_details_key&& v);
 
     double unit_price() const;
     void unit_price(const double v);
@@ -80,7 +80,7 @@ public:
     order_details& operator=(order_details other);
 
 private:
-    cpp_ref_impl::northwind::order_details_key order_details_key_;
+    masd::cpp_ref_impl::northwind::order_details_key order_details_key_;
     double unit_price_;
     int quantity_;
     double discount_;
@@ -92,8 +92,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::northwind::order_details& lhs,
-    cpp_ref_impl::northwind::order_details& rhs) {
+    masd::cpp_ref_impl::northwind::order_details& lhs,
+    masd::cpp_ref_impl::northwind::order_details& rhs) {
     lhs.swap(rhs);
 }
 

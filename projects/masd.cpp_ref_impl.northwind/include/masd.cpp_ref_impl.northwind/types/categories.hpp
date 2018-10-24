@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_NORTHWIND_TYPES_CATEGORIES_HPP
-#define CPP_REF_IMPL_NORTHWIND_TYPES_CATEGORIES_HPP
+#ifndef MASD_CPP_REF_IMPL_NORTHWIND_TYPES_CATEGORIES_HPP
+#define MASD_CPP_REF_IMPL_NORTHWIND_TYPES_CATEGORIES_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -27,10 +27,10 @@
 
 #include <string>
 #include <algorithm>
-#include "cpp_ref_impl/northwind/types/category_id.hpp"
-#include "cpp_ref_impl/northwind/serialization/categories_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/types/category_id.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/categories_fwd_ser.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 class categories final {
 public:
@@ -41,23 +41,23 @@ public:
 
 public:
     categories(
-        const cpp_ref_impl::northwind::category_id& category_id,
+        const masd::cpp_ref_impl::northwind::category_id& category_id,
         const std::string& category_name,
         const std::string& description,
         const std::string& picutre);
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::northwind::categories& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::northwind::categories& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::northwind::categories& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::northwind::categories& v, unsigned int version);
 
 public:
-    const cpp_ref_impl::northwind::category_id& category_id() const;
-    cpp_ref_impl::northwind::category_id& category_id();
-    void category_id(const cpp_ref_impl::northwind::category_id& v);
-    void category_id(const cpp_ref_impl::northwind::category_id&& v);
+    const masd::cpp_ref_impl::northwind::category_id& category_id() const;
+    masd::cpp_ref_impl::northwind::category_id& category_id();
+    void category_id(const masd::cpp_ref_impl::northwind::category_id& v);
+    void category_id(const masd::cpp_ref_impl::northwind::category_id&& v);
 
     const std::string& category_name() const;
     std::string& category_name();
@@ -85,7 +85,7 @@ public:
     categories& operator=(categories other);
 
 private:
-    cpp_ref_impl::northwind::category_id category_id_;
+    masd::cpp_ref_impl::northwind::category_id category_id_;
     std::string category_name_;
     std::string description_;
     std::string picutre_;
@@ -97,8 +97,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::northwind::categories& lhs,
-    cpp_ref_impl::northwind::categories& rhs) {
+    masd::cpp_ref_impl::northwind::categories& lhs,
+    masd::cpp_ref_impl::northwind::categories& rhs) {
     lhs.swap(rhs);
 }
 

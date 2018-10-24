@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/northwind/types/order_details.hpp"
+#include "masd.cpp_ref_impl.northwind/types/order_details.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 order_details::order_details()
     : unit_price_(static_cast<double>(0)),
@@ -28,7 +28,7 @@ order_details::order_details()
       discount_(static_cast<double>(0)) { }
 
 order_details::order_details(
-    const cpp_ref_impl::northwind::order_details_key& order_details_key,
+    const masd::cpp_ref_impl::northwind::order_details_key& order_details_key,
     const double unit_price,
     const int quantity,
     const double discount)
@@ -58,19 +58,19 @@ order_details& order_details::operator=(order_details other) {
     return *this;
 }
 
-const cpp_ref_impl::northwind::order_details_key& order_details::order_details_key() const {
+const masd::cpp_ref_impl::northwind::order_details_key& order_details::order_details_key() const {
     return order_details_key_;
 }
 
-cpp_ref_impl::northwind::order_details_key& order_details::order_details_key() {
+masd::cpp_ref_impl::northwind::order_details_key& order_details::order_details_key() {
     return order_details_key_;
 }
 
-void order_details::order_details_key(const cpp_ref_impl::northwind::order_details_key& v) {
+void order_details::order_details_key(const masd::cpp_ref_impl::northwind::order_details_key& v) {
     order_details_key_ = v;
 }
 
-void order_details::order_details_key(const cpp_ref_impl::northwind::order_details_key&& v) {
+void order_details::order_details_key(const masd::cpp_ref_impl::northwind::order_details_key&& v) {
     order_details_key_ = std::move(v);
 }
 

@@ -19,14 +19,14 @@
  *
  */
 #include <sstream>
-#include "cpp_ref_impl/northwind/test_data/suppliers_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/supplier_id_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/suppliers_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/supplier_id_td.hpp"
 
 namespace {
 
-cpp_ref_impl::northwind::supplier_id
-create_cpp_ref_impl_northwind_supplier_id(const unsigned int position) {
-    return cpp_ref_impl::northwind::supplier_id_generator::create(position);
+masd::cpp_ref_impl::northwind::supplier_id
+create_masd_cpp_ref_impl_northwind_supplier_id(const unsigned int position) {
+    return masd::cpp_ref_impl::northwind::supplier_id_generator::create(position);
 }
 
 std::string create_std_string(const unsigned int position) {
@@ -37,13 +37,13 @@ std::string create_std_string(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 suppliers_generator::suppliers_generator() : position_(0) { }
 
 void suppliers_generator::
 populate(const unsigned int position, result_type& v) {
-    v.supplier_id(create_cpp_ref_impl_northwind_supplier_id(position + 0));
+    v.supplier_id(create_masd_cpp_ref_impl_northwind_supplier_id(position + 0));
     v.company_name(create_std_string(position + 1));
     v.contact_name(create_std_string(position + 2));
     v.contact_title(create_std_string(position + 3));

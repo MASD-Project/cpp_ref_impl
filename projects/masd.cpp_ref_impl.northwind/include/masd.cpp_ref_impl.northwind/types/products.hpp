@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_NORTHWIND_TYPES_PRODUCTS_HPP
-#define CPP_REF_IMPL_NORTHWIND_TYPES_PRODUCTS_HPP
+#ifndef MASD_CPP_REF_IMPL_NORTHWIND_TYPES_PRODUCTS_HPP
+#define MASD_CPP_REF_IMPL_NORTHWIND_TYPES_PRODUCTS_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -27,12 +27,12 @@
 
 #include <string>
 #include <algorithm>
-#include "cpp_ref_impl/northwind/types/product_id.hpp"
-#include "cpp_ref_impl/northwind/types/category_id.hpp"
-#include "cpp_ref_impl/northwind/types/supplier_id.hpp"
-#include "cpp_ref_impl/northwind/serialization/products_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/types/product_id.hpp"
+#include "masd.cpp_ref_impl.northwind/types/category_id.hpp"
+#include "masd.cpp_ref_impl.northwind/types/supplier_id.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/products_fwd_ser.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 class products final {
 public:
@@ -45,10 +45,10 @@ public:
 
 public:
     products(
-        const cpp_ref_impl::northwind::product_id& product_id,
+        const masd::cpp_ref_impl::northwind::product_id& product_id,
         const std::string& product_name,
-        const cpp_ref_impl::northwind::supplier_id& supplier_id,
-        const cpp_ref_impl::northwind::category_id& category_id,
+        const masd::cpp_ref_impl::northwind::supplier_id& supplier_id,
+        const masd::cpp_ref_impl::northwind::category_id& category_id,
         const std::string& quantity_per_unit,
         const double unit_price,
         const int units_in_stock,
@@ -58,31 +58,31 @@ public:
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::northwind::products& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::northwind::products& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::northwind::products& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::northwind::products& v, unsigned int version);
 
 public:
-    const cpp_ref_impl::northwind::product_id& product_id() const;
-    cpp_ref_impl::northwind::product_id& product_id();
-    void product_id(const cpp_ref_impl::northwind::product_id& v);
-    void product_id(const cpp_ref_impl::northwind::product_id&& v);
+    const masd::cpp_ref_impl::northwind::product_id& product_id() const;
+    masd::cpp_ref_impl::northwind::product_id& product_id();
+    void product_id(const masd::cpp_ref_impl::northwind::product_id& v);
+    void product_id(const masd::cpp_ref_impl::northwind::product_id&& v);
 
     const std::string& product_name() const;
     std::string& product_name();
     void product_name(const std::string& v);
     void product_name(const std::string&& v);
 
-    const cpp_ref_impl::northwind::supplier_id& supplier_id() const;
-    cpp_ref_impl::northwind::supplier_id& supplier_id();
-    void supplier_id(const cpp_ref_impl::northwind::supplier_id& v);
-    void supplier_id(const cpp_ref_impl::northwind::supplier_id&& v);
+    const masd::cpp_ref_impl::northwind::supplier_id& supplier_id() const;
+    masd::cpp_ref_impl::northwind::supplier_id& supplier_id();
+    void supplier_id(const masd::cpp_ref_impl::northwind::supplier_id& v);
+    void supplier_id(const masd::cpp_ref_impl::northwind::supplier_id&& v);
 
-    const cpp_ref_impl::northwind::category_id& category_id() const;
-    cpp_ref_impl::northwind::category_id& category_id();
-    void category_id(const cpp_ref_impl::northwind::category_id& v);
-    void category_id(const cpp_ref_impl::northwind::category_id&& v);
+    const masd::cpp_ref_impl::northwind::category_id& category_id() const;
+    masd::cpp_ref_impl::northwind::category_id& category_id();
+    void category_id(const masd::cpp_ref_impl::northwind::category_id& v);
+    void category_id(const masd::cpp_ref_impl::northwind::category_id&& v);
 
     const std::string& quantity_per_unit() const;
     std::string& quantity_per_unit();
@@ -115,10 +115,10 @@ public:
     products& operator=(products other);
 
 private:
-    cpp_ref_impl::northwind::product_id product_id_;
+    masd::cpp_ref_impl::northwind::product_id product_id_;
     std::string product_name_;
-    cpp_ref_impl::northwind::supplier_id supplier_id_;
-    cpp_ref_impl::northwind::category_id category_id_;
+    masd::cpp_ref_impl::northwind::supplier_id supplier_id_;
+    masd::cpp_ref_impl::northwind::category_id category_id_;
     std::string quantity_per_unit_;
     double unit_price_;
     int units_in_stock_;
@@ -133,8 +133,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::northwind::products& lhs,
-    cpp_ref_impl::northwind::products& rhs) {
+    masd::cpp_ref_impl::northwind::products& lhs,
+    masd::cpp_ref_impl::northwind::products& rhs) {
     lhs.swap(rhs);
 }
 

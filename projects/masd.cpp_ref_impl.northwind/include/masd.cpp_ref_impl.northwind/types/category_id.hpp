@@ -18,17 +18,17 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_NORTHWIND_TYPES_CATEGORY_ID_HPP
-#define CPP_REF_IMPL_NORTHWIND_TYPES_CATEGORY_ID_HPP
+#ifndef MASD_CPP_REF_IMPL_NORTHWIND_TYPES_CATEGORY_ID_HPP
+#define MASD_CPP_REF_IMPL_NORTHWIND_TYPES_CATEGORY_ID_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <algorithm>
-#include "cpp_ref_impl/northwind/serialization/category_id_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/category_id_fwd_ser.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 class category_id final {
 public:
     category_id() = default;
@@ -40,10 +40,10 @@ public:
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::northwind::category_id& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::northwind::category_id& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::northwind::category_id& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::northwind::category_id& v, unsigned int version);
 
 public:
     /**
@@ -79,8 +79,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::northwind::category_id& lhs,
-    cpp_ref_impl::northwind::category_id& rhs) {
+    masd::cpp_ref_impl::northwind::category_id& lhs,
+    masd::cpp_ref_impl::northwind::category_id& rhs) {
     lhs.swap(rhs);
 }
 

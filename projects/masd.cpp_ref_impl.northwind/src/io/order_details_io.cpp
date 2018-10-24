@@ -20,10 +20,10 @@
  */
 #include <ostream>
 #include <boost/io/ios_state.hpp>
-#include "cpp_ref_impl/northwind/io/order_details_io.hpp"
-#include "cpp_ref_impl/northwind/io/order_details_key_io.hpp"
+#include "masd.cpp_ref_impl.northwind/io/order_details_io.hpp"
+#include "masd.cpp_ref_impl.northwind/io/order_details_key_io.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 std::ostream& operator<<(std::ostream& s, const order_details& v) {
     boost::io::ios_flags_saver ifs(s);
@@ -33,7 +33,7 @@ std::ostream& operator<<(std::ostream& s, const order_details& v) {
     s.setf(std::ios::showpoint);
 
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::northwind::order_details\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::northwind::order_details\"" << ", "
       << "\"order_details_key\": " << v.order_details_key() << ", "
       << "\"unit_price\": " << v.unit_price() << ", "
       << "\"quantity\": " << v.quantity() << ", "

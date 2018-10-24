@@ -18,12 +18,12 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/northwind/types/shippers.hpp"
+#include "masd.cpp_ref_impl.northwind/types/shippers.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 shippers::shippers(
-    const cpp_ref_impl::northwind::shipper_id& shipper_id,
+    const masd::cpp_ref_impl::northwind::shipper_id& shipper_id,
     const std::string& company_name,
     const std::string& phone)
     : shipper_id_(shipper_id),
@@ -49,19 +49,19 @@ shippers& shippers::operator=(shippers other) {
     return *this;
 }
 
-const cpp_ref_impl::northwind::shipper_id& shippers::shipper_id() const {
+const masd::cpp_ref_impl::northwind::shipper_id& shippers::shipper_id() const {
     return shipper_id_;
 }
 
-cpp_ref_impl::northwind::shipper_id& shippers::shipper_id() {
+masd::cpp_ref_impl::northwind::shipper_id& shippers::shipper_id() {
     return shipper_id_;
 }
 
-void shippers::shipper_id(const cpp_ref_impl::northwind::shipper_id& v) {
+void shippers::shipper_id(const masd::cpp_ref_impl::northwind::shipper_id& v) {
     shipper_id_ = v;
 }
 
-void shippers::shipper_id(const cpp_ref_impl::northwind::shipper_id&& v) {
+void shippers::shipper_id(const masd::cpp_ref_impl::northwind::shipper_id&& v) {
     shipper_id_ = std::move(v);
 }
 

@@ -18,14 +18,14 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/northwind/test_data/order_details_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/order_details_key_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/order_details_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/order_details_key_td.hpp"
 
 namespace {
 
-cpp_ref_impl::northwind::order_details_key
-create_cpp_ref_impl_northwind_order_details_key(const unsigned int position) {
-    return cpp_ref_impl::northwind::order_details_key_generator::create(position);
+masd::cpp_ref_impl::northwind::order_details_key
+create_masd_cpp_ref_impl_northwind_order_details_key(const unsigned int position) {
+    return masd::cpp_ref_impl::northwind::order_details_key_generator::create(position);
 }
 
 double create_double(const unsigned int position) {
@@ -38,13 +38,13 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 order_details_generator::order_details_generator() : position_(0) { }
 
 void order_details_generator::
 populate(const unsigned int position, result_type& v) {
-    v.order_details_key(create_cpp_ref_impl_northwind_order_details_key(position + 0));
+    v.order_details_key(create_masd_cpp_ref_impl_northwind_order_details_key(position + 0));
     v.unit_price(create_double(position + 1));
     v.quantity(create_int(position + 2));
     v.discount(create_double(position + 3));

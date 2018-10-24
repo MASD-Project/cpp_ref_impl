@@ -18,25 +18,25 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_NORTHWIND_SERIALIZATION_PACKAGE_CLASS_0_SER_HPP
-#define CPP_REF_IMPL_NORTHWIND_SERIALIZATION_PACKAGE_CLASS_0_SER_HPP
+#ifndef MASD_CPP_REF_IMPL_NORTHWIND_SERIALIZATION_PACKAGE_CLASS_0_SER_HPP
+#define MASD_CPP_REF_IMPL_NORTHWIND_SERIALIZATION_PACKAGE_CLASS_0_SER_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <boost/serialization/split_free.hpp>
-#include "cpp_ref_impl/northwind/types/package/class_0.hpp"
+#include "masd.cpp_ref_impl.northwind/types/package/class_0.hpp"
 
-BOOST_SERIALIZATION_SPLIT_FREE(cpp_ref_impl::northwind::package::class_0)
+BOOST_SERIALIZATION_SPLIT_FREE(masd::cpp_ref_impl::northwind::package::class_0)
 namespace boost {
 namespace serialization {
 
 template<typename Archive>
-void save(Archive& ar, const cpp_ref_impl::northwind::package::class_0& v, unsigned int version);
+void save(Archive& ar, const masd::cpp_ref_impl::northwind::package::class_0& v, unsigned int version);
 
 template<typename Archive>
-void load(Archive& ar, cpp_ref_impl::northwind::package::class_0& v, unsigned int version);
+void load(Archive& ar, masd::cpp_ref_impl::northwind::package::class_0& v, unsigned int version);
 
 } }
 

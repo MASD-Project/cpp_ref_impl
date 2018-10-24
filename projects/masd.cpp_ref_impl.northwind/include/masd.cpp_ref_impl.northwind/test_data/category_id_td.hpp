@@ -18,23 +18,23 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_NORTHWIND_TEST_DATA_CATEGORY_ID_TD_HPP
-#define CPP_REF_IMPL_NORTHWIND_TEST_DATA_CATEGORY_ID_TD_HPP
+#ifndef MASD_CPP_REF_IMPL_NORTHWIND_TEST_DATA_CATEGORY_ID_TD_HPP
+#define MASD_CPP_REF_IMPL_NORTHWIND_TEST_DATA_CATEGORY_ID_TD_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/northwind/types/category_id.hpp"
+#include "masd.cpp_ref_impl.northwind/types/category_id.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 class category_id_generator {
 public:
     category_id_generator();
 
 public:
-    typedef cpp_ref_impl::northwind::category_id result_type;
+    typedef masd::cpp_ref_impl::northwind::category_id result_type;
 
 public:
     static void populate(const unsigned int position, result_type& v);

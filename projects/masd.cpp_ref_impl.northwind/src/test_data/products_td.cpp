@@ -19,16 +19,16 @@
  *
  */
 #include <sstream>
-#include "cpp_ref_impl/northwind/test_data/products_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/product_id_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/category_id_td.hpp"
-#include "cpp_ref_impl/northwind/test_data/supplier_id_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/products_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/product_id_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/category_id_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/supplier_id_td.hpp"
 
 namespace {
 
-cpp_ref_impl::northwind::product_id
-create_cpp_ref_impl_northwind_product_id(const unsigned int position) {
-    return cpp_ref_impl::northwind::product_id_generator::create(position);
+masd::cpp_ref_impl::northwind::product_id
+create_masd_cpp_ref_impl_northwind_product_id(const unsigned int position) {
+    return masd::cpp_ref_impl::northwind::product_id_generator::create(position);
 }
 
 std::string create_std_string(const unsigned int position) {
@@ -37,14 +37,14 @@ std::string create_std_string(const unsigned int position) {
     return s.str();
 }
 
-cpp_ref_impl::northwind::supplier_id
-create_cpp_ref_impl_northwind_supplier_id(const unsigned int position) {
-    return cpp_ref_impl::northwind::supplier_id_generator::create(position);
+masd::cpp_ref_impl::northwind::supplier_id
+create_masd_cpp_ref_impl_northwind_supplier_id(const unsigned int position) {
+    return masd::cpp_ref_impl::northwind::supplier_id_generator::create(position);
 }
 
-cpp_ref_impl::northwind::category_id
-create_cpp_ref_impl_northwind_category_id(const unsigned int position) {
-    return cpp_ref_impl::northwind::category_id_generator::create(position);
+masd::cpp_ref_impl::northwind::category_id
+create_masd_cpp_ref_impl_northwind_category_id(const unsigned int position) {
+    return masd::cpp_ref_impl::northwind::category_id_generator::create(position);
 }
 
 double create_double(const unsigned int position) {
@@ -61,16 +61,16 @@ bool create_bool(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 products_generator::products_generator() : position_(0) { }
 
 void products_generator::
 populate(const unsigned int position, result_type& v) {
-    v.product_id(create_cpp_ref_impl_northwind_product_id(position + 0));
+    v.product_id(create_masd_cpp_ref_impl_northwind_product_id(position + 0));
     v.product_name(create_std_string(position + 1));
-    v.supplier_id(create_cpp_ref_impl_northwind_supplier_id(position + 2));
-    v.category_id(create_cpp_ref_impl_northwind_category_id(position + 3));
+    v.supplier_id(create_masd_cpp_ref_impl_northwind_supplier_id(position + 2));
+    v.category_id(create_masd_cpp_ref_impl_northwind_category_id(position + 3));
     v.quantity_per_unit(create_std_string(position + 4));
     v.unit_price(create_double(position + 5));
     v.units_in_stock(create_int(position + 6));

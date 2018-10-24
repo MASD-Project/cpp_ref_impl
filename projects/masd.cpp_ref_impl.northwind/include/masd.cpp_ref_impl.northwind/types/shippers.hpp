@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_NORTHWIND_TYPES_SHIPPERS_HPP
-#define CPP_REF_IMPL_NORTHWIND_TYPES_SHIPPERS_HPP
+#ifndef MASD_CPP_REF_IMPL_NORTHWIND_TYPES_SHIPPERS_HPP
+#define MASD_CPP_REF_IMPL_NORTHWIND_TYPES_SHIPPERS_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -27,10 +27,10 @@
 
 #include <string>
 #include <algorithm>
-#include "cpp_ref_impl/northwind/types/shipper_id.hpp"
-#include "cpp_ref_impl/northwind/serialization/shippers_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.northwind/types/shipper_id.hpp"
+#include "masd.cpp_ref_impl.northwind/serialization/shippers_fwd_ser.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 class shippers final {
 public:
@@ -41,22 +41,22 @@ public:
 
 public:
     shippers(
-        const cpp_ref_impl::northwind::shipper_id& shipper_id,
+        const masd::cpp_ref_impl::northwind::shipper_id& shipper_id,
         const std::string& company_name,
         const std::string& phone);
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::northwind::shippers& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::northwind::shippers& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::northwind::shippers& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::northwind::shippers& v, unsigned int version);
 
 public:
-    const cpp_ref_impl::northwind::shipper_id& shipper_id() const;
-    cpp_ref_impl::northwind::shipper_id& shipper_id();
-    void shipper_id(const cpp_ref_impl::northwind::shipper_id& v);
-    void shipper_id(const cpp_ref_impl::northwind::shipper_id&& v);
+    const masd::cpp_ref_impl::northwind::shipper_id& shipper_id() const;
+    masd::cpp_ref_impl::northwind::shipper_id& shipper_id();
+    void shipper_id(const masd::cpp_ref_impl::northwind::shipper_id& v);
+    void shipper_id(const masd::cpp_ref_impl::northwind::shipper_id&& v);
 
     const std::string& company_name() const;
     std::string& company_name();
@@ -79,7 +79,7 @@ public:
     shippers& operator=(shippers other);
 
 private:
-    cpp_ref_impl::northwind::shipper_id shipper_id_;
+    masd::cpp_ref_impl::northwind::shipper_id shipper_id_;
     std::string company_name_;
     std::string phone_;
 };
@@ -90,8 +90,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::northwind::shippers& lhs,
-    cpp_ref_impl::northwind::shippers& rhs) {
+    masd::cpp_ref_impl::northwind::shippers& lhs,
+    masd::cpp_ref_impl::northwind::shippers& rhs) {
     lhs.swap(rhs);
 }
 

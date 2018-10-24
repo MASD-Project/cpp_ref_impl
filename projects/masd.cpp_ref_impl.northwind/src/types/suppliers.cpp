@@ -18,12 +18,12 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/northwind/types/suppliers.hpp"
+#include "masd.cpp_ref_impl.northwind/types/suppliers.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 suppliers::suppliers(
-    const cpp_ref_impl::northwind::supplier_id& supplier_id,
+    const masd::cpp_ref_impl::northwind::supplier_id& supplier_id,
     const std::string& company_name,
     const std::string& contact_name,
     const std::string& contact_title,
@@ -85,19 +85,19 @@ suppliers& suppliers::operator=(suppliers other) {
     return *this;
 }
 
-const cpp_ref_impl::northwind::supplier_id& suppliers::supplier_id() const {
+const masd::cpp_ref_impl::northwind::supplier_id& suppliers::supplier_id() const {
     return supplier_id_;
 }
 
-cpp_ref_impl::northwind::supplier_id& suppliers::supplier_id() {
+masd::cpp_ref_impl::northwind::supplier_id& suppliers::supplier_id() {
     return supplier_id_;
 }
 
-void suppliers::supplier_id(const cpp_ref_impl::northwind::supplier_id& v) {
+void suppliers::supplier_id(const masd::cpp_ref_impl::northwind::supplier_id& v) {
     supplier_id_ = v;
 }
 
-void suppliers::supplier_id(const cpp_ref_impl::northwind::supplier_id&& v) {
+void suppliers::supplier_id(const masd::cpp_ref_impl::northwind::supplier_id&& v) {
     supplier_id_ = std::move(v);
 }
 

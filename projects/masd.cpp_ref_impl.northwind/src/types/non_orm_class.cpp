@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/northwind/types/non_orm_class.hpp"
+#include "masd.cpp_ref_impl.northwind/types/non_orm_class.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 non_orm_class::non_orm_class()
     : prop_0_(static_cast<int>(0)) { }

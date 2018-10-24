@@ -18,12 +18,12 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/northwind/types/categories.hpp"
+#include "masd.cpp_ref_impl.northwind/types/categories.hpp"
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 categories::categories(
-    const cpp_ref_impl::northwind::category_id& category_id,
+    const masd::cpp_ref_impl::northwind::category_id& category_id,
     const std::string& category_name,
     const std::string& description,
     const std::string& picutre)
@@ -53,19 +53,19 @@ categories& categories::operator=(categories other) {
     return *this;
 }
 
-const cpp_ref_impl::northwind::category_id& categories::category_id() const {
+const masd::cpp_ref_impl::northwind::category_id& categories::category_id() const {
     return category_id_;
 }
 
-cpp_ref_impl::northwind::category_id& categories::category_id() {
+masd::cpp_ref_impl::northwind::category_id& categories::category_id() {
     return category_id_;
 }
 
-void categories::category_id(const cpp_ref_impl::northwind::category_id& v) {
+void categories::category_id(const masd::cpp_ref_impl::northwind::category_id& v) {
     category_id_ = v;
 }
 
-void categories::category_id(const cpp_ref_impl::northwind::category_id&& v) {
+void categories::category_id(const masd::cpp_ref_impl::northwind::category_id&& v) {
     category_id_ = std::move(v);
 }
 

@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/northwind/test_data/non_orm_class_td.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/non_orm_class_td.hpp"
 
 namespace {
 
@@ -28,7 +28,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::northwind {
+namespace masd::cpp_ref_impl::northwind {
 
 non_orm_class_generator::non_orm_class_generator() : position_(0) { }
 
