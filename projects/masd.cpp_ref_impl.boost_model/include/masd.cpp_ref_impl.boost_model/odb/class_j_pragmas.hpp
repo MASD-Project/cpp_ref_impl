@@ -18,17 +18,17 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_BOOST_MODEL_ODB_CLASS_J_PRAGMAS_HPP
-#define CPP_REF_IMPL_BOOST_MODEL_ODB_CLASS_J_PRAGMAS_HPP
+#ifndef MASD_CPP_REF_IMPL_BOOST_MODEL_ODB_CLASS_J_PRAGMAS_HPP
+#define MASD_CPP_REF_IMPL_BOOST_MODEL_ODB_CLASS_J_PRAGMAS_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/boost_model/types/class_j.hpp"
-#include "cpp_ref_impl/boost_model/odb/date_primitive_pragmas.hpp"
-#include "cpp_ref_impl/boost_model/odb/ptime_primitive_pragmas.hpp"
-#include "cpp_ref_impl/boost_model/odb/time_duration_primitive_pragmas.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/class_j.hpp"
+#include "masd.cpp_ref_impl.boost_model/odb/date_primitive_pragmas.hpp"
+#include "masd.cpp_ref_impl.boost_model/odb/ptime_primitive_pragmas.hpp"
+#include "masd.cpp_ref_impl.boost_model/odb/time_duration_primitive_pragmas.hpp"
 
 // class has no ODB pragmas defined.
 

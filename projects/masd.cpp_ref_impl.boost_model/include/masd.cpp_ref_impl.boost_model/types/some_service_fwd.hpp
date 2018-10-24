@@ -18,14 +18,14 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_BOOST_MODEL_TYPES_SOME_SERVICE_FWD_HPP
-#define CPP_REF_IMPL_BOOST_MODEL_TYPES_SOME_SERVICE_FWD_HPP
+#ifndef MASD_CPP_REF_IMPL_BOOST_MODEL_TYPES_SOME_SERVICE_FWD_HPP
+#define MASD_CPP_REF_IMPL_BOOST_MODEL_TYPES_SOME_SERVICE_FWD_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 class some_service;
 

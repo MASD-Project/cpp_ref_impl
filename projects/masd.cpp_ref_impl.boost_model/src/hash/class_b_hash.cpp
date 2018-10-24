@@ -18,10 +18,10 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/boost_model/hash/class_a_hash.hpp"
-#include "cpp_ref_impl/boost_model/hash/class_b_hash.hpp"
-#include "cpp_ref_impl/boost_model/hash/class_base_hash.hpp"
-#include "cpp_ref_impl/boost_model/hash/pkg1/class_c_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/class_a_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/class_b_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/class_base_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/pkg1/class_c_hash.hpp"
 
 namespace {
 
@@ -31,62 +31,62 @@ inline void combine(std::size_t& seed, const HashableType& value) {
     seed ^= hasher(value) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
 }
 
-inline std::size_t hash_boost_shared_ptr_cpp_ref_impl_boost_model_class_a(const boost::shared_ptr<cpp_ref_impl::boost_model::class_a>& v) {
+inline std::size_t hash_boost_shared_ptr_masd_cpp_ref_impl_boost_model_class_a(const boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a>& v) {
     std::size_t seed(0);
     combine(seed, *v);
     return seed;
 }
 
-inline std::size_t hash_std_vector_boost_shared_ptr_cpp_ref_impl_boost_model_class_a(const std::vector<boost::shared_ptr<cpp_ref_impl::boost_model::class_a> >& v) {
+inline std::size_t hash_std_vector_boost_shared_ptr_masd_cpp_ref_impl_boost_model_class_a(const std::vector<boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a> >& v) {
     std::size_t seed(0);
     for (const auto i : v) {
-        combine(seed, hash_boost_shared_ptr_cpp_ref_impl_boost_model_class_a(i));
+        combine(seed, hash_boost_shared_ptr_masd_cpp_ref_impl_boost_model_class_a(i));
     }
     return seed;
 }
 
-inline std::size_t hash_std_unordered_map_int_boost_shared_ptr_cpp_ref_impl_boost_model_class_a(const std::unordered_map<int, boost::shared_ptr<cpp_ref_impl::boost_model::class_a> >& v) {
+inline std::size_t hash_std_unordered_map_int_boost_shared_ptr_masd_cpp_ref_impl_boost_model_class_a(const std::unordered_map<int, boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a> >& v) {
     std::size_t seed(0);
     for (const auto i : v) {
         combine(seed, i.first);
-        combine(seed, hash_boost_shared_ptr_cpp_ref_impl_boost_model_class_a(i.second));
+        combine(seed, hash_boost_shared_ptr_masd_cpp_ref_impl_boost_model_class_a(i.second));
     }
     return seed;
 }
 
-inline std::size_t hash_boost_shared_ptr_cpp_ref_impl_boost_model_pkg1_class_c(const boost::shared_ptr<cpp_ref_impl::boost_model::pkg1::class_c>& v) {
+inline std::size_t hash_boost_shared_ptr_masd_cpp_ref_impl_boost_model_pkg1_class_c(const boost::shared_ptr<masd::cpp_ref_impl::boost_model::pkg1::class_c>& v) {
     std::size_t seed(0);
     combine(seed, *v);
     return seed;
 }
 
-inline std::size_t hash_boost_shared_ptr_cpp_ref_impl_boost_model_class_base(const boost::shared_ptr<cpp_ref_impl::boost_model::class_base>& v) {
+inline std::size_t hash_boost_shared_ptr_masd_cpp_ref_impl_boost_model_class_base(const boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_base>& v) {
     std::size_t seed(0);
     combine(seed, *v);
     return seed;
 }
 
-inline std::size_t hash_std_vector_boost_shared_ptr_cpp_ref_impl_boost_model_class_base(const std::vector<boost::shared_ptr<cpp_ref_impl::boost_model::class_base> >& v) {
+inline std::size_t hash_std_vector_boost_shared_ptr_masd_cpp_ref_impl_boost_model_class_base(const std::vector<boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_base> >& v) {
     std::size_t seed(0);
     for (const auto i : v) {
-        combine(seed, hash_boost_shared_ptr_cpp_ref_impl_boost_model_class_base(i));
+        combine(seed, hash_boost_shared_ptr_masd_cpp_ref_impl_boost_model_class_base(i));
     }
     return seed;
 }
 
 }
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 std::size_t class_b_hasher::hash(const class_b& v) {
     std::size_t seed(0);
 
-    combine(seed, hash_boost_shared_ptr_cpp_ref_impl_boost_model_class_a(v.prop_0()));
-    combine(seed, hash_std_vector_boost_shared_ptr_cpp_ref_impl_boost_model_class_a(v.prop_1()));
-    combine(seed, hash_std_unordered_map_int_boost_shared_ptr_cpp_ref_impl_boost_model_class_a(v.prop_2()));
-    combine(seed, hash_boost_shared_ptr_cpp_ref_impl_boost_model_pkg1_class_c(v.prop_3()));
-    combine(seed, hash_boost_shared_ptr_cpp_ref_impl_boost_model_class_base(v.prop_4()));
-    combine(seed, hash_std_vector_boost_shared_ptr_cpp_ref_impl_boost_model_class_base(v.prop_5()));
+    combine(seed, hash_boost_shared_ptr_masd_cpp_ref_impl_boost_model_class_a(v.prop_0()));
+    combine(seed, hash_std_vector_boost_shared_ptr_masd_cpp_ref_impl_boost_model_class_a(v.prop_1()));
+    combine(seed, hash_std_unordered_map_int_boost_shared_ptr_masd_cpp_ref_impl_boost_model_class_a(v.prop_2()));
+    combine(seed, hash_boost_shared_ptr_masd_cpp_ref_impl_boost_model_pkg1_class_c(v.prop_3()));
+    combine(seed, hash_boost_shared_ptr_masd_cpp_ref_impl_boost_model_class_base(v.prop_4()));
+    combine(seed, hash_std_vector_boost_shared_ptr_masd_cpp_ref_impl_boost_model_class_base(v.prop_5()));
     combine(seed, v.prop_6());
 
     return seed;

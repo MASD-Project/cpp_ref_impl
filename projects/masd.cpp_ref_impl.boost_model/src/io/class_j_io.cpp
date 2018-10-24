@@ -19,16 +19,16 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/boost_model/io/class_j_io.hpp"
-#include "cpp_ref_impl/boost_model/io/date_primitive_io.hpp"
-#include "cpp_ref_impl/boost_model/io/ptime_primitive_io.hpp"
-#include "cpp_ref_impl/boost_model/io/time_duration_primitive_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/class_j_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/date_primitive_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/ptime_primitive_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/time_duration_primitive_io.hpp"
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 std::ostream& operator<<(std::ostream& s, const class_j& v) {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::boost_model::class_j\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::boost_model::class_j\"" << ", "
       << "\"prop_0\": " << v.prop_0() << ", "
       << "\"prop_1\": " << v.prop_1() << ", "
       << "\"prop_2\": " << v.prop_2()

@@ -18,21 +18,21 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_BOOST_MODEL_IO_CLASS_DERIVED_IO_HPP
-#define CPP_REF_IMPL_BOOST_MODEL_IO_CLASS_DERIVED_IO_HPP
+#ifndef MASD_CPP_REF_IMPL_BOOST_MODEL_IO_CLASS_DERIVED_IO_HPP
+#define MASD_CPP_REF_IMPL_BOOST_MODEL_IO_CLASS_DERIVED_IO_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <iosfwd>
-#include "cpp_ref_impl/boost_model/types/class_derived.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/class_derived.hpp"
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 std::ostream&
 operator<<(std::ostream& s,
-     const cpp_ref_impl::boost_model::class_derived& v);
+     const masd::cpp_ref_impl::boost_model::class_derived& v);
 
 }
 

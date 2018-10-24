@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/boost_model/hash/class_a_hash.hpp"
-#include "cpp_ref_impl/boost_model/hash/class_d_hash.hpp"
-#include "cpp_ref_impl/boost_model/hash/pkg1/class_c_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/class_a_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/class_d_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/pkg1/class_c_hash.hpp"
 
 namespace {
 
@@ -40,7 +40,7 @@ inline std::size_t hash_boost_optional_int(const boost::optional<int>& v) {
     return seed;
 }
 
-inline std::size_t hash_boost_optional_cpp_ref_impl_boost_model_class_a(const boost::optional<cpp_ref_impl::boost_model::class_a>& v) {
+inline std::size_t hash_boost_optional_masd_cpp_ref_impl_boost_model_class_a(const boost::optional<masd::cpp_ref_impl::boost_model::class_a>& v) {
     std::size_t seed(0);
 
     if (!v)
@@ -50,7 +50,7 @@ inline std::size_t hash_boost_optional_cpp_ref_impl_boost_model_class_a(const bo
     return seed;
 }
 
-inline std::size_t hash_boost_optional_cpp_ref_impl_boost_model_pkg1_class_c(const boost::optional<cpp_ref_impl::boost_model::pkg1::class_c>& v) {
+inline std::size_t hash_boost_optional_masd_cpp_ref_impl_boost_model_pkg1_class_c(const boost::optional<masd::cpp_ref_impl::boost_model::pkg1::class_c>& v) {
     std::size_t seed(0);
 
     if (!v)
@@ -60,7 +60,7 @@ inline std::size_t hash_boost_optional_cpp_ref_impl_boost_model_pkg1_class_c(con
     return seed;
 }
 
-inline std::size_t hash_std_vector_cpp_ref_impl_boost_model_class_a(const std::vector<cpp_ref_impl::boost_model::class_a>& v) {
+inline std::size_t hash_std_vector_masd_cpp_ref_impl_boost_model_class_a(const std::vector<masd::cpp_ref_impl::boost_model::class_a>& v) {
     std::size_t seed(0);
     for (const auto i : v) {
         combine(seed, i);
@@ -68,27 +68,27 @@ inline std::size_t hash_std_vector_cpp_ref_impl_boost_model_class_a(const std::v
     return seed;
 }
 
-inline std::size_t hash_boost_optional_std_vector_cpp_ref_impl_boost_model_class_a(const boost::optional<std::vector<cpp_ref_impl::boost_model::class_a> >& v) {
+inline std::size_t hash_boost_optional_std_vector_masd_cpp_ref_impl_boost_model_class_a(const boost::optional<std::vector<masd::cpp_ref_impl::boost_model::class_a> >& v) {
     std::size_t seed(0);
 
     if (!v)
         return seed;
 
-    combine(seed, hash_std_vector_cpp_ref_impl_boost_model_class_a(*v));
+    combine(seed, hash_std_vector_masd_cpp_ref_impl_boost_model_class_a(*v));
     return seed;
 }
 
 }
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 std::size_t class_d_hasher::hash(const class_d& v) {
     std::size_t seed(0);
 
     combine(seed, hash_boost_optional_int(v.prop_0()));
-    combine(seed, hash_boost_optional_cpp_ref_impl_boost_model_class_a(v.prop_1()));
-    combine(seed, hash_boost_optional_cpp_ref_impl_boost_model_pkg1_class_c(v.prop_2()));
-    combine(seed, hash_boost_optional_std_vector_cpp_ref_impl_boost_model_class_a(v.prop_3()));
+    combine(seed, hash_boost_optional_masd_cpp_ref_impl_boost_model_class_a(v.prop_1()));
+    combine(seed, hash_boost_optional_masd_cpp_ref_impl_boost_model_pkg1_class_c(v.prop_2()));
+    combine(seed, hash_boost_optional_std_vector_masd_cpp_ref_impl_boost_model_class_a(v.prop_3()));
 
     return seed;
 }

@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/boost_model/types/class_e.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/class_e.hpp"
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 class_e::class_e(class_e&& rhs)
     : prop_0_(std::move(rhs.prop_0_)),
@@ -30,8 +30,8 @@ class_e::class_e(class_e&& rhs)
 
 class_e::class_e(
     const boost::variant<int, double>& prop_0,
-    const boost::variant<int, cpp_ref_impl::boost_model::class_derived, double>& prop_1,
-    const std::vector<boost::variant<int, cpp_ref_impl::boost_model::class_derived, double> >& prop_2,
+    const boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double>& prop_1,
+    const std::vector<boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double> >& prop_2,
     const boost::variant<int, std::string, char>& prop_3)
     : prop_0_(prop_0),
       prop_1_(prop_1),
@@ -75,35 +75,35 @@ void class_e::prop_0(const boost::variant<int, double>&& v) {
     prop_0_ = std::move(v);
 }
 
-const boost::variant<int, cpp_ref_impl::boost_model::class_derived, double>& class_e::prop_1() const {
+const boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double>& class_e::prop_1() const {
     return prop_1_;
 }
 
-boost::variant<int, cpp_ref_impl::boost_model::class_derived, double>& class_e::prop_1() {
+boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double>& class_e::prop_1() {
     return prop_1_;
 }
 
-void class_e::prop_1(const boost::variant<int, cpp_ref_impl::boost_model::class_derived, double>& v) {
+void class_e::prop_1(const boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double>& v) {
     prop_1_ = v;
 }
 
-void class_e::prop_1(const boost::variant<int, cpp_ref_impl::boost_model::class_derived, double>&& v) {
+void class_e::prop_1(const boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double>&& v) {
     prop_1_ = std::move(v);
 }
 
-const std::vector<boost::variant<int, cpp_ref_impl::boost_model::class_derived, double> >& class_e::prop_2() const {
+const std::vector<boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double> >& class_e::prop_2() const {
     return prop_2_;
 }
 
-std::vector<boost::variant<int, cpp_ref_impl::boost_model::class_derived, double> >& class_e::prop_2() {
+std::vector<boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double> >& class_e::prop_2() {
     return prop_2_;
 }
 
-void class_e::prop_2(const std::vector<boost::variant<int, cpp_ref_impl::boost_model::class_derived, double> >& v) {
+void class_e::prop_2(const std::vector<boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double> >& v) {
     prop_2_ = v;
 }
 
-void class_e::prop_2(const std::vector<boost::variant<int, cpp_ref_impl::boost_model::class_derived, double> >&& v) {
+void class_e::prop_2(const std::vector<boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double> >&& v) {
     prop_2_ = std::move(v);
 }
 

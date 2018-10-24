@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/boost_model/hash/class_f_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/class_f_hash.hpp"
 
 namespace {
 
@@ -74,7 +74,7 @@ inline std::size_t hash_std_list_boost_posix_time_time_duration(const std::list<
 
 }
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 std::size_t class_f_hasher::hash(const class_f& v) {
     std::size_t seed(0);

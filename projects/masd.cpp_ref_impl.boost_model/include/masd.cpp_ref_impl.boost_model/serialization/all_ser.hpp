@@ -18,26 +18,26 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_BOOST_MODEL_SERIALIZATION_ALL_SER_HPP
-#define CPP_REF_IMPL_BOOST_MODEL_SERIALIZATION_ALL_SER_HPP
+#ifndef MASD_CPP_REF_IMPL_BOOST_MODEL_SERIALIZATION_ALL_SER_HPP
+#define MASD_CPP_REF_IMPL_BOOST_MODEL_SERIALIZATION_ALL_SER_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/boost_model/serialization/class_a_ser.hpp"
-#include "cpp_ref_impl/boost_model/serialization/class_b_ser.hpp"
-#include "cpp_ref_impl/boost_model/serialization/class_d_ser.hpp"
-#include "cpp_ref_impl/boost_model/serialization/class_e_ser.hpp"
-#include "cpp_ref_impl/boost_model/serialization/class_f_ser.hpp"
-#include "cpp_ref_impl/boost_model/serialization/class_g_ser.hpp"
-#include "cpp_ref_impl/boost_model/serialization/class_h_ser.hpp"
-#include "cpp_ref_impl/boost_model/serialization/class_j_ser.hpp"
-#include "cpp_ref_impl/boost_model/serialization/class_base_ser.hpp"
-#include "cpp_ref_impl/boost_model/serialization/pkg1/class_c_ser.hpp"
-#include "cpp_ref_impl/boost_model/serialization/class_derived_ser.hpp"
-#include "cpp_ref_impl/boost_model/serialization/date_primitive_ser.hpp"
-#include "cpp_ref_impl/boost_model/serialization/ptime_primitive_ser.hpp"
-#include "cpp_ref_impl/boost_model/serialization/time_duration_primitive_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/class_a_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/class_b_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/class_d_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/class_e_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/class_f_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/class_g_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/class_h_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/class_j_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/class_base_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/pkg1/class_c_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/class_derived_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/date_primitive_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/ptime_primitive_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/time_duration_primitive_ser.hpp"
 
 #endif

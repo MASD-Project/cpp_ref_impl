@@ -32,14 +32,14 @@
 #include <boost/date_time/posix_time/posix_time.hpp>
 #include <boost/date_time/gregorian/greg_serialize.hpp>
 #include <boost/date_time/posix_time/time_serialize.hpp>
-#include "cpp_ref_impl/boost_model/serialization/class_f_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/class_f_ser.hpp"
 
 namespace boost {
 namespace serialization {
 
 template<typename Archive>
 void save(Archive& ar,
-    const cpp_ref_impl::boost_model::class_f& v,
+    const masd::cpp_ref_impl::boost_model::class_f& v,
     const unsigned int /*version*/) {
     ar << make_nvp("prop_0", v.prop_0_);
     ar << make_nvp("prop_1", v.prop_1_);
@@ -51,7 +51,7 @@ void save(Archive& ar,
 
 template<typename Archive>
 void load(Archive& ar,
-    cpp_ref_impl::boost_model::class_f& v,
+    masd::cpp_ref_impl::boost_model::class_f& v,
     const unsigned int /*version*/) {
     ar >> make_nvp("prop_0", v.prop_0_);
     ar >> make_nvp("prop_1", v.prop_1_);
@@ -66,16 +66,16 @@ void load(Archive& ar,
 namespace boost {
 namespace serialization {
 
-template void save(archive::polymorphic_oarchive& ar, const cpp_ref_impl::boost_model::class_f& v, unsigned int version);
-template void load(archive::polymorphic_iarchive& ar, cpp_ref_impl::boost_model::class_f& v, unsigned int version);
+template void save(archive::polymorphic_oarchive& ar, const masd::cpp_ref_impl::boost_model::class_f& v, unsigned int version);
+template void load(archive::polymorphic_iarchive& ar, masd::cpp_ref_impl::boost_model::class_f& v, unsigned int version);
 
-template void save(archive::text_oarchive& ar, const cpp_ref_impl::boost_model::class_f& v, unsigned int version);
-template void load(archive::text_iarchive& ar, cpp_ref_impl::boost_model::class_f& v, unsigned int version);
+template void save(archive::text_oarchive& ar, const masd::cpp_ref_impl::boost_model::class_f& v, unsigned int version);
+template void load(archive::text_iarchive& ar, masd::cpp_ref_impl::boost_model::class_f& v, unsigned int version);
 
-template void save(archive::binary_oarchive& ar, const cpp_ref_impl::boost_model::class_f& v, unsigned int version);
-template void load(archive::binary_iarchive& ar, cpp_ref_impl::boost_model::class_f& v, unsigned int version);
+template void save(archive::binary_oarchive& ar, const masd::cpp_ref_impl::boost_model::class_f& v, unsigned int version);
+template void load(archive::binary_iarchive& ar, masd::cpp_ref_impl::boost_model::class_f& v, unsigned int version);
 
-template void save(archive::xml_oarchive& ar, const cpp_ref_impl::boost_model::class_f& v, unsigned int version);
-template void load(archive::xml_iarchive& ar, cpp_ref_impl::boost_model::class_f& v, unsigned int version);
+template void save(archive::xml_oarchive& ar, const masd::cpp_ref_impl::boost_model::class_f& v, unsigned int version);
+template void load(archive::xml_iarchive& ar, masd::cpp_ref_impl::boost_model::class_f& v, unsigned int version);
 
 } }

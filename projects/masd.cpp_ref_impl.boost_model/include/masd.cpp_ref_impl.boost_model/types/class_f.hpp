@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_F_HPP
-#define CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_F_HPP
+#ifndef MASD_CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_F_HPP
+#define MASD_CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_F_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -29,9 +29,9 @@
 #include <algorithm>
 #include <boost/date_time/gregorian/gregorian_types.hpp>
 #include <boost/date_time/posix_time/posix_time_types.hpp>
-#include "cpp_ref_impl/boost_model/serialization/class_f_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/class_f_fwd_ser.hpp"
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 class class_f final {
 public:
@@ -53,10 +53,10 @@ public:
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::boost_model::class_f& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::boost_model::class_f& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::boost_model::class_f& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::boost_model::class_f& v, unsigned int version);
 
 public:
     const boost::gregorian::date& prop_0() const;
@@ -114,8 +114,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::boost_model::class_f& lhs,
-    cpp_ref_impl::boost_model::class_f& rhs) {
+    masd::cpp_ref_impl::boost_model::class_f& lhs,
+    masd::cpp_ref_impl::boost_model::class_f& rhs) {
     lhs.swap(rhs);
 }
 

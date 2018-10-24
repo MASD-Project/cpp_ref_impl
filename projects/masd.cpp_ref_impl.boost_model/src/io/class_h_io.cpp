@@ -21,7 +21,7 @@
 #include <ostream>
 #include <boost/algorithm/string.hpp>
 #include <boost/property_tree/json_parser.hpp>
-#include "cpp_ref_impl/boost_model/io/class_h_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/class_h_io.hpp"
 
 namespace boost::property_tree {
 
@@ -39,11 +39,11 @@ inline std::ostream& operator<<(std::ostream& s, const boost::property_tree::ptr
 
 }
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 std::ostream& operator<<(std::ostream& s, const class_h& v) {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::boost_model::class_h\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::boost_model::class_h\"" << ", "
       << "\"prop_0\": " << v.prop_0()
       << " }";
     return(s);

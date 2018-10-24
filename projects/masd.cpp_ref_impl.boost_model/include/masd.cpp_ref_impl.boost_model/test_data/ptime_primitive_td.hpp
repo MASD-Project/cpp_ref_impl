@@ -18,23 +18,23 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_BOOST_MODEL_TEST_DATA_PTIME_PRIMITIVE_TD_HPP
-#define CPP_REF_IMPL_BOOST_MODEL_TEST_DATA_PTIME_PRIMITIVE_TD_HPP
+#ifndef MASD_CPP_REF_IMPL_BOOST_MODEL_TEST_DATA_PTIME_PRIMITIVE_TD_HPP
+#define MASD_CPP_REF_IMPL_BOOST_MODEL_TEST_DATA_PTIME_PRIMITIVE_TD_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/boost_model/types/ptime_primitive.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/ptime_primitive.hpp"
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 class ptime_primitive_generator {
 public:
     ptime_primitive_generator();
 
 public:
-    typedef cpp_ref_impl::boost_model::ptime_primitive result_type;
+    typedef masd::cpp_ref_impl::boost_model::ptime_primitive result_type;
 
 public:
     static void populate(const unsigned int position, result_type& v);

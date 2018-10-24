@@ -18,27 +18,27 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_BOOST_MODEL_TYPES_ALL_HPP
-#define CPP_REF_IMPL_BOOST_MODEL_TYPES_ALL_HPP
+#ifndef MASD_CPP_REF_IMPL_BOOST_MODEL_TYPES_ALL_HPP
+#define MASD_CPP_REF_IMPL_BOOST_MODEL_TYPES_ALL_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/boost_model/types/class_a.hpp"
-#include "cpp_ref_impl/boost_model/types/class_b.hpp"
-#include "cpp_ref_impl/boost_model/types/class_d.hpp"
-#include "cpp_ref_impl/boost_model/types/class_e.hpp"
-#include "cpp_ref_impl/boost_model/types/class_f.hpp"
-#include "cpp_ref_impl/boost_model/types/class_g.hpp"
-#include "cpp_ref_impl/boost_model/types/class_h.hpp"
-#include "cpp_ref_impl/boost_model/types/class_j.hpp"
-#include "cpp_ref_impl/boost_model/types/class_base.hpp"
-#include "cpp_ref_impl/boost_model/types/pkg1/class_c.hpp"
-#include "cpp_ref_impl/boost_model/types/some_service.hpp"
-#include "cpp_ref_impl/boost_model/types/class_derived.hpp"
-#include "cpp_ref_impl/boost_model/types/date_primitive.hpp"
-#include "cpp_ref_impl/boost_model/types/ptime_primitive.hpp"
-#include "cpp_ref_impl/boost_model/types/time_duration_primitive.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/class_a.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/class_b.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/class_d.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/class_e.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/class_f.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/class_g.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/class_h.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/class_j.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/class_base.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/pkg1/class_c.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/some_service.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/class_derived.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/date_primitive.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/ptime_primitive.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/time_duration_primitive.hpp"
 
 #endif

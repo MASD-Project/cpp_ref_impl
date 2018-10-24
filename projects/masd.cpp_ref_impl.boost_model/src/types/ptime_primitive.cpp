@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/boost_model/types/ptime_primitive.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/ptime_primitive.hpp"
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 ptime_primitive::ptime_primitive(const boost::posix_time::ptime& value)
     : value_(value) { }

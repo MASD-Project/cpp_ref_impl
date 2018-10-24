@@ -18,20 +18,20 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_J_HPP
-#define CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_J_HPP
+#ifndef MASD_CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_J_HPP
+#define MASD_CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_J_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <algorithm>
-#include "cpp_ref_impl/boost_model/types/date_primitive.hpp"
-#include "cpp_ref_impl/boost_model/types/ptime_primitive.hpp"
-#include "cpp_ref_impl/boost_model/serialization/class_j_fwd_ser.hpp"
-#include "cpp_ref_impl/boost_model/types/time_duration_primitive.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/date_primitive.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/ptime_primitive.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/class_j_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/time_duration_primitive.hpp"
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 class class_j final {
 public:
@@ -42,32 +42,32 @@ public:
 
 public:
     class_j(
-        const cpp_ref_impl::boost_model::ptime_primitive& prop_0,
-        const cpp_ref_impl::boost_model::time_duration_primitive& prop_1,
-        const cpp_ref_impl::boost_model::date_primitive& prop_2);
+        const masd::cpp_ref_impl::boost_model::ptime_primitive& prop_0,
+        const masd::cpp_ref_impl::boost_model::time_duration_primitive& prop_1,
+        const masd::cpp_ref_impl::boost_model::date_primitive& prop_2);
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::boost_model::class_j& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::boost_model::class_j& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::boost_model::class_j& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::boost_model::class_j& v, unsigned int version);
 
 public:
-    const cpp_ref_impl::boost_model::ptime_primitive& prop_0() const;
-    cpp_ref_impl::boost_model::ptime_primitive& prop_0();
-    void prop_0(const cpp_ref_impl::boost_model::ptime_primitive& v);
-    void prop_0(const cpp_ref_impl::boost_model::ptime_primitive&& v);
+    const masd::cpp_ref_impl::boost_model::ptime_primitive& prop_0() const;
+    masd::cpp_ref_impl::boost_model::ptime_primitive& prop_0();
+    void prop_0(const masd::cpp_ref_impl::boost_model::ptime_primitive& v);
+    void prop_0(const masd::cpp_ref_impl::boost_model::ptime_primitive&& v);
 
-    const cpp_ref_impl::boost_model::time_duration_primitive& prop_1() const;
-    cpp_ref_impl::boost_model::time_duration_primitive& prop_1();
-    void prop_1(const cpp_ref_impl::boost_model::time_duration_primitive& v);
-    void prop_1(const cpp_ref_impl::boost_model::time_duration_primitive&& v);
+    const masd::cpp_ref_impl::boost_model::time_duration_primitive& prop_1() const;
+    masd::cpp_ref_impl::boost_model::time_duration_primitive& prop_1();
+    void prop_1(const masd::cpp_ref_impl::boost_model::time_duration_primitive& v);
+    void prop_1(const masd::cpp_ref_impl::boost_model::time_duration_primitive&& v);
 
-    const cpp_ref_impl::boost_model::date_primitive& prop_2() const;
-    cpp_ref_impl::boost_model::date_primitive& prop_2();
-    void prop_2(const cpp_ref_impl::boost_model::date_primitive& v);
-    void prop_2(const cpp_ref_impl::boost_model::date_primitive&& v);
+    const masd::cpp_ref_impl::boost_model::date_primitive& prop_2() const;
+    masd::cpp_ref_impl::boost_model::date_primitive& prop_2();
+    void prop_2(const masd::cpp_ref_impl::boost_model::date_primitive& v);
+    void prop_2(const masd::cpp_ref_impl::boost_model::date_primitive&& v);
 
 public:
     bool operator==(const class_j& rhs) const;
@@ -80,9 +80,9 @@ public:
     class_j& operator=(class_j other);
 
 private:
-    cpp_ref_impl::boost_model::ptime_primitive prop_0_;
-    cpp_ref_impl::boost_model::time_duration_primitive prop_1_;
-    cpp_ref_impl::boost_model::date_primitive prop_2_;
+    masd::cpp_ref_impl::boost_model::ptime_primitive prop_0_;
+    masd::cpp_ref_impl::boost_model::time_duration_primitive prop_1_;
+    masd::cpp_ref_impl::boost_model::date_primitive prop_2_;
 };
 
 }
@@ -91,8 +91,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::boost_model::class_j& lhs,
-    cpp_ref_impl::boost_model::class_j& rhs) {
+    masd::cpp_ref_impl::boost_model::class_j& lhs,
+    masd::cpp_ref_impl::boost_model::class_j& rhs) {
     lhs.swap(rhs);
 }
 

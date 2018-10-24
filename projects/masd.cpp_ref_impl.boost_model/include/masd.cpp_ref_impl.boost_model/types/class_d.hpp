@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_D_HPP
-#define CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_D_HPP
+#ifndef MASD_CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_D_HPP
+#define MASD_CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_D_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -28,11 +28,11 @@
 #include <vector>
 #include <algorithm>
 #include <boost/optional.hpp>
-#include "cpp_ref_impl/boost_model/types/class_a.hpp"
-#include "cpp_ref_impl/boost_model/types/pkg1/class_c.hpp"
-#include "cpp_ref_impl/boost_model/serialization/class_d_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/class_a.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/pkg1/class_c.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/class_d_fwd_ser.hpp"
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 class class_d final {
 public:
@@ -46,16 +46,16 @@ public:
 public:
     class_d(
         const boost::optional<int>& prop_0,
-        const boost::optional<cpp_ref_impl::boost_model::class_a>& prop_1,
-        const boost::optional<cpp_ref_impl::boost_model::pkg1::class_c>& prop_2,
-        const boost::optional<std::vector<cpp_ref_impl::boost_model::class_a> >& prop_3);
+        const boost::optional<masd::cpp_ref_impl::boost_model::class_a>& prop_1,
+        const boost::optional<masd::cpp_ref_impl::boost_model::pkg1::class_c>& prop_2,
+        const boost::optional<std::vector<masd::cpp_ref_impl::boost_model::class_a> >& prop_3);
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::boost_model::class_d& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::boost_model::class_d& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::boost_model::class_d& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::boost_model::class_d& v, unsigned int version);
 
 public:
     const boost::optional<int>& prop_0() const;
@@ -63,20 +63,20 @@ public:
     void prop_0(const boost::optional<int>& v);
     void prop_0(const boost::optional<int>&& v);
 
-    const boost::optional<cpp_ref_impl::boost_model::class_a>& prop_1() const;
-    boost::optional<cpp_ref_impl::boost_model::class_a>& prop_1();
-    void prop_1(const boost::optional<cpp_ref_impl::boost_model::class_a>& v);
-    void prop_1(const boost::optional<cpp_ref_impl::boost_model::class_a>&& v);
+    const boost::optional<masd::cpp_ref_impl::boost_model::class_a>& prop_1() const;
+    boost::optional<masd::cpp_ref_impl::boost_model::class_a>& prop_1();
+    void prop_1(const boost::optional<masd::cpp_ref_impl::boost_model::class_a>& v);
+    void prop_1(const boost::optional<masd::cpp_ref_impl::boost_model::class_a>&& v);
 
-    const boost::optional<cpp_ref_impl::boost_model::pkg1::class_c>& prop_2() const;
-    boost::optional<cpp_ref_impl::boost_model::pkg1::class_c>& prop_2();
-    void prop_2(const boost::optional<cpp_ref_impl::boost_model::pkg1::class_c>& v);
-    void prop_2(const boost::optional<cpp_ref_impl::boost_model::pkg1::class_c>&& v);
+    const boost::optional<masd::cpp_ref_impl::boost_model::pkg1::class_c>& prop_2() const;
+    boost::optional<masd::cpp_ref_impl::boost_model::pkg1::class_c>& prop_2();
+    void prop_2(const boost::optional<masd::cpp_ref_impl::boost_model::pkg1::class_c>& v);
+    void prop_2(const boost::optional<masd::cpp_ref_impl::boost_model::pkg1::class_c>&& v);
 
-    const boost::optional<std::vector<cpp_ref_impl::boost_model::class_a> >& prop_3() const;
-    boost::optional<std::vector<cpp_ref_impl::boost_model::class_a> >& prop_3();
-    void prop_3(const boost::optional<std::vector<cpp_ref_impl::boost_model::class_a> >& v);
-    void prop_3(const boost::optional<std::vector<cpp_ref_impl::boost_model::class_a> >&& v);
+    const boost::optional<std::vector<masd::cpp_ref_impl::boost_model::class_a> >& prop_3() const;
+    boost::optional<std::vector<masd::cpp_ref_impl::boost_model::class_a> >& prop_3();
+    void prop_3(const boost::optional<std::vector<masd::cpp_ref_impl::boost_model::class_a> >& v);
+    void prop_3(const boost::optional<std::vector<masd::cpp_ref_impl::boost_model::class_a> >&& v);
 
 public:
     bool operator==(const class_d& rhs) const;
@@ -90,9 +90,9 @@ public:
 
 private:
     boost::optional<int> prop_0_;
-    boost::optional<cpp_ref_impl::boost_model::class_a> prop_1_;
-    boost::optional<cpp_ref_impl::boost_model::pkg1::class_c> prop_2_;
-    boost::optional<std::vector<cpp_ref_impl::boost_model::class_a> > prop_3_;
+    boost::optional<masd::cpp_ref_impl::boost_model::class_a> prop_1_;
+    boost::optional<masd::cpp_ref_impl::boost_model::pkg1::class_c> prop_2_;
+    boost::optional<std::vector<masd::cpp_ref_impl::boost_model::class_a> > prop_3_;
 };
 
 }
@@ -101,8 +101,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::boost_model::class_d& lhs,
-    cpp_ref_impl::boost_model::class_d& rhs) {
+    masd::cpp_ref_impl::boost_model::class_d& lhs,
+    masd::cpp_ref_impl::boost_model::class_d& rhs) {
     lhs.swap(rhs);
 }
 

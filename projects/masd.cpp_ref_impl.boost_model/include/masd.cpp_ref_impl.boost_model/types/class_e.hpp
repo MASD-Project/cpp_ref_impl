@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_E_HPP
-#define CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_E_HPP
+#ifndef MASD_CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_E_HPP
+#define MASD_CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_E_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -29,10 +29,10 @@
 #include <vector>
 #include <algorithm>
 #include <boost/variant.hpp>
-#include "cpp_ref_impl/boost_model/types/class_derived.hpp"
-#include "cpp_ref_impl/boost_model/serialization/class_e_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/class_derived.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/class_e_fwd_ser.hpp"
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 class class_e final {
 public:
@@ -46,16 +46,16 @@ public:
 public:
     class_e(
         const boost::variant<int, double>& prop_0,
-        const boost::variant<int, cpp_ref_impl::boost_model::class_derived, double>& prop_1,
-        const std::vector<boost::variant<int, cpp_ref_impl::boost_model::class_derived, double> >& prop_2,
+        const boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double>& prop_1,
+        const std::vector<boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double> >& prop_2,
         const boost::variant<int, std::string, char>& prop_3);
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::boost_model::class_e& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::boost_model::class_e& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::boost_model::class_e& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::boost_model::class_e& v, unsigned int version);
 
 public:
     const boost::variant<int, double>& prop_0() const;
@@ -63,15 +63,15 @@ public:
     void prop_0(const boost::variant<int, double>& v);
     void prop_0(const boost::variant<int, double>&& v);
 
-    const boost::variant<int, cpp_ref_impl::boost_model::class_derived, double>& prop_1() const;
-    boost::variant<int, cpp_ref_impl::boost_model::class_derived, double>& prop_1();
-    void prop_1(const boost::variant<int, cpp_ref_impl::boost_model::class_derived, double>& v);
-    void prop_1(const boost::variant<int, cpp_ref_impl::boost_model::class_derived, double>&& v);
+    const boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double>& prop_1() const;
+    boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double>& prop_1();
+    void prop_1(const boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double>& v);
+    void prop_1(const boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double>&& v);
 
-    const std::vector<boost::variant<int, cpp_ref_impl::boost_model::class_derived, double> >& prop_2() const;
-    std::vector<boost::variant<int, cpp_ref_impl::boost_model::class_derived, double> >& prop_2();
-    void prop_2(const std::vector<boost::variant<int, cpp_ref_impl::boost_model::class_derived, double> >& v);
-    void prop_2(const std::vector<boost::variant<int, cpp_ref_impl::boost_model::class_derived, double> >&& v);
+    const std::vector<boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double> >& prop_2() const;
+    std::vector<boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double> >& prop_2();
+    void prop_2(const std::vector<boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double> >& v);
+    void prop_2(const std::vector<boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double> >&& v);
 
     const boost::variant<int, std::string, char>& prop_3() const;
     boost::variant<int, std::string, char>& prop_3();
@@ -90,8 +90,8 @@ public:
 
 private:
     boost::variant<int, double> prop_0_;
-    boost::variant<int, cpp_ref_impl::boost_model::class_derived, double> prop_1_;
-    std::vector<boost::variant<int, cpp_ref_impl::boost_model::class_derived, double> > prop_2_;
+    boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double> prop_1_;
+    std::vector<boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double> > prop_2_;
     boost::variant<int, std::string, char> prop_3_;
 };
 
@@ -101,8 +101,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::boost_model::class_e& lhs,
-    cpp_ref_impl::boost_model::class_e& rhs) {
+    masd::cpp_ref_impl::boost_model::class_e& lhs,
+    masd::cpp_ref_impl::boost_model::class_e& rhs) {
     lhs.swap(rhs);
 }
 

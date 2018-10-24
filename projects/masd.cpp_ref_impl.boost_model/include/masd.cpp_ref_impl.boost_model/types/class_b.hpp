@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_B_HPP
-#define CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_B_HPP
+#ifndef MASD_CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_B_HPP
+#define MASD_CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_B_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -29,12 +29,12 @@
 #include <algorithm>
 #include <unordered_map>
 #include <boost/shared_ptr.hpp>
-#include "cpp_ref_impl/boost_model/types/class_a_fwd.hpp"
-#include "cpp_ref_impl/boost_model/types/pkg1/class_c.hpp"
-#include "cpp_ref_impl/boost_model/types/class_base_fwd.hpp"
-#include "cpp_ref_impl/boost_model/serialization/class_b_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/class_a_fwd.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/pkg1/class_c.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/class_base_fwd.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/class_b_fwd_ser.hpp"
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 class class_b final {
 public:
@@ -45,56 +45,56 @@ public:
 
 public:
     class_b(
-        const boost::shared_ptr<cpp_ref_impl::boost_model::class_a>& prop_0,
-        const std::vector<boost::shared_ptr<cpp_ref_impl::boost_model::class_a> >& prop_1,
-        const std::unordered_map<int, boost::shared_ptr<cpp_ref_impl::boost_model::class_a> >& prop_2,
-        const boost::shared_ptr<cpp_ref_impl::boost_model::pkg1::class_c>& prop_3,
-        const boost::shared_ptr<cpp_ref_impl::boost_model::class_base>& prop_4,
-        const std::vector<boost::shared_ptr<cpp_ref_impl::boost_model::class_base> >& prop_5,
-        const cpp_ref_impl::boost_model::pkg1::class_c& prop_6);
+        const boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a>& prop_0,
+        const std::vector<boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a> >& prop_1,
+        const std::unordered_map<int, boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a> >& prop_2,
+        const boost::shared_ptr<masd::cpp_ref_impl::boost_model::pkg1::class_c>& prop_3,
+        const boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_base>& prop_4,
+        const std::vector<boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_base> >& prop_5,
+        const masd::cpp_ref_impl::boost_model::pkg1::class_c& prop_6);
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::boost_model::class_b& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::boost_model::class_b& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::boost_model::class_b& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::boost_model::class_b& v, unsigned int version);
 
 public:
-    const boost::shared_ptr<cpp_ref_impl::boost_model::class_a>& prop_0() const;
-    boost::shared_ptr<cpp_ref_impl::boost_model::class_a>& prop_0();
-    void prop_0(const boost::shared_ptr<cpp_ref_impl::boost_model::class_a>& v);
-    void prop_0(const boost::shared_ptr<cpp_ref_impl::boost_model::class_a>&& v);
+    const boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a>& prop_0() const;
+    boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a>& prop_0();
+    void prop_0(const boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a>& v);
+    void prop_0(const boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a>&& v);
 
-    const std::vector<boost::shared_ptr<cpp_ref_impl::boost_model::class_a> >& prop_1() const;
-    std::vector<boost::shared_ptr<cpp_ref_impl::boost_model::class_a> >& prop_1();
-    void prop_1(const std::vector<boost::shared_ptr<cpp_ref_impl::boost_model::class_a> >& v);
-    void prop_1(const std::vector<boost::shared_ptr<cpp_ref_impl::boost_model::class_a> >&& v);
+    const std::vector<boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a> >& prop_1() const;
+    std::vector<boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a> >& prop_1();
+    void prop_1(const std::vector<boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a> >& v);
+    void prop_1(const std::vector<boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a> >&& v);
 
-    const std::unordered_map<int, boost::shared_ptr<cpp_ref_impl::boost_model::class_a> >& prop_2() const;
-    std::unordered_map<int, boost::shared_ptr<cpp_ref_impl::boost_model::class_a> >& prop_2();
-    void prop_2(const std::unordered_map<int, boost::shared_ptr<cpp_ref_impl::boost_model::class_a> >& v);
-    void prop_2(const std::unordered_map<int, boost::shared_ptr<cpp_ref_impl::boost_model::class_a> >&& v);
+    const std::unordered_map<int, boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a> >& prop_2() const;
+    std::unordered_map<int, boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a> >& prop_2();
+    void prop_2(const std::unordered_map<int, boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a> >& v);
+    void prop_2(const std::unordered_map<int, boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a> >&& v);
 
-    const boost::shared_ptr<cpp_ref_impl::boost_model::pkg1::class_c>& prop_3() const;
-    boost::shared_ptr<cpp_ref_impl::boost_model::pkg1::class_c>& prop_3();
-    void prop_3(const boost::shared_ptr<cpp_ref_impl::boost_model::pkg1::class_c>& v);
-    void prop_3(const boost::shared_ptr<cpp_ref_impl::boost_model::pkg1::class_c>&& v);
+    const boost::shared_ptr<masd::cpp_ref_impl::boost_model::pkg1::class_c>& prop_3() const;
+    boost::shared_ptr<masd::cpp_ref_impl::boost_model::pkg1::class_c>& prop_3();
+    void prop_3(const boost::shared_ptr<masd::cpp_ref_impl::boost_model::pkg1::class_c>& v);
+    void prop_3(const boost::shared_ptr<masd::cpp_ref_impl::boost_model::pkg1::class_c>&& v);
 
-    const boost::shared_ptr<cpp_ref_impl::boost_model::class_base>& prop_4() const;
-    boost::shared_ptr<cpp_ref_impl::boost_model::class_base>& prop_4();
-    void prop_4(const boost::shared_ptr<cpp_ref_impl::boost_model::class_base>& v);
-    void prop_4(const boost::shared_ptr<cpp_ref_impl::boost_model::class_base>&& v);
+    const boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_base>& prop_4() const;
+    boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_base>& prop_4();
+    void prop_4(const boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_base>& v);
+    void prop_4(const boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_base>&& v);
 
-    const std::vector<boost::shared_ptr<cpp_ref_impl::boost_model::class_base> >& prop_5() const;
-    std::vector<boost::shared_ptr<cpp_ref_impl::boost_model::class_base> >& prop_5();
-    void prop_5(const std::vector<boost::shared_ptr<cpp_ref_impl::boost_model::class_base> >& v);
-    void prop_5(const std::vector<boost::shared_ptr<cpp_ref_impl::boost_model::class_base> >&& v);
+    const std::vector<boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_base> >& prop_5() const;
+    std::vector<boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_base> >& prop_5();
+    void prop_5(const std::vector<boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_base> >& v);
+    void prop_5(const std::vector<boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_base> >&& v);
 
-    const cpp_ref_impl::boost_model::pkg1::class_c& prop_6() const;
-    cpp_ref_impl::boost_model::pkg1::class_c& prop_6();
-    void prop_6(const cpp_ref_impl::boost_model::pkg1::class_c& v);
-    void prop_6(const cpp_ref_impl::boost_model::pkg1::class_c&& v);
+    const masd::cpp_ref_impl::boost_model::pkg1::class_c& prop_6() const;
+    masd::cpp_ref_impl::boost_model::pkg1::class_c& prop_6();
+    void prop_6(const masd::cpp_ref_impl::boost_model::pkg1::class_c& v);
+    void prop_6(const masd::cpp_ref_impl::boost_model::pkg1::class_c&& v);
 
 public:
     bool operator==(const class_b& rhs) const;
@@ -107,13 +107,13 @@ public:
     class_b& operator=(class_b other);
 
 private:
-    boost::shared_ptr<cpp_ref_impl::boost_model::class_a> prop_0_;
-    std::vector<boost::shared_ptr<cpp_ref_impl::boost_model::class_a> > prop_1_;
-    std::unordered_map<int, boost::shared_ptr<cpp_ref_impl::boost_model::class_a> > prop_2_;
-    boost::shared_ptr<cpp_ref_impl::boost_model::pkg1::class_c> prop_3_;
-    boost::shared_ptr<cpp_ref_impl::boost_model::class_base> prop_4_;
-    std::vector<boost::shared_ptr<cpp_ref_impl::boost_model::class_base> > prop_5_;
-    cpp_ref_impl::boost_model::pkg1::class_c prop_6_;
+    boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a> prop_0_;
+    std::vector<boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a> > prop_1_;
+    std::unordered_map<int, boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a> > prop_2_;
+    boost::shared_ptr<masd::cpp_ref_impl::boost_model::pkg1::class_c> prop_3_;
+    boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_base> prop_4_;
+    std::vector<boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_base> > prop_5_;
+    masd::cpp_ref_impl::boost_model::pkg1::class_c prop_6_;
 };
 
 }
@@ -122,8 +122,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::boost_model::class_b& lhs,
-    cpp_ref_impl::boost_model::class_b& rhs) {
+    masd::cpp_ref_impl::boost_model::class_b& lhs,
+    masd::cpp_ref_impl::boost_model::class_b& rhs) {
     lhs.swap(rhs);
 }
 

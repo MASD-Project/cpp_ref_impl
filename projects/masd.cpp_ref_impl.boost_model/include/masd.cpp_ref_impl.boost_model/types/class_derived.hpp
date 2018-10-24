@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_DERIVED_HPP
-#define CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_DERIVED_HPP
+#ifndef MASD_CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_DERIVED_HPP
+#define MASD_CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_DERIVED_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -27,12 +27,12 @@
 
 #include <iosfwd>
 #include <algorithm>
-#include "cpp_ref_impl/boost_model/types/class_base.hpp"
-#include "cpp_ref_impl/boost_model/serialization/class_derived_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/class_base.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/class_derived_fwd_ser.hpp"
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
-class class_derived final : public cpp_ref_impl::boost_model::class_base {
+class class_derived final : public masd::cpp_ref_impl::boost_model::class_base {
 public:
     class_derived(const class_derived&) = default;
     class_derived(class_derived&&) = default;
@@ -49,10 +49,10 @@ public:
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::boost_model::class_derived& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::boost_model::class_derived& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::boost_model::class_derived& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::boost_model::class_derived& v, unsigned int version);
 
 public:
     void to_stream(std::ostream& s) const override;
@@ -68,7 +68,7 @@ public:
     }
 
 public:
-    bool equals(const cpp_ref_impl::boost_model::class_base& other) const override;
+    bool equals(const masd::cpp_ref_impl::boost_model::class_base& other) const override;
 
 public:
     void swap(class_derived& other) noexcept;
@@ -84,8 +84,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::boost_model::class_derived& lhs,
-    cpp_ref_impl::boost_model::class_derived& rhs) {
+    masd::cpp_ref_impl::boost_model::class_derived& lhs,
+    masd::cpp_ref_impl::boost_model::class_derived& rhs) {
     lhs.swap(rhs);
 }
 

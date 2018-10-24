@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/boost_model/hash/class_h_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/class_h_hash.hpp"
 
 namespace {
 
@@ -41,7 +41,7 @@ inline std::size_t hash_boost_property_tree_ptree(const boost::property_tree::pt
 
 }
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 std::size_t class_h_hasher::hash(const class_h& v) {
     std::size_t seed(0);

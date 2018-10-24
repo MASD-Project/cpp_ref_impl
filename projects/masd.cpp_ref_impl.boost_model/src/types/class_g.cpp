@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/boost_model/types/class_g.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/class_g.hpp"
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 class_g::class_g(class_g&& rhs)
     : prop_0_(std::move(rhs.prop_0_)),

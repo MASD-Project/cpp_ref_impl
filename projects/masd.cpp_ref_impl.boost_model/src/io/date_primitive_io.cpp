@@ -20,14 +20,14 @@
  */
 #include <ostream>
 #include <boost/date_time/gregorian/gregorian.hpp>
-#include "cpp_ref_impl/boost_model/io/date_primitive_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/date_primitive_io.hpp"
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 std::ostream& operator<<(std::ostream& s, const date_primitive& v) {
 
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::boost_model::date_primitive\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::boost_model::date_primitive\"" << ", "
       << "\"value\": " << "\"" << v.value() << "\""
       << " }";
 

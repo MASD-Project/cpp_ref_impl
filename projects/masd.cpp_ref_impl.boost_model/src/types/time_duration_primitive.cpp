@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/boost_model/types/time_duration_primitive.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/time_duration_primitive.hpp"
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 time_duration_primitive::time_duration_primitive(const boost::posix_time::time_duration& value)
     : value_(value) { }

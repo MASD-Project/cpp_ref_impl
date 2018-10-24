@@ -20,14 +20,14 @@
  */
 #include <ostream>
 #include <boost/date_time/posix_time/posix_time.hpp>
-#include "cpp_ref_impl/boost_model/io/time_duration_primitive_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/time_duration_primitive_io.hpp"
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 std::ostream& operator<<(std::ostream& s, const time_duration_primitive& v) {
 
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::boost_model::time_duration_primitive\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::boost_model::time_duration_primitive\"" << ", "
       << "\"value\": " << "\"" << v.value() << "\""
       << " }";
 

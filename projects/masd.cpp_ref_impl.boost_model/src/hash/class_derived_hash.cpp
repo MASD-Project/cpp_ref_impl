@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/boost_model/hash/class_base_hash.hpp"
-#include "cpp_ref_impl/boost_model/hash/class_derived_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/class_base_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/class_derived_hash.hpp"
 
 namespace {
 
@@ -31,12 +31,12 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 std::size_t class_derived_hasher::hash(const class_derived& v) {
     std::size_t seed(0);
 
-    combine(seed, dynamic_cast<const cpp_ref_impl::boost_model::class_base&>(v));
+    combine(seed, dynamic_cast<const masd::cpp_ref_impl::boost_model::class_base&>(v));
 
     combine(seed, v.prop_1());
     return seed;

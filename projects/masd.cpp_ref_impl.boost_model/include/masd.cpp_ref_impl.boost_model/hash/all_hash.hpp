@@ -18,26 +18,26 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_BOOST_MODEL_HASH_ALL_HASH_HPP
-#define CPP_REF_IMPL_BOOST_MODEL_HASH_ALL_HASH_HPP
+#ifndef MASD_CPP_REF_IMPL_BOOST_MODEL_HASH_ALL_HASH_HPP
+#define MASD_CPP_REF_IMPL_BOOST_MODEL_HASH_ALL_HASH_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/boost_model/hash/class_a_hash.hpp"
-#include "cpp_ref_impl/boost_model/hash/class_b_hash.hpp"
-#include "cpp_ref_impl/boost_model/hash/class_d_hash.hpp"
-#include "cpp_ref_impl/boost_model/hash/class_e_hash.hpp"
-#include "cpp_ref_impl/boost_model/hash/class_f_hash.hpp"
-#include "cpp_ref_impl/boost_model/hash/class_g_hash.hpp"
-#include "cpp_ref_impl/boost_model/hash/class_h_hash.hpp"
-#include "cpp_ref_impl/boost_model/hash/class_j_hash.hpp"
-#include "cpp_ref_impl/boost_model/hash/class_base_hash.hpp"
-#include "cpp_ref_impl/boost_model/hash/pkg1/class_c_hash.hpp"
-#include "cpp_ref_impl/boost_model/hash/class_derived_hash.hpp"
-#include "cpp_ref_impl/boost_model/hash/date_primitive_hash.hpp"
-#include "cpp_ref_impl/boost_model/hash/ptime_primitive_hash.hpp"
-#include "cpp_ref_impl/boost_model/hash/time_duration_primitive_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/class_a_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/class_b_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/class_d_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/class_e_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/class_f_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/class_g_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/class_h_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/class_j_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/class_base_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/pkg1/class_c_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/class_derived_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/date_primitive_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/ptime_primitive_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/time_duration_primitive_hash.hpp"
 
 #endif

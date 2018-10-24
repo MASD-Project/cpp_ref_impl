@@ -26,14 +26,14 @@
 #include <boost/archive/binary_oarchive.hpp>
 #include <boost/archive/polymorphic_iarchive.hpp>
 #include <boost/archive/polymorphic_oarchive.hpp>
-#include "cpp_ref_impl/boost_model/serialization/registrar_ser.hpp"
-#include "cpp_ref_impl/boost_model/serialization/class_derived_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/registrar_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/class_derived_ser.hpp"
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 template<typename Archive>
 void register_types(Archive& ar) {
-    ar.template register_type<cpp_ref_impl::boost_model::class_derived>();
+    ar.template register_type<masd::cpp_ref_impl::boost_model::class_derived>();
 }
 
 template void register_types(boost::archive::polymorphic_oarchive& ar);

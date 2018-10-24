@@ -21,7 +21,7 @@
 #include <ostream>
 #include <boost/date_time/gregorian/gregorian.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
-#include "cpp_ref_impl/boost_model/io/class_f_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/class_f_io.hpp"
 
 namespace std {
 
@@ -65,11 +65,11 @@ inline std::ostream& operator<<(std::ostream& s, const std::list<boost::posix_ti
 
 }
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 std::ostream& operator<<(std::ostream& s, const class_f& v) {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::boost_model::class_f\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::boost_model::class_f\"" << ", "
       << "\"prop_0\": " << "\"" << v.prop_0() << "\"" << ", "
       << "\"prop_1\": " << "\"" << v.prop_1() << "\"" << ", "
       << "\"prop_2\": " << "\"" << v.prop_2() << "\"" << ", "

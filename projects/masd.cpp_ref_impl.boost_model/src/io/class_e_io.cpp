@@ -22,8 +22,8 @@
 #include <boost/io/ios_state.hpp>
 #include <boost/algorithm/string.hpp>
 #include <boost/variant/apply_visitor.hpp>
-#include "cpp_ref_impl/boost_model/io/class_e_io.hpp"
-#include "cpp_ref_impl/boost_model/io/class_derived_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/class_e_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/class_derived_io.hpp"
 
 namespace boost {
 
@@ -62,13 +62,13 @@ inline std::ostream& operator<<(std::ostream& s, const boost::variant<int, doubl
 
 namespace boost {
 
-struct boost_variant_int_cpp_ref_impl_boost_model_class_derived_double_visitor : public boost::static_visitor<> {
-    boost_variant_int_cpp_ref_impl_boost_model_class_derived_double_visitor(std::ostream& s) : stream_(s) {
+struct boost_variant_int_masd_cpp_ref_impl_boost_model_class_derived_double_visitor : public boost::static_visitor<> {
+    boost_variant_int_masd_cpp_ref_impl_boost_model_class_derived_double_visitor(std::ostream& s) : stream_(s) {
         s << "{ " << "\"__type__\": " << "\"boost::variant\"" << ", ";
         s << "\"data\": ";
     }
 
-    ~boost_variant_int_cpp_ref_impl_boost_model_class_derived_double_visitor() { stream_ << " }"; }
+    ~boost_variant_int_masd_cpp_ref_impl_boost_model_class_derived_double_visitor() { stream_ << " }"; }
 
     void operator()(const int v) const {
         stream_ << "{ " << "\"__type__\": " << "\"int\"" << ", ";
@@ -77,7 +77,7 @@ struct boost_variant_int_cpp_ref_impl_boost_model_class_derived_double_visitor :
         stream_ << " }";
     }
 
-    void operator()(const cpp_ref_impl::boost_model::class_derived& v) const {
+    void operator()(const masd::cpp_ref_impl::boost_model::class_derived& v) const {
         stream_ << v;
     }
 
@@ -92,8 +92,8 @@ private:
     std::ostream& stream_;
 };
 
-inline std::ostream& operator<<(std::ostream& s, const boost::variant<int, cpp_ref_impl::boost_model::class_derived, double>& v) {
-    boost::apply_visitor(boost_variant_int_cpp_ref_impl_boost_model_class_derived_double_visitor(s), v);
+inline std::ostream& operator<<(std::ostream& s, const boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double>& v) {
+    boost::apply_visitor(boost_variant_int_masd_cpp_ref_impl_boost_model_class_derived_double_visitor(s), v);
     return s;
 }
 
@@ -101,7 +101,7 @@ inline std::ostream& operator<<(std::ostream& s, const boost::variant<int, cpp_r
 
 namespace std {
 
-inline std::ostream& operator<<(std::ostream& s, const std::vector<boost::variant<int, cpp_ref_impl::boost_model::class_derived, double> >& v) {
+inline std::ostream& operator<<(std::ostream& s, const std::vector<boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double> >& v) {
     s << "[ ";
     for (auto i(v.begin()); i != v.end(); ++i) {
         if (i != v.begin()) s << ", ";
@@ -160,7 +160,7 @@ inline std::ostream& operator<<(std::ostream& s, const boost::variant<int, std::
 
 }
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 std::ostream& operator<<(std::ostream& s, const class_e& v) {
     boost::io::ios_flags_saver ifs(s);
@@ -170,7 +170,7 @@ std::ostream& operator<<(std::ostream& s, const class_e& v) {
     s.setf(std::ios::showpoint);
 
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::boost_model::class_e\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::boost_model::class_e\"" << ", "
       << "\"prop_0\": " << v.prop_0() << ", "
       << "\"prop_1\": " << v.prop_1() << ", "
       << "\"prop_2\": " << v.prop_2() << ", "

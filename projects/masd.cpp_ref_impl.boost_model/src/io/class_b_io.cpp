@@ -19,14 +19,14 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/boost_model/io/class_a_io.hpp"
-#include "cpp_ref_impl/boost_model/io/class_b_io.hpp"
-#include "cpp_ref_impl/boost_model/io/class_base_io.hpp"
-#include "cpp_ref_impl/boost_model/io/pkg1/class_c_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/class_a_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/class_b_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/class_base_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/pkg1/class_c_io.hpp"
 
 namespace boost {
 
-inline std::ostream& operator<<(std::ostream& s, const boost::shared_ptr<cpp_ref_impl::boost_model::class_a>& v) {
+inline std::ostream& operator<<(std::ostream& s, const boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a>& v) {
     s << "{ " << "\"__type__\": " << "\"boost::shared_ptr\"" << ", "
       << "\"memory\": " << "\"" << static_cast<void*>(v.get()) << "\"" << ", ";
 
@@ -42,7 +42,7 @@ inline std::ostream& operator<<(std::ostream& s, const boost::shared_ptr<cpp_ref
 
 namespace std {
 
-inline std::ostream& operator<<(std::ostream& s, const std::vector<boost::shared_ptr<cpp_ref_impl::boost_model::class_a> >& v) {
+inline std::ostream& operator<<(std::ostream& s, const std::vector<boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a> >& v) {
     s << "[ ";
     for (auto i(v.begin()); i != v.end(); ++i) {
         if (i != v.begin()) s << ", ";
@@ -56,7 +56,7 @@ inline std::ostream& operator<<(std::ostream& s, const std::vector<boost::shared
 
 namespace std {
 
-inline std::ostream& operator<<(std::ostream& s, const std::unordered_map<int, boost::shared_ptr<cpp_ref_impl::boost_model::class_a> >& v) {
+inline std::ostream& operator<<(std::ostream& s, const std::unordered_map<int, boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_a> >& v) {
     s << "[";
     for (auto i(v.begin()); i != v.end(); ++i) {
         if (i != v.begin()) s << ", ";
@@ -74,7 +74,7 @@ inline std::ostream& operator<<(std::ostream& s, const std::unordered_map<int, b
 
 namespace boost {
 
-inline std::ostream& operator<<(std::ostream& s, const boost::shared_ptr<cpp_ref_impl::boost_model::pkg1::class_c>& v) {
+inline std::ostream& operator<<(std::ostream& s, const boost::shared_ptr<masd::cpp_ref_impl::boost_model::pkg1::class_c>& v) {
     s << "{ " << "\"__type__\": " << "\"boost::shared_ptr\"" << ", "
       << "\"memory\": " << "\"" << static_cast<void*>(v.get()) << "\"" << ", ";
 
@@ -90,7 +90,7 @@ inline std::ostream& operator<<(std::ostream& s, const boost::shared_ptr<cpp_ref
 
 namespace boost {
 
-inline std::ostream& operator<<(std::ostream& s, const boost::shared_ptr<cpp_ref_impl::boost_model::class_base>& v) {
+inline std::ostream& operator<<(std::ostream& s, const boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_base>& v) {
     s << "{ " << "\"__type__\": " << "\"boost::shared_ptr\"" << ", "
       << "\"memory\": " << "\"" << static_cast<void*>(v.get()) << "\"" << ", ";
 
@@ -106,7 +106,7 @@ inline std::ostream& operator<<(std::ostream& s, const boost::shared_ptr<cpp_ref
 
 namespace std {
 
-inline std::ostream& operator<<(std::ostream& s, const std::vector<boost::shared_ptr<cpp_ref_impl::boost_model::class_base> >& v) {
+inline std::ostream& operator<<(std::ostream& s, const std::vector<boost::shared_ptr<masd::cpp_ref_impl::boost_model::class_base> >& v) {
     s << "[ ";
     for (auto i(v.begin()); i != v.end(); ++i) {
         if (i != v.begin()) s << ", ";
@@ -118,11 +118,11 @@ inline std::ostream& operator<<(std::ostream& s, const std::vector<boost::shared
 
 }
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 std::ostream& operator<<(std::ostream& s, const class_b& v) {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::boost_model::class_b\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::boost_model::class_b\"" << ", "
       << "\"prop_0\": " << v.prop_0() << ", "
       << "\"prop_1\": " << v.prop_1() << ", "
       << "\"prop_2\": " << v.prop_2() << ", "

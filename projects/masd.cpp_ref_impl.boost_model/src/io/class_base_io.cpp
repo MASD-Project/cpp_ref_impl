@@ -19,9 +19,9 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/boost_model/io/class_base_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/class_base_io.hpp"
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 std::ostream& operator<<(std::ostream& s, const class_base& v) {
     v.to_stream(s);

@@ -19,8 +19,8 @@
  *
  */
 #include <boost/variant/apply_visitor.hpp>
-#include "cpp_ref_impl/boost_model/hash/class_e_hash.hpp"
-#include "cpp_ref_impl/boost_model/hash/class_derived_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/class_e_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/class_derived_hash.hpp"
 
 namespace {
 
@@ -49,13 +49,13 @@ inline std::size_t hash_boost_variant_int_double(const boost::variant<int, doubl
     return vis.hash;
 }
 
-struct boost_variant_int_cpp_ref_impl_boost_model_class_derived_double_visitor : public boost::static_visitor<> {
-    boost_variant_int_cpp_ref_impl_boost_model_class_derived_double_visitor() : hash(0) {}
+struct boost_variant_int_masd_cpp_ref_impl_boost_model_class_derived_double_visitor : public boost::static_visitor<> {
+    boost_variant_int_masd_cpp_ref_impl_boost_model_class_derived_double_visitor() : hash(0) {}
     void operator()(const int v) const {
         combine(hash, v);
     }
 
-    void operator()(const cpp_ref_impl::boost_model::class_derived& v) const {
+    void operator()(const masd::cpp_ref_impl::boost_model::class_derived& v) const {
         combine(hash, v);
     }
 
@@ -66,16 +66,16 @@ struct boost_variant_int_cpp_ref_impl_boost_model_class_derived_double_visitor :
     mutable std::size_t hash;
 };
 
-inline std::size_t hash_boost_variant_int_cpp_ref_impl_boost_model_class_derived_double(const boost::variant<int, cpp_ref_impl::boost_model::class_derived, double>& v) {
-    boost_variant_int_cpp_ref_impl_boost_model_class_derived_double_visitor vis;
+inline std::size_t hash_boost_variant_int_masd_cpp_ref_impl_boost_model_class_derived_double(const boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double>& v) {
+    boost_variant_int_masd_cpp_ref_impl_boost_model_class_derived_double_visitor vis;
     boost::apply_visitor(vis, v);
     return vis.hash;
 }
 
-inline std::size_t hash_std_vector_boost_variant_int_cpp_ref_impl_boost_model_class_derived_double(const std::vector<boost::variant<int, cpp_ref_impl::boost_model::class_derived, double> >& v) {
+inline std::size_t hash_std_vector_boost_variant_int_masd_cpp_ref_impl_boost_model_class_derived_double(const std::vector<boost::variant<int, masd::cpp_ref_impl::boost_model::class_derived, double> >& v) {
     std::size_t seed(0);
     for (const auto i : v) {
-        combine(seed, hash_boost_variant_int_cpp_ref_impl_boost_model_class_derived_double(i));
+        combine(seed, hash_boost_variant_int_masd_cpp_ref_impl_boost_model_class_derived_double(i));
     }
     return seed;
 }
@@ -105,14 +105,14 @@ inline std::size_t hash_boost_variant_int_std_string_char(const boost::variant<i
 
 }
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 std::size_t class_e_hasher::hash(const class_e& v) {
     std::size_t seed(0);
 
     combine(seed, hash_boost_variant_int_double(v.prop_0()));
-    combine(seed, hash_boost_variant_int_cpp_ref_impl_boost_model_class_derived_double(v.prop_1()));
-    combine(seed, hash_std_vector_boost_variant_int_cpp_ref_impl_boost_model_class_derived_double(v.prop_2()));
+    combine(seed, hash_boost_variant_int_masd_cpp_ref_impl_boost_model_class_derived_double(v.prop_1()));
+    combine(seed, hash_std_vector_boost_variant_int_masd_cpp_ref_impl_boost_model_class_derived_double(v.prop_2()));
     combine(seed, hash_boost_variant_int_std_string_char(v.prop_3()));
 
     return seed;

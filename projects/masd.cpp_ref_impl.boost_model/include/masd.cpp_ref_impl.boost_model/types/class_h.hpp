@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_H_HPP
-#define CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_H_HPP
+#ifndef MASD_CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_H_HPP
+#define MASD_CPP_REF_IMPL_BOOST_MODEL_TYPES_CLASS_H_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -27,9 +27,9 @@
 
 #include <algorithm>
 #include <boost/property_tree/ptree.hpp>
-#include "cpp_ref_impl/boost_model/serialization/class_h_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.boost_model/serialization/class_h_fwd_ser.hpp"
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 class class_h final {
 public:
@@ -45,10 +45,10 @@ public:
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::boost_model::class_h& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::boost_model::class_h& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::boost_model::class_h& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::boost_model::class_h& v, unsigned int version);
 
 public:
     const boost::property_tree::ptree& prop_0() const;
@@ -76,8 +76,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::boost_model::class_h& lhs,
-    cpp_ref_impl::boost_model::class_h& rhs) {
+    masd::cpp_ref_impl::boost_model::class_h& lhs,
+    masd::cpp_ref_impl::boost_model::class_h& rhs) {
     lhs.swap(rhs);
 }
 

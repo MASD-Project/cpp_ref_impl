@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/boost_model/types/date_primitive.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/date_primitive.hpp"
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 date_primitive::date_primitive(const boost::gregorian::date& value)
     : value_(value) { }

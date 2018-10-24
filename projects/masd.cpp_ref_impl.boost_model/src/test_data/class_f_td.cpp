@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/boost_model/test_data/class_f_td.hpp"
+#include "masd.cpp_ref_impl.boost_model/test_data/class_f_td.hpp"
 
 namespace {
 
@@ -74,7 +74,7 @@ std::list<boost::posix_time::time_duration> create_std_list_boost_posix_time_tim
 
 }
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 class_f_generator::class_f_generator() : position_(0) { }
 

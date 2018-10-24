@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/boost_model/test_data/ptime_primitive_td.hpp"
+#include "masd.cpp_ref_impl.boost_model/test_data/ptime_primitive_td.hpp"
 
 namespace {
 
@@ -35,7 +35,7 @@ create_boost_posix_time_ptime(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 ptime_primitive_generator::ptime_primitive_generator() : position_(0) { }
 

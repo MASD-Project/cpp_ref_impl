@@ -19,7 +19,7 @@
  *
  */
 #include <sstream>
-#include "cpp_ref_impl/boost_model/test_data/class_g_td.hpp"
+#include "masd.cpp_ref_impl.boost_model/test_data/class_g_td.hpp"
 
 namespace {
 
@@ -40,7 +40,7 @@ std::list<boost::filesystem::path> create_std_list_boost_filesystem_path(unsigne
 
 }
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 class_g_generator::class_g_generator() : position_(0) { }
 

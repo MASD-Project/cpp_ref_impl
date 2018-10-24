@@ -18,10 +18,10 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/boost_model/hash/class_j_hash.hpp"
-#include "cpp_ref_impl/boost_model/hash/date_primitive_hash.hpp"
-#include "cpp_ref_impl/boost_model/hash/ptime_primitive_hash.hpp"
-#include "cpp_ref_impl/boost_model/hash/time_duration_primitive_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/class_j_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/date_primitive_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/ptime_primitive_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/time_duration_primitive_hash.hpp"
 
 namespace {
 
@@ -33,7 +33,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 std::size_t class_j_hasher::hash(const class_j& v) {
     std::size_t seed(0);

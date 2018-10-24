@@ -18,16 +18,16 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/boost_model/types/pkg1/class_c.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/pkg1/class_c.hpp"
 
-namespace cpp_ref_impl::boost_model::pkg1 {
+namespace masd::cpp_ref_impl::boost_model::pkg1 {
 
 class_c::class_c()
     : prop_0_(static_cast<int>(0)) { }
 
 class_c::class_c(
     const int prop_0,
-    const std::vector<cpp_ref_impl::boost_model::class_a>& prop_1)
+    const std::vector<masd::cpp_ref_impl::boost_model::class_a>& prop_1)
     : prop_0_(prop_0),
       prop_1_(prop_1) { }
 
@@ -56,19 +56,19 @@ void class_c::prop_0(const int v) {
     prop_0_ = v;
 }
 
-const std::vector<cpp_ref_impl::boost_model::class_a>& class_c::prop_1() const {
+const std::vector<masd::cpp_ref_impl::boost_model::class_a>& class_c::prop_1() const {
     return prop_1_;
 }
 
-std::vector<cpp_ref_impl::boost_model::class_a>& class_c::prop_1() {
+std::vector<masd::cpp_ref_impl::boost_model::class_a>& class_c::prop_1() {
     return prop_1_;
 }
 
-void class_c::prop_1(const std::vector<cpp_ref_impl::boost_model::class_a>& v) {
+void class_c::prop_1(const std::vector<masd::cpp_ref_impl::boost_model::class_a>& v) {
     prop_1_ = v;
 }
 
-void class_c::prop_1(const std::vector<cpp_ref_impl::boost_model::class_a>&& v) {
+void class_c::prop_1(const std::vector<masd::cpp_ref_impl::boost_model::class_a>&& v) {
     prop_1_ = std::move(v);
 }
 

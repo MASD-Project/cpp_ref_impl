@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/boost_model/hash/time_duration_primitive_hash.hpp"
+#include "masd.cpp_ref_impl.boost_model/hash/time_duration_primitive_hash.hpp"
 
 namespace {
 
@@ -36,7 +36,7 @@ inline std::size_t hash_boost_posix_time_time_duration(const boost::posix_time::
 
 }
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 std::size_t time_duration_primitive_hasher::hash(const time_duration_primitive& v) {
     std::size_t seed(0);

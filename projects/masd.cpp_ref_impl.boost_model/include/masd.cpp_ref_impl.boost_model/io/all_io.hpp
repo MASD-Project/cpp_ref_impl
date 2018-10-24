@@ -18,26 +18,26 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_BOOST_MODEL_IO_ALL_IO_HPP
-#define CPP_REF_IMPL_BOOST_MODEL_IO_ALL_IO_HPP
+#ifndef MASD_CPP_REF_IMPL_BOOST_MODEL_IO_ALL_IO_HPP
+#define MASD_CPP_REF_IMPL_BOOST_MODEL_IO_ALL_IO_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/boost_model/io/class_a_io.hpp"
-#include "cpp_ref_impl/boost_model/io/class_b_io.hpp"
-#include "cpp_ref_impl/boost_model/io/class_d_io.hpp"
-#include "cpp_ref_impl/boost_model/io/class_e_io.hpp"
-#include "cpp_ref_impl/boost_model/io/class_f_io.hpp"
-#include "cpp_ref_impl/boost_model/io/class_g_io.hpp"
-#include "cpp_ref_impl/boost_model/io/class_h_io.hpp"
-#include "cpp_ref_impl/boost_model/io/class_j_io.hpp"
-#include "cpp_ref_impl/boost_model/io/class_base_io.hpp"
-#include "cpp_ref_impl/boost_model/io/pkg1/class_c_io.hpp"
-#include "cpp_ref_impl/boost_model/io/class_derived_io.hpp"
-#include "cpp_ref_impl/boost_model/io/date_primitive_io.hpp"
-#include "cpp_ref_impl/boost_model/io/ptime_primitive_io.hpp"
-#include "cpp_ref_impl/boost_model/io/time_duration_primitive_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/class_a_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/class_b_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/class_d_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/class_e_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/class_f_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/class_g_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/class_h_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/class_j_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/class_base_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/pkg1/class_c_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/class_derived_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/date_primitive_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/ptime_primitive_io.hpp"
+#include "masd.cpp_ref_impl.boost_model/io/time_duration_primitive_io.hpp"
 
 #endif

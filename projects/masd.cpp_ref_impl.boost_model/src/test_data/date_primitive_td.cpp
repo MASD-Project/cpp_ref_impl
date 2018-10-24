@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/boost_model/test_data/date_primitive_td.hpp"
+#include "masd.cpp_ref_impl.boost_model/test_data/date_primitive_td.hpp"
 
 namespace {
 
@@ -31,7 +31,7 @@ create_boost_gregorian_date(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 date_primitive_generator::date_primitive_generator() : position_(0) { }
 

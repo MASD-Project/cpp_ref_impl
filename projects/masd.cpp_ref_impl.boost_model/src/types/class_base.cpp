@@ -19,9 +19,9 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/boost_model/types/class_base.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/class_base.hpp"
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 class_base::class_base()
     : prop_0_(static_cast<int>(0)) { }
@@ -31,7 +31,7 @@ class_base::class_base(const int prop_0)
 
 void class_base::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::boost_model::class_base\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::boost_model::class_base\"" << ", "
       << "\"prop_0\": " << prop_0_
       << " }";
 }

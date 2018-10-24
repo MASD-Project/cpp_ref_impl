@@ -18,17 +18,17 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_BOOST_MODEL_HASH_CLASS_B_HASH_HPP
-#define CPP_REF_IMPL_BOOST_MODEL_HASH_CLASS_B_HASH_HPP
+#ifndef MASD_CPP_REF_IMPL_BOOST_MODEL_HASH_CLASS_B_HASH_HPP
+#define MASD_CPP_REF_IMPL_BOOST_MODEL_HASH_CLASS_B_HASH_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <functional>
-#include "cpp_ref_impl/boost_model/types/class_b.hpp"
+#include "masd.cpp_ref_impl.boost_model/types/class_b.hpp"
 
-namespace cpp_ref_impl::boost_model {
+namespace masd::cpp_ref_impl::boost_model {
 
 struct class_b_hasher {
 public:
@@ -40,10 +40,10 @@ public:
 namespace std {
 
 template<>
-struct hash<cpp_ref_impl::boost_model::class_b> {
+struct hash<masd::cpp_ref_impl::boost_model::class_b> {
 public:
-    size_t operator()(const cpp_ref_impl::boost_model::class_b& v) const {
-        return cpp_ref_impl::boost_model::class_b_hasher::hash(v);
+    size_t operator()(const masd::cpp_ref_impl::boost_model::class_b& v) const {
+        return masd::cpp_ref_impl::boost_model::class_b_hasher::hash(v);
     }
 };
 
