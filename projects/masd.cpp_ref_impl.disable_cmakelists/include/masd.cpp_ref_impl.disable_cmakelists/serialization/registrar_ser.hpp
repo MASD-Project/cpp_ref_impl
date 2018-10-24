@@ -18,14 +18,14 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_DISABLE_CMAKELISTS_SERIALIZATION_REGISTRAR_SER_HPP
-#define CPP_REF_IMPL_DISABLE_CMAKELISTS_SERIALIZATION_REGISTRAR_SER_HPP
+#ifndef MASD_CPP_REF_IMPL_DISABLE_CMAKELISTS_SERIALIZATION_REGISTRAR_SER_HPP
+#define MASD_CPP_REF_IMPL_DISABLE_CMAKELISTS_SERIALIZATION_REGISTRAR_SER_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-namespace cpp_ref_impl::disable_cmakelists {
+namespace masd::cpp_ref_impl::disable_cmakelists {
 
 template<typename Archive>
 void register_types(Archive& ar);
