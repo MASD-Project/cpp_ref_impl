@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/types/package_10/consume_object_template.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/package_10/consume_object_template.hpp"
 
-namespace cpp_ref_impl::cpp_model::package_10 {
+namespace masd::cpp_ref_impl::cpp_model::package_10 {
 
 consume_object_template::consume_object_template()
     : prop_0_(static_cast<int>(0)) { }

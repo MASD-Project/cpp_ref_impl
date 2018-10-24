@@ -18,17 +18,17 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_HASH_NON_FINAL_ORPHAN_HASH_HPP
-#define CPP_REF_IMPL_CPP_MODEL_HASH_NON_FINAL_ORPHAN_HASH_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_HASH_NON_FINAL_ORPHAN_HASH_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_HASH_NON_FINAL_ORPHAN_HASH_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <functional>
-#include "cpp_ref_impl/cpp_model/types/non_final_orphan.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/non_final_orphan.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 struct non_final_orphan_hasher {
 public:
@@ -40,10 +40,10 @@ public:
 namespace std {
 
 template<>
-struct hash<cpp_ref_impl::cpp_model::non_final_orphan> {
+struct hash<masd::cpp_ref_impl::cpp_model::non_final_orphan> {
 public:
-    size_t operator()(const cpp_ref_impl::cpp_model::non_final_orphan& v) const {
-        return cpp_ref_impl::cpp_model::non_final_orphan_hasher::hash(v);
+    size_t operator()(const masd::cpp_ref_impl::cpp_model::non_final_orphan& v) const {
+        return masd::cpp_ref_impl::cpp_model::non_final_orphan_hasher::hash(v);
     }
 };
 

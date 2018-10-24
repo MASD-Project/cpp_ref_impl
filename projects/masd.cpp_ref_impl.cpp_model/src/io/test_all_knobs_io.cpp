@@ -21,9 +21,9 @@
 #include <string>
 #include <ostream>
 #include <stdexcept>
-#include "cpp_ref_impl/cpp_model/io/test_all_knobs_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/test_all_knobs_io.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const test_all_knobs& v) {
     s << "{ " << "\"__type__\": " << "\"test_all_knobs\", " << "\"value\": ";

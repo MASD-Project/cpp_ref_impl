@@ -20,10 +20,10 @@
  */
 #include <ostream>
 #include <boost/io/ios_state.hpp>
-#include "cpp_ref_impl/cpp_model/io/base_io.hpp"
-#include "cpp_ref_impl/cpp_model/io/descendant2_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/base_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/descendant2_io.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const descendant2& v) {
     v.to_stream(s);

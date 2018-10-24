@@ -18,32 +18,32 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/test_data/class_1_td.hpp"
-#include "cpp_ref_impl/cpp_model/test_data/package_2/class_1_td.hpp"
-#include "cpp_ref_impl/cpp_model/test_data/package_2/class_2_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/class_1_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/package_2/class_1_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/package_2/class_2_td.hpp"
 
 namespace {
 
-cpp_ref_impl::cpp_model::package_2::class_1
-create_cpp_ref_impl_cpp_model_package_2_class_1(const unsigned int position) {
-    return cpp_ref_impl::cpp_model::package_2::class_1_generator::create(position);
+masd::cpp_ref_impl::cpp_model::package_2::class_1
+create_masd_cpp_ref_impl_cpp_model_package_2_class_1(const unsigned int position) {
+    return masd::cpp_ref_impl::cpp_model::package_2::class_1_generator::create(position);
 }
 
-cpp_ref_impl::cpp_model::class_1
-create_cpp_ref_impl_cpp_model_class_1(const unsigned int position) {
-    return cpp_ref_impl::cpp_model::class_1_generator::create(position);
+masd::cpp_ref_impl::cpp_model::class_1
+create_masd_cpp_ref_impl_cpp_model_class_1(const unsigned int position) {
+    return masd::cpp_ref_impl::cpp_model::class_1_generator::create(position);
 }
 
 }
 
-namespace cpp_ref_impl::cpp_model::package_2 {
+namespace masd::cpp_ref_impl::cpp_model::package_2 {
 
 class_2_generator::class_2_generator() : position_(0) { }
 
 void class_2_generator::
 populate(const unsigned int position, result_type& v) {
-    v.prop_0(create_cpp_ref_impl_cpp_model_package_2_class_1(position + 0));
-    v.prop_1(create_cpp_ref_impl_cpp_model_class_1(position + 1));
+    v.prop_0(create_masd_cpp_ref_impl_cpp_model_package_2_class_1(position + 0));
+    v.prop_1(create_masd_cpp_ref_impl_cpp_model_class_1(position + 1));
 }
 
 class_2_generator::result_type

@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/test_data/multi_line_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/multi_line_td.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 multi_line_generator::multi_line_generator() : position_(0) { }
 

@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/test_data/uchar_primitive_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/uchar_primitive_td.hpp"
 
 namespace {
 
@@ -29,7 +29,7 @@ unsigned char create_unsigned_char(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 uchar_primitive_generator::uchar_primitive_generator() : position_(0) { }
 

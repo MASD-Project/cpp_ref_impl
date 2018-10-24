@@ -27,13 +27,13 @@
 #include <boost/archive/binary_oarchive.hpp>
 #include <boost/archive/polymorphic_iarchive.hpp>
 #include <boost/archive/polymorphic_oarchive.hpp>
-#include "cpp_ref_impl/cpp_model/serialization/base_ser.hpp"
-#include "cpp_ref_impl/cpp_model/serialization/descendant1_ser.hpp"
-#include "cpp_ref_impl/cpp_model/serialization/descendant3_ser.hpp"
-#include "cpp_ref_impl/cpp_model/serialization/non_final_leaf_ser.hpp"
+#include "masd.cpp_ref_impl.cpp_model/serialization/base_ser.hpp"
+#include "masd.cpp_ref_impl.cpp_model/serialization/descendant1_ser.hpp"
+#include "masd.cpp_ref_impl.cpp_model/serialization/descendant3_ser.hpp"
+#include "masd.cpp_ref_impl.cpp_model/serialization/non_final_leaf_ser.hpp"
 
 BOOST_CLASS_TRACKING(
-    cpp_ref_impl::cpp_model::descendant1,
+    masd::cpp_ref_impl::cpp_model::descendant1,
     boost::serialization::track_selectively)
 
 namespace boost {
@@ -41,16 +41,16 @@ namespace serialization {
 
 template<typename Archive>
 void save(Archive& ar,
-    const cpp_ref_impl::cpp_model::descendant1& v,
+    const masd::cpp_ref_impl::cpp_model::descendant1& v,
     const unsigned int /*version*/) {
-    ar << make_nvp("base", base_object<cpp_ref_impl::cpp_model::base>(v));
+    ar << make_nvp("base", base_object<masd::cpp_ref_impl::cpp_model::base>(v));
 }
 
 template<typename Archive>
 void load(Archive& ar,
-    cpp_ref_impl::cpp_model::descendant1& v,
+    masd::cpp_ref_impl::cpp_model::descendant1& v,
     const unsigned int /*version*/) {
-    ar >> make_nvp("base", base_object<cpp_ref_impl::cpp_model::base>(v));
+    ar >> make_nvp("base", base_object<masd::cpp_ref_impl::cpp_model::base>(v));
 }
 
 } }
@@ -58,16 +58,16 @@ void load(Archive& ar,
 namespace boost {
 namespace serialization {
 
-template void save(archive::polymorphic_oarchive& ar, const cpp_ref_impl::cpp_model::descendant1& v, unsigned int version);
-template void load(archive::polymorphic_iarchive& ar, cpp_ref_impl::cpp_model::descendant1& v, unsigned int version);
+template void save(archive::polymorphic_oarchive& ar, const masd::cpp_ref_impl::cpp_model::descendant1& v, unsigned int version);
+template void load(archive::polymorphic_iarchive& ar, masd::cpp_ref_impl::cpp_model::descendant1& v, unsigned int version);
 
-template void save(archive::text_oarchive& ar, const cpp_ref_impl::cpp_model::descendant1& v, unsigned int version);
-template void load(archive::text_iarchive& ar, cpp_ref_impl::cpp_model::descendant1& v, unsigned int version);
+template void save(archive::text_oarchive& ar, const masd::cpp_ref_impl::cpp_model::descendant1& v, unsigned int version);
+template void load(archive::text_iarchive& ar, masd::cpp_ref_impl::cpp_model::descendant1& v, unsigned int version);
 
-template void save(archive::binary_oarchive& ar, const cpp_ref_impl::cpp_model::descendant1& v, unsigned int version);
-template void load(archive::binary_iarchive& ar, cpp_ref_impl::cpp_model::descendant1& v, unsigned int version);
+template void save(archive::binary_oarchive& ar, const masd::cpp_ref_impl::cpp_model::descendant1& v, unsigned int version);
+template void load(archive::binary_iarchive& ar, masd::cpp_ref_impl::cpp_model::descendant1& v, unsigned int version);
 
-template void save(archive::xml_oarchive& ar, const cpp_ref_impl::cpp_model::descendant1& v, unsigned int version);
-template void load(archive::xml_iarchive& ar, cpp_ref_impl::cpp_model::descendant1& v, unsigned int version);
+template void save(archive::xml_oarchive& ar, const masd::cpp_ref_impl::cpp_model::descendant1& v, unsigned int version);
+template void load(archive::xml_iarchive& ar, masd::cpp_ref_impl::cpp_model::descendant1& v, unsigned int version);
 
 } }

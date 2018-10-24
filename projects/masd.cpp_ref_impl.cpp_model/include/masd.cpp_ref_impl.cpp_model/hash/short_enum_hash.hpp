@@ -18,22 +18,22 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_HASH_SHORT_ENUM_HASH_HPP
-#define CPP_REF_IMPL_CPP_MODEL_HASH_SHORT_ENUM_HASH_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_HASH_SHORT_ENUM_HASH_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_HASH_SHORT_ENUM_HASH_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <functional>
-#include "cpp_ref_impl/cpp_model/types/short_enum.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/short_enum.hpp"
 
 namespace std {
 
 template<>
-struct hash<cpp_ref_impl::cpp_model::short_enum> {
+struct hash<masd::cpp_ref_impl::cpp_model::short_enum> {
 public:
-    size_t operator()(const cpp_ref_impl::cpp_model::short_enum& v) const {
+    size_t operator()(const masd::cpp_ref_impl::cpp_model::short_enum& v) const {
         return std::hash<unsigned int>()(static_cast<unsigned int>(v));
     }
 };

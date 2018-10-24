@@ -19,39 +19,39 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/types/child_of_a_child1.hpp"
-#include "cpp_ref_impl/cpp_model/io/third_child_with_members_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/child_of_a_child1.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/third_child_with_members_io.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 child_of_a_child1::child_of_a_child1(
     const int prop_0,
     const unsigned int prop_1)
-    : cpp_ref_impl::cpp_model::third_child_with_members(
+    : masd::cpp_ref_impl::cpp_model::third_child_with_members(
       prop_0,
       prop_1) { }
 
 void child_of_a_child1::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::child_of_a_child1\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::child_of_a_child1\"" << ", "
       << "\"__parent_0__\": ";
-    cpp_ref_impl::cpp_model::third_child_with_members::to_stream(s);
+    masd::cpp_ref_impl::cpp_model::third_child_with_members::to_stream(s);
     s << " }";
 }
 
 void child_of_a_child1::swap(child_of_a_child1& other) noexcept {
-    cpp_ref_impl::cpp_model::third_child_with_members::swap(other);
+    masd::cpp_ref_impl::cpp_model::third_child_with_members::swap(other);
 
 }
 
-bool child_of_a_child1::equals(const cpp_ref_impl::cpp_model::parent_with_members& other) const {
+bool child_of_a_child1::equals(const masd::cpp_ref_impl::cpp_model::parent_with_members& other) const {
     const child_of_a_child1* const p(dynamic_cast<const child_of_a_child1* const>(&other));
     if (!p) return false;
     return *this == *p;
 }
 
 bool child_of_a_child1::operator==(const child_of_a_child1& rhs) const {
-    return cpp_ref_impl::cpp_model::third_child_with_members::compare(rhs);
+    return masd::cpp_ref_impl::cpp_model::third_child_with_members::compare(rhs);
 }
 
 child_of_a_child1& child_of_a_child1::operator=(child_of_a_child1 other) {

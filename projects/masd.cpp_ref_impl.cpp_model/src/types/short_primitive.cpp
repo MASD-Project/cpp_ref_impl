@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/types/short_primitive.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/short_primitive.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 short_primitive::short_primitive(const short value)
     : value_(value) { }

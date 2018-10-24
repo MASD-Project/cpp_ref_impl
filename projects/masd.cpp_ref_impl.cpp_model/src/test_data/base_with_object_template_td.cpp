@@ -19,8 +19,8 @@
  *
  */
 #include <sstream>
-#include "cpp_ref_impl/cpp_model/test_data/further_inherited_td.hpp"
-#include "cpp_ref_impl/cpp_model/test_data/base_with_object_template_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/further_inherited_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/base_with_object_template_td.hpp"
 
 namespace {
 
@@ -36,7 +36,7 @@ std::string create_std_string(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 void base_with_object_template_generator::
 populate(const unsigned int position, result_type& v) {
@@ -46,7 +46,7 @@ populate(const unsigned int position, result_type& v) {
 
 base_with_object_template_generator::result_type*
 base_with_object_template_generator::create_ptr(const unsigned int position) {
-    return cpp_ref_impl::cpp_model::further_inherited_generator::create_ptr(position);
+    return masd::cpp_ref_impl::cpp_model::further_inherited_generator::create_ptr(position);
 }
 
 }

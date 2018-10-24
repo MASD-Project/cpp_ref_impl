@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/test_data/short_enum_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/short_enum_td.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 short_enum_generator::short_enum_generator() : position_(0) { }
 void short_enum_generator::

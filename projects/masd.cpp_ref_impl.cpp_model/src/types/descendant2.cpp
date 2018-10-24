@@ -20,17 +20,17 @@
  */
 #include <ostream>
 #include <boost/io/ios_state.hpp>
-#include "cpp_ref_impl/cpp_model/io/base_io.hpp"
-#include "cpp_ref_impl/cpp_model/types/descendant2.hpp"
-#include "cpp_ref_impl/cpp_model/types/base_visitor.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/base_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/descendant2.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/base_visitor.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 descendant2::descendant2()
     : prop_0_(static_cast<bool>(0)) { }
 
 descendant2::descendant2(const bool prop_0)
-    : cpp_ref_impl::cpp_model::base(),
+    : masd::cpp_ref_impl::cpp_model::base(),
       prop_0_(prop_0) { }
 
 void descendant2::accept(const base_visitor& v) const {
@@ -57,29 +57,29 @@ void descendant2::to_stream(std::ostream& s) const {
     s.setf(std::ios::showpoint);
 
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::descendant2\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::descendant2\"" << ", "
       << "\"__parent_0__\": ";
-    cpp_ref_impl::cpp_model::base::to_stream(s);
+    masd::cpp_ref_impl::cpp_model::base::to_stream(s);
     s << ", "
       << "\"prop_0\": " << prop_0_
       << " }";
 }
 
 void descendant2::swap(descendant2& other) noexcept {
-    cpp_ref_impl::cpp_model::base::swap(other);
+    masd::cpp_ref_impl::cpp_model::base::swap(other);
 
     using std::swap;
     swap(prop_0_, other.prop_0_);
 }
 
-bool descendant2::equals(const cpp_ref_impl::cpp_model::base& other) const {
+bool descendant2::equals(const masd::cpp_ref_impl::cpp_model::base& other) const {
     const descendant2* const p(dynamic_cast<const descendant2* const>(&other));
     if (!p) return false;
     return *this == *p;
 }
 
 bool descendant2::operator==(const descendant2& rhs) const {
-    return cpp_ref_impl::cpp_model::base::compare(rhs) &&
+    return masd::cpp_ref_impl::cpp_model::base::compare(rhs) &&
         prop_0_ == rhs.prop_0_;
 }
 

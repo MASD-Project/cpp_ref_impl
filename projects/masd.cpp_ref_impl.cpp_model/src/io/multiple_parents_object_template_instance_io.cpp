@@ -20,7 +20,7 @@
  */
 #include <ostream>
 #include <boost/algorithm/string.hpp>
-#include "cpp_ref_impl/cpp_model/io/multiple_parents_object_template_instance_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/multiple_parents_object_template_instance_io.hpp"
 
 inline std::string tidy_up_string(std::string s) {
     boost::replace_all(s, "\r\n", "<new_line>");
@@ -30,11 +30,11 @@ inline std::string tidy_up_string(std::string s) {
     return s;
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const multiple_parents_object_template_instance& v) {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::multiple_parents_object_template_instance\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::multiple_parents_object_template_instance\"" << ", "
       << "\"prop_3\": " << v.prop_3() << ", "
       << "\"prop_1\": " << v.prop_1() << ", "
       << "\"prop_0\": " << "\"" << tidy_up_string(v.prop_0()) << "\"" << ", "

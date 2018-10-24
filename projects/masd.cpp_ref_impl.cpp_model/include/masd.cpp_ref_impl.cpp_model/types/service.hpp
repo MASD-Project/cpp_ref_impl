@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_TYPES_SERVICE_HPP
-#define CPP_REF_IMPL_CPP_MODEL_TYPES_SERVICE_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_SERVICE_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_SERVICE_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -27,8 +27,7 @@
 
 #include <algorithm>
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 /**
  * @brief Type is a service.
@@ -63,14 +62,14 @@ private:
     int prop_0_;
 };
 
-} }
+}
 
 namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::cpp_model::service& lhs,
-    cpp_ref_impl::cpp_model::service& rhs) {
+    masd::cpp_ref_impl::cpp_model::service& lhs,
+    masd::cpp_ref_impl::cpp_model::service& rhs) {
     lhs.swap(rhs);
 }
 

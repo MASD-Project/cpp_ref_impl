@@ -18,14 +18,14 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_TYPES_HEX_FLAGS_HPP
-#define CPP_REF_IMPL_CPP_MODEL_TYPES_HEX_FLAGS_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_HEX_FLAGS_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_HEX_FLAGS_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 /**
  * @brief This is an example of an enumeration using hex flags.

@@ -14768,7 +14768,7 @@ of the object template instantiated by the base class.#</dia:string>
             <dia:string>#prop_1#</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
-            <dia:string>#cpp_model::class_1#</dia:string>
+            <dia:string>#masd::cpp_ref_impl::cpp_model::class_1#</dia:string>
           </dia:attribute>
           <dia:attribute name="value">
             <dia:string>##</dia:string>

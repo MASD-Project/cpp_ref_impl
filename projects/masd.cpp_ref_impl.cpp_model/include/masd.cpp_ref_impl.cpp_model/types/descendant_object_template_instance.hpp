@@ -18,17 +18,17 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_TYPES_DESCENDANT_OBJECT_TEMPLATE_INSTANCE_HPP
-#define CPP_REF_IMPL_CPP_MODEL_TYPES_DESCENDANT_OBJECT_TEMPLATE_INSTANCE_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_DESCENDANT_OBJECT_TEMPLATE_INSTANCE_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_DESCENDANT_OBJECT_TEMPLATE_INSTANCE_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <algorithm>
-#include "cpp_ref_impl/cpp_model/serialization/descendant_object_template_instance_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.cpp_model/serialization/descendant_object_template_instance_fwd_ser.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 /**
  * @brief This class instantiates the DescendantObjectTemplate obje.
@@ -49,10 +49,10 @@ public:
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::cpp_model::descendant_object_template_instance& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::cpp_model::descendant_object_template_instance& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::cpp_model::descendant_object_template_instance& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::cpp_model::descendant_object_template_instance& v, unsigned int version);
 
 public:
     int prop_1() const;
@@ -87,8 +87,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::cpp_model::descendant_object_template_instance& lhs,
-    cpp_ref_impl::cpp_model::descendant_object_template_instance& rhs) {
+    masd::cpp_ref_impl::cpp_model::descendant_object_template_instance& lhs,
+    masd::cpp_ref_impl::cpp_model::descendant_object_template_instance& rhs) {
     lhs.swap(rhs);
 }
 

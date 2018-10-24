@@ -18,11 +18,11 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/test_data/child_of_a_child1_td.hpp"
-#include "cpp_ref_impl/cpp_model/test_data/child_of_a_child2_td.hpp"
-#include "cpp_ref_impl/cpp_model/test_data/child_via_settings_td.hpp"
-#include "cpp_ref_impl/cpp_model/test_data/parent_with_members_td.hpp"
-#include "cpp_ref_impl/cpp_model/test_data/second_child_without_members_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/child_of_a_child1_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/child_of_a_child2_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/child_via_settings_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/parent_with_members_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/second_child_without_members_td.hpp"
 
 namespace {
 
@@ -32,7 +32,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 void parent_with_members_generator::
 populate(const unsigned int position, result_type& v) {
@@ -42,12 +42,12 @@ populate(const unsigned int position, result_type& v) {
 parent_with_members_generator::result_type*
 parent_with_members_generator::create_ptr(const unsigned int position) {
     if ((position % 3) == 0)
-        return cpp_ref_impl::cpp_model::child_of_a_child2_generator::create_ptr(position);
+        return masd::cpp_ref_impl::cpp_model::child_of_a_child2_generator::create_ptr(position);
     if ((position % 3) == 1)
-        return cpp_ref_impl::cpp_model::child_via_settings_generator::create_ptr(position);
+        return masd::cpp_ref_impl::cpp_model::child_via_settings_generator::create_ptr(position);
     if ((position % 3) == 2)
-        return cpp_ref_impl::cpp_model::second_child_without_members_generator::create_ptr(position);
-    return cpp_ref_impl::cpp_model::child_of_a_child1_generator::create_ptr(position);
+        return masd::cpp_ref_impl::cpp_model::second_child_without_members_generator::create_ptr(position);
+    return masd::cpp_ref_impl::cpp_model::child_of_a_child1_generator::create_ptr(position);
 }
 
 }

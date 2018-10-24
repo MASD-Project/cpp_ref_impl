@@ -19,21 +19,21 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/io/base_io.hpp"
-#include "cpp_ref_impl/cpp_model/types/descendant1.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/base_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/descendant1.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 void descendant1::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::descendant1\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::descendant1\"" << ", "
       << "\"__parent_0__\": ";
-    cpp_ref_impl::cpp_model::base::to_stream(s);
+    masd::cpp_ref_impl::cpp_model::base::to_stream(s);
     s << " }";
 }
 
 void descendant1::swap(descendant1& other) noexcept {
-    cpp_ref_impl::cpp_model::base::swap(other);
+    masd::cpp_ref_impl::cpp_model::base::swap(other);
 
 }
 

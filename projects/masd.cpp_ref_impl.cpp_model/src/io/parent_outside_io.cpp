@@ -19,9 +19,9 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/io/parent_outside_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/parent_outside_io.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const parent_outside& v) {
     v.to_stream(s);

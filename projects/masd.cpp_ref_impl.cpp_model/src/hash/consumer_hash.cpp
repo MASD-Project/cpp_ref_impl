@@ -18,18 +18,18 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/hash/consumer_hash.hpp"
-#include "cpp_ref_impl/cpp_model/hash/int_primitive_hash.hpp"
-#include "cpp_ref_impl/cpp_model/hash/bool_primitive_hash.hpp"
-#include "cpp_ref_impl/cpp_model/hash/char_primitive_hash.hpp"
-#include "cpp_ref_impl/cpp_model/hash/long_primitive_hash.hpp"
-#include "cpp_ref_impl/cpp_model/hash/uint_primitive_hash.hpp"
-#include "cpp_ref_impl/cpp_model/hash/float_primitive_hash.hpp"
-#include "cpp_ref_impl/cpp_model/hash/short_primitive_hash.hpp"
-#include "cpp_ref_impl/cpp_model/hash/uchar_primitive_hash.hpp"
-#include "cpp_ref_impl/cpp_model/hash/ulong_primitive_hash.hpp"
-#include "cpp_ref_impl/cpp_model/hash/double_primitive_hash.hpp"
-#include "cpp_ref_impl/cpp_model/hash/ushort_primitive_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/consumer_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/int_primitive_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/bool_primitive_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/char_primitive_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/long_primitive_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/uint_primitive_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/float_primitive_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/short_primitive_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/uchar_primitive_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/ulong_primitive_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/double_primitive_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/ushort_primitive_hash.hpp"
 
 namespace {
 
@@ -41,7 +41,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::size_t consumer_hasher::hash(const consumer& v) {
     std::size_t seed(0);

@@ -19,17 +19,17 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/io/descendant1_io.hpp"
-#include "cpp_ref_impl/cpp_model/types/base_visitor.hpp"
-#include "cpp_ref_impl/cpp_model/types/non_final_leaf.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/descendant1_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/base_visitor.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/non_final_leaf.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 non_final_leaf::non_final_leaf()
     : prop_0_(static_cast<int>(0)) { }
 
 non_final_leaf::non_final_leaf(const int prop_0)
-    : cpp_ref_impl::cpp_model::descendant1(),
+    : masd::cpp_ref_impl::cpp_model::descendant1(),
       prop_0_(prop_0) { }
 
 void non_final_leaf::accept(const base_visitor& v) const {
@@ -50,29 +50,29 @@ void non_final_leaf::accept(base_visitor& v) {
 
 void non_final_leaf::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::non_final_leaf\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::non_final_leaf\"" << ", "
       << "\"__parent_0__\": ";
-    cpp_ref_impl::cpp_model::descendant1::to_stream(s);
+    masd::cpp_ref_impl::cpp_model::descendant1::to_stream(s);
     s << ", "
       << "\"prop_0\": " << prop_0_
       << " }";
 }
 
 void non_final_leaf::swap(non_final_leaf& other) noexcept {
-    cpp_ref_impl::cpp_model::descendant1::swap(other);
+    masd::cpp_ref_impl::cpp_model::descendant1::swap(other);
 
     using std::swap;
     swap(prop_0_, other.prop_0_);
 }
 
-bool non_final_leaf::equals(const cpp_ref_impl::cpp_model::base& other) const {
+bool non_final_leaf::equals(const masd::cpp_ref_impl::cpp_model::base& other) const {
     const non_final_leaf* const p(dynamic_cast<const non_final_leaf* const>(&other));
     if (!p) return false;
     return *this == *p;
 }
 
 bool non_final_leaf::operator==(const non_final_leaf& rhs) const {
-    return cpp_ref_impl::cpp_model::descendant1::compare(rhs) &&
+    return masd::cpp_ref_impl::cpp_model::descendant1::compare(rhs) &&
         prop_0_ == rhs.prop_0_;
 }
 

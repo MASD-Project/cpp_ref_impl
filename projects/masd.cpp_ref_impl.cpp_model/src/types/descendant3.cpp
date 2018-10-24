@@ -20,17 +20,17 @@
  */
 #include <ostream>
 #include <boost/io/ios_state.hpp>
-#include "cpp_ref_impl/cpp_model/io/descendant1_io.hpp"
-#include "cpp_ref_impl/cpp_model/types/descendant3.hpp"
-#include "cpp_ref_impl/cpp_model/types/base_visitor.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/descendant1_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/descendant3.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/base_visitor.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 descendant3::descendant3()
     : prop_0_(static_cast<bool>(0)) { }
 
 descendant3::descendant3(const bool prop_0)
-    : cpp_ref_impl::cpp_model::descendant1(),
+    : masd::cpp_ref_impl::cpp_model::descendant1(),
       prop_0_(prop_0) { }
 
 void descendant3::accept(const base_visitor& v) const {
@@ -57,29 +57,29 @@ void descendant3::to_stream(std::ostream& s) const {
     s.setf(std::ios::showpoint);
 
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::descendant3\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::descendant3\"" << ", "
       << "\"__parent_0__\": ";
-    cpp_ref_impl::cpp_model::descendant1::to_stream(s);
+    masd::cpp_ref_impl::cpp_model::descendant1::to_stream(s);
     s << ", "
       << "\"prop_0\": " << prop_0_
       << " }";
 }
 
 void descendant3::swap(descendant3& other) noexcept {
-    cpp_ref_impl::cpp_model::descendant1::swap(other);
+    masd::cpp_ref_impl::cpp_model::descendant1::swap(other);
 
     using std::swap;
     swap(prop_0_, other.prop_0_);
 }
 
-bool descendant3::equals(const cpp_ref_impl::cpp_model::base& other) const {
+bool descendant3::equals(const masd::cpp_ref_impl::cpp_model::base& other) const {
     const descendant3* const p(dynamic_cast<const descendant3* const>(&other));
     if (!p) return false;
     return *this == *p;
 }
 
 bool descendant3::operator==(const descendant3& rhs) const {
-    return cpp_ref_impl::cpp_model::descendant1::compare(rhs) &&
+    return masd::cpp_ref_impl::cpp_model::descendant1::compare(rhs) &&
         prop_0_ == rhs.prop_0_;
 }
 

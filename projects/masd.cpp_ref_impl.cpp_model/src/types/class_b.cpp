@@ -18,11 +18,11 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/types/class_b.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/class_b.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
-class_b::class_b(const cpp_ref_impl::cpp_model::class_a& prop_0)
+class_b::class_b(const masd::cpp_ref_impl::cpp_model::class_a& prop_0)
     : prop_0_(prop_0) { }
 
 void class_b::swap(class_b& other) noexcept {
@@ -40,19 +40,19 @@ class_b& class_b::operator=(class_b other) {
     return *this;
 }
 
-const cpp_ref_impl::cpp_model::class_a& class_b::prop_0() const {
+const masd::cpp_ref_impl::cpp_model::class_a& class_b::prop_0() const {
     return prop_0_;
 }
 
-cpp_ref_impl::cpp_model::class_a& class_b::prop_0() {
+masd::cpp_ref_impl::cpp_model::class_a& class_b::prop_0() {
     return prop_0_;
 }
 
-void class_b::prop_0(const cpp_ref_impl::cpp_model::class_a& v) {
+void class_b::prop_0(const masd::cpp_ref_impl::cpp_model::class_a& v) {
     prop_0_ = v;
 }
 
-void class_b::prop_0(const cpp_ref_impl::cpp_model::class_a&& v) {
+void class_b::prop_0(const masd::cpp_ref_impl::cpp_model::class_a&& v) {
     prop_0_ = std::move(v);
 }
 

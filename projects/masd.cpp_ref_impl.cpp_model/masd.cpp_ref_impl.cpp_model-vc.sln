@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{3103CA57-FD70-4EC9-98BD-1C2C7360AF53}") = "cpp_ref_impl.cpp_model", "cpp_ref_impl.cpp_model.csproj", "{876B2828-8A0B-495F-8340-0357690162E4}"
+Project("{3103CA57-FD70-4EC9-98BD-1C2C7360AF53}") = "masd.cpp_ref_impl.cpp_model", "masd.cpp_ref_impl.cpp_model.csproj", "{876B2828-8A0B-495F-8340-0357690162E4}"
 EndProject
 Global
     GlobalSection(SolutionConfigurationPlatforms) = preSolution

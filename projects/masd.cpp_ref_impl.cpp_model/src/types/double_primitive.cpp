@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/types/double_primitive.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/double_primitive.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 double_primitive::double_primitive(const double value)
     : value_(value) { }

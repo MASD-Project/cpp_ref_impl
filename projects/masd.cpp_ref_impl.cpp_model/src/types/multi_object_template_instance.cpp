@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/types/multi_object_template_instance.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/multi_object_template_instance.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 multi_object_template_instance::multi_object_template_instance()
     : prop_1_(static_cast<int>(0)),

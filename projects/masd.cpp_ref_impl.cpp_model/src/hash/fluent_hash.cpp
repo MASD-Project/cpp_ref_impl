@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/hash/value_hash.hpp"
-#include "cpp_ref_impl/cpp_model/hash/fluent_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/value_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/fluent_hash.hpp"
 
 namespace {
 
@@ -31,7 +31,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::size_t fluent_hasher::hash(const fluent& v) {
     std::size_t seed(0);

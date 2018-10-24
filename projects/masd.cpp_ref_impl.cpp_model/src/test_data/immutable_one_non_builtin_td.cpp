@@ -19,7 +19,7 @@
  *
  */
 #include <sstream>
-#include "cpp_ref_impl/cpp_model/test_data/immutable_one_non_builtin_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/immutable_one_non_builtin_td.hpp"
 
 namespace {
 
@@ -31,7 +31,7 @@ std::string create_std_string(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 immutable_one_non_builtin_generator::immutable_one_non_builtin_generator() : position_(0) { }
 

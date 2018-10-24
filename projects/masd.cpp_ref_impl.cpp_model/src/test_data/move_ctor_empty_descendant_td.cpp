@@ -18,16 +18,16 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/test_data/move_ctor_base_td.hpp"
-#include "cpp_ref_impl/cpp_model/test_data/move_ctor_empty_descendant_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/move_ctor_base_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/move_ctor_empty_descendant_td.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 move_ctor_empty_descendant_generator::move_ctor_empty_descendant_generator() : position_(0) { }
 
 void move_ctor_empty_descendant_generator::
 populate(const unsigned int position, result_type& v) {
-    cpp_ref_impl::cpp_model::move_ctor_base_generator::populate(position, v);
+    masd::cpp_ref_impl::cpp_model::move_ctor_base_generator::populate(position, v);
 }
 
 move_ctor_empty_descendant_generator::result_type

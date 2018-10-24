@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/types/immutable_primitive.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/immutable_primitive.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 immutable_primitive::immutable_primitive(const short value)
     : value_(value) { }

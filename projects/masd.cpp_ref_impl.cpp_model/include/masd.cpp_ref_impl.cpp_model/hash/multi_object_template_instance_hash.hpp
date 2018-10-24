@@ -18,17 +18,17 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_HASH_MULTI_OBJECT_TEMPLATE_INSTANCE_HASH_HPP
-#define CPP_REF_IMPL_CPP_MODEL_HASH_MULTI_OBJECT_TEMPLATE_INSTANCE_HASH_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_HASH_MULTI_OBJECT_TEMPLATE_INSTANCE_HASH_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_HASH_MULTI_OBJECT_TEMPLATE_INSTANCE_HASH_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <functional>
-#include "cpp_ref_impl/cpp_model/types/multi_object_template_instance.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/multi_object_template_instance.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 struct multi_object_template_instance_hasher {
 public:
@@ -40,10 +40,10 @@ public:
 namespace std {
 
 template<>
-struct hash<cpp_ref_impl::cpp_model::multi_object_template_instance> {
+struct hash<masd::cpp_ref_impl::cpp_model::multi_object_template_instance> {
 public:
-    size_t operator()(const cpp_ref_impl::cpp_model::multi_object_template_instance& v) const {
-        return cpp_ref_impl::cpp_model::multi_object_template_instance_hasher::hash(v);
+    size_t operator()(const masd::cpp_ref_impl::cpp_model::multi_object_template_instance& v) const {
+        return masd::cpp_ref_impl::cpp_model::multi_object_template_instance_hasher::hash(v);
     }
 };
 

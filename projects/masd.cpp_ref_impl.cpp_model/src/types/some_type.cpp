@@ -18,10 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/types/some_type.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/some_type.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 some_type::some_type()
     : prop_0_(static_cast<int>(0)) { }
@@ -52,4 +51,4 @@ void some_type::prop_0(const int v) {
     prop_0_ = v;
 }
 
-} }
+}

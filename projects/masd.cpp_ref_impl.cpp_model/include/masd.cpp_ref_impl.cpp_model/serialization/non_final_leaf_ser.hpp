@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_SERIALIZATION_NON_FINAL_LEAF_SER_HPP
-#define CPP_REF_IMPL_CPP_MODEL_SERIALIZATION_NON_FINAL_LEAF_SER_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_SERIALIZATION_NON_FINAL_LEAF_SER_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_SERIALIZATION_NON_FINAL_LEAF_SER_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -27,27 +27,27 @@
 
 #include <boost/serialization/split_free.hpp>
 #include <boost/type_traits/is_virtual_base_of.hpp>
-#include "cpp_ref_impl/cpp_model/types/non_final_leaf.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/non_final_leaf.hpp"
 
 namespace boost {
 
 template<>struct
 is_virtual_base_of<
-    cpp_ref_impl::cpp_model::descendant1,
-    cpp_ref_impl::cpp_model::non_final_leaf
+    masd::cpp_ref_impl::cpp_model::descendant1,
+    masd::cpp_ref_impl::cpp_model::non_final_leaf
 > : public mpl::true_ {};
 
 }
 
-BOOST_SERIALIZATION_SPLIT_FREE(cpp_ref_impl::cpp_model::non_final_leaf)
+BOOST_SERIALIZATION_SPLIT_FREE(masd::cpp_ref_impl::cpp_model::non_final_leaf)
 namespace boost {
 namespace serialization {
 
 template<typename Archive>
-void save(Archive& ar, const cpp_ref_impl::cpp_model::non_final_leaf& v, unsigned int version);
+void save(Archive& ar, const masd::cpp_ref_impl::cpp_model::non_final_leaf& v, unsigned int version);
 
 template<typename Archive>
-void load(Archive& ar, cpp_ref_impl::cpp_model::non_final_leaf& v, unsigned int version);
+void load(Archive& ar, masd::cpp_ref_impl::cpp_model::non_final_leaf& v, unsigned int version);
 
 } }
 

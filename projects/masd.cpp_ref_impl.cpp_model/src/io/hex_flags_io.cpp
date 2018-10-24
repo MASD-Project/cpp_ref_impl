@@ -21,9 +21,9 @@
 #include <string>
 #include <ostream>
 #include <stdexcept>
-#include "cpp_ref_impl/cpp_model/io/hex_flags_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/hex_flags_io.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const hex_flags& v) {
     s << "{ " << "\"__type__\": " << "\"hex_flags\", " << "\"value\": ";

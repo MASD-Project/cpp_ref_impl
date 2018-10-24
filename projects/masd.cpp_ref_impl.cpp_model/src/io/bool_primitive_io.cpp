@@ -20,14 +20,14 @@
  */
 #include <ostream>
 #include <boost/io/ios_state.hpp>
-#include "cpp_ref_impl/cpp_model/io/bool_primitive_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/bool_primitive_io.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const bool_primitive& v) {
 
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::bool_primitive\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::bool_primitive\"" << ", "
       << "\"value\": " << v.value()
       << " }";
 

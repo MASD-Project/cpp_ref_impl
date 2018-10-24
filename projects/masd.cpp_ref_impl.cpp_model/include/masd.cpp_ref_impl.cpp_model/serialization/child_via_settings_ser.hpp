@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_SERIALIZATION_CHILD_VIA_SETTINGS_SER_HPP
-#define CPP_REF_IMPL_CPP_MODEL_SERIALIZATION_CHILD_VIA_SETTINGS_SER_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_SERIALIZATION_CHILD_VIA_SETTINGS_SER_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_SERIALIZATION_CHILD_VIA_SETTINGS_SER_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -27,27 +27,27 @@
 
 #include <boost/serialization/split_free.hpp>
 #include <boost/type_traits/is_virtual_base_of.hpp>
-#include "cpp_ref_impl/cpp_model/types/child_via_settings.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/child_via_settings.hpp"
 
 namespace boost {
 
 template<>struct
 is_virtual_base_of<
-    cpp_ref_impl::cpp_model::parent_with_members,
-    cpp_ref_impl::cpp_model::child_via_settings
+    masd::cpp_ref_impl::cpp_model::parent_with_members,
+    masd::cpp_ref_impl::cpp_model::child_via_settings
 > : public mpl::true_ {};
 
 }
 
-BOOST_SERIALIZATION_SPLIT_FREE(cpp_ref_impl::cpp_model::child_via_settings)
+BOOST_SERIALIZATION_SPLIT_FREE(masd::cpp_ref_impl::cpp_model::child_via_settings)
 namespace boost {
 namespace serialization {
 
 template<typename Archive>
-void save(Archive& ar, const cpp_ref_impl::cpp_model::child_via_settings& v, unsigned int version);
+void save(Archive& ar, const masd::cpp_ref_impl::cpp_model::child_via_settings& v, unsigned int version);
 
 template<typename Archive>
-void load(Archive& ar, cpp_ref_impl::cpp_model::child_via_settings& v, unsigned int version);
+void load(Archive& ar, masd::cpp_ref_impl::cpp_model::child_via_settings& v, unsigned int version);
 
 } }
 

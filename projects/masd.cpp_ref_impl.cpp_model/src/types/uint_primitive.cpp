@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/types/uint_primitive.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/uint_primitive.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 uint_primitive::uint_primitive(const unsigned int value)
     : value_(value) { }

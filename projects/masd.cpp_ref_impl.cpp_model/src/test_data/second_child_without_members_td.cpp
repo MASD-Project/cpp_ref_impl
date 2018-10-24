@@ -18,16 +18,16 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/test_data/parent_with_members_td.hpp"
-#include "cpp_ref_impl/cpp_model/test_data/second_child_without_members_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/parent_with_members_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/second_child_without_members_td.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 second_child_without_members_generator::second_child_without_members_generator() : position_(0) { }
 
 void second_child_without_members_generator::
 populate(const unsigned int position, result_type& v) {
-    cpp_ref_impl::cpp_model::parent_with_members_generator::populate(position, v);
+    masd::cpp_ref_impl::cpp_model::parent_with_members_generator::populate(position, v);
 }
 
 second_child_without_members_generator::result_type

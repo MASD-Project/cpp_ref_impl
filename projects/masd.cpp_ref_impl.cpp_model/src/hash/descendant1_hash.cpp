@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/hash/base_hash.hpp"
-#include "cpp_ref_impl/cpp_model/hash/descendant1_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/base_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/descendant1_hash.hpp"
 
 namespace {
 
@@ -31,12 +31,12 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::size_t descendant1_hasher::hash(const descendant1& v) {
     std::size_t seed(0);
 
-    combine(seed, dynamic_cast<const cpp_ref_impl::cpp_model::base&>(v));
+    combine(seed, dynamic_cast<const masd::cpp_ref_impl::cpp_model::base&>(v));
     return seed;
 }
 

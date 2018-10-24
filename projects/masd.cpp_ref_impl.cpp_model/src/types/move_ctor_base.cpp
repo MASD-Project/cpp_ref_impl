@@ -19,9 +19,9 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/types/move_ctor_base.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/move_ctor_base.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 move_ctor_base::move_ctor_base(move_ctor_base&& rhs)
     : prop_0_(std::move(rhs.prop_0_)) { }
@@ -31,7 +31,7 @@ move_ctor_base::move_ctor_base(const boost::filesystem::path& prop_0)
 
 void move_ctor_base::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::move_ctor_base\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::move_ctor_base\"" << ", "
       << "\"prop_0\": " << "\"" << prop_0_.generic_string() << "\""
       << " }";
 }

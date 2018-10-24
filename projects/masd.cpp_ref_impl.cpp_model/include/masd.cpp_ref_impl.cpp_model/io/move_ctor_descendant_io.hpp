@@ -18,21 +18,21 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_IO_MOVE_CTOR_DESCENDANT_IO_HPP
-#define CPP_REF_IMPL_CPP_MODEL_IO_MOVE_CTOR_DESCENDANT_IO_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_IO_MOVE_CTOR_DESCENDANT_IO_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_IO_MOVE_CTOR_DESCENDANT_IO_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <iosfwd>
-#include "cpp_ref_impl/cpp_model/types/move_ctor_descendant.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/move_ctor_descendant.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::ostream&
 operator<<(std::ostream& s,
-     const cpp_ref_impl::cpp_model::move_ctor_descendant& v);
+     const masd::cpp_ref_impl::cpp_model::move_ctor_descendant& v);
 
 }
 

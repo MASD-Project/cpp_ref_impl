@@ -19,10 +19,10 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/io/package_6/parent_io.hpp"
-#include "cpp_ref_impl/cpp_model/io/package_6/child_via_settings_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/package_6/parent_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/package_6/child_via_settings_io.hpp"
 
-namespace cpp_ref_impl::cpp_model::package_6 {
+namespace masd::cpp_ref_impl::cpp_model::package_6 {
 
 std::ostream& operator<<(std::ostream& s, const child_via_settings& v) {
     v.to_stream(s);

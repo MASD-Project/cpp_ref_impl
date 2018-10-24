@@ -18,23 +18,23 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_TEST_DATA_IMMUTABLE_FOUR_TD_HPP
-#define CPP_REF_IMPL_CPP_MODEL_TEST_DATA_IMMUTABLE_FOUR_TD_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_TEST_DATA_IMMUTABLE_FOUR_TD_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_TEST_DATA_IMMUTABLE_FOUR_TD_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/cpp_model/types/immutable_four.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/immutable_four.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 class immutable_four_generator {
 public:
     immutable_four_generator();
 
 public:
-    typedef cpp_ref_impl::cpp_model::immutable_four result_type;
+    typedef masd::cpp_ref_impl::cpp_model::immutable_four result_type;
 
 public:
     static result_type create(const unsigned int position);

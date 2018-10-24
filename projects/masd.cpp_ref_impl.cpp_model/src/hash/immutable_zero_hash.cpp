@@ -18,14 +18,14 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/hash/immutable_zero_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/immutable_zero_hash.hpp"
 
 namespace {
 
 
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::size_t immutable_zero_hasher::hash(const immutable_zero&) {
     std::size_t seed(0);

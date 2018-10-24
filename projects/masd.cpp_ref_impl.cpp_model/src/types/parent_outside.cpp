@@ -19,9 +19,9 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/types/parent_outside.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/parent_outside.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 parent_outside::parent_outside()
     : prop_0_(static_cast<int>(0)) { }
@@ -31,7 +31,7 @@ parent_outside::parent_outside(const int prop_0)
 
 void parent_outside::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::parent_outside\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::parent_outside\"" << ", "
       << "\"prop_0\": " << prop_0_
       << " }";
 }

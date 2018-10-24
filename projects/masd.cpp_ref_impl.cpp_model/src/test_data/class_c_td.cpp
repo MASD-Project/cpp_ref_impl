@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/test_data/class_c_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/class_c_td.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 class_c_generator::class_c_generator() : position_(0) { }
 

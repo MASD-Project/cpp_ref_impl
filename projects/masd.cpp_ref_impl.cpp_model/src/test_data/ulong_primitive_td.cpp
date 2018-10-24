@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/test_data/ulong_primitive_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/ulong_primitive_td.hpp"
 
 namespace {
 
@@ -28,7 +28,7 @@ unsigned long create_unsigned_long(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 ulong_primitive_generator::ulong_primitive_generator() : position_(0) { }
 

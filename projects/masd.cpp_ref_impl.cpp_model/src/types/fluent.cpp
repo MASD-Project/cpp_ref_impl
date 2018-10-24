@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/types/fluent.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/fluent.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 fluent::fluent()
     : prop_0_(static_cast<unsigned int>(0)) { }
@@ -28,7 +28,7 @@ fluent::fluent()
 fluent::fluent(
     const unsigned int prop_0,
     const std::string& prop_1,
-    const cpp_ref_impl::cpp_model::value& prop_2)
+    const masd::cpp_ref_impl::cpp_model::value& prop_2)
     : prop_0_(prop_0),
       prop_1_(prop_1),
       prop_2_(prop_2) { }
@@ -79,20 +79,20 @@ fluent& fluent::prop_1(const std::string&& v) {
     return *this;
 }
 
-const cpp_ref_impl::cpp_model::value& fluent::prop_2() const {
+const masd::cpp_ref_impl::cpp_model::value& fluent::prop_2() const {
     return prop_2_;
 }
 
-cpp_ref_impl::cpp_model::value& fluent::prop_2() {
+masd::cpp_ref_impl::cpp_model::value& fluent::prop_2() {
     return prop_2_;
 }
 
-fluent& fluent::prop_2(const cpp_ref_impl::cpp_model::value& v) {
+fluent& fluent::prop_2(const masd::cpp_ref_impl::cpp_model::value& v) {
     prop_2_ = v;
     return *this;
 }
 
-fluent& fluent::prop_2(const cpp_ref_impl::cpp_model::value&& v) {
+fluent& fluent::prop_2(const masd::cpp_ref_impl::cpp_model::value&& v) {
     prop_2_ = std::move(v);
     return *this;
 }

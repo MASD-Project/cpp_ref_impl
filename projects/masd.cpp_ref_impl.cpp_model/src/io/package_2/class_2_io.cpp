@@ -19,15 +19,15 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/io/class_1_io.hpp"
-#include "cpp_ref_impl/cpp_model/io/package_2/class_1_io.hpp"
-#include "cpp_ref_impl/cpp_model/io/package_2/class_2_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/class_1_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/package_2/class_1_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/package_2/class_2_io.hpp"
 
-namespace cpp_ref_impl::cpp_model::package_2 {
+namespace masd::cpp_ref_impl::cpp_model::package_2 {
 
 std::ostream& operator<<(std::ostream& s, const class_2& v) {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::package_2::class_2\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::package_2::class_2\"" << ", "
       << "\"prop_0\": " << v.prop_0() << ", "
       << "\"prop_1\": " << v.prop_1()
       << " }";

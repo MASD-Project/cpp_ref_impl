@@ -18,15 +18,15 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_ODB_NON_FINAL_LEAF_PRAGMAS_HPP
-#define CPP_REF_IMPL_CPP_MODEL_ODB_NON_FINAL_LEAF_PRAGMAS_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_ODB_NON_FINAL_LEAF_PRAGMAS_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_ODB_NON_FINAL_LEAF_PRAGMAS_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/cpp_model/types/non_final_leaf.hpp"
-#include "cpp_ref_impl/cpp_model/odb/descendant1_pragmas.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/non_final_leaf.hpp"
+#include "masd.cpp_ref_impl.cpp_model/odb/descendant1_pragmas.hpp"
 
 // class has no ODB pragmas defined.
 

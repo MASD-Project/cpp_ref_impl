@@ -19,9 +19,9 @@
  *
  */
 #include <sstream>
-#include "cpp_ref_impl/cpp_model/test_data/value_td.hpp"
-#include "cpp_ref_impl/cpp_model/test_data/immutable_four_td.hpp"
-#include "cpp_ref_impl/cpp_model/test_data/immutable_one_builtin_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/value_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/immutable_four_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/immutable_one_builtin_td.hpp"
 
 namespace {
 
@@ -35,19 +35,19 @@ std::string create_std_string(const unsigned int position) {
     return s.str();
 }
 
-cpp_ref_impl::cpp_model::value
-create_cpp_ref_impl_cpp_model_value(const unsigned int position) {
-    return cpp_ref_impl::cpp_model::value_generator::create(position);
+masd::cpp_ref_impl::cpp_model::value
+create_masd_cpp_ref_impl_cpp_model_value(const unsigned int position) {
+    return masd::cpp_ref_impl::cpp_model::value_generator::create(position);
 }
 
-cpp_ref_impl::cpp_model::immutable_one_builtin
-create_cpp_ref_impl_cpp_model_immutable_one_builtin(const unsigned int position) {
-    return cpp_ref_impl::cpp_model::immutable_one_builtin_generator::create(position);
+masd::cpp_ref_impl::cpp_model::immutable_one_builtin
+create_masd_cpp_ref_impl_cpp_model_immutable_one_builtin(const unsigned int position) {
+    return masd::cpp_ref_impl::cpp_model::immutable_one_builtin_generator::create(position);
 }
 
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 immutable_four_generator::immutable_four_generator() : position_(0) { }
 
@@ -56,8 +56,8 @@ immutable_four_generator::create(const unsigned int position) {
     return immutable_four(
         create_bool(position + 0),
         create_std_string(position + 1),
-        create_cpp_ref_impl_cpp_model_value(position + 2),
-        create_cpp_ref_impl_cpp_model_immutable_one_builtin(position + 3)
+        create_masd_cpp_ref_impl_cpp_model_value(position + 2),
+        create_masd_cpp_ref_impl_cpp_model_immutable_one_builtin(position + 3)
         );
 }
 

@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/types/builtins.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/builtins.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 builtins::builtins()
     : bool_property_(static_cast<bool>(0)),

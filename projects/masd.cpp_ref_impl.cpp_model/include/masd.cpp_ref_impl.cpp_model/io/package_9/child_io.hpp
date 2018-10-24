@@ -18,21 +18,21 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_IO_PACKAGE_9_CHILD_IO_HPP
-#define CPP_REF_IMPL_CPP_MODEL_IO_PACKAGE_9_CHILD_IO_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_IO_PACKAGE_9_CHILD_IO_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_IO_PACKAGE_9_CHILD_IO_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <iosfwd>
-#include "cpp_ref_impl/cpp_model/types/package_9/child.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/package_9/child.hpp"
 
-namespace cpp_ref_impl::cpp_model::package_9 {
+namespace masd::cpp_ref_impl::cpp_model::package_9 {
 
 std::ostream&
 operator<<(std::ostream& s,
-     const cpp_ref_impl::cpp_model::package_9::child& v);
+     const masd::cpp_ref_impl::cpp_model::package_9::child& v);
 
 }
 

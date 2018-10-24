@@ -18,22 +18,22 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/types/consumer.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/consumer.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 consumer::consumer(
-    const cpp_ref_impl::cpp_model::short_primitive& prop0,
-    const cpp_ref_impl::cpp_model::ushort_primitive& prop1,
-    const cpp_ref_impl::cpp_model::long_primitive& prop2,
-    const cpp_ref_impl::cpp_model::ulong_primitive& prop3,
-    const cpp_ref_impl::cpp_model::int_primitive& prop4,
-    const cpp_ref_impl::cpp_model::uint_primitive& prop5,
-    const cpp_ref_impl::cpp_model::char_primitive& prop6,
-    const cpp_ref_impl::cpp_model::uchar_primitive& prop7,
-    const cpp_ref_impl::cpp_model::double_primitive& prop8,
-    const cpp_ref_impl::cpp_model::float_primitive& prop9,
-    const cpp_ref_impl::cpp_model::bool_primitive& prop10)
+    const masd::cpp_ref_impl::cpp_model::short_primitive& prop0,
+    const masd::cpp_ref_impl::cpp_model::ushort_primitive& prop1,
+    const masd::cpp_ref_impl::cpp_model::long_primitive& prop2,
+    const masd::cpp_ref_impl::cpp_model::ulong_primitive& prop3,
+    const masd::cpp_ref_impl::cpp_model::int_primitive& prop4,
+    const masd::cpp_ref_impl::cpp_model::uint_primitive& prop5,
+    const masd::cpp_ref_impl::cpp_model::char_primitive& prop6,
+    const masd::cpp_ref_impl::cpp_model::uchar_primitive& prop7,
+    const masd::cpp_ref_impl::cpp_model::double_primitive& prop8,
+    const masd::cpp_ref_impl::cpp_model::float_primitive& prop9,
+    const masd::cpp_ref_impl::cpp_model::bool_primitive& prop10)
     : prop0_(prop0),
       prop1_(prop1),
       prop2_(prop2),
@@ -81,179 +81,179 @@ consumer& consumer::operator=(consumer other) {
     return *this;
 }
 
-const cpp_ref_impl::cpp_model::short_primitive& consumer::prop0() const {
+const masd::cpp_ref_impl::cpp_model::short_primitive& consumer::prop0() const {
     return prop0_;
 }
 
-cpp_ref_impl::cpp_model::short_primitive& consumer::prop0() {
+masd::cpp_ref_impl::cpp_model::short_primitive& consumer::prop0() {
     return prop0_;
 }
 
-void consumer::prop0(const cpp_ref_impl::cpp_model::short_primitive& v) {
+void consumer::prop0(const masd::cpp_ref_impl::cpp_model::short_primitive& v) {
     prop0_ = v;
 }
 
-void consumer::prop0(const cpp_ref_impl::cpp_model::short_primitive&& v) {
+void consumer::prop0(const masd::cpp_ref_impl::cpp_model::short_primitive&& v) {
     prop0_ = std::move(v);
 }
 
-const cpp_ref_impl::cpp_model::ushort_primitive& consumer::prop1() const {
+const masd::cpp_ref_impl::cpp_model::ushort_primitive& consumer::prop1() const {
     return prop1_;
 }
 
-cpp_ref_impl::cpp_model::ushort_primitive& consumer::prop1() {
+masd::cpp_ref_impl::cpp_model::ushort_primitive& consumer::prop1() {
     return prop1_;
 }
 
-void consumer::prop1(const cpp_ref_impl::cpp_model::ushort_primitive& v) {
+void consumer::prop1(const masd::cpp_ref_impl::cpp_model::ushort_primitive& v) {
     prop1_ = v;
 }
 
-void consumer::prop1(const cpp_ref_impl::cpp_model::ushort_primitive&& v) {
+void consumer::prop1(const masd::cpp_ref_impl::cpp_model::ushort_primitive&& v) {
     prop1_ = std::move(v);
 }
 
-const cpp_ref_impl::cpp_model::long_primitive& consumer::prop2() const {
+const masd::cpp_ref_impl::cpp_model::long_primitive& consumer::prop2() const {
     return prop2_;
 }
 
-cpp_ref_impl::cpp_model::long_primitive& consumer::prop2() {
+masd::cpp_ref_impl::cpp_model::long_primitive& consumer::prop2() {
     return prop2_;
 }
 
-void consumer::prop2(const cpp_ref_impl::cpp_model::long_primitive& v) {
+void consumer::prop2(const masd::cpp_ref_impl::cpp_model::long_primitive& v) {
     prop2_ = v;
 }
 
-void consumer::prop2(const cpp_ref_impl::cpp_model::long_primitive&& v) {
+void consumer::prop2(const masd::cpp_ref_impl::cpp_model::long_primitive&& v) {
     prop2_ = std::move(v);
 }
 
-const cpp_ref_impl::cpp_model::ulong_primitive& consumer::prop3() const {
+const masd::cpp_ref_impl::cpp_model::ulong_primitive& consumer::prop3() const {
     return prop3_;
 }
 
-cpp_ref_impl::cpp_model::ulong_primitive& consumer::prop3() {
+masd::cpp_ref_impl::cpp_model::ulong_primitive& consumer::prop3() {
     return prop3_;
 }
 
-void consumer::prop3(const cpp_ref_impl::cpp_model::ulong_primitive& v) {
+void consumer::prop3(const masd::cpp_ref_impl::cpp_model::ulong_primitive& v) {
     prop3_ = v;
 }
 
-void consumer::prop3(const cpp_ref_impl::cpp_model::ulong_primitive&& v) {
+void consumer::prop3(const masd::cpp_ref_impl::cpp_model::ulong_primitive&& v) {
     prop3_ = std::move(v);
 }
 
-const cpp_ref_impl::cpp_model::int_primitive& consumer::prop4() const {
+const masd::cpp_ref_impl::cpp_model::int_primitive& consumer::prop4() const {
     return prop4_;
 }
 
-cpp_ref_impl::cpp_model::int_primitive& consumer::prop4() {
+masd::cpp_ref_impl::cpp_model::int_primitive& consumer::prop4() {
     return prop4_;
 }
 
-void consumer::prop4(const cpp_ref_impl::cpp_model::int_primitive& v) {
+void consumer::prop4(const masd::cpp_ref_impl::cpp_model::int_primitive& v) {
     prop4_ = v;
 }
 
-void consumer::prop4(const cpp_ref_impl::cpp_model::int_primitive&& v) {
+void consumer::prop4(const masd::cpp_ref_impl::cpp_model::int_primitive&& v) {
     prop4_ = std::move(v);
 }
 
-const cpp_ref_impl::cpp_model::uint_primitive& consumer::prop5() const {
+const masd::cpp_ref_impl::cpp_model::uint_primitive& consumer::prop5() const {
     return prop5_;
 }
 
-cpp_ref_impl::cpp_model::uint_primitive& consumer::prop5() {
+masd::cpp_ref_impl::cpp_model::uint_primitive& consumer::prop5() {
     return prop5_;
 }
 
-void consumer::prop5(const cpp_ref_impl::cpp_model::uint_primitive& v) {
+void consumer::prop5(const masd::cpp_ref_impl::cpp_model::uint_primitive& v) {
     prop5_ = v;
 }
 
-void consumer::prop5(const cpp_ref_impl::cpp_model::uint_primitive&& v) {
+void consumer::prop5(const masd::cpp_ref_impl::cpp_model::uint_primitive&& v) {
     prop5_ = std::move(v);
 }
 
-const cpp_ref_impl::cpp_model::char_primitive& consumer::prop6() const {
+const masd::cpp_ref_impl::cpp_model::char_primitive& consumer::prop6() const {
     return prop6_;
 }
 
-cpp_ref_impl::cpp_model::char_primitive& consumer::prop6() {
+masd::cpp_ref_impl::cpp_model::char_primitive& consumer::prop6() {
     return prop6_;
 }
 
-void consumer::prop6(const cpp_ref_impl::cpp_model::char_primitive& v) {
+void consumer::prop6(const masd::cpp_ref_impl::cpp_model::char_primitive& v) {
     prop6_ = v;
 }
 
-void consumer::prop6(const cpp_ref_impl::cpp_model::char_primitive&& v) {
+void consumer::prop6(const masd::cpp_ref_impl::cpp_model::char_primitive&& v) {
     prop6_ = std::move(v);
 }
 
-const cpp_ref_impl::cpp_model::uchar_primitive& consumer::prop7() const {
+const masd::cpp_ref_impl::cpp_model::uchar_primitive& consumer::prop7() const {
     return prop7_;
 }
 
-cpp_ref_impl::cpp_model::uchar_primitive& consumer::prop7() {
+masd::cpp_ref_impl::cpp_model::uchar_primitive& consumer::prop7() {
     return prop7_;
 }
 
-void consumer::prop7(const cpp_ref_impl::cpp_model::uchar_primitive& v) {
+void consumer::prop7(const masd::cpp_ref_impl::cpp_model::uchar_primitive& v) {
     prop7_ = v;
 }
 
-void consumer::prop7(const cpp_ref_impl::cpp_model::uchar_primitive&& v) {
+void consumer::prop7(const masd::cpp_ref_impl::cpp_model::uchar_primitive&& v) {
     prop7_ = std::move(v);
 }
 
-const cpp_ref_impl::cpp_model::double_primitive& consumer::prop8() const {
+const masd::cpp_ref_impl::cpp_model::double_primitive& consumer::prop8() const {
     return prop8_;
 }
 
-cpp_ref_impl::cpp_model::double_primitive& consumer::prop8() {
+masd::cpp_ref_impl::cpp_model::double_primitive& consumer::prop8() {
     return prop8_;
 }
 
-void consumer::prop8(const cpp_ref_impl::cpp_model::double_primitive& v) {
+void consumer::prop8(const masd::cpp_ref_impl::cpp_model::double_primitive& v) {
     prop8_ = v;
 }
 
-void consumer::prop8(const cpp_ref_impl::cpp_model::double_primitive&& v) {
+void consumer::prop8(const masd::cpp_ref_impl::cpp_model::double_primitive&& v) {
     prop8_ = std::move(v);
 }
 
-const cpp_ref_impl::cpp_model::float_primitive& consumer::prop9() const {
+const masd::cpp_ref_impl::cpp_model::float_primitive& consumer::prop9() const {
     return prop9_;
 }
 
-cpp_ref_impl::cpp_model::float_primitive& consumer::prop9() {
+masd::cpp_ref_impl::cpp_model::float_primitive& consumer::prop9() {
     return prop9_;
 }
 
-void consumer::prop9(const cpp_ref_impl::cpp_model::float_primitive& v) {
+void consumer::prop9(const masd::cpp_ref_impl::cpp_model::float_primitive& v) {
     prop9_ = v;
 }
 
-void consumer::prop9(const cpp_ref_impl::cpp_model::float_primitive&& v) {
+void consumer::prop9(const masd::cpp_ref_impl::cpp_model::float_primitive&& v) {
     prop9_ = std::move(v);
 }
 
-const cpp_ref_impl::cpp_model::bool_primitive& consumer::prop10() const {
+const masd::cpp_ref_impl::cpp_model::bool_primitive& consumer::prop10() const {
     return prop10_;
 }
 
-cpp_ref_impl::cpp_model::bool_primitive& consumer::prop10() {
+masd::cpp_ref_impl::cpp_model::bool_primitive& consumer::prop10() {
     return prop10_;
 }
 
-void consumer::prop10(const cpp_ref_impl::cpp_model::bool_primitive& v) {
+void consumer::prop10(const masd::cpp_ref_impl::cpp_model::bool_primitive& v) {
     prop10_ = v;
 }
 
-void consumer::prop10(const cpp_ref_impl::cpp_model::bool_primitive&& v) {
+void consumer::prop10(const masd::cpp_ref_impl::cpp_model::bool_primitive&& v) {
     prop10_ = std::move(v);
 }
 

@@ -18,13 +18,13 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/types/package_2/class_2.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/package_2/class_2.hpp"
 
-namespace cpp_ref_impl::cpp_model::package_2 {
+namespace masd::cpp_ref_impl::cpp_model::package_2 {
 
 class_2::class_2(
-    const cpp_ref_impl::cpp_model::package_2::class_1& prop_0,
-    const cpp_ref_impl::cpp_model::class_1& prop_1)
+    const masd::cpp_ref_impl::cpp_model::package_2::class_1& prop_0,
+    const masd::cpp_ref_impl::cpp_model::class_1& prop_1)
     : prop_0_(prop_0),
       prop_1_(prop_1) { }
 
@@ -45,35 +45,35 @@ class_2& class_2::operator=(class_2 other) {
     return *this;
 }
 
-const cpp_ref_impl::cpp_model::package_2::class_1& class_2::prop_0() const {
+const masd::cpp_ref_impl::cpp_model::package_2::class_1& class_2::prop_0() const {
     return prop_0_;
 }
 
-cpp_ref_impl::cpp_model::package_2::class_1& class_2::prop_0() {
+masd::cpp_ref_impl::cpp_model::package_2::class_1& class_2::prop_0() {
     return prop_0_;
 }
 
-void class_2::prop_0(const cpp_ref_impl::cpp_model::package_2::class_1& v) {
+void class_2::prop_0(const masd::cpp_ref_impl::cpp_model::package_2::class_1& v) {
     prop_0_ = v;
 }
 
-void class_2::prop_0(const cpp_ref_impl::cpp_model::package_2::class_1&& v) {
+void class_2::prop_0(const masd::cpp_ref_impl::cpp_model::package_2::class_1&& v) {
     prop_0_ = std::move(v);
 }
 
-const cpp_ref_impl::cpp_model::class_1& class_2::prop_1() const {
+const masd::cpp_ref_impl::cpp_model::class_1& class_2::prop_1() const {
     return prop_1_;
 }
 
-cpp_ref_impl::cpp_model::class_1& class_2::prop_1() {
+masd::cpp_ref_impl::cpp_model::class_1& class_2::prop_1() {
     return prop_1_;
 }
 
-void class_2::prop_1(const cpp_ref_impl::cpp_model::class_1& v) {
+void class_2::prop_1(const masd::cpp_ref_impl::cpp_model::class_1& v) {
     prop_1_ = v;
 }
 
-void class_2::prop_1(const cpp_ref_impl::cpp_model::class_1&& v) {
+void class_2::prop_1(const masd::cpp_ref_impl::cpp_model::class_1&& v) {
     prop_1_ = std::move(v);
 }
 

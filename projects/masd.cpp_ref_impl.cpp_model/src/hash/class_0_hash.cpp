@@ -18,14 +18,14 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/hash/class_0_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/class_0_hash.hpp"
 
 namespace {
 
 
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::size_t class_0_hasher::hash(const class_0&) {
     std::size_t seed(0);

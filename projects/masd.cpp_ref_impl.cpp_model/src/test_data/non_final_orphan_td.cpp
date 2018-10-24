@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/test_data/non_final_orphan_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/non_final_orphan_td.hpp"
 
 namespace {
 
@@ -28,7 +28,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 non_final_orphan_generator::non_final_orphan_generator() : position_(0) { }
 

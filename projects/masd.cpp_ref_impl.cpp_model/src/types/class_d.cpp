@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/types/class_d.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/class_d.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 bool class_d::operator==(const class_d& /*rhs*/) const {
     return true;

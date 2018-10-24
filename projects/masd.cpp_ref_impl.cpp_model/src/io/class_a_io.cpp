@@ -19,13 +19,13 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/io/class_a_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/class_a_io.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const class_a& v) {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::class_a\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::class_a\"" << ", "
       << "\"prop_0\": " << v.prop_0()
       << " }";
     return(s);

@@ -19,14 +19,14 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/io/ushort_primitive_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/ushort_primitive_io.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const ushort_primitive& v) {
 
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::ushort_primitive\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::ushort_primitive\"" << ", "
       << "\"value\": " << v.value()
       << " }";
 

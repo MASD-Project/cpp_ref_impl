@@ -20,9 +20,9 @@
  */
 #include <ostream>
 #include <boost/io/ios_state.hpp>
-#include "cpp_ref_impl/cpp_model/io/builtins_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/builtins_io.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const builtins& v) {
     boost::io::ios_flags_saver ifs(s);
@@ -32,7 +32,7 @@ std::ostream& operator<<(std::ostream& s, const builtins& v) {
     s.setf(std::ios::showpoint);
 
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::builtins\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::builtins\"" << ", "
       << "\"bool_property\": " << v.bool_property() << ", "
       << "\"char_property\": " << "\"" << v.char_property() << "\"" << ", "
       << "\"uchar_property\": " << "\"" << v.uchar_property() << "\"" << ", "

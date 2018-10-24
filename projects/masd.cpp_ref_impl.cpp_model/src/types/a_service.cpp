@@ -18,13 +18,12 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/types/a_service.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/a_service.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 bool a_service::operator==(const a_service& /*rhs*/) const {
     return true;
 }
 
-} }
+}

@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_TYPES_NON_FINAL_LEAF_HPP
-#define CPP_REF_IMPL_CPP_MODEL_TYPES_NON_FINAL_LEAF_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_NON_FINAL_LEAF_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_NON_FINAL_LEAF_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -27,12 +27,12 @@
 
 #include <iosfwd>
 #include <algorithm>
-#include "cpp_ref_impl/cpp_model/types/descendant1.hpp"
-#include "cpp_ref_impl/cpp_model/serialization/non_final_leaf_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/descendant1.hpp"
+#include "masd.cpp_ref_impl.cpp_model/serialization/non_final_leaf_fwd_ser.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
-class non_final_leaf : public cpp_ref_impl::cpp_model::descendant1 {
+class non_final_leaf : public masd::cpp_ref_impl::cpp_model::descendant1 {
 public:
     non_final_leaf(const non_final_leaf&) = default;
     non_final_leaf(non_final_leaf&&) = default;
@@ -47,10 +47,10 @@ public:
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::cpp_model::non_final_leaf& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::cpp_model::non_final_leaf& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::cpp_model::non_final_leaf& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::cpp_model::non_final_leaf& v, unsigned int version);
 
 public:
     using base::accept;
@@ -73,7 +73,7 @@ public:
     }
 
 public:
-    bool equals(const cpp_ref_impl::cpp_model::base& other) const override;
+    bool equals(const masd::cpp_ref_impl::cpp_model::base& other) const override;
 
 public:
     void swap(non_final_leaf& other) noexcept;
@@ -89,8 +89,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::cpp_model::non_final_leaf& lhs,
-    cpp_ref_impl::cpp_model::non_final_leaf& rhs) {
+    masd::cpp_ref_impl::cpp_model::non_final_leaf& lhs,
+    masd::cpp_ref_impl::cpp_model::non_final_leaf& rhs) {
     lhs.swap(rhs);
 }
 

@@ -19,13 +19,13 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/types/parent_without_members.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/parent_without_members.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 void parent_without_members::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::parent_without_members\"" << " }";
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::parent_without_members\"" << " }";
 }
 
 void parent_without_members::swap(parent_without_members&) noexcept {

@@ -19,35 +19,35 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/io/move_ctor_base_io.hpp"
-#include "cpp_ref_impl/cpp_model/types/move_ctor_empty_descendant.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/move_ctor_base_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/move_ctor_empty_descendant.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 move_ctor_empty_descendant::move_ctor_empty_descendant(const boost::filesystem::path& prop_0)
-    : cpp_ref_impl::cpp_model::move_ctor_base(prop_0) { }
+    : masd::cpp_ref_impl::cpp_model::move_ctor_base(prop_0) { }
 
 void move_ctor_empty_descendant::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::move_ctor_empty_descendant\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::move_ctor_empty_descendant\"" << ", "
       << "\"__parent_0__\": ";
-    cpp_ref_impl::cpp_model::move_ctor_base::to_stream(s);
+    masd::cpp_ref_impl::cpp_model::move_ctor_base::to_stream(s);
     s << " }";
 }
 
 void move_ctor_empty_descendant::swap(move_ctor_empty_descendant& other) noexcept {
-    cpp_ref_impl::cpp_model::move_ctor_base::swap(other);
+    masd::cpp_ref_impl::cpp_model::move_ctor_base::swap(other);
 
 }
 
-bool move_ctor_empty_descendant::equals(const cpp_ref_impl::cpp_model::move_ctor_base& other) const {
+bool move_ctor_empty_descendant::equals(const masd::cpp_ref_impl::cpp_model::move_ctor_base& other) const {
     const move_ctor_empty_descendant* const p(dynamic_cast<const move_ctor_empty_descendant* const>(&other));
     if (!p) return false;
     return *this == *p;
 }
 
 bool move_ctor_empty_descendant::operator==(const move_ctor_empty_descendant& rhs) const {
-    return cpp_ref_impl::cpp_model::move_ctor_base::compare(rhs);
+    return masd::cpp_ref_impl::cpp_model::move_ctor_base::compare(rhs);
 }
 
 move_ctor_empty_descendant& move_ctor_empty_descendant::operator=(move_ctor_empty_descendant other) {

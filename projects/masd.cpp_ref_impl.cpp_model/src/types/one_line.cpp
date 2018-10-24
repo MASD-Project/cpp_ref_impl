@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/types/one_line.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/one_line.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 one_line::one_line()
     : prop_0_(static_cast<int>(0)),

@@ -5,8 +5,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{876B2828-8A0B-495F-8340-0357690162E4}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>cpp_ref_impl.cpp_model</RootNamespace>
-    <AssemblyName>cpp_ref_impl.cpp_model</AssemblyName>
+    <RootNamespace>masd.cpp_ref_impl.cpp_model</RootNamespace>
+    <AssemblyName>masd.cpp_ref_impl.cpp_model</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

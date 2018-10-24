@@ -19,13 +19,13 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/io/non_final_orphan_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/non_final_orphan_io.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const non_final_orphan& v) {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::non_final_orphan\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::non_final_orphan\"" << ", "
       << "\"prop_0\": " << v.prop_0()
       << " }";
     return(s);

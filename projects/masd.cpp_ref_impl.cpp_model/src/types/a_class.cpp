@@ -18,19 +18,19 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/types/a_class.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/a_class.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 a_class::a_class()
-    : colour_type_(static_cast<cpp_ref_impl::cpp_model::colour_types>(0)),
-      book_type_(static_cast<cpp_ref_impl::cpp_model::book_types>(0)),
-      shape_type_(static_cast<cpp_ref_impl::cpp_model::package_4::shape_types>(0)) { }
+    : colour_type_(static_cast<masd::cpp_ref_impl::cpp_model::colour_types>(0)),
+      book_type_(static_cast<masd::cpp_ref_impl::cpp_model::book_types>(0)),
+      shape_type_(static_cast<masd::cpp_ref_impl::cpp_model::package_4::shape_types>(0)) { }
 
 a_class::a_class(
-    const cpp_ref_impl::cpp_model::colour_types colour_type,
-    const cpp_ref_impl::cpp_model::book_types book_type,
-    const cpp_ref_impl::cpp_model::package_4::shape_types shape_type)
+    const masd::cpp_ref_impl::cpp_model::colour_types colour_type,
+    const masd::cpp_ref_impl::cpp_model::book_types book_type,
+    const masd::cpp_ref_impl::cpp_model::package_4::shape_types shape_type)
     : colour_type_(colour_type),
       book_type_(book_type),
       shape_type_(shape_type) { }
@@ -54,27 +54,27 @@ a_class& a_class::operator=(a_class other) {
     return *this;
 }
 
-cpp_ref_impl::cpp_model::colour_types a_class::colour_type() const {
+masd::cpp_ref_impl::cpp_model::colour_types a_class::colour_type() const {
     return colour_type_;
 }
 
-void a_class::colour_type(const cpp_ref_impl::cpp_model::colour_types v) {
+void a_class::colour_type(const masd::cpp_ref_impl::cpp_model::colour_types v) {
     colour_type_ = v;
 }
 
-cpp_ref_impl::cpp_model::book_types a_class::book_type() const {
+masd::cpp_ref_impl::cpp_model::book_types a_class::book_type() const {
     return book_type_;
 }
 
-void a_class::book_type(const cpp_ref_impl::cpp_model::book_types v) {
+void a_class::book_type(const masd::cpp_ref_impl::cpp_model::book_types v) {
     book_type_ = v;
 }
 
-cpp_ref_impl::cpp_model::package_4::shape_types a_class::shape_type() const {
+masd::cpp_ref_impl::cpp_model::package_4::shape_types a_class::shape_type() const {
     return shape_type_;
 }
 
-void a_class::shape_type(const cpp_ref_impl::cpp_model::package_4::shape_types v) {
+void a_class::shape_type(const masd::cpp_ref_impl::cpp_model::package_4::shape_types v) {
     shape_type_ = v;
 }
 

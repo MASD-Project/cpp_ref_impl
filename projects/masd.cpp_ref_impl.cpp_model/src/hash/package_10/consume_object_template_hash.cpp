@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/hash/package_10/consume_object_template_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/package_10/consume_object_template_hash.hpp"
 
 namespace {
 
@@ -30,7 +30,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl::cpp_model::package_10 {
+namespace masd::cpp_ref_impl::cpp_model::package_10 {
 
 std::size_t consume_object_template_hasher::hash(const consume_object_template& v) {
     std::size_t seed(0);

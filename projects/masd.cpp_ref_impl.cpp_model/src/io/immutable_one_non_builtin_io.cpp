@@ -20,7 +20,7 @@
  */
 #include <ostream>
 #include <boost/algorithm/string.hpp>
-#include "cpp_ref_impl/cpp_model/io/immutable_one_non_builtin_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/immutable_one_non_builtin_io.hpp"
 
 inline std::string tidy_up_string(std::string s) {
     boost::replace_all(s, "\r\n", "<new_line>");
@@ -30,11 +30,11 @@ inline std::string tidy_up_string(std::string s) {
     return s;
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const immutable_one_non_builtin& v) {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::immutable_one_non_builtin\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::immutable_one_non_builtin\"" << ", "
       << "\"prop_0\": " << "\"" << tidy_up_string(v.prop_0()) << "\""
       << " }";
     return(s);

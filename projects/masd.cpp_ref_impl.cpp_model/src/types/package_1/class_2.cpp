@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/types/package_1/class_2.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/package_1/class_2.hpp"
 
-namespace cpp_ref_impl::cpp_model::package_1 {
+namespace masd::cpp_ref_impl::cpp_model::package_1 {
 
 class_2::class_2()
     : prop_0_(static_cast<int>(0)) { }

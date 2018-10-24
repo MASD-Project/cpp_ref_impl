@@ -18,22 +18,22 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_HASH_TEST_ALL_KNOBS_HASH_HPP
-#define CPP_REF_IMPL_CPP_MODEL_HASH_TEST_ALL_KNOBS_HASH_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_HASH_TEST_ALL_KNOBS_HASH_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_HASH_TEST_ALL_KNOBS_HASH_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <functional>
-#include "cpp_ref_impl/cpp_model/types/test_all_knobs.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/test_all_knobs.hpp"
 
 namespace std {
 
 template<>
-struct hash<cpp_ref_impl::cpp_model::test_all_knobs> {
+struct hash<masd::cpp_ref_impl::cpp_model::test_all_knobs> {
 public:
-    size_t operator()(const cpp_ref_impl::cpp_model::test_all_knobs& v) const {
+    size_t operator()(const masd::cpp_ref_impl::cpp_model::test_all_knobs& v) const {
         return std::hash<unsigned int>()(static_cast<unsigned int>(v));
     }
 };

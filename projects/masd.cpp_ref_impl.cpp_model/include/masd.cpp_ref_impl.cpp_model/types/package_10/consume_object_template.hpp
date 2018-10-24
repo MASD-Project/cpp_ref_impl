@@ -18,17 +18,17 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_TYPES_PACKAGE_10_CONSUME_OBJECT_TEMPLATE_HPP
-#define CPP_REF_IMPL_CPP_MODEL_TYPES_PACKAGE_10_CONSUME_OBJECT_TEMPLATE_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_PACKAGE_10_CONSUME_OBJECT_TEMPLATE_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_PACKAGE_10_CONSUME_OBJECT_TEMPLATE_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <algorithm>
-#include "cpp_ref_impl/cpp_model/serialization/package_10/consume_object_template_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.cpp_model/serialization/package_10/consume_object_template_fwd_ser.hpp"
 
-namespace cpp_ref_impl::cpp_model::package_10 {
+namespace masd::cpp_ref_impl::cpp_model::package_10 {
 
 class consume_object_template final {
 public:
@@ -44,10 +44,10 @@ public:
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::cpp_model::package_10::consume_object_template& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::cpp_model::package_10::consume_object_template& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::cpp_model::package_10::consume_object_template& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::cpp_model::package_10::consume_object_template& v, unsigned int version);
 
 public:
     int prop_0() const;
@@ -73,8 +73,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::cpp_model::package_10::consume_object_template& lhs,
-    cpp_ref_impl::cpp_model::package_10::consume_object_template& rhs) {
+    masd::cpp_ref_impl::cpp_model::package_10::consume_object_template& lhs,
+    masd::cpp_ref_impl::cpp_model::package_10::consume_object_template& rhs) {
     lhs.swap(rhs);
 }
 

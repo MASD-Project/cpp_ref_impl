@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/test_data/child_with_members_td.hpp"
-#include "cpp_ref_impl/cpp_model/test_data/parent_without_members_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/child_with_members_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/parent_without_members_td.hpp"
 
 namespace {
 
@@ -29,13 +29,13 @@ unsigned int create_unsigned_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 child_with_members_generator::child_with_members_generator() : position_(0) { }
 
 void child_with_members_generator::
 populate(const unsigned int position, result_type& v) {
-    cpp_ref_impl::cpp_model::parent_without_members_generator::populate(position, v);
+    masd::cpp_ref_impl::cpp_model::parent_without_members_generator::populate(position, v);
     v.prop_0(create_unsigned_int(position + 0));
 }
 

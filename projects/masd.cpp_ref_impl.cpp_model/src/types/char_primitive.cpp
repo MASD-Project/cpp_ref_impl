@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/types/char_primitive.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/char_primitive.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 char_primitive::char_primitive(const char value)
     : value_(value) { }

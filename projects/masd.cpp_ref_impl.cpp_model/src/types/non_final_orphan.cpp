@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/types/non_final_orphan.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/non_final_orphan.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 non_final_orphan::non_final_orphan()
     : prop_0_(static_cast<int>(0)) { }

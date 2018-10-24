@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/test_data/package_1/class_4_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/package_1/class_4_td.hpp"
 
 namespace {
 
@@ -28,7 +28,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::cpp_model::package_1 {
+namespace masd::cpp_ref_impl::cpp_model::package_1 {
 
 class_4_generator::class_4_generator() : position_(0) { }
 

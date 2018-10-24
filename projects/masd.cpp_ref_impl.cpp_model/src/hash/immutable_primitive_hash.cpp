@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/hash/immutable_primitive_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/immutable_primitive_hash.hpp"
 
 namespace {
 
@@ -30,7 +30,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::size_t immutable_primitive_hasher::hash(const immutable_primitive& v) {
     std::size_t seed(0);

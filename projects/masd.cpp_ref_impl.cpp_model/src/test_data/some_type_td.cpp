@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/test_data/some_type_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/some_type_td.hpp"
 
 namespace {
 
@@ -28,8 +28,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl {
-namespace cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 some_type_generator::some_type_generator() : position_(0) { }
 
@@ -57,4 +56,4 @@ some_type_generator::operator()() {
     return create(position_++);
 }
 
-} }
+}

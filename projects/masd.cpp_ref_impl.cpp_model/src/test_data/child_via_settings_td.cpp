@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/test_data/child_via_settings_td.hpp"
-#include "cpp_ref_impl/cpp_model/test_data/parent_with_members_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/child_via_settings_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/parent_with_members_td.hpp"
 
 namespace {
 
@@ -29,13 +29,13 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 child_via_settings_generator::child_via_settings_generator() : position_(0) { }
 
 void child_via_settings_generator::
 populate(const unsigned int position, result_type& v) {
-    cpp_ref_impl::cpp_model::parent_with_members_generator::populate(position, v);
+    masd::cpp_ref_impl::cpp_model::parent_with_members_generator::populate(position, v);
     v.prop_1(create_int(position + 0));
 }
 

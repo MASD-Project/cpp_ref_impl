@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/test_data/immutable_one_builtin_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/immutable_one_builtin_td.hpp"
 
 namespace {
 
@@ -28,7 +28,7 @@ bool create_bool(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 immutable_one_builtin_generator::immutable_one_builtin_generator() : position_(0) { }
 

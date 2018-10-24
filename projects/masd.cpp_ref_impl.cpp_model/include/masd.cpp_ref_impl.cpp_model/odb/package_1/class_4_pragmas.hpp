@@ -18,14 +18,14 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_ODB_PACKAGE_1_CLASS_4_PRAGMAS_HPP
-#define CPP_REF_IMPL_CPP_MODEL_ODB_PACKAGE_1_CLASS_4_PRAGMAS_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_ODB_PACKAGE_1_CLASS_4_PRAGMAS_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_ODB_PACKAGE_1_CLASS_4_PRAGMAS_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/cpp_model/types/package_1/class_4.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/package_1/class_4.hpp"
 
 // class has no ODB pragmas defined.
 

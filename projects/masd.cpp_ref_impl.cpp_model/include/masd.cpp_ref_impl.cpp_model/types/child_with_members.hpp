@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_TYPES_CHILD_WITH_MEMBERS_HPP
-#define CPP_REF_IMPL_CPP_MODEL_TYPES_CHILD_WITH_MEMBERS_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_CHILD_WITH_MEMBERS_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_CHILD_WITH_MEMBERS_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -27,12 +27,12 @@
 
 #include <iosfwd>
 #include <algorithm>
-#include "cpp_ref_impl/cpp_model/types/parent_without_members.hpp"
-#include "cpp_ref_impl/cpp_model/serialization/child_with_members_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/parent_without_members.hpp"
+#include "masd.cpp_ref_impl.cpp_model/serialization/child_with_members_fwd_ser.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
-class child_with_members final : public cpp_ref_impl::cpp_model::parent_without_members {
+class child_with_members final : public masd::cpp_ref_impl::cpp_model::parent_without_members {
 public:
     child_with_members(const child_with_members&) = default;
     child_with_members(child_with_members&&) = default;
@@ -47,10 +47,10 @@ public:
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::cpp_model::child_with_members& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::cpp_model::child_with_members& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::cpp_model::child_with_members& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::cpp_model::child_with_members& v, unsigned int version);
 
 public:
     void to_stream(std::ostream& s) const override;
@@ -66,7 +66,7 @@ public:
     }
 
 public:
-    bool equals(const cpp_ref_impl::cpp_model::parent_without_members& other) const override;
+    bool equals(const masd::cpp_ref_impl::cpp_model::parent_without_members& other) const override;
 
 public:
     void swap(child_with_members& other) noexcept;
@@ -82,8 +82,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::cpp_model::child_with_members& lhs,
-    cpp_ref_impl::cpp_model::child_with_members& rhs) {
+    masd::cpp_ref_impl::cpp_model::child_with_members& lhs,
+    masd::cpp_ref_impl::cpp_model::child_with_members& rhs) {
     lhs.swap(rhs);
 }
 

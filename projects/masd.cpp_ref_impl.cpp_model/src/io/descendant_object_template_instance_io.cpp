@@ -19,13 +19,13 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/io/descendant_object_template_instance_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/descendant_object_template_instance_io.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const descendant_object_template_instance& v) {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::descendant_object_template_instance\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::descendant_object_template_instance\"" << ", "
       << "\"prop_1\": " << v.prop_1() << ", "
       << "\"prop_0\": " << v.prop_0()
       << " }";

@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/types/multi_line.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/multi_line.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 bool multi_line::operator==(const multi_line& /*rhs*/) const {
     return true;

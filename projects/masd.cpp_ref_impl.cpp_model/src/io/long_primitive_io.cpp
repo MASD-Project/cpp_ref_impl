@@ -19,14 +19,14 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/io/long_primitive_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/long_primitive_io.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const long_primitive& v) {
 
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::long_primitive\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::long_primitive\"" << ", "
       << "\"value\": " << v.value()
       << " }";
 

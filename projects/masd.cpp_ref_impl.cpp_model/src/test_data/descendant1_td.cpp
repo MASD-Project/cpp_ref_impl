@@ -18,23 +18,23 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/test_data/base_td.hpp"
-#include "cpp_ref_impl/cpp_model/test_data/descendant1_td.hpp"
-#include "cpp_ref_impl/cpp_model/test_data/descendant3_td.hpp"
-#include "cpp_ref_impl/cpp_model/test_data/non_final_leaf_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/base_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/descendant1_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/descendant3_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/non_final_leaf_td.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 void descendant1_generator::
 populate(const unsigned int position, result_type& v) {
-    cpp_ref_impl::cpp_model::base_generator::populate(position, v);
+    masd::cpp_ref_impl::cpp_model::base_generator::populate(position, v);
 }
 
 descendant1_generator::result_type*
 descendant1_generator::create_ptr(const unsigned int position) {
     if ((position % 1) == 0)
-        return cpp_ref_impl::cpp_model::non_final_leaf_generator::create_ptr(position);
-    return cpp_ref_impl::cpp_model::descendant3_generator::create_ptr(position);
+        return masd::cpp_ref_impl::cpp_model::non_final_leaf_generator::create_ptr(position);
+    return masd::cpp_ref_impl::cpp_model::descendant3_generator::create_ptr(position);
 }
 
 }

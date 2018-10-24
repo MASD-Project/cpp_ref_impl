@@ -18,23 +18,23 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_TEST_DATA_PACKAGE_6_CHILD_VIA_SETTINGS_TD_HPP
-#define CPP_REF_IMPL_CPP_MODEL_TEST_DATA_PACKAGE_6_CHILD_VIA_SETTINGS_TD_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_TEST_DATA_PACKAGE_6_CHILD_VIA_SETTINGS_TD_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_TEST_DATA_PACKAGE_6_CHILD_VIA_SETTINGS_TD_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/cpp_model/types/package_6/child_via_settings.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/package_6/child_via_settings.hpp"
 
-namespace cpp_ref_impl::cpp_model::package_6 {
+namespace masd::cpp_ref_impl::cpp_model::package_6 {
 
 class child_via_settings_generator {
 public:
     child_via_settings_generator();
 
 public:
-    typedef cpp_ref_impl::cpp_model::package_6::child_via_settings result_type;
+    typedef masd::cpp_ref_impl::cpp_model::package_6::child_via_settings result_type;
 
 public:
     static void populate(const unsigned int position, result_type& v);

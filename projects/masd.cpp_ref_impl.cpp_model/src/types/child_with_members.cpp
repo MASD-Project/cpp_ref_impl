@@ -19,43 +19,43 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/types/child_with_members.hpp"
-#include "cpp_ref_impl/cpp_model/io/parent_without_members_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/child_with_members.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/parent_without_members_io.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 child_with_members::child_with_members()
     : prop_0_(static_cast<unsigned int>(0)) { }
 
 child_with_members::child_with_members(const unsigned int prop_0)
-    : cpp_ref_impl::cpp_model::parent_without_members(),
+    : masd::cpp_ref_impl::cpp_model::parent_without_members(),
       prop_0_(prop_0) { }
 
 void child_with_members::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::child_with_members\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::child_with_members\"" << ", "
       << "\"__parent_0__\": ";
-    cpp_ref_impl::cpp_model::parent_without_members::to_stream(s);
+    masd::cpp_ref_impl::cpp_model::parent_without_members::to_stream(s);
     s << ", "
       << "\"prop_0\": " << prop_0_
       << " }";
 }
 
 void child_with_members::swap(child_with_members& other) noexcept {
-    cpp_ref_impl::cpp_model::parent_without_members::swap(other);
+    masd::cpp_ref_impl::cpp_model::parent_without_members::swap(other);
 
     using std::swap;
     swap(prop_0_, other.prop_0_);
 }
 
-bool child_with_members::equals(const cpp_ref_impl::cpp_model::parent_without_members& other) const {
+bool child_with_members::equals(const masd::cpp_ref_impl::cpp_model::parent_without_members& other) const {
     const child_with_members* const p(dynamic_cast<const child_with_members* const>(&other));
     if (!p) return false;
     return *this == *p;
 }
 
 bool child_with_members::operator==(const child_with_members& rhs) const {
-    return cpp_ref_impl::cpp_model::parent_without_members::compare(rhs) &&
+    return masd::cpp_ref_impl::cpp_model::parent_without_members::compare(rhs) &&
         prop_0_ == rhs.prop_0_;
 }
 

@@ -19,9 +19,9 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/io/package_7/parent_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/package_7/parent_io.hpp"
 
-namespace cpp_ref_impl::cpp_model::package_7 {
+namespace masd::cpp_ref_impl::cpp_model::package_7 {
 
 std::ostream& operator<<(std::ostream& s, const parent& v) {
     v.to_stream(s);

@@ -18,25 +18,25 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_ODB_CONSUMER_PRAGMAS_HPP
-#define CPP_REF_IMPL_CPP_MODEL_ODB_CONSUMER_PRAGMAS_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_ODB_CONSUMER_PRAGMAS_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_ODB_CONSUMER_PRAGMAS_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/cpp_model/types/consumer.hpp"
-#include "cpp_ref_impl/cpp_model/odb/int_primitive_pragmas.hpp"
-#include "cpp_ref_impl/cpp_model/odb/bool_primitive_pragmas.hpp"
-#include "cpp_ref_impl/cpp_model/odb/char_primitive_pragmas.hpp"
-#include "cpp_ref_impl/cpp_model/odb/long_primitive_pragmas.hpp"
-#include "cpp_ref_impl/cpp_model/odb/uint_primitive_pragmas.hpp"
-#include "cpp_ref_impl/cpp_model/odb/float_primitive_pragmas.hpp"
-#include "cpp_ref_impl/cpp_model/odb/short_primitive_pragmas.hpp"
-#include "cpp_ref_impl/cpp_model/odb/uchar_primitive_pragmas.hpp"
-#include "cpp_ref_impl/cpp_model/odb/ulong_primitive_pragmas.hpp"
-#include "cpp_ref_impl/cpp_model/odb/double_primitive_pragmas.hpp"
-#include "cpp_ref_impl/cpp_model/odb/ushort_primitive_pragmas.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/consumer.hpp"
+#include "masd.cpp_ref_impl.cpp_model/odb/int_primitive_pragmas.hpp"
+#include "masd.cpp_ref_impl.cpp_model/odb/bool_primitive_pragmas.hpp"
+#include "masd.cpp_ref_impl.cpp_model/odb/char_primitive_pragmas.hpp"
+#include "masd.cpp_ref_impl.cpp_model/odb/long_primitive_pragmas.hpp"
+#include "masd.cpp_ref_impl.cpp_model/odb/uint_primitive_pragmas.hpp"
+#include "masd.cpp_ref_impl.cpp_model/odb/float_primitive_pragmas.hpp"
+#include "masd.cpp_ref_impl.cpp_model/odb/short_primitive_pragmas.hpp"
+#include "masd.cpp_ref_impl.cpp_model/odb/uchar_primitive_pragmas.hpp"
+#include "masd.cpp_ref_impl.cpp_model/odb/ulong_primitive_pragmas.hpp"
+#include "masd.cpp_ref_impl.cpp_model/odb/double_primitive_pragmas.hpp"
+#include "masd.cpp_ref_impl.cpp_model/odb/ushort_primitive_pragmas.hpp"
 
 // class has no ODB pragmas defined.
 

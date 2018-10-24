@@ -19,10 +19,10 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/io/child_with_members_io.hpp"
-#include "cpp_ref_impl/cpp_model/io/parent_without_members_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/child_with_members_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/parent_without_members_io.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const child_with_members& v) {
     v.to_stream(s);

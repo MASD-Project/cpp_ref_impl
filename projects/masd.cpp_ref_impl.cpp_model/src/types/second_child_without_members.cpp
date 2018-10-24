@@ -19,35 +19,35 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/io/parent_with_members_io.hpp"
-#include "cpp_ref_impl/cpp_model/types/second_child_without_members.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/parent_with_members_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/second_child_without_members.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 second_child_without_members::second_child_without_members(const int prop_0)
-    : cpp_ref_impl::cpp_model::parent_with_members(prop_0) { }
+    : masd::cpp_ref_impl::cpp_model::parent_with_members(prop_0) { }
 
 void second_child_without_members::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::second_child_without_members\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::second_child_without_members\"" << ", "
       << "\"__parent_0__\": ";
-    cpp_ref_impl::cpp_model::parent_with_members::to_stream(s);
+    masd::cpp_ref_impl::cpp_model::parent_with_members::to_stream(s);
     s << " }";
 }
 
 void second_child_without_members::swap(second_child_without_members& other) noexcept {
-    cpp_ref_impl::cpp_model::parent_with_members::swap(other);
+    masd::cpp_ref_impl::cpp_model::parent_with_members::swap(other);
 
 }
 
-bool second_child_without_members::equals(const cpp_ref_impl::cpp_model::parent_with_members& other) const {
+bool second_child_without_members::equals(const masd::cpp_ref_impl::cpp_model::parent_with_members& other) const {
     const second_child_without_members* const p(dynamic_cast<const second_child_without_members* const>(&other));
     if (!p) return false;
     return *this == *p;
 }
 
 bool second_child_without_members::operator==(const second_child_without_members& rhs) const {
-    return cpp_ref_impl::cpp_model::parent_with_members::compare(rhs);
+    return masd::cpp_ref_impl::cpp_model::parent_with_members::compare(rhs);
 }
 
 second_child_without_members& second_child_without_members::operator=(second_child_without_members other) {

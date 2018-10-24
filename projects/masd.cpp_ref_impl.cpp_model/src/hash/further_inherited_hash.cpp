@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/hash/further_inherited_hash.hpp"
-#include "cpp_ref_impl/cpp_model/hash/base_with_object_template_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/further_inherited_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/base_with_object_template_hash.hpp"
 
 namespace {
 
@@ -31,12 +31,12 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::size_t further_inherited_hasher::hash(const further_inherited& v) {
     std::size_t seed(0);
 
-    combine(seed, dynamic_cast<const cpp_ref_impl::cpp_model::base_with_object_template&>(v));
+    combine(seed, dynamic_cast<const masd::cpp_ref_impl::cpp_model::base_with_object_template&>(v));
 
     combine(seed, v.prop_3());
     combine(seed, v.prop_1());

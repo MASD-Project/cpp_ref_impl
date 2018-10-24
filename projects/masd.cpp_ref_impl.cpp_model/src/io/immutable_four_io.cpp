@@ -21,9 +21,9 @@
 #include <ostream>
 #include <boost/io/ios_state.hpp>
 #include <boost/algorithm/string.hpp>
-#include "cpp_ref_impl/cpp_model/io/value_io.hpp"
-#include "cpp_ref_impl/cpp_model/io/immutable_four_io.hpp"
-#include "cpp_ref_impl/cpp_model/io/immutable_one_builtin_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/value_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/immutable_four_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/immutable_one_builtin_io.hpp"
 
 inline std::string tidy_up_string(std::string s) {
     boost::replace_all(s, "\r\n", "<new_line>");
@@ -33,7 +33,7 @@ inline std::string tidy_up_string(std::string s) {
     return s;
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const immutable_four& v) {
     boost::io::ios_flags_saver ifs(s);
@@ -43,7 +43,7 @@ std::ostream& operator<<(std::ostream& s, const immutable_four& v) {
     s.setf(std::ios::showpoint);
 
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::immutable_four\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::immutable_four\"" << ", "
       << "\"prop_0\": " << v.prop_0() << ", "
       << "\"prop_1\": " << "\"" << tidy_up_string(v.prop_1()) << "\"" << ", "
       << "\"prop_2\": " << v.prop_2() << ", "

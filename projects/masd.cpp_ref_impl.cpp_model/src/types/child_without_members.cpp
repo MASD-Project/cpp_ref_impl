@@ -19,20 +19,20 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/types/child_without_members.hpp"
-#include "cpp_ref_impl/cpp_model/io/parent_without_members_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/child_without_members.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/parent_without_members_io.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 void child_without_members::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::child_without_members\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::child_without_members\"" << ", "
       << "\"__parent_0__\": ";
-    cpp_ref_impl::cpp_model::parent_without_members::to_stream(s);
+    masd::cpp_ref_impl::cpp_model::parent_without_members::to_stream(s);
     s << " }";
 }
 
-bool child_without_members::equals(const cpp_ref_impl::cpp_model::parent_without_members& other) const {
+bool child_without_members::equals(const masd::cpp_ref_impl::cpp_model::parent_without_members& other) const {
     const child_without_members* const p(dynamic_cast<const child_without_members* const>(&other));
     if (!p) return false;
     return *this == *p;

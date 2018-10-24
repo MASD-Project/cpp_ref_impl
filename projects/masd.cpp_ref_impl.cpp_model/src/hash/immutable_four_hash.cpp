@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/hash/value_hash.hpp"
-#include "cpp_ref_impl/cpp_model/hash/immutable_four_hash.hpp"
-#include "cpp_ref_impl/cpp_model/hash/immutable_one_builtin_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/value_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/immutable_four_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/immutable_one_builtin_hash.hpp"
 
 namespace {
 
@@ -32,7 +32,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::size_t immutable_four_hasher::hash(const immutable_four& v) {
     std::size_t seed(0);

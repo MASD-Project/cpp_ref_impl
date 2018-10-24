@@ -28,8 +28,8 @@ file(GLOB_RECURSE odb_files RELATIVE
    "${CMAKE_CURRENT_SOURCE_DIR}/*.cxx")
 set(files ${files} ${odb_files})
 
-add_library(cpp_model STATIC ${files})
-set_target_properties(cpp_model PROPERTIES
-    OUTPUT_NAME cpp_ref_impl.cpp_model)
+add_library(masd_cpp_ref_impl_cpp_model STATIC ${files})
+set_target_properties(masd_cpp_ref_impl_cpp_model PROPERTIES
+    OUTPUT_NAME masd_cpp_ref_impl_cpp_model)
 
-install(TARGETS cpp_model ARCHIVE DESTINATION lib COMPONENT libraries)
+install(TARGETS masd_cpp_ref_impl_cpp_model ARCHIVE DESTINATION lib COMPONENT libraries)

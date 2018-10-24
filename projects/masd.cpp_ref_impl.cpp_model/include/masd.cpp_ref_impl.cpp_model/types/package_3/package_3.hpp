@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_TYPES_PACKAGE_3_PACKAGE_3_HPP
-#define CPP_REF_IMPL_CPP_MODEL_TYPES_PACKAGE_3_PACKAGE_3_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_PACKAGE_3_PACKAGE_3_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_PACKAGE_3_PACKAGE_3_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -28,7 +28,7 @@
 /**
  * @brief package
  */
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 }
 
 #endif

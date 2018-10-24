@@ -18,17 +18,17 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_HASH_PACKAGE_9_CHILD_VIA_SETTINGS_HASH_HPP
-#define CPP_REF_IMPL_CPP_MODEL_HASH_PACKAGE_9_CHILD_VIA_SETTINGS_HASH_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_HASH_PACKAGE_9_CHILD_VIA_SETTINGS_HASH_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_HASH_PACKAGE_9_CHILD_VIA_SETTINGS_HASH_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <functional>
-#include "cpp_ref_impl/cpp_model/types/package_9/child_via_settings.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/package_9/child_via_settings.hpp"
 
-namespace cpp_ref_impl::cpp_model::package_9 {
+namespace masd::cpp_ref_impl::cpp_model::package_9 {
 
 struct child_via_settings_hasher {
 public:
@@ -40,10 +40,10 @@ public:
 namespace std {
 
 template<>
-struct hash<cpp_ref_impl::cpp_model::package_9::child_via_settings> {
+struct hash<masd::cpp_ref_impl::cpp_model::package_9::child_via_settings> {
 public:
-    size_t operator()(const cpp_ref_impl::cpp_model::package_9::child_via_settings& v) const {
-        return cpp_ref_impl::cpp_model::package_9::child_via_settings_hasher::hash(v);
+    size_t operator()(const masd::cpp_ref_impl::cpp_model::package_9::child_via_settings& v) const {
+        return masd::cpp_ref_impl::cpp_model::package_9::child_via_settings_hasher::hash(v);
     }
 };
 

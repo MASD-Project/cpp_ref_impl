@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_TYPES_FURTHER_INHERITED_HPP
-#define CPP_REF_IMPL_CPP_MODEL_TYPES_FURTHER_INHERITED_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_FURTHER_INHERITED_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_FURTHER_INHERITED_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -27,16 +27,16 @@
 
 #include <iosfwd>
 #include <algorithm>
-#include "cpp_ref_impl/cpp_model/types/base_with_object_template.hpp"
-#include "cpp_ref_impl/cpp_model/serialization/further_inherited_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/base_with_object_template.hpp"
+#include "masd.cpp_ref_impl.cpp_model/serialization/further_inherited_fwd_ser.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 /**
  * @brief Descendant class that instantiates an object template which is a descendant
  * of the object template instantiated by the base class.
  */
-class further_inherited final : public cpp_ref_impl::cpp_model::base_with_object_template {
+class further_inherited final : public masd::cpp_ref_impl::cpp_model::base_with_object_template {
 public:
     further_inherited(const further_inherited&) = default;
     further_inherited(further_inherited&&) = default;
@@ -55,10 +55,10 @@ public:
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::cpp_model::further_inherited& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::cpp_model::further_inherited& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::cpp_model::further_inherited& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::cpp_model::further_inherited& v, unsigned int version);
 
 public:
     void to_stream(std::ostream& s) const override;
@@ -87,7 +87,7 @@ public:
     }
 
 public:
-    bool equals(const cpp_ref_impl::cpp_model::base_with_object_template& other) const override;
+    bool equals(const masd::cpp_ref_impl::cpp_model::base_with_object_template& other) const override;
 
 public:
     void swap(further_inherited& other) noexcept;
@@ -104,8 +104,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::cpp_model::further_inherited& lhs,
-    cpp_ref_impl::cpp_model::further_inherited& rhs) {
+    masd::cpp_ref_impl::cpp_model::further_inherited& lhs,
+    masd::cpp_ref_impl::cpp_model::further_inherited& rhs) {
     lhs.swap(rhs);
 }
 

@@ -18,14 +18,14 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_TYPES_CHILD_OF_A_CHILD2_FWD_HPP
-#define CPP_REF_IMPL_CPP_MODEL_TYPES_CHILD_OF_A_CHILD2_FWD_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_CHILD_OF_A_CHILD2_FWD_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_CHILD_OF_A_CHILD2_FWD_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 class child_of_a_child2;
 

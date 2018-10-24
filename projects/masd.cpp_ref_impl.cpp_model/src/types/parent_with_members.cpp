@@ -19,9 +19,9 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/types/parent_with_members.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/parent_with_members.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 parent_with_members::parent_with_members()
     : prop_0_(static_cast<int>(0)) { }
@@ -31,7 +31,7 @@ parent_with_members::parent_with_members(const int prop_0)
 
 void parent_with_members::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::parent_with_members\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::parent_with_members\"" << ", "
       << "\"prop_0\": " << prop_0_
       << " }";
 }

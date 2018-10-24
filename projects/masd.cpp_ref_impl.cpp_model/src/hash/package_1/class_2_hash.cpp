@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/hash/package_1/class_2_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/package_1/class_2_hash.hpp"
 
 namespace {
 
@@ -30,7 +30,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl::cpp_model::package_1 {
+namespace masd::cpp_ref_impl::cpp_model::package_1 {
 
 std::size_t class_2_hasher::hash(const class_2& v) {
     std::size_t seed(0);

@@ -20,7 +20,7 @@
  */
 #include <ostream>
 #include <boost/algorithm/string.hpp>
-#include "cpp_ref_impl/cpp_model/types/base_with_object_template.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/base_with_object_template.hpp"
 
 inline std::string tidy_up_string(std::string s) {
     boost::replace_all(s, "\r\n", "<new_line>");
@@ -30,7 +30,7 @@ inline std::string tidy_up_string(std::string s) {
     return s;
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 base_with_object_template::base_with_object_template()
     : prop_2_(static_cast<int>(0)) { }
@@ -43,7 +43,7 @@ base_with_object_template::base_with_object_template(
 
 void base_with_object_template::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::base_with_object_template\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::base_with_object_template\"" << ", "
       << "\"prop_2\": " << prop_2_ << ", "
       << "\"prop_0\": " << "\"" << tidy_up_string(prop_0_) << "\""
       << " }";

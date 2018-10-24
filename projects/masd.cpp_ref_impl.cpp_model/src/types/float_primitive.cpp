@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/types/float_primitive.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/float_primitive.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 float_primitive::float_primitive(const float value)
     : value_(value) { }

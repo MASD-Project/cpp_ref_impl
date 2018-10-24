@@ -19,10 +19,10 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/types/child_via_settings.hpp"
-#include "cpp_ref_impl/cpp_model/io/parent_with_members_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/child_via_settings.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/parent_with_members_io.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 child_via_settings::child_via_settings()
     : prop_1_(static_cast<int>(0)) { }
@@ -30,34 +30,34 @@ child_via_settings::child_via_settings()
 child_via_settings::child_via_settings(
     const int prop_0,
     const int prop_1)
-    : cpp_ref_impl::cpp_model::parent_with_members(prop_0),
+    : masd::cpp_ref_impl::cpp_model::parent_with_members(prop_0),
       prop_1_(prop_1) { }
 
 void child_via_settings::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::child_via_settings\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::child_via_settings\"" << ", "
       << "\"__parent_0__\": ";
-    cpp_ref_impl::cpp_model::parent_with_members::to_stream(s);
+    masd::cpp_ref_impl::cpp_model::parent_with_members::to_stream(s);
     s << ", "
       << "\"prop_1\": " << prop_1_
       << " }";
 }
 
 void child_via_settings::swap(child_via_settings& other) noexcept {
-    cpp_ref_impl::cpp_model::parent_with_members::swap(other);
+    masd::cpp_ref_impl::cpp_model::parent_with_members::swap(other);
 
     using std::swap;
     swap(prop_1_, other.prop_1_);
 }
 
-bool child_via_settings::equals(const cpp_ref_impl::cpp_model::parent_with_members& other) const {
+bool child_via_settings::equals(const masd::cpp_ref_impl::cpp_model::parent_with_members& other) const {
     const child_via_settings* const p(dynamic_cast<const child_via_settings* const>(&other));
     if (!p) return false;
     return *this == *p;
 }
 
 bool child_via_settings::operator==(const child_via_settings& rhs) const {
-    return cpp_ref_impl::cpp_model::parent_with_members::compare(rhs) &&
+    return masd::cpp_ref_impl::cpp_model::parent_with_members::compare(rhs) &&
         prop_1_ == rhs.prop_1_;
 }
 

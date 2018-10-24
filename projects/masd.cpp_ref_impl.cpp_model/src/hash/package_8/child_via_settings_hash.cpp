@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/hash/package_7/parent_hash.hpp"
-#include "cpp_ref_impl/cpp_model/hash/package_8/child_via_settings_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/package_7/parent_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/package_8/child_via_settings_hash.hpp"
 
 namespace {
 
@@ -31,12 +31,12 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl::cpp_model::package_8 {
+namespace masd::cpp_ref_impl::cpp_model::package_8 {
 
 std::size_t child_via_settings_hasher::hash(const child_via_settings& v) {
     std::size_t seed(0);
 
-    combine(seed, dynamic_cast<const cpp_ref_impl::cpp_model::package_7::parent&>(v));
+    combine(seed, dynamic_cast<const masd::cpp_ref_impl::cpp_model::package_7::parent&>(v));
 
     combine(seed, v.prop_1());
     return seed;

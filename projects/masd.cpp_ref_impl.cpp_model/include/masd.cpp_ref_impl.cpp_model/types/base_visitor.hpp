@@ -18,18 +18,18 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_TYPES_BASE_VISITOR_HPP
-#define CPP_REF_IMPL_CPP_MODEL_TYPES_BASE_VISITOR_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_BASE_VISITOR_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_BASE_VISITOR_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/cpp_model/types/descendant2_fwd.hpp"
-#include "cpp_ref_impl/cpp_model/types/descendant3_fwd.hpp"
-#include "cpp_ref_impl/cpp_model/types/non_final_leaf_fwd.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/descendant2_fwd.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/descendant3_fwd.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/non_final_leaf_fwd.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 /**
  * @brief Visitor for base
@@ -40,33 +40,33 @@ public:
 
 public:
     /**
-     * @brief Accept visits for type cpp_ref_impl::cpp_model::descendant2
+     * @brief Accept visits for type masd::cpp_ref_impl::cpp_model::descendant2
      */
     /**@{*/
-    virtual void visit(const cpp_ref_impl::cpp_model::descendant2&) const { }
-    virtual void visit(const cpp_ref_impl::cpp_model::descendant2&) { }
-    virtual void visit(cpp_ref_impl::cpp_model::descendant2&) const { }
-    virtual void visit(cpp_ref_impl::cpp_model::descendant2&) { }
+    virtual void visit(const masd::cpp_ref_impl::cpp_model::descendant2&) const { }
+    virtual void visit(const masd::cpp_ref_impl::cpp_model::descendant2&) { }
+    virtual void visit(masd::cpp_ref_impl::cpp_model::descendant2&) const { }
+    virtual void visit(masd::cpp_ref_impl::cpp_model::descendant2&) { }
     /**@}*/
 
     /**
-     * @brief Accept visits for type cpp_ref_impl::cpp_model::descendant3
+     * @brief Accept visits for type masd::cpp_ref_impl::cpp_model::descendant3
      */
     /**@{*/
-    virtual void visit(const cpp_ref_impl::cpp_model::descendant3&) const { }
-    virtual void visit(const cpp_ref_impl::cpp_model::descendant3&) { }
-    virtual void visit(cpp_ref_impl::cpp_model::descendant3&) const { }
-    virtual void visit(cpp_ref_impl::cpp_model::descendant3&) { }
+    virtual void visit(const masd::cpp_ref_impl::cpp_model::descendant3&) const { }
+    virtual void visit(const masd::cpp_ref_impl::cpp_model::descendant3&) { }
+    virtual void visit(masd::cpp_ref_impl::cpp_model::descendant3&) const { }
+    virtual void visit(masd::cpp_ref_impl::cpp_model::descendant3&) { }
     /**@}*/
 
     /**
-     * @brief Accept visits for type cpp_ref_impl::cpp_model::non_final_leaf
+     * @brief Accept visits for type masd::cpp_ref_impl::cpp_model::non_final_leaf
      */
     /**@{*/
-    virtual void visit(const cpp_ref_impl::cpp_model::non_final_leaf&) const { }
-    virtual void visit(const cpp_ref_impl::cpp_model::non_final_leaf&) { }
-    virtual void visit(cpp_ref_impl::cpp_model::non_final_leaf&) const { }
-    virtual void visit(cpp_ref_impl::cpp_model::non_final_leaf&) { }
+    virtual void visit(const masd::cpp_ref_impl::cpp_model::non_final_leaf&) const { }
+    virtual void visit(const masd::cpp_ref_impl::cpp_model::non_final_leaf&) { }
+    virtual void visit(masd::cpp_ref_impl::cpp_model::non_final_leaf&) const { }
+    virtual void visit(masd::cpp_ref_impl::cpp_model::non_final_leaf&) { }
     /**@}*/
 };
 

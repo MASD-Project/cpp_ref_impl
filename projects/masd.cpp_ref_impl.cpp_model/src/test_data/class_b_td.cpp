@@ -18,25 +18,25 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/test_data/class_a_td.hpp"
-#include "cpp_ref_impl/cpp_model/test_data/class_b_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/class_a_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/class_b_td.hpp"
 
 namespace {
 
-cpp_ref_impl::cpp_model::class_a
-create_cpp_ref_impl_cpp_model_class_a(const unsigned int position) {
-    return cpp_ref_impl::cpp_model::class_a_generator::create(position);
+masd::cpp_ref_impl::cpp_model::class_a
+create_masd_cpp_ref_impl_cpp_model_class_a(const unsigned int position) {
+    return masd::cpp_ref_impl::cpp_model::class_a_generator::create(position);
 }
 
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 class_b_generator::class_b_generator() : position_(0) { }
 
 void class_b_generator::
 populate(const unsigned int position, result_type& v) {
-    v.prop_0(create_cpp_ref_impl_cpp_model_class_a(position + 0));
+    v.prop_0(create_masd_cpp_ref_impl_cpp_model_class_a(position + 0));
 }
 
 class_b_generator::result_type

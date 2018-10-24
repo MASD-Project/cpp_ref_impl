@@ -18,18 +18,18 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_SERIALIZATION_PACKAGE_4_SHAPE_TYPES_SER_HPP
-#define CPP_REF_IMPL_CPP_MODEL_SERIALIZATION_PACKAGE_4_SHAPE_TYPES_SER_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_SERIALIZATION_PACKAGE_4_SHAPE_TYPES_SER_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_SERIALIZATION_PACKAGE_4_SHAPE_TYPES_SER_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <boost/serialization/nvp.hpp>
-#include "cpp_ref_impl/cpp_model/types/package_4/shape_types.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/package_4/shape_types.hpp"
 
 template<class Archive>
-void serialize(Archive& ar, cpp_ref_impl::cpp_model::package_4::shape_types& v, unsigned int /*version*/){
+void serialize(Archive& ar, masd::cpp_ref_impl::cpp_model::package_4::shape_types& v, unsigned int /*version*/){
     using boost::serialization::make_nvp;
     ar & make_nvp("shape_types", v);
 }

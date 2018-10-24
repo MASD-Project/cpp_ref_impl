@@ -21,9 +21,9 @@
 #include <string>
 #include <ostream>
 #include <stdexcept>
-#include "cpp_ref_impl/cpp_model/io/colour_types_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/colour_types_io.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const colour_types& v) {
     s << "{ " << "\"__type__\": " << "\"colour_types\", " << "\"value\": ";

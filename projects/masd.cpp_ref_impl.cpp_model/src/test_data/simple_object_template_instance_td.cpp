@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/test_data/value_td.hpp"
-#include "cpp_ref_impl/cpp_model/test_data/simple_object_template_instance_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/value_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/simple_object_template_instance_td.hpp"
 
 namespace {
 
@@ -27,21 +27,21 @@ int create_int(const unsigned int position) {
     return static_cast<int>(position);
 }
 
-cpp_ref_impl::cpp_model::value
-create_cpp_ref_impl_cpp_model_value(const unsigned int position) {
-    return cpp_ref_impl::cpp_model::value_generator::create(position);
+masd::cpp_ref_impl::cpp_model::value
+create_masd_cpp_ref_impl_cpp_model_value(const unsigned int position) {
+    return masd::cpp_ref_impl::cpp_model::value_generator::create(position);
 }
 
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 simple_object_template_instance_generator::simple_object_template_instance_generator() : position_(0) { }
 
 void simple_object_template_instance_generator::
 populate(const unsigned int position, result_type& v) {
     v.prop_0(create_int(position + 0));
-    v.prop_1(create_cpp_ref_impl_cpp_model_value(position + 1));
+    v.prop_1(create_masd_cpp_ref_impl_cpp_model_value(position + 1));
     v.prop_10(create_int(position + 2));
 }
 

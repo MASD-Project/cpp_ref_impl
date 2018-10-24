@@ -19,9 +19,9 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/types/package_7/parent.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/package_7/parent.hpp"
 
-namespace cpp_ref_impl::cpp_model::package_7 {
+namespace masd::cpp_ref_impl::cpp_model::package_7 {
 
 parent::parent()
     : prop_0_(static_cast<int>(0)) { }
@@ -31,7 +31,7 @@ parent::parent(const int prop_0)
 
 void parent::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::package_7::parent\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::package_7::parent\"" << ", "
       << "\"prop_0\": " << prop_0_
       << " }";
 }

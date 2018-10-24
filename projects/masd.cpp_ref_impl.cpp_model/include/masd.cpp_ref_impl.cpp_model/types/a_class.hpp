@@ -18,20 +18,20 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_TYPES_A_CLASS_HPP
-#define CPP_REF_IMPL_CPP_MODEL_TYPES_A_CLASS_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_A_CLASS_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_A_CLASS_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <algorithm>
-#include "cpp_ref_impl/cpp_model/types/book_types.hpp"
-#include "cpp_ref_impl/cpp_model/types/colour_types.hpp"
-#include "cpp_ref_impl/cpp_model/types/package_4/shape_types.hpp"
-#include "cpp_ref_impl/cpp_model/serialization/a_class_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/book_types.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/colour_types.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/package_4/shape_types.hpp"
+#include "masd.cpp_ref_impl.cpp_model/serialization/a_class_fwd_ser.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 class a_class final {
 public:
@@ -44,26 +44,26 @@ public:
 
 public:
     a_class(
-        const cpp_ref_impl::cpp_model::colour_types colour_type,
-        const cpp_ref_impl::cpp_model::book_types book_type,
-        const cpp_ref_impl::cpp_model::package_4::shape_types shape_type);
+        const masd::cpp_ref_impl::cpp_model::colour_types colour_type,
+        const masd::cpp_ref_impl::cpp_model::book_types book_type,
+        const masd::cpp_ref_impl::cpp_model::package_4::shape_types shape_type);
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::cpp_model::a_class& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::cpp_model::a_class& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::cpp_model::a_class& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::cpp_model::a_class& v, unsigned int version);
 
 public:
-    cpp_ref_impl::cpp_model::colour_types colour_type() const;
-    void colour_type(const cpp_ref_impl::cpp_model::colour_types v);
+    masd::cpp_ref_impl::cpp_model::colour_types colour_type() const;
+    void colour_type(const masd::cpp_ref_impl::cpp_model::colour_types v);
 
-    cpp_ref_impl::cpp_model::book_types book_type() const;
-    void book_type(const cpp_ref_impl::cpp_model::book_types v);
+    masd::cpp_ref_impl::cpp_model::book_types book_type() const;
+    void book_type(const masd::cpp_ref_impl::cpp_model::book_types v);
 
-    cpp_ref_impl::cpp_model::package_4::shape_types shape_type() const;
-    void shape_type(const cpp_ref_impl::cpp_model::package_4::shape_types v);
+    masd::cpp_ref_impl::cpp_model::package_4::shape_types shape_type() const;
+    void shape_type(const masd::cpp_ref_impl::cpp_model::package_4::shape_types v);
 
 public:
     bool operator==(const a_class& rhs) const;
@@ -76,9 +76,9 @@ public:
     a_class& operator=(a_class other);
 
 private:
-    cpp_ref_impl::cpp_model::colour_types colour_type_;
-    cpp_ref_impl::cpp_model::book_types book_type_;
-    cpp_ref_impl::cpp_model::package_4::shape_types shape_type_;
+    masd::cpp_ref_impl::cpp_model::colour_types colour_type_;
+    masd::cpp_ref_impl::cpp_model::book_types book_type_;
+    masd::cpp_ref_impl::cpp_model::package_4::shape_types shape_type_;
 };
 
 }
@@ -87,8 +87,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::cpp_model::a_class& lhs,
-    cpp_ref_impl::cpp_model::a_class& rhs) {
+    masd::cpp_ref_impl::cpp_model::a_class& lhs,
+    masd::cpp_ref_impl::cpp_model::a_class& rhs) {
     lhs.swap(rhs);
 }
 

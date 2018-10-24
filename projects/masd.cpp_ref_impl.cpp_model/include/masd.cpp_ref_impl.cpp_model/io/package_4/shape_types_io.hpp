@@ -18,17 +18,17 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_IO_PACKAGE_4_SHAPE_TYPES_IO_HPP
-#define CPP_REF_IMPL_CPP_MODEL_IO_PACKAGE_4_SHAPE_TYPES_IO_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_IO_PACKAGE_4_SHAPE_TYPES_IO_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_IO_PACKAGE_4_SHAPE_TYPES_IO_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <iosfwd>
-#include "cpp_ref_impl/cpp_model/types/package_4/shape_types.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/package_4/shape_types.hpp"
 
-namespace cpp_ref_impl::cpp_model::package_4 {
+namespace masd::cpp_ref_impl::cpp_model::package_4 {
 
 std::ostream& operator<<(std::ostream& s, const shape_types& v);
 

@@ -18,17 +18,17 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_HASH_PACKAGE_6_CHILD_HASH_HPP
-#define CPP_REF_IMPL_CPP_MODEL_HASH_PACKAGE_6_CHILD_HASH_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_HASH_PACKAGE_6_CHILD_HASH_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_HASH_PACKAGE_6_CHILD_HASH_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <functional>
-#include "cpp_ref_impl/cpp_model/types/package_6/child.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/package_6/child.hpp"
 
-namespace cpp_ref_impl::cpp_model::package_6 {
+namespace masd::cpp_ref_impl::cpp_model::package_6 {
 
 struct child_hasher {
 public:
@@ -40,10 +40,10 @@ public:
 namespace std {
 
 template<>
-struct hash<cpp_ref_impl::cpp_model::package_6::child> {
+struct hash<masd::cpp_ref_impl::cpp_model::package_6::child> {
 public:
-    size_t operator()(const cpp_ref_impl::cpp_model::package_6::child& v) const {
-        return cpp_ref_impl::cpp_model::package_6::child_hasher::hash(v);
+    size_t operator()(const masd::cpp_ref_impl::cpp_model::package_6::child& v) const {
+        return masd::cpp_ref_impl::cpp_model::package_6::child_hasher::hash(v);
     }
 };
 

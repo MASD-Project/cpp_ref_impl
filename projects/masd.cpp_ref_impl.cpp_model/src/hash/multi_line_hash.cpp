@@ -18,14 +18,14 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/hash/multi_line_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/multi_line_hash.hpp"
 
 namespace {
 
 
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::size_t multi_line_hasher::hash(const multi_line&) {
     std::size_t seed(0);

@@ -19,7 +19,7 @@
  *
  */
 #include <sstream>
-#include "cpp_ref_impl/cpp_model/test_data/immutable_two_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/immutable_two_td.hpp"
 
 namespace {
 
@@ -35,7 +35,7 @@ std::string create_std_string(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 immutable_two_generator::immutable_two_generator() : position_(0) { }
 

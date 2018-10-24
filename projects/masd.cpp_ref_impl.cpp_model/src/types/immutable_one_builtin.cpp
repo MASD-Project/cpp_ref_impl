@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/types/immutable_one_builtin.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/immutable_one_builtin.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 immutable_one_builtin::immutable_one_builtin()
     : prop_0_(static_cast<bool>(0)) { }

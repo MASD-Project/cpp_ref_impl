@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/cpp_model/hash/move_ctor_base_hash.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/move_ctor_base_hash.hpp"
 
 namespace {
 
@@ -36,7 +36,7 @@ inline std::size_t hash_boost_filesystem_path(const boost::filesystem::path& v) 
 
 }
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 std::size_t move_ctor_base_hasher::hash(const move_ctor_base& v) {
     std::size_t seed(0);

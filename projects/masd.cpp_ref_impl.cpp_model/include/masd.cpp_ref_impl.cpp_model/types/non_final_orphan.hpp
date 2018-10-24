@@ -18,17 +18,17 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_TYPES_NON_FINAL_ORPHAN_HPP
-#define CPP_REF_IMPL_CPP_MODEL_TYPES_NON_FINAL_ORPHAN_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_NON_FINAL_ORPHAN_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_NON_FINAL_ORPHAN_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <algorithm>
-#include "cpp_ref_impl/cpp_model/serialization/non_final_orphan_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.cpp_model/serialization/non_final_orphan_fwd_ser.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 class non_final_orphan {
 public:
@@ -44,10 +44,10 @@ public:
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::cpp_model::non_final_orphan& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::cpp_model::non_final_orphan& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::cpp_model::non_final_orphan& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::cpp_model::non_final_orphan& v, unsigned int version);
 
 public:
     int prop_0() const;
@@ -73,8 +73,8 @@ namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::cpp_model::non_final_orphan& lhs,
-    cpp_ref_impl::cpp_model::non_final_orphan& rhs) {
+    masd::cpp_ref_impl::cpp_model::non_final_orphan& lhs,
+    masd::cpp_ref_impl::cpp_model::non_final_orphan& rhs) {
     lhs.swap(rhs);
 }
 

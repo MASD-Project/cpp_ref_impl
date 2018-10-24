@@ -19,13 +19,13 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/cpp_model/types/base.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/base.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
 void base::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::base\"" << " }";
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_model::base\"" << " }";
 }
 
 void base::swap(base&) noexcept {

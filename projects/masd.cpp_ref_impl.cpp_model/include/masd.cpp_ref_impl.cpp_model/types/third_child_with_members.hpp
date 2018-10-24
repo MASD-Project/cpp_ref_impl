@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_TYPES_THIRD_CHILD_WITH_MEMBERS_HPP
-#define CPP_REF_IMPL_CPP_MODEL_TYPES_THIRD_CHILD_WITH_MEMBERS_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_THIRD_CHILD_WITH_MEMBERS_HPP
+#define MASD_CPP_REF_IMPL_CPP_MODEL_TYPES_THIRD_CHILD_WITH_MEMBERS_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -27,12 +27,12 @@
 
 #include <iosfwd>
 #include <algorithm>
-#include "cpp_ref_impl/cpp_model/types/parent_with_members.hpp"
-#include "cpp_ref_impl/cpp_model/serialization/third_child_with_members_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/parent_with_members.hpp"
+#include "masd.cpp_ref_impl.cpp_model/serialization/third_child_with_members_fwd_ser.hpp"
 
-namespace cpp_ref_impl::cpp_model {
+namespace masd::cpp_ref_impl::cpp_model {
 
-class third_child_with_members : public cpp_ref_impl::cpp_model::parent_with_members {
+class third_child_with_members : public masd::cpp_ref_impl::cpp_model::parent_with_members {
 public:
     third_child_with_members(const third_child_with_members&) = default;
     third_child_with_members(third_child_with_members&&) = default;
@@ -49,10 +49,10 @@ public:
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::cpp_model::third_child_with_members& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::cpp_model::third_child_with_members& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::cpp_model::third_child_with_members& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::cpp_model::third_child_with_members& v, unsigned int version);
 
 public:
     virtual void to_stream(std::ostream& s) const;
@@ -64,7 +64,7 @@ public:
 protected:
     bool compare(const third_child_with_members& rhs) const;
 public:
-    virtual bool equals(const cpp_ref_impl::cpp_model::parent_with_members& other) const = 0;
+    virtual bool equals(const masd::cpp_ref_impl::cpp_model::parent_with_members& other) const = 0;
 
 protected:
     void swap(third_child_with_members& other) noexcept;
