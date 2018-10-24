@@ -18,23 +18,23 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_TEST_DATA_PACKAGE_2_CLASS_2_TD_HPP
-#define CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_TEST_DATA_PACKAGE_2_CLASS_2_TD_HPP
+#ifndef MASD_CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_TEST_DATA_PACKAGE_2_CLASS_2_TD_HPP
+#define MASD_CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_TEST_DATA_PACKAGE_2_CLASS_2_TD_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/two_layers_with_objects/types/Package_2/class_2.hpp"
+#include "masd.cpp_ref_impl.two_layers_with_objects/types/Package_2/class_2.hpp"
 
-namespace cpp_ref_impl::two_layers_with_objects::Package_2 {
+namespace masd::cpp_ref_impl::two_layers_with_objects::Package_2 {
 
 class class_2_generator {
 public:
     class_2_generator();
 
 public:
-    typedef cpp_ref_impl::two_layers_with_objects::Package_2::class_2 result_type;
+    typedef masd::cpp_ref_impl::two_layers_with_objects::Package_2::class_2 result_type;
 
 public:
     static void populate(const unsigned int position, result_type& v);

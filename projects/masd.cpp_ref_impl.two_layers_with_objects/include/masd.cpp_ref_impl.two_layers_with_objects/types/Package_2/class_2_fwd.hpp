@@ -18,14 +18,14 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_TYPES_PACKAGE_2_CLASS_2_FWD_HPP
-#define CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_TYPES_PACKAGE_2_CLASS_2_FWD_HPP
+#ifndef MASD_CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_TYPES_PACKAGE_2_CLASS_2_FWD_HPP
+#define MASD_CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_TYPES_PACKAGE_2_CLASS_2_FWD_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-namespace cpp_ref_impl::two_layers_with_objects::Package_2 {
+namespace masd::cpp_ref_impl::two_layers_with_objects::Package_2 {
 
 class class_2;
 

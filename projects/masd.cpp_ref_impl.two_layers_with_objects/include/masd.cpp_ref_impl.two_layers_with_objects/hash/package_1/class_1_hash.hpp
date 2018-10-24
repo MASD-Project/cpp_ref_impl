@@ -18,17 +18,17 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_HASH_PACKAGE_1_CLASS_1_HASH_HPP
-#define CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_HASH_PACKAGE_1_CLASS_1_HASH_HPP
+#ifndef MASD_CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_HASH_PACKAGE_1_CLASS_1_HASH_HPP
+#define MASD_CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_HASH_PACKAGE_1_CLASS_1_HASH_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <functional>
-#include "cpp_ref_impl/two_layers_with_objects/types/package_1/class_1.hpp"
+#include "masd.cpp_ref_impl.two_layers_with_objects/types/package_1/class_1.hpp"
 
-namespace cpp_ref_impl::two_layers_with_objects::package_1 {
+namespace masd::cpp_ref_impl::two_layers_with_objects::package_1 {
 
 struct class_1_hasher {
 public:
@@ -40,10 +40,10 @@ public:
 namespace std {
 
 template<>
-struct hash<cpp_ref_impl::two_layers_with_objects::package_1::class_1> {
+struct hash<masd::cpp_ref_impl::two_layers_with_objects::package_1::class_1> {
 public:
-    size_t operator()(const cpp_ref_impl::two_layers_with_objects::package_1::class_1& v) const {
-        return cpp_ref_impl::two_layers_with_objects::package_1::class_1_hasher::hash(v);
+    size_t operator()(const masd::cpp_ref_impl::two_layers_with_objects::package_1::class_1& v) const {
+        return masd::cpp_ref_impl::two_layers_with_objects::package_1::class_1_hasher::hash(v);
     }
 };
 

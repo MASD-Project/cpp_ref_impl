@@ -18,14 +18,14 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_TEST_DATA_ALL_TD_HPP
-#define CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_TEST_DATA_ALL_TD_HPP
+#ifndef MASD_CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_TEST_DATA_ALL_TD_HPP
+#define MASD_CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_TEST_DATA_ALL_TD_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/two_layers_with_objects/test_data/Package_2/class_2_td.hpp"
-#include "cpp_ref_impl/two_layers_with_objects/test_data/package_1/class_1_td.hpp"
+#include "masd.cpp_ref_impl.two_layers_with_objects/test_data/Package_2/class_2_td.hpp"
+#include "masd.cpp_ref_impl.two_layers_with_objects/test_data/package_1/class_1_td.hpp"
 
 #endif

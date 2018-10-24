@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/two_layers_with_objects/hash/package_1/class_1_hash.hpp"
+#include "masd.cpp_ref_impl.two_layers_with_objects/hash/package_1/class_1_hash.hpp"
 
 namespace {
 
@@ -30,7 +30,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl::two_layers_with_objects::package_1 {
+namespace masd::cpp_ref_impl::two_layers_with_objects::package_1 {
 
 std::size_t class_1_hasher::hash(const class_1& v) {
     std::size_t seed(0);

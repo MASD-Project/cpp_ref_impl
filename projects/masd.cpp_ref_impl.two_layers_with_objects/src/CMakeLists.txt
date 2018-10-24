@@ -28,8 +28,8 @@ file(GLOB_RECURSE odb_files RELATIVE
    "${CMAKE_CURRENT_SOURCE_DIR}/*.cxx")
 set(files ${files} ${odb_files})
 
-add_library(two_layers_with_objects STATIC ${files})
-set_target_properties(two_layers_with_objects PROPERTIES
-    OUTPUT_NAME cpp_ref_impl.two_layers_with_objects)
+add_library(masd_cpp_ref_impl_two_layers_with_objects STATIC ${files})
+set_target_properties(masd_cpp_ref_impl_two_layers_with_objects PROPERTIES
+    OUTPUT_NAME masd_cpp_ref_impl_two_layers_with_objects)
 
-install(TARGETS two_layers_with_objects ARCHIVE DESTINATION lib COMPONENT libraries)
+install(TARGETS masd_cpp_ref_impl_two_layers_with_objects ARCHIVE DESTINATION lib COMPONENT libraries)

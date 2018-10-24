@@ -18,21 +18,21 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_IO_PACKAGE_2_CLASS_2_IO_HPP
-#define CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_IO_PACKAGE_2_CLASS_2_IO_HPP
+#ifndef MASD_CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_IO_PACKAGE_2_CLASS_2_IO_HPP
+#define MASD_CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_IO_PACKAGE_2_CLASS_2_IO_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <iosfwd>
-#include "cpp_ref_impl/two_layers_with_objects/types/Package_2/class_2.hpp"
+#include "masd.cpp_ref_impl.two_layers_with_objects/types/Package_2/class_2.hpp"
 
-namespace cpp_ref_impl::two_layers_with_objects::Package_2 {
+namespace masd::cpp_ref_impl::two_layers_with_objects::Package_2 {
 
 std::ostream&
 operator<<(std::ostream& s,
-     const cpp_ref_impl::two_layers_with_objects::Package_2::class_2& v);
+     const masd::cpp_ref_impl::two_layers_with_objects::Package_2::class_2& v);
 
 }
 

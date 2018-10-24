@@ -18,14 +18,14 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_HASH_ALL_HASH_HPP
-#define CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_HASH_ALL_HASH_HPP
+#ifndef MASD_CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_HASH_ALL_HASH_HPP
+#define MASD_CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_HASH_ALL_HASH_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/two_layers_with_objects/hash/Package_2/class_2_hash.hpp"
-#include "cpp_ref_impl/two_layers_with_objects/hash/package_1/class_1_hash.hpp"
+#include "masd.cpp_ref_impl.two_layers_with_objects/hash/Package_2/class_2_hash.hpp"
+#include "masd.cpp_ref_impl.two_layers_with_objects/hash/package_1/class_1_hash.hpp"
 
 #endif

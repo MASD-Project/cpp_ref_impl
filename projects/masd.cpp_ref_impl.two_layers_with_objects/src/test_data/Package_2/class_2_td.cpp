@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/two_layers_with_objects/test_data/Package_2/class_2_td.hpp"
+#include "masd.cpp_ref_impl.two_layers_with_objects/test_data/Package_2/class_2_td.hpp"
 
 namespace {
 
@@ -28,7 +28,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::two_layers_with_objects::Package_2 {
+namespace masd::cpp_ref_impl::two_layers_with_objects::Package_2 {
 
 class_2_generator::class_2_generator() : position_(0) { }
 

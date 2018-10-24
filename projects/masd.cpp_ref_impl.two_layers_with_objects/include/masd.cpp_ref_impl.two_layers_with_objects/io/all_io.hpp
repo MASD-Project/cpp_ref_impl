@@ -18,14 +18,14 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_IO_ALL_IO_HPP
-#define CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_IO_ALL_IO_HPP
+#ifndef MASD_CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_IO_ALL_IO_HPP
+#define MASD_CPP_REF_IMPL_TWO_LAYERS_WITH_OBJECTS_IO_ALL_IO_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/two_layers_with_objects/io/Package_2/class_2_io.hpp"
-#include "cpp_ref_impl/two_layers_with_objects/io/package_1/class_1_io.hpp"
+#include "masd.cpp_ref_impl.two_layers_with_objects/io/Package_2/class_2_io.hpp"
+#include "masd.cpp_ref_impl.two_layers_with_objects/io/package_1/class_1_io.hpp"
 
 #endif

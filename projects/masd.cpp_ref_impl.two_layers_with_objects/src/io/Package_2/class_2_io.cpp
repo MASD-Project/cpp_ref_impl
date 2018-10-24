@@ -19,13 +19,13 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/two_layers_with_objects/io/Package_2/class_2_io.hpp"
+#include "masd.cpp_ref_impl.two_layers_with_objects/io/Package_2/class_2_io.hpp"
 
-namespace cpp_ref_impl::two_layers_with_objects::Package_2 {
+namespace masd::cpp_ref_impl::two_layers_with_objects::Package_2 {
 
 std::ostream& operator<<(std::ostream& s, const class_2& v) {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::two_layers_with_objects::Package_2::class_2\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::two_layers_with_objects::Package_2::class_2\"" << ", "
       << "\"prop_0\": " << v.prop_0()
       << " }";
     return(s);
