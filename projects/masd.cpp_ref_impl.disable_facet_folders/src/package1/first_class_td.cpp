@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/disable_facet_folders/package1/first_class_td.hpp"
+#include "masd.cpp_ref_impl.disable_facet_folders/package1/first_class_td.hpp"
 
 namespace {
 
@@ -28,7 +28,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::disable_facet_folders::package1 {
+namespace masd::cpp_ref_impl::disable_facet_folders::package1 {
 
 first_class_generator::first_class_generator() : position_(0) { }
 

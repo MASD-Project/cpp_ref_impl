@@ -18,13 +18,13 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_DISABLE_FACET_FOLDERS_ALL_HPP
-#define CPP_REF_IMPL_DISABLE_FACET_FOLDERS_ALL_HPP
+#ifndef MASD_CPP_REF_IMPL_DISABLE_FACET_FOLDERS_ALL_HPP
+#define MASD_CPP_REF_IMPL_DISABLE_FACET_FOLDERS_ALL_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/disable_facet_folders/package1/first_class.hpp"
+#include "masd.cpp_ref_impl.disable_facet_folders/package1/first_class.hpp"
 
 #endif

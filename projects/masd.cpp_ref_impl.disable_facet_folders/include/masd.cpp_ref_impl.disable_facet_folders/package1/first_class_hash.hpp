@@ -18,17 +18,17 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_DISABLE_FACET_FOLDERS_PACKAGE1_FIRST_CLASS_HASH_HPP
-#define CPP_REF_IMPL_DISABLE_FACET_FOLDERS_PACKAGE1_FIRST_CLASS_HASH_HPP
+#ifndef MASD_CPP_REF_IMPL_DISABLE_FACET_FOLDERS_PACKAGE1_FIRST_CLASS_HASH_HPP
+#define MASD_CPP_REF_IMPL_DISABLE_FACET_FOLDERS_PACKAGE1_FIRST_CLASS_HASH_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <functional>
-#include "cpp_ref_impl/disable_facet_folders/package1/first_class.hpp"
+#include "masd.cpp_ref_impl.disable_facet_folders/package1/first_class.hpp"
 
-namespace cpp_ref_impl::disable_facet_folders::package1 {
+namespace masd::cpp_ref_impl::disable_facet_folders::package1 {
 
 struct first_class_hasher {
 public:
@@ -40,10 +40,10 @@ public:
 namespace std {
 
 template<>
-struct hash<cpp_ref_impl::disable_facet_folders::package1::first_class> {
+struct hash<masd::cpp_ref_impl::disable_facet_folders::package1::first_class> {
 public:
-    size_t operator()(const cpp_ref_impl::disable_facet_folders::package1::first_class& v) const {
-        return cpp_ref_impl::disable_facet_folders::package1::first_class_hasher::hash(v);
+    size_t operator()(const masd::cpp_ref_impl::disable_facet_folders::package1::first_class& v) const {
+        return masd::cpp_ref_impl::disable_facet_folders::package1::first_class_hasher::hash(v);
     }
 };
 

@@ -28,8 +28,8 @@ file(GLOB_RECURSE odb_files RELATIVE
    "${CMAKE_CURRENT_SOURCE_DIR}/*.cxx")
 set(files ${files} ${odb_files})
 
-add_library(disable_facet_folders STATIC ${files})
-set_target_properties(disable_facet_folders PROPERTIES
-    OUTPUT_NAME cpp_ref_impl.disable_facet_folders)
+add_library(masd_cpp_ref_impl_disable_facet_folders STATIC ${files})
+set_target_properties(masd_cpp_ref_impl_disable_facet_folders PROPERTIES
+    OUTPUT_NAME masd_cpp_ref_impl_disable_facet_folders)
 
-install(TARGETS disable_facet_folders ARCHIVE DESTINATION lib COMPONENT libraries)
+install(TARGETS masd_cpp_ref_impl_disable_facet_folders ARCHIVE DESTINATION lib COMPONENT libraries)
