@@ -18,13 +18,13 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_ENABLE_FACET_SERIALIZATION_SERIALIZATION_ALL_SER_HPP
-#define CPP_REF_IMPL_ENABLE_FACET_SERIALIZATION_SERIALIZATION_ALL_SER_HPP
+#ifndef MASD_CPP_REF_IMPL_ENABLE_FACET_SERIALIZATION_SERIALIZATION_ALL_SER_HPP
+#define MASD_CPP_REF_IMPL_ENABLE_FACET_SERIALIZATION_SERIALIZATION_ALL_SER_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/enable_facet_serialization/serialization/package1/first_class_ser.hpp"
+#include "masd.cpp_ref_impl.enable_facet_serialization/serialization/package1/first_class_ser.hpp"
 
 #endif
