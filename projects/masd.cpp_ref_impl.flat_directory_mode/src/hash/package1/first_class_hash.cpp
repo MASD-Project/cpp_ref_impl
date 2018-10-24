@@ -1,4 +1,4 @@
-#include "cpp_ref_impl/flat_directory_mode/hash/package1/first_class_hash.hpp"
+#include "masd.cpp_ref_impl.flat_directory_mode/hash/package1/first_class_hash.hpp"
 
 namespace {
 
@@ -10,7 +10,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl::flat_directory_mode::package1 {
+namespace masd::cpp_ref_impl::flat_directory_mode::package1 {
 
 std::size_t first_class_hasher::hash(const first_class& v) {
     std::size_t seed(0);

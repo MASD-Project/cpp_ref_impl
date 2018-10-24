@@ -1,4 +1,4 @@
-#include "cpp_ref_impl/flat_directory_mode/test_data/package1/first_class_td.hpp"
+#include "masd.cpp_ref_impl.flat_directory_mode/test_data/package1/first_class_td.hpp"
 
 namespace {
 
@@ -8,7 +8,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::flat_directory_mode::package1 {
+namespace masd::cpp_ref_impl::flat_directory_mode::package1 {
 
 first_class_generator::first_class_generator() : position_(0) { }
 
