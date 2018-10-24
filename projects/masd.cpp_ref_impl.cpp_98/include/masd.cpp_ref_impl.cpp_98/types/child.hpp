@@ -1,5 +1,5 @@
-#ifndef CPP_REF_IMPL_CPP_98_TYPES_CHILD_HPP
-#define CPP_REF_IMPL_CPP_98_TYPES_CHILD_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_98_TYPES_CHILD_HPP
+#define MASD_CPP_REF_IMPL_CPP_98_TYPES_CHILD_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -7,13 +7,14 @@
 
 #include <iosfwd>
 #include <algorithm>
-#include "cpp_ref_impl/cpp_98/types/parent.hpp"
-#include "cpp_ref_impl/cpp_98/serialization/child_fwd_ser.hpp"
+#include "masd.cpp_ref_impl.cpp_98/types/parent.hpp"
+#include "masd.cpp_ref_impl.cpp_98/serialization/child_fwd_ser.hpp"
 
+namespace masd {
 namespace cpp_ref_impl {
 namespace cpp_98 {
 
-class child : public cpp_ref_impl::cpp_98::parent {
+class child : public masd::cpp_ref_impl::cpp_98::parent {
 public:
     child();
 
@@ -26,10 +27,10 @@ public:
 
 private:
     template<typename Archive>
-    friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::cpp_98::child& v, unsigned int version);
+    friend void boost::serialization::save(Archive& ar, const masd::cpp_ref_impl::cpp_98::child& v, unsigned int version);
 
     template<typename Archive>
-    friend void boost::serialization::load(Archive& ar, cpp_ref_impl::cpp_98::child& v, unsigned int version);
+    friend void boost::serialization::load(Archive& ar, masd::cpp_ref_impl::cpp_98::child& v, unsigned int version);
 
 public:
     void to_stream(std::ostream& s) const;
@@ -45,7 +46,7 @@ public:
     }
 
 public:
-    bool equals(const cpp_ref_impl::cpp_98::parent& other) const;
+    bool equals(const masd::cpp_ref_impl::cpp_98::parent& other) const;
 
 public:
     void swap(child& other);
@@ -55,14 +56,14 @@ private:
     int prop_1_;
 };
 
-} }
+} } }
 
 namespace std {
 
 template<>
 inline void swap(
-    cpp_ref_impl::cpp_98::child& lhs,
-    cpp_ref_impl::cpp_98::child& rhs) {
+    masd::cpp_ref_impl::cpp_98::child& lhs,
+    masd::cpp_ref_impl::cpp_98::child& rhs) {
     lhs.swap(rhs);
 }
 

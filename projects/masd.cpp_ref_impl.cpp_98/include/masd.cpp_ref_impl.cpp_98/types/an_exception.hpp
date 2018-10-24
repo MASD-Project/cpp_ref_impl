@@ -1,5 +1,5 @@
-#ifndef CPP_REF_IMPL_CPP_98_TYPES_AN_EXCEPTION_HPP
-#define CPP_REF_IMPL_CPP_98_TYPES_AN_EXCEPTION_HPP
+#ifndef MASD_CPP_REF_IMPL_CPP_98_TYPES_AN_EXCEPTION_HPP
+#define MASD_CPP_REF_IMPL_CPP_98_TYPES_AN_EXCEPTION_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -8,6 +8,7 @@
 #include <string>
 #include <boost/exception/info.hpp>
 
+namespace masd {
 namespace cpp_ref_impl {
 namespace cpp_98 {
 
@@ -26,6 +27,6 @@ private:
     const std::string message_;
 };
 
-} }
+} } }
 
 #endif

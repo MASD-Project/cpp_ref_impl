@@ -1,5 +1,6 @@
-#include "cpp_ref_impl/cpp_98/test_data/an_enumeration_td.hpp"
+#include "masd.cpp_ref_impl.cpp_98/test_data/an_enumeration_td.hpp"
 
+namespace masd {
 namespace cpp_ref_impl {
 namespace cpp_98 {
 
@@ -21,4 +22,4 @@ an_enumeration_generator::operator()() {
     return create(position_++);
 }
 
-} }
+} } }

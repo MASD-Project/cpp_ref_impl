@@ -1,5 +1,5 @@
-#include "cpp_ref_impl/cpp_98/test_data/child_td.hpp"
-#include "cpp_ref_impl/cpp_98/test_data/parent_td.hpp"
+#include "masd.cpp_ref_impl.cpp_98/test_data/child_td.hpp"
+#include "masd.cpp_ref_impl.cpp_98/test_data/parent_td.hpp"
 
 namespace {
 
@@ -9,6 +9,7 @@ int create_int(const unsigned int position) {
 
 }
 
+namespace masd {
 namespace cpp_ref_impl {
 namespace cpp_98 {
 
@@ -19,7 +20,7 @@ populate(const unsigned int position, result_type& v) {
 
 parent_generator::result_type*
 parent_generator::create_ptr(const unsigned int position) {
-    return cpp_ref_impl::cpp_98::child_generator::create_ptr(position);
+    return masd::cpp_ref_impl::cpp_98::child_generator::create_ptr(position);
 }
 
-} }
+} } }

@@ -1,6 +1,7 @@
 #include <ostream>
-#include "cpp_ref_impl/cpp_98/types/parent.hpp"
+#include "masd.cpp_ref_impl.cpp_98/types/parent.hpp"
 
+namespace masd {
 namespace cpp_ref_impl {
 namespace cpp_98 {
 
@@ -12,7 +13,7 @@ parent::parent(const int prop_0)
 
 void parent::to_stream(std::ostream& s) const {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::cpp_98::parent\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::cpp_98::parent\"" << ", "
       << "\"prop_0\": " << prop_0_
       << " }";
 }
@@ -34,4 +35,4 @@ void parent::prop_0(const int v) {
     prop_0_ = v;
 }
 
-} }
+} } }

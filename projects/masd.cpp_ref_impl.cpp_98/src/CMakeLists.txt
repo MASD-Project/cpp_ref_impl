@@ -9,9 +9,9 @@ file(GLOB_RECURSE odb_files RELATIVE
    "${CMAKE_CURRENT_SOURCE_DIR}/*.cxx")
 set(files ${files} ${odb_files})
 
-add_library(cpp_98 STATIC ${files})
-set_target_properties(cpp_98 PROPERTIES
+add_library(masd_cpp_ref_impl_cpp_98 STATIC ${files})
+set_target_properties(masd_cpp_ref_impl_cpp_98 PROPERTIES
     CXX_STANDARD 98
-    OUTPUT_NAME cpp_ref_impl.cpp_98)
+    OUTPUT_NAME masd_cpp_ref_impl_cpp_98)
 
-install(TARGETS cpp_98 ARCHIVE DESTINATION lib COMPONENT libraries)
+install(TARGETS masd_cpp_ref_impl_cpp_98 ARCHIVE DESTINATION lib COMPONENT libraries)

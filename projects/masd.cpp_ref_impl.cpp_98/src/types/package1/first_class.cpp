@@ -1,5 +1,6 @@
-#include "cpp_ref_impl/cpp_98/types/package1/first_class.hpp"
+#include "masd.cpp_ref_impl.cpp_98/types/package1/first_class.hpp"
 
+namespace masd {
 namespace cpp_ref_impl {
 namespace cpp_98 {
 namespace package1 {
@@ -47,4 +48,4 @@ void first_class::private_attribute(const int v) {
     private_attribute_ = v;
 }
 
-} } }
+} } } }
