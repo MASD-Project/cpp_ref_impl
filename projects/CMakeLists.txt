@@ -215,7 +215,7 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.flat_directory_mode/include
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.lam_model/cpp/include
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.seam/include
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.split_project/dir/inc/another
+    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.split_project/include
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.std_model/include
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.test_model_sanitizer/include
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.two_layers_with_objects/include
@@ -249,7 +249,7 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.flat_directory_mo
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.lam_model/cpp)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.models)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.seam)
-# add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.split_project/some_dir/split_project)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.split_project/src)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.std_model)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.test_model_sanitizer/tests)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.two_layers_with_objects)
