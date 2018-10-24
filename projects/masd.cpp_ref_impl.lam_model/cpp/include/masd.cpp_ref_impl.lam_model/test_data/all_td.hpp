@@ -18,14 +18,14 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_LAM_MODEL_TEST_DATA_ALL_TD_HPP
-#define CPP_REF_IMPL_LAM_MODEL_TEST_DATA_ALL_TD_HPP
+#ifndef MASD_CPP_REF_IMPL_LAM_MODEL_TEST_DATA_ALL_TD_HPP
+#define MASD_CPP_REF_IMPL_LAM_MODEL_TEST_DATA_ALL_TD_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/lam_model/test_data/builtins_td.hpp"
-#include "cpp_ref_impl/lam_model/test_data/package1/class_in_package_td.hpp"
+#include "masd.cpp_ref_impl.lam_model/test_data/builtins_td.hpp"
+#include "masd.cpp_ref_impl.lam_model/test_data/package1/class_in_package_td.hpp"
 
 #endif

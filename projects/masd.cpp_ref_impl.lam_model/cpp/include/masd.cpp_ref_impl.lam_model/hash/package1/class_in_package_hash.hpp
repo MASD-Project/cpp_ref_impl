@@ -18,17 +18,17 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_LAM_MODEL_HASH_PACKAGE1_CLASS_IN_PACKAGE_HASH_HPP
-#define CPP_REF_IMPL_LAM_MODEL_HASH_PACKAGE1_CLASS_IN_PACKAGE_HASH_HPP
+#ifndef MASD_CPP_REF_IMPL_LAM_MODEL_HASH_PACKAGE1_CLASS_IN_PACKAGE_HASH_HPP
+#define MASD_CPP_REF_IMPL_LAM_MODEL_HASH_PACKAGE1_CLASS_IN_PACKAGE_HASH_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <functional>
-#include "cpp_ref_impl/lam_model/types/package1/class_in_package.hpp"
+#include "masd.cpp_ref_impl.lam_model/types/package1/class_in_package.hpp"
 
-namespace cpp_ref_impl::lam_model::package1 {
+namespace masd::cpp_ref_impl::lam_model::package1 {
 
 struct class_in_package_hasher {
 public:
@@ -40,10 +40,10 @@ public:
 namespace std {
 
 template<>
-struct hash<cpp_ref_impl::lam_model::package1::class_in_package> {
+struct hash<masd::cpp_ref_impl::lam_model::package1::class_in_package> {
 public:
-    size_t operator()(const cpp_ref_impl::lam_model::package1::class_in_package& v) const {
-        return cpp_ref_impl::lam_model::package1::class_in_package_hasher::hash(v);
+    size_t operator()(const masd::cpp_ref_impl::lam_model::package1::class_in_package& v) const {
+        return masd::cpp_ref_impl::lam_model::package1::class_in_package_hasher::hash(v);
     }
 };
 

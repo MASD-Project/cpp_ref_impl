@@ -26,9 +26,9 @@
 #include <boost/archive/binary_oarchive.hpp>
 #include <boost/archive/polymorphic_iarchive.hpp>
 #include <boost/archive/polymorphic_oarchive.hpp>
-#include "cpp_ref_impl/lam_model/serialization/registrar_ser.hpp"
+#include "masd.cpp_ref_impl.lam_model/serialization/registrar_ser.hpp"
 
-namespace cpp_ref_impl::lam_model {
+namespace masd::cpp_ref_impl::lam_model {
 
 template<typename Archive>
 void register_types(Archive&) {

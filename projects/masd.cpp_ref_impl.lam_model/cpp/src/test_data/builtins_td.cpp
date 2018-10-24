@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/lam_model/test_data/builtins_td.hpp"
+#include "masd.cpp_ref_impl.lam_model/test_data/builtins_td.hpp"
 
 namespace {
 
@@ -67,7 +67,7 @@ bool create_bool(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::lam_model {
+namespace masd::cpp_ref_impl::lam_model {
 
 builtins_generator::builtins_generator() : position_(0) { }
 

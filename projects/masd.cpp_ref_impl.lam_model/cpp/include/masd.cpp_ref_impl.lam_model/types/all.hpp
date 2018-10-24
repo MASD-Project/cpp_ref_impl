@@ -18,14 +18,14 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_LAM_MODEL_TYPES_ALL_HPP
-#define CPP_REF_IMPL_LAM_MODEL_TYPES_ALL_HPP
+#ifndef MASD_CPP_REF_IMPL_LAM_MODEL_TYPES_ALL_HPP
+#define MASD_CPP_REF_IMPL_LAM_MODEL_TYPES_ALL_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/lam_model/types/builtins.hpp"
-#include "cpp_ref_impl/lam_model/types/package1/class_in_package.hpp"
+#include "masd.cpp_ref_impl.lam_model/types/builtins.hpp"
+#include "masd.cpp_ref_impl.lam_model/types/package1/class_in_package.hpp"
 
 #endif

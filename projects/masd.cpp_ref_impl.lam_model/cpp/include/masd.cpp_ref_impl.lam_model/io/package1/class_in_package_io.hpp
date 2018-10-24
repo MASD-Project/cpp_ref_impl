@@ -18,21 +18,21 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_LAM_MODEL_IO_PACKAGE1_CLASS_IN_PACKAGE_IO_HPP
-#define CPP_REF_IMPL_LAM_MODEL_IO_PACKAGE1_CLASS_IN_PACKAGE_IO_HPP
+#ifndef MASD_CPP_REF_IMPL_LAM_MODEL_IO_PACKAGE1_CLASS_IN_PACKAGE_IO_HPP
+#define MASD_CPP_REF_IMPL_LAM_MODEL_IO_PACKAGE1_CLASS_IN_PACKAGE_IO_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <iosfwd>
-#include "cpp_ref_impl/lam_model/types/package1/class_in_package.hpp"
+#include "masd.cpp_ref_impl.lam_model/types/package1/class_in_package.hpp"
 
-namespace cpp_ref_impl::lam_model::package1 {
+namespace masd::cpp_ref_impl::lam_model::package1 {
 
 std::ostream&
 operator<<(std::ostream& s,
-     const cpp_ref_impl::lam_model::package1::class_in_package& v);
+     const masd::cpp_ref_impl::lam_model::package1::class_in_package& v);
 
 }
 

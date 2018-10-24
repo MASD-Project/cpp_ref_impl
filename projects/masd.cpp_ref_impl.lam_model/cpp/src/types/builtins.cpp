@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/lam_model/types/builtins.hpp"
+#include "masd.cpp_ref_impl.lam_model/types/builtins.hpp"
 
-namespace cpp_ref_impl::lam_model {
+namespace masd::cpp_ref_impl::lam_model {
 
 builtins::builtins()
     : prop_0_(static_cast<char>(0)),

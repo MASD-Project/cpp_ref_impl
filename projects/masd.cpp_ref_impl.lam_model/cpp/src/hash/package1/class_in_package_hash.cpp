@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/lam_model/hash/package1/class_in_package_hash.hpp"
+#include "masd.cpp_ref_impl.lam_model/hash/package1/class_in_package_hash.hpp"
 
 namespace {
 
@@ -30,7 +30,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl::lam_model::package1 {
+namespace masd::cpp_ref_impl::lam_model::package1 {
 
 std::size_t class_in_package_hasher::hash(const class_in_package& v) {
     std::size_t seed(0);

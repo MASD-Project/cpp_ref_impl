@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/lam_model/types/package1/class_in_package.hpp"
+#include "masd.cpp_ref_impl.lam_model/types/package1/class_in_package.hpp"
 
-namespace cpp_ref_impl::lam_model::package1 {
+namespace masd::cpp_ref_impl::lam_model::package1 {
 
 class_in_package::class_in_package()
     : prop_0_(static_cast<int>(0)) { }
