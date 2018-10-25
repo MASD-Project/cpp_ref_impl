@@ -111,7 +111,7 @@ if (DOGEN_KNITTER_EXECUTABLE)
     # set(common_arguments ${common_arguments} "--probe-stats-org-mode")
 
     # input models
-    set(models masd.cpp_ref_impl.all_path_and_directory_settings)
+    set(models masd.cpp_ref_impl.directory_settings)
     set(models ${models} masd.cpp_ref_impl.northwind)
     set(models ${models} masd.cpp_ref_impl.boost_model)
     set(models ${models} masd.cpp_ref_impl.compressed)
