@@ -18,27 +18,25 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_UTILITY_TEST_SERIALIZATION_HELPER_HPP
-#define CPP_REF_IMPL_UTILITY_TEST_SERIALIZATION_HELPER_HPP
+#ifndef MASD_CPP_REF_IMPL_UTILITY_TEST_SERIALIZATION_HELPER_HPP
+#define MASD_CPP_REF_IMPL_UTILITY_TEST_SERIALIZATION_HELPER_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
+#include <boost/throw_exception.hpp>
 #include <boost/filesystem/path.hpp>
 #include <boost/filesystem/fstream.hpp>
 #include <boost/archive/xml_oarchive.hpp>
 #include <boost/archive/xml_iarchive.hpp>
-#include <boost/throw_exception.hpp>
-#include "cpp_ref_impl/utility/log/logger.hpp"
 #include <boost/filesystem/operations.hpp>
-#include "cpp_ref_impl/utility/filesystem/file_not_found.hpp"
+#include "masd.cpp_ref_impl.utility/log/logger.hpp"
+#include "masd.cpp_ref_impl.utility/filesystem/file_not_found.hpp"
 
 template<typename Archive> void register_types(Archive& ar);
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace test {
+namespace masd::cpp_ref_impl::utility::test {
 
 /**
  * @brief Reads in the file given by path and deserialises it.
@@ -82,6 +80,6 @@ void xml_serialize(boost::filesystem::path path, Entity entity) {
     BOOST_LOG_SEV(lg, debug) << "Created file.";
 }
 
-} } }
+}
 
 #endif

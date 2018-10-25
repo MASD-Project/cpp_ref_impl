@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_UTILITY_IO_JSONIFY_IO_HPP
-#define CPP_REF_IMPL_UTILITY_IO_JSONIFY_IO_HPP
+#ifndef MASD_CPP_REF_IMPL_UTILITY_IO_JSONIFY_IO_HPP
+#define MASD_CPP_REF_IMPL_UTILITY_IO_JSONIFY_IO_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -28,11 +28,7 @@
 #include <ostream>
 #include <string>
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace streaming {
-
-namespace detail {
+namespace masd::cpp_ref_impl::utility::streaming::detail {
 
 template<typename Target>
 class json_number_type {
@@ -74,11 +70,9 @@ private:
     const Target& target_;
 };
 
-} } } }
+}
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace streaming {
+namespace masd::cpp_ref_impl::utility::streaming {
 
 /**
  * @brief String handling.
@@ -155,7 +149,9 @@ jsonify(const Insertee& insertee) {
     return(detail::json_complex_type<Insertee>(insertee));
 }
 
-namespace detail {
+}
+
+namespace masd::cpp_ref_impl::utility::streaming::detail {
 
 template<typename Target>
 inline std::ostream&
@@ -185,6 +181,6 @@ operator<<(std::ostream& stream, const json_complex_type<Target>& target) {
     return(stream);
 }
 
-} } } }
+}
 
 #endif

@@ -18,24 +18,22 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_UTILITY_TEST_CANNED_TESTS_HPP
-#define CPP_REF_IMPL_UTILITY_TEST_CANNED_TESTS_HPP
+#ifndef MASD_CPP_REF_IMPL_UTILITY_TEST_CANNED_TESTS_HPP
+#define MASD_CPP_REF_IMPL_UTILITY_TEST_CANNED_TESTS_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <boost/test/unit_test.hpp>
-#include "cpp_ref_impl/utility/test/asserter.hpp"
-#include "cpp_ref_impl/utility/test/io_tester.hpp"
-#include "cpp_ref_impl/utility/test/hash_tester.hpp"
-#include "cpp_ref_impl/utility/test/move_assignment_copy_tester.hpp"
-#include "cpp_ref_impl/utility/test/equality_tester.hpp"
-#include "cpp_ref_impl/utility/test/serialization_tester.hpp"
+#include "masd.cpp_ref_impl.utility/test/asserter.hpp"
+#include "masd.cpp_ref_impl.utility/test/io_tester.hpp"
+#include "masd.cpp_ref_impl.utility/test/hash_tester.hpp"
+#include "masd.cpp_ref_impl.utility/test/move_assignment_copy_tester.hpp"
+#include "masd.cpp_ref_impl.utility/test/equality_tester.hpp"
+#include "masd.cpp_ref_impl.utility/test/serialization_tester.hpp"
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace test {
+namespace masd::cpp_ref_impl::utility::test {
 
 template<typename Sequence>
 void test_equality() {
@@ -104,6 +102,6 @@ void test_io() {
         inserter_operator_produces_valid_json(seq());
 }
 
-} } }
+}
 
 #endif

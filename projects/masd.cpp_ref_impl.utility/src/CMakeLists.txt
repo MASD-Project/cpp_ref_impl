@@ -18,7 +18,7 @@
 # MA 02110-1301, USA.
 #
 set(name "utility")
-set(binary_name "cpp_ref_impl.${name}")
+set(binary_name "masd_cpp_ref_impl_${name}")
 set(files "")
 file(GLOB_RECURSE files RELATIVE
     "${CMAKE_CURRENT_SOURCE_DIR}/"

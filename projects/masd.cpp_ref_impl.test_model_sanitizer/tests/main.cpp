@@ -20,7 +20,7 @@
  */
 #define BOOST_TEST_MODULE test_model_sanitizer_tests
 #include <boost/test/included/unit_test.hpp>
-#include "cpp_ref_impl/utility/test/fixture.hpp"
+#include "masd.cpp_ref_impl.utility/test/fixture.hpp"
 
-using namespace cpp_ref_impl::utility::test;
+using namespace masd::cpp_ref_impl::utility::test;
 BOOST_GLOBAL_FIXTURE(exception_fixture);

@@ -22,7 +22,7 @@
 #include <boost/exception/info.hpp>
 #include <boost/test/unit_test_monitor.hpp>
 #include <boost/exception/diagnostic_information.hpp>
-#include "cpp_ref_impl/utility/test/fixture.hpp"
+#include "masd.cpp_ref_impl.utility/test/fixture.hpp"
 
 namespace  {
 
@@ -35,9 +35,7 @@ inline void translate(const boost::exception& e) {
 
 }
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace test {
+namespace masd::cpp_ref_impl::utility::test {
 
 exception_fixture::exception_fixture() {
     using boost::exception;
@@ -45,4 +43,4 @@ exception_fixture::exception_fixture() {
     unit_test_monitor.register_exception_translator<exception>(&translate);
 }
 
-} } }
+}

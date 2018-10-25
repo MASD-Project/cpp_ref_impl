@@ -28,8 +28,8 @@ file(GLOB_RECURSE odb_files RELATIVE
    "${CMAKE_CURRENT_SOURCE_DIR}/*.cxx")
 set(files ${files} ${odb_files})
 
-add_library(compressed STATIC ${files})
-set_target_properties(compressed PROPERTIES
-    OUTPUT_NAME cpp_ref_impl.compressed)
+add_library(masd_cpp_ref_impl_compressed STATIC ${files})
+set_target_properties(masd_cpp_ref_impl_compressed PROPERTIES
+    OUTPUT_NAME masd_cpp_ref_impl_compressed)
 
-install(TARGETS compressed ARCHIVE DESTINATION lib COMPONENT libraries)
+install(TARGETS masd_cpp_ref_impl_compressed ARCHIVE DESTINATION lib COMPONENT libraries)

@@ -21,11 +21,9 @@
 #include <sstream>
 #include <boost/test/unit_test.hpp>
 #include <boost/test/results_collector.hpp>
-#include "cpp_ref_impl/utility/test/logging.hpp"
+#include "masd.cpp_ref_impl.utility/test/logging.hpp"
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace test {
+namespace masd::cpp_ref_impl::utility::test {
 
 void log_if_test_has_failed() {
     using namespace cpp_ref_impl::utility::log;
@@ -58,4 +56,4 @@ boost::filesystem::path probing_directory_path(std::string test_module,
     return s.str();
 }
 
-} } }
+}

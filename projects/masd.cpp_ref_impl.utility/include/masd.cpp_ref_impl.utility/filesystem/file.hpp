@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_UTILITY_FILESYSTEM_FILE_HPP
-#define CPP_REF_IMPL_UTILITY_FILESYSTEM_FILE_HPP
+#ifndef MASD_CPP_REF_IMPL_UTILITY_FILESYSTEM_FILE_HPP
+#define MASD_CPP_REF_IMPL_UTILITY_FILESYSTEM_FILE_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -32,12 +32,9 @@
 #include <forward_list>
 #include <boost/filesystem/path.hpp>
 #include <boost/filesystem/fstream.hpp>
-#include "cpp_ref_impl/utility/filesystem/io_error.hpp"
+#include "masd.cpp_ref_impl.utility/filesystem/io_error.hpp"
 
-
-namespace cpp_ref_impl {
-namespace utility {
-namespace filesystem {
+namespace masd::cpp_ref_impl::utility::filesystem {
 
 /**
  * @brief Returns the contents of the file.
@@ -107,6 +104,6 @@ boost::filesystem::path find_file_recursively_upwards(
  */
 void remove(const std::list<boost::filesystem::path>& files);
 
-} } }
+}
 
 #endif

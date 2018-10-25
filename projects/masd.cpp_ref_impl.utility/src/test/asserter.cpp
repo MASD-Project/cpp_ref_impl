@@ -31,14 +31,15 @@
 #include <boost/filesystem.hpp>
 #include <boost/filesystem/operations.hpp>
 #include <boost/algorithm/string/predicate.hpp>
-#include "cpp_ref_impl/utility/filesystem/file.hpp"
-#include "cpp_ref_impl/utility/io/set_io.hpp"
-#include "cpp_ref_impl/utility/io/vector_io.hpp"
-#include "cpp_ref_impl/utility/serialization/xml_helper.hpp"
-#include "cpp_ref_impl/utility/test/bytewise_file_asserter.hpp"
-#include "cpp_ref_impl/utility/test/asserter.hpp"
+#include "masd.cpp_ref_impl.utility/filesystem/file.hpp"
+#include "masd.cpp_ref_impl.utility/io/set_io.hpp"
+#include "masd.cpp_ref_impl.utility/io/vector_io.hpp"
+#include "masd.cpp_ref_impl.utility/serialization/xml_helper.hpp"
+#include "masd.cpp_ref_impl.utility/test/bytewise_file_asserter.hpp"
+#include "masd.cpp_ref_impl.utility/test/asserter.hpp"
 
 using boost::filesystem::path;
+using namespace masd::cpp_ref_impl::utility::log;
 
 namespace {
 
@@ -67,8 +68,7 @@ bool compare_paths(
     const auto a(normalise(actual_tuple.get<0>(), actual_tuple.get<1>()));
     const auto e(normalise(expected_tuple.get<0>(), expected_tuple.get<1>()));
 
-    using namespace cpp_ref_impl::utility::log;
-    auto lg(cpp_ref_impl::utility::test::asserter::logger());
+    auto lg(masd::cpp_ref_impl::utility::test::asserter::logger());
     BOOST_LOG_SEV(lg, debug) << "actual paths: " << a;
     BOOST_LOG_SEV(lg, debug) << "expected paths: " << e;
     if (a != e) {
@@ -89,15 +89,11 @@ bool compare_paths(
 
 }
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace test {
+namespace masd::cpp_ref_impl::utility::test {
 
-cpp_ref_impl::utility::log::logger asserter::lg_(
-    cpp_ref_impl::utility::log::logger_factory("utility.test.asserter"));
+logger asserter::lg_(logger_factory("utility.test.asserter"));
 
 bool asserter::handle_assert(const bool result, const std::string& assertion) {
-    using namespace cpp_ref_impl::utility::log;
     if (!result)
         BOOST_LOG_SEV(lg_, error) << assertion << " failed.";
     else
@@ -107,7 +103,6 @@ bool asserter::handle_assert(const bool result, const std::string& assertion) {
 
 void asserter::
 log_strings(const std::string& expected, const std::string& actual) {
-    using namespace cpp_ref_impl::utility::log;
     BOOST_LOG_SEV(lg_, debug) << "expected: <start>"
                               << (expected.empty() ? empty_marker : expected)
                               << "<end>";
@@ -202,4 +197,4 @@ assert_contains(const std::string& expected, const std::string& actual) {
     return handle_assert(boost::contains(actual, expected), contains);
 }
 
-} } }
+}

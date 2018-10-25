@@ -18,24 +18,25 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_COMPRESSED_IO_PACKAGE1_FIRST_CLASS_IO_HPP
-#define CPP_REF_IMPL_COMPRESSED_IO_PACKAGE1_FIRST_CLASS_IO_HPP
+#ifndef MASD_CPP_REF_IMPL_COMPRESSED_IO_PACKAGE1_FIRST_CLASS_IO_HPP
+#define MASD_CPP_REF_IMPL_COMPRESSED_IO_PACKAGE1_FIRST_CLASS_IO_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <iosfwd>
-#include "cpp_ref_impl/compressed/types/package1/first_class.hpp"
+#include "masd.cpp_ref_impl.compressed/types/package1/first_class.hpp"
 
+namespace masd {
 namespace cpp_ref_impl {
 namespace compressed {
 namespace package1 {
 
 std::ostream&
 operator<<(std::ostream& s,
-     const cpp_ref_impl::compressed::package1::first_class& v);
+     const masd::cpp_ref_impl::compressed::package1::first_class& v);
 
-} } }
+} } } }
 
 #endif

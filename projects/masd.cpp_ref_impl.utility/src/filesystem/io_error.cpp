@@ -18,13 +18,11 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/utility/filesystem/io_error.hpp"
+#include "masd.cpp_ref_impl.utility/filesystem/io_error.hpp"
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace filesystem {
+namespace masd::cpp_ref_impl::utility::filesystem {
 
 io_error::io_error(std::string message)
-    : cpp_ref_impl::utility::exception::exception(message) { }
+    : masd::cpp_ref_impl::utility::exception::exception(message) { }
 
-} } }
+}

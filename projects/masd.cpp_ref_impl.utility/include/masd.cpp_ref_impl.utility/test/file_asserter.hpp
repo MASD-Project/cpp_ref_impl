@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_UTILITY_TEST_FILE_ASSERTER_HPP
-#define CPP_REF_IMPL_UTILITY_TEST_FILE_ASSERTER_HPP
+#ifndef MASD_CPP_REF_IMPL_UTILITY_TEST_FILE_ASSERTER_HPP
+#define MASD_CPP_REF_IMPL_UTILITY_TEST_FILE_ASSERTER_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -28,9 +28,7 @@
 #include <memory>
 #include <boost/filesystem/path.hpp>
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace test {
+namespace masd::cpp_ref_impl::utility::test {
 
 class file_asserter {
 public:
@@ -51,6 +49,6 @@ public:
         boost::filesystem::path actual) const = 0;
 };
 
-} } }
+}
 
 #endif

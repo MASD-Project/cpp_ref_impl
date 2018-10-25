@@ -28,8 +28,8 @@
 #include <boost/log/core.hpp>
 #include <boost/core/null_deleter.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
-#include "cpp_ref_impl/utility/exception/invalid_enum_value.hpp"
-#include "cpp_ref_impl/utility/log/life_cycle_manager.hpp"
+#include "masd.cpp_ref_impl.utility/exception/invalid_enum_value.hpp"
+#include "masd.cpp_ref_impl.utility/log/life_cycle_manager.hpp"
 
 namespace {
 
@@ -42,9 +42,7 @@ const std::string time_stamp_format("%Y-%m-%d %H:%M:%S.%f");
 
 }
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace log {
+namespace masd::cpp_ref_impl::utility::log {
 
 void life_cycle_manager::create_file_backend(
     boost::filesystem::path file_name, const severity_level severity) {
@@ -118,4 +116,4 @@ void life_cycle_manager::shutdown() {
     core->remove_all_sinks();
 }
 
-} } }
+}

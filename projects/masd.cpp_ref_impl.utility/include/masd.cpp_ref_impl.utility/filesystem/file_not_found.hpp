@@ -18,18 +18,16 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_UTILITY_FILESYSTEM_FILE_NOT_FOUND_HPP
-#define CPP_REF_IMPL_UTILITY_FILESYSTEM_FILE_NOT_FOUND_HPP
+#ifndef MASD_CPP_REF_IMPL_UTILITY_FILESYSTEM_FILE_NOT_FOUND_HPP
+#define MASD_CPP_REF_IMPL_UTILITY_FILESYSTEM_FILE_NOT_FOUND_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/utility/exception/utility_exception.hpp"
+#include "masd.cpp_ref_impl.utility/exception/utility_exception.hpp"
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace filesystem {
+namespace masd::cpp_ref_impl::utility::filesystem {
 
 /**
  * @brief A file requested by the user could not be located.
@@ -46,6 +44,6 @@ public:
     virtual ~file_not_found() throw() {}
 };
 
-} } }
+}
 
 #endif

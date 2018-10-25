@@ -21,14 +21,14 @@
 #include <boost/throw_exception.hpp>
 #include <boost/filesystem/path.hpp>
 #include <boost/filesystem/operations.hpp>
-#include "cpp_ref_impl/utility/log/logger.hpp"
-#include "cpp_ref_impl/utility/filesystem/file_not_found.hpp"
-#include "cpp_ref_impl/utility/filesystem/file.hpp"
+#include "masd.cpp_ref_impl.utility/log/logger.hpp"
+#include "masd.cpp_ref_impl.utility/filesystem/file_not_found.hpp"
+#include "masd.cpp_ref_impl.utility/filesystem/file.hpp"
 
 namespace {
 
-using namespace cpp_ref_impl::utility::log;
-auto lg(cpp_ref_impl::utility::log::logger_factory("utility.filesystem.file"));
+using namespace masd::cpp_ref_impl::utility::log;
+auto lg(logger_factory("utility.filesystem.file"));
 
 const std::string invalid_directory("Not a directory: ");
 const std::string file_not_found("File not found: ");
@@ -38,9 +38,7 @@ const std::string dot(".");
 
 }
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace filesystem {
+namespace masd::cpp_ref_impl::utility::filesystem {
 
 std::string read_file_content(std::istream& s) {
     s.exceptions(std::ifstream::failbit | std::ifstream::badbit);
@@ -168,4 +166,4 @@ void remove(const std::list<boost::filesystem::path>& files) {
     }
 }
 
-} } }
+}

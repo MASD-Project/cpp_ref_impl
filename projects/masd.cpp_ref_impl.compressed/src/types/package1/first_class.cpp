@@ -18,8 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/compressed/types/package1/first_class.hpp"
+#include "masd.cpp_ref_impl.compressed/types/package1/first_class.hpp"
 
+namespace masd {
 namespace cpp_ref_impl {
 namespace compressed {
 namespace package1 {
@@ -67,4 +68,4 @@ void first_class::private_attribute(const int v) {
     private_attribute_ = v;
 }
 
-} } }
+} } } }

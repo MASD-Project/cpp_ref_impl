@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_UTILITY_LOG_LIFE_CYCLE_MANAGER_HPP
-#define CPP_REF_IMPL_UTILITY_LOG_LIFE_CYCLE_MANAGER_HPP
+#ifndef MASD_CPP_REF_IMPL_UTILITY_LOG_LIFE_CYCLE_MANAGER_HPP
+#define MASD_CPP_REF_IMPL_UTILITY_LOG_LIFE_CYCLE_MANAGER_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -29,11 +29,9 @@
 #include <string>
 #include <boost/shared_ptr.hpp>
 #include <boost/filesystem/path.hpp>
-#include "cpp_ref_impl/utility/log/severity_level.hpp"
+#include "masd.cpp_ref_impl.utility/log/severity_level.hpp"
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace log {
+namespace masd::cpp_ref_impl::utility::log {
 
 /**
  * @brief Manages the starting and stopping of logging for an
@@ -86,6 +84,6 @@ public:
     void shutdown();
 };
 
-} } }
+}
 
 #endif

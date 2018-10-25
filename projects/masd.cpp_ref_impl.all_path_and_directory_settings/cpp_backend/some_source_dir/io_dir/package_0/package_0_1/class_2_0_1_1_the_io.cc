@@ -19,13 +19,13 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/all_path_and_directory_settings/io_dir/package_0/package_0_1/class_2_0_1_0_the_io.hh"
+#include "masd.cpp_ref_impl.all_path_and_directory_settings/io_dir/package_0/package_0_1/class_2_0_1_0_the_io.hh"
 
-namespace cpp_ref_impl::all_path_and_directory_settings::package_0::package_0_1 {
+namespace masd::cpp_ref_impl::all_path_and_directory_settings::package_0::package_0_1 {
 
 std::ostream& operator<<(std::ostream& s, const class_2& v) {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::all_path_and_directory_settings::package_0::package_0_1::class_2\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::all_path_and_directory_settings::package_0::package_0_1::class_2\"" << ", "
       << "\"prop_0\": " << v.prop_0()
       << " }";
     return(s);

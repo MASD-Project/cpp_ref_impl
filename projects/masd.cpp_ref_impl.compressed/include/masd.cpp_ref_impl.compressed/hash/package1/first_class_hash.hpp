@@ -18,16 +18,17 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_COMPRESSED_HASH_PACKAGE1_FIRST_CLASS_HASH_HPP
-#define CPP_REF_IMPL_COMPRESSED_HASH_PACKAGE1_FIRST_CLASS_HASH_HPP
+#ifndef MASD_CPP_REF_IMPL_COMPRESSED_HASH_PACKAGE1_FIRST_CLASS_HASH_HPP
+#define MASD_CPP_REF_IMPL_COMPRESSED_HASH_PACKAGE1_FIRST_CLASS_HASH_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <functional>
-#include "cpp_ref_impl/compressed/types/package1/first_class.hpp"
+#include "masd.cpp_ref_impl.compressed/types/package1/first_class.hpp"
 
+namespace masd {
 namespace cpp_ref_impl {
 namespace compressed {
 namespace package1 {
@@ -37,15 +38,15 @@ public:
     static std::size_t hash(const first_class& v);
 };
 
-} } }
+} } } }
 
 namespace std {
 
 template<>
-struct hash<cpp_ref_impl::compressed::package1::first_class> {
+struct hash<masd::cpp_ref_impl::compressed::package1::first_class> {
 public:
-    size_t operator()(const cpp_ref_impl::compressed::package1::first_class& v) const {
-        return cpp_ref_impl::compressed::package1::first_class_hasher::hash(v);
+    size_t operator()(const masd::cpp_ref_impl::compressed::package1::first_class& v) const {
+        return masd::cpp_ref_impl::compressed::package1::first_class_hasher::hash(v);
     }
 };
 

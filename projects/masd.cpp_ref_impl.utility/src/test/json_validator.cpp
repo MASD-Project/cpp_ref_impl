@@ -22,7 +22,7 @@
 #include <istream>
 #include <boost/spirit/include/qi.hpp>
 #include <boost/spirit/include/support_istream_iterator.hpp>
-#include "cpp_ref_impl/utility/test/json_validator.hpp"
+#include "masd.cpp_ref_impl.utility/test/json_validator.hpp"
 
 namespace {
 
@@ -48,9 +48,7 @@ struct json_grammar : qi::grammar<Iterator, Skipper> {
 
 }
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace test {
+namespace masd::cpp_ref_impl::utility::test {
 
 bool json_validator::validate(std::istream& s) {
     boost::spirit::istream_iterator it(s);
@@ -64,4 +62,4 @@ bool json_validator::validate(std::istream& s) {
     return ok && it == end;
 }
 
-} } }
+}

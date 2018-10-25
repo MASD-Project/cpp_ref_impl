@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_UTILITY_SERIALIZATION_XML_HELPER_HPP
-#define CPP_REF_IMPL_UTILITY_SERIALIZATION_XML_HELPER_HPP
+#ifndef MASD_CPP_REF_IMPL_UTILITY_SERIALIZATION_XML_HELPER_HPP
+#define MASD_CPP_REF_IMPL_UTILITY_SERIALIZATION_XML_HELPER_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -31,11 +31,9 @@
 #include <boost/archive/xml_oarchive.hpp>
 #include <boost/archive/xml_iarchive.hpp>
 #include <boost/throw_exception.hpp>
-#include "cpp_ref_impl/utility/filesystem/file_not_found.hpp"
+#include "masd.cpp_ref_impl.utility/filesystem/file_not_found.hpp"
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace serialization {
+namespace masd::cpp_ref_impl::utility::serialization {
 
 /**
  * @brief Reads in the file given by path and deserialises it.
@@ -62,6 +60,6 @@ void xml_serialize(boost::filesystem::path p, Entity e) {
     oa << BOOST_SERIALIZATION_NVP(e);
 }
 
-} } }
+}
 
 #endif

@@ -19,15 +19,15 @@
  *
  */
 #include <boost/test/unit_test.hpp>
-#include "cpp_ref_impl/utility/io/vector_io.hpp"
-#include "cpp_ref_impl/utility/test/logging.hpp"
-#include "cpp_ref_impl/utility/test/canned_tests.hpp"
-#include "cpp_ref_impl/utility/test/io_tester.hpp"
-#include "cpp_ref_impl/std_model/types/all.hpp"
-#include "cpp_ref_impl/std_model/io/all_io.hpp"
-#include "cpp_ref_impl/std_model/serialization/all_ser.hpp"
-#include "cpp_ref_impl/std_model/test_data/all_td.hpp"
-#include "cpp_ref_impl/std_model/hash/all_hash.hpp"
+#include "masd.cpp_ref_impl.utility/io/vector_io.hpp"
+#include "masd.cpp_ref_impl.utility/test/logging.hpp"
+#include "masd.cpp_ref_impl.utility/test/canned_tests.hpp"
+#include "masd.cpp_ref_impl.utility/test/io_tester.hpp"
+#include "masd.cpp_ref_impl.std_model/types/all.hpp"
+#include "masd.cpp_ref_impl.std_model/io/all_io.hpp"
+#include "masd.cpp_ref_impl.std_model/serialization/all_ser.hpp"
+#include "masd.cpp_ref_impl.std_model/test_data/all_td.hpp"
+#include "masd.cpp_ref_impl.std_model/hash/all_hash.hpp"
 #include "dogen/test_models/test_model_sanitizer/register_types.hpp"
 
 namespace {
@@ -38,8 +38,8 @@ const std::string test_suite("std_model_tests");
 
 }
 
-using namespace cpp_ref_impl::std_model;
-using namespace cpp_ref_impl::utility::test;
+using namespace masd::cpp_ref_impl::std_model;
+using namespace masd::cpp_ref_impl::utility::test;
 
 BOOST_AUTO_TEST_SUITE(std_model_tests)
 
@@ -110,7 +110,7 @@ BOOST_AUTO_TEST_CASE(validate_io) {
 
     class_a a;
     a.prop0("\"\" 'test' \\ \n");
-    using cpp_ref_impl::utility::test::io_tester;
+    using masd::cpp_ref_impl::utility::test::io_tester;
     io_tester<class_a>::inserter_operator_produces_valid_json(a);
 }
 

@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/all_path_and_directory_settings/test_data_dir/class_0_0_4_0_the_test_data.hh"
+#include "masd.cpp_ref_impl.all_path_and_directory_settings/test_data_dir/class_0_0_4_0_the_test_data.hh"
 
 namespace {
 
@@ -28,7 +28,7 @@ int create_int(const unsigned int position) {
 
 }
 
-namespace cpp_ref_impl::all_path_and_directory_settings {
+namespace masd::cpp_ref_impl::all_path_and_directory_settings {
 
 class_0_generator::class_0_generator() : position_(0) { }
 

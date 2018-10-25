@@ -19,19 +19,20 @@
  *
  */
 #include <ostream>
-#include "cpp_ref_impl/compressed/io/package1/first_class_io.hpp"
+#include "masd.cpp_ref_impl.compressed/io/package1/first_class_io.hpp"
 
+namespace masd {
 namespace cpp_ref_impl {
 namespace compressed {
 namespace package1 {
 
 std::ostream& operator<<(std::ostream& s, const first_class& v) {
     s << " { "
-      << "\"__type__\": " << "\"cpp_ref_impl::compressed::package1::first_class\"" << ", "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::compressed::package1::first_class\"" << ", "
       << "\"public_attribute\": " << v.public_attribute() << ", "
       << "\"private_attribute\": " << v.private_attribute()
       << " }";
     return(s);
 }
 
-} } }
+} } } }

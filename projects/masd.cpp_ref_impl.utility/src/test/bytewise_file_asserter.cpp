@@ -18,13 +18,11 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/utility/log/logger.hpp"
-#include "cpp_ref_impl/utility/filesystem/file.hpp"
-#include "cpp_ref_impl/utility/test/bytewise_file_asserter.hpp"
+#include "masd.cpp_ref_impl.utility/log/logger.hpp"
+#include "masd.cpp_ref_impl.utility/filesystem/file.hpp"
+#include "masd.cpp_ref_impl.utility/test/bytewise_file_asserter.hpp"
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace test {
+namespace masd::cpp_ref_impl::utility::test {
 
 bool bytewise_file_asserter::is_assertable(boost::filesystem::path) const {
     return true;
@@ -55,4 +53,4 @@ assert_file(boost::filesystem::path expected,
     return false;
 }
 
-} } }
+}

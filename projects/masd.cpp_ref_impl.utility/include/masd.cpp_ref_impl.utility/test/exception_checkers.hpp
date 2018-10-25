@@ -18,19 +18,17 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_UTILITY_TEST_EXCEPTION_CHECKERS_HPP
-#define CPP_REF_IMPL_UTILITY_TEST_EXCEPTION_CHECKERS_HPP
+#ifndef MASD_CPP_REF_IMPL_UTILITY_TEST_EXCEPTION_CHECKERS_HPP
+#define MASD_CPP_REF_IMPL_UTILITY_TEST_EXCEPTION_CHECKERS_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
 #include <string>
-#include "cpp_ref_impl/utility/test/asserter.hpp"
+#include "masd.cpp_ref_impl.utility/test/asserter.hpp"
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace test {
+namespace masd::cpp_ref_impl::utility::test {
 
 template<typename Exception>
 class contains_checker {
@@ -46,6 +44,6 @@ private:
     const std::string expected_;
 };
 
-} } }
+}
 
 #endif

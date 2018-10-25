@@ -19,14 +19,14 @@
  *
  */
 #include <boost/test/unit_test.hpp>
-#include "cpp_ref_impl/utility/io/vector_io.hpp"
-#include "cpp_ref_impl/utility/test/logging.hpp"
-#include "cpp_ref_impl/utility/test/canned_tests.hpp"
-#include "cpp_ref_impl/disable_facet_folders/all.hpp"
-#include "cpp_ref_impl/disable_facet_folders/all_io.hpp"
-#include "cpp_ref_impl/disable_facet_folders/all_ser.hpp"
-#include "cpp_ref_impl/disable_facet_folders/all_td.hpp"
-#include "cpp_ref_impl/disable_facet_folders/all_hash.hpp"
+#include "masd.cpp_ref_impl.utility/io/vector_io.hpp"
+#include "masd.cpp_ref_impl.utility/test/logging.hpp"
+#include "masd.cpp_ref_impl.utility/test/canned_tests.hpp"
+#include "masd.cpp_ref_impl.disable_facet_folders/all.hpp"
+#include "masd.cpp_ref_impl.disable_facet_folders/all_io.hpp"
+#include "masd.cpp_ref_impl.disable_facet_folders/all_ser.hpp"
+#include "masd.cpp_ref_impl.disable_facet_folders/all_td.hpp"
+#include "masd.cpp_ref_impl.disable_facet_folders/all_hash.hpp"
 #include "dogen/test_models/test_model_sanitizer/register_types.hpp"
 
 namespace {
@@ -37,9 +37,9 @@ const std::string test_suite("disable_facet_folders_tests");
 
 }
 
-using namespace cpp_ref_impl::disable_facet_folders;
-using namespace cpp_ref_impl::disable_facet_folders::package1;
-using namespace cpp_ref_impl::utility::test;
+using namespace masd::cpp_ref_impl::disable_facet_folders;
+using namespace masd::cpp_ref_impl::disable_facet_folders::package1;
+using namespace masd::cpp_ref_impl::utility::test;
 
 BOOST_AUTO_TEST_SUITE(disable_facet_folders_tests)
 

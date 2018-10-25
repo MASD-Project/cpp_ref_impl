@@ -28,11 +28,9 @@
 #include <string>
 #include <boost/log/sources/record_ostream.hpp>
 #include <boost/log/sources/severity_channel_logger.hpp>
-#include "cpp_ref_impl/utility/log/severity_level.hpp"
+#include "masd.cpp_ref_impl.utility/log/severity_level.hpp"
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace log {
+namespace masd::cpp_ref_impl::utility::log {
 
 typedef boost::log::sources::severity_channel_logger<
     severity_level,
@@ -41,6 +39,6 @@ typedef boost::log::sources::severity_channel_logger<
 
 logger logger_factory(std::string component_name);
 
-} } }
+}
 
 #endif

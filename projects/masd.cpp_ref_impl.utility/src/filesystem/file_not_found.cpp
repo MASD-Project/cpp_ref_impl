@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/utility/filesystem/file_not_found.hpp"
+#include "masd.cpp_ref_impl.utility/filesystem/file_not_found.hpp"
 
 namespace {
 
@@ -26,11 +26,10 @@ const std::string file_not_found("File not found: ");
 
 }
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace filesystem {
+namespace masd::cpp_ref_impl::utility::filesystem {
 
 file_not_found::file_not_found(std::string message)
-    : cpp_ref_impl::utility::exception::exception(::file_not_found + message) { }
+    : masd::cpp_ref_impl::utility::exception::exception(
+        ::file_not_found + message) { }
 
-} } }
+}

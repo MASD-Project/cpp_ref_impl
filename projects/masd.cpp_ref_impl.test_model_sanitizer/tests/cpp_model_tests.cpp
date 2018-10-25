@@ -20,14 +20,14 @@
  */
 #include <boost/test/unit_test.hpp>
 #include <boost/exception/diagnostic_information.hpp>
-#include "cpp_ref_impl/utility/io/vector_io.hpp"
-#include "cpp_ref_impl/utility/test/logging.hpp"
-#include "cpp_ref_impl/utility/test/canned_tests.hpp"
-#include "cpp_ref_impl/cpp_model/types/all.hpp"
-#include "cpp_ref_impl/cpp_model/io/all_io.hpp"
-#include "cpp_ref_impl/cpp_model/serialization/all_ser.hpp"
-#include "cpp_ref_impl/cpp_model/test_data/all_td.hpp"
-#include "cpp_ref_impl/cpp_model/hash/all_hash.hpp"
+#include "masd.cpp_ref_impl.utility/io/vector_io.hpp"
+#include "masd.cpp_ref_impl.utility/test/logging.hpp"
+#include "masd.cpp_ref_impl.utility/test/canned_tests.hpp"
+#include "masd.cpp_ref_impl.cpp_model/types/all.hpp"
+#include "masd.cpp_ref_impl.cpp_model/io/all_io.hpp"
+#include "masd.cpp_ref_impl.cpp_model/serialization/all_ser.hpp"
+#include "masd.cpp_ref_impl.cpp_model/test_data/all_td.hpp"
+#include "masd.cpp_ref_impl.cpp_model/hash/all_hash.hpp"
 #include "dogen/test_models/test_model_sanitizer/register_types.hpp"
 
 namespace {
@@ -37,56 +37,55 @@ const std::string test_module("test_model_sanitizer");
 const std::string test_suite("cpp_model_tests");
 
 class mock_visitor
-    : public cpp_ref_impl::cpp_model::base_visitor {
+    : public masd::cpp_ref_impl::cpp_model::base_visitor {
 public:
     mock_visitor() { reset(); }
 
 public:
-    using cpp_ref_impl::cpp_model::base_visitor::visit;
+    using masd::cpp_ref_impl::cpp_model::base_visitor::visit;
 
 public:
     virtual void visit(
-        const cpp_ref_impl::cpp_model::descendant2&
+        const masd::cpp_ref_impl::cpp_model::descendant2&
         ) const override {
         visited |= 0x02;
     }
 
     virtual void visit(
-        const cpp_ref_impl::cpp_model::descendant2&) override {
+        const masd::cpp_ref_impl::cpp_model::descendant2&) override {
         visited |= 0x04;
     }
 
     virtual void visit(
-        cpp_ref_impl::cpp_model::descendant2&) const override {
+        masd::cpp_ref_impl::cpp_model::descendant2&) const override {
         visited |= 0x08;
     }
 
     virtual void visit(
-        cpp_ref_impl::cpp_model::descendant2&
+        masd::cpp_ref_impl::cpp_model::descendant2&
         ) override {
         visited |= 0x10;
     }
 
     virtual void visit(
-        const cpp_ref_impl::cpp_model::descendant3&
+        const masd::cpp_ref_impl::cpp_model::descendant3&
         ) const override {
         visited |= 0x20;
     }
 
     virtual void visit(
-        const cpp_ref_impl::cpp_model::descendant3&) override {
+        const masd::cpp_ref_impl::cpp_model::descendant3&) override {
         visited |= 0x30;
     }
 
     virtual void visit(
-        cpp_ref_impl::cpp_model::descendant3& d
-        ) const override {
+        masd::cpp_ref_impl::cpp_model::descendant3& d) const override {
         d.prop_0(true);
         visited |= 0x40;
     }
 
     virtual void visit(
-        cpp_ref_impl::cpp_model::descendant3& d) override {
+        masd::cpp_ref_impl::cpp_model::descendant3& d) override {
         d.prop_0(true);
         visited |= 0x50;
     }
@@ -98,8 +97,8 @@ public:
 
 }
 
-using namespace cpp_ref_impl::cpp_model;
-using namespace cpp_ref_impl::utility::test;
+using namespace masd::cpp_ref_impl::cpp_model;
+using namespace masd::cpp_ref_impl::utility::test;
 
 BOOST_AUTO_TEST_SUITE(cpp_model_tests)
 

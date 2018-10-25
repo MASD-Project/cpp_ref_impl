@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/utility/log/severity_level.hpp"
-#include "cpp_ref_impl/utility/exception/invalid_enum_value.hpp"
+#include "masd.cpp_ref_impl.utility/log/severity_level.hpp"
+#include "masd.cpp_ref_impl.utility/exception/invalid_enum_value.hpp"
 
 namespace {
 
@@ -31,9 +31,7 @@ const std::string error_level("error");
 
 }
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace log {
+namespace masd::cpp_ref_impl::utility::log {
 
 severity_level to_severity_level(const std::string& s) {
     if (s == trace_level)
@@ -52,4 +50,4 @@ severity_level to_severity_level(const std::string& s) {
         invalid_enum_value("Invalid or unexpected severity level: " + s));
 }
 
-} } }
+}

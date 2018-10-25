@@ -19,7 +19,7 @@
 #
 set(name "test_model_sanitizer")
 set(tests_name "${name}.tests")
-set(binary_name "dogen.${name}.tests")
+set(binary_name "masd.cpp_ref_impl.${name}.tests")
 set(candidate_files "")
 set(files "")
 file(GLOB_RECURSE candidate_files RELATIVE
@@ -43,23 +43,23 @@ endforeach()
 # we need to add these manually as the point of this test model
 # is not to generate a make file.
 file(GLOB_RECURSE disable_cmakelists_files ABSOLUTE
-    "${CMAKE_SOURCE_DIR}/projects/disable_cmakelists/src/*.cpp")
+    "${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.disable_cmakelists/src/*.cpp")
 
 add_executable(${tests_name} ${files} ${disable_cmakelists_files})
 set_target_properties(${tests_name} PROPERTIES OUTPUT_NAME ${binary_name})
 
 target_link_libraries(${tests_name}
-    cpp_model
-    cpp_98
-    compressed
-    disable_facet_folders
-    enable_facet_types
-    enable_facet_hash
-    enable_facet_io
-    enable_facet_serialization
-    two_layers_with_objects
-    std_model
-    boost_model
+    masd_cpp_ref_impl_cpp_model
+    masd_cpp_ref_impl_cpp_98
+    masd_cpp_ref_impl_compressed
+    masd_cpp_ref_impl_disable_facet_folders
+    masd_cpp_ref_impl_enable_facet_types
+    masd_cpp_ref_impl_enable_facet_hash
+    masd_cpp_ref_impl_enable_facet_io
+    masd_cpp_ref_impl_enable_facet_serialization
+    masd_cpp_ref_impl_two_layers_with_objects
+    masd_cpp_ref_impl_std_model
+    masd_cpp_ref_impl_boost_model
     utility
     ${CMAKE_REQUIRED_LIBRARIES}
     ${Boost_LIBRARIES})

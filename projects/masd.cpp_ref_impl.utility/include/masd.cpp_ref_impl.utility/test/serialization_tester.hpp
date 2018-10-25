@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_UTILITY_TEST_SERIALIZATION_TESTER_HPP
-#define CPP_REF_IMPL_UTILITY_TEST_SERIALIZATION_TESTER_HPP
+#ifndef MASD_CPP_REF_IMPL_UTILITY_TEST_SERIALIZATION_TESTER_HPP
+#define MASD_CPP_REF_IMPL_UTILITY_TEST_SERIALIZATION_TESTER_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -34,14 +34,12 @@
 #include <boost/archive/xml_iarchive.hpp>
 #include <boost/archive/binary_oarchive.hpp>
 #include <boost/archive/binary_iarchive.hpp>
-#include "cpp_ref_impl/utility/io/jsonify_io.hpp"
-#include "cpp_ref_impl/utility/log/logger.hpp"
+#include "masd.cpp_ref_impl.utility/io/jsonify_io.hpp"
+#include "masd.cpp_ref_impl.utility/log/logger.hpp"
 
 template<typename Archive> void register_types(Archive& ar);
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace test {
+namespace masd::cpp_ref_impl::utility::test {
 
 template<typename T>
 void check(const T& a, const T& b) {
@@ -161,6 +159,6 @@ public:
     }
 };
 
-} } }
+}
 
 #endif

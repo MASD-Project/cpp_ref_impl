@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/compressed/hash/package1/first_class_hash.hpp"
+#include "masd.cpp_ref_impl.compressed/hash/package1/first_class_hash.hpp"
 
 namespace {
 
@@ -30,6 +30,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
+namespace masd {
 namespace cpp_ref_impl {
 namespace compressed {
 namespace package1 {
@@ -43,4 +44,4 @@ std::size_t first_class_hasher::hash(const first_class& v) {
     return seed;
 }
 
-} } }
+} } } }

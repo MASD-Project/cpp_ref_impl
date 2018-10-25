@@ -20,8 +20,8 @@
  */
 #include <sstream>
 #include <boost/test/unit_test.hpp>
-#include "cpp_ref_impl/utility/test/asserter.hpp"
-#include "cpp_ref_impl/utility/test/logging.hpp"
+#include "masd.cpp_ref_impl.utility/test/asserter.hpp"
+#include "masd.cpp_ref_impl.utility/test/logging.hpp"
 #include "simple_template.hpp"
 #include "complex_template.hpp"
 
@@ -42,7 +42,7 @@ const std::string complex_template_output(R"(this is a relatively more
 
 }
 
-using cpp_ref_impl::utility::test::asserter;
+using masd::cpp_ref_impl::utility::test::asserter;
 
 BOOST_AUTO_TEST_SUITE(seam_tests)
 

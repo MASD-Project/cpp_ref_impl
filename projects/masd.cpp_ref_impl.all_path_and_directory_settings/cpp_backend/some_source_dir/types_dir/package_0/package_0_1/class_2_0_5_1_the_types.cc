@@ -18,9 +18,9 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/all_path_and_directory_settings/types_dir/package_0/package_0_1/class_2_0_5_0_the_types.hh"
+#include "masd.cpp_ref_impl.all_path_and_directory_settings/types_dir/package_0/package_0_1/class_2_0_5_0_the_types.hh"
 
-namespace cpp_ref_impl::all_path_and_directory_settings::package_0::package_0_1 {
+namespace masd::cpp_ref_impl::all_path_and_directory_settings::package_0::package_0_1 {
 
 class_2::class_2()
     : prop_0_(static_cast<int>(0)) { }

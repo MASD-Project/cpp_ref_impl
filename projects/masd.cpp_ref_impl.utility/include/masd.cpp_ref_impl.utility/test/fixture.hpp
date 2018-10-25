@@ -18,16 +18,14 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_UTILITY_TEST_FIXTURE_HPP
-#define CPP_REF_IMPL_UTILITY_TEST_FIXTURE_HPP
+#ifndef MASD_CPP_REF_IMPL_UTILITY_TEST_FIXTURE_HPP
+#define MASD_CPP_REF_IMPL_UTILITY_TEST_FIXTURE_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace test {
+namespace masd::cpp_ref_impl::utility::test {
 
 /**
  * @brief Translates boost expcetions by dumping diagnostic
@@ -37,6 +35,6 @@ struct exception_fixture {
     exception_fixture();
 };
 
-} } }
+}
 
 #endif

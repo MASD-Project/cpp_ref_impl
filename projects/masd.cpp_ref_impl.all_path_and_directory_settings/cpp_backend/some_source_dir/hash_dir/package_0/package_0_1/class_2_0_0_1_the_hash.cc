@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/all_path_and_directory_settings/hash_dir/package_0/package_0_1/class_2_0_0_0_the_hash.hh"
+#include "masd.cpp_ref_impl.all_path_and_directory_settings/hash_dir/package_0/package_0_1/class_2_0_0_0_the_hash.hh"
 
 namespace {
 
@@ -30,7 +30,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 }
 
-namespace cpp_ref_impl::all_path_and_directory_settings::package_0::package_0_1 {
+namespace masd::cpp_ref_impl::all_path_and_directory_settings::package_0::package_0_1 {
 
 std::size_t class_2_hasher::hash(const class_2& v) {
     std::size_t seed(0);

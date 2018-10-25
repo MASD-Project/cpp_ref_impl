@@ -19,14 +19,14 @@
  *
  */
 #include <boost/test/unit_test.hpp>
-#include "cpp_ref_impl/utility/io/vector_io.hpp"
-#include "cpp_ref_impl/utility/test/logging.hpp"
-#include "cpp_ref_impl/utility/test/canned_tests.hpp"
-#include "cpp_ref_impl/compressed/types/all.hpp"
-#include "cpp_ref_impl/compressed/io/all_io.hpp"
-#include "cpp_ref_impl/compressed/serialization/all_ser.hpp"
-#include "cpp_ref_impl/compressed/test_data/all_td.hpp"
-#include "cpp_ref_impl/compressed/hash/all_hash.hpp"
+#include "masd.cpp_ref_impl.utility/io/vector_io.hpp"
+#include "masd.cpp_ref_impl.utility/test/logging.hpp"
+#include "masd.cpp_ref_impl.utility/test/canned_tests.hpp"
+#include "masd.cpp_ref_impl.compressed/types/all.hpp"
+#include "masd.cpp_ref_impl.compressed/io/all_io.hpp"
+#include "masd.cpp_ref_impl.compressed/serialization/all_ser.hpp"
+#include "masd.cpp_ref_impl.compressed/test_data/all_td.hpp"
+#include "masd.cpp_ref_impl.compressed/hash/all_hash.hpp"
 #include "dogen/test_models/test_model_sanitizer/register_types.hpp"
 
 namespace {
@@ -37,9 +37,9 @@ const std::string test_suite("compressed_tests");
 
 }
 
-using namespace cpp_ref_impl::compressed;
-using namespace cpp_ref_impl::compressed::package1;
-using namespace cpp_ref_impl::utility::test;
+using namespace masd::cpp_ref_impl::compressed;
+using namespace masd::cpp_ref_impl::compressed::package1;
+using namespace masd::cpp_ref_impl::utility::test;
 
 BOOST_AUTO_TEST_SUITE(compressed_tests)
 

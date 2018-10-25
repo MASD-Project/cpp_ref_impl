@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_UTILITY_TEST_IO_TESTER_HPP
-#define CPP_REF_IMPL_UTILITY_TEST_IO_TESTER_HPP
+#ifndef MASD_CPP_REF_IMPL_UTILITY_TEST_IO_TESTER_HPP
+#define MASD_CPP_REF_IMPL_UTILITY_TEST_IO_TESTER_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -27,12 +27,10 @@
 
 #include <sstream>
 #include <boost/test/unit_test.hpp>
-#include "cpp_ref_impl/utility/log/logger.hpp"
-#include "cpp_ref_impl/utility/test/json_validator.hpp"
+#include "masd.cpp_ref_impl.utility/log/logger.hpp"
+#include "masd.cpp_ref_impl.utility/test/json_validator.hpp"
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace test {
+namespace masd::cpp_ref_impl::utility::test {
 
 /**
  * @brief Ensures the inserter operator produces valid JSON.
@@ -55,6 +53,6 @@ public:
     }
 };
 
-} } }
+}
 
 #endif

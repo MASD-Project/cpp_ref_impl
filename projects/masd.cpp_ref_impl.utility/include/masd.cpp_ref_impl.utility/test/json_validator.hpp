@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_UTILITY_TEST_JSON_VALIDATOR_HPP
-#define CPP_REF_IMPL_UTILITY_TEST_JSON_VALIDATOR_HPP
+#ifndef MASD_CPP_REF_IMPL_UTILITY_TEST_JSON_VALIDATOR_HPP
+#define MASD_CPP_REF_IMPL_UTILITY_TEST_JSON_VALIDATOR_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -27,15 +27,13 @@
 
 #include <iosfwd>
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace test {
+namespace masd::cpp_ref_impl::utility::test {
 
 class json_validator {
 public:
     static bool validate(std::istream& s);
 };
 
-} } }
+}
 
 #endif

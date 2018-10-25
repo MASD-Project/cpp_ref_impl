@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_UTILITY_LOG_SEVERITY_LEVEL_HPP
-#define CPP_REF_IMPL_UTILITY_LOG_SEVERITY_LEVEL_HPP
+#ifndef MASD_CPP_REF_IMPL_UTILITY_LOG_SEVERITY_LEVEL_HPP
+#define MASD_CPP_REF_IMPL_UTILITY_LOG_SEVERITY_LEVEL_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -28,11 +28,9 @@
 #include <string>
 #include <ostream>
 #include <boost/throw_exception.hpp>
-#include "cpp_ref_impl/utility/exception/invalid_enum_value.hpp"
+#include "masd.cpp_ref_impl.utility/exception/invalid_enum_value.hpp"
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace log {
+namespace masd::cpp_ref_impl::utility::log {
 
 /**
  * @brief Logging severity.
@@ -75,6 +73,6 @@ operator<<(std::basic_ostream<CharT, TraitsT>& stream, severity_level level) {
     return stream;
 }
 
-} } }
+}
 
 #endif

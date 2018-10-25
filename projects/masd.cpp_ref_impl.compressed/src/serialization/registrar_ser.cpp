@@ -26,8 +26,9 @@
 #include <boost/archive/binary_oarchive.hpp>
 #include <boost/archive/polymorphic_iarchive.hpp>
 #include <boost/archive/polymorphic_oarchive.hpp>
-#include "cpp_ref_impl/compressed/serialization/registrar_ser.hpp"
+#include "masd.cpp_ref_impl.compressed/serialization/registrar_ser.hpp"
 
+namespace masd {
 namespace cpp_ref_impl {
 namespace compressed {
 
@@ -47,4 +48,4 @@ template void register_types(boost::archive::binary_iarchive&);
 template void register_types(boost::archive::xml_oarchive&);
 template void register_types(boost::archive::xml_iarchive&);
 
-} }
+} } }

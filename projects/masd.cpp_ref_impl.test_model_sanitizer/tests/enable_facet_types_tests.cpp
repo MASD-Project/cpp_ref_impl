@@ -19,10 +19,10 @@
  *
  */
 #include <boost/test/unit_test.hpp>
-#include "cpp_ref_impl/utility/io/vector_io.hpp"
-#include "cpp_ref_impl/utility/test/logging.hpp"
-#include "cpp_ref_impl/utility/test/canned_tests.hpp"
-#include "cpp_ref_impl/enable_facet_types/types/all.hpp"
+#include "masd.cpp_ref_impl.utility/io/vector_io.hpp"
+#include "masd.cpp_ref_impl.utility/test/logging.hpp"
+#include "masd.cpp_ref_impl.utility/test/canned_tests.hpp"
+#include "masd.cpp_ref_impl.enable_facet_types/types/all.hpp"
 
 namespace {
 
@@ -32,7 +32,7 @@ const std::string test_suite("enable_facet_types_tests");
 
 class first_class_generator {
 public:
-    typedef cpp_ref_impl::enable_facet_types::package1::first_class result_type;
+    typedef masd::cpp_ref_impl::enable_facet_types::package1::first_class result_type;
 
 public:
     result_type operator()() {
@@ -47,20 +47,18 @@ private:
 
 }
 
-namespace cpp_ref_impl {
-namespace enable_facet_types {
-namespace package1 {
+namespace masd::cpp_ref_impl::enable_facet_types::package1 {
 
 std::ostream& operator<<(std::ostream& o, const first_class& v) {
     o << "outputting first class: " << v.public_attribute() << std::endl;
     return o;
 }
 
-} } }
+}
 
-using namespace cpp_ref_impl::enable_facet_types;
-using namespace cpp_ref_impl::enable_facet_types::package1;
-using namespace cpp_ref_impl::utility::test;
+using namespace masd::cpp_ref_impl::enable_facet_types;
+using namespace masd::cpp_ref_impl::enable_facet_types::package1;
+using namespace masd::cpp_ref_impl::utility::test;
 
 BOOST_AUTO_TEST_SUITE(enable_facet_types_tests)
 

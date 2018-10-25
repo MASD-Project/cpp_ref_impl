@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_UTILITY_IO_VECTOR_IO_HPP
-#define CPP_REF_IMPL_UTILITY_IO_VECTOR_IO_HPP
+#ifndef MASD_CPP_REF_IMPL_UTILITY_IO_VECTOR_IO_HPP
+#define MASD_CPP_REF_IMPL_UTILITY_IO_VECTOR_IO_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -27,7 +27,7 @@
 
 #include <vector>
 #include <ostream>
-#include "cpp_ref_impl/utility/io/jsonify_io.hpp"
+#include "masd.cpp_ref_impl.utility/io/jsonify_io.hpp"
 
 namespace std {
 
@@ -38,7 +38,7 @@ inline ostream& operator<<(ostream& stream, const vector<Containee>& vector) {
         i != vector.end();
         ++i) {
         if (i != vector.begin()) stream << ", ";
-        stream << cpp_ref_impl::utility::streaming::jsonify(*i);
+        stream << masd::cpp_ref_impl::utility::streaming::jsonify(*i);
     }
     stream << " ]";
     return(stream);

@@ -18,19 +18,17 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_UTILITY_TEST_CONSTRUCTION_TESTER_HPP
-#define CPP_REF_IMPL_UTILITY_TEST_CONSTRUCTION_TESTER_HPP
+#ifndef MASD_CPP_REF_IMPL_UTILITY_TEST_CONSTRUCTION_TESTER_HPP
+#define MASD_CPP_REF_IMPL_UTILITY_TEST_CONSTRUCTION_TESTER_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "cpp_ref_impl/utility/io/jsonify_io.hpp"
-#include "cpp_ref_impl/utility/log/logger.hpp"
+#include "mad.cpp_ref_impl.utility/io/jsonify_io.hpp"
+#include "masd.cpp_ref_impl.utility/log/logger.hpp"
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace test {
+namespace masd::cpp_ref_impl::utility::test {
 
 /**
  * @brief Requirements for object construction.
@@ -90,6 +88,6 @@ public:
     // complete_constructed_object_matches_properties_set_object() = 0;
 };
 
-} } }
+}
 
 #endif

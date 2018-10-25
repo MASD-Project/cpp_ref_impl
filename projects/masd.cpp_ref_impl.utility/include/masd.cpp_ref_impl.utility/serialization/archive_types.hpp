@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_UTILITY_SERIALIZATION_ARCHIVE_TYPES_HPP
-#define CPP_REF_IMPL_UTILITY_SERIALIZATION_ARCHIVE_TYPES_HPP
+#ifndef MASD_CPP_REF_IMPL_UTILITY_SERIALIZATION_ARCHIVE_TYPES_HPP
+#define MASD_CPP_REF_IMPL_UTILITY_SERIALIZATION_ARCHIVE_TYPES_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -27,9 +27,7 @@
 
 #include <iosfwd>
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace serialization {
+namespace masd::cpp_ref_impl::utility::serialization {
 
 /**
  * @brief Boost serialisation archive types.
@@ -43,6 +41,6 @@ enum class archive_types : unsigned int {
 
 std::ostream& operator<<(std::ostream& stream, archive_types value);
 
-} } }
+}
 
 #endif

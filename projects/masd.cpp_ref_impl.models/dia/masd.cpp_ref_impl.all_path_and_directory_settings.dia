@@ -241,7 +241,7 @@
         <dia:point val="-31,-47"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-31.05,-47.05;-3.485,28.35"/>
+        <dia:rectangle val="-31.05,-47.05;-1.175,12.35"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -250,10 +250,10 @@
         <dia:point val="-31,-47"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="27.465"/>
+        <dia:real val="29.775000000000002"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="75.299999999999997"/>
+        <dia:real val="59.300000000000004"/>
       </dia:attribute>
       <dia:attribute name="line_width">
         <dia:real val="0.10000000000000001"/>
@@ -271,7 +271,6 @@
 
 #DOGEN yarn.dia.comment=true
 #DOGEN yarn.model_modules=masd.cpp_ref_impl.all_path_and_directory_settings
-#DOGEN yarn.external_modules=cpp_ref_impl
 #DOGEN annotations.profile=dogen
 #DOGEN yarn.input_language=language_agnostic
 #DOGEN yarn.output_language=cpp

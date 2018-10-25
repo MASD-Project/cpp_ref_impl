@@ -18,15 +18,13 @@
  * MA 02110-1301, USA.
  *
  */
-#include "cpp_ref_impl/utility/log/logger.hpp"
+#include "masd.cpp_ref_impl.utility/log/logger.hpp"
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace log {
+namespace masd::cpp_ref_impl::utility::log {
 
 logger logger_factory(std::string component_name) {
     using namespace boost::log;
     return logger(keywords::channel = component_name);
 }
 
-} } }
+}

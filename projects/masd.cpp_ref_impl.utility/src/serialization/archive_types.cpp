@@ -20,8 +20,8 @@
  */
 #include <ostream>
 #include <boost/throw_exception.hpp>
-#include "cpp_ref_impl/utility/exception/invalid_enum_value.hpp"
-#include "cpp_ref_impl/utility/serialization/archive_types.hpp"
+#include "masd.cpp_ref_impl.utility/exception/invalid_enum_value.hpp"
+#include "masd.cpp_ref_impl.utility/serialization/archive_types.hpp"
 
 namespace {
 
@@ -34,9 +34,7 @@ const std::string error_message("Invalid or unexpected object type");
 
 }
 
-namespace cpp_ref_impl {
-namespace utility {
-namespace serialization {
+namespace masd::cpp_ref_impl::utility::serialization {
 
 std::ostream& operator<<(std::ostream& stream, archive_types value) {
     switch (value) {
@@ -54,4 +52,4 @@ std::ostream& operator<<(std::ostream& stream, archive_types value) {
     BOOST_THROW_EXCEPTION(utility::exception::invalid_enum_value(error_message));
 }
 
-} } }
+}
