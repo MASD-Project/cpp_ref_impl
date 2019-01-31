@@ -504,16 +504,16 @@
       <dia:attribute name="text">
         <dia:composite type="text">
           <dia:attribute name="string">
-            <dia:string>##DOGEN yarn.dia.comment=true
-#DOGEN yarn.model_modules=masd.cpp_ref_impl.cpp_model
-#DOGEN yarn.input_language=cpp
-#DOGEN quilt.cpp.enabled=true
-#DOGEN quilt.cpp.standard=c++-17
-#DOGEN quilt.cpp.msbuild.enabled=false
-#DOGEN quilt.cpp.visual_studio.project_guid=876B2828-8A0B-495F-8340-0357690162E4
-#DOGEN quilt.cpp.visual_studio.project_solution_guid=3103CA57-FD70-4EC9-98BD-1C2C7360AF53
-#DOGEN quilt.csharp.enabled=false
-#DOGEN annotations.profile=dogen#</dia:string>
+            <dia:string>##DOGEN masd.injection.dia.comment=true
+#DOGEN masd.injection.model_modules=masd.cpp_ref_impl.cpp_model
+#DOGEN masd.injection.input_language=cpp
+#DOGEN masd.extraction.cpp.enabled=true
+#DOGEN masd.extraction.cpp.standard=c++-17
+#DOGEN masd.extraction.cpp.msbuild.enabled=false
+#DOGEN masd.extraction.cpp.visual_studio.project_guid=876B2828-8A0B-495F-8340-0357690162E4
+#DOGEN masd.extraction.cpp.visual_studio.project_solution_guid=3103CA57-FD70-4EC9-98BD-1C2C7360AF53
+#DOGEN masd.extraction.csharp.enabled=false
+#DOGEN masd.annotations.profile=dogen#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="monospace" style="0" name="Courier"/>
@@ -2156,7 +2156,7 @@ it will be ignored.#</dia:string>
         <dia:composite type="text">
           <dia:attribute name="string">
             <dia:string>#package
-#DOGEN yarn.dia.comment=true#</dia:string>
+#DOGEN masd.injection.dia.comment=true#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="monospace" style="0" name="Courier"/>
@@ -2209,7 +2209,7 @@ it will be ignored.#</dia:string>
         <dia:composite type="text">
           <dia:attribute name="string">
             <dia:string>#inner package
-#DOGEN yarn.dia.comment=true#</dia:string>
+#DOGEN masd.injection.dia.comment=true#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="monospace" style="0" name="Courier"/>
@@ -2250,7 +2250,7 @@ it will be ignored.#</dia:string>
         <dia:string>#book_types#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::enumeration#</dia:string>
+        <dia:string>#masd::enumeration#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#this is a brief comment
@@ -2432,7 +2432,7 @@ this is a long comment#</dia:string>
         <dia:string>#colour_types#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::enumeration#</dia:string>
+        <dia:string>#masd::enumeration#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##</dia:string>
@@ -2815,10 +2815,10 @@ this is a long comment#</dia:string>
         <dia:string>#short_enum#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::enumeration#</dia:string>
+        <dia:string>#masd::enumeration#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
-        <dia:string>##DOGEN yarn.enumeration.underlying_element=short#</dia:string>
+        <dia:string>##DOGEN masd.enumeration.underlying_element=short#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -2972,12 +2972,12 @@ this is a long comment#</dia:string>
         <dia:string>#test_all_knobs#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::enumeration#</dia:string>
+        <dia:string>#masd::enumeration#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
-        <dia:string>##DOGEN yarn.enumeration.use_implementation_defined_underlying_element=true
-#DOGEN yarn.enumeration.use_implementation_defined_enumerator_values=true
-#DOGEN yarn.enumeration.add_invalid_enumerator=false#</dia:string>
+        <dia:string>##DOGEN masd.enumeration.use_implementation_defined_underlying_element=true
+#DOGEN masd.enumeration.use_implementation_defined_enumerator_values=true
+#DOGEN masd.enumeration.add_invalid_enumerator=false#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -3131,12 +3131,12 @@ this is a long comment#</dia:string>
         <dia:string>#hex_flags#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::enumeration#</dia:string>
+        <dia:string>#masd::enumeration#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#This is an example of an enumeration using hex flags.
 
-#DOGEN yarn.enumeration.add_invalid_enumerator=false#</dia:string>
+#DOGEN masd.enumeration.add_invalid_enumerator=false#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -3228,7 +3228,7 @@ this is a long comment#</dia:string>
             <dia:string>##</dia:string>
           </dia:attribute>
           <dia:attribute name="comment">
-            <dia:string>##DOGEN yarn.enumerator.value=0x00#</dia:string>
+            <dia:string>##DOGEN masd.enumerator.value=0x00#</dia:string>
           </dia:attribute>
           <dia:attribute name="visibility">
             <dia:enum val="0"/>
@@ -3251,7 +3251,7 @@ this is a long comment#</dia:string>
             <dia:string>##</dia:string>
           </dia:attribute>
           <dia:attribute name="comment">
-            <dia:string>##DOGEN yarn.enumerator.value=0x01#</dia:string>
+            <dia:string>##DOGEN masd.enumerator.value=0x01#</dia:string>
           </dia:attribute>
           <dia:attribute name="visibility">
             <dia:enum val="0"/>
@@ -3274,7 +3274,7 @@ this is a long comment#</dia:string>
             <dia:string>##</dia:string>
           </dia:attribute>
           <dia:attribute name="comment">
-            <dia:string>##DOGEN yarn.enumerator.value=0x02#</dia:string>
+            <dia:string>##DOGEN masd.enumerator.value=0x02#</dia:string>
           </dia:attribute>
           <dia:attribute name="visibility">
             <dia:enum val="0"/>
@@ -3297,7 +3297,7 @@ this is a long comment#</dia:string>
             <dia:string>##</dia:string>
           </dia:attribute>
           <dia:attribute name="comment">
-            <dia:string>##DOGEN yarn.enumerator.value=0x04#</dia:string>
+            <dia:string>##DOGEN masd.enumerator.value=0x04#</dia:string>
           </dia:attribute>
           <dia:attribute name="visibility">
             <dia:enum val="0"/>
@@ -3320,7 +3320,7 @@ this is a long comment#</dia:string>
             <dia:string>##</dia:string>
           </dia:attribute>
           <dia:attribute name="comment">
-            <dia:string>##DOGEN yarn.enumerator.value=0x08#</dia:string>
+            <dia:string>##DOGEN masd.enumerator.value=0x08#</dia:string>
           </dia:attribute>
           <dia:attribute name="visibility">
             <dia:enum val="0"/>
@@ -3397,7 +3397,7 @@ this is a long comment#</dia:string>
         <dia:string>#shape_types#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::enumeration#</dia:string>
+        <dia:string>#masd::enumeration#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##</dia:string>
@@ -3601,7 +3601,7 @@ this is a long comment#</dia:string>
         <dia:string>#my_error#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::exception#</dia:string>
+        <dia:string>#masd::exception#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#this is an exception#</dia:string>
@@ -3749,7 +3749,7 @@ this is a long comment#</dia:string>
         <dia:string>#catastrophic_error#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::exception#</dia:string>
+        <dia:string>#masd::exception#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##</dia:string>
@@ -3860,12 +3860,12 @@ this is a long comment#</dia:string>
         <dia:string>#immutable_primitive#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::primitive, dogen::immutable#</dia:string>
+        <dia:string>#masd::primitive, masd::immutable#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Test for a primitive which is also immutable.
 
-#DOGEN yarn.primitive.underlying_element=short#</dia:string>
+#DOGEN masd.primitive.underlying_element=short#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -4336,12 +4336,12 @@ this is a long comment#</dia:string>
         <dia:string>#short_primitive#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::primitive#</dia:string>
+        <dia:string>#masd::primitive#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Test a primitive with an underlying short.
 
-#DOGEN yarn.primitive.underlying_element=short#</dia:string>
+#DOGEN masd.primitive.underlying_element=short#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -4448,12 +4448,12 @@ this is a long comment#</dia:string>
         <dia:string>#long_primitive#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::primitive#</dia:string>
+        <dia:string>#masd::primitive#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Test a primitive with an underlying long.
 
-#DOGEN yarn.primitive.underlying_element=long#</dia:string>
+#DOGEN masd.primitive.underlying_element=long#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -4560,12 +4560,12 @@ this is a long comment#</dia:string>
         <dia:string>#int_primitive#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::primitive#</dia:string>
+        <dia:string>#masd::primitive#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Test a primitive with an underlying int.
 
-#DOGEN yarn.primitive.underlying_element=int#</dia:string>
+#DOGEN masd.primitive.underlying_element=int#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -4672,12 +4672,12 @@ this is a long comment#</dia:string>
         <dia:string>#char_primitive#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::primitive#</dia:string>
+        <dia:string>#masd::primitive#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Test a primitive with an underlying char.
 
-#DOGEN yarn.primitive.underlying_element=char#</dia:string>
+#DOGEN masd.primitive.underlying_element=char#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -4784,12 +4784,12 @@ this is a long comment#</dia:string>
         <dia:string>#uchar_primitive#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::primitive#</dia:string>
+        <dia:string>#masd::primitive#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Test a primitive with an underlying unsigned char.
 
-#DOGEN yarn.primitive.underlying_element=unsigned char#</dia:string>
+#DOGEN masd.primitive.underlying_element=unsigned char#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -4896,12 +4896,12 @@ this is a long comment#</dia:string>
         <dia:string>#ulong_primitive#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::primitive#</dia:string>
+        <dia:string>#masd::primitive#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Test a primitive with an underlying unsigned long.
 
-#DOGEN yarn.primitive.underlying_element=unsigned long#</dia:string>
+#DOGEN masd.primitive.underlying_element=unsigned long#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -5008,12 +5008,12 @@ this is a long comment#</dia:string>
         <dia:string>#uint_primitive#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::primitive#</dia:string>
+        <dia:string>#masd::primitive#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Test a primitive with an underlying unsigned int.
 
-#DOGEN yarn.primitive.underlying_element=unsigned int#</dia:string>
+#DOGEN masd.primitive.underlying_element=unsigned int#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -5120,12 +5120,12 @@ this is a long comment#</dia:string>
         <dia:string>#ushort_primitive#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::primitive#</dia:string>
+        <dia:string>#masd::primitive#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Test a primitive with an underlying unsgined short.
 
-#DOGEN yarn.primitive.underlying_element=unsigned short#</dia:string>
+#DOGEN masd.primitive.underlying_element=unsigned short#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -5232,12 +5232,12 @@ this is a long comment#</dia:string>
         <dia:string>#double_primitive#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::primitive#</dia:string>
+        <dia:string>#masd::primitive#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Test a primitive with an underlying double.
 
-#DOGEN yarn.primitive.underlying_element=double#</dia:string>
+#DOGEN masd.primitive.underlying_element=double#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -5344,12 +5344,12 @@ this is a long comment#</dia:string>
         <dia:string>#float_primitive#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::primitive#</dia:string>
+        <dia:string>#masd::primitive#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Test a primitive with an underlying float.
 
-#DOGEN yarn.primitive.underlying_element=float#</dia:string>
+#DOGEN masd.primitive.underlying_element=float#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -5456,12 +5456,12 @@ this is a long comment#</dia:string>
         <dia:string>#bool_primitive#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::primitive#</dia:string>
+        <dia:string>#masd::primitive#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Test a primitive with an underlying bool.
 
-#DOGEN yarn.primitive.underlying_element=bool#</dia:string>
+#DOGEN masd.primitive.underlying_element=bool#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -5568,7 +5568,7 @@ this is a long comment#</dia:string>
         <dia:string>#service#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#handcrafted#</dia:string>
+        <dia:string>#masd::handcrafted#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Type is a service.#</dia:string>
@@ -5702,23 +5702,23 @@ this is a long comment#</dia:string>
         <dia:string>#some_type#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#handcrafted#</dia:string>
+        <dia:string>#masd::handcrafted#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Type is non-generatable.
 
-#DOGEN quilt.cpp.hash.enabled=true
-#DOGEN quilt.cpp.hash.overwrite=false
-#DOGEN quilt.cpp.io.enabled=true
-#DOGEN quilt.cpp.io.overwrite=false
-#DOGEN quilt.cpp.odb.enabled=true
-#DOGEN quilt.cpp.odb.overwrite=false
-#DOGEN quilt.cpp.serialization.enabled=true
-#DOGEN quilt.cpp.serialization.overwrite=false
-#DOGEN quilt.cpp.test_data.enabled=true
-#DOGEN quilt.cpp.test_data.overwrite=false
-#DOGEN quilt.cpp.types.forward_declarations.overwrite=true
-#DOGEN quilt.cpp.serialization.forward_declarations.overwrite=true#</dia:string>
+#DOGEN masd.extraction.cpp.hash.enabled=true
+#DOGEN masd.extraction.cpp.hash.overwrite=false
+#DOGEN masd.extraction.cpp.io.enabled=true
+#DOGEN masd.extraction.cpp.io.overwrite=false
+#DOGEN masd.extraction.cpp.odb.enabled=true
+#DOGEN masd.extraction.cpp.odb.overwrite=false
+#DOGEN masd.extraction.cpp.serialization.enabled=true
+#DOGEN masd.extraction.cpp.serialization.overwrite=false
+#DOGEN masd.extraction.cpp.test_data.enabled=true
+#DOGEN masd.extraction.cpp.test_data.overwrite=false
+#DOGEN masd.extraction.cpp.types.forward_declarations.overwrite=true
+#DOGEN masd.extraction.cpp.serialization.forward_declarations.overwrite=true#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -5849,7 +5849,7 @@ this is a long comment#</dia:string>
         <dia:string>#fluent#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::fluent#</dia:string>
+        <dia:string>#masd::fluent#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Tests the fluent scenario across the different types of properties.#</dia:string>
@@ -6029,7 +6029,7 @@ this is a long comment#</dia:string>
         <dia:string>#immutable_zero#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::immutable#</dia:string>
+        <dia:string>#masd::immutable#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Immutable class with no properties.#</dia:string>
@@ -6139,7 +6139,7 @@ this is a long comment#</dia:string>
         <dia:string>#immutable_two#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::immutable#</dia:string>
+        <dia:string>#masd::immutable#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##</dia:string>
@@ -6296,7 +6296,7 @@ this is a long comment#</dia:string>
         <dia:string>#immutable_one_builtin#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::immutable#</dia:string>
+        <dia:string>#masd::immutable#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Immutable class with a built-in property.#</dia:string>
@@ -6430,7 +6430,7 @@ this is a long comment#</dia:string>
         <dia:string>#immutable_one_non_builtin#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::immutable#</dia:string>
+        <dia:string>#masd::immutable#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Immutable class with one pod property#</dia:string>
@@ -6564,7 +6564,7 @@ this is a long comment#</dia:string>
         <dia:string>#immutable_four#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::immutable#</dia:string>
+        <dia:string>#masd::immutable#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Immutable class with non-immutable and immutable pods as properties.#</dia:string>
@@ -6767,7 +6767,7 @@ this is a long comment#</dia:string>
         <dia:string>#SimpleObjectTemplate#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::object_template#</dia:string>
+        <dia:string>#masd::object_template#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#This is an example of an object template.#</dia:string>
@@ -7058,7 +7058,7 @@ this is a long comment#</dia:string>
         <dia:string>#BaseObjectTemplate#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::object_template#</dia:string>
+        <dia:string>#masd::object_template#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#This is the base object template.#</dia:string>
@@ -7192,7 +7192,7 @@ this is a long comment#</dia:string>
         <dia:string>#DescendantObjectTemplate#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::object_template#</dia:string>
+        <dia:string>#masd::object_template#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#This object template inherits from BaseObjectTemplate.#</dia:string>
@@ -7587,7 +7587,7 @@ this is a long comment#</dia:string>
         <dia:string>#BaseObjectTemplate2#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::object_template#</dia:string>
+        <dia:string>#masd::object_template#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Base object template.#</dia:string>
@@ -7721,7 +7721,7 @@ this is a long comment#</dia:string>
         <dia:string>#FirstChildObjectTemplate#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::object_template#</dia:string>
+        <dia:string>#masd::object_template#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##</dia:string>
@@ -7855,7 +7855,7 @@ this is a long comment#</dia:string>
         <dia:string>#SecondChildObjectTemplate#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::object_template#</dia:string>
+        <dia:string>#masd::object_template#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Second descendant#</dia:string>
@@ -8071,7 +8071,7 @@ this is a long comment#</dia:string>
         <dia:string>#MultipleParentsObjectTemplate#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::object_template#</dia:string>
+        <dia:string>#masd::object_template#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Multiple parents object template#</dia:string>
@@ -11487,7 +11487,7 @@ of the object template instantiated by the base class.#</dia:string>
         <dia:string>#service_interface#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#handcrafted#</dia:string>
+        <dia:string>#masd::handcrafted#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##</dia:string>
@@ -11597,7 +11597,7 @@ of the object template instantiated by the base class.#</dia:string>
         <dia:string>#a_service#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#handcrafted#</dia:string>
+        <dia:string>#masd::handcrafted#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##</dia:string>
@@ -11748,7 +11748,7 @@ of the object template instantiated by the base class.#</dia:string>
         <dia:string>#base#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::visitable#</dia:string>
+        <dia:string>#masd::visitable#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##</dia:string>
@@ -12822,7 +12822,7 @@ of the object template instantiated by the base class.#</dia:string>
         <dia:string>##</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
-        <dia:string>##DOGEN yarn.generalization.parent=parent_with_members#</dia:string>
+        <dia:string>##DOGEN masd.generalization.parent=parent_with_members#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -12956,7 +12956,7 @@ of the object template instantiated by the base class.#</dia:string>
         <dia:string>##</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
-        <dia:string>##DOGEN yarn.generalization.is_final=false#</dia:string>
+        <dia:string>##DOGEN masd.generalization.is_final=false#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -13131,7 +13131,7 @@ of the object template instantiated by the base class.#</dia:string>
         <dia:string>##</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
-        <dia:string>##DOGEN yarn.generalization.is_final=false#</dia:string>
+        <dia:string>##DOGEN masd.generalization.is_final=false#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -13573,7 +13573,7 @@ of the object template instantiated by the base class.#</dia:string>
         <dia:string>##</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
-        <dia:string>##DOGEN yarn.generalization.parent=package_6::parent#</dia:string>
+        <dia:string>##DOGEN masd.generalization.parent=package_6::parent#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -14137,7 +14137,7 @@ of the object template instantiated by the base class.#</dia:string>
         <dia:string>##</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
-        <dia:string>##DOGEN yarn.generalization.parent=package_7::parent#</dia:string>
+        <dia:string>##DOGEN masd.generalization.parent=package_7::parent#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -14310,7 +14310,7 @@ of the object template instantiated by the base class.#</dia:string>
         <dia:string>##</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
-        <dia:string>##DOGEN yarn.generalization.parent=parent_outside#</dia:string>
+        <dia:string>##DOGEN masd.generalization.parent=parent_outside#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -14941,7 +14941,7 @@ name.#</dia:string>
         <dia:string>#ObjectTemplateInAPackage#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#dogen::object_template#</dia:string>
+        <dia:string>#masd::object_template#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##</dia:string>

@@ -20,8 +20,7 @@
 #
 # Set CMAKE_PROGRAM_PATH as required
 #
-find_program(DOGEN_KNITTER_EXECUTABLE NAMES dogen.knitter
-    HINTS ${CMAKE_BINARY_DIR}/stage/bin)
+find_program(DOGEN_KNITTER_EXECUTABLE NAMES masd.dogen.knitter)
 if (DOGEN_KNITTER_EXECUTABLE)
     execute_process(
         COMMAND ${DOGEN_KNITTER_EXECUTABLE} --version
@@ -33,43 +32,7 @@ if (DOGEN_KNITTER_EXECUTABLE)
         RESULT_VARIABLE DOGEN_RESULT
         OUTPUT_STRIP_TRAILING_WHITESPACE)
 
-      message(STATUS "Found Dogen Knitter ${DOGEN_KNITTER_VERSION} (${DOGEN_KNITTER_EXECUTABLE})")
+      message(STATUS "Found Dogen Knitter: ${DOGEN_KNITTER_VERSION}...")
 else()
     message(STATUS "Dogen Knitter not found.")
-endif()
-
-find_program(DOGEN_STITCHER_EXECUTABLE NAMES dogen.stitcher
-    HINTS ${CMAKE_BINARY_DIR}/stage/bin)
-if (DOGEN_STITCHER_EXECUTABLE)
-    execute_process(
-        COMMAND ${DOGEN_STITCHER_EXECUTABLE} --version
-        COMMAND grep ^Dogen
-        COMMAND cut -b16-
-        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-        ERROR_VARIABLE DOGEN_ERROR
-        OUTPUT_VARIABLE DOGEN_STITCHER_VERSION
-        RESULT_VARIABLE DOGEN_RESULT
-        OUTPUT_STRIP_TRAILING_WHITESPACE)
-
-      message(STATUS "Found Dogen Stitcher ${DOGEN_STITCHER_VERSION} (${DOGEN_STITCHER_EXECUTABLE})")
-else()
-    message(STATUS "Dogen Stitcher not found.")
-endif()
-
-find_program(DOGEN_TAILOR_EXECUTABLE NAMES dogen.tailor
-    HINTS ${CMAKE_BINARY_DIR}/stage/bin)
-if (DOGEN_TAILOR_EXECUTABLE)
-    execute_process(
-        COMMAND ${DOGEN_TAILOR_EXECUTABLE} --version
-        COMMAND grep ^Dogen
-        COMMAND cut -b14-
-        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-        ERROR_VARIABLE DOGEN_ERROR
-        OUTPUT_VARIABLE DOGEN_TAILOR_VERSION
-        RESULT_VARIABLE DOGEN_RESULT
-        OUTPUT_STRIP_TRAILING_WHITESPACE)
-
-      message(STATUS "Found Dogen Tailor ${DOGEN_TAILOR_VERSION} (${DOGEN_TAILOR_EXECUTABLE})")
-else()
-    message(STATUS "Dogen Tailor not found.")
 endif()
