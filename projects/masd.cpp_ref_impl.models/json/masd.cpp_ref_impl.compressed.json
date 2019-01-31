@@ -1,15 +1,14 @@
 {
   "tagged_values": {
     "masd.injection.dia.comment": "true",
-    "masd.injection.external_modules": "masd::test_models",
-    "masd.injection.model_modules": "compressed",
+    "masd.injection.model_modules": "masd.cpp_ref_impl.compressed",
     "masd.injection.input_language": "cpp",
     "masd.extraction.cpp.enabled": "true",
     "masd.extraction.cpp.msbuild.enabled": "false",
     "masd.extraction.cpp.visual_studio.project.enabled": "false",
     "masd.extraction.cpp.visual_studio.solution.enabled": "false",
     "masd.extraction.csharp.enabled": "false",
-    "masd.injection.annotations.profile": "dogen"
+    "masd.annotations.profile": "dogen"
   },
   "elements": [
     {
