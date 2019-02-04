@@ -23,7 +23,7 @@ cmake_minimum_required(VERSION 3.3 FATAL_ERROR)
 enable_testing()
 
 #
-# Setup CCache
+# setup CCache
 #
 find_program(CCACHE_PROGRAM ccache)
 if (CCACHE_PROGRAM)
@@ -42,7 +42,9 @@ project(masd_cpp_ref_impl)
 # add our own modules
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/build/cmake)
 
+#
 # options
+#
 option(WITH_COVERALLS "Generate coveralls coverage." off)
 option(WITH_PROFILING "Build the project with profiling support" off)
 option(WITH_MINIMAL_PACKAGING "Package just the main application" off)
@@ -53,17 +55,21 @@ option(WITH_JSON_VALIDATION "Adds JSON validation targets. Requires jq." on)
 # check for dependencies
 #
 
+#
 # threads
+#
 find_package(Threads REQUIRED)
 
+#
 # boost
+#
 # force static linking for all libraries
 set(Boost_USE_STATIC_LIBS ON)
 set(Boost_USE_MULTITHREADED ON)
 set(Boost_USE_STATIC_RUNTIME ON)
 set(BOOST_ALL_DYN_LINK OFF)
 
-# Note: it is possible to build with older versions of boost, but
+# note: it is possible to build with older versions of boost, but
 # these require patches.
 find_package(Boost 1.61 REQUIRED COMPONENTS
     system
@@ -80,33 +86,48 @@ find_package(Boost 1.61 REQUIRED COMPONENTS
     )
 
 if (Boost_FOUND)
+    # FIXME: using global settings at present because dogen does not
+    # FIXME: know how to add dependencies at the project level.
     include_directories(SYSTEM ${Boost_INCLUDE_DIRS})
+    set(LIBS ${LIBS} ${Boost_LIBRARIES})
 endif()
 
-# odb
-find_package(Oracle)
-if (ORACLE_FOUND)
-    find_package(ODB COMPONENTS boost oracle pgsql)
-    if (ODB_FOUND)
-        message(STATUS "Found odb...")
+#
+# ODB
+#
 
-        include_directories(SYSTEM ${ORACLE_INCLUDE_DIR} ${ODB_INCLUDE_DIRS})
-        set(LIBS ${LIBS} ${ORACLE_LIBRARY} ${ODB_LIBRARIES} ${Boost_LIBRARIES})
-    else()
-        message(STATUS "odb not found.")
-    endif()
+# First we try to locate the libraries. We split these so that we can
+# build ODB code even if the compiler is not present. This is a common
+# setup when using vcpkg.
+find_package(ODB COMPONENTS boost pgsql)
+if (ODB_LIBODB_FOUND)
+    message(STATUS "Found ODB Libraries...")
+    # FIXME: using global settings at present because dogen does not
+    # FIXME: know how to add dependencies at the project level.
+    include_directories(SYSTEM ${ODB_LIBODB_INCLUDE_DIRS})
+    set(LIBS ${LIBS} ${ODB_LIBODB_LIBRARIES})
 else()
-    message(STATUS "Oracle not found.")
+    message(STATUS "ODB Libraries NOT Found.")
 endif()
 
+if (ODB_FOUND)
+    message(STATUS "Found ODB Compiler...")
+else()
+    message(STATUS "ODB Compiler NOT Found.")
+endif()
+
+#
 # packaging type
+#
 if (WITH_MINIMAL_PACKAGING)
     message(STATUS "Packaging just the main application")
 else()
     message(STATUS "Packaging everything main application")
 endif()
 
+#
 # profiling
+#
 if (WITH_PROFILING)
     if (CMAKE_BUILD_TYPE STREQUAL "Debug")
         message(STATUS "Profiling enabled...")
@@ -118,7 +139,9 @@ else()
     message(STATUS "Profiling NOT enabled...")
 endif()
 
-# coveralls
+#
+# Coverage
+#
 if (WITH_COVERALLS)
     if (WITH_PROFILING)
         message(STATUS "Coveralls enabled...")
@@ -191,7 +214,9 @@ if(MSVC)
     endforeach()
 endif()
 
+#
 # debug
+#
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     message(STATUS "Building WITH DEBUG symbols...")
 else()
@@ -199,7 +224,7 @@ else()
 endif()
 
 #
-# Analysis and formatting tools
+# analysis and formatting tools
 #
 find_package(ClangTools)
 if (CLANG_FORMAT_FOUND)
@@ -222,14 +247,9 @@ else()
 endif()
 
 #
-# Log level to use for all Dogen tools
+# log level to use for all Dogen tools
 #
 set(DOGEN_LOG_LEVEL "debug")
-
-#
-# Dogen
-#
-find_package(Dogen)
 
 #
 # aggregate targets and their aliases
@@ -238,6 +258,11 @@ add_custom_target(run_all_tests)
 add_custom_target(rat)
 add_dependencies(rat run_all_tests)
 add_custom_target(run_windows_green_tests)
+
+#
+# dogen and related top-level targets.
+#
+find_package(Dogen)
 
 if (DOGEN_KNITTER_EXECUTABLE)
     add_custom_target(knit_all_dia)
@@ -261,7 +286,7 @@ if (WITH_JSON_VALIDATION)
 endif()
 
 #
-# Benchmarks
+# benchmarks
 #
 if(NOT UNIX)
     set(WITH_BENCHMARKS "off")
