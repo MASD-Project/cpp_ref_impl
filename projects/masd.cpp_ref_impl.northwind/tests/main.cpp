@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  *
  */
-#define BOOST_TEST_MODULE database_tests
+#define BOOST_TEST_MODULE northwind_tests
 #include <iostream>
 #include <boost/test/unit_test.hpp>
 #include <boost/test/unit_test_monitor.hpp>

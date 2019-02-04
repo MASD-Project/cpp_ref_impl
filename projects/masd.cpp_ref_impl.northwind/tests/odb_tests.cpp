@@ -40,8 +40,9 @@ using namespace odb::core;
 
 namespace  {
 
+const std::string test_module("northwind_tests");
 const std::string test_suite("odb_tests");
-const std::string test_module("northwind");
+
 
 // odb::database* create_db() {
 //     return new odb::pgsql::database ("build", "", "musseque", "localhost");
@@ -75,7 +76,7 @@ void persist(odb::database& db, const std::vector<T>& v) {
 
 }
 
-BOOST_AUTO_TEST_SUITE(database_tests)
+BOOST_AUTO_TEST_SUITE(odb_tests)
 
 BOOST_AUTO_TEST_CASE(inserting_no_keys_instances_results_in_expected_rows_in_table) {
     SETUP_TEST_LOG_SOURCE("inserting_no_keys_instances_results_in_expected_rows_in_table");
