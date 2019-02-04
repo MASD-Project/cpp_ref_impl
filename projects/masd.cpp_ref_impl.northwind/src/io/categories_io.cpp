@@ -39,7 +39,7 @@ std::ostream& operator<<(std::ostream& s, const categories& v) {
       << "\"category_id\": " << v.category_id() << ", "
       << "\"category_name\": " << "\"" << tidy_up_string(v.category_name()) << "\"" << ", "
       << "\"description\": " << "\"" << tidy_up_string(v.description()) << "\"" << ", "
-      << "\"picutre\": " << "\"" << tidy_up_string(v.picutre()) << "\""
+      << "\"picture\": " << "\"" << tidy_up_string(v.picture()) << "\""
       << " }";
     return(s);
 }

@@ -26,25 +26,25 @@ categories::categories(
     const masd::cpp_ref_impl::northwind::category_id& category_id,
     const std::string& category_name,
     const std::string& description,
-    const std::string& picutre)
+    const std::string& picture)
     : category_id_(category_id),
       category_name_(category_name),
       description_(description),
-      picutre_(picutre) { }
+      picture_(picture) { }
 
 void categories::swap(categories& other) noexcept {
     using std::swap;
     swap(category_id_, other.category_id_);
     swap(category_name_, other.category_name_);
     swap(description_, other.description_);
-    swap(picutre_, other.picutre_);
+    swap(picture_, other.picture_);
 }
 
 bool categories::operator==(const categories& rhs) const {
     return category_id_ == rhs.category_id_ &&
         category_name_ == rhs.category_name_ &&
         description_ == rhs.description_ &&
-        picutre_ == rhs.picutre_;
+        picture_ == rhs.picture_;
 }
 
 categories& categories::operator=(categories other) {
@@ -101,20 +101,20 @@ void categories::description(const std::string&& v) {
     description_ = std::move(v);
 }
 
-const std::string& categories::picutre() const {
-    return picutre_;
+const std::string& categories::picture() const {
+    return picture_;
 }
 
-std::string& categories::picutre() {
-    return picutre_;
+std::string& categories::picture() {
+    return picture_;
 }
 
-void categories::picutre(const std::string& v) {
-    picutre_ = v;
+void categories::picture(const std::string& v) {
+    picture_ = v;
 }
 
-void categories::picutre(const std::string&& v) {
-    picutre_ = std::move(v);
+void categories::picture(const std::string&& v) {
+    picture_ = std::move(v);
 }
 
 }

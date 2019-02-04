@@ -134,11 +134,11 @@ namespace odb
       grew = true;
     }
 
-    // picutre_
+    // picture_
     //
     if (t[3UL])
     {
-      i.picutre_value.capacity (i.picutre_size);
+      i.picture_value.capacity (i.picture_size);
       grew = true;
     }
 
@@ -183,13 +183,13 @@ namespace odb
     b[n].is_null = &i.description_null;
     n++;
 
-    // picutre_
+    // picture_
     //
     b[n].type = pgsql::bind::text;
-    b[n].buffer = i.picutre_value.data ();
-    b[n].capacity = i.picutre_value.capacity ();
-    b[n].size = &i.picutre_size;
-    b[n].is_null = &i.picutre_null;
+    b[n].buffer = i.picture_value.data ();
+    b[n].capacity = i.picture_value.capacity ();
+    b[n].size = &i.picture_size;
+    b[n].is_null = &i.picture_null;
     n++;
   }
 
@@ -270,25 +270,25 @@ namespace odb
       grew = grew || (cap != i.description_value.capacity ());
     }
 
-    // picutre_
+    // picture_
     //
     {
       ::std::string const& v =
-        o.picutre ();
+        o.picture ();
 
       bool is_null (true);
       std::size_t size (0);
-      std::size_t cap (i.picutre_value.capacity ());
+      std::size_t cap (i.picture_value.capacity ());
       pgsql::value_traits<
           ::std::string,
           pgsql::id_string >::set_image (
-        i.picutre_value,
+        i.picture_value,
         size,
         is_null,
         v);
-      i.picutre_null = is_null;
-      i.picutre_size = size;
-      grew = grew || (cap != i.picutre_value.capacity ());
+      i.picture_null = is_null;
+      i.picture_size = size;
+      grew = grew || (cap != i.picture_value.capacity ());
     }
 
     return grew;
@@ -345,19 +345,19 @@ namespace odb
         i.description_null);
     }
 
-    // picutre_
+    // picture_
     //
     {
       ::std::string& v =
-        o.picutre ();
+        o.picture ();
 
       pgsql::value_traits<
           ::std::string,
           pgsql::id_string >::set_value (
         v,
-        i.picutre_value,
-        i.picutre_size,
-        i.picutre_null);
+        i.picture_value,
+        i.picture_size,
+        i.picture_null);
     }
   }
 
@@ -378,7 +378,7 @@ namespace odb
   "(\"CATEGORY_ID\", "
   "\"CATEGORY_NAME\", "
   "\"DESCRIPTION\", "
-  "\"PICUTRE\") "
+  "\"PICTURE\") "
   "VALUES "
   "($1, $2, $3, $4)";
 
@@ -387,7 +387,7 @@ namespace odb
   "\"NORTHWIND\".\"CATEGORIES\".\"CATEGORY_ID\", "
   "\"NORTHWIND\".\"CATEGORIES\".\"CATEGORY_NAME\", "
   "\"NORTHWIND\".\"CATEGORIES\".\"DESCRIPTION\", "
-  "\"NORTHWIND\".\"CATEGORIES\".\"PICUTRE\" "
+  "\"NORTHWIND\".\"CATEGORIES\".\"PICTURE\" "
   "FROM \"NORTHWIND\".\"CATEGORIES\" "
   "WHERE \"NORTHWIND\".\"CATEGORIES\".\"CATEGORY_ID\"=$1";
 
@@ -396,7 +396,7 @@ namespace odb
   "SET "
   "\"CATEGORY_NAME\"=$1, "
   "\"DESCRIPTION\"=$2, "
-  "\"PICUTRE\"=$3 "
+  "\"PICTURE\"=$3 "
   "WHERE \"CATEGORY_ID\"=$4";
 
   const char access::object_traits_impl< ::masd::cpp_ref_impl::northwind::categories, id_pgsql >::erase_statement[] =
@@ -408,7 +408,7 @@ namespace odb
   "\"NORTHWIND\".\"CATEGORIES\".\"CATEGORY_ID\", "
   "\"NORTHWIND\".\"CATEGORIES\".\"CATEGORY_NAME\", "
   "\"NORTHWIND\".\"CATEGORIES\".\"DESCRIPTION\", "
-  "\"NORTHWIND\".\"CATEGORIES\".\"PICUTRE\" "
+  "\"NORTHWIND\".\"CATEGORIES\".\"PICTURE\" "
   "FROM \"NORTHWIND\".\"CATEGORIES\"";
 
   const char access::object_traits_impl< ::masd::cpp_ref_impl::northwind::categories, id_pgsql >::erase_query_statement[] =
@@ -831,7 +831,7 @@ namespace odb
                       "  \"CATEGORY_ID\" INTEGER NOT NULL PRIMARY KEY,\n"
                       "  \"CATEGORY_NAME\" TEXT NOT NULL,\n"
                       "  \"DESCRIPTION\" TEXT NULL,\n"
-                      "  \"PICUTRE\" TEXT NULL)");
+                      "  \"PICTURE\" TEXT NULL)");
           return false;
         }
       }

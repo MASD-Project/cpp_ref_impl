@@ -101,7 +101,7 @@ namespace odb
 
     static const description_type_ description;
 
-    // picutre
+    // picture
     //
     typedef
     pgsql::query_column<
@@ -109,9 +109,9 @@ namespace odb
         ::std::string,
         pgsql::id_string >::query_type,
       pgsql::id_string >
-    picutre_type_;
+    picture_type_;
 
-    static const picutre_type_ picutre;
+    static const picture_type_ picture;
   };
 
   template <typename A>
@@ -134,9 +134,9 @@ namespace odb
   description (A::table_name, "\"DESCRIPTION\"", 0);
 
   template <typename A>
-  const typename query_columns< ::masd::cpp_ref_impl::northwind::categories, id_pgsql, A >::picutre_type_
+  const typename query_columns< ::masd::cpp_ref_impl::northwind::categories, id_pgsql, A >::picture_type_
   query_columns< ::masd::cpp_ref_impl::northwind::categories, id_pgsql, A >::
-  picutre (A::table_name, "\"PICUTRE\"", 0);
+  picture (A::table_name, "\"PICTURE\"", 0);
 
   template <typename A>
   struct pointer_query_columns< ::masd::cpp_ref_impl::northwind::categories, id_pgsql, A >:
@@ -174,11 +174,11 @@ namespace odb
       std::size_t description_size;
       bool description_null;
 
-      // picutre_
+      // picture_
       //
-      details::buffer picutre_value;
-      std::size_t picutre_size;
-      bool picutre_null;
+      details::buffer picture_value;
+      std::size_t picture_size;
+      bool picture_null;
 
       std::size_t version;
     };

@@ -46,7 +46,7 @@ populate(const unsigned int position, result_type& v) {
     v.category_id(create_masd_cpp_ref_impl_northwind_category_id(position + 0));
     v.category_name(create_std_string(position + 1));
     v.description(create_std_string(position + 2));
-    v.picutre(create_std_string(position + 3));
+    v.picture(create_std_string(position + 3));
 }
 
 categories_generator::result_type

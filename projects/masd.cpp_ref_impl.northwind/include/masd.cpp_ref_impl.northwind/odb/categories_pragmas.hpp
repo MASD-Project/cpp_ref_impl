@@ -36,7 +36,7 @@ namespace masd::cpp_ref_impl::northwind {
 
 #pragma db member(categories::category_id_) id
 #pragma db member(categories::description_) null
-#pragma db member(categories::picutre_) null
+#pragma db member(categories::picture_) null
 
 #endif
 

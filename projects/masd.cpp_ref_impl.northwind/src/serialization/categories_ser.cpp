@@ -41,7 +41,7 @@ void save(Archive& ar,
     ar << make_nvp("category_id", v.category_id_);
     ar << make_nvp("category_name", v.category_name_);
     ar << make_nvp("description", v.description_);
-    ar << make_nvp("picutre", v.picutre_);
+    ar << make_nvp("picture", v.picture_);
 }
 
 template<typename Archive>
@@ -51,7 +51,7 @@ void load(Archive& ar,
     ar >> make_nvp("category_id", v.category_id_);
     ar >> make_nvp("category_name", v.category_name_);
     ar >> make_nvp("description", v.description_);
-    ar >> make_nvp("picutre", v.picutre_);
+    ar >> make_nvp("picture", v.picture_);
 }
 
 } }

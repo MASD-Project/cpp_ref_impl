@@ -2378,7 +2378,7 @@ It's objective is to test Dogen integration with ODB.
         </dia:composite>
         <dia:composite type="umlattribute">
           <dia:attribute name="name">
-            <dia:string>#picutre#</dia:string>
+            <dia:string>#picture#</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
             <dia:string>#std::string#</dia:string>

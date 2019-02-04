@@ -44,7 +44,7 @@ public:
         const masd::cpp_ref_impl::northwind::category_id& category_id,
         const std::string& category_name,
         const std::string& description,
-        const std::string& picutre);
+        const std::string& picture);
 
 private:
     template<typename Archive>
@@ -69,10 +69,10 @@ public:
     void description(const std::string& v);
     void description(const std::string&& v);
 
-    const std::string& picutre() const;
-    std::string& picutre();
-    void picutre(const std::string& v);
-    void picutre(const std::string&& v);
+    const std::string& picture() const;
+    std::string& picture();
+    void picture(const std::string& v);
+    void picture(const std::string&& v);
 
 public:
     bool operator==(const categories& rhs) const;
@@ -88,7 +88,7 @@ private:
     masd::cpp_ref_impl::northwind::category_id category_id_;
     std::string category_name_;
     std::string description_;
-    std::string picutre_;
+    std::string picture_;
 };
 
 }
