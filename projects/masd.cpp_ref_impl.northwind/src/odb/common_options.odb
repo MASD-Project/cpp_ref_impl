@@ -29,7 +29,7 @@
 # target databases
 --database common
 --database pgsql
---database oracle
+--database sqlite
 
 # use the boost profile
 --profile boost

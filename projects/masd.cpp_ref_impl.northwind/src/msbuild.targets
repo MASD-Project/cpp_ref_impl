@@ -63,7 +63,7 @@
             SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/categories-odb-pgsql.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
         <Move
-            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/categories-odb-oracle.cxx"
+            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/categories-odb-sqlite.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
     </Target>
     <Target Name="odb_masd_cpp_ref_impl_northwind_category_id">
@@ -73,7 +73,7 @@
             SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/category_id-odb-pgsql.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
         <Move
-            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/category_id-odb-oracle.cxx"
+            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/category_id-odb-sqlite.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
     </Target>
     <Target Name="odb_masd_cpp_ref_impl_northwind_class_0">
@@ -83,7 +83,7 @@
             SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/package/class_0-odb-pgsql.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/package/" />
         <Move
-            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/package/class_0-odb-oracle.cxx"
+            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/package/class_0-odb-sqlite.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/package/" />
     </Target>
     <Target Name="odb_masd_cpp_ref_impl_northwind_customer_id">
@@ -93,7 +93,7 @@
             SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/customer_id-odb-pgsql.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
         <Move
-            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/customer_id-odb-oracle.cxx"
+            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/customer_id-odb-sqlite.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
     </Target>
     <Target Name="odb_masd_cpp_ref_impl_northwind_customers">
@@ -103,7 +103,7 @@
             SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/customers-odb-pgsql.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
         <Move
-            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/customers-odb-oracle.cxx"
+            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/customers-odb-sqlite.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
     </Target>
     <Target Name="odb_masd_cpp_ref_impl_northwind_employee_id">
@@ -113,7 +113,7 @@
             SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/employee_id-odb-pgsql.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
         <Move
-            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/employee_id-odb-oracle.cxx"
+            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/employee_id-odb-sqlite.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
     </Target>
     <Target Name="odb_masd_cpp_ref_impl_northwind_employees">
@@ -123,7 +123,7 @@
             SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/employees-odb-pgsql.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
         <Move
-            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/employees-odb-oracle.cxx"
+            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/employees-odb-sqlite.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
     </Target>
     <Target Name="odb_masd_cpp_ref_impl_northwind_order_details">
@@ -133,7 +133,7 @@
             SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/order_details-odb-pgsql.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
         <Move
-            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/order_details-odb-oracle.cxx"
+            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/order_details-odb-sqlite.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
     </Target>
     <Target Name="odb_masd_cpp_ref_impl_northwind_order_details_key">
@@ -143,7 +143,7 @@
             SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/order_details_key-odb-pgsql.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
         <Move
-            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/order_details_key-odb-oracle.cxx"
+            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/order_details_key-odb-sqlite.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
     </Target>
     <Target Name="odb_masd_cpp_ref_impl_northwind_order_id">
@@ -153,7 +153,7 @@
             SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/order_id-odb-pgsql.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
         <Move
-            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/order_id-odb-oracle.cxx"
+            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/order_id-odb-sqlite.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
     </Target>
     <Target Name="odb_masd_cpp_ref_impl_northwind_orders">
@@ -163,7 +163,7 @@
             SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/orders-odb-pgsql.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
         <Move
-            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/orders-odb-oracle.cxx"
+            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/orders-odb-sqlite.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
     </Target>
     <Target Name="odb_masd_cpp_ref_impl_northwind_product_id">
@@ -173,7 +173,7 @@
             SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/product_id-odb-pgsql.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
         <Move
-            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/product_id-odb-oracle.cxx"
+            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/product_id-odb-sqlite.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
     </Target>
     <Target Name="odb_masd_cpp_ref_impl_northwind_products">
@@ -183,7 +183,7 @@
             SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/products-odb-pgsql.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
         <Move
-            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/products-odb-oracle.cxx"
+            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/products-odb-sqlite.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
     </Target>
     <Target Name="odb_masd_cpp_ref_impl_northwind_shipper_id">
@@ -193,7 +193,7 @@
             SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/shipper_id-odb-pgsql.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
         <Move
-            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/shipper_id-odb-oracle.cxx"
+            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/shipper_id-odb-sqlite.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
     </Target>
     <Target Name="odb_masd_cpp_ref_impl_northwind_shippers">
@@ -203,7 +203,7 @@
             SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/shippers-odb-pgsql.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
         <Move
-            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/shippers-odb-oracle.cxx"
+            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/shippers-odb-sqlite.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
     </Target>
     <Target Name="odb_masd_cpp_ref_impl_northwind_supplier_id">
@@ -213,7 +213,7 @@
             SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/supplier_id-odb-pgsql.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
         <Move
-            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/supplier_id-odb-oracle.cxx"
+            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/supplier_id-odb-sqlite.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
     </Target>
     <Target Name="odb_masd_cpp_ref_impl_northwind_suppliers">
@@ -223,7 +223,7 @@
             SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/suppliers-odb-pgsql.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
         <Move
-            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/suppliers-odb-oracle.cxx"
+            SourceFiles="$(MSBuildThisFileDirectory)../include/masd.cpp_ref_impl.northwind/odb/suppliers-odb-sqlite.cxx"
             DestinationFolder="$(MSBuildThisFileDirectory)odb/" />
     </Target>
 </Project>
