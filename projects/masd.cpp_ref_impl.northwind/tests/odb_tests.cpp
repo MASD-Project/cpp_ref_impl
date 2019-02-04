@@ -24,14 +24,12 @@
 #include <odb/transaction.hxx>
 #include <odb/pgsql/database.hxx>
 #include <odb/schema-catalog.hxx>
-#include "dogen.utility/test/asserter.hpp"
-#include "dogen.utility/io/vector_io.hpp"
-#include "dogen.utility/test_data/validating_resolver.hpp"
-#include "dogen.utility/test_data/tds_test_good.hpp"
-#include "dogen.utility/test/logging.hpp"
-#include "cpp_ref_impl/northwind/types/all.hpp"
-#include "cpp_ref_impl/northwind/io/all_io.hpp"
-#include "cpp_ref_impl/northwind/test_data/all_td.hpp"
+#include "masd.cpp_ref_impl.utility/test/asserter.hpp"
+#include "masd.cpp_ref_impl.utility/io/vector_io.hpp"
+#include "masd.cpp_ref_impl.utility/test/logging.hpp"
+#include "masd.cpp_ref_impl.northwind/types/all.hpp"
+#include "masd.cpp_ref_impl.northwind/io/all_io.hpp"
+#include "masd.cpp_ref_impl.northwind/test_data/all_td.hpp"
 // #include "cpp_ref_impl/northwind/odb/no_keys-odb.hxx"
 // #include "cpp_ref_impl/northwind/odb/no_keys_2-odb.hxx"
 // #include "cpp_ref_impl/northwind/odb/primary_key-odb.hxx"

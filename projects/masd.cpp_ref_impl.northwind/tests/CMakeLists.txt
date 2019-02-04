@@ -1,4 +1,4 @@
-# -*- mode: cmake; tab-width: 4; indent-tabs-mode: nil -*-
+# -*- mode: cmake; cmake-tab-width: 4; indent-tabs-mode: nil -*-
 #
 # Copyright (C) 2012-2015 Marco Craveiro <marco.craveiro@gmail.com>
 #
@@ -19,7 +19,7 @@
 #
 set(name "northwind")
 set(tests_name "${name}.tests")
-set(binary_name "dogen.${tests_name}")
+set(binary_name "masd.cpp_ref_impl.${tests_name}")
 set(files "")
 file(GLOB_RECURSE files RELATIVE
     "${CMAKE_CURRENT_SOURCE_DIR}/"
@@ -29,7 +29,7 @@ add_executable(${tests_name} ${files})
 set_target_properties(${tests_name} PROPERTIES OUTPUT_NAME ${binary_name})
 
 target_link_libraries(${tests_name}
-    ${name}
+    masd_cpp_ref_impl_${name}
     utility
     ${LIBXML2_LIBRARIES}
     ${Boost_LIBRARIES}
