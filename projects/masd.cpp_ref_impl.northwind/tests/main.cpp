@@ -20,7 +20,7 @@
  */
 #define BOOST_TEST_MODULE database_tests
 #include <iostream>
-#include <boost/test/included/unit_test.hpp>
+#include <boost/test/unit_test.hpp>
 #include <boost/test/unit_test_monitor.hpp>
 #include <boost/exception/diagnostic_information.hpp>
 #include <odb/database.hxx>
