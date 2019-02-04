@@ -108,7 +108,7 @@ It's objective is to test Dogen integration with ODB.
 #DOGEN masd.extraction.cpp.visual_studio.solution.enabled=false
 #DOGEN masd.extraction.csharp.enabled=false
 #DOGEN masd.annotations.profile=dogen
-#DOGEN masd.orm.database_system=oracle
+#DOGEN masd.orm.database_system=sqlite
 #DOGEN masd.orm.database_system=postgresql
 #DOGEN masd.orm.letter_case=upper_case
 #DOGEN masd.orm.schema_name=northwind#</dia:string>
