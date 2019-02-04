@@ -3,12 +3,6 @@ file(GLOB_RECURSE files RELATIVE
     "${CMAKE_CURRENT_SOURCE_DIR}/"
     "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
 
-set(odb_files "")
-file(GLOB_RECURSE odb_files RELATIVE
-   "${CMAKE_CURRENT_SOURCE_DIR}/"
-   "${CMAKE_CURRENT_SOURCE_DIR}/*.cxx")
-set(files ${files} ${odb_files})
-
 add_library(masd_cpp_ref_impl_split_project STATIC ${files})
 set_target_properties(masd_cpp_ref_impl_split_project PROPERTIES
     OUTPUT_NAME masd_cpp_ref_impl_split_project)
