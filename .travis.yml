@@ -72,7 +72,9 @@ install:
   - source ${SCRIPTS_DIR}/travis.install.${TRAVIS_OS_NAME}.sh
 
 before_script:
-  - psql -f ${SCRIPTS_DIR}/setup_postgres.sql -U postgres
+  - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then
+        psql -f ${SCRIPTS_DIR}/setup_postgres.sql -U postgres
+    fi
 
 script:
   - JOBS=2
