@@ -69,7 +69,13 @@ then run:
 ---
 **Notes**
 
-
+- **Important**: We have a vcpkg fork with a [MASD
+  Branch](https://github.com/MASD-Project/vcpkg/commits/masd) that is
+  setup correctly to build both Dogen and the C++ Reference
+  Implementation and is used by CI. If at all possible, please use
+  this instead of the mainline vcpkg because it contains a few changes
+  that cannot be easily mainlined (C++ 17 on all dependencies, ODB
+  2.5, etc).
 - The default vcpkg triplet on windows [is 32-bit
 dynamic](https://github.com/Microsoft/vcpkg/issues/1254) whereas we
 build with ```--triplet x64-windows-static```. If you are experiencing
@@ -85,11 +91,11 @@ errors](https://github.com/Microsoft/vcpkg/issues/4476) related to ```iconv```.
   not
   default](https://github.com/Microsoft/vcpkg/issues/4476#issuecomment-430175834)
   to C++ 14. You'll need to add ```cxxstd=14```.
-- You can skip the ODB libs (e.g. ```libodb libodb-pgsql```) if you
-  are not targeting ORM support. **Very important***: vcpkg at present
-  only has ODB 2.4 support, but our test project requires ODB 2.5
-  because it uses C++ 17 features. If you'd like to build it, you
-  should use the [MASD
+- You can skip the ODB libs (e.g. ```libodb libodb-pgsql
+  libodb-sqlite```) if you are not targeting ORM support. **Very
+  important**: vcpkg at present only has ODB 2.4 support, but our test
+  project requires ODB 2.5 because it uses C++ 17 features. If you are
+  using mainline vcpkg, please have a look at the patches on the [MASD
   Branch](https://github.com/MASD-Project/vcpkg/commits/masd) of our
   vcpkg fork.
 
