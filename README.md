@@ -49,18 +49,26 @@ dependencies, across all operative systems:
 
 | Name   | Type      | Version                | Description                             |
 |--------|-----------|------------------------|-----------------------------------------|
-| [CMake](https://cmake.org/)  | Mandatory | 3.12 or later.  | Required to generate the build files.Earlier versions may also work.  |
-| [Boost](https://boost.org)  | Mandatory | 1.61 or later. | Earlier versions may also work, but patches are required. **Very Important**: We link statically against Boost at present, so be sure to build and install the static libraries.|
+| [CMake](https://cmake.org/)  | Mandatory | 3.12 or later.  | Required to generate the build files. Earlier versions may also work.  |
+| [Boost](https://boost.org)  | Mandatory | 1.61 or later. | Earlier versions may also work, but patches may be required. **Very Important**: We link statically against Boost at present, so be sure to build and install the static libraries.|
 | [LibXml2](http://xmlsoft.org/) | Mandatory | 2.9.4 | Earlier versions may work but haven't been tested.|
-| [ODB](https://www.codesynthesis.com/products/odb/) | Optional | 2.5.0 | Required to build the ORM test model. |
+| [ODB](https://www.codesynthesis.com/products/odb/) | Optional | 2.5.0 | Required to build the ORM test model. Note that ODB 2.5 is a beta version. |
 
 Though the C++ Reference Implementation should build fine with package
 manager supplied libraries - or even with hand-built dependencies -
 the easiest way to setup a development environment on all supported
-platforms is by using
-[vcpkg](https://github.com/Microsoft/vcpkg). Compile it as per [vcpkg
+platforms is by using [vcpkg](https://github.com/Microsoft/vcpkg). We
+have a vcpkg fork with a [MASD
+Branch](https://github.com/MASD-Project/vcpkg/commits/masd) that is
+setup correctly to build both Dogen and the C++ Reference
+Implementation and is used/validated by our CI. If at all possible,
+please use this instead of the mainline vcpkg because it contains a
+few changes that cannot be easily mainlined (C++ 17 on all
+dependencies, ODB 2.5, etc).
+
+Either way, you can compile vcpkg as per [vcpkg
 documentation](https://github.com/Microsoft/vcpkg/blob/master/README.md),
-then run:
+and then install packages by running:
 
 ```
 ./vcpkg install boost-system boost-serialization boost-date-time boost-log boost-filesystem boost-program-options boost-test libodb libodb-pgsql libodb-sqlite cpp-redis
@@ -69,13 +77,6 @@ then run:
 ---
 **Notes**
 
-- **Important**: We have a vcpkg fork with a [MASD
-  Branch](https://github.com/MASD-Project/vcpkg/commits/masd) that is
-  setup correctly to build both Dogen and the C++ Reference
-  Implementation and is used by CI. If at all possible, please use
-  this instead of the mainline vcpkg because it contains a few changes
-  that cannot be easily mainlined (C++ 17 on all dependencies, ODB
-  2.5, etc).
 - The default vcpkg triplet on windows [is 32-bit
 dynamic](https://github.com/Microsoft/vcpkg/issues/1254) whereas we
 build with ```--triplet x64-windows-static```. If you are experiencing
@@ -87,17 +88,17 @@ triplet.
 interesting linking
 errors](https://github.com/Microsoft/vcpkg/issues/4476) related to ```iconv```.
 - Remember that the recommended compiler for OSX is Homebrew's GCC. If
-  you do decide to use Clang, beware that for some reason [boost does
-  not
-  default](https://github.com/Microsoft/vcpkg/issues/4476#issuecomment-430175834)
-  to C++ 14. You'll need to add ```cxxstd=14```.
+you do decide to use Clang, beware that for some reason [boost does
+not
+default](https://github.com/Microsoft/vcpkg/issues/4476#issuecomment-430175834)
+to C++ 14. You'll need to add ```cxxstd=14```.
 - You can skip the ODB libs (e.g. ```libodb libodb-pgsql
-  libodb-sqlite```) if you are not targeting ORM support. **Very
-  important**: vcpkg at present only has ODB 2.4 support, but our test
-  project requires ODB 2.5 because it uses C++ 17 features. If you are
-  using mainline vcpkg, please have a look at the patches on the [MASD
-  Branch](https://github.com/MASD-Project/vcpkg/commits/masd) of our
-  vcpkg fork.
+libodb-sqlite```) if you are not targeting ORM support. **Very
+important**: vcpkg at present only has ODB 2.4 support, but our test
+project requires ODB 2.5 because it uses C++ 17 features. If you are
+using mainline vcpkg, please have a look at the patches on the [MASD
+Branch](https://github.com/MASD-Project/vcpkg/commits/masd) of our
+vcpkg fork.
 
 ---
 
