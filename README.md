@@ -32,8 +32,9 @@ formats.
 
 # Building
 
-In order to build Dogen you will need a C++ toolchain. On Linux and
-OSX, you'll need a recent compiler with C++ 17 support, such as [GCC
+In order to build the MASD C++ Reference Implementation you will need
+a C++ toolchain. On Linux and OSX, you'll need a recent compiler with
+C++ 17 support, such as [GCC
 8](https://www.gnu.org/software/gcc/gcc-8) or [Clang
 7](https://img.shields.io/badge/CLANG-7-cyan.svg) - and
 [Ninja](https://ninja-build.org/manual.html) or [GNU
@@ -51,7 +52,7 @@ dependencies, across all operative systems:
 | [CMake](https://cmake.org/)  | Mandatory | 3.12 or later.  | Required to generate the build files.Earlier versions may also work.  |
 | [Boost](https://boost.org)  | Mandatory | 1.61 or later. | Earlier versions may also work, but patches are required. **Very Important**: We link statically against Boost at present, so be sure to build and install the static libraries.|
 | [LibXml2](http://xmlsoft.org/) | Mandatory | 2.9.4 | Earlier versions may work but haven't been tested.|
-| [ODB](https://www.codesynthesis.com/products/odb/) | Optional | 2.4.0 | Required to build the ORM model. |
+| [ODB](https://www.codesynthesis.com/products/odb/) | Optional | 2.5.0 | Required to build the ORM test model. |
 
 Though the C++ Reference Implementation should build fine with package
 manager supplied libraries - or even with hand-built dependencies -
@@ -62,7 +63,7 @@ documentation](https://github.com/Microsoft/vcpkg/blob/master/README.md),
 then run:
 
 ```
-./vcpkg install libxml2 boost-system boost-serialization boost-date-time boost-log boost-filesystem boost-program-options boost-test boost-di libodb libodb-pgsql
+./vcpkg install boost-system boost-serialization boost-date-time boost-log boost-filesystem boost-program-options boost-test libodb libodb-pgsql libodb-sqlite cpp-redis
 ```
 
 ---
@@ -85,7 +86,12 @@ errors](https://github.com/Microsoft/vcpkg/issues/4476) related to ```iconv```.
   default](https://github.com/Microsoft/vcpkg/issues/4476#issuecomment-430175834)
   to C++ 14. You'll need to add ```cxxstd=14```.
 - You can skip the ODB libs (e.g. ```libodb libodb-pgsql```) if you
-are not targeting ORM support.
+  are not targeting ORM support. **Very important***: vcpkg at present
+  only has ODB 2.4 support, but our test project requires ODB 2.5
+  because it uses C++ 17 features. If you'd like to build it, you
+  should use the [MASD
+  Branch](https://github.com/MASD-Project/vcpkg/commits/masd) of our
+  vcpkg fork.
 
 ---
 
@@ -159,6 +165,35 @@ CMAKE_PROGRAM_PATH=/path/to/dogen/binary cmake ../..
 After regeneration, you can then use ```git diff``` to inspect the
 differences produced by regeneration, if any. The build directory
 contains all of the logs, under the directory ```log```.
+
+If you'd like to regenerate ODB code, you can use the target
+```odb_all``` or the abbreviated target ```oa```. Note that
+
+# Test Models
+
+The Reference Implementation is composed of a number of test
+models. These can be summarised as follows:
+
+| Name                    | Description                                         |
+|-------------------------|-----------------------------------------------------|
+| boost_model             | Tests for all of the supported Boost types.         |
+| compressed              | Uses a compressed Dia diagram as input.             |
+| cpp_98                  | Model in C++ 98. All other models are in C++ 17.    |
+| cpp_model               | Model testing core C++ language features.           |
+| std_model               | Model exercising types from Standard Library.       |
+| directory_settings      | Exercises all file and directory settings in Dogen. |
+| disable_cmakelists      | Model without CMake support.                        |
+| disable_facet_folders   | Model without folders for facets (flat directory)   |
+| enable_facet_*          | Models exercising single facets.                    |
+| lam_model               | Language Agnostic Model targeting C++.              |
+| northwind               | ODB test model based on Microsoft's Northwind       |
+| split_project           | Project with multiple roots.                        |
+| two_layers_with_objects | Model with multiple layers in Dia.                  |
+
+The objective of this project is to ensure these models compile. In
+addition, a set of model specific tests is present in
+```test_model_sanitizer```, which exercises functionality such as
+serialisation, IO etc.
 
 # Reporting Problems
 
