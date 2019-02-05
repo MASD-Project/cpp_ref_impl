@@ -19,6 +19,7 @@
  *
  */
 #define BOOST_TEST_MODULE northwind_tests
+#include <memory>
 #include <iostream>
 #include <boost/test/unit_test.hpp>
 #include <boost/test/unit_test_monitor.hpp>
@@ -27,11 +28,6 @@
 #include <odb/transaction.hxx>
 #include <odb/pgsql/database.hxx>
 #include <odb/schema-catalog.hxx>
-// #include "dogen/test_models/database/odb/no_keys-odb.hxx"
-// #include "dogen/test_models/database/odb/no_keys_2-odb.hxx"
-// #include "dogen/test_models/database/odb/primary_key-odb.hxx"
-// #include "dogen/test_models/database/odb/primary_key_2-odb.hxx"
-// #include "dogen/test_models/database/odb/foreign_key-odb.hxx"
 
 namespace  {
 
@@ -49,18 +45,20 @@ struct exception_fixture {
     }
 };
 
-// struct create_db_fixture {
-//     create_db_fixture() {
-//         std::unique_ptr<odb::database> db(
-//             new odb::pgsql::database("build", "", "musseque", "localhost"));
-//         odb::transaction t(db->begin());
-//         // FIXME: for now assume schema already exists
-//         // odb::schema_catalog::create_schema(*db);
-//         t.commit();
-//     }
-// };
+struct create_db_fixture {
+    create_db_fixture() {
+        using namespace odb;
+        using odb::pgsql::database;
+        auto db(std::make_unique<database>(
+                "build", "build", "musseque", "localhost"));
+
+        transaction t(db->begin());
+        schema_catalog::create_schema(*db);
+        t.commit();
+    }
+};
 
 }
 
 BOOST_GLOBAL_FIXTURE(exception_fixture);
-// BOOST_GLOBAL_FIXTURE(create_db_fixture);
+BOOST_GLOBAL_FIXTURE(create_db_fixture);

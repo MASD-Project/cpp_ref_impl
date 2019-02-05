@@ -29,14 +29,18 @@ add_executable(${tests_name} ${files})
 set_target_properties(${tests_name} PROPERTIES OUTPUT_NAME ${binary_name})
 
 target_link_libraries(${tests_name}
-    masd_cpp_ref_impl_${name}
+    -Wl,--whole-archive masd_cpp_ref_impl_${name}  -Wl,--no-whole-archive
     utility
     ${LIBXML2_LIBRARIES}
     ${Boost_LIBRARIES}
-    ${ODB_CORE_LIBRARY}
-    ${ODB_PGSQL_LIBRARY}
-    ${ODB_BOOST_LIBRARY}
-    ${PQXX_LIBRARIES}
+    ${ODB_PGSQL_LIBRARIES}
+    ${ODB_SQLITE_LIBRARIES}
+    ${ODB_BOOST_LIBRARIES}
+    ${ODB_LIBODB_LIBRARIES}
+    ${PostgreSQL_LIBRARIES}
+    ${OPENSSL_LIBRARIES}
+    resolv
+    sqlite3
     ${CMAKE_THREAD_LIBS_INIT})
 
 set(command $<TARGET_FILE:${tests_name}> ${boost_test_parameters})

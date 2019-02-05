@@ -20,23 +20,19 @@
  */
 #include <algorithm>
 #include <boost/test/unit_test.hpp>
-#include <odb/database.hxx>
+#include <odb/result.hxx>
+// #include <odb/database.hxx>
 #include <odb/transaction.hxx>
 #include <odb/pgsql/database.hxx>
-#include <odb/schema-catalog.hxx>
 #include "masd.cpp_ref_impl.utility/test/asserter.hpp"
 #include "masd.cpp_ref_impl.utility/io/vector_io.hpp"
 #include "masd.cpp_ref_impl.utility/test/logging.hpp"
 #include "masd.cpp_ref_impl.northwind/types/all.hpp"
 #include "masd.cpp_ref_impl.northwind/io/all_io.hpp"
 #include "masd.cpp_ref_impl.northwind/test_data/all_td.hpp"
-// #include "cpp_ref_impl/northwind/odb/no_keys-odb.hxx"
-// #include "cpp_ref_impl/northwind/odb/no_keys_2-odb.hxx"
-// #include "cpp_ref_impl/northwind/odb/primary_key-odb.hxx"
-// #include "cpp_ref_impl/northwind/odb/primary_key_2-odb.hxx"
-// #include "cpp_ref_impl/northwind/odb/foreign_key-odb.hxx"
+#include "masd.cpp_ref_impl.northwind/odb/customers-odb-pgsql.hxx"
+#include "masd.cpp_ref_impl.northwind/odb/customers-odb.hxx"
 
-using namespace odb::core;
 
 namespace  {
 
@@ -44,12 +40,12 @@ const std::string test_module("northwind_tests");
 const std::string test_suite("odb_tests");
 
 
-// odb::database* create_db() {
-//     return new odb::pgsql::database ("build", "", "musseque", "localhost");
-// }
+odb::pgsql::database* setup_postgres_db() {
+    return new odb::pgsql::database("build", "build", "musseque", "localhost");
+}
 
 template<typename T>
-long long delete_rows(odb::database& db) {
+unsigned long long delete_rows(odb::pgsql::database& db) {
     odb::transaction t(db.begin());
     const auto r(db.erase_query<T>());
     t.commit();
@@ -67,10 +63,18 @@ generate(const unsigned int how_many) {
 }
 
 template<typename T>
-void persist(odb::database& db, const std::vector<T>& v) {
+void persist(odb::pgsql::database& db, const std::vector<T>& v) {
     odb::transaction t(db.begin());
     for (const auto e : v)
         db.persist(e);
+    t.commit();
+}
+
+template<typename T>
+void update(odb::pgsql::database& db, const std::vector<T>& v) {
+    odb::transaction t(db.begin());
+    for (const auto e : v)
+        db.update(e);
     t.commit();
 }
 
@@ -78,28 +82,31 @@ void persist(odb::database& db, const std::vector<T>& v) {
 
 BOOST_AUTO_TEST_SUITE(odb_tests)
 
-BOOST_AUTO_TEST_CASE(inserting_no_keys_instances_results_in_expected_rows_in_table) {
-    SETUP_TEST_LOG_SOURCE("inserting_no_keys_instances_results_in_expected_rows_in_table");
-/*
-    std::unique_ptr<odb::database> db(create_db());
-    const auto del_rows(delete_rows<dogen::test_models::northwind::no_keys>(*db));
+BOOST_AUTO_TEST_CASE(crud_test_customers_produces_expected_results) {
+    SETUP_TEST_LOG_SOURCE("crud_test_customers_produces_expected_results");
+
+    using namespace masd::cpp_ref_impl::northwind;
+    std::unique_ptr<odb::pgsql::database> db_ptr(setup_postgres_db());
+    auto& db(*db_ptr);
+    auto del_rows(delete_rows<customers>(db));
     BOOST_LOG_SEV(lg, debug) << "Deleted existing rows. Total: " << del_rows;
 
-    const unsigned int how_many(5);
-    const auto v(generate<dogen::test_models::northwind::no_keys_generator>(how_many));
-    persist(*db, v);
-    BOOST_LOG_SEV(lg, debug) << "Persisted: " << v;
+    const unsigned int count(5);
+    const auto original(generate<customers_generator>(count));
+    BOOST_LOG_SEV(lg, debug) << "Original: " << original;
 
+    persist(db, original);
+    BOOST_LOG_SEV(lg, debug) << "Persisted original.";
+
+    typedef odb::result<customers> result;
     {
-        transaction t(db->begin());
-        typedef odb::result<dogen::test_models::northwind::no_keys> result;
-
-        result r(db->query<dogen::test_models::northwind::no_keys>());
-        for (auto i(r.begin ()); i != r.end (); ++i) {
-            BOOST_LOG_SEV(lg, debug) << "Actual: " << *i;
+        odb::transaction t(db.begin());
+        result r(db.query<customers>());
+        for (const auto& c : r) {
+            BOOST_LOG_SEV(lg, debug) << "Actual: " << c;
             bool found(false);
-            for (const auto e : v) {
-                if (e == *i) {
+            for (const auto e : original) {
+                if (e == c) {
                     found = true;
                     BOOST_LOG_SEV(lg, debug) << "Found actual.";
                     continue;
@@ -107,132 +114,32 @@ BOOST_AUTO_TEST_CASE(inserting_no_keys_instances_results_in_expected_rows_in_tab
             }
             BOOST_CHECK(found);
         }
+        t.commit();
     }
-*/
-}
-
-BOOST_AUTO_TEST_CASE(inserting_no_keys_2_instances_results_in_expected_rows_in_table) {
-    SETUP_TEST_LOG_SOURCE("inserting_no_keys_2_instances_results_in_expected_rows_in_table");
-/*
-    std::unique_ptr<odb::database> db(create_db());
-    const auto del_rows(delete_rows<dogen::test_models::northwind::no_keys_2>(*db));
-    BOOST_LOG_SEV(lg, debug) << "Deleted existing rows. Total: " << del_rows;
-
-    const unsigned int how_many(5);
-    const auto v(generate<dogen::test_models::northwind::no_keys_2_generator>(how_many));
-    persist(*db, v);
-    BOOST_LOG_SEV(lg, debug) << "Persisted: " << v;
 
     {
-        transaction t(db->begin());
-        typedef odb::result<dogen::test_models::northwind::no_keys_2> result;
+        std::vector<customers> transformed;
+        std::transform(original.begin(), original.end(),
+            std::back_inserter(transformed), [](customers c) -> customers {
+                c.country("Angola");
+                return c;
+            });
+        BOOST_LOG_SEV(lg, debug) << "Transformed: " << transformed;
+        update(db, transformed);
+        BOOST_LOG_SEV(lg, debug) << "Updated database.";
 
-        result r(db->query<dogen::test_models::northwind::no_keys_2>());
-        for (auto i(r.begin ()); i != r.end (); ++i) {
-            BOOST_LOG_SEV(lg, debug) << "Actual: " << *i;
-            bool found(false);
-            for (const auto e : v) {
-                if (e == *i) {
-                    found = true;
-                    BOOST_LOG_SEV(lg, debug) << "Found actual.";
-                    continue;
-                }
-            }
-            BOOST_CHECK(found);
+        odb::transaction t(db.begin());
+        result r(db.query<customers>());
+        for (const auto& c : r) {
+            BOOST_LOG_SEV(lg, debug) << "Actual: " << c;
+            BOOST_CHECK(c.country() == "Angola");
         }
-    }
-*/
-}
-
-BOOST_AUTO_TEST_CASE(inserting_primary_key_objects_results_in_unique_rows) {
-    SETUP_TEST_LOG_SOURCE("inserting_primary_key_objects_results_in_unique_rows");
-/*
-    std::unique_ptr<odb::database> db(create_db());
-    const auto del_rows(delete_rows<dogen::test_models::northwind::primary_key>(*db));
-    BOOST_LOG_SEV(lg, debug) << "Deleted existing rows. Total: " << del_rows;
-
-    const unsigned int how_many(5);
-    const auto v(generate<dogen::test_models::northwind::primary_key_generator>(how_many));
-    persist(*db, v);
-    BOOST_LOG_SEV(lg, debug) << "Persisted: " << v;
-
-    {
-        transaction t(db->begin());
-        const auto e(v.front());
-        const auto a(db->load<dogen::test_models::northwind::primary_key>(e.prop_0()));
-        BOOST_LOG_SEV(lg, debug) << "Expected: " << e;
-        BOOST_LOG_SEV(lg, debug) << "Actual: " << *a;
-        BOOST_CHECK(*a == e);
         t.commit();
     }
 
-    {
-        transaction t(db->begin());
-        auto e(v.back());
-        auto a(db->load<dogen::test_models::northwind::primary_key>(e.prop_0()));
-        a->prop_1("some update");
-        db->update(*a);
-        t.commit();
-    }
-
-    {
-        transaction t(db->begin());
-        auto e(v.back());
-        e.prop_1("some update");
-        const auto a(db->load<dogen::test_models::northwind::primary_key>(e.prop_0()));
-        BOOST_LOG_SEV(lg, debug) << "Expected: " << e;
-        BOOST_LOG_SEV(lg, debug) << "Actual: " << *a;
-        BOOST_CHECK(*a == e);
-        t.commit();
-    }
-*/
-}
-
-BOOST_AUTO_TEST_CASE(inserting_foreign_key_objects_requires_other_side_to_exist) {
-    SETUP_TEST_LOG_SOURCE("inserting_foreign_key_objects_requires_other_side_to_exist");
-/*
-    std::unique_ptr<odb::database> db(create_db());
-    auto del_rows(delete_rows<dogen::test_models::northwind::foreign_key>(*db));
-    BOOST_LOG_SEV(lg, debug) << "Deleted rows in foreign_key. Total: "
-                             << del_rows;
-
-    del_rows = delete_rows<dogen::test_models::northwind::primary_key_2>(*db);
-    BOOST_LOG_SEV(lg, debug) << "Deleted rows in primary_key_2. Total: "
-                             << del_rows;
-
-    const unsigned int how_many(5);
-    const auto v(generate<dogen::test_models::northwind::primary_key_2_generator>(how_many));
-    persist(*db, v);
-    BOOST_LOG_SEV(lg, debug) << "Persisted: " << v;
-
-    {
-        odb::transaction t(db->begin());
-        dogen::test_models::northwind::foreign_key fk;
-        fk.prop_0(15);
-        boost::shared_ptr<dogen::test_models::northwind::primary_key_2>
-            sp(new dogen::test_models::northwind::primary_key_2(v.back()));
-        fk.prop_1(sp);
-        db->persist(fk);
-        BOOST_LOG_SEV(lg, debug) << "Object has been persisted: " << fk;
-        t.commit();
-    }
-
-    {
-        transaction t(db->begin());
-        typedef odb::result<dogen::test_models::northwind::foreign_key> result;
-
-        result r(db->query<dogen::test_models::northwind::foreign_key>());
-        for (auto i(r.begin ()); i != r.end (); ++i) {
-            BOOST_LOG_SEV(lg, debug) << "Actual: " << *i;
-            bool found(false);
-            if (v.back() == *(i->prop_1())) {
-                found = true;
-                BOOST_LOG_SEV(lg, debug) << "Found actual.";
-            }
-            BOOST_CHECK(found);
-        }
-    }
-*/
+    del_rows = delete_rows<customers>(db);
+    BOOST_CHECK(del_rows == count);
+    BOOST_LOG_SEV(lg, debug) << "Deleted expected rows: " << count;
 }
 
 BOOST_AUTO_TEST_SUITE_END()

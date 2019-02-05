@@ -19,6 +19,8 @@
 #
 cmake_minimum_required(VERSION 3.3 FATAL_ERROR)
 
+message(STATUS "CMake: ${CMAKE_VERSION}")
+
 # ctest support
 enable_testing()
 
@@ -96,24 +98,53 @@ endif()
 # ODB
 #
 
-# First we try to locate the libraries. We split these so that we can
-# build ODB code even if the compiler is not present. This is a common
-# setup when using vcpkg.
-find_package(ODB COMPONENTS boost pgsql)
-if (ODB_LIBODB_FOUND)
-    message(STATUS "Found ODB Libraries...")
-    # FIXME: using global settings at present because dogen does not
-    # FIXME: know how to add dependencies at the project level.
-    include_directories(SYSTEM ${ODB_LIBODB_INCLUDE_DIRS})
-    set(LIBS ${LIBS} ${ODB_LIBODB_LIBRARIES})
+# First we try to locate the required libraries. Note that we split
+# the compiler from the libraries so that we can build ODB code even
+# if the compiler is not present. This is a common setup when using
+# vcpkg. Note also that in order to compile and run the ODB tests we
+# need all of the dependencies to be present.
+set(odb_dependencies_found TRUE)
+
+find_package(PostgreSQL)
+if (PostgreSQL_FOUND)
+    message(STATUS "PostgreSQL Found.")
 else()
-    message(STATUS "ODB Libraries NOT Found.")
+    message(STATUS "PostgreSQL NOT Found. Disabling ODB.")
+    set(odb_dependencies_found FALSE)
 endif()
 
-if (ODB_FOUND)
-    message(STATUS "Found ODB Compiler...")
+find_package(SQLite3)
+if (SQLite3_FOUND)
+    message(STATUS "SQLite3 Found.")
 else()
-    message(STATUS "ODB Compiler NOT Found.")
+    message(STATUS "SQLite NOT Found. Disabling ODB.")
+    set(odb_dependencies_found FALSE)
+endif()
+
+find_package(OpenSSL)
+if (OpenSSL_FOUND)
+    message(STATUS "OpenSSL Found.")
+else()
+    message(STATUS "OpenSSL NOT Found. Disabling ODB.")
+    set(odb_dependencies_found FALSE)
+endif()
+
+if (odb_dependencies_found)
+    find_package(ODB COMPONENTS boost pgsql sqlite)
+    if (ODB_LIBODB_FOUND)
+        message(STATUS "Found ODB Libraries...")
+        # FIXME: using global settings at present because dogen does not
+        # FIXME: know how to add dependencies at the project level.
+        include_directories(SYSTEM ${ODB_LIBODB_INCLUDE_DIRS})
+    else()
+        message(STATUS "ODB Libraries NOT Found.")
+    endif()
+
+    if (ODB_FOUND)
+        message(STATUS "Found ODB Compiler...")
+    else()
+        message(STATUS "ODB Compiler NOT Found.")
+    endif()
 endif()
 
 #
