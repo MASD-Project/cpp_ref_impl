@@ -96,7 +96,7 @@ to C++ 14. You'll need to add ```cxxstd=14```.
 libodb-sqlite```) if you are not targeting ORM support. **Very
 important**: vcpkg at present only has ODB 2.4 support, but our test
 project requires ODB 2.5 because it uses C++ 17 features. If you are
-using mainline vcpkg, please have a look at the patches on the [MASD
+using mainline vcpkg, please have a look at the patches in the [MASD
 Branch](https://github.com/MASD-Project/vcpkg/commits/masd) of our
 vcpkg fork.
 
