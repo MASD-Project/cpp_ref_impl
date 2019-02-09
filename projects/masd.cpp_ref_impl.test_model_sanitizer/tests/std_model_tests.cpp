@@ -28,7 +28,7 @@
 #include "masd.cpp_ref_impl.std_model/serialization/all_ser.hpp"
 #include "masd.cpp_ref_impl.std_model/test_data/all_td.hpp"
 #include "masd.cpp_ref_impl.std_model/hash/all_hash.hpp"
-#include "dogen/test_models/test_model_sanitizer/register_types.hpp"
+#include "masd.cpp_ref_impl.test_model_sanitizer/serialization/register_types.hpp"
 
 namespace {
 

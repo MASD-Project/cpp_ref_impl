@@ -25,7 +25,7 @@
 #include "masd.cpp_ref_impl.cpp_98/io/all_io.hpp"
 #include "masd.cpp_ref_impl.cpp_98/serialization/all_ser.hpp"
 #include "masd.cpp_ref_impl.cpp_98/test_data/all_td.hpp"
-#include "dogen/test_models/test_model_sanitizer/register_types.hpp"
+#include "masd.cpp_ref_impl.test_model_sanitizer/serialization/register_types.hpp"
 
 namespace {
 

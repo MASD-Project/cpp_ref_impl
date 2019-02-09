@@ -27,7 +27,7 @@
 #include "masd.cpp_ref_impl.disable_facet_folders/all_ser.hpp"
 #include "masd.cpp_ref_impl.disable_facet_folders/all_td.hpp"
 #include "masd.cpp_ref_impl.disable_facet_folders/all_hash.hpp"
-#include "dogen/test_models/test_model_sanitizer/register_types.hpp"
+#include "masd.cpp_ref_impl.test_model_sanitizer/serialization/register_types.hpp"
 
 namespace {
 

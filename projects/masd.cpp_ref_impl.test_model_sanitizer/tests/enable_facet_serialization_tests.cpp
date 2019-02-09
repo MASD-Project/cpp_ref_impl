@@ -25,7 +25,7 @@
 #include "masd.cpp_ref_impl.utility/test/canned_tests.hpp"
 #include "masd.cpp_ref_impl.enable_facet_serialization/serialization/all_ser.hpp"
 #include "masd.cpp_ref_impl.enable_facet_serialization/types/all.hpp"
-#include "dogen/test_models/test_model_sanitizer/register_types.hpp"
+#include "masd.cpp_ref_impl.test_model_sanitizer/serialization/register_types.hpp"
 
 namespace {
 
