@@ -181,21 +181,21 @@ If you'd like to regenerate ODB code, you can use the target
 The Reference Implementation is composed of a number of test
 models. These can be summarised as follows:
 
-| Name                    | Description                                         |
-|-------------------------|-----------------------------------------------------|
-| boost_model             | Tests for all of the supported Boost types.         |
-| compressed              | Uses a compressed Dia diagram as input.             |
-| cpp_98                  | Model in C++ 98. All other models are in C++ 17.    |
-| cpp_model               | Model testing core C++ language features.           |
-| std_model               | Model exercising types from Standard Library.       |
-| directory_settings      | Exercises all file and directory settings in Dogen. |
-| disable_cmakelists      | Model without CMake support.                        |
-| disable_facet_folders   | Model without folders for facets (flat directory)   |
-| enable_facet_*          | Models exercising single facets.                    |
-| lam_model               | Language Agnostic Model targeting C++.              |
-| northwind               | ODB test model based on Microsoft's Northwind       |
-| split_project           | Project with multiple roots.                        |
-| two_layers_with_objects | Model with multiple layers in Dia.                  |
+| Name                    | Description                                        |
+|-------------------------|----------------------------------------------------|
+| boost_model             | Tests for all of the supported Boost types.        |
+| compressed              | Uses a compressed Dia diagram as input.            |
+| cpp_98                  | Model in C++ 98. All other models are in C++ 17.   |
+| cpp_model               | Model testing core C++ language features.          |
+| std_model               | Model exercising types from Standard Library.      |
+| directory_settings      | Exercises all file and directory settings in MASD. |
+| disable_cmakelists      | Model without CMake support.                       |
+| disable_facet_folders   | Model without folders for facets (flat directory)  |
+| enable_facet_*          | Models exercising single facets.                   |
+| lam_model               | Language Agnostic Model targeting C++.             |
+| northwind               | ODB test model based on Microsoft's Northwind      |
+| split_project           | Project with multiple roots.                       |
+| two_layers_with_objects | Model with multiple layers in Dia.                 |
 
 The objective of this project is to ensure these models compile. In
 addition, a set of model specific tests is present in
