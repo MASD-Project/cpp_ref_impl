@@ -1966,7 +1966,7 @@ third line with "quote"#</dia:string>
         <dia:point val="102.812,8.9375"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="102.763,8.8875;118.007,11.4875"/>
+        <dia:rectangle val="102.762,8.8875;118.007,11.4875"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -5717,6 +5717,7 @@ this is a long comment#</dia:string>
 #DOGEN masd.extraction.cpp.serialization.overwrite=false
 #DOGEN masd.extraction.cpp.test_data.enabled=true
 #DOGEN masd.extraction.cpp.test_data.overwrite=false
+#DOGEN masd.extraction.cpp.types.forward_declarations.enabled=true
 #DOGEN masd.extraction.cpp.types.forward_declarations.overwrite=true
 #DOGEN masd.extraction.cpp.serialization.forward_declarations.overwrite=true#</dia:string>
       </dia:attribute>
@@ -11692,7 +11693,7 @@ of the object template instantiated by the base class.#</dia:string>
         <dia:point val="106.099,140"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="100.84,139.95;106.949,148.005"/>
+        <dia:rectangle val="101.104,139.95;106.949,148.002"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -11700,8 +11701,8 @@ of the object template instantiated by the base class.#</dia:string>
       <dia:attribute name="orth_points">
         <dia:point val="106.099,140"/>
         <dia:point val="106.099,145"/>
-        <dia:point val="100.895,145"/>
-        <dia:point val="101.156,147.95"/>
+        <dia:point val="101.156,145"/>
+        <dia:point val="101.245,147.95"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
