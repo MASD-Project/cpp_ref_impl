@@ -205,7 +205,7 @@ set(boost_test_parameters "--log_level=error")
 
 # user includes
 include_directories(
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.directory_settings/cpp_backend/some_include_dir
+    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.directory_settings/cpp_backend/id
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.boost_model/include
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.compressed/include
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.cpp_98/include

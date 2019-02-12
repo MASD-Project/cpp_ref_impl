@@ -241,7 +241,7 @@
         <dia:point val="-31,-47"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-31.05,-47.05;-1.175,12.35"/>
+        <dia:rectangle val="-31.05,-47.05;0.365,12.35"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -250,7 +250,7 @@
         <dia:point val="-31,-47"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="29.775000000000002"/>
+        <dia:real val="31.315000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="59.300000000000004"/>
@@ -280,8 +280,8 @@
 #DOGEN masd.extraction.cpp.visual_studio.project.enabled=false
 #DOGEN masd.extraction.cpp.visual_studio.solution.enabled=false
 #DOGEN masd.extraction.cpp.directory=cpp_backend
-#DOGEN masd.extraction.cpp.source_directory_name=some_source_dir
-#DOGEN masd.extraction.cpp.include_directory_name=some_include_dir
+#DOGEN masd.extraction.cpp.source_directory_name=sd
+#DOGEN masd.extraction.cpp.include_directory_name=id
 #DOGEN masd.extraction.cpp.header_file_extension=hh
 #DOGEN masd.extraction.cpp.implementation_file_extension=cc
 #DOGEN masd.extraction.cpp.hash.directory=hash_dir

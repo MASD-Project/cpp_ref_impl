@@ -17,10 +17,13 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 # MA 02110-1301, USA.
 #
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/sd)
+set(files "")
+file(GLOB_RECURSE files RELATIVE
+    "${CMAKE_CURRENT_SOURCE_DIR}/"
+    "${CMAKE_CURRENT_SOURCE_DIR}/*.cc")
 
-install(
-    DIRECTORY id/
-    DESTINATION id/
-    COMPONENT headers
-    FILES_MATCHING PATTERN "*.hh")
+add_library(masd_cpp_ref_impl_directory_settings STATIC ${files})
+set_target_properties(masd_cpp_ref_impl_directory_settings PROPERTIES
+    OUTPUT_NAME masd_cpp_ref_impl_directory_settings)
+
+install(TARGETS masd_cpp_ref_impl_directory_settings ARCHIVE DESTINATION lib COMPONENT libraries)
