@@ -157,13 +157,15 @@ elseif(CMAKE_CXX_COMPILER_ID MATCHES "MSVC" OR
         string(REPLACE "/Gm" "" CMAKE_CXX_FLAGS_DEBUG ${CMAKE_CXX_FLAGS_DEBUG})
         string(REPLACE "/Gm" "" CMAKE_CXX_FLAGS_RELEASE
             ${CMAKE_CXX_FLAGS_RELEASE})
-        set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MP")
 
         # workaround for C1128: number of sections exceeded object
         # file format limit.
         set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /bigobj")
     endif()
 
+    # It seems Wall and /W4 are not practical for now as it includes
+    # all of the third party headers.
+    # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4")
     set(CMAKE_CXX_FLAGS
         "${CMAKE_CXX_FLAGS} /D _SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING")
     set(CMAKE_CXX_FLAGS
@@ -175,6 +177,8 @@ elseif(CMAKE_CXX_COMPILER_ID MATCHES "MSVC" OR
     endforeach(flag_var)
 
     if(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
+        # flag not supported by clang-cl
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MP")
 
         # For some reason CMake seems to be including the debug
         # version of this library on release builds as well so we
