@@ -72,15 +72,6 @@ if (DOGEN_TAILOR_EXECUTABLE)
 endif()
 
 if (DOGEN_KNITTER_EXECUTABLE)
-    set(ig_flg "--ignore-files-matching-regex")
-    set(ignore_regexes ${ig_flg} .*/CMakeLists.txt)
-    set(ignore_regexes ${ignore_regexes} ${ig_flg} .*/test/.*)
-    set(ignore_regexes ${ignore_regexes} ${ig_flg} .*/tests/.*)
-    set(ignore_regexes ${ignore_regexes} ${ig_flg} .*/poly-stitch.el)
-    set(ignore_regexes ${ignore_regexes} ${ig_flg} .*/*.py)
-    set(ignore_regexes ${ignore_regexes} ${ig_flg} .*sql)
-    set(ignore_regexes ${ignore_regexes} ${ig_flg} .*-odb.*)
-
     set(other_options --log-level ${DOGEN_LOG_LEVEL})
 
     # uncomment the next line if you require compatibility support
@@ -103,7 +94,6 @@ if (DOGEN_KNITTER_EXECUTABLE)
 
     # handle common arguments
     set(common_arguments ${other_options})
-    set(common_arguments ${common_arguments} ${ignore_regexes})
 
     # uncomment to enable probing.
     # set(common_arguments ${common_arguments} "--probe-all")
