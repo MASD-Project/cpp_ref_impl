@@ -211,6 +211,8 @@ set(boost_test_parameters "--log_level=error")
 
 # user includes
 include_directories(
+    # Split project
+    ${CMAKE_SOURCE_DIR}/projects/public_headers
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.directory_settings/cpp_backend/id
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.boost_model/include
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.compressed/include
@@ -225,7 +227,6 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.flat_directory_mode/include
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.lam_model/cpp/include
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.seam/include
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.split_project/include
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.std_model/include
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.test_model_sanitizer/include
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.two_layers_with_objects/include

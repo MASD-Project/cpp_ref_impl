@@ -65,16 +65,16 @@
   <dia:layer name="Background" visible="true" active="true">
     <dia:object type="UML - LargePackage" version="0" id="O0">
       <dia:attribute name="obj_pos">
-        <dia:point val="-26,-32"/>
+        <dia:point val="6,-43"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-26.05,-33.05;3.7375,-15.45"/>
+        <dia:rectangle val="5.95,-44.05;35.7375,-26.45"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="-26,-32"/>
+        <dia:point val="6,-43"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="29.6875"/>
@@ -103,13 +103,13 @@
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O1">
       <dia:attribute name="obj_pos">
-        <dia:point val="-16.9663,-27.75"/>
+        <dia:point val="15.0337,-38.75"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-17.0163,-27.8;-7.5613,-24.1"/>
+        <dia:rectangle val="14.9837,-38.8;24.4387,-35.1"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="-16.9663,-27.75"/>
+        <dia:point val="15.0337,-38.75"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="9.3550000000000004"/>
@@ -264,7 +264,7 @@
         <dia:point val="-26,-44"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-26.05,-44.05;-4.645,-35.85"/>
+        <dia:rectangle val="-26.05,-44.05;0.745,-34.25"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -273,10 +273,10 @@
         <dia:point val="-26,-44"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="21.305000000000003"/>
+        <dia:real val="26.695"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="8.0999999999999996"/>
+        <dia:real val="9.7000000000000011"/>
       </dia:attribute>
       <dia:attribute name="line_width">
         <dia:real val="0.10000000000000001"/>
@@ -293,6 +293,7 @@
             <dia:string>##DOGEN masd.injection.dia.comment=true
 #DOGEN masd.injection.model_modules=masd.cpp_ref_impl.split_project
 #DOGEN masd.injection.input_language=cpp
+#DOGEN masd.extraction.cpp_headers_output_directory=public_headers
 #DOGEN masd.extraction.delete_extra_files=true
 #DOGEN masd.extraction.cpp.enabled=true
 #DOGEN masd.extraction.cpp.standard=c++-17
