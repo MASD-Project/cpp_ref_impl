@@ -157,7 +157,7 @@ If you'd like to run the project tests, execute the target
 ## Regenerating Models
 
 If you'd like to run Dogen to regenerate all models, you can do so by
-using the target ```knit_all``` or its abbreviation ```ka```. This is
+using the target ```generate_all``` or its abbreviation ```ga```. This is
 useful, for example, to update the Reference Implementation to the
 latest version of Dogen, or just to see how Dogen works. However, note
 that Dogen must be on the path for the target to become available. If you
