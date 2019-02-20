@@ -20,19 +20,22 @@
 #
 # Set CMAKE_PROGRAM_PATH as required
 #
-find_program(DOGEN_KNITTER_EXECUTABLE NAMES masd.dogen.knitter)
-if (DOGEN_KNITTER_EXECUTABLE)
+find_program(DOGEN_CLI_EXECUTABLE NAMES masd.dogen.cli
+    HINTS ${CMAKE_BINARY_DIR}/stage/bin)
+
+if (DOGEN_CLI_EXECUTABLE)
     execute_process(
-        COMMAND ${DOGEN_KNITTER_EXECUTABLE} --version
-        COMMAND grep ^Dogen
-        COMMAND cut -b15-
+        COMMAND ${DOGEN_CLI_EXECUTABLE} --version
+        COMMAND grep ^MASD
+        COMMAND cut -b12-
         WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
         ERROR_VARIABLE DOGEN_ERROR
         OUTPUT_VARIABLE DOGEN_KNITTER_VERSION
         RESULT_VARIABLE DOGEN_RESULT
         OUTPUT_STRIP_TRAILING_WHITESPACE)
 
-      message(STATUS "Found Dogen Knitter: ${DOGEN_KNITTER_VERSION}...")
+    message(STATUS
+        "Found Dogen CLI ${DOGEN_KNITTER_VERSION} (${DOGEN_CLI_EXECUTABLE})")
 else()
-    message(STATUS "Dogen Knitter not found.")
+    message(STATUS "Dogen CLI not found.")
 endif()

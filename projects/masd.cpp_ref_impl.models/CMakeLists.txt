@@ -71,7 +71,7 @@ if (DOGEN_TAILOR_EXECUTABLE)
     endforeach()
 endif()
 
-if (DOGEN_KNITTER_EXECUTABLE)
+if (DOGEN_CLI_EXECUTABLE)
     set(other_options --log-level ${DOGEN_LOG_LEVEL})
 
     # uncomment the next line if you require compatibility support
@@ -84,13 +84,6 @@ if (DOGEN_KNITTER_EXECUTABLE)
     #
     set(projects_dir "${CMAKE_SOURCE_DIR}/projects")
     set(common_out_dir --output-directory ${projects_dir}/)
-
-    # Note that we create a top-level directory with the project name
-    # just to make the life easier.
-    set(split_top_dir ${projects_dir}/split_project)
-    set(split_out_dir --output-directory ${split_top_dir}/some_dir)
-    set(split_out_dir ${split_out_dir}
-        --cpp-headers-output-directory ${split_top_dir}/dir/inc/another)
 
     # handle common arguments
     set(common_arguments ${other_options})
