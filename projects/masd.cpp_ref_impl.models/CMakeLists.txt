@@ -72,7 +72,7 @@ if (DOGEN_TAILOR_EXECUTABLE)
 endif()
 
 if (DOGEN_CLI_EXECUTABLE)
-    set(other_options --log-level ${DOGEN_LOG_LEVEL})
+    set(other_options --log-enabled --log-level ${DOGEN_LOG_LEVEL})
 
     # uncomment the next line if you require compatibility support
     # set(other_options ${other_options} --compatibility-mode)
