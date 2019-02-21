@@ -5,7 +5,7 @@
     "masd.injection.model_modules": "masd.cpp_ref_impl.directory_settings",
     "masd.annotations.profile": "dogen",
     "masd.injection.input_language": "language_agnostic",
-    "masd.extraction.delete_extra_files" : "true",
+    "masd.extraction.delete_extra_files": "true",
     "masd.extraction.output_language": "cpp",
     "masd.extraction.cpp.enabled": "true",
     "masd.extraction.cpp.standard": "c++-17",
