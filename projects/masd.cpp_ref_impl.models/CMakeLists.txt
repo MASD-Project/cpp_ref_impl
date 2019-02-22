@@ -57,8 +57,6 @@ endif()
 # Conversion targets
 #
 if (DOGEN_CLI_EXECUTABLE)
-    set(other_options --log-enabled --log-level ${DOGEN_LOG_LEVEL})
-
     file(GLOB models "dia/*.dia")
     foreach(model ${models})
         set(model_name "")
@@ -67,28 +65,11 @@ if (DOGEN_CLI_EXECUTABLE)
         add_custom_target(convert_${model_name}
           COMMENT "Converting ${model_name}."
           WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-          COMMAND ${DOGEN_CLI_EXECUTABLE} convert ${other_options}
-          --source ${model} --destination ${output_dir}/${model_name}.json)
+          COMMAND ${DOGEN_CLI_EXECUTABLE} convert
+          --source ${model} --destination ${output_dir}/${model_name}.json
+          ${DOGEN_COMMON_OPTIONS})
         add_dependencies(convert_all convert_${model_name})
     endforeach()
-
-    # uncomment the next line if you require compatibility support
-    # set(other_options ${other_options} --compatibility-mode)
-
-    #
-    # Output directory is handled separately due to split project
-    # model. We first handle the case of all models, and then the
-    # split model case.
-    #
-    set(projects_dir "${CMAKE_SOURCE_DIR}/projects")
-    set(common_out_dir --output-directory ${projects_dir}/)
-
-    # handle common arguments
-    set(common_arguments ${other_options})
-
-    # uncomment to enable probing.
-    # set(common_arguments ${common_arguments} "--probe-all")
-    # set(common_arguments ${common_arguments} "--probe-stats-org-mode")
 
     # input models
     set(models masd.cpp_ref_impl.directory_settings)

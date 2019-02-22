@@ -21,12 +21,6 @@ set(models_dir "${CMAKE_CURRENT_SOURCE_DIR}")
 
 if (DOGEN_CLI_EXECUTABLE)
     foreach(model ${models})
-        if ("${model}" STREQUAL "split_project")
-            set(output_params ${split_out_dir})
-        else()
-            set(output_params ${common_out_dir})
-        endif()
-
         set(target ${model})
         set(target_ext ${target}.${frontend})
         set(target_path ${models_dir}/${target_ext})
@@ -34,7 +28,8 @@ if (DOGEN_CLI_EXECUTABLE)
             COMMENT "Generating ${target_ext} model" VERBATIM
             WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
             COMMAND ${DOGEN_CLI_EXECUTABLE} generate
-            --target ${target_path} ${common_arguments} ${output_params})
+            --target ${target_path} ${DOGEN_GENERATION_OPTIONS}
+            ${DOGEN_COMMON_OPTIONS})
         add_dependencies(generate_all_${frontend} generate_${target_ext})
 
         if (WITH_BENCHMARKS)
@@ -44,7 +39,7 @@ if (DOGEN_CLI_EXECUTABLE)
                 COMMAND ${benchmark_command} ${benchmark_repeats}
                 ${benchmark_directory}/${benchmark_prefix}${target}.csv
                 ${DOGEN_CLI_EXECUTABLE} generate --target ${target_path}
-                ${common_arguments} ${output_params})
+                ${DOGEN_GENERATION_OPTIONS} ${DOGEN_COMMON_OPTIONS})
             add_dependencies(benchmark_${frontend}
                 benchmark_generate_${target_ext})
         endif()
