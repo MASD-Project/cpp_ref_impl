@@ -118,19 +118,71 @@ set(CTEST_CUSTOM_MAXIMUM_NUMBER_OF_WARNINGS 50)
 #
 set(cmake_defines "")
 if(DEFINED ENV{CMAKE_TOOLCHAIN_FILE})
-  set(cmake_defines ${cmake_defines}
-    "-DCMAKE_TOOLCHAIN_FILE=$ENV{CMAKE_TOOLCHAIN_FILE}")
+    set(cmake_defines ${cmake_defines}
+        "-DCMAKE_TOOLCHAIN_FILE=$ENV{CMAKE_TOOLCHAIN_FILE}")
 endif()
 
 if(DEFINED ENV{VCPKG_TARGET_TRIPLET})
-  set(cmake_defines ${cmake_defines}
-    "-DVCPKG_TARGET_TRIPLET=$ENV{VCPKG_TARGET_TRIPLET}")
+    set(cmake_defines ${cmake_defines}
+        "-DVCPKG_TARGET_TRIPLET=$ENV{VCPKG_TARGET_TRIPLET}")
+endif()
+
+# only run these for Nightly.
+set(WITH_MEMCHECK false)
+
+#
+# Nightly
+#
+if(${build_group} MATCHES Nightly)
+    # setup valgrind
+    find_program(CTEST_MEMORYCHECK_COMMAND NAMES valgrind)
+    if(NOT CTEST_MEMORYCHECK_COMMAND)
+        message("valgrind not found, disabling coverage.")
+        set(WITH_MEMCHECK false)
+    else()
+        message("Found valgrind (${CTEST_MEMORYCHECK_COMMAND})...")
+        set(WITH_MEMCHECK true)
+
+        set(valgrind_options "--trace-children=yes")
+        set(valgrind_options "${valgrind_options} --quiet")
+        set(valgrind_options "${valgrind_options} --tool=memcheck")
+        set(valgrind_options "${valgrind_options} --leak-check=full")
+        set(valgrind_options "${valgrind_options} --show-reachable=yes")
+        set(valgrind_options "${valgrind_options} --num-callers=50")
+        set(valgrind_options "${valgrind_options} --demangle=yes")
+        set(valgrind_options "${valgrind_options} --gen-suppressions=all")
+        set(CTEST_MEMORYCHECK_COMMAND_OPTIONS ${valgrind_options})
+        set(CTEST_MEMORYCHECK_SUPPRESSIONS_FILE
+            "${CTEST_SOURCE_DIRECTORY}/build/valgrind/${product}.supp")
+    endif()
 endif()
 
 #
 # Start the build
 #
+
+# ensure we start from a known state
+ctest_empty_binary_directory(${CTEST_BINARY_DIRECTORY})
+
 ctest_start(${build_group})
+
+#
+# Do not perform a git update when running from CI. This is because
+# AppVeyor/Travis are already managing the git checkout.
+#
+if (NOT DEFINED ENV{BUILD_PROVIDER})
+    find_program(CTEST_GIT_COMMAND NAMES git)
+    if(NOT CTEST_GIT_COMMAND)
+        message(FATAL_ERROR "git not found.")
+    endif()
+    set(CTEST_UPDATE_COMMAND "${CTEST_GIT_COMMAND}")
+    set(CTEST_GIT_UPDATE_CUSTOM "${CTEST_GIT_COMMAND}" pull origin master)
+    ctest_update(BUILD ${CTEST_SOURCE_DIRECTORY} RETURN_VALUE git_result)
+    if (git_result LESS 0)
+        message(FATAL_ERROR "Failed to update source code from git.")
+    endif()
+endif()
+
 ctest_configure(BUILD ${CTEST_BINARY_DIRECTORY} OPTIONS "${cmake_defines}")
 ctest_build()
 
@@ -141,4 +193,9 @@ ctest_build()
 # weather the build and packaging steps have worked or failed.
 #
 ctest_test(RETURN_VALUE retval)
+
+if(WITH_MEMCHECK AND CTEST_MEMORYCHECK_COMMAND)
+    ctest_memcheck(PARALLEL_LEVEL ${number_of_jobs})
+endif()
+
 ctest_submit()
