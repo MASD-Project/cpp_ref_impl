@@ -310,6 +310,10 @@ if (DOGEN_CLI_EXECUTABLE)
     add_custom_target(ca)
     add_dependencies(ca convert_all)
 
+    add_custom_target(weave_all)
+    add_custom_target(wa)
+    add_dependencies(wa weave_all)
+
     #
     # Options to use for all Dogen invocations
     #

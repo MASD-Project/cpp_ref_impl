@@ -17,6 +17,14 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 # MA 02110-1301, USA.
 #
-set(model_name "seam")
-set(git_dir "${CMAKE_CURRENT_SOURCE_DIR}/src")
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/tests)
+
+if (DOGEN_CLI_EXECUTABLE)
+    add_custom_target(weave_seam
+        COMMENT "Weaving seam" VERBATIM
+        WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+        COMMAND ${DOGEN_CLI_EXECUTABLE} weave
+        --target ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.seam
+        ${DOGEN_COMMON_OPTIONS})
+    add_dependencies(weave_all weave_seam)
+endif()
