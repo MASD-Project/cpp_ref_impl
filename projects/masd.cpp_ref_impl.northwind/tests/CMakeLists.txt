@@ -40,7 +40,7 @@ target_link_libraries(${tests_name}
     ${PostgreSQL_LIBRARIES}
     ${OPENSSL_LIBRARIES}
     resolv
-    sqlite3
+    ${SQLite3_LIBRARY}
     ${CMAKE_THREAD_LIBS_INIT})
 
 set(command $<TARGET_FILE:${tests_name}> ${boost_test_parameters})
