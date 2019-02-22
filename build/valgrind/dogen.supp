@@ -1,0 +1,257 @@
+# -*- mode: cmake; tab-width: 4; indent-tabs-mode: nil -*-
+#
+# Copyright (C) 2012-2015 Marco Craveiro <marco.craveiro@gmail.com>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+# MA 02110-1301, USA.
+#
+
+{
+    getpwuid_r
+    Memcheck:Leak
+    fun:malloc
+    ...
+    fun:getpwuid_r@@GLIBC_2.1.2
+    ...
+}
+
+{
+   get_once_per_thread_epoch
+   Memcheck:Leak
+   fun:malloc
+   fun:_ZN5boost6detail25get_once_per_thread_epochEv
+   ...
+}
+
+{
+   libxml2_xzread
+   Memcheck:Leak
+   ...
+   fun:lzma_auto_decoder
+   ...
+   fun:__libxml2_xzread
+   ...
+   fun:xmlParserInputBufferGrow
+   fun:xmlNewTextReader
+   fun:xmlNewTextReaderFilename
+   ...
+}
+
+{
+   clang 32-bit 7 R_gzopen suppression
+   Memcheck:Cond
+   fun:inflateReset2
+   fun:inflateInit2_
+   fun:*
+}
+
+
+{
+   make_external_thread_data
+   Memcheck:Leak
+   ...
+   fun:_ZN5boost12_GLOBAL__N_125make_external_thread_dataEv
+   ...
+}
+
+{
+   postgres_ssl
+   Memcheck:Leak
+   ...
+   fun:PQconnectPoll
+   ...
+}
+
+{
+   Boost Log 1
+   Memcheck:Leak
+   ...
+   fun:_ZN5boost3log11v2_mt_posix7sources3aux18get_severity_levelEv
+   fun:_ZN5boost3log11v2_mt_posix7sources3aux14severity_levelIN5dogen7utility3log14severity_levelEE9set_valueES8_
+   fun:_ZN5boost3log11v2_mt_posix7sources21basic_severity_loggerINS2_20basic_channel_loggerINS2_12basic_loggerIcNS2_23severity_channel_loggerIN5dogen7utility3log14severity_levelESsEENS2_19single_thread_modelEEESsEESA_E20open_record_unlockedINS_9parameter3aux15tagged_argumentINS1_8keywords3tag8severityEKSA_EEEENS1_6recordERKT_
+   ...
+}
+
+{
+   Boost Log 2
+   Memcheck:Leak
+   ...
+   fun:_ZN5boost3log11v2_mt_posix7sources3aux18get_severity_levelEv
+   fun:_ZN5boost3log11v2_mt_posix7sources21basic_severity_loggerINS2_20basic_channel_loggerINS2_12basic_loggerIcNS2_23severity_channel_loggerIN5dogen7utility3log14severity_levelESsEENS2_19single_thread_modelEEESsEESA_E20open_record_unlockedINS_9parameter3aux15tagged_argumentINS1_8keywords3tag8severityEKSA_EEEENS1_6recordERKT_
+   ...
+}
+
+{
+   Boost Log 3
+   Memcheck:Leak
+   ...
+   fun:_ZN5boost3log11v2_mt_posix7sources21basic_severity_loggerINS2_20basic_channel_loggerINS2_12basic_loggerIcNS2_23severity_channel_loggerIN5dogen7utility3log14severity_levelESsEENS2_19single_thread_modelEEESsEESA_E20open_record_unlockedINS_9parameter3aux15tagged_argumentINS1_8keywords3tag8severityEKSA_EEEENS1_6recordERKT_
+   fun:_ZN5boost3log11v2_mt_posix7sources22basic_composite_loggerIcNS2_23severity_channel_loggerIN5dogen7utility3log14severity_levelESsEENS2_19single_thread_modelENS2_8featuresIINS2_8severityIS8_EENS2_7channelISsEEEEEE11open_recordINS_9parameter3aux15tagged_argumentINS1_8keywords3tag8severityEKS8_EEEENS1_6recordERKT_
+   ...
+}
+
+{
+   Boost thread
+   Memcheck:Leak
+   fun:_Znwj
+   fun:_ZN5boost6detail12shared_countC1INS0_16thread_data_baseEEEPT_
+   obj:/usr/local/pfh/lib/libboost_thread.so.1.55.0
+}
+
+{
+   odb 1
+   Memcheck:Leak
+   ...
+   fun:PQconnectPoll
+   ...
+   fun:PQconnectdb
+   fun:_ZN3odb5pgsql10connectionC1ERNS0_8databaseE
+   fun:_ZN3odb5pgsql23connection_pool_factory17pooled_connectionC1ERNS0_8databaseE
+   fun:_ZN3odb5pgsql23connection_pool_factory6createEv
+   fun:_ZN3odb5pgsql23connection_pool_factory7connectEv
+   fun:_ZN3odb5pgsql8database11connection_Ev
+   fun:_ZN3odb5pgsql8database10connectionEv
+   ...
+}
+
+{
+   odb 2
+   Memcheck:Leak
+   ...
+   fun:PQgetResult
+   ...
+}
+
+{
+   odb 3
+   Memcheck:Cond
+   ...
+   fun:PQconnectPoll
+   ...
+   fun:PQconnectdb
+   fun:_ZN3odb5pgsql10connectionC1ERNS0_8databaseE
+   fun:_ZN3odb5pgsql23connection_pool_factory17pooled_connectionC1ERNS0_8databaseE
+   fun:_ZN3odb5pgsql23connection_pool_factory6createEv
+   fun:_ZN3odb5pgsql23connection_pool_factory7connectEv
+   fun:_ZN3odb5pgsql8database11connection_Ev
+   fun:_ZN3odb5pgsql8database10connectionEv
+   ...
+}
+
+{
+   odb 4
+   Memcheck:Value8
+   ...
+   fun:PQconnectPoll
+   ...
+   fun:PQconnectdb
+   fun:_ZN3odb5pgsql10connectionC1ERNS0_8databaseE
+   fun:_ZN3odb5pgsql23connection_pool_factory17pooled_connectionC1ERNS0_8databaseE
+   fun:_ZN3odb5pgsql23connection_pool_factory6createEv
+   fun:_ZN3odb5pgsql23connection_pool_factory7connectEv
+   fun:_ZN3odb5pgsql8database11connection_Ev
+   fun:_ZN3odb5pgsql8database10connectionEv
+   ...
+}
+
+{
+   odb 5
+   Memcheck:Value8
+   ...
+   fun:PQgetResult
+   ...
+   fun:_ZN3odb5pgsql10connection7executeEPKcm
+   fun:_ZN3odb8database7executeEPKcm
+   fun:_ZN3odb8database7executeEPKc
+   fun:_ZN3odb6access18object_traits_implIN5dogen8database13primary_key_2ELNS_11database_idE2EE13create_schemaERNS_8databaseEtb
+   fun:_ZN3odb14schema_catalog13create_schemaERNS_8databaseERKSs
+   fun:_ZN12_GLOBAL__N_117create_db_fixtureC1Ev
+   ...
+}
+
+{
+   odb 6
+   Memcheck:Cond
+   ...
+   fun:PQgetResult
+   ...
+   fun:_ZN3odb5pgsql10connection7executeEPKcm
+   fun:_ZN3odb8database7executeEPKcm
+   fun:_ZN3odb8database7executeEPKc
+   fun:_ZN3odb6access18object_traits_implIN5dogen8database13primary_key_2ELNS_11database_idE2EE13create_schemaERNS_8databaseEtb
+   fun:_ZN3odb14schema_catalog13create_schemaERNS_8databaseERKSs
+   fun:_ZN12_GLOBAL__N_117create_db_fixtureC1Ev
+   ...
+}
+
+{
+   odb 7
+   Memcheck:Cond
+   ...
+   fun:PQgetResult
+   ...
+   fun:_ZN3odb5pgsql10connection7executeEPKcm
+   fun:_ZN3odb8database7executeEPKcm
+   fun:_ZN3odb8database7executeEPKc
+   fun:_ZN3odb6access18object_traits_implIN5dogen8database11primary_keyELNS_11database_idE2EE13create_schemaERNS_8databaseEtb
+   fun:_ZN3odb14schema_catalog13create_schemaERNS_8databaseERKSs
+   fun:_ZN12_GLOBAL__N_117create_db_fixtureC1Ev
+   ...
+}
+
+{
+   odb 8
+   Memcheck:Value8
+   ...
+   fun:PQgetResult
+   ...
+   fun:_ZN3odb5pgsql16select_statement7executeEv
+   fun:_ZN3odb6access18object_traits_implIN5dogen8database7no_keysELNS_11database_idE2EE5queryERNS_8databaseERKNS_5pgsql10query_baseE
+   fun:_ZN3odb8database6query_IN5dogen8database7no_keysELNS_11database_idE5ELNS_10class_kindE0EE4callINS_5queryIS4_NS_5pgsql10query_baseEEEEENS_6resultIS4_EERS0_RKT_
+   fun:_ZN3odb8database5queryIN5dogen8database7no_keysEEENS_6resultIT_EERKNS_5queryIS6_NS_14query_selectorIS6_LNS_11database_idE5EE9base_typeEEEb
+   fun:_ZN3odb8database5queryIN5dogen8database7no_keysEEENS_6resultIT_EEb
+   fun:_ZN8database61inserting_no_keys_instances_results_in_expected_rows_in_table11test_methodEv
+   fun:_ZN8databaseL69inserting_no_keys_instances_results_in_expected_rows_in_table_invokerEv
+   ...
+}
+
+{
+   odb 9
+   Memcheck:Value8
+   ...
+   fun:PQgetResult
+   ...
+   fun:_ZN3odb5pgsql10connection7executeEPKcm
+   fun:_ZN3odb8database7executeEPKcm
+   fun:_ZN3odb8database7executeEPKc
+   fun:_ZN3odb6access18object_traits_implIN5dogen8database11primary_keyELNS_11database_idE2EE13create_schemaERNS_8databaseEtb
+   fun:_ZN3odb14schema_catalog13create_schemaERNS_8databaseERKSs
+   fun:_ZN12_GLOBAL__N_117create_db_fixtureC1Ev
+   ...
+}
+
+{
+   odb 10
+   Memcheck:Cond
+   fun:strcmp
+   fun:PQparameterStatus
+   ...
+   fun:_ZN3odb5pgsql10connection4initEv
+   fun:_ZN3odb5pgsql10connectionC1ERNS0_8databaseE
+   fun:_ZN3odb5pgsql23connection_pool_factory17pooled_connectionC1ERNS0_8databaseE
+   fun:_ZN3odb5pgsql23connection_pool_factory6createEv
+   fun:_ZN3odb5pgsql23connection_pool_factory7connectEv
+   ...
+}
