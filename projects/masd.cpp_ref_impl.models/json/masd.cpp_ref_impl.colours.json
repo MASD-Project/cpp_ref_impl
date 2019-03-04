@@ -2,6 +2,9 @@
   "documentation": "Exercises all stereotypes that have an impact in colour,\nso we can see how the entire palette looks like.\n\nThis model does not need to be code generated, though it\nshould remain a valid Dogen model. It must be updated with\nany changes to the colour scheme. To make a change, first\nupdate the colour.py script then run it in this model. If\nit looks good, then run it against all other dogen models.\n\nWe should try to keep all elements in one screen as much\nas possible, so we can evaluate how they work together.\n",
   "tagged_values": {
     "masd.injection.dia.comment": "true"
+    "masd.injection.reference": "cpp.builtins",
+    "masd.injection.reference": "cpp.std",
+    "masd.injection.reference": "cpp.boost",
   },
   "elements": [
     {
