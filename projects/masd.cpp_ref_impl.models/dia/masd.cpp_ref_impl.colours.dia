@@ -106,7 +106,8 @@ it looks good, then run it against all other dogen models.
 We should try to keep all elements in one screen as much
 as possible, so we can evaluate how they work together.
 
-#DOGEN masd.injection.dia.comment=true#</dia:string>
+#DOGEN masd.injection.dia.comment=true
+#DOGEN masd.injection.reference=cpp.builtins#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="monospace" style="0" name="Courier"/>
