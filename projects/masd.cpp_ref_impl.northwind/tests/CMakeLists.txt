@@ -28,8 +28,16 @@ file(GLOB_RECURSE files RELATIVE
 add_executable(${tests_name} ${files})
 set_target_properties(${tests_name} PROPERTIES OUTPUT_NAME ${binary_name})
 
+set(lib_target "")
+if(WIN32 OR APPLE)
+    set(lib_target "masd_cpp_ref_impl_${name}")
+else()
+    set(lib_target
+        -Wl,--whole-archive masd_cpp_ref_impl_${name} -Wl,--no-whole-archive)
+endif()
+
 target_link_libraries(${tests_name}
-    -Wl,--whole-archive masd_cpp_ref_impl_${name}  -Wl,--no-whole-archive
+    ${lib_target}
     utility
     ${LIBXML2_LIBRARIES}
     ${Boost_LIBRARIES}
