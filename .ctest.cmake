@@ -127,6 +127,10 @@ if(DEFINED ENV{VCPKG_TARGET_TRIPLET})
         "-DVCPKG_TARGET_TRIPLET=$ENV{VCPKG_TARGET_TRIPLET}")
 endif()
 
+if(DEFINED ENV{POSTGRES_SERVER_SETUP})
+    set(cmake_defines ${cmake_defines} "-DWITH_POSTGRES=ON")
+endif()
+
 # only run these for Nightly.
 set(WITH_MEMCHECK false)
 
