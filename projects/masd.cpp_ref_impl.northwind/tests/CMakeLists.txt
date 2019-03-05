@@ -27,11 +27,9 @@ file(GLOB_RECURSE files RELATIVE
 
 if (WITH_POSTGRES)
     message(STATUS "Including postgres tests.")
-    message(STATUS "Files: ${files}")
 else()
     message(STATUS "Excluding postgres tests.")
     list(FILTER files EXCLUDE REGEX "odb_pgsql_tests.cpp")
-    message(STATUS "Files: ${files}")
 endif()
 
 add_executable(${tests_name} ${files})
