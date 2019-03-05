@@ -73,17 +73,19 @@ install:
 
 before_script:
   - if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then
-        psql -f ${SCRIPTS_DIR}/setup_postgres.sql -U postgres;
         export POSTGRES_SERVER_SETUP=1;
+        psql -f ${SCRIPTS_DIR}/setup_postgres.sql -U postgres;
     fi
 
 script:
   - JOBS=2
+  - echo ${POSTGRES_SERVER_SETUP}
   - export BUILD_PROVIDER=travis
   - export CMAKE_TOOLCHAIN_FILE="/tmp/vcpkg-export/scripts/buildsystems/vcpkg.cmake";
   - if [[ "${TRAVIS_OS_NAME}" == "osx" ]]; then
         export PATH="/usr/local/opt/ccache/libexec:$PATH";
     fi
+  - echo ${PATH}
   - ctest --extra-verbose --script ".ctest.cmake,configuration_type=${configuration},generator=${generator},compiler=${compiler},number_of_jobs=${JOBS},build_group=${build_group}";
 
 after_success:
