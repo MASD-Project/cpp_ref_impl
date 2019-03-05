@@ -93,7 +93,7 @@ void update(odb::pgsql::database& db, const std::vector<T>& v) {
 
 }
 
-BOOST_AUTO_TEST_SUITE(odb_tests)
+BOOST_AUTO_TEST_SUITE(odb_pgsql_tests)
 
 BOOST_AUTO_TEST_CASE(crud_test_customers_produces_expected_results) {
     SETUP_TEST_LOG_SOURCE("crud_test_customers_produces_expected_results");
