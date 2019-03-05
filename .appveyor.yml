@@ -25,15 +25,22 @@ configuration:
 platform:
   - x64
 
-clone_depth: 1
+services:
+  - postgresql101
+
+  clone_depth: 1
 
 install:
   - ps: $project_dir="$pwd";
   - ps: .\build\scripts\appveyor.install.windows.ps1
-  - ps: $env:Path += ";C:\third_party\installs\Ninja"
+  - ps: $env:Path += ";C:\third_party\installs\Ninja;C:\Program Files\PostgreSQL\10.1\bin\;"
   - ps: $env:CMAKE_TOOLCHAIN_FILE = "c:\third_party\installs\vcpkg-export\scripts\buildsystems\vcpkg.cmake"
   - ps: $env:VCPKG_TARGET_TRIPLET = "x64-windows-static"
   - ps: $env:PreferredToolArchitecture = "x64"
+  - SET PGUSER=postgres
+  - SET PGPASSWORD=Password12!
+  - SET POSTGRES_SERVER_SETUP=1
+  - psql -f build\scripts\setup_postgres.sql -U postgres;
 
 before_build:
   - if DEFINED msvc_setup_path call "%msvc_setup_path%" %msvc_setup_arg%
