@@ -21,9 +21,10 @@
 #include <algorithm>
 #include <boost/test/unit_test.hpp>
 #include <odb/result.hxx>
-// #include <odb/database.hxx>
+#include <odb/database.hxx>
 #include <odb/transaction.hxx>
 #include <odb/pgsql/database.hxx>
+#include <odb/schema-catalog.hxx>
 #include "masd.cpp_ref_impl.utility/test/asserter.hpp"
 #include "masd.cpp_ref_impl.utility/io/vector_io.hpp"
 #include "masd.cpp_ref_impl.utility/test/logging.hpp"
@@ -33,12 +34,24 @@
 #include "masd.cpp_ref_impl.northwind/odb/customers-odb-pgsql.hxx"
 #include "masd.cpp_ref_impl.northwind/odb/customers-odb.hxx"
 
-
 namespace  {
 
 const std::string test_module("northwind_tests");
-const std::string test_suite("odb_tests");
+const std::string test_suite("odb_pgsql_tests");
 
+struct create_db_fixture {
+    create_db_fixture() {
+        using namespace odb;
+        using odb::pgsql::database;
+        auto db(std::make_unique<database>(
+                "build", "build", "musseque", "localhost"));
+
+        transaction t(db->begin());
+        schema_catalog::create_schema(*db);
+        t.commit();
+    }
+};
+BOOST_GLOBAL_FIXTURE(create_db_fixture);
 
 odb::pgsql::database* setup_postgres_db() {
     return new odb::pgsql::database("build", "build", "musseque", "localhost");

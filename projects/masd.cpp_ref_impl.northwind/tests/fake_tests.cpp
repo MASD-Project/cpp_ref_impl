@@ -18,29 +18,21 @@
  * MA 02110-1301, USA.
  *
  */
-#define BOOST_TEST_MODULE northwind_tests
-#include <memory>
-#include <iostream>
 #include <boost/test/unit_test.hpp>
-#include <boost/test/unit_test_monitor.hpp>
-#include <boost/exception/diagnostic_information.hpp>
+#include "masd.cpp_ref_impl.utility/test/logging.hpp"
 
-namespace  {
+namespace {
 
-const std::string error_msg("Error during test");
-
-inline void translate(const boost::exception& e) {
-    std::cerr << std::endl << boost::diagnostic_information(e);
-    throw std::runtime_error(error_msg);
-}
-
-struct exception_fixture {
-    exception_fixture() {
-        ::boost::unit_test::unit_test_monitor.register_exception_translator<
-            boost::exception>(&translate);
-    }
-};
+const std::string empty;
+const std::string test_module("northwind_tests");
+const std::string test_suite("fake_tests");
 
 }
 
-BOOST_GLOBAL_FIXTURE(exception_fixture);
+BOOST_AUTO_TEST_SUITE(fake_tests)
+
+BOOST_AUTO_TEST_CASE(test) {
+    SETUP_TEST_LOG("test");
+}
+
+BOOST_AUTO_TEST_SUITE_END()

@@ -47,11 +47,12 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/build/cmake)
 #
 # options
 #
-option(WITH_COVERALLS "Generate coveralls coverage." off)
-option(WITH_PROFILING "Build the project with profiling support" off)
-option(WITH_MINIMAL_PACKAGING "Package just the main application" off)
-option(WITH_BENCHMARKS "Adds targets for running benchmarks" on)
-option(WITH_JSON_VALIDATION "Adds JSON validation targets. Requires jq." on)
+option(WITH_COVERALLS "Generate coveralls coverage." OFF)
+option(WITH_PROFILING "Build the project with profiling support" OFF)
+option(WITH_MINIMAL_PACKAGING "Package just the main application" OFF)
+option(WITH_BENCHMARKS "Adds targets for running benchmarks" ON)
+option(WITH_JSON_VALIDATION "Adds JSON validation targets. Requires jq." ON)
+option(WITH_POSTGRES "Adds tests that require a postgres server" OFF)
 
 #
 # check for dependencies

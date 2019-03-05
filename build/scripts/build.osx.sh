@@ -101,6 +101,10 @@ if [ "${COVERALLS}" = "1" ]; then
     cmake_defines="${cmake_defines} -DWITH_COVERALLS=ON"
 fi
 
+if [[ ! -z "${POSTGRES_SERVER_SETUP}" ]]; then
+    cmake_defines="${cmake_defines} -DWITH_POSTGRES=ON'"
+fi
+
 #
 # Build
 #

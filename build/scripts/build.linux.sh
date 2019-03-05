@@ -114,6 +114,10 @@ if [[ ! -z "${CMAKE_PROGRAM_PATH}" ]]; then
     cmake_defines="${cmake_defines} -DCMAKE_PROGRAM_PATH='${CMAKE_PROGRAM_PATH}'"
 fi
 
+if [[ ! -z "${POSTGRES_SERVER_SETUP}" ]]; then
+    cmake_defines="${cmake_defines} -DWITH_POSTGRES=ON'"
+fi
+
 #
 # Use minimal packaging in debug to preserve disk space.
 #

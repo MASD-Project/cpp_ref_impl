@@ -25,6 +25,15 @@ file(GLOB_RECURSE files RELATIVE
     "${CMAKE_CURRENT_SOURCE_DIR}/"
     "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
 
+if (WITH_POSTGRES)
+    message(STATUS "Including postgres tests.")
+    message(STATUS "Files: ${files}")
+else()
+    message(STATUS "Excluding postgres tests.")
+    list(FILTER files EXCLUDE REGEX "odb_pgsql_tests.cpp")
+    message(STATUS "Files: ${files}")
+endif()
+
 add_executable(${tests_name} ${files})
 set_target_properties(${tests_name} PROPERTIES OUTPUT_NAME ${binary_name})
 
