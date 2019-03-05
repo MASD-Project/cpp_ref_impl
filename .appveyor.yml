@@ -28,7 +28,7 @@ platform:
 services:
   - postgresql101
 
-  clone_depth: 1
+clone_depth: 1
 
 install:
   - ps: $project_dir="$pwd";
@@ -40,7 +40,7 @@ install:
   - SET PGUSER=postgres
   - SET PGPASSWORD=Password12!
   - SET POSTGRES_SERVER_SETUP=1
-  - psql -f build\scripts\setup_postgres.sql -U postgres;
+  - psql -f build\scripts\setup_postgres.sql -U postgres
 
 before_build:
   - if DEFINED msvc_setup_path call "%msvc_setup_path%" %msvc_setup_arg%
