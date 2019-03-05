@@ -40,6 +40,8 @@ install:
   - SET PGUSER=postgres
   - SET PGPASSWORD=Password12!
   - SET POSTGRES_SERVER_SETUP=1
+  - dir C:\Program Files\PostgreSQL
+  - dir C:\Program Files\PostgreSQL\10.1
   - psql -f build\scripts\setup_postgres.sql -U postgres
 
 before_build:
