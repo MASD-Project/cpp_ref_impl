@@ -43,6 +43,11 @@ else()
         -Wl,--whole-archive masd_cpp_ref_impl_${name} -Wl,--no-whole-archive)
 endif()
 
+set(use_resolve_lib ON)
+if (WIN32)
+    set(use_resolve_lib OFF)
+endif ()
+
 target_link_libraries(${tests_name}
     ${lib_target}
     utility
@@ -54,7 +59,7 @@ target_link_libraries(${tests_name}
     ${ODB_LIBODB_LIBRARIES}
     ${PostgreSQL_LIBRARIES}
     ${OPENSSL_LIBRARIES}
-    resolv
+    $<$<BOOL:${use_resolve_lib}>:resolv>
     ${SQLite3_LIBRARY}
     ${CMAKE_THREAD_LIBS_INIT})
 
