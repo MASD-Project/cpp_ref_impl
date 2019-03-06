@@ -41,7 +41,6 @@ services:
 before_build:
   - SET PGUSER=postgres
   - SET PGPASSWORD=Password12!
-  - SET POSTGRES_SERVER_SETUP=1
   - psql -f %APPVEYOR_BUILD_FOLDER%\build\scripts\setup_postgres.sql -U postgres
   - if DEFINED msvc_setup_path call "%msvc_setup_path%" %msvc_setup_arg%
   - cd %APPVEYOR_BUILD_FOLDER%
