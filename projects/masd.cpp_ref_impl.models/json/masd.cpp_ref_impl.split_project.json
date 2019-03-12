@@ -13,7 +13,8 @@
     "masd.extraction.cpp.msbuild.enabled": "false",
     "masd.extraction.cpp.visual_studio.project.enabled": "false",
     "masd.extraction.cpp.visual_studio.solution.enabled": "false",
-    "masd.extraction.csharp.enabled": "false"
+    "masd.extraction.csharp.enabled": "false",
+    "masd.annotations.profile": "dogen"
   },
   "elements": [
     {

@@ -2056,22 +2056,22 @@
     </dia:object>
     <dia:object type="UML - Note" version="0" id="O13">
       <dia:attribute name="obj_pos">
-        <dia:point val="10,-8"/>
+        <dia:point val="9,-14"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="9.95,-8.05;35.975,1.75"/>
+        <dia:rectangle val="8.95,-14.05;34.975,-1.85"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="10,-8"/>
+        <dia:point val="9,-14"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="25.925000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="9.7000000000000011"/>
+        <dia:real val="12.100000000000001"/>
       </dia:attribute>
       <dia:attribute name="line_width">
         <dia:real val="0.10000000000000001"/>
@@ -2107,7 +2107,7 @@
             <dia:real val="0.80000000000000004"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="10.35,-6.755"/>
+            <dia:point val="9.35,-12.755"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>

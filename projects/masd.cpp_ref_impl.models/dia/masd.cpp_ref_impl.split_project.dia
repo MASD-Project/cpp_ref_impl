@@ -303,7 +303,8 @@
 #DOGEN masd.extraction.cpp.msbuild.enabled=false
 #DOGEN masd.extraction.cpp.visual_studio.project.enabled=false
 #DOGEN masd.extraction.cpp.visual_studio.solution.enabled=false
-#DOGEN masd.extraction.csharp.enabled=false#</dia:string>
+#DOGEN masd.extraction.csharp.enabled=false
+#DOGEN masd.annotations.profile=dogen#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="monospace" style="0" name="Courier"/>
