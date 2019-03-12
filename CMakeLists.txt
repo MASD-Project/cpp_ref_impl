@@ -318,8 +318,11 @@ if (DOGEN_CLI_EXECUTABLE)
     #
     # Options to use for all Dogen invocations
     #
-    set(DOGEN_LOG_LEVEL "debug")
-    set(DOGEN_LOG_OPTIONS --log-enabled --log-level ${DOGEN_LOG_LEVEL})
+
+    # uncomment to enable logging.
+    set(DOGEN_LOGGING_OPTIONS "")
+    # set(DOGEN_LOG_LEVEL "trace")
+    # set(DOGEN_LOGGING_OPTIONS --log-enabled --log-level ${DOGEN_LOG_LEVEL})
 
     set(DOGEN_TRACING_OPTIONS "")
     # uncomment to enable tracing.
@@ -328,7 +331,21 @@ if (DOGEN_CLI_EXECUTABLE)
     # set(DOGEN_TRACING_OPTIONS ${DOGEN_TRACING_OPTIONS} --tracing-format org-mode)
     # set(DOGEN_TRACING_OPTIONS ${DOGEN_TRACING_OPTIONS} --tracing-guids-enabled)
 
-    set(DOGEN_COMMON_OPTIONS ${DOGEN_LOG_OPTIONS} ${DOGEN_TRACING_OPTIONS})
+    set(DOGEN_DIFFING_OPTIONS "")
+    # uncomment to enable diffing and reporting
+    # set(DOGEN_DIFFING_OPTIONS ${DOGEN_DIFFING_OPTIONS} --diffing-enabled)
+    # set(DOGEN_DIFFING_OPTIONS ${DOGEN_DIFFING_OPTIONS}
+    #    --diffing-destination console)
+    # set(DOGEN_DIFFING_OPTIONS ${DOGEN_DIFFING_OPTIONS} --dry-run-mode-enabled)
+
+    set(DOGEN_REPORTING_OPTIONS "")
+    set(DOGEN_REPORTING_OPTIONS ${DOGEN_REPORTING_OPTIONS} --reporting-enabled)
+    set(DOGEN_REPORTING_OPTIONS ${DOGEN_REPORTING_OPTIONS}
+        --reporting-style org-mode )
+
+    set(DOGEN_COMMON_OPTIONS ${DOGEN_LOGGING_OPTIONS} ${DOGEN_TRACING_OPTIONS}
+        ${DOGEN_DIFFING_OPTIONS} ${DOGEN_REPORTING_OPTIONS})
+
     # uncomment the next line if you require compatibility support
     # set(DOGEN_COMMON_OPTIONS ${DOGEN_COMMON_OPTIONS} --compatibility-mode)
 
