@@ -18,6 +18,12 @@
 # MA 02110-1301, USA.
 #
 
+# parameters for boost tests
+set(boost_test_parameters "--log_level=error")
+
+# tests to ignore
+set(boost_tests_ignore "")
+
 #
 # macro to create CTest tests for each boost unit tests
 #
@@ -33,14 +39,17 @@ macro(add_boost_tests test_module)
             string(REPLACE "(" "" test_name ${test_name})
             string(REPLACE ")" "" test_name ${test_name})
 
-            string(REPLACE "_tests.cpp" "_tests" test_suite ${cpp_file})
-            # string(REPLACE "tests/" "" test_suite ${test_suite})
+            if (${test_name} IN_LIST boost_tests_ignore)
+                message(STATUS "Ignoring test: ${test_name}")
+            else()
+                string(REPLACE "_tests.cpp" "_tests" test_suite ${cpp_file})
 
-            set(tests_cmd
-                ${stage_bin_dir}/masd.cpp_ref_impl.${test_module}.tests)
-            add_test(${test_module}/${test_suite}/${test_name}
-                ${CMAKE_COMMAND} -E chdir ${stage_bin_dir}
-                ${tests_cmd} --run_test=${test_suite}/${test_name})
+                set(tests_cmd ${stage_bin_dir}/${test_module})
+                add_test(${test_module}/${test_suite}/${test_name}
+                    ${CMAKE_COMMAND} -E chdir ${stage_bin_dir}
+                    ${tests_cmd} --run_test=${test_suite}/${test_name}
+                    ${boost_test_parameters})
+            endif()
         endforeach()
     endforeach()
 endmacro()
@@ -222,9 +231,6 @@ elseif(CMAKE_CXX_COMPILER_ID MATCHES "MSVC" OR
 
 endif()
 
-# parameters for boost tests
-set(boost_test_parameters "--log_level=error")
-
 # user includes
 include_directories(
     # Split project
@@ -246,6 +252,10 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.std_model/include
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.test_model_sanitizer/include
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.two_layers_with_objects/include
+    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.delete_extra/include
+    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.ignore_extra/include
+    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.force_write/include
+    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.out_of_sync/include
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.utility/include
     )
 
@@ -280,4 +290,8 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.split_project/src
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.std_model)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.test_model_sanitizer/tests)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.two_layers_with_objects)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.delete_extra)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.ignore_extra)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.force_write)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.out_of_sync)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.utility)
