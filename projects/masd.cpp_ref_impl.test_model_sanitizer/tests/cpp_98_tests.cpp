@@ -29,7 +29,7 @@
 
 namespace {
 
-const std::string test_module("test_model_sanitizer");
+const std::string test_module("masd.cpp_ref_impl.test_model_sanitizer.tests");
 const std::string test_suite("cpp_98_tests");
 
 }

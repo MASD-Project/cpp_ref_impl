@@ -17,9 +17,16 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 # MA 02110-1301, USA.
 #
-set(name "northwind")
-set(tests_name "${name}.tests")
-set(binary_name "masd.cpp_ref_impl.${tests_name}")
+set(name "masd.cpp_ref_impl.northwind")
+
+# FIXME: hack to deal with the fact that dogen is generatign legacy
+# cmake files.
+# set(lib_target_name ${name}.lib)
+set(lib_target_name masd_cpp_ref_impl_northwind)
+
+set(tests_binary_name ${name}.tests)
+set(tests_target_name ${name}.tests)
+
 set(files "")
 file(GLOB_RECURSE files RELATIVE
     "${CMAKE_CURRENT_SOURCE_DIR}/"
@@ -32,8 +39,9 @@ else()
     list(FILTER files EXCLUDE REGEX "odb_pgsql_tests.cpp")
 endif()
 
-add_executable(${tests_name} ${files})
-set_target_properties(${tests_name} PROPERTIES OUTPUT_NAME ${binary_name})
+add_executable(${tests_target_name} ${files})
+set_target_properties(${tests_target_name}
+    PROPERTIES OUTPUT_NAME ${tests_target_name})
 
 set(lib_target "")
 if(WIN32 OR APPLE)
@@ -48,8 +56,8 @@ if (WIN32)
     set(use_resolve_lib OFF)
 endif ()
 
-target_link_libraries(${tests_name}
-    ${lib_target}
+target_link_libraries(${tests_target_name}
+    ${lib_target_name}
     utility
     ${LIBXML2_LIBRARIES}
     ${Boost_LIBRARIES}
@@ -63,27 +71,27 @@ target_link_libraries(${tests_name}
     ${SQLite3_LIBRARY}
     ${CMAKE_THREAD_LIBS_INIT})
 
-set(command $<TARGET_FILE:${tests_name}> ${boost_test_parameters})
+set(command $<TARGET_FILE:${tests_target_name}> ${boost_test_parameters})
 
-add_custom_target(run_${tests_name}
-    COMMENT "Running ${tests_name}" VERBATIM
+add_custom_target(run_${tests_target_name}
+    COMMENT "Running ${tests_target_name}" VERBATIM
     COMMAND ${command}
     WORKING_DIRECTORY ${stage_bin_dir}
-    DEPENDS ${tests_name})
+    DEPENDS ${tests_target_name})
 
-add_dependencies(run_all_tests run_${tests_name})
+add_dependencies(run_all_tests run_${tests_target_name})
 
 if(WITH_BENCHMARKS)
-    add_custom_target(benchmark_${tests_name}
-        COMMENT "Benchmarking testing ${tests_name}" VERBATIM
+    add_custom_target(benchmark_${tests_target_name}
+        COMMENT "Benchmarking testing ${tests_target_name}" VERBATIM
         COMMAND ${benchmark_command} ${benchmark_repeats}
-        ${benchmark_directory}/${benchmark_prefix}${tests_name}.csv ${command}
+        ${benchmark_directory}/${benchmark_prefix}${tests_target_name}.csv ${command}
         WORKING_DIRECTORY ${stage_bin_dir}
-        DEPENDS ${tests_name})
+        DEPENDS ${tests_target_name})
 
-    add_dependencies(benchmark_all benchmark_${tests_name})
+    add_dependencies(benchmark_all benchmark_${tests_target_name})
 endif()
 
-add_boost_tests(${name} ${files})
+add_boost_tests(${tests_binary_name} ${files})
 
-install(TARGETS ${tests_name} RUNTIME DESTINATION bin COMPONENT tests)
+install(TARGETS ${tests_target_name} RUNTIME DESTINATION bin COMPONENT tests)

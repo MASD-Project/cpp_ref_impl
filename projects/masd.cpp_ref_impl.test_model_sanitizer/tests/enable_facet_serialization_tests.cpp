@@ -30,7 +30,7 @@
 namespace {
 
 const std::string empty;
-const std::string test_module("test_model_sanitizer");
+const std::string test_module("masd.cpp_ref_impl.test_model_sanitizer.tests");
 const std::string test_suite("enable_facet_serialization_tests");
 
 class first_class_generator {

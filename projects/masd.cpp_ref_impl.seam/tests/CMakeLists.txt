@@ -17,9 +17,11 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 # MA 02110-1301, USA.
 #
-set(name "seam")
-set(tests_name "${name}.tests")
-set(binary_name "masd.cpp_ref_impl.${tests_name}")
+set(name "masd.cpp_ref_model.seam")
+set(lib_target_name ${name}.lib)
+set(tests_binary_name ${name}.tests)
+set(tests_target_name ${name}.tests)
+
 set(files "")
 file(GLOB_RECURSE files RELATIVE
     "${CMAKE_CURRENT_SOURCE_DIR}/"
@@ -30,22 +32,24 @@ file(GLOB_RECURSE stitch_files RELATIVE
     "${CMAKE_CURRENT_SOURCE_DIR}/"
     "${CMAKE_CURRENT_SOURCE_DIR}/../src/*.cpp")
 
-add_executable(${tests_name} ${files} ${stitch_files})
-set_target_properties(${tests_name} PROPERTIES OUTPUT_NAME ${binary_name})
+add_executable(${tests_target_name} ${files} ${stitch_files})
+set_target_properties(${tests_target_name}
+  PROPERTIES OUTPUT_NAME ${tests_binary_name})
 
-target_link_libraries(${tests_name}
+target_link_libraries(${tests_target_name}
     utility
     ${Boost_LIBRARIES}
     ${CMAKE_THREAD_LIBS_INIT})
 
-set(command $<TARGET_FILE:${tests_name}> ${boost_test_parameters})
+set(command $<TARGET_FILE:${tests_target_name}> ${boost_test_parameters})
 
-add_custom_target(run_${tests_name}
-    COMMENT "Running ${tests_name}" VERBATIM
+add_custom_target(run_${tests_target_name}
+    COMMENT "Running ${tests_target_name}" VERBATIM
     COMMAND ${command}
     WORKING_DIRECTORY ${stage_bin_dir}
-    DEPENDS ${tests_name})
-add_dependencies(run_all_tests run_${tests_name})
+    DEPENDS ${tests_target_name})
+add_dependencies(run_all_tests run_${tests_target_name})
 
-add_boost_tests(${name} ${files})
-install(TARGETS ${tests_name} RUNTIME DESTINATION bin COMPONENT tests)
+add_boost_tests(${tests_binary_name} ${files})
+
+install(TARGETS ${tests_target_name} RUNTIME DESTINATION bin COMPONENT tests)

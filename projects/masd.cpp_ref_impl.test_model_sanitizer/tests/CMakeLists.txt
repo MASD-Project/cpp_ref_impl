@@ -17,38 +17,27 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 # MA 02110-1301, USA.
 #
-set(name "test_model_sanitizer")
-set(tests_name "${name}.tests")
-set(binary_name "masd.cpp_ref_impl.${name}.tests")
-set(candidate_files "")
+
+set(name "masd.cpp_ref_impl.test_model_sanitizer")
+set(lib_target_name ${name}.lib)
+set(tests_binary_name ${name}.tests)
+set(tests_target_name ${name}.tests)
+
 set(files "")
-file(GLOB_RECURSE candidate_files RELATIVE
+file(GLOB_RECURSE files RELATIVE
     "${CMAKE_CURRENT_SOURCE_DIR}/"
     "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
-
-set(ignore_file false)
-foreach(candidate_file ${candidate_files})
-    if(NOT ODB_FOUND)
-        if (candidate_file MATCHES "database")
-            set(ignore_file true)
-        endif()
-    endif()
-
-    if(NOT ignore_file)
-        set(files ${files} ${candidate_file})
-    endif()
-    set(ignore_file false)
-endforeach()
 
 # we need to add these manually as the point of this test model
 # is not to generate a make file.
 file(GLOB_RECURSE disable_cmakelists_files ABSOLUTE
     "${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.disable_cmakelists/src/*.cpp")
 
-add_executable(${tests_name} ${files} ${disable_cmakelists_files})
-set_target_properties(${tests_name} PROPERTIES OUTPUT_NAME ${binary_name})
+add_executable(${tests_target_name} ${files} ${disable_cmakelists_files})
+set_target_properties(${tests_target_name}
+    PROPERTIES OUTPUT_NAME ${tests_binary_name})
 
-target_link_libraries(${tests_name}
+target_link_libraries(${tests_target_name}
     masd_cpp_ref_impl_cpp_model
     masd_cpp_ref_impl_cpp_98
     masd_cpp_ref_impl_compressed
@@ -64,28 +53,27 @@ target_link_libraries(${tests_name}
     ${CMAKE_REQUIRED_LIBRARIES}
     ${Boost_LIBRARIES})
 
-# FIXME: link against database if feature is on?
+set(command $<TARGET_FILE:${tests_target_name}> ${boost_test_parameters})
 
-set(command $<TARGET_FILE:${tests_name}> ${boost_test_parameters})
-
-add_custom_target(run_${tests_name}
-    COMMENT "Running ${tests_name}" VERBATIM
+add_custom_target(run_${tests_target_name}
+    COMMENT "Running ${tests_target_name}" VERBATIM
     COMMAND ${command}
     WORKING_DIRECTORY ${stage_bin_dir}
-    DEPENDS ${tests_name})
+    DEPENDS ${tests_target_name})
 
-add_dependencies(run_all_tests run_${tests_name})
+add_dependencies(run_all_tests run_${tests_target_name})
 
 if(WITH_BENCHMARKS)
-    add_custom_target(benchmark_${tests_name}
-        COMMENT "Benchmarking testing ${tests_name}" VERBATIM
+    add_custom_target(benchmark_${tests_target_name}
+        COMMENT "Benchmarking testing ${tests_target_name}" VERBATIM
         COMMAND ${benchmark_command} ${benchmark_repeats}
-        ${benchmark_directory}/${benchmark_prefix}${tests_name}.csv ${command}
+        ${benchmark_directory}/${benchmark_prefix}${tests_target_name}.csv ${command}
         WORKING_DIRECTORY ${stage_bin_dir}
-        DEPENDS ${tests_name})
+        DEPENDS ${tests_target_name})
 
-    add_dependencies(benchmark_all benchmark_${tests_name})
+    add_dependencies(benchmark_all benchmark_${tests_target_name})
 endif()
 
-add_boost_tests(${name} ${files})
-install(TARGETS ${tests_name} RUNTIME DESTINATION bin COMPONENT tests)
+add_boost_tests(${tests_binary_name} ${files})
+
+install(TARGETS ${tests_target_name} RUNTIME DESTINATION bin COMPONENT tests)

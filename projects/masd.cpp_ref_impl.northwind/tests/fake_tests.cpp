@@ -24,7 +24,7 @@
 namespace {
 
 const std::string empty;
-const std::string test_module("northwind_tests");
+const std::string test_module("masd.cpp_ref_impl.northwind.tests");
 const std::string test_suite("fake_tests");
 
 }
