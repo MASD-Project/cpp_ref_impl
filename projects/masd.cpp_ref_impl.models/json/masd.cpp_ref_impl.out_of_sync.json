@@ -71,7 +71,7 @@
     },
     {
       "name": "handcrafted_new",
-      "documentation": "This class is handcrafted but not yet generated.\n",
+      "documentation": "This class is handcrafted but not yet generated. If you see it in git, do not check it in.\n",
       "stereotypes": [
         "masd::handcrafted"
       ],

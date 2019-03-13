@@ -719,7 +719,7 @@ changes.#</dia:string>
         <dia:string>#masd::handcrafted#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
-        <dia:string>#This class is handcrafted but not yet generated.#</dia:string>
+        <dia:string>#This class is handcrafted but not yet generated. If you see it in git, do not check it in.#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
