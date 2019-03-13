@@ -1,0 +1,81 @@
+{
+  "documentation": "This model is designed to be out of sync with the generated code. It\ntests the behaviour of Dogen when faced with the following scenarios:\n\n- model elements that have not changed.\n- model elements that have changed.\n- files that are expected to be ignored.\n- files that are unexpected.\n\nIf you need to regenerate this model, you need to remove the attribute\nchanged in class changed_generated and delete the class newly_generated.\n",
+  "tagged_values": {
+    "masd.injection.dia.comment": "true",
+    "masd.injection.model_modules": "masd.cpp_ref_impl.out_of_sync",
+    "masd.injection.input_language": "cpp",
+    "masd.injection.reference": "cpp.builtins",
+    "masd.extraction.delete_extra_files": "true",
+    "masd.extraction.cpp.enabled": "true",
+    "masd.extraction.cpp.standard": "c++-17",
+    "masd.extraction.cpp.msbuild.enabled": "false",
+    "masd.extraction.cpp.visual_studio.project.enabled": "false",
+    "masd.extraction.cpp.visual_studio.solution.enabled": "false",
+    "masd.extraction.csharp.enabled": "false",
+    "masd.annotations.profile": "dogen"
+  },
+  "elements": [
+    {
+      "name": "unchanged_generated",
+      "documentation": "This class has not changed.\n",
+      "fallback_element_type": "masd::object",
+      "attributes": [
+        {
+          "name": "public_attribute",
+          "type": "int"
+        },
+        {
+          "name": "private_attribute",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "changed_handcrafted",
+      "documentation": "This class is handcrafted. A new attribute was added after initial generation.\n",
+      "stereotypes": [
+        "masd::handcrafted"
+      ],
+      "fallback_element_type": "masd::object",
+      "attributes": [
+        {
+          "name": "changed_property",
+          "type": "int",
+          "documentation": "This property was added after the initial generation. It should not appear in code\ngeneration. If it does, the overwrite flag for handcrafted is not working.\n"
+        }
+      ]
+    },
+    {
+      "name": "changed_generated",
+      "documentation": "This class has a new attribute.\n",
+      "fallback_element_type": "masd::object",
+      "attributes": [
+        {
+          "name": "public_attribute",
+          "type": "int"
+        },
+        {
+          "name": "changed_property",
+          "type": "int",
+          "documentation": "This is a new property and has not yet been generated. Do not check in the\nchanges.\n"
+        }
+      ]
+    },
+    {
+      "name": "unchanged_handcrafted",
+      "documentation": "This class is handcrafted.\n",
+      "stereotypes": [
+        "masd::handcrafted"
+      ],
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "handcrafted_new",
+      "documentation": "This class is handcrafted but not yet generated.\n",
+      "stereotypes": [
+        "masd::handcrafted"
+      ],
+      "fallback_element_type": "masd::object"
+    }
+  ]
+}

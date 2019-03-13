@@ -1,0 +1,31 @@
+{
+  "documentation": "This model is designed to test extra files. These are named:\n\n- expected_ignore: files we do not want to delete.\n- unexpected_remove: files we want to delete, but will ignore because\n  delete extra files is set to false.\n",
+  "tagged_values": {
+    "masd.injection.dia.comment": "true",
+    "masd.injection.model_modules": "masd.cpp_ref_impl.ignore_extra",
+    "masd.injection.input_language": "cpp",
+    "masd.injection.reference": "cpp.builtins",
+    "masd.extraction.delete_extra_files": "false",
+    "masd.extraction.ignore_files_matching_regex": ".*/expected_ignore.*",
+    "masd.extraction.cpp.enabled": "true",
+    "masd.extraction.cpp.standard": "c++-17",
+    "masd.extraction.cpp.msbuild.enabled": "false",
+    "masd.extraction.cpp.visual_studio.project.enabled": "false",
+    "masd.extraction.cpp.visual_studio.solution.enabled": "false",
+    "masd.extraction.csharp.enabled": "false",
+    "masd.annotations.profile": "dogen"
+  },
+  "elements": [
+    {
+      "name": "one_property",
+      "documentation": "This class has not changed.\n",
+      "fallback_element_type": "masd::object",
+      "attributes": [
+        {
+          "name": "public_attribute",
+          "type": "int"
+        }
+      ]
+    }
+  ]
+}

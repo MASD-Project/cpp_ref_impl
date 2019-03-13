@@ -98,8 +98,6 @@
 #DOGEN masd.injection.model_modules=masd.cpp_ref_impl.force_write
 #DOGEN masd.injection.input_language=cpp
 #DOGEN masd.injection.reference=cpp.builtins
-#DOGEN masd.injection.reference=cpp.std
-#DOGEN masd.injection.reference=cpp.boost
 #DOGEN masd.extraction.force_write=true
 #DOGEN masd.extraction.cpp.enabled=true
 #DOGEN masd.extraction.cpp.standard=c++-17

@@ -104,8 +104,6 @@
 #DOGEN masd.injection.model_modules=masd.cpp_ref_impl.ignore_extra
 #DOGEN masd.injection.input_language=cpp
 #DOGEN masd.injection.reference=cpp.builtins
-#DOGEN masd.injection.reference=cpp.std
-#DOGEN masd.injection.reference=cpp.boost
 #DOGEN masd.extraction.delete_extra_files=false
 #DOGEN masd.extraction.ignore_files_matching_regex=.*/expected_ignore.*
 #DOGEN masd.extraction.cpp.enabled=true

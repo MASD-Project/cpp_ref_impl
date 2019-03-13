@@ -99,15 +99,13 @@
 - expected_ignore: files we do not want to delete.
 - unexpected_remove: files we want to delete.
 
-This model should not be generated normally. If you do, you must 
+This model should not be generated normally. If you do, you must
 ensure the unexpected_remove files are not deleted before you check in.
 
 #DOGEN masd.injection.dia.comment=true
 #DOGEN masd.injection.model_modules=masd.cpp_ref_impl.delete_extra
 #DOGEN masd.injection.input_language=cpp
 #DOGEN masd.injection.reference=cpp.builtins
-#DOGEN masd.injection.reference=cpp.std
-#DOGEN masd.injection.reference=cpp.boost
 #DOGEN masd.extraction.delete_extra_files=true
 #DOGEN masd.extraction.ignore_files_matching_regex=.*/expected_ignore.*
 #DOGEN masd.extraction.cpp.enabled=true
