@@ -18,14 +18,12 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef MASD_CPP_REF_IMPL_FORCE_WRITE_TYPES_ALL_HPP
-#define MASD_CPP_REF_IMPL_FORCE_WRITE_TYPES_ALL_HPP
-
-#if defined(_MSC_VER) && (_MSC_VER >= 1200)
-#pragma once
-#endif
-
-#include "masd.cpp_ref_impl.force_write/types/first_class.hpp"
 #include "masd.cpp_ref_impl.force_write/types/changed_handcrafted.hpp"
 
-#endif
+namespace masd::cpp_ref_impl::force_write {
+
+bool changed_handcrafted::operator==(const changed_handcrafted& /*rhs*/) const {
+    return true;
+}
+
+}

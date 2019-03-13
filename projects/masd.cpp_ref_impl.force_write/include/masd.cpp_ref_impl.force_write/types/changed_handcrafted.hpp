@@ -18,14 +18,36 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef MASD_CPP_REF_IMPL_FORCE_WRITE_TYPES_ALL_HPP
-#define MASD_CPP_REF_IMPL_FORCE_WRITE_TYPES_ALL_HPP
+#ifndef MASD_CPP_REF_IMPL_FORCE_WRITE_TYPES_CHANGED_HANDCRAFTED_HPP
+#define MASD_CPP_REF_IMPL_FORCE_WRITE_TYPES_CHANGED_HANDCRAFTED_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-#include "masd.cpp_ref_impl.force_write/types/first_class.hpp"
-#include "masd.cpp_ref_impl.force_write/types/changed_handcrafted.hpp"
+#include <algorithm>
+
+namespace masd::cpp_ref_impl::force_write {
+
+/**
+ * @brief This class is handcrafted.
+ */
+class changed_handcrafted final {
+public:
+    changed_handcrafted() = default;
+    changed_handcrafted(const changed_handcrafted&) = default;
+    changed_handcrafted(changed_handcrafted&&) = default;
+    ~changed_handcrafted() = default;
+    changed_handcrafted& operator=(const changed_handcrafted&) = default;
+
+public:
+    bool operator==(const changed_handcrafted& rhs) const;
+    bool operator!=(const changed_handcrafted& rhs) const {
+        return !this->operator==(rhs);
+    }
+
+};
+
+}
 
 #endif
