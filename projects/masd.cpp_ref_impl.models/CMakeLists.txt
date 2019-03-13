@@ -27,28 +27,26 @@ if (WITH_JSON_VALIDATION)
         "${CMAKE_CURRENT_SOURCE_DIR}/${input_dir}"
         "${CMAKE_CURRENT_SOURCE_DIR}/${input_dir}/*.json")
 
-    set(target "input_models.json")
-    add_custom_target(validate_json_${target})
-    add_dependencies(validate_all_json validate_json_${target})
+    set(target "models.json")
+    add_custom_target(validate_${target})
+    add_dependencies(validate_all_json validate_${target})
 
-    add_custom_target(indent_json_${target})
-    add_dependencies(indent_all_json indent_json_${target})
+    add_custom_target(indent_${target})
+    add_dependencies(indent_all_json indent_${target})
 
     foreach(file ${files})
-        add_custom_target(validate_json_${target}_${file}
+        add_custom_target(validate_${file}
             COMMENT "Validating JSON for ${target}/${file}."
             WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
             COMMAND ${JQ_COMMAND} . ${folder}/${file} > /dev/null)
-        add_dependencies(validate_json_${target}
-            validate_json_${target}_${file})
+        add_dependencies(validate_${target} validate_${file})
 
-        add_custom_target(indent_json_${target}_${file}
+        add_custom_target(indent_${file}
             COMMENT "Indenting JSON for ${target}/${file}."
             WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
             COMMAND ${JQ_COMMAND} . ${folder}/${file} > ${folder}/${file}_tmp
             COMMAND mv ${folder}/${file}_tmp ${folder}/${file})
-        add_dependencies(indent_json_${target}
-            indent_json_${target}_${file})
+        add_dependencies(indent_${target} indent_${file})
 
     endforeach()
 endif()
@@ -57,17 +55,24 @@ endif()
 # Conversion targets
 #
 if (DOGEN_CLI_EXECUTABLE)
+    #
+    # Model conversion
+    #
     file(GLOB models "dia/*.dia")
     foreach(model ${models})
         set(model_name "")
         get_filename_component(model_name ${model} NAME)
 
+        set(destination_name ${output_dir}/${model_name})
+        string(REGEX REPLACE ".dia$" ".json" destination_name
+            ${destination_name})
+
         add_custom_target(convert_${model_name}
-          COMMENT "Converting ${model_name}."
-          WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-          COMMAND ${DOGEN_CLI_EXECUTABLE} convert
-          --source ${model} --destination ${output_dir}/${model_name}.json
-          ${DOGEN_COMMON_OPTIONS})
+            COMMENT "Converting ${model_name}."
+            WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+            COMMAND ${DOGEN_CLI_EXECUTABLE} convert
+            --source ${model} --destination ${destination_name}
+            ${DOGEN_COMMON_OPTIONS})
         add_dependencies(convert_all convert_${model_name})
     endforeach()
 
