@@ -89,6 +89,18 @@ if (DOGEN_CLI_EXECUTABLE)
     set(models ${models} masd.cpp_ref_impl.split_project)
     set(models ${models} masd.cpp_ref_impl.std_model)
     set(models ${models} masd.cpp_ref_impl.two_layers_with_objects)
+
+    # Uncomment the next line if you need to regenerate this model.
+    # Ensue the extra files are not deleted and checked in.
+    # set(models ${models} masd.cpp_ref_impl.delete_extra)
+
+    set(models ${models} masd.cpp_ref_impl.force_write)
+    set(models ${models} masd.cpp_ref_impl.ignore_extra)
+
+    # Uncomment the next line if you need to regenerate this model.
+    # You need to manually ensure that the model is out of sync with
+    # the filesystem before checking in.
+    # set(models ${models} masd.cpp_ref_impl.out_of_sync)
 endif()
 
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/dia)
