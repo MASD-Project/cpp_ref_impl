@@ -18,26 +18,35 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef MASD_CPP_REF_IMPL_DELETE_EXTRA_TYPES_DELETE_EXTRA_HPP
-#define MASD_CPP_REF_IMPL_DELETE_EXTRA_TYPES_DELETE_EXTRA_HPP
+#ifndef MASD_CPP_REF_IMPL_DO_NOT_DELETE_EMPTY_DIRS_TEST_DATA_ONE_PROPERTY_TD_HPP
+#define MASD_CPP_REF_IMPL_DO_NOT_DELETE_EMPTY_DIRS_TEST_DATA_ONE_PROPERTY_TD_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-/**
- * @brief This model is designed to test that setting delete empty directory to
- * false does not delete directories.
- *
- * Because git does not version control empty directories, the model
- * requires some additional setup in order to be tested. You need to
- * generate this model into a folder, programmatically create some empty
- * directories and then check to see if they are deleted on generation.
- *
- * A similar test for the flag set to true can be done with any test
- * model as they all have it.
- */
-namespace masd::cpp_ref_impl::delete_extra {
+#include "masd.cpp_ref_impl.do_not_delete_empty_dirs/types/one_property.hpp"
+
+namespace masd::cpp_ref_impl::do_not_delete_empty_dirs {
+
+class one_property_generator {
+public:
+    one_property_generator();
+
+public:
+    typedef masd::cpp_ref_impl::do_not_delete_empty_dirs::one_property result_type;
+
+public:
+    static void populate(const unsigned int position, result_type& v);
+    static result_type create(const unsigned int position);
+    result_type operator()();
+
+private:
+    unsigned int position_;
+public:
+    static result_type* create_ptr(const unsigned int position);
+};
+
 }
 
 #endif

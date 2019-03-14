@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef MASD_CPP_REF_IMPL_DELETE_EXTRA_TYPES_DELETE_EXTRA_HPP
-#define MASD_CPP_REF_IMPL_DELETE_EXTRA_TYPES_DELETE_EXTRA_HPP
+#ifndef MASD_CPP_REF_IMPL_DO_NOT_DELETE_EMPTY_DIRS_TYPES_DO_NOT_DELETE_EMPTY_DIRS_HPP
+#define MASD_CPP_REF_IMPL_DO_NOT_DELETE_EMPTY_DIRS_TYPES_DO_NOT_DELETE_EMPTY_DIRS_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -37,7 +37,7 @@
  * A similar test for the flag set to true can be done with any test
  * model as they all have it.
  */
-namespace masd::cpp_ref_impl::delete_extra {
+namespace masd::cpp_ref_impl::do_not_delete_empty_dirs {
 }
 
 #endif

@@ -18,8 +18,37 @@
  * MA 02110-1301, USA.
  *
  */
+#include "masd.cpp_ref_impl.do_not_delete_empty_dirs/types/one_property.hpp"
 
-/*
- * This file is an unexpected ignore file and should be deleted. Do
- * not check in the deletion as it is part of the test.
- */
+namespace masd::cpp_ref_impl::do_not_delete_empty_dirs {
+
+one_property::one_property()
+    : public_attribute_(static_cast<int>(0)) { }
+
+one_property::one_property(const int public_attribute)
+    : public_attribute_(public_attribute) { }
+
+void one_property::swap(one_property& other) noexcept {
+    using std::swap;
+    swap(public_attribute_, other.public_attribute_);
+}
+
+bool one_property::operator==(const one_property& rhs) const {
+    return public_attribute_ == rhs.public_attribute_;
+}
+
+one_property& one_property::operator=(one_property other) {
+    using std::swap;
+    swap(*this, other);
+    return *this;
+}
+
+int one_property::public_attribute() const {
+    return public_attribute_;
+}
+
+void one_property::public_attribute(const int v) {
+    public_attribute_ = v;
+}
+
+}

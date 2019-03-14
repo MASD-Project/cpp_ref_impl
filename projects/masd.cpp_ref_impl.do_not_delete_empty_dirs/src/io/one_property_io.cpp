@@ -18,26 +18,17 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef MASD_CPP_REF_IMPL_DELETE_EXTRA_TYPES_DELETE_EXTRA_HPP
-#define MASD_CPP_REF_IMPL_DELETE_EXTRA_TYPES_DELETE_EXTRA_HPP
+#include <ostream>
+#include "masd.cpp_ref_impl.do_not_delete_empty_dirs/io/one_property_io.hpp"
 
-#if defined(_MSC_VER) && (_MSC_VER >= 1200)
-#pragma once
-#endif
+namespace masd::cpp_ref_impl::do_not_delete_empty_dirs {
 
-/**
- * @brief This model is designed to test that setting delete empty directory to
- * false does not delete directories.
- *
- * Because git does not version control empty directories, the model
- * requires some additional setup in order to be tested. You need to
- * generate this model into a folder, programmatically create some empty
- * directories and then check to see if they are deleted on generation.
- *
- * A similar test for the flag set to true can be done with any test
- * model as they all have it.
- */
-namespace masd::cpp_ref_impl::delete_extra {
+std::ostream& operator<<(std::ostream& s, const one_property& v) {
+    s << " { "
+      << "\"__type__\": " << "\"masd::cpp_ref_impl::do_not_delete_empty_dirs::one_property\"" << ", "
+      << "\"public_attribute\": " << v.public_attribute()
+      << " }";
+    return(s);
 }
 
-#endif
+}

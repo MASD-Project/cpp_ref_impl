@@ -99,6 +99,7 @@ if (DOGEN_CLI_EXECUTABLE)
     # Ensue the extra files are not deleted and checked in.
     # set(models ${models} masd.cpp_ref_impl.delete_extra)
 
+    set(models ${models} masd.cpp_ref_impl.do_not_delete_empty_dirs)
     set(models ${models} masd.cpp_ref_impl.force_write)
     set(models ${models} masd.cpp_ref_impl.ignore_extra)
 

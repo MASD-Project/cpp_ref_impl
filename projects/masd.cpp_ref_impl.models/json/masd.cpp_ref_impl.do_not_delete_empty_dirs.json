@@ -1,0 +1,32 @@
+{
+  "documentation": "This model is designed to test that setting delete empty directory to\nfalse does not delete directories.\n\nBecause git does not version control empty directories, the model\nrequires some additional setup in order to be tested. You need to\ngenerate this model into a folder, programmatically create some empty\ndirectories and then check to see if they are deleted on generation.\n\nA similar test for the flag set to true can be done with any test \nmodel as they all have it.\n",
+  "tagged_values": {
+    "masd.injection.dia.comment": "true",
+    "masd.injection.model_modules": "masd.cpp_ref_impl.do_not_delete_empty_dirs",
+    "masd.injection.input_language": "cpp",
+    "masd.injection.reference": "cpp.builtins",
+    "masd.extraction.delete_extra_files": "true",
+    "masd.extraction.delete_empty_directories": "false",
+    "masd.extraction.ignore_files_matching_regex": ".*/expected_ignore.*",
+    "masd.extraction.cpp.enabled": "true",
+    "masd.extraction.cpp.standard": "c++-17",
+    "masd.extraction.cpp.msbuild.enabled": "false",
+    "masd.extraction.cpp.visual_studio.project.enabled": "false",
+    "masd.extraction.cpp.visual_studio.solution.enabled": "false",
+    "masd.extraction.csharp.enabled": "false",
+    "masd.annotations.profile": "dogen"
+  },
+  "elements": [
+    {
+      "name": "one_property",
+      "documentation": "This class has not changed.\n",
+      "fallback_element_type": "masd::object",
+      "attributes": [
+        {
+          "name": "public_attribute",
+          "type": "int"
+        }
+      ]
+    }
+  ]
+}

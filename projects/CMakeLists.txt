@@ -253,6 +253,7 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.test_model_sanitizer/include
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.two_layers_with_objects/include
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.delete_extra/include
+    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.do_not_delete_empty_dirs/include
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.ignore_extra/include
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.force_write/include
     ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.out_of_sync/include
@@ -291,6 +292,7 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.std_model)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.test_model_sanitizer/tests)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.two_layers_with_objects)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.delete_extra)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.do_not_delete_empty_dirs)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.ignore_extra)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.force_write)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.out_of_sync)
