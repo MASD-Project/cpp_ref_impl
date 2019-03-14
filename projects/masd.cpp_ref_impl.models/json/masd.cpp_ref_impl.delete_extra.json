@@ -1,5 +1,5 @@
 {
-  "documentation": "This model is designed to test extra files. These are named:\n\n- expected_ignore: files we do not want to delete.\n- unexpected_remove: files we want to delete.\n\nThis model should not be generated normally. If you do, you must \nensure the unexpected_remove files are not deleted before you check in.\n",
+  "documentation": "This model is designed to test extra files. These are named:\n\n- expected_ignore: files we do not want to delete.\n- unexpected_remove: files we want to delete.\n\nThis model should not be generated normally. If you do, you must\nensure the unexpected_remove files are not deleted before you check in.\n",
   "tagged_values": {
     "masd.injection.dia.comment": "true",
     "masd.injection.model_modules": "masd.cpp_ref_impl.delete_extra",
