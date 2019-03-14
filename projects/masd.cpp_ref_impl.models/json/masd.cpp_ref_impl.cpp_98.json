@@ -8,6 +8,7 @@
     "masd.injection.reference": "cpp.std",
     "masd.injection.reference": "cpp.boost",
     "masd.extraction.delete_extra_files": "true",
+    "masd.extraction.delete_empty_directories": "true",
     "masd.extraction.cpp.enabled": "true",
     "masd.extraction.cpp.msbuild.enabled": "false",
     "masd.extraction.cpp.visual_studio.project.enabled": "false",

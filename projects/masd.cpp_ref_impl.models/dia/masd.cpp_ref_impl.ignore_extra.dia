@@ -105,6 +105,7 @@
 #DOGEN masd.injection.input_language=cpp
 #DOGEN masd.injection.reference=cpp.builtins
 #DOGEN masd.extraction.delete_extra_files=false
+#DOGEN masd.extraction.delete_empty_directories=true
 #DOGEN masd.extraction.ignore_files_matching_regex=.*/expected_ignore.*
 #DOGEN masd.extraction.cpp.enabled=true
 #DOGEN masd.extraction.cpp.standard=c++-17
