@@ -68,7 +68,7 @@
         <dia:point val="-26,-42"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-26.05,-42.05;2.285,-22.65"/>
+        <dia:rectangle val="-26.05,-42.05;2.285,-21.85"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -80,7 +80,7 @@
         <dia:real val="28.235000000000003"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="19.300000000000004"/>
+        <dia:real val="20.100000000000005"/>
       </dia:attribute>
       <dia:attribute name="line_width">
         <dia:real val="0.10000000000000001"/>
@@ -101,6 +101,8 @@
 
 This model should not be generated normally. If you do, you must
 ensure the unexpected_remove files are not deleted before you check in.
+This can e done by setting delete_extra_files to false, regenerating
+and then setting it back to true.
 
 #DOGEN masd.injection.dia.comment=true
 #DOGEN masd.injection.model_modules=masd.cpp_ref_impl.delete_extra

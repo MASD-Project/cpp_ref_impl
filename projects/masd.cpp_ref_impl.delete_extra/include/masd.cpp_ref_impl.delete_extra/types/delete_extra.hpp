@@ -26,16 +26,15 @@
 #endif
 
 /**
- * @brief This model is designed to test that setting delete empty directory to
- * false does not delete directories.
+ * @brief This model is designed to test extra files. These are named:
  *
- * Because git does not version control empty directories, the model
- * requires some additional setup in order to be tested. You need to
- * generate this model into a folder, programmatically create some empty
- * directories and then check to see if they are deleted on generation.
+ * - expected_ignore: files we do not want to delete.
+ * - unexpected_remove: files we want to delete.
  *
- * A similar test for the flag set to true can be done with any test
- * model as they all have it.
+ * This model should not be generated normally. If you do, you must
+ * ensure the unexpected_remove files are not deleted before you check in.
+ * This can e done by setting delete_extra_files to false, regenerating
+ * and then setting it back to true.
  */
 namespace masd::cpp_ref_impl::delete_extra {
 }
