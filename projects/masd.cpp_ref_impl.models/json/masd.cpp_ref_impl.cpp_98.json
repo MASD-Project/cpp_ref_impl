@@ -16,7 +16,8 @@
     "masd.extraction.csharp.enabled": "false",
     "masd.extraction.cpp.standard": "c++-98",
     "masd.annotations.profile": "dogen",
-    "masd.extraction.cpp.hash.enabled": "false"
+    "masd.extraction.cpp.hash.enabled": "false",
+    "masd.extraction.cpp.tests.enabled": "true"
   },
   "elements": [
     {
