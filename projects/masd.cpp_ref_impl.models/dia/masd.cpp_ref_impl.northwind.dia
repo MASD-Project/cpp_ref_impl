@@ -113,7 +113,7 @@ It's objective is to test Dogen integration with ODB.
 #DOGEN masd.generation.cpp.hash.enabled=false
 #DOGEN masd.generation.cpp.visual_studio.project.enabled=false
 #DOGEN masd.generation.cpp.visual_studio.solution.enabled=false
-#DOGEN masd.extraction.csharp.enabled=false
+#DOGEN masd.generation.csharp.enabled=false
 #DOGEN masd.annotations.profile=dogen
 #DOGEN masd.orm.database_system=sqlite
 #DOGEN masd.orm.database_system=postgresql
