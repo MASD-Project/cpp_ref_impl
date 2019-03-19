@@ -1,3 +1,5 @@
+#define BOOST_TEST_MODULE masd::cpp_ref_impl::northwind::entry_point
+
 /* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*-
  *
  * Copyright (C) 2012-2015 Marco Craveiro <marco.craveiro@gmail.com>
@@ -18,16 +20,15 @@
  * MA 02110-1301, USA.
  *
  */
-#define BOOST_TEST_MODULE northwind_tests
-#include <memory>
 #include <iostream>
+#include <boost/exception/info.hpp>
 #include <boost/test/unit_test.hpp>
 #include <boost/test/unit_test_monitor.hpp>
 #include <boost/exception/diagnostic_information.hpp>
 
 namespace  {
 
-const std::string error_msg("Error during test");
+const std::string error_msg("Error during test.");
 
 inline void translate(const boost::exception& e) {
     std::cerr << std::endl << boost::diagnostic_information(e);
@@ -36,8 +37,9 @@ inline void translate(const boost::exception& e) {
 
 struct exception_fixture {
     exception_fixture() {
-        ::boost::unit_test::unit_test_monitor.register_exception_translator<
-            boost::exception>(&translate);
+        using boost::exception;
+        using boost::unit_test::unit_test_monitor;
+        unit_test_monitor.register_exception_translator<exception>(&translate);
     }
 };
 

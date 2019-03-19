@@ -267,7 +267,6 @@ if(ODB_LIBODB_FOUND)
     message(STATUS "Adding ODB feature test project")
     include_directories(${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.northwind/include)
     add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.northwind)
-    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.northwind/tests)
 endif()
 
 #

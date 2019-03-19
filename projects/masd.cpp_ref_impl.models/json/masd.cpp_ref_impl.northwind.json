@@ -21,7 +21,9 @@
     "masd.orm.database_system": "sqlite",
     "masd.orm.database_system": "postgresql",
     "masd.orm.letter_case": "upper_case",
-    "masd.orm.schema_name": "northwind"
+    "masd.orm.schema_name": "northwind",
+    "masd.extraction.cpp.tests.enabled": "true",
+    "masd.extraction.cpp.tests.cmakelists.enabled": "false"
   },
   "elements": [
     {
