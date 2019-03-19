@@ -23,7 +23,6 @@ set(name "masd.cpp_ref_impl.northwind")
 # cmake files.
 # set(lib_target_name ${name}.lib)
 set(lib_target_name masd_cpp_ref_impl_northwind)
-
 set(tests_binary_name ${name}.tests)
 set(tests_target_name ${name}.tests)
 
