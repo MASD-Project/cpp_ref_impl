@@ -31,9 +31,6 @@ namespace masd::cpp_ref_impl::cpp_model {
 
 class parent_outside_generator {
 public:
-    parent_outside_generator();
-
-public:
     typedef masd::cpp_ref_impl::cpp_model::parent_outside result_type;
 
 public:

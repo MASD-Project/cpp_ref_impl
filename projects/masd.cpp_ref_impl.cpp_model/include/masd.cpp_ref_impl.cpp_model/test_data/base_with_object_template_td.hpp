@@ -31,9 +31,6 @@ namespace masd::cpp_ref_impl::cpp_model {
 
 class base_with_object_template_generator {
 public:
-    base_with_object_template_generator();
-
-public:
     typedef masd::cpp_ref_impl::cpp_model::base_with_object_template result_type;
 
 public:

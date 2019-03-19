@@ -31,9 +31,6 @@ namespace masd::cpp_ref_impl::cpp_model {
 
 class third_child_with_members_generator {
 public:
-    third_child_with_members_generator();
-
-public:
     typedef masd::cpp_ref_impl::cpp_model::third_child_with_members result_type;
 
 public:

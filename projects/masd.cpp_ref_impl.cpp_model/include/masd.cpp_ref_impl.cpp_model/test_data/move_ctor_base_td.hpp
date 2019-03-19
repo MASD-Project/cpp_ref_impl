@@ -31,9 +31,6 @@ namespace masd::cpp_ref_impl::cpp_model {
 
 class move_ctor_base_generator {
 public:
-    move_ctor_base_generator();
-
-public:
     typedef masd::cpp_ref_impl::cpp_model::move_ctor_base result_type;
 
 public:

@@ -31,9 +31,6 @@ namespace masd::cpp_ref_impl::cpp_model {
 
 class base_generator {
 public:
-    base_generator();
-
-public:
     typedef masd::cpp_ref_impl::cpp_model::base result_type;
 
 public:

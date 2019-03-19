@@ -31,9 +31,6 @@ namespace masd::cpp_ref_impl::cpp_model {
 
 class parent_without_members_generator {
 public:
-    parent_without_members_generator();
-
-public:
     typedef masd::cpp_ref_impl::cpp_model::parent_without_members result_type;
 
 public:

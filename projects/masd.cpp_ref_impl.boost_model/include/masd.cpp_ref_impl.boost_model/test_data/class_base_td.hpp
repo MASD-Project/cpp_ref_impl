@@ -31,9 +31,6 @@ namespace masd::cpp_ref_impl::boost_model {
 
 class class_base_generator {
 public:
-    class_base_generator();
-
-public:
     typedef masd::cpp_ref_impl::boost_model::class_base result_type;
 
 public:

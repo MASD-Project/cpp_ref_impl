@@ -31,9 +31,6 @@ namespace masd::cpp_ref_impl::cpp_model {
 
 class descendant1_generator {
 public:
-    descendant1_generator();
-
-public:
     typedef masd::cpp_ref_impl::cpp_model::descendant1 result_type;
 
 public:

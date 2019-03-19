@@ -33,9 +33,6 @@ namespace cpp_98 {
 
 class parent_generator {
 public:
-    parent_generator();
-
-public:
     typedef masd::cpp_ref_impl::cpp_98::parent result_type;
 
 public:
