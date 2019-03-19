@@ -140,13 +140,13 @@ model as they all have it.
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O1">
       <dia:attribute name="obj_pos">
-        <dia:point val="6,-42"/>
+        <dia:point val="7,-42"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="5.95,-42.05;15.02,-39.15"/>
+        <dia:rectangle val="6.95,-42.05;16.02,-39.15"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="6,-42"/>
+        <dia:point val="7,-42"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="8.9700000000000006"/>

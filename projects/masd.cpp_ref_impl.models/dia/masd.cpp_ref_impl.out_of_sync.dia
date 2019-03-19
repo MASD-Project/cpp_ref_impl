@@ -68,7 +68,7 @@
         <dia:point val="-25,-42"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-25.05,-42.05;3.67,-22.65"/>
+        <dia:rectangle val="-25.05,-42.05;3.67,-21.85"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -80,7 +80,7 @@
         <dia:real val="28.620000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="19.300000000000004"/>
+        <dia:real val="20.100000000000005"/>
       </dia:attribute>
       <dia:attribute name="line_width">
         <dia:real val="0.10000000000000001"/>
@@ -356,7 +356,7 @@ changed in class changed_generated and delete the class newly_generated.
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="fill_color">
-        <dia:color val="#ffffff"/>
+        <dia:color val="#fffacd"/>
       </dia:attribute>
       <dia:attribute name="text_color">
         <dia:color val="#000000"/>
@@ -649,7 +649,7 @@ changes.#</dia:string>
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="fill_color">
-        <dia:color val="#ffffff"/>
+        <dia:color val="#fffacd"/>
       </dia:attribute>
       <dia:attribute name="text_color">
         <dia:color val="#000000"/>
@@ -759,7 +759,7 @@ changes.#</dia:string>
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="fill_color">
-        <dia:color val="#ffffff"/>
+        <dia:color val="#fffacd"/>
       </dia:attribute>
       <dia:attribute name="text_color">
         <dia:color val="#000000"/>

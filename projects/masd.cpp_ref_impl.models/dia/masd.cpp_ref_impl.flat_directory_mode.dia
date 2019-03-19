@@ -65,22 +65,22 @@
   <dia:layer name="Background" visible="true" active="true">
     <dia:object type="UML - LargePackage" version="0" id="O0">
       <dia:attribute name="obj_pos">
-        <dia:point val="-27,-32"/>
+        <dia:point val="4,-44"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-27.05,-33.05;2.7375,-15.45"/>
+        <dia:rectangle val="3.95,-45.05;33.05,-30.95"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="-27,-32"/>
+        <dia:point val="4,-44"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="29.6875"/>
+        <dia:real val="29"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="16.5"/>
+        <dia:real val="13"/>
       </dia:attribute>
       <dia:attribute name="line_width">
         <dia:real val="0.10000000149011612"/>
@@ -103,13 +103,13 @@
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O1">
       <dia:attribute name="obj_pos">
-        <dia:point val="-17.9663,-27.75"/>
+        <dia:point val="13.0337,-39.75"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-18.0163,-27.8;-8.5613,-24.1"/>
+        <dia:rectangle val="12.9837,-39.8;22.4387,-36.1"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="-17.9663,-27.75"/>
+        <dia:point val="13.0337,-39.75"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="9.3550000000000004"/>
@@ -264,7 +264,7 @@
         <dia:point val="-27,-44"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-27.05,-44.05;2.055,-35.05"/>
+        <dia:rectangle val="-27.05,-44.05;2.055,-31.05"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -276,7 +276,7 @@
         <dia:real val="29.005000000000003"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="8.9000000000000004"/>
+        <dia:real val="12.9"/>
       </dia:attribute>
       <dia:attribute name="line_width">
         <dia:real val="0.10000000000000001"/>
