@@ -241,7 +241,7 @@
         <dia:point val="-28,-45"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-28.05,-45.05;-2.795,-32.05"/>
+        <dia:rectangle val="-28.05,-45.05;-2.795,-31.25"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -253,7 +253,7 @@
         <dia:real val="25.155000000000005"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="12.9"/>
+        <dia:real val="13.700000000000001"/>
       </dia:attribute>
       <dia:attribute name="line_width">
         <dia:real val="0.10000000000000001"/>
@@ -281,7 +281,8 @@
 #DOGEN masd.extraction.cpp.msbuild.enabled=false
 #DOGEN masd.extraction.cpp.visual_studio.project.enabled=false
 #DOGEN masd.extraction.cpp.visual_studio.solution.enabled=false
-#DOGEN masd.annotations.profile=dogen#</dia:string>
+#DOGEN masd.annotations.profile=dogen
+#DOGEN masd.extraction.cpp.tests.enabled=true#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="monospace" style="0" name="Courier"/>
