@@ -9,15 +9,15 @@
     "masd.injection.reference": "cpp.boost",
     "masd.extraction.delete_extra_files": "true",
     "masd.extraction.delete_empty_directories": "true",
-    "masd.extraction.cpp.enabled": "true",
-    "masd.extraction.cpp.msbuild.enabled": "false",
-    "masd.extraction.cpp.visual_studio.project.enabled": "false",
-    "masd.extraction.cpp.visual_studio.solution.enabled": "false",
+    "masd.generation.cpp.enabled": "true",
+    "masd.generation.cpp.msbuild.enabled": "false",
+    "masd.generation.cpp.visual_studio.project.enabled": "false",
+    "masd.generation.cpp.visual_studio.solution.enabled": "false",
     "masd.extraction.csharp.enabled": "false",
-    "masd.extraction.cpp.standard": "c++-98",
+    "masd.generation.cpp.standard": "c++-98",
     "masd.annotations.profile": "dogen",
-    "masd.extraction.cpp.hash.enabled": "false",
-    "masd.extraction.cpp.tests.enabled": "true"
+    "masd.generation.cpp.hash.enabled": "false",
+    "masd.generation.cpp.tests.enabled": "true"
   },
   "elements": [
     {
