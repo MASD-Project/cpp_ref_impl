@@ -96,7 +96,7 @@
           <dia:attribute name="string">
             <dia:string>##DOGEN masd.injection.dia.comment=true
 #DOGEN masd.injection.model_modules=masd.cpp_ref_impl.force_write
-#DOGEN masd.injection.input_language=cpp
+#DOGEN masd.injection.input_technical_space=cpp
 #DOGEN masd.injection.reference=cpp.builtins
 #DOGEN masd.extraction.force_write=true
 #DOGEN masd.generation.cpp.enabled=true

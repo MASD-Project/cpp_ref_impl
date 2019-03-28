@@ -106,7 +106,7 @@ and then setting it back to true.
 
 #DOGEN masd.injection.dia.comment=true
 #DOGEN masd.injection.model_modules=masd.cpp_ref_impl.delete_extra
-#DOGEN masd.injection.input_language=cpp
+#DOGEN masd.injection.input_technical_space=cpp
 #DOGEN masd.injection.reference=cpp.builtins
 #DOGEN masd.extraction.delete_extra_files=true
 #DOGEN masd.extraction.delete_empty_directories=true

@@ -3,7 +3,7 @@
   "tagged_values": {
     "masd.injection.dia.comment": "true",
     "masd.injection.model_modules": "masd.cpp_ref_impl.ignore_extra",
-    "masd.injection.input_language": "cpp",
+    "masd.injection.input_technical_space": "cpp",
     "masd.injection.reference": "cpp.builtins",
     "masd.extraction.delete_extra_files": "false",
     "masd.extraction.delete_empty_directories": "true",
