@@ -10,7 +10,7 @@
     "masd.injection.reference": "cpp.boost",
     "masd.extraction.delete_extra_files": "true",
     "masd.extraction.delete_empty_directories": "true",
-    "masd.extraction.output_language": "cpp",
+    "masd.extraction.output_technical_space": "cpp",
     "masd.generation.cpp.enabled": "true",
     "masd.generation.cpp.standard": "c++-17",
     "masd.generation.cpp.msbuild.enabled": "false",
