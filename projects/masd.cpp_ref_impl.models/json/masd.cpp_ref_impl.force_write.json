@@ -4,6 +4,7 @@
     "masd.injection.model_modules": "masd.cpp_ref_impl.force_write",
     "masd.injection.input_technical_space": "cpp",
     "masd.injection.reference": "cpp.builtins",
+    "masd.injection.reference": "masd",
     "masd.extraction.force_write": "true",
     "masd.generation.cpp.enabled": "true",
     "masd.generation.cpp.standard": "c++-17",

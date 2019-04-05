@@ -104,6 +104,7 @@ It's objective is to test Dogen integration with ODB.
 #DOGEN masd.injection.reference=cpp.builtins
 #DOGEN masd.injection.reference=cpp.std
 #DOGEN masd.injection.reference=cpp.boost
+#DOGEN masd.injection.reference=masd
 #DOGEN masd.extraction.ignore_files_matching_regex=.*-odb.*
 #DOGEN masd.extraction.ignore_files_matching_regex=.*/tests/.*
 #DOGEN masd.extraction.delete_extra_files=true

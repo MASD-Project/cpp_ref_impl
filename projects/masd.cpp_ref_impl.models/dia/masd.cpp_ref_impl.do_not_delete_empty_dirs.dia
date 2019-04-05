@@ -102,13 +102,14 @@ requires some additional setup in order to be tested. You need to
 generate this model into a folder, programmatically create some empty
 directories and then check to see if they are deleted on generation.
 
-A similar test for the flag set to true can be done with any test 
+A similar test for the flag set to true can be done with any test
 model as they all have it.
 
 #DOGEN masd.injection.dia.comment=true
 #DOGEN masd.injection.model_modules=masd.cpp_ref_impl.do_not_delete_empty_dirs
 #DOGEN masd.injection.input_technical_space=cpp
 #DOGEN masd.injection.reference=cpp.builtins
+#DOGEN masd.injection.reference=masd
 #DOGEN masd.extraction.delete_extra_files=true
 #DOGEN masd.extraction.delete_empty_directories=false
 #DOGEN masd.extraction.ignore_files_matching_regex=.*/expected_ignore.*

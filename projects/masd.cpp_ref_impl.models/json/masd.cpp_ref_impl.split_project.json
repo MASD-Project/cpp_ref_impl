@@ -6,6 +6,7 @@
     "masd.injection.reference": "cpp.builtins",
     "masd.injection.reference": "cpp.std",
     "masd.injection.reference": "cpp.boost",
+    "masd.injection.reference": "masd",
     "masd.generation.cpp_headers_output_directory": "public_headers",
     "masd.extraction.delete_extra_files": "true",
     "masd.extraction.delete_empty_directories": "true",

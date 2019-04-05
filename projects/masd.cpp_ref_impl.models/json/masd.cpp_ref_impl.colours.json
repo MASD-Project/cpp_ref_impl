@@ -5,6 +5,7 @@
     "masd.injection.reference": "cpp.builtins",
     "masd.injection.reference": "cpp.std",
     "masd.injection.reference": "cpp.boost",
+    "masd.injection.reference": "masd",
     "masd.annotations.profile": "dogen"
   },
   "elements": [
