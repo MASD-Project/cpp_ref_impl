@@ -16,7 +16,8 @@
     "masd.generation.cpp.visual_studio.project.enabled": "false",
     "masd.generation.cpp.visual_studio.solution.enabled": "false",
     "masd.annotations.profile": "dogen",
-    "masd.generation.cpp.tests.enabled": "true"
+    "masd.generation.cpp.tests.enabled": "true",
+    "masd.generation.decoration.marker_name": "masd.basic"
   },
   "elements": [
     {
