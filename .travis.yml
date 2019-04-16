@@ -60,7 +60,7 @@ matrix:
     - os: linux
       compiler: clang
       env: BUILD_TYPE=Debug COMPILER="clang"
-      env: coverage=1 configuration=Debug compiler="clang7" generator="Ninja" build_group="Continuous"
+      env: coverage=1 configuration=Debug compiler="clang8" generator="Ninja" build_group="Continuous"
 
 addons:
   apt:
