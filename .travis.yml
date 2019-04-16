@@ -56,7 +56,7 @@ matrix:
     #
     - os: linux
       compiler: clang
-      env: configuration=Release compiler="clang7" generator="Ninja" build_group="Continuous"
+      env: configuration=Release compiler="clang8" generator="Ninja" build_group="Continuous"
     - os: linux
       compiler: clang
       env: BUILD_TYPE=Debug COMPILER="clang"
