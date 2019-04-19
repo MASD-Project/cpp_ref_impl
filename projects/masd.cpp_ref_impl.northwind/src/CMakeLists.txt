@@ -32,11 +32,14 @@ file(GLOB_RECURSE odb_files RELATIVE
    "${CMAKE_CURRENT_SOURCE_DIR}/*.cxx")
 set(files ${files} ${odb_files})
 
-add_library(masd_cpp_ref_impl_northwind STATIC ${files})
+add_library(masd_cpp_ref_impl_northwind ${files})
 set_target_properties(masd_cpp_ref_impl_northwind PROPERTIES
     OUTPUT_NAME masd_cpp_ref_impl_northwind)
 
-install(TARGETS masd_cpp_ref_impl_northwind ARCHIVE DESTINATION lib COMPONENT libraries)
+install(TARGETS masd_cpp_ref_impl_northwind
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+    COMPONENT libraries)
 
 #
 # ODB Executable Targets

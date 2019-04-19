@@ -22,8 +22,11 @@ file(GLOB_RECURSE files RELATIVE
     "${CMAKE_CURRENT_SOURCE_DIR}/"
     "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
 
-add_library(masd_cpp_ref_impl_enable_facet_types STATIC ${files})
+add_library(masd_cpp_ref_impl_enable_facet_types ${files})
 set_target_properties(masd_cpp_ref_impl_enable_facet_types PROPERTIES
     OUTPUT_NAME masd_cpp_ref_impl_enable_facet_types)
 
-install(TARGETS masd_cpp_ref_impl_enable_facet_types ARCHIVE DESTINATION lib COMPONENT libraries)
+install(TARGETS masd_cpp_ref_impl_enable_facet_types
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+    COMPONENT libraries)

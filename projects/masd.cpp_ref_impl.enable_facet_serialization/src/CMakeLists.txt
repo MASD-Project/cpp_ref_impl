@@ -22,8 +22,11 @@ file(GLOB_RECURSE files RELATIVE
     "${CMAKE_CURRENT_SOURCE_DIR}/"
     "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
 
-add_library(masd_cpp_ref_impl_enable_facet_serialization STATIC ${files})
+add_library(masd_cpp_ref_impl_enable_facet_serialization ${files})
 set_target_properties(masd_cpp_ref_impl_enable_facet_serialization PROPERTIES
     OUTPUT_NAME masd_cpp_ref_impl_enable_facet_serialization)
 
-install(TARGETS masd_cpp_ref_impl_enable_facet_serialization ARCHIVE DESTINATION lib COMPONENT libraries)
+install(TARGETS masd_cpp_ref_impl_enable_facet_serialization
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+    COMPONENT libraries)

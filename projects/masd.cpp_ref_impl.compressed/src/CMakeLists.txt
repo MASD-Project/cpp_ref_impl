@@ -22,8 +22,11 @@ file(GLOB_RECURSE files RELATIVE
     "${CMAKE_CURRENT_SOURCE_DIR}/"
     "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
 
-add_library(masd_cpp_ref_impl_compressed STATIC ${files})
+add_library(masd_cpp_ref_impl_compressed ${files})
 set_target_properties(masd_cpp_ref_impl_compressed PROPERTIES
     OUTPUT_NAME masd_cpp_ref_impl_compressed)
 
-install(TARGETS masd_cpp_ref_impl_compressed ARCHIVE DESTINATION lib COMPONENT libraries)
+install(TARGETS masd_cpp_ref_impl_compressed
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+    COMPONENT libraries)

@@ -22,8 +22,11 @@ file(GLOB_RECURSE files RELATIVE
     "${CMAKE_CURRENT_SOURCE_DIR}/"
     "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
 
-add_library(masd_cpp_ref_impl_two_layers_with_objects STATIC ${files})
+add_library(masd_cpp_ref_impl_two_layers_with_objects ${files})
 set_target_properties(masd_cpp_ref_impl_two_layers_with_objects PROPERTIES
     OUTPUT_NAME masd_cpp_ref_impl_two_layers_with_objects)
 
-install(TARGETS masd_cpp_ref_impl_two_layers_with_objects ARCHIVE DESTINATION lib COMPONENT libraries)
+install(TARGETS masd_cpp_ref_impl_two_layers_with_objects
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+    COMPONENT libraries)
