@@ -282,7 +282,7 @@
 #DOGEN masd.generation.cpp.msbuild.enabled=false
 #DOGEN masd.generation.cpp.visual_studio.project.enabled=false
 #DOGEN masd.generation.cpp.visual_studio.solution.enabled=false
-#DOGEN masd.variability.profile=dogen
+#DOGEN masd.variability.profile=masd.dogen2
 #DOGEN masd.generation.cpp.tests.enabled=true
 #DOGEN masd.generation.decoration.marker_name=masd.basic#</dia:string>
           </dia:attribute>

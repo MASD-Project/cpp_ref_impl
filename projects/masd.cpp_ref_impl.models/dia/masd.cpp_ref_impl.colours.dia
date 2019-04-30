@@ -109,7 +109,7 @@ as possible, so we can evaluate how they work together.
 #DOGEN masd.injection.dia.comment=true
 #DOGEN masd.injection.reference=cpp.builtins
 #DOGEN masd.injection.reference=masd
-#DOGEN masd.variability.profile=dogen#</dia:string>
+#DOGEN masd.variability.profile=masd.dogen2#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="monospace" style="0" name="Courier"/>

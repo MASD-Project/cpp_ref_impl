@@ -6,7 +6,7 @@
     "masd.injection.reference": "cpp.std",
     "masd.injection.reference": "cpp.boost",
     "masd.injection.reference": "masd",
-    "masd.variability.profile": "dogen"
+    "masd.variability.profile": "masd.dogen2"
   },
   "elements": [
     {
