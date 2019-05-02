@@ -257,7 +257,7 @@
     {
       "name": "some_service",
       "stereotypes": [
-        "masd::handcrafted"
+        "masd::handcrafted::typeable"
       ],
       "fallback_element_type": "masd::object",
       "attributes": [

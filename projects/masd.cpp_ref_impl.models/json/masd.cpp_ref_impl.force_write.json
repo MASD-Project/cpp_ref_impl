@@ -34,7 +34,7 @@
       "name": "changed_handcrafted",
       "documentation": "This class is handcrafted. A new attribute was added after initial generation.\n",
       "stereotypes": [
-        "masd::handcrafted"
+        "masd::handcrafted::typeable"
       ],
       "fallback_element_type": "masd::object",
       "attributes": [

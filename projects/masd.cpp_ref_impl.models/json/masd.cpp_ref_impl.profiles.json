@@ -10,10 +10,6 @@
   },
   "elements": [
     {
-      "name": "composable",
-      "fallback_element_type": "masd::module"
-    },
-    {
       "name": "base",
       "documentation": "The base layer profiles are designed to be applied first.\nTheir objective is to set the initial state from which\nother layers can then configure features.\n",
       "tagged_values": {
@@ -392,6 +388,71 @@
       "attributes": [
         {
           "name": "masd.generation.cpp.tests.enabled",
+          "type": "",
+          "value": "false",
+          "tagged_values": {
+            "masd.variability.archetype_location.kernel": "masd",
+            "masd.variability.archetype_location.backend": "masd.generation.cpp",
+            "masd.variability.template_kind": "instance"
+          }
+        }
+      ]
+    },
+    {
+      "name": "composable",
+      "fallback_element_type": "masd::module"
+    },
+    {
+      "name": "composable::handcrafted",
+      "parents": [
+        "base::disable_all_facets"
+      ],
+      "documentation": "Base profile for model elements that are manually generated.\n",
+      "stereotypes": [
+        "masd::variability::profile_template"
+      ],
+      "tagged_values": {
+        "masd.variability.binding_point": "element"
+      },
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "composable::handcrafted_typeable",
+      "parents": [
+        "composable::handcrafted"
+      ],
+      "documentation": "Configuration for model elements that are generated manually by the user.\n",
+      "stereotypes": [
+        "masd::variability::profile_template"
+      ],
+      "tagged_values": {
+        "masd.variability.binding_point": "element",
+        "masd.variability.labels": "masd::handcrafted::typeable"
+      },
+      "fallback_element_type": "masd::object",
+      "attributes": [
+        {
+          "name": "masd.generation.cpp.types.enabled",
+          "type": "",
+          "value": "true",
+          "tagged_values": {
+            "masd.variability.archetype_location.kernel": "masd",
+            "masd.variability.archetype_location.backend": "masd.generation.cpp",
+            "masd.variability.template_kind": "instance"
+          }
+        },
+        {
+          "name": "masd.generation.cpp.types.overwrite",
+          "type": "",
+          "value": "false",
+          "tagged_values": {
+            "masd.variability.archetype_location.kernel": "masd",
+            "masd.variability.archetype_location.backend": "masd.generation.cpp",
+            "masd.variability.template_kind": "instance"
+          }
+        },
+        {
+          "name": "masd.generation.cpp.types.forward_declarations.enabled",
           "type": "",
           "value": "false",
           "tagged_values": {

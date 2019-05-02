@@ -65,22 +65,22 @@
   <dia:layer name="Background" visible="true" active="true">
     <dia:object type="UML - Note" version="0" id="O0">
       <dia:attribute name="obj_pos">
-        <dia:point val="76,-136"/>
+        <dia:point val="75,-140"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="75.95,-136.05;102.745,-113.45"/>
+        <dia:rectangle val="74.95,-140.05;106.365,-115.85"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="76,-136"/>
+        <dia:point val="75,-140"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="26.695"/>
+        <dia:real val="31.315000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="22.500000000000004"/>
+        <dia:real val="24.100000000000005"/>
       </dia:attribute>
       <dia:attribute name="line_width">
         <dia:real val="0.10000000000000001"/>
@@ -131,7 +131,7 @@ It's objective is to test Dogen integration with ODB.
             <dia:real val="0.80000000000000004"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="76.35,-134.755"/>
+            <dia:point val="75.35,-138.755"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -4177,7 +4177,7 @@ It's objective is to test Dogen integration with ODB.
         <dia:point val="118.355,-107.6"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="117.605,-108.35;145.572,-100.2"/>
+        <dia:rectangle val="117.605,-108.35;145.573,-100.2"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -4390,7 +4390,7 @@ It's objective is to test Dogen integration with ODB.
         <dia:point val="157.565,-92"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="156.815,-98.0004;162.572,-91.2"/>
+        <dia:rectangle val="156.815,-98.0004;162.573,-91.2"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -4461,7 +4461,7 @@ It's objective is to test Dogen integration with ODB.
         <dia:point val="158.988,-106.6"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="158.238,-107.35;162.572,-100.249"/>
+        <dia:rectangle val="158.238,-107.35;162.573,-100.249"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>

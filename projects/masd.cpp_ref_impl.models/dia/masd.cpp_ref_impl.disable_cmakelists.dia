@@ -65,16 +65,16 @@
   <dia:layer name="Background" visible="true" active="true">
     <dia:object type="UML - LargePackage" version="0" id="O0">
       <dia:attribute name="obj_pos">
-        <dia:point val="0,-43"/>
+        <dia:point val="6.07143,-42.4286"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-0.05,-44.05;29.05,-29.95"/>
+        <dia:rectangle val="6.02143,-43.4786;35.1214,-29.3786"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="0,-43"/>
+        <dia:point val="6.07143,-42.4286"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="29"/>
@@ -103,13 +103,13 @@
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O1">
       <dia:attribute name="obj_pos">
-        <dia:point val="9.0337,-38.75"/>
+        <dia:point val="15.1051,-38.1786"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="8.9837,-38.8;18.4387,-35.1"/>
+        <dia:rectangle val="15.0551,-38.2286;24.5101,-34.5286"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="9.0337,-38.75"/>
+        <dia:point val="15.1051,-38.1786"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="9.3550000000000004"/>
@@ -261,22 +261,22 @@
     </dia:object>
     <dia:object type="UML - Note" version="0" id="O2">
       <dia:attribute name="obj_pos">
-        <dia:point val="-31,-43"/>
+        <dia:point val="-28,-43"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-31.05,-43.05;-2.33,-30.05"/>
+        <dia:rectangle val="-28.05,-43.05;2.595,-28.45"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="-31,-43"/>
+        <dia:point val="-28,-43"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="28.620000000000001"/>
+        <dia:real val="30.545000000000002"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="12.9"/>
+        <dia:real val="14.500000000000002"/>
       </dia:attribute>
       <dia:attribute name="line_width">
         <dia:real val="0.10000000000000001"/>
@@ -315,7 +315,7 @@
             <dia:real val="0.80000000000000004"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="-30.65,-41.755"/>
+            <dia:point val="-27.65,-41.755"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>

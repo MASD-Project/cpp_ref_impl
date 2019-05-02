@@ -596,7 +596,7 @@
       "name": "service",
       "documentation": "Type is a service.\n",
       "stereotypes": [
-        "masd::handcrafted"
+        "masd::handcrafted::typeable"
       ],
       "fallback_element_type": "masd::object",
       "attributes": [
@@ -610,7 +610,7 @@
       "name": "some_type",
       "documentation": "Type is non-generatable.\n",
       "stereotypes": [
-        "masd::handcrafted"
+        "masd::handcrafted::typeable"
       ],
       "tagged_values": {
         "masd.generation.cpp.hash.enabled": "true",
@@ -1069,14 +1069,14 @@
     {
       "name": "service_interface",
       "stereotypes": [
-        "masd::handcrafted"
+        "masd::handcrafted::typeable"
       ],
       "fallback_element_type": "masd::object"
     },
     {
       "name": "a_service",
       "stereotypes": [
-        "masd::handcrafted"
+        "masd::handcrafted::typeable"
       ],
       "fallback_element_type": "masd::object"
     },

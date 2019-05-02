@@ -65,22 +65,22 @@
   <dia:layer name="Background" visible="true" active="true">
     <dia:object type="UML - Note" version="0" id="O0">
       <dia:attribute name="obj_pos">
-        <dia:point val="0,-14"/>
+        <dia:point val="-9,-13"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-0.05,-14.05;23.28,-0.25"/>
+        <dia:rectangle val="-9.05,-13.05;22.365,1.55"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="0,-14"/>
+        <dia:point val="-9,-13"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="23.230000000000004"/>
+        <dia:real val="31.315000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="13.700000000000001"/>
+        <dia:real val="14.500000000000002"/>
       </dia:attribute>
       <dia:attribute name="line_width">
         <dia:real val="0.10000000000000001"/>
@@ -119,7 +119,7 @@ as possible, so we can evaluate how they work together.
             <dia:real val="0.80000000000000004"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="0.35,-12.755"/>
+            <dia:point val="-8.65,-11.755"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>

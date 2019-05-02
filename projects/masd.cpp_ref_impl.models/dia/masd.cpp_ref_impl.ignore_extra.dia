@@ -65,22 +65,22 @@
   <dia:layer name="Background" visible="true" active="true">
     <dia:object type="UML - Note" version="0" id="O0">
       <dia:attribute name="obj_pos">
-        <dia:point val="-40.35,-57.2929"/>
+        <dia:point val="-36,-57"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-40.4,-57.3429;-12.065,-39.5429"/>
+        <dia:rectangle val="-36.05,-57.05;-4.635,-38.45"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="-40.35,-57.2929"/>
+        <dia:point val="-36,-57"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="28.235000000000003"/>
+        <dia:real val="31.315000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="17.700000000000003"/>
+        <dia:real val="18.500000000000004"/>
       </dia:attribute>
       <dia:attribute name="line_width">
         <dia:real val="0.10000000000000001"/>
@@ -124,7 +124,7 @@
             <dia:real val="0.80000000000000004"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="-40,-56.0479"/>
+            <dia:point val="-35.65,-55.755"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -137,13 +137,13 @@
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O1">
       <dia:attribute name="obj_pos">
-        <dia:point val="-8.35,-57.2929"/>
+        <dia:point val="-2,-57"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-8.4,-57.3429;0.67,-54.4429"/>
+        <dia:rectangle val="-2.05,-57.05;7.02,-54.15"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="-8.35,-57.2929"/>
+        <dia:point val="-2,-57"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="8.9700000000000006"/>

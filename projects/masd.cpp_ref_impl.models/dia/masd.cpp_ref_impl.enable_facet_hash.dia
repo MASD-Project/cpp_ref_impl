@@ -65,16 +65,16 @@
   <dia:layer name="Background" visible="true" active="true">
     <dia:object type="UML - LargePackage" version="0" id="O0">
       <dia:attribute name="obj_pos">
-        <dia:point val="2,-41"/>
+        <dia:point val="8,-41"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="1.95,-42.05;32.05,-27.95"/>
+        <dia:rectangle val="7.95,-42.05;38.05,-27.95"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="2,-41"/>
+        <dia:point val="8,-41"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="30"/>
@@ -103,13 +103,13 @@
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O1">
       <dia:attribute name="obj_pos">
-        <dia:point val="11.0337,-36.75"/>
+        <dia:point val="17.0337,-36.75"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="10.9837,-36.8;20.4387,-33.1"/>
+        <dia:rectangle val="16.9837,-36.8;26.4387,-33.1"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="11.0337,-36.75"/>
+        <dia:point val="17.0337,-36.75"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="9.3550000000000004"/>
@@ -264,7 +264,7 @@
         <dia:point val="-29,-41"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-29.05,-41.05;-0.715,-28.05"/>
+        <dia:rectangle val="-29.05,-41.05;5.445,-26.45"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -273,10 +273,10 @@
         <dia:point val="-29,-41"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="28.235000000000003"/>
+        <dia:real val="34.394999999999996"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="12.9"/>
+        <dia:real val="14.500000000000002"/>
       </dia:attribute>
       <dia:attribute name="line_width">
         <dia:real val="0.10000000000000001"/>

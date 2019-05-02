@@ -49,7 +49,7 @@
     {
       "name": "palette_test_two_one",
       "stereotypes": [
-        "masd::handcrafted"
+        "masd::handcrafted::typeable"
       ],
       "fallback_element_type": "masd::object"
     },
@@ -116,7 +116,7 @@
     {
       "name": "package::palette_test_two_one",
       "stereotypes": [
-        "masd::handcrafted"
+        "masd::handcrafted::typeable"
       ],
       "fallback_element_type": "masd::object"
     },

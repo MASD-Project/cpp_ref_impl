@@ -65,22 +65,22 @@
   <dia:layer name="Background" visible="true" active="true">
     <dia:object type="UML - Note" version="0" id="O0">
       <dia:attribute name="obj_pos">
-        <dia:point val="-26,-42"/>
+        <dia:point val="-23,-42"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-26.05,-42.05;2.285,-21.85"/>
+        <dia:rectangle val="-23.05,-42.05;8.365,-20.25"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="-26,-42"/>
+        <dia:point val="-23,-42"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="28.235000000000003"/>
+        <dia:real val="31.315000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="20.100000000000005"/>
+        <dia:real val="21.700000000000003"/>
       </dia:attribute>
       <dia:attribute name="line_width">
         <dia:real val="0.10000000000000001"/>
@@ -128,7 +128,7 @@ and then setting it back to true.
             <dia:real val="0.80000000000000004"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="-25.65,-40.755"/>
+            <dia:point val="-22.65,-40.755"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -141,13 +141,13 @@ and then setting it back to true.
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O1">
       <dia:attribute name="obj_pos">
-        <dia:point val="6,-42"/>
+        <dia:point val="11,-42"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="5.95,-42.05;15.02,-39.15"/>
+        <dia:rectangle val="10.95,-42.05;20.02,-39.15"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="6,-42"/>
+        <dia:point val="11,-42"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="8.9700000000000006"/>
