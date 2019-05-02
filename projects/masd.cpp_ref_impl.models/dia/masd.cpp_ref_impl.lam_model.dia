@@ -285,7 +285,7 @@
 #DOGEN masd.generation.cpp.visual_studio.solution.enabled=false
 #DOGEN masd.variability.profile=masd.cpp_ref_impl.profiles.base.default_profile
 #DOGEN masd.generation.cpp.tests.enabled=true
-#DOGEN masd.generation.decoration.marker_name=masd.basic#</dia:string>
+#DOGEN masd.generation.decoration.marker_name=masd.cpp_ref_impl.profiles.basic#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="monospace" style="0" name="Courier"/>
