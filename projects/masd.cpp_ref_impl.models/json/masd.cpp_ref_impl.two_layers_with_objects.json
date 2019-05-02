@@ -7,6 +7,7 @@
     "masd.injection.reference": "cpp.std",
     "masd.injection.reference": "cpp.boost",
     "masd.injection.reference": "masd",
+    "masd.injection.reference": "masd.cpp_ref_impl.profiles",
     "masd.extraction.delete_extra_files": "true",
     "masd.extraction.delete_empty_directories": "true",
     "masd.generation.cpp.enabled": "true",
@@ -15,7 +16,7 @@
     "masd.generation.cpp.visual_studio.project.enabled": "false",
     "masd.generation.cpp.visual_studio.solution.enabled": "false",
     "masd.generation.csharp.enabled": "false",
-    "masd.variability.profile": "masd.dogen2"
+    "masd.variability.profile": "masd.cpp_ref_impl.profiles.base.default_profile"
   },
   "elements": [
     {

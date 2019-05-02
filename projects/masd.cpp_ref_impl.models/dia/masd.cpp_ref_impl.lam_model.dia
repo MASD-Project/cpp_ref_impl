@@ -273,6 +273,7 @@
 #DOGEN masd.injection.reference=cpp.std
 #DOGEN masd.injection.reference=cpp.boost
 #DOGEN masd.injection.reference=masd
+#DOGEN masd.injection.reference=masd.cpp_ref_impl.profiles
 #DOGEN masd.injection.input_technical_space=agnostic
 #DOGEN masd.extraction.delete_extra_files=true
 #DOGEN masd.extraction.delete_empty_directories=true
@@ -282,7 +283,7 @@
 #DOGEN masd.generation.cpp.msbuild.enabled=false
 #DOGEN masd.generation.cpp.visual_studio.project.enabled=false
 #DOGEN masd.generation.cpp.visual_studio.solution.enabled=false
-#DOGEN masd.variability.profile=masd.dogen2
+#DOGEN masd.variability.profile=masd.cpp_ref_impl.profiles.base.default_profile
 #DOGEN masd.generation.cpp.tests.enabled=true
 #DOGEN masd.generation.decoration.marker_name=masd.basic#</dia:string>
           </dia:attribute>
