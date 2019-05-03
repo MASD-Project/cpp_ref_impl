@@ -404,9 +404,6 @@
     },
     {
       "name": "composable::handcrafted",
-      "parents": [
-        "base::disable_all_facets"
-      ],
       "documentation": "Base profile for model elements that are manually generated.\n",
       "stereotypes": [
         "masd::variability::profile_template"
@@ -414,7 +411,19 @@
       "tagged_values": {
         "masd.variability.binding_point": "element"
       },
-      "fallback_element_type": "masd::object"
+      "fallback_element_type": "masd::object",
+      "attributes": [
+        {
+          "name": "masd.variability.profile",
+          "type": "",
+          "value": "masd.cpp_ref_impl.profiles.base.disable_all_facets",
+          "tagged_values": {
+            "masd.variability.archetype_location.kernel": "masd",
+            "masd.variability.archetype_location.backend": "masd.variability",
+            "masd.variability.template_kind": "instance"
+          }
+        }
+      ]
     },
     {
       "name": "composable::handcrafted_typeable",
