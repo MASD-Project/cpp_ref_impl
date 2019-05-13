@@ -316,7 +316,7 @@ changed in class changed_generated and delete the class newly_generated.
         <dia:string>#changed_handcrafted#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#masd::handcrafted::typeable#</dia:string>
+        <dia:string>#cpp_ref_impl::handcrafted::typeable#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#This class is handcrafted. A new attribute was added after initial generation.#</dia:string>
@@ -609,7 +609,7 @@ changes.#</dia:string>
         <dia:string>#unchanged_handcrafted#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#masd::handcrafted::typeable#</dia:string>
+        <dia:string>#cpp_ref_impl::handcrafted::typeable#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#This class is handcrafted.#</dia:string>
@@ -719,7 +719,7 @@ changes.#</dia:string>
         <dia:string>#handcrafted_new#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#masd::handcrafted::typeable#</dia:string>
+        <dia:string>#cpp_ref_impl::handcrafted::typeable#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#This class is handcrafted but not yet generated. If you see it in git, do not check it in.#</dia:string>

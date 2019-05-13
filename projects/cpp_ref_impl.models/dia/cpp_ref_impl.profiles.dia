@@ -2702,13 +2702,13 @@ other layers can then configure features.
         <dia:point val="77.3571,61.2143"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="77.3071,61.1643;107.937,64.8643"/>
+        <dia:rectangle val="77.3071,61.1643;106.012,64.8643"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="77.3571,61.2143"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="30.530000000000001"/>
+        <dia:real val="28.605"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="3.6000000000000001"/>
@@ -2862,7 +2862,7 @@ other layers can then configure features.
         <dia:string>#Configuration for model elements that are generated manually by the user.
 
 #DOGEN masd.variability.binding_point=element
-#DOGEN masd.variability.labels=masd::handcrafted::typeable#</dia:string>
+#DOGEN masd.variability.labels=cpp_ref_impl::handcrafted::typeable#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>

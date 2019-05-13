@@ -304,7 +304,7 @@
         <dia:string>#changed_handcrafted#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#masd::handcrafted::typeable#</dia:string>
+        <dia:string>#cpp_ref_impl::handcrafted::typeable#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#This class is handcrafted. A new attribute was added after initial generation.#</dia:string>

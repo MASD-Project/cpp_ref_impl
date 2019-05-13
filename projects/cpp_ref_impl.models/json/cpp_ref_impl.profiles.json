@@ -436,7 +436,7 @@
       ],
       "tagged_values": {
         "masd.variability.binding_point": "element",
-        "masd.variability.labels": "masd::handcrafted::typeable"
+        "masd.variability.labels": "cpp_ref_impl::handcrafted::typeable"
       },
       "fallback_element_type": "masd::object",
       "attributes": [

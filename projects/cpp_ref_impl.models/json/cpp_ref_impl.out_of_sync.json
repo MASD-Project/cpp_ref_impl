@@ -37,7 +37,7 @@
       "name": "changed_handcrafted",
       "documentation": "This class is handcrafted. A new attribute was added after initial generation.\n",
       "stereotypes": [
-        "masd::handcrafted::typeable"
+        "cpp_ref_impl::handcrafted::typeable"
       ],
       "fallback_element_type": "masd::object",
       "attributes": [
@@ -68,7 +68,7 @@
       "name": "unchanged_handcrafted",
       "documentation": "This class is handcrafted.\n",
       "stereotypes": [
-        "masd::handcrafted::typeable"
+        "cpp_ref_impl::handcrafted::typeable"
       ],
       "fallback_element_type": "masd::object"
     },
@@ -76,7 +76,7 @@
       "name": "handcrafted_new",
       "documentation": "This class is handcrafted but not yet generated. If you see it in git, do not check it in.\n",
       "stereotypes": [
-        "masd::handcrafted::typeable"
+        "cpp_ref_impl::handcrafted::typeable"
       ],
       "fallback_element_type": "masd::object"
     }

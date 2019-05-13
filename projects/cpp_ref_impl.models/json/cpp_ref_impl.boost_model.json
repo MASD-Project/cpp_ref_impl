@@ -130,7 +130,7 @@
     {
       "name": "some_service",
       "stereotypes": [
-        "masd::handcrafted::typeable"
+        "cpp_ref_impl::handcrafted::typeable"
       ],
       "fallback_element_type": "masd::object",
       "attributes": [
