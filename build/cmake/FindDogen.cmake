@@ -20,7 +20,7 @@
 #
 # Set CMAKE_PROGRAM_PATH as required
 #
-find_program(DOGEN_CLI_EXECUTABLE NAMES masd.dogen.cli
+find_program(DOGEN_CLI_EXECUTABLE NAMES dogen.cli
     HINTS ${CMAKE_BINARY_DIR}/stage/bin)
 
 if (DOGEN_CLI_EXECUTABLE)

@@ -247,29 +247,29 @@ endif()
 include_directories(
     # Split project
     ${CMAKE_SOURCE_DIR}/projects/public_headers
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.directory_settings/cpp_backend/id
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.boost_model/include
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.compressed/include
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.cpp_98/include
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.cpp_model/include
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.disable_cmakelists/include
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.disable_facet_folders/include
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.enable_facet_hash/include
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.enable_facet_io/include
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.enable_facet_serialization/include
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.enable_facet_types/include
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.flat_directory_mode/include
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.lam_model/cpp/include
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.seam/include
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.std_model/include
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.test_model_sanitizer/include
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.two_layers_with_objects/include
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.delete_extra/include
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.do_not_delete_empty_dirs/include
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.ignore_extra/include
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.force_write/include
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.out_of_sync/include
-    ${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.utility/include
+    ${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.directory_settings/cpp_backend/id
+    ${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.boost_model/include
+    ${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.compressed/include
+    ${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.cpp_98/include
+    ${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.cpp_model/include
+    ${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.disable_cmakelists/include
+    ${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.disable_facet_folders/include
+    ${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.enable_facet_hash/include
+    ${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.enable_facet_io/include
+    ${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.enable_facet_serialization/include
+    ${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.enable_facet_types/include
+    ${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.flat_directory_mode/include
+    ${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.lam_model/cpp/include
+    ${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.seam/include
+    ${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.std_model/include
+    ${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.test_model_sanitizer/include
+    ${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.two_layers_with_objects/include
+    ${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.delete_extra/include
+    ${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.do_not_delete_empty_dirs/include
+    ${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.ignore_extra/include
+    ${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.force_write/include
+    ${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.out_of_sync/include
+    ${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.utility/include
     )
 
 #
@@ -277,34 +277,34 @@ include_directories(
 #
 if(ODB_LIBODB_FOUND)
     message(STATUS "Adding ODB feature test project")
-    include_directories(${CMAKE_SOURCE_DIR}/projects/masd.cpp_ref_impl.northwind/include)
-    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.northwind)
+    include_directories(${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.northwind/include)
+    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.northwind)
 endif()
 
 #
 # add projects
 #
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.directory_settings/cpp_backend)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.boost_model)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.compressed)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.cpp_98)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.cpp_model)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.disable_facet_folders)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.enable_facet_hash)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.enable_facet_io)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.enable_facet_serialization)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.enable_facet_types)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.flat_directory_mode)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.lam_model/cpp)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.models)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.seam)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.split_project/src)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.std_model)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.test_model_sanitizer/tests)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.two_layers_with_objects)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.delete_extra)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.do_not_delete_empty_dirs)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.ignore_extra)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.force_write)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.out_of_sync)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/masd.cpp_ref_impl.utility)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.directory_settings/cpp_backend)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.boost_model)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.compressed)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.cpp_98)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.cpp_model)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.disable_facet_folders)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.enable_facet_hash)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.enable_facet_io)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.enable_facet_serialization)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.enable_facet_types)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.flat_directory_mode)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.lam_model/cpp)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.models)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.seam)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.split_project/src)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.std_model)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.test_model_sanitizer/tests)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.two_layers_with_objects)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.delete_extra)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.do_not_delete_empty_dirs)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.ignore_extra)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.force_write)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.out_of_sync)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.utility)

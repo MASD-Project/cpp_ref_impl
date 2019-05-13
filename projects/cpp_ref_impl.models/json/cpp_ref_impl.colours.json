@@ -1,0 +1,180 @@
+{
+  "documentation": "Exercises all stereotypes that have an impact in colour,\nso we can see how the entire palette looks like.\n\nThis model does not need to be code generated, though it\nshould remain a valid Dogen model. It must be updated with\nany changes to the colour scheme. To make a change, first\nupdate the colour.py script then run it in this model. If\nit looks good, then run it against all other dogen models.\n\nWe should try to keep all elements in one screen as much\nas possible, so we can evaluate how they work together.\n",
+  "tagged_values": {
+    "masd.injection.dia.comment": "true"
+    "masd.injection.reference": "cpp.builtins",
+    "masd.injection.reference": "cpp.std",
+    "masd.injection.reference": "cpp.boost",
+    "masd.injection.reference": "masd",
+    "masd.injection.reference": "cpp_ref_impl.profiles",
+    "masd.variability.profile": "cpp_ref_impl.profiles.base.default_profile"
+  },
+  "elements": [
+    {
+      "name": "palette_test_three_one",
+      "stereotypes": [
+        "masd::orm::object"
+      ],
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "palette_test_three_two",
+      "stereotypes": [
+        "masd::orm::value"
+      ],
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "palette_test_one_one",
+      "stereotypes": [
+        "masd::object"
+      ],
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "palette_test_one_two",
+      "stereotypes": [
+        "masd::primitive"
+      ],
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "package",
+      "fallback_element_type": "masd::module"
+    },
+    {
+      "name": "package::palette_test_one_six",
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "palette_test_two_one",
+      "stereotypes": [
+        "masd::handcrafted::typeable"
+      ],
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "palette_test_two_two",
+      "stereotypes": [
+        "masd::header_only"
+      ],
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "palette_test_two_three",
+      "stereotypes": [
+        "masd::interface"
+      ],
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "palette_test_one_three",
+      "stereotypes": [
+        "masd::enumeration"
+      ],
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "palette_test_one_four",
+      "stereotypes": [
+        "masd::exception"
+      ],
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "palette_test_one_six",
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "package::palette_test_one_one",
+      "stereotypes": [
+        "masd::object"
+      ],
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "package::palette_test_one_two",
+      "stereotypes": [
+        "masd::primitive"
+      ],
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "package::palette_test_one_three",
+      "stereotypes": [
+        "masd::enumeration"
+      ],
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "package::palette_test_one_four",
+      "stereotypes": [
+        "masd::exception"
+      ],
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "package::palette_test_two_one",
+      "stereotypes": [
+        "masd::handcrafted::typeable"
+      ],
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "package::palette_test_two_two",
+      "stereotypes": [
+        "masd::header_only"
+      ],
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "package::palette_test_two_three",
+      "stereotypes": [
+        "masd::interface"
+      ],
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "package::palette_test_three_one",
+      "stereotypes": [
+        "masd::orm::object"
+      ],
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "package::palette_test_three_two",
+      "stereotypes": [
+        "masd::orm::value"
+      ],
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "palette_test_one_five",
+      "stereotypes": [
+        "masd::object_template"
+      ],
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "package::palette_test_one_five",
+      "stereotypes": [
+        "masd::object_template"
+      ],
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "palette_test_two_four",
+      "stereotypes": [
+        "masd::entry_point"
+      ],
+      "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "package::palette_test_two_four",
+      "stereotypes": [
+        "masd::entry_point"
+      ],
+      "fallback_element_type": "masd::object"
+    }
+  ]
+}
