@@ -94,13 +94,13 @@ BOOST_AUTO_TEST_CASE(casting_valid_enumerations_produces_expected_strings) {
 
 BOOST_AUTO_TEST_CASE(casting_invalid_enumeration_throws) {
 #if BOOST_COMP_GNUC
-#pragma gcc diagnostic push
-#pragma gcc diagnostic ignored "-Werror=conversion"
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wconversion"
 #endif
     using cpp_ref_impl::std_model::enum_with_std_builtin;
     const enum_with_std_builtin r(static_cast<enum_with_std_builtin>(13));
 #if BOOST_COMP_GNUC
-#pragma gcc diagnostic pop
+#pragma GCC diagnostic pop
 #endif
     BOOST_CHECK_THROW(boost::lexical_cast<std::string>(r),
         boost::bad_lexical_cast);
