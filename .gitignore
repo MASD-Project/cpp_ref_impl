@@ -18,6 +18,7 @@ Thumbs.db
 # build directory
 build/output
 
-# cquery
+# cquery, clangd
 .cquery_cached_index
 compile_commands.json
+.clangd
