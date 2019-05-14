@@ -42,8 +42,8 @@ BOOST_AUTO_TEST_SUITE(no_default_ctor_tests)
 
 BOOST_AUTO_TEST_CASE(identical_objects_are_equal) {
     cpp_ref_impl::cpp_98::no_default_ctor_generator g;
-    const auto a(g());
-    const auto b(a);
+    const cpp_ref_impl::cpp_98::no_default_ctor a(g());
+    const cpp_ref_impl::cpp_98::no_default_ctor b(a);
 
     BOOST_CHECK(a == b);
     BOOST_CHECK(b == a);
@@ -52,7 +52,7 @@ BOOST_AUTO_TEST_CASE(identical_objects_are_equal) {
 
 BOOST_AUTO_TEST_CASE(an_object_is_equal_to_itself) {
     cpp_ref_impl::cpp_98::no_default_ctor_generator g;
-    const auto a(g());
+    const cpp_ref_impl::cpp_98::no_default_ctor a(g());
 
     BOOST_CHECK(a == a);
     BOOST_CHECK(!(a != a));
@@ -60,8 +60,8 @@ BOOST_AUTO_TEST_CASE(an_object_is_equal_to_itself) {
 
 BOOST_AUTO_TEST_CASE(distinct_objects_are_unequal) {
     cpp_ref_impl::cpp_98::no_default_ctor_generator g;
-    const auto a(g());
-    const auto b(g());
+    const cpp_ref_impl::cpp_98::no_default_ctor a(g());
+    const cpp_ref_impl::cpp_98::no_default_ctor b(g());
 
     BOOST_CHECK(!(a == b));
     BOOST_CHECK(a != b);
@@ -73,9 +73,9 @@ BOOST_AUTO_TEST_CASE(assigning_an_object_to_itself_results_in_the_same_object) {
 #pragma clang diagnostic ignored "-Wself-assign-overloaded"
 #endif
     cpp_ref_impl::cpp_98::no_default_ctor_generator g;
-    auto a(g());
-    const auto b(a);
-    const auto c(g());
+    cpp_ref_impl::cpp_98::no_default_ctor a(g());
+    const cpp_ref_impl::cpp_98::no_default_ctor b(a);
+    const cpp_ref_impl::cpp_98::no_default_ctor c(g());
 
     a = a;
     BOOST_CHECK(a == b);
@@ -85,24 +85,11 @@ BOOST_AUTO_TEST_CASE(assigning_an_object_to_itself_results_in_the_same_object) {
 #endif
 }
 
-BOOST_AUTO_TEST_CASE(moved_objects_are_equal) {
-    cpp_ref_impl::cpp_98::no_default_ctor_generator g;
-    g();
-    auto a(g());
-    const auto b = cpp_ref_impl::cpp_98::no_default_ctor();
-    const auto c(a);
-    BOOST_CHECK(a != b);
-    BOOST_CHECK(a == c);
-
-    const auto d = std::move(a);
-    BOOST_CHECK(d == c);
-    BOOST_CHECK(d != b);
-}
 
 BOOST_AUTO_TEST_CASE(assigned_objects_are_equal) {
     cpp_ref_impl::cpp_98::no_default_ctor_generator g;
     g();
-    const auto a(g());
+    const cpp_ref_impl::cpp_98::no_default_ctor a(g());
     cpp_ref_impl::cpp_98::no_default_ctor b;
     BOOST_CHECK(a != b);
 
@@ -113,8 +100,8 @@ BOOST_AUTO_TEST_CASE(assigned_objects_are_equal) {
 BOOST_AUTO_TEST_CASE(copy_constructed_objects_are_equal) {
     cpp_ref_impl::cpp_98::no_default_ctor_generator g;
     g();
-    const auto a(g());
-    auto b(a);
+    const cpp_ref_impl::cpp_98::no_default_ctor a(g());
+    cpp_ref_impl::cpp_98::no_default_ctor b(a);
     BOOST_CHECK(a == b);
 
     b = cpp_ref_impl::cpp_98::no_default_ctor();
@@ -123,11 +110,11 @@ BOOST_AUTO_TEST_CASE(copy_constructed_objects_are_equal) {
 
 BOOST_AUTO_TEST_CASE(swapping_objects_results_in_the_expected_state) {
     cpp_ref_impl::cpp_98::no_default_ctor_generator g;
-    const auto a(g());
-    const auto b(g());
+    const cpp_ref_impl::cpp_98::no_default_ctor a(g());
+    const cpp_ref_impl::cpp_98::no_default_ctor b(g());
 
-    auto c(a);
-    auto d(b);
+    cpp_ref_impl::cpp_98::no_default_ctor c(a);
+    cpp_ref_impl::cpp_98::no_default_ctor d(b);
     BOOST_CHECK(c == a);
     BOOST_CHECK(d == b);
 
@@ -138,7 +125,7 @@ BOOST_AUTO_TEST_CASE(swapping_objects_results_in_the_expected_state) {
 
 BOOST_AUTO_TEST_CASE(inserter_operator_produces_valid_json) {
     cpp_ref_impl::cpp_98::no_default_ctor_generator g;
-    const auto a(g());
+    const cpp_ref_impl::cpp_98::no_default_ctor a(g());
     std::stringstream s;
     s << a;
 
@@ -148,7 +135,7 @@ BOOST_AUTO_TEST_CASE(inserter_operator_produces_valid_json) {
 
 BOOST_AUTO_TEST_CASE(xml_roundtrip_produces_the_same_entity) {
     cpp_ref_impl::cpp_98::no_default_ctor_generator g;
-    const auto a(g());
+    const cpp_ref_impl::cpp_98::no_default_ctor a(g());
 
     using namespace boost::archive;
     std::ostringstream os;
@@ -171,7 +158,7 @@ BOOST_AUTO_TEST_CASE(xml_roundtrip_produces_the_same_entity) {
 
 BOOST_AUTO_TEST_CASE(text_roundtrip_produces_the_same_entity) {
     cpp_ref_impl::cpp_98::no_default_ctor_generator g;
-    const auto a(g());
+    const cpp_ref_impl::cpp_98::no_default_ctor a(g());
 
     using namespace boost::archive;
     std::ostringstream os;
@@ -194,7 +181,7 @@ BOOST_AUTO_TEST_CASE(text_roundtrip_produces_the_same_entity) {
 
 BOOST_AUTO_TEST_CASE(binary_roundtrip_produces_the_same_entity) {
     cpp_ref_impl::cpp_98::no_default_ctor_generator g;
-    const auto a(g());
+    const cpp_ref_impl::cpp_98::no_default_ctor a(g());
 
     using namespace boost::archive;
     std::ostringstream os;

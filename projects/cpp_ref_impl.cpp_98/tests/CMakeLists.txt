@@ -29,8 +29,13 @@ file(GLOB_RECURSE files RELATIVE
 
 add_executable(${tests_target_name} ${files})
 
-set_target_properties(${tests_target_name}
-    PROPERTIES OUTPUT_NAME ${tests_binary_name})
+set_target_properties(${tests_target_name} PROPERTIES
+    CXX_STANDARD 98
+    OUTPUT_NAME ${tests_binary_name})
+
+target_compile_options(${tests_target_name} PRIVATE
+    $<$<OR:$<CXX_COMPILER_ID:Clang>,$<CXX_COMPILER_ID:AppleClang>,$<CXX_COMPILER_ID:GNU>>:
+    -Wno-c99-extensions>)
 
 target_link_libraries(${tests_target_name}
     ${lib_target_name}

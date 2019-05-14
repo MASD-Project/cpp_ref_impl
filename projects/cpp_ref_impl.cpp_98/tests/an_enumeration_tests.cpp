@@ -41,7 +41,7 @@ BOOST_AUTO_TEST_SUITE(an_enumeration_tests)
 
 BOOST_AUTO_TEST_CASE(inserter_operator_produces_valid_json) {
     cpp_ref_impl::cpp_98::an_enumeration_generator g;
-    const auto a(g());
+    const cpp_ref_impl::cpp_98::an_enumeration a(g());
     std::stringstream s;
     s << a;
 
@@ -51,7 +51,7 @@ BOOST_AUTO_TEST_CASE(inserter_operator_produces_valid_json) {
 
 BOOST_AUTO_TEST_CASE(xml_roundtrip_produces_the_same_entity) {
     cpp_ref_impl::cpp_98::an_enumeration_generator g;
-    const auto a(g());
+    const cpp_ref_impl::cpp_98::an_enumeration a(g());
 
     using namespace boost::archive;
     std::ostringstream os;
@@ -71,7 +71,7 @@ BOOST_AUTO_TEST_CASE(xml_roundtrip_produces_the_same_entity) {
 
 BOOST_AUTO_TEST_CASE(text_roundtrip_produces_the_same_entity) {
     cpp_ref_impl::cpp_98::an_enumeration_generator g;
-    const auto a(g());
+    const cpp_ref_impl::cpp_98::an_enumeration a(g());
 
     using namespace boost::archive;
     std::ostringstream os;
@@ -91,7 +91,7 @@ BOOST_AUTO_TEST_CASE(text_roundtrip_produces_the_same_entity) {
 
 BOOST_AUTO_TEST_CASE(binary_roundtrip_produces_the_same_entity) {
     cpp_ref_impl::cpp_98::an_enumeration_generator g;
-    const auto a(g());
+    const cpp_ref_impl::cpp_98::an_enumeration a(g());
 
     using namespace boost::archive;
     std::ostringstream os;
