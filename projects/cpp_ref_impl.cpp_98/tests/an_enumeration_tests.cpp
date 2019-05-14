@@ -20,6 +20,7 @@
  */
 #include <string>
 #include <sstream>
+#include <boost/lexical_cast.hpp>
 #include <boost/test/unit_test.hpp>
 #include <boost/serialization/nvp.hpp>
 #include <boost/property_tree/ptree.hpp>
@@ -35,6 +36,7 @@
 #include "cpp_ref_impl.cpp_98/io/an_enumeration_io.hpp"
 #include "cpp_ref_impl.cpp_98/types/an_enumeration.hpp"
 #include "cpp_ref_impl.cpp_98/test_data/an_enumeration_td.hpp"
+#include "cpp_ref_impl.cpp_98/lexical_cast/an_enumeration_lc.hpp"
 #include "cpp_ref_impl.cpp_98/serialization/an_enumeration_ser.hpp"
 
 BOOST_AUTO_TEST_SUITE(an_enumeration_tests)
@@ -47,6 +49,53 @@ BOOST_AUTO_TEST_CASE(inserter_operator_produces_valid_json) {
 
     boost::property_tree::ptree pt;
     BOOST_REQUIRE_NO_THROW(read_json(s, pt));
+}
+
+BOOST_AUTO_TEST_CASE(casting_valid_strings_produces_expected_enumeration) {
+    using cpp_ref_impl::cpp_98::an_enumeration;
+    an_enumeration r;
+
+    r = boost::lexical_cast<an_enumeration>(std::string("invalid"));
+    BOOST_CHECK(r == cpp_ref_impl::cpp_98::invalid);
+    r = boost::lexical_cast<an_enumeration>(std::string("an_enumeration::invalid"));
+    BOOST_CHECK(r == cpp_ref_impl::cpp_98::invalid);
+
+    r = boost::lexical_cast<an_enumeration>(std::string("first"));
+    BOOST_CHECK(r == cpp_ref_impl::cpp_98::first);
+    r = boost::lexical_cast<an_enumeration>(std::string("an_enumeration::first"));
+    BOOST_CHECK(r == cpp_ref_impl::cpp_98::first);
+
+    r = boost::lexical_cast<an_enumeration>(std::string("second"));
+    BOOST_CHECK(r == cpp_ref_impl::cpp_98::second);
+    r = boost::lexical_cast<an_enumeration>(std::string("an_enumeration::second"));
+    BOOST_CHECK(r == cpp_ref_impl::cpp_98::second);
+}
+
+BOOST_AUTO_TEST_CASE(casting_invalid_string_throws) {
+    using cpp_ref_impl::cpp_98::an_enumeration;
+    BOOST_CHECK_THROW(boost::lexical_cast<an_enumeration>(std::string("DOGEN_THIS_IS_INVALID_DOGEN")),
+        boost::bad_lexical_cast);
+}
+
+BOOST_AUTO_TEST_CASE(casting_valid_enumerations_produces_expected_strings) {
+    using cpp_ref_impl::cpp_98::an_enumeration;
+    std::string r;
+
+    r = boost::lexical_cast<std::string>(cpp_ref_impl::cpp_98::invalid);
+    BOOST_CHECK(r == "an_enumeration::invalid");
+
+    r = boost::lexical_cast<std::string>(cpp_ref_impl::cpp_98::first);
+    BOOST_CHECK(r == "an_enumeration::first");
+
+    r = boost::lexical_cast<std::string>(cpp_ref_impl::cpp_98::second);
+    BOOST_CHECK(r == "an_enumeration::second");
+}
+
+BOOST_AUTO_TEST_CASE(casting_invalid_enumeration_throws) {
+    using cpp_ref_impl::cpp_98::an_enumeration;
+    const an_enumeration r(static_cast<an_enumeration>(13));
+    BOOST_CHECK_THROW(boost::lexical_cast<std::string>(r),
+        boost::bad_lexical_cast);
 }
 
 BOOST_AUTO_TEST_CASE(xml_roundtrip_produces_the_same_entity) {

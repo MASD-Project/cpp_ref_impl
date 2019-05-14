@@ -20,6 +20,7 @@
  */
 #include <string>
 #include <sstream>
+#include <boost/lexical_cast.hpp>
 #include <boost/test/unit_test.hpp>
 #include <boost/serialization/nvp.hpp>
 #include <boost/property_tree/ptree.hpp>
@@ -36,6 +37,7 @@
 #include "cpp_ref_impl.std_model/types/enum_with_std_builtin.hpp"
 #include "cpp_ref_impl.std_model/hash/enum_with_std_builtin_hash.hpp"
 #include "cpp_ref_impl.std_model/test_data/enum_with_std_builtin_td.hpp"
+#include "cpp_ref_impl.std_model/lexical_cast/enum_with_std_builtin_lc.hpp"
 #include "cpp_ref_impl.std_model/serialization/enum_with_std_builtin_ser.hpp"
 
 BOOST_AUTO_TEST_SUITE(enum_with_std_builtin_tests)
@@ -48,6 +50,53 @@ BOOST_AUTO_TEST_CASE(inserter_operator_produces_valid_json) {
 
     boost::property_tree::ptree pt;
     BOOST_REQUIRE_NO_THROW(read_json(s, pt));
+}
+
+BOOST_AUTO_TEST_CASE(casting_valid_strings_produces_expected_enumeration) {
+    using cpp_ref_impl::std_model::enum_with_std_builtin;
+    enum_with_std_builtin r;
+
+    r = boost::lexical_cast<enum_with_std_builtin>(std::string("invalid"));
+    BOOST_CHECK(r == enum_with_std_builtin::invalid);
+    r = boost::lexical_cast<enum_with_std_builtin>(std::string("enum_with_std_builtin::invalid"));
+    BOOST_CHECK(r == enum_with_std_builtin::invalid);
+
+    r = boost::lexical_cast<enum_with_std_builtin>(std::string("an_enumerator"));
+    BOOST_CHECK(r == enum_with_std_builtin::an_enumerator);
+    r = boost::lexical_cast<enum_with_std_builtin>(std::string("enum_with_std_builtin::an_enumerator"));
+    BOOST_CHECK(r == enum_with_std_builtin::an_enumerator);
+
+    r = boost::lexical_cast<enum_with_std_builtin>(std::string("another_enumerator"));
+    BOOST_CHECK(r == enum_with_std_builtin::another_enumerator);
+    r = boost::lexical_cast<enum_with_std_builtin>(std::string("enum_with_std_builtin::another_enumerator"));
+    BOOST_CHECK(r == enum_with_std_builtin::another_enumerator);
+}
+
+BOOST_AUTO_TEST_CASE(casting_invalid_string_throws) {
+    using cpp_ref_impl::std_model::enum_with_std_builtin;
+    BOOST_CHECK_THROW(boost::lexical_cast<enum_with_std_builtin>(std::string("DOGEN_THIS_IS_INVALID_DOGEN")),
+        boost::bad_lexical_cast);
+}
+
+BOOST_AUTO_TEST_CASE(casting_valid_enumerations_produces_expected_strings) {
+    using cpp_ref_impl::std_model::enum_with_std_builtin;
+    std::string r;
+
+    r = boost::lexical_cast<std::string>(enum_with_std_builtin::invalid);
+    BOOST_CHECK(r == "enum_with_std_builtin::invalid");
+
+    r = boost::lexical_cast<std::string>(enum_with_std_builtin::an_enumerator);
+    BOOST_CHECK(r == "enum_with_std_builtin::an_enumerator");
+
+    r = boost::lexical_cast<std::string>(enum_with_std_builtin::another_enumerator);
+    BOOST_CHECK(r == "enum_with_std_builtin::another_enumerator");
+}
+
+BOOST_AUTO_TEST_CASE(casting_invalid_enumeration_throws) {
+    using cpp_ref_impl::std_model::enum_with_std_builtin;
+    const enum_with_std_builtin r(static_cast<enum_with_std_builtin>(13));
+    BOOST_CHECK_THROW(boost::lexical_cast<std::string>(r),
+        boost::bad_lexical_cast);
 }
 
 BOOST_AUTO_TEST_CASE(xml_roundtrip_produces_the_same_entity) {
