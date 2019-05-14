@@ -31,7 +31,7 @@
 namespace boost {
 
 template<>
-std::string lexical_cast(const cpp_ref_impl::cpp_model::colour_types& v) {
+inline std::string lexical_cast(const cpp_ref_impl::cpp_model::colour_types& v) {
     using cpp_ref_impl::cpp_model::colour_types;
 
     switch (v) {
@@ -51,7 +51,7 @@ std::string lexical_cast(const cpp_ref_impl::cpp_model::colour_types& v) {
 }
 
 template<>
-cpp_ref_impl::cpp_model::colour_types lexical_cast(const std::string & s) {
+inline cpp_ref_impl::cpp_model::colour_types lexical_cast(const std::string & s) {
     using cpp_ref_impl::cpp_model::colour_types;
 
     if (s == "invalid" || s == "colour_types::invalid")

@@ -31,7 +31,7 @@
 namespace boost {
 
 template<>
-std::string lexical_cast(const cpp_ref_impl::std_model::enum_with_std_builtin& v) {
+inline std::string lexical_cast(const cpp_ref_impl::std_model::enum_with_std_builtin& v) {
     using cpp_ref_impl::std_model::enum_with_std_builtin;
 
     switch (v) {
@@ -47,7 +47,7 @@ std::string lexical_cast(const cpp_ref_impl::std_model::enum_with_std_builtin& v
 }
 
 template<>
-cpp_ref_impl::std_model::enum_with_std_builtin lexical_cast(const std::string & s) {
+inline cpp_ref_impl::std_model::enum_with_std_builtin lexical_cast(const std::string & s) {
     using cpp_ref_impl::std_model::enum_with_std_builtin;
 
     if (s == "invalid" || s == "enum_with_std_builtin::invalid")

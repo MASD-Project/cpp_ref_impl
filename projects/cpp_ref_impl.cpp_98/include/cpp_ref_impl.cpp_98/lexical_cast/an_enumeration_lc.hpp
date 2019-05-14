@@ -31,7 +31,7 @@
 namespace boost {
 
 template<>
-std::string lexical_cast(const cpp_ref_impl::cpp_98::an_enumeration& v) {
+inline std::string lexical_cast(const cpp_ref_impl::cpp_98::an_enumeration& v) {
     switch (v) {
     case cpp_ref_impl::cpp_98::invalid:
         return "an_enumeration::invalid";
@@ -45,7 +45,7 @@ std::string lexical_cast(const cpp_ref_impl::cpp_98::an_enumeration& v) {
 }
 
 template<>
-cpp_ref_impl::cpp_98::an_enumeration lexical_cast(const std::string & s) {
+inline cpp_ref_impl::cpp_98::an_enumeration lexical_cast(const std::string & s) {
     if (s == "invalid" || s == "an_enumeration::invalid")
         return cpp_ref_impl::cpp_98::invalid;
     if (s == "first" || s == "an_enumeration::first")

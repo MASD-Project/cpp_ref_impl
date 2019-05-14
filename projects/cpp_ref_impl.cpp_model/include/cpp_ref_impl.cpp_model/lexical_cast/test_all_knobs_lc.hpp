@@ -31,7 +31,7 @@
 namespace boost {
 
 template<>
-std::string lexical_cast(const cpp_ref_impl::cpp_model::test_all_knobs& v) {
+inline std::string lexical_cast(const cpp_ref_impl::cpp_model::test_all_knobs& v) {
     using cpp_ref_impl::cpp_model::test_all_knobs;
 
     switch (v) {
@@ -45,7 +45,7 @@ std::string lexical_cast(const cpp_ref_impl::cpp_model::test_all_knobs& v) {
 }
 
 template<>
-cpp_ref_impl::cpp_model::test_all_knobs lexical_cast(const std::string & s) {
+inline cpp_ref_impl::cpp_model::test_all_knobs lexical_cast(const std::string & s) {
     using cpp_ref_impl::cpp_model::test_all_knobs;
 
     if (s == "an_enumerator" || s == "test_all_knobs::an_enumerator")

@@ -31,7 +31,7 @@
 namespace boost {
 
 template<>
-std::string lexical_cast(const cpp_ref_impl::cpp_model::hex_flags& v) {
+inline std::string lexical_cast(const cpp_ref_impl::cpp_model::hex_flags& v) {
     using cpp_ref_impl::cpp_model::hex_flags;
 
     switch (v) {
@@ -51,7 +51,7 @@ std::string lexical_cast(const cpp_ref_impl::cpp_model::hex_flags& v) {
 }
 
 template<>
-cpp_ref_impl::cpp_model::hex_flags lexical_cast(const std::string & s) {
+inline cpp_ref_impl::cpp_model::hex_flags lexical_cast(const std::string & s) {
     using cpp_ref_impl::cpp_model::hex_flags;
 
     if (s == "none" || s == "hex_flags::none")
