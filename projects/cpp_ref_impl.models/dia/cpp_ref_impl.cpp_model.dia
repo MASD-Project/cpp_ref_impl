@@ -5557,16 +5557,16 @@ this is a long comment#</dia:string>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O44">
       <dia:attribute name="obj_pos">
-        <dia:point val="31,81"/>
+        <dia:point val="28,81"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="30.95,80.95;43.485,84.65"/>
+        <dia:rectangle val="27.95,80.95;43.565,84.65"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="31,81"/>
+        <dia:point val="28,81"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="12.434999999999999"/>
+        <dia:real val="15.515000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="3.6000000000000001"/>
@@ -5691,16 +5691,16 @@ this is a long comment#</dia:string>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O45">
       <dia:attribute name="obj_pos">
-        <dia:point val="31,87"/>
+        <dia:point val="28,87"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="30.95,86.95;43.485,90.65"/>
+        <dia:rectangle val="27.95,86.95;43.565,90.65"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="31,87"/>
+        <dia:point val="28,87"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="12.434999999999999"/>
+        <dia:real val="15.515000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="3.6000000000000001"/>
@@ -5839,13 +5839,13 @@ this is a long comment#</dia:string>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O46">
       <dia:attribute name="obj_pos">
-        <dia:point val="31,93"/>
+        <dia:point val="28,93"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="30.95,92.95;39.635,98.25"/>
+        <dia:rectangle val="27.95,92.95;36.635,98.25"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="31,93"/>
+        <dia:point val="28,93"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="8.5849999999999991"/>
@@ -8941,13 +8941,13 @@ of the object template instantiated by the base class.#</dia:string>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O73">
       <dia:attribute name="obj_pos">
-        <dia:point val="31,76"/>
+        <dia:point val="28,76"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="30.95,75.95;36.17,78.85"/>
+        <dia:rectangle val="27.95,75.95;33.17,78.85"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="31,76"/>
+        <dia:point val="28,76"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="5.1200000000000001"/>
@@ -10382,13 +10382,13 @@ of the object template instantiated by the base class.#</dia:string>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O91">
       <dia:attribute name="obj_pos">
-        <dia:point val="113,130"/>
+        <dia:point val="116,130"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="112.95,129.95;123.513,132.85"/>
+        <dia:rectangle val="115.95,129.95;126.513,132.85"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="113,130"/>
+        <dia:point val="116,130"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="10.4625"/>
@@ -10516,13 +10516,13 @@ of the object template instantiated by the base class.#</dia:string>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O92">
       <dia:attribute name="obj_pos">
-        <dia:point val="120,138"/>
+        <dia:point val="123,138"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="119.95,137.95;134.765,140.25"/>
+        <dia:rectangle val="122.95,137.95;137.765,140.25"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="120,138"/>
+        <dia:point val="123,138"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="14.715"/>
@@ -10626,19 +10626,19 @@ of the object template instantiated by the base class.#</dia:string>
     </dia:object>
     <dia:object type="UML - Generalization" version="1" id="O93">
       <dia:attribute name="obj_pos">
-        <dia:point val="118.231,132.8"/>
+        <dia:point val="121.231,132.8"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="117.381,132.75;127.408,138.05"/>
+        <dia:rectangle val="120.381,132.75;130.407,138.05"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
-        <dia:point val="118.231,132.8"/>
-        <dia:point val="118.231,136"/>
-        <dia:point val="127.358,136"/>
-        <dia:point val="127.358,138"/>
+        <dia:point val="121.231,132.8"/>
+        <dia:point val="121.231,136"/>
+        <dia:point val="130.357,136"/>
+        <dia:point val="130.357,138"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
@@ -10667,13 +10667,13 @@ of the object template instantiated by the base class.#</dia:string>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O94">
       <dia:attribute name="obj_pos">
-        <dia:point val="104,138"/>
+        <dia:point val="107,138"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="103.95,137.95;116.272,140.85"/>
+        <dia:rectangle val="106.95,137.95;119.272,140.85"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="104,138"/>
+        <dia:point val="107,138"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="12.2225"/>
@@ -10801,19 +10801,19 @@ of the object template instantiated by the base class.#</dia:string>
     </dia:object>
     <dia:object type="UML - Generalization" version="1" id="O95">
       <dia:attribute name="obj_pos">
-        <dia:point val="118.231,132.8"/>
+        <dia:point val="121.231,132.8"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="110.061,132.75;119.081,138.05"/>
+        <dia:rectangle val="113.061,132.75;122.081,138.05"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
-        <dia:point val="118.231,132.8"/>
-        <dia:point val="118.231,136"/>
-        <dia:point val="110.111,136"/>
-        <dia:point val="110.111,138"/>
+        <dia:point val="121.231,132.8"/>
+        <dia:point val="121.231,136"/>
+        <dia:point val="113.111,136"/>
+        <dia:point val="113.111,138"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
@@ -10842,13 +10842,13 @@ of the object template instantiated by the base class.#</dia:string>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O96">
       <dia:attribute name="obj_pos">
-        <dia:point val="98,146"/>
+        <dia:point val="103,146"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="97.95,145.95;106.08,148.25"/>
+        <dia:rectangle val="102.95,145.95;111.08,148.25"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="98,146"/>
+        <dia:point val="103,146"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="8.0299999999999994"/>
@@ -10952,13 +10952,13 @@ of the object template instantiated by the base class.#</dia:string>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O97">
       <dia:attribute name="obj_pos">
-        <dia:point val="110,146"/>
+        <dia:point val="113,146"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="109.95,145.95;118.635,148.85"/>
+        <dia:rectangle val="112.95,145.95;121.635,148.85"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="110,146"/>
+        <dia:point val="113,146"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="8.5849999999999991"/>
@@ -11086,19 +11086,19 @@ of the object template instantiated by the base class.#</dia:string>
     </dia:object>
     <dia:object type="UML - Generalization" version="1" id="O98">
       <dia:attribute name="obj_pos">
-        <dia:point val="110.111,140.8"/>
+        <dia:point val="113.111,140.8"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="101.965,140.75;110.961,146.05"/>
+        <dia:rectangle val="106.965,140.75;113.961,146.05"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
-        <dia:point val="110.111,140.8"/>
-        <dia:point val="110.111,144"/>
-        <dia:point val="102.015,144"/>
-        <dia:point val="102.015,146"/>
+        <dia:point val="113.111,140.8"/>
+        <dia:point val="113.111,144"/>
+        <dia:point val="107.015,144"/>
+        <dia:point val="107.015,146"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
@@ -11127,19 +11127,19 @@ of the object template instantiated by the base class.#</dia:string>
     </dia:object>
     <dia:object type="UML - Generalization" version="1" id="O99">
       <dia:attribute name="obj_pos">
-        <dia:point val="110.111,140.8"/>
+        <dia:point val="113.111,140.8"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="109.261,140.75;114.343,146.05"/>
+        <dia:rectangle val="112.261,140.75;117.343,146.05"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
-        <dia:point val="110.111,140.8"/>
-        <dia:point val="110.111,144"/>
-        <dia:point val="114.293,144"/>
-        <dia:point val="114.293,146"/>
+        <dia:point val="113.111,140.8"/>
+        <dia:point val="113.111,144"/>
+        <dia:point val="117.293,144"/>
+        <dia:point val="117.293,146"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
@@ -11477,16 +11477,16 @@ of the object template instantiated by the base class.#</dia:string>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O103">
       <dia:attribute name="obj_pos">
-        <dia:point val="86,130"/>
+        <dia:point val="87,130"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="85.95,129.95;98.485,133.05"/>
+        <dia:rectangle val="86.95,129.95;102.565,133.05"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="86,130"/>
+        <dia:point val="87,130"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="12.434999999999999"/>
+        <dia:real val="15.515000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="3"/>
@@ -11587,16 +11587,16 @@ of the object template instantiated by the base class.#</dia:string>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O104">
       <dia:attribute name="obj_pos">
-        <dia:point val="89,138"/>
+        <dia:point val="88,138"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="88.95,137.95;101.485,141.05"/>
+        <dia:rectangle val="87.95,137.95;103.565,141.05"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="89,138"/>
+        <dia:point val="88,138"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="12.434999999999999"/>
+        <dia:real val="15.515000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="3"/>
@@ -11697,19 +11697,19 @@ of the object template instantiated by the base class.#</dia:string>
     </dia:object>
     <dia:object type="UML - Realizes" version="1" id="O105">
       <dia:attribute name="obj_pos">
-        <dia:point val="92.2175,133"/>
+        <dia:point val="94.7575,133"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="91.3675,132.95;95.2675,138.001"/>
+        <dia:rectangle val="93.9075,132.95;95.8075,138.001"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
-        <dia:point val="92.2175,133"/>
-        <dia:point val="92.2175,136"/>
-        <dia:point val="95.2175,136"/>
-        <dia:point val="95.2175,137.951"/>
+        <dia:point val="94.7575,133"/>
+        <dia:point val="94.7575,136"/>
+        <dia:point val="95.7575,136"/>
+        <dia:point val="95.7575,137.951"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
@@ -12809,13 +12809,13 @@ of the object template instantiated by the base class.#</dia:string>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O118">
       <dia:attribute name="obj_pos">
-        <dia:point val="137,138"/>
+        <dia:point val="140,138"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="136.95,137.95;145.53,140.85"/>
+        <dia:rectangle val="139.95,137.95;148.53,140.85"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="137,138"/>
+        <dia:point val="140,138"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="8.4800000000000004"/>
@@ -14649,13 +14649,13 @@ of the object template instantiated by the base class.#</dia:string>
         <dia:point val="65,11"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="64.95,10.95;83.645,14.65"/>
+        <dia:rectangle val="64.95,10.95;81.335,14.65"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="65,11"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="18.594999999999999"/>
+        <dia:real val="16.285"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="3.6000000000000001"/>
