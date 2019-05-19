@@ -7,6 +7,7 @@
     "masd.injection.reference": "cpp.std",
     "masd.injection.reference": "cpp.boost",
     "masd.injection.reference": "masd",
+    "masd.injection.reference": "masd.lam",
     "masd.injection.reference": "cpp_ref_impl.profiles",
     "masd.extraction.delete_extra_files": "true",
     "masd.extraction.delete_empty_directories": "true",
@@ -31,7 +32,7 @@
       "attributes": [
         {
           "name": "prop_0",
-          "type": "lam::integer"
+          "type": "masd::lam::numeric::integer"
         }
       ]
     },
@@ -41,43 +42,43 @@
       "attributes": [
         {
           "name": "prop_0",
-          "type": "lam::character"
+          "type": "masd::lam::text::character"
         },
         {
           "name": "prop_1",
-          "type": "lam::byte"
+          "type": "masd::lam::core::byte"
         },
         {
           "name": "prop_2",
-          "type": "lam::integer8"
+          "type": "masd::lam::numeric::integer8"
         },
         {
           "name": "prop_3",
-          "type": "lam::integer16"
+          "type": "masd::lam::numeric::integer16"
         },
         {
           "name": "prop_4",
-          "type": "lam::integer32"
+          "type": "masd::lam::numeric::integer32"
         },
         {
           "name": "prop_5",
-          "type": "lam::integer64"
+          "type": "masd::lam::numeric::integer64"
         },
         {
           "name": "prop_6",
-          "type": "lam::integer"
+          "type": "masd::lam::numeric::integer"
         },
         {
           "name": "prop_7",
-          "type": "lam::single_floating"
+          "type": "masd::lam::numeric::single_float"
         },
         {
           "name": "prop_8",
-          "type": "lam::double_floating"
+          "type": "masd::lam::numeric::double_float"
         },
         {
           "name": "prop_9",
-          "type": "lam::boolean"
+          "type": "masd::lam::core::boolean"
         }
       ]
     }
