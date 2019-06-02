@@ -26,7 +26,10 @@
 #endif
 
 #include "cpp_ref_impl.directory_settings/serialization_dir/class_0_0_3_0_the_serialization.hh"
+#include "cpp_ref_impl.directory_settings/serialization_dir/class_0_0_3_6_the_serialization.hh"
 #include "cpp_ref_impl.directory_settings/serialization_dir/package_0/class_1_0_3_0_the_serialization.hh"
+#include "cpp_ref_impl.directory_settings/serialization_dir/package_0/class_1_0_3_6_the_serialization.hh"
 #include "cpp_ref_impl.directory_settings/serialization_dir/package_0/package_0_1/class_2_0_3_0_the_serialization.hh"
+#include "cpp_ref_impl.directory_settings/serialization_dir/package_0/package_0_1/class_2_0_3_6_the_serialization.hh"
 
 #endif

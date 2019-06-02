@@ -623,9 +623,9 @@
         "masd.generation.cpp.serialization.overwrite": "false",
         "masd.generation.cpp.test_data.enabled": "true",
         "masd.generation.cpp.test_data.overwrite": "false",
-        "masd.generation.cpp.types.forward_declarations.enabled": "true",
-        "masd.generation.cpp.types.forward_declarations.overwrite": "true",
-        "masd.generation.cpp.serialization.forward_declarations.overwrite": "true"
+        "masd.generation.cpp.types.class_forward_declarations.enabled": "true",
+        "masd.generation.cpp.types.class_forward_declarations.overwrite": "true",
+        "masd.generation.cpp.serialization.class_forward_declarations.overwrite": "true"
       },
       "fallback_element_type": "masd::object",
       "attributes": [

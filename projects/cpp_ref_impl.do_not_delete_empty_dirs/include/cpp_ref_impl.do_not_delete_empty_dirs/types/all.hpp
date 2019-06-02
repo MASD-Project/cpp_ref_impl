@@ -26,6 +26,7 @@
 #endif
 
 #include "cpp_ref_impl.do_not_delete_empty_dirs/types/one_property.hpp"
+#include "cpp_ref_impl.do_not_delete_empty_dirs/types/one_property_fwd.hpp"
 #include "cpp_ref_impl.do_not_delete_empty_dirs/types/do_not_delete_empty_dirs.hpp"
 
 #endif

@@ -326,7 +326,7 @@
 #DOGEN masd.generation.cpp.serialization.primitive_header.postfix=0_3_3
 #DOGEN masd.generation.cpp.serialization.primitive_implementation.postfix=0_3_4
 #DOGEN masd.generation.cpp.serialization.master_header.postfix=0_3_5
-#DOGEN masd.generation.cpp.serialization.forward_declarations.postfix=0_3_6
+#DOGEN masd.generation.cpp.serialization.class_forward_declarations.postfix=0_3_6
 #DOGEN masd.generation.cpp.serialization.registrar_header.postfix=0_3_7
 #DOGEN masd.generation.cpp.serialization.registrar_implementation.postfix=0_3_8
 #DOGEN masd.generation.cpp.test_data.directory=test_data_dir
@@ -347,7 +347,7 @@
 #DOGEN masd.generation.cpp.types.primitive_header.postfix=0_5_4
 #DOGEN masd.generation.cpp.types.primitive_implementation.postfix=0_5_5
 #DOGEN masd.generation.cpp.types.master_header.postfix=0_5_6
-#DOGEN masd.generation.cpp.types.forward_declarations.postfix=0_5_7#</dia:string>
+#DOGEN masd.generation.cpp.types.class_forward_declarations.postfix=0_5_7#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="monospace" style="0" name="Courier"/>

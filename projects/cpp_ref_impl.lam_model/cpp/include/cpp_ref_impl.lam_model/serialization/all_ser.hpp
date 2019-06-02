@@ -31,6 +31,8 @@
 #endif
 
 #include "cpp_ref_impl.lam_model/serialization/builtins_ser.hpp"
+#include "cpp_ref_impl.lam_model/serialization/builtins_fwd_ser.hpp"
 #include "cpp_ref_impl.lam_model/serialization/package1/class_in_package_ser.hpp"
+#include "cpp_ref_impl.lam_model/serialization/package1/class_in_package_fwd_ser.hpp"
 
 #endif

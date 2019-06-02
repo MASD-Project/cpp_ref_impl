@@ -68,7 +68,7 @@
         <dia:point val="-10,-59"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-10.05,-59.05;21.365,-37.25"/>
+        <dia:rectangle val="-10.05,-59.05;19.44,-37.25"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -77,7 +77,7 @@
         <dia:point val="-10,-59"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="31.315000000000001"/>
+        <dia:real val="29.390000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="21.700000000000003"/>
@@ -103,7 +103,7 @@ tests the behaviour of Dogen when faced with the following scenarios:
 - files that are unexpected.
 
 If you need to regenerate this model, you need to remove the attribute
-changed in class changed_generated and delete the class newly_generated.
+changed in class changed_generated and delete the class handcrafted_new.
 
 #DOGEN masd.injection.dia.comment=true
 #DOGEN masd.injection.model_modules=cpp_ref_impl.out_of_sync
@@ -298,16 +298,16 @@ changed in class changed_generated and delete the class newly_generated.
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O2">
       <dia:attribute name="obj_pos">
-        <dia:point val="39,-49"/>
+        <dia:point val="24,-44"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="38.95,-49.05;51.485,-45.35"/>
+        <dia:rectangle val="23.95,-44.05;39.565,-40.35"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="39,-49"/>
+        <dia:point val="24,-44"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="12.434999999999999"/>
+        <dia:real val="15.515000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="3.6000000000000001"/>
@@ -594,13 +594,13 @@ changes.#</dia:string>
         <dia:point val="24,-49"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="23.95,-49.05;36.485,-45.95"/>
+        <dia:rectangle val="23.95,-49.05;39.565,-45.95"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="24,-49"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="12.434999999999999"/>
+        <dia:real val="15.515000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="3"/>
@@ -701,16 +701,16 @@ changes.#</dia:string>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O5">
       <dia:attribute name="obj_pos">
-        <dia:point val="54,-49"/>
+        <dia:point val="43,-49"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="53.95,-49.05;66.485,-45.95"/>
+        <dia:rectangle val="42.95,-49.05;58.565,-45.95"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="54,-49"/>
+        <dia:point val="43,-49"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="12.434999999999999"/>
+        <dia:real val="15.515000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="3"/>

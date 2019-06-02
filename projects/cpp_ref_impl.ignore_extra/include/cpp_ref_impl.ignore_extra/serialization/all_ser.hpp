@@ -26,5 +26,6 @@
 #endif
 
 #include "cpp_ref_impl.ignore_extra/serialization/one_property_ser.hpp"
+#include "cpp_ref_impl.ignore_extra/serialization/one_property_fwd_ser.hpp"
 
 #endif

@@ -27,5 +27,7 @@
 
 #include "cpp_ref_impl.two_layers_with_objects/serialization/Package_2/class_2_ser.hpp"
 #include "cpp_ref_impl.two_layers_with_objects/serialization/package_1/class_1_ser.hpp"
+#include "cpp_ref_impl.two_layers_with_objects/serialization/Package_2/class_2_fwd_ser.hpp"
+#include "cpp_ref_impl.two_layers_with_objects/serialization/package_1/class_1_fwd_ser.hpp"
 
 #endif

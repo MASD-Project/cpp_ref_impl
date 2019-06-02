@@ -26,5 +26,6 @@
 #endif
 
 #include "cpp_ref_impl.flat_directory_mode/types/package1/first_class.hpp"
+#include "cpp_ref_impl.flat_directory_mode/types/package1/first_class_fwd.hpp"
 
 #endif

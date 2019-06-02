@@ -26,5 +26,6 @@
 #endif
 
 #include "cpp_ref_impl.force_write/serialization/first_class_ser.hpp"
+#include "cpp_ref_impl.force_write/serialization/first_class_fwd_ser.hpp"
 
 #endif

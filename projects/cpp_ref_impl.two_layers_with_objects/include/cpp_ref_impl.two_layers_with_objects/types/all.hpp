@@ -27,5 +27,7 @@
 
 #include "cpp_ref_impl.two_layers_with_objects/types/Package_2/class_2.hpp"
 #include "cpp_ref_impl.two_layers_with_objects/types/package_1/class_1.hpp"
+#include "cpp_ref_impl.two_layers_with_objects/types/Package_2/class_2_fwd.hpp"
+#include "cpp_ref_impl.two_layers_with_objects/types/package_1/class_1_fwd.hpp"
 
 #endif

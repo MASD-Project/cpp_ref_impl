@@ -26,8 +26,11 @@
 #endif
 
 #include "cpp_ref_impl.directory_settings/types_dir/class_0_0_5_0_the_types.hh"
+#include "cpp_ref_impl.directory_settings/types_dir/class_0_0_5_7_the_types.hh"
 #include "cpp_ref_impl.directory_settings/types_dir/directory_settings_the_types.hh"
 #include "cpp_ref_impl.directory_settings/types_dir/package_0/class_1_0_5_0_the_types.hh"
+#include "cpp_ref_impl.directory_settings/types_dir/package_0/class_1_0_5_7_the_types.hh"
 #include "cpp_ref_impl.directory_settings/types_dir/package_0/package_0_1/class_2_0_5_0_the_types.hh"
+#include "cpp_ref_impl.directory_settings/types_dir/package_0/package_0_1/class_2_0_5_7_the_types.hh"
 
 #endif

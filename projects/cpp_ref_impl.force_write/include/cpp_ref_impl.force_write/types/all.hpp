@@ -26,6 +26,7 @@
 #endif
 
 #include "cpp_ref_impl.force_write/types/first_class.hpp"
+#include "cpp_ref_impl.force_write/types/first_class_fwd.hpp"
 #include "cpp_ref_impl.force_write/types/changed_handcrafted.hpp"
 
 #endif

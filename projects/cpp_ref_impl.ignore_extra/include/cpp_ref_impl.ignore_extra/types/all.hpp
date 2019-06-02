@@ -27,5 +27,6 @@
 
 #include "cpp_ref_impl.ignore_extra/types/ignore_extra.hpp"
 #include "cpp_ref_impl.ignore_extra/types/one_property.hpp"
+#include "cpp_ref_impl.ignore_extra/types/one_property_fwd.hpp"
 
 #endif

@@ -461,7 +461,7 @@
           }
         },
         {
-          "name": "masd.generation.cpp.types.forward_declarations.enabled",
+          "name": "masd.generation.cpp.types.class_forward_declarations.enabled",
           "type": "",
           "value": "false",
           "tagged_values": {

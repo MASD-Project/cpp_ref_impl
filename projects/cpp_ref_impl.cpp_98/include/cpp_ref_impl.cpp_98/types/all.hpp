@@ -28,10 +28,15 @@
 #include "cpp_ref_impl.cpp_98/types/child.hpp"
 #include "cpp_ref_impl.cpp_98/types/cpp_98.hpp"
 #include "cpp_ref_impl.cpp_98/types/parent.hpp"
+#include "cpp_ref_impl.cpp_98/types/child_fwd.hpp"
+#include "cpp_ref_impl.cpp_98/types/parent_fwd.hpp"
 #include "cpp_ref_impl.cpp_98/types/an_exception.hpp"
 #include "cpp_ref_impl.cpp_98/types/no_properties.hpp"
 #include "cpp_ref_impl.cpp_98/types/an_enumeration.hpp"
 #include "cpp_ref_impl.cpp_98/types/no_default_ctor.hpp"
+#include "cpp_ref_impl.cpp_98/types/no_properties_fwd.hpp"
+#include "cpp_ref_impl.cpp_98/types/no_default_ctor_fwd.hpp"
 #include "cpp_ref_impl.cpp_98/types/package1/first_class.hpp"
+#include "cpp_ref_impl.cpp_98/types/package1/first_class_fwd.hpp"
 
 #endif

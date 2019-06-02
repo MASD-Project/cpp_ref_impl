@@ -94,7 +94,7 @@
       <dia:attribute name="text">
         <dia:composite type="text">
           <dia:attribute name="string">
-            <dia:string>#Top-level model in C++ Reference implementation that contains 
+            <dia:string>#Top-level model in C++ Reference implementation that contains
 all of the shared types at the meta-model level.
 
 This model is not intended to be generated. If generated,
@@ -2995,7 +2995,7 @@ other layers can then configure features.
         </dia:composite>
         <dia:composite type="umlattribute">
           <dia:attribute name="name">
-            <dia:string>#masd.generation.cpp.types.forward_declarations.enabled#</dia:string>
+            <dia:string>#masd.generation.cpp.types.class_forward_declarations.enabled#</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
             <dia:string>##</dia:string>

@@ -26,5 +26,6 @@
 #endif
 
 #include "cpp_ref_impl.enable_facet_io/types/package1/first_class.hpp"
+#include "cpp_ref_impl.enable_facet_io/types/package1/first_class_fwd.hpp"
 
 #endif

@@ -58,7 +58,7 @@
     "masd.generation.cpp.serialization.primitive_header.postfix": "0_3_3",
     "masd.generation.cpp.serialization.primitive_implementation.postfix": "0_3_4",
     "masd.generation.cpp.serialization.master_header.postfix": "0_3_5",
-    "masd.generation.cpp.serialization.forward_declarations.postfix": "0_3_6",
+    "masd.generation.cpp.serialization.class_forward_declarations.postfix": "0_3_6",
     "masd.generation.cpp.serialization.registrar_header.postfix": "0_3_7",
     "masd.generation.cpp.serialization.registrar_implementation.postfix": "0_3_8",
     "masd.generation.cpp.test_data.directory": "test_data_dir",
@@ -79,7 +79,7 @@
     "masd.generation.cpp.types.primitive_header.postfix": "0_5_4",
     "masd.generation.cpp.types.primitive_implementation.postfix": "0_5_5",
     "masd.generation.cpp.types.master_header.postfix": "0_5_6",
-    "masd.generation.cpp.types.forward_declarations.postfix": "0_5_7"
+    "masd.generation.cpp.types.class_forward_declarations.postfix": "0_5_7"
   },
   "elements": [
     {

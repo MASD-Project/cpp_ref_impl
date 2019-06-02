@@ -29,6 +29,8 @@
 #include "cpp_ref_impl.out_of_sync/types/changed_generated.hpp"
 #include "cpp_ref_impl.out_of_sync/types/changed_handcrafted.hpp"
 #include "cpp_ref_impl.out_of_sync/types/unchanged_generated.hpp"
+#include "cpp_ref_impl.out_of_sync/types/changed_generated_fwd.hpp"
 #include "cpp_ref_impl.out_of_sync/types/unchanged_handcrafted.hpp"
+#include "cpp_ref_impl.out_of_sync/types/unchanged_generated_fwd.hpp"
 
 #endif

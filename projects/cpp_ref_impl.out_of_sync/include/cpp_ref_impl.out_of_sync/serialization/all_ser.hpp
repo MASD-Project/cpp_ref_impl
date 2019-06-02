@@ -27,5 +27,7 @@
 
 #include "cpp_ref_impl.out_of_sync/serialization/changed_generated_ser.hpp"
 #include "cpp_ref_impl.out_of_sync/serialization/unchanged_generated_ser.hpp"
+#include "cpp_ref_impl.out_of_sync/serialization/changed_generated_fwd_ser.hpp"
+#include "cpp_ref_impl.out_of_sync/serialization/unchanged_generated_fwd_ser.hpp"
 
 #endif

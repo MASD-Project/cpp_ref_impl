@@ -31,6 +31,8 @@
 #endif
 
 #include "cpp_ref_impl.lam_model/types/builtins.hpp"
+#include "cpp_ref_impl.lam_model/types/builtins_fwd.hpp"
 #include "cpp_ref_impl.lam_model/types/package1/class_in_package.hpp"
+#include "cpp_ref_impl.lam_model/types/package1/class_in_package_fwd.hpp"
 
 #endif

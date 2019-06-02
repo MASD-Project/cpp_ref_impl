@@ -26,5 +26,6 @@
 #endif
 
 #include "cpp_ref_impl.disable_cmakelists/serialization/package1/first_class_ser.hpp"
+#include "cpp_ref_impl.disable_cmakelists/serialization/package1/first_class_fwd_ser.hpp"
 
 #endif
