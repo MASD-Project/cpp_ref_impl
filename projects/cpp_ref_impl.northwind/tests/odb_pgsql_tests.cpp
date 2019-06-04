@@ -28,9 +28,9 @@
 #include "cpp_ref_impl.utility/test/asserter.hpp"
 #include "cpp_ref_impl.utility/io/vector_io.hpp"
 #include "cpp_ref_impl.utility/test/logging.hpp"
-#include "cpp_ref_impl.northwind/types/all.hpp"
-#include "cpp_ref_impl.northwind/io/all_io.hpp"
-#include "cpp_ref_impl.northwind/test_data/all_td.hpp"
+#include "cpp_ref_impl.northwind/types/customers.hpp"
+#include "cpp_ref_impl.northwind/io/customers_io.hpp"
+#include "cpp_ref_impl.northwind/test_data/customers_td.hpp"
 #include "cpp_ref_impl.northwind/odb/customers-odb-pgsql.hxx"
 #include "cpp_ref_impl.northwind/odb/customers-odb.hxx"
 
