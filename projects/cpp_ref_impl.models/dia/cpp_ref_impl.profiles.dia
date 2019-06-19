@@ -68,7 +68,7 @@
         <dia:point val="8,1"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="7.95,0.95;32.82,13.95"/>
+        <dia:rectangle val="7.95,0.95;32.435,13.95"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -77,7 +77,7 @@
         <dia:point val="8,1"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="24.77"/>
+        <dia:real val="24.385000000000002"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="12.9"/>
@@ -1491,13 +1491,13 @@ space; keep it technical space agnostic.
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O16">
       <dia:attribute name="obj_pos">
-        <dia:point val="88,13"/>
+        <dia:point val="87,13"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="87.95,12.95;103.565,16.65"/>
+        <dia:rectangle val="86.95,12.95;102.565,16.65"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="88,13"/>
+        <dia:point val="87,13"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="15.515000000000001"/>
@@ -2118,7 +2118,7 @@ space; keep it technical space agnostic.
         <dia:point val="78.8,9"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="77.95,8.95;95.8075,12.9996"/>
+        <dia:rectangle val="77.95,8.95;94.8075,12.9996"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -2126,8 +2126,8 @@ space; keep it technical space agnostic.
       <dia:attribute name="orth_points">
         <dia:point val="78.8,9"/>
         <dia:point val="78.8,11"/>
-        <dia:point val="95.7575,11"/>
-        <dia:point val="95.7575,12.9496"/>
+        <dia:point val="94.7575,11"/>
+        <dia:point val="94.7575,12.9496"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
@@ -2157,17 +2157,17 @@ space; keep it technical space agnostic.
     </dia:object>
     <dia:object type="UML - Generalization" version="1" id="O21">
       <dia:attribute name="obj_pos">
-        <dia:point val="95.7575,16.6503"/>
+        <dia:point val="94.7575,16.6503"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="78.285,16.6003;96.6075,20.9998"/>
+        <dia:rectangle val="78.285,16.6003;95.6075,20.9998"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
-        <dia:point val="95.7575,16.6503"/>
-        <dia:point val="95.7575,19"/>
+        <dia:point val="94.7575,16.6503"/>
+        <dia:point val="94.7575,19"/>
         <dia:point val="78.335,19"/>
         <dia:point val="78.335,20.9498"/>
       </dia:attribute>
@@ -2199,17 +2199,17 @@ space; keep it technical space agnostic.
     </dia:object>
     <dia:object type="UML - Generalization" version="1" id="O22">
       <dia:attribute name="obj_pos">
-        <dia:point val="95.7575,16.6503"/>
+        <dia:point val="94.7575,16.6503"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="94.9075,16.6003;108.503,29.0005"/>
+        <dia:rectangle val="93.9075,16.6003;108.503,29.0005"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
-        <dia:point val="95.7575,16.6503"/>
-        <dia:point val="95.7575,19"/>
+        <dia:point val="94.7575,16.6503"/>
+        <dia:point val="94.7575,19"/>
         <dia:point val="108.453,19"/>
         <dia:point val="108.453,28.9505"/>
       </dia:attribute>
@@ -2241,17 +2241,17 @@ space; keep it technical space agnostic.
     </dia:object>
     <dia:object type="UML - Generalization" version="1" id="O23">
       <dia:attribute name="obj_pos">
-        <dia:point val="95.7575,16.6503"/>
+        <dia:point val="94.7575,16.6503"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="94.9075,16.6003;98.385,20.9998"/>
+        <dia:rectangle val="93.9075,16.6003;98.385,20.9998"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
-        <dia:point val="95.7575,16.6503"/>
-        <dia:point val="95.7575,19"/>
+        <dia:point val="94.7575,16.6503"/>
+        <dia:point val="94.7575,19"/>
         <dia:point val="98.335,19"/>
         <dia:point val="98.335,20.9498"/>
       </dia:attribute>
@@ -2521,16 +2521,16 @@ other layers can then configure features.
         <dia:point val="69,13"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="68.95,12.95;85.72,16.65"/>
+        <dia:rectangle val="68.95,12.95;84.565,16.05"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="69,13"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="16.669999999999998"/>
+        <dia:real val="15.515000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="3.6000000000000001"/>
+        <dia:real val="3"/>
       </dia:attribute>
       <dia:attribute name="name">
         <dia:string>#default_profile#</dia:string>
@@ -2621,33 +2621,7 @@ other layers can then configure features.
       <dia:attribute name="comment_font_height">
         <dia:real val="0.69999999999999996"/>
       </dia:attribute>
-      <dia:attribute name="attributes">
-        <dia:composite type="umlattribute">
-          <dia:attribute name="name">
-            <dia:string>#masd.generation.cpp.tests.enabled#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="type">
-            <dia:string>##</dia:string>
-          </dia:attribute>
-          <dia:attribute name="value">
-            <dia:string>#false#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="comment">
-            <dia:string>##DOGEN masd.variability.archetype_location.kernel=masd
-#DOGEN masd.variability.archetype_location.backend=masd.generation.cpp
-#DOGEN masd.variability.template_kind=instance#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="visibility">
-            <dia:enum val="0"/>
-          </dia:attribute>
-          <dia:attribute name="abstract">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-          <dia:attribute name="class_scope">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-        </dia:composite>
-      </dia:attribute>
+      <dia:attribute name="attributes"/>
       <dia:attribute name="operations"/>
       <dia:attribute name="template">
         <dia:boolean val="false"/>
@@ -2660,7 +2634,7 @@ other layers can then configure features.
         <dia:point val="78.8,9.04993"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="77.285,8.99993;79.65,12.9996"/>
+        <dia:rectangle val="76.7075,8.99993;79.65,13.0008"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -2668,8 +2642,8 @@ other layers can then configure features.
       <dia:attribute name="orth_points">
         <dia:point val="78.8,9.04993"/>
         <dia:point val="78.8,11"/>
-        <dia:point val="77.335,11"/>
-        <dia:point val="77.335,12.9496"/>
+        <dia:point val="76.7575,11"/>
+        <dia:point val="76.7575,12.9508"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
@@ -2693,7 +2667,7 @@ other layers can then configure features.
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O3" connection="16"/>
-        <dia:connection handle="1" to="O27" connection="10"/>
+        <dia:connection handle="1" to="O27" connection="8"/>
       </dia:connections>
       <dia:childnode parent="O1"/>
     </dia:object>
@@ -2841,13 +2815,13 @@ other layers can then configure features.
         <dia:point val="64,69"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="63.95,68.95;88.805,74.25"/>
+        <dia:rectangle val="63.95,68.95;91.115,74.25"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="64,69"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="24.755000000000003"/>
+        <dia:real val="27.064999999999998"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="5.2000000000000011"/>

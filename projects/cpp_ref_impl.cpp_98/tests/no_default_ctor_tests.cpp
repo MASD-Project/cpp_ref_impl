@@ -85,7 +85,6 @@ BOOST_AUTO_TEST_CASE(assigning_an_object_to_itself_results_in_the_same_object) {
 #endif
 }
 
-
 BOOST_AUTO_TEST_CASE(assigned_objects_are_equal) {
     cpp_ref_impl::cpp_98::no_default_ctor_generator g;
     g();
