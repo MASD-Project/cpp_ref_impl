@@ -3,7 +3,7 @@
   "tagged_values": {
     "masd.injection.dia.comment": "true",
     "masd.injection.model_modules": "cpp_ref_impl.directory_settings",
-    "masd.variability.profile": "cpp_ref_impl.profiles.base.default_profile",
+    "masd.variability.profile": "cpp_ref_impl.profiles.base.enable_all_facets",
     "masd.injection.input_technical_space": "agnostic",
     "masd.injection.reference": "cpp.builtins",
     "masd.injection.reference": "cpp.std",

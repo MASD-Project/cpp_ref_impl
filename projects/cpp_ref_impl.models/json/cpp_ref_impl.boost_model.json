@@ -16,7 +16,7 @@
     "masd.generation.cpp.visual_studio.project.enabled": "false",
     "masd.generation.cpp.visual_studio.solution.enabled": "false",
     "masd.generation.csharp.enabled": "false",
-    "masd.variability.profile": "cpp_ref_impl.profiles.base.default_profile",
+    "masd.variability.profile": "cpp_ref_impl.profiles.base.enable_all_facets",
     "masd.generation.cpp.tests.enabled": "true"
   },
   "elements": [

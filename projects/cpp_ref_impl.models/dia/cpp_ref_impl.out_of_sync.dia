@@ -119,7 +119,7 @@ changed in class changed_generated and delete the class handcrafted_new.
 #DOGEN masd.generation.cpp.visual_studio.project.enabled=false
 #DOGEN masd.generation.cpp.visual_studio.solution.enabled=false
 #DOGEN masd.generation.csharp.enabled=false
-#DOGEN masd.variability.profile=cpp_ref_impl.profiles.base.default_profile#</dia:string>
+#DOGEN masd.variability.profile=cpp_ref_impl.profiles.base.enable_all_facets#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="monospace" style="0" name="Courier"/>

@@ -284,7 +284,7 @@
 #DOGEN masd.generation.cpp.msbuild.enabled=false
 #DOGEN masd.generation.cpp.visual_studio.project.enabled=false
 #DOGEN masd.generation.cpp.visual_studio.solution.enabled=false
-#DOGEN masd.variability.profile=cpp_ref_impl.profiles.base.default_profile
+#DOGEN masd.variability.profile=cpp_ref_impl.profiles.base.enable_all_facets
 #DOGEN masd.generation.cpp.tests.enabled=true
 #DOGEN masd.generation.decoration.marker_name=cpp_ref_impl.profiles.basic#</dia:string>
           </dia:attribute>

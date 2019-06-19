@@ -277,7 +277,7 @@
 #DOGEN masd.injection.reference=masd
 #DOGEN masd.injection.reference=masd.lam
 #DOGEN masd.injection.reference=cpp_ref_impl.profiles
-#DOGEN masd.variability.profile=cpp_ref_impl.profiles.base.default_profile
+#DOGEN masd.variability.profile=cpp_ref_impl.profiles.base.enable_all_facets
 #DOGEN masd.injection.input_technical_space=agnostic
 #DOGEN masd.extraction.delete_extra_files=true
 #DOGEN masd.extraction.delete_empty_directories=true

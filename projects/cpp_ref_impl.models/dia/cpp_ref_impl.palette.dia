@@ -110,7 +110,7 @@ as possible, so we can evaluate how they work together.
 #DOGEN masd.injection.reference=cpp.builtins
 #DOGEN masd.injection.reference=masd
 #DOGEN masd.injection.reference=cpp_ref_impl.profiles
-#DOGEN masd.variability.profile=cpp_ref_impl.profiles.base.default_profile#</dia:string>
+#DOGEN masd.variability.profile=cpp_ref_impl.profiles.base.enable_all_facets#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="monospace" style="0" name="Courier"/>

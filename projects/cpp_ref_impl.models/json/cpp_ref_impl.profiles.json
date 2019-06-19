@@ -373,32 +373,6 @@
       ]
     },
     {
-      "name": "base::default_profile",
-      "parents": [
-        "base::decoration"
-      ],
-      "documentation": "Variability profile for a typical C++ Reference model.\n",
-      "stereotypes": [
-        "masd::variability::profile_template"
-      ],
-      "tagged_values": {
-        "masd.variability.binding_point": "global"
-      },
-      "fallback_element_type": "masd::object",
-      "attributes": [
-        {
-          "name": "masd.generation.cpp.tests.enabled",
-          "type": "",
-          "value": "false",
-          "tagged_values": {
-            "masd.variability.archetype_location.kernel": "masd",
-            "masd.variability.archetype_location.backend": "masd.generation.cpp",
-            "masd.variability.template_kind": "instance"
-          }
-        }
-      ]
-    },
-    {
       "name": "composable",
       "fallback_element_type": "masd::module"
     },
