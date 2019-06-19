@@ -26,25 +26,29 @@
 #include <boost/archive/binary_oarchive.hpp>
 #include <boost/archive/polymorphic_iarchive.hpp>
 #include <boost/archive/polymorphic_oarchive.hpp>
+#include "cpp_ref_impl.compressed/serialization/derived_1_ser.hpp"
+#include "cpp_ref_impl.compressed/serialization/derived_2_ser.hpp"
 #include "cpp_ref_impl.compressed/serialization/registrar_ser.hpp"
 
 namespace cpp_ref_impl {
 namespace compressed {
 
 template<typename Archive>
-void register_types(Archive&) {
+void register_types(Archive& ar) {
+    ar.template register_type<cpp_ref_impl::compressed::derived_1>();
+    ar.template register_type<cpp_ref_impl::compressed::derived_2>();
 }
 
-template void register_types(boost::archive::polymorphic_oarchive&);
-template void register_types(boost::archive::polymorphic_iarchive&);
+template void register_types(boost::archive::polymorphic_oarchive& ar);
+template void register_types(boost::archive::polymorphic_iarchive& ar);
 
-template void register_types(boost::archive::text_oarchive&);
-template void register_types(boost::archive::text_iarchive&);
+template void register_types(boost::archive::text_oarchive& ar);
+template void register_types(boost::archive::text_iarchive& ar);
 
-template void register_types(boost::archive::binary_oarchive&);
-template void register_types(boost::archive::binary_iarchive&);
+template void register_types(boost::archive::binary_oarchive& ar);
+template void register_types(boost::archive::binary_iarchive& ar);
 
-template void register_types(boost::archive::xml_oarchive&);
-template void register_types(boost::archive::xml_iarchive&);
+template void register_types(boost::archive::xml_oarchive& ar);
+template void register_types(boost::archive::xml_iarchive& ar);
 
 } }

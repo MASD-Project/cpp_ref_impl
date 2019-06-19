@@ -1,4 +1,5 @@
 {
+  "documentation": "Tests defining a Dia model that is a compressed diagram.\n",
   "tagged_values": {
     "masd.injection.dia.comment": "true",
     "masd.injection.model_modules": "cpp_ref_impl.compressed",
@@ -33,6 +34,52 @@
         {
           "name": "private_attribute",
           "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "base",
+      "fallback_element_type": "masd::object",
+      "attributes": [
+        {
+          "name": "prop_0",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "derived_1",
+      "parents": [
+        "base"
+      ],
+      "fallback_element_type": "masd::object",
+      "attributes": [
+        {
+          "name": "prop_1",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "derived_2",
+      "parents": [
+        "base"
+      ],
+      "fallback_element_type": "masd::object",
+      "attributes": [
+        {
+          "name": "prop_2",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "consumer",
+      "fallback_element_type": "masd::object",
+      "attributes": [
+        {
+          "name": "base_ptr",
+          "type": "boost::shared_ptr<base>"
         }
       ]
     }
