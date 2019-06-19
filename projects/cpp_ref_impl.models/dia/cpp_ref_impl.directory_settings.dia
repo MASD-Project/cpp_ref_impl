@@ -347,7 +347,13 @@
 #DOGEN masd.generation.cpp.types.primitive_header.postfix=0_5_4
 #DOGEN masd.generation.cpp.types.primitive_implementation.postfix=0_5_5
 #DOGEN masd.generation.cpp.types.master_header.postfix=0_5_6
-#DOGEN masd.generation.cpp.types.class_forward_declarations.postfix=0_5_7#</dia:string>
+#DOGEN masd.generation.cpp.types.class_forward_declarations.postfix=0_5_7
+#DOGEN masd.generation.cpp.tests.directory=tests_dir
+#DOGEN masd.generation.cpp.tests_directory_name=tests_dir
+#DOGEN masd.generation.cpp.tests.postfix=the_tests
+#DOGEN masd.generation.cpp.tests.class_implementation.postfix=0_6_1
+#DOGEN masd.generation.cpp.tests.enum_implementation.postfix=0_6_1
+#DOGEN masd.generation.cpp.tests.main.postfix=0_6_1#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="monospace" style="0" name="Courier"/>

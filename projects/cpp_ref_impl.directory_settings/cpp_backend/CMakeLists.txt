@@ -18,7 +18,7 @@
 # MA 02110-1301, USA.
 #
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/sd)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/tests)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/tests_dir)
 
 install(
     DIRECTORY id/
