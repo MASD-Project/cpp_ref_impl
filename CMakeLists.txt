@@ -131,7 +131,7 @@ else()
 endif()
 
 if (odb_dependencies_found)
-    find_package(ODB COMPONENTS boost pgsql sqlite)
+    find_package(ODB COMPONENTS boost pgsql) #sqlite
     if (ODB_LIBODB_FOUND)
         message(STATUS "Found ODB Libraries...")
         # FIXME: using global settings at present because dogen does not
