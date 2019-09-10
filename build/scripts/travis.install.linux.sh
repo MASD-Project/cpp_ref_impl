@@ -23,8 +23,8 @@
 # generate the dropbox link or else we will still point to the old
 # package.
 #
-vcpkg_dropbox_link="s/32kstt0etxvvndt"
-vcpkg_folder="vcpkg-export-20190701-080414"
+vcpkg_dropbox_link="s/uvt1q2ipocgxs90"
+vcpkg_folder="vcpkg-export-20190910-085645"
 vcpkg_package="${vcpkg_folder}.zip"
 vcpkg_input_location="https://www.dropbox.com/${vcpkg_dropbox_link}/${vcpkg_package}?dl=0"
 vcpkg_output_location="/tmp/${vcpkg_package}"
@@ -62,13 +62,17 @@ if [ "$CXX" == "clang++" ]; then
     sudo apt-get install --allow-unauthenticated -qq clang-${version}
     which clang-${version}
     export CXX="clang++-${version}" CC="clang-${version}"
+
+    # Need to update GCC in order to get headers for clang.
+    version="9"
+    sudo apt-get install -qq g++-${version}
 fi
 
 #
 # g++
 #
 if [ "$CXX" = "g++" ]; then
-    version="8"
+    version="9"
     sudo apt-get install -qq g++-${version}
     export CXX="g++-${version}" CC="gcc-${version}" GCOV="gcov-${version}"
 fi
@@ -83,7 +87,7 @@ sudo apt-get install ninja-build
 #
 sudo rm -rf /usr/local/cmake-3.9.2
 
-cmake_name="cmake-3.13.3-Linux-x86_64"
+cmake_name="cmake-3.15.3-Linux-x86_64"
 cmake_tar="${cmake_name}.tar.gz"
 cmake_input="https://cmake.org/files/v3.13/${cmake_tar}"
 cmake_output="/tmp/${cmake_tar}"
