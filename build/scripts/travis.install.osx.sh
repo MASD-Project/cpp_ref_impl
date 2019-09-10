@@ -34,3 +34,8 @@ curl -L -o ${vcpkg_output_location} ${vcpkg_input_location}
 unzip -q ${vcpkg_output_location} -d ${vcpkg_extract_dir}
 mv ${vcpkg_extract_dir}/${vcpkg_folder} ${vcpkg_extract_dir}/${vcpkg_final_folder}
 echo "vcpkg version: ${vcpkg_folder}"
+
+#
+# Upgrade CMake
+#
+brew upgrade cmake
