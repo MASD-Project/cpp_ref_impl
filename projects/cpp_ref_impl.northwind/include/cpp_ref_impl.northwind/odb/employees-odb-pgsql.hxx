@@ -10,7 +10,7 @@
 // Begin prologue.
 //
 #include <odb/boost/version.hxx>
-#if ODB_BOOST_VERSION != 2045900 // 2.5.0-b.9
+#if ODB_BOOST_VERSION != 2046500 // 2.5.0-b.15
 #  error ODB and C++ compilers see different libodb-boost interface versions
 #endif
 #include <boost/shared_ptr.hpp>
@@ -27,7 +27,7 @@
 
 #include <odb/version.hxx>
 
-#if (ODB_VERSION != 20459UL)
+#if (ODB_VERSION != 20465UL)
 #error ODB runtime version mismatch
 #endif
 
