@@ -22,3 +22,6 @@ build/output
 .cquery_cached_index
 compile_commands.json
 .clangd
+
+# emacs
+.dir-locals.el
