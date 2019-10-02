@@ -278,6 +278,17 @@ include_directories(
 if(ODB_LIBODB_FOUND)
     message(STATUS "Adding ODB feature test project")
     include_directories(${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.northwind/include)
+
+    #
+    # Setup includes for ODB
+    #
+    get_directory_property(dirs INCLUDE_DIRECTORIES)
+    set(global_includes "")
+    foreach(dir IN LISTS dirs)
+        set(ODB_EXECUTABLE_GLOBAL_ARGS ${ODB_EXECUTABLE_GLOBAL_ARGS} -I ${dir})
+    endforeach()
+    set(ODB_EXECUTABLE_GLOBAL_ARGS ${ODB_EXECUTABLE_GLOBAL_ARGS} -I ${ODB_INCLUDE_DIRS})
+
     add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_ref_impl.northwind)
 endif()
 

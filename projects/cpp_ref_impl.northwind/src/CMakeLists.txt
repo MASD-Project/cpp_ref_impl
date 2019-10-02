@@ -49,12 +49,10 @@ if (ODB_EXECUTABLE)
     add_custom_target(odb_cpp_ref_impl_northwind)
     add_dependencies(odb_all odb_cpp_ref_impl_northwind)
 
-    # Individual targets
-    get_directory_property(dirs INCLUDE_DIRECTORIES)
-    set(global_includes "")
-    foreach(dir in ${dirs})
-        set(global_includes ${global_includes} -I ${dir})
-    endforeach()
+    if (NOT ODB_EXECUTABLE_GLOBAL_ARGS)
+        message(WARNING "ODB_EXECUTABLE_GLOBAL_ARGS not defined. Inclusion errors likely when running ODB targets.")
+    endif()
+
 
     add_custom_target(odb_cpp_ref_impl_northwind_categories
         COMMENT "ODB categories"
@@ -63,7 +61,7 @@ if (ODB_EXECUTABLE)
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/common_options.odb
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/categories_options.odb
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
-            -I ${ODB_INCLUDE_DIRS} ${global_includes}
+            ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/categories.hpp
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/categories-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/categories-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
@@ -78,7 +76,7 @@ if (ODB_EXECUTABLE)
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/common_options.odb
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/category_id_options.odb
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
-            -I ${ODB_INCLUDE_DIRS} ${global_includes}
+            ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/category_id.hpp
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/category_id-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/category_id-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
@@ -93,7 +91,7 @@ if (ODB_EXECUTABLE)
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/common_options.odb
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/package/class_0_options.odb
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/package
-            -I ${ODB_INCLUDE_DIRS} ${global_includes}
+            ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/package/class_0.hpp
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/package/class_0-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/package/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/package/class_0-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/package/
@@ -108,7 +106,7 @@ if (ODB_EXECUTABLE)
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/common_options.odb
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/customer_id_options.odb
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
-            -I ${ODB_INCLUDE_DIRS} ${global_includes}
+            ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/customer_id.hpp
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/customer_id-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/customer_id-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
@@ -123,7 +121,7 @@ if (ODB_EXECUTABLE)
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/common_options.odb
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/customers_options.odb
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
-            -I ${ODB_INCLUDE_DIRS} ${global_includes}
+            ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/customers.hpp
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/customers-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/customers-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
@@ -138,7 +136,7 @@ if (ODB_EXECUTABLE)
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/common_options.odb
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/employee_id_options.odb
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
-            -I ${ODB_INCLUDE_DIRS} ${global_includes}
+            ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/employee_id.hpp
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/employee_id-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/employee_id-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
@@ -153,7 +151,7 @@ if (ODB_EXECUTABLE)
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/common_options.odb
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/employees_options.odb
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
-            -I ${ODB_INCLUDE_DIRS} ${global_includes}
+            ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/employees.hpp
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/employees-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/employees-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
@@ -168,7 +166,7 @@ if (ODB_EXECUTABLE)
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/common_options.odb
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/order_details_options.odb
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
-            -I ${ODB_INCLUDE_DIRS} ${global_includes}
+            ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/order_details.hpp
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/order_details-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/order_details-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
@@ -183,7 +181,7 @@ if (ODB_EXECUTABLE)
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/common_options.odb
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/order_details_key_options.odb
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
-            -I ${ODB_INCLUDE_DIRS} ${global_includes}
+            ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/order_details_key.hpp
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/order_details_key-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/order_details_key-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
@@ -198,7 +196,7 @@ if (ODB_EXECUTABLE)
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/common_options.odb
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/order_id_options.odb
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
-            -I ${ODB_INCLUDE_DIRS} ${global_includes}
+            ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/order_id.hpp
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/order_id-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/order_id-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
@@ -213,7 +211,7 @@ if (ODB_EXECUTABLE)
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/common_options.odb
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/orders_options.odb
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
-            -I ${ODB_INCLUDE_DIRS} ${global_includes}
+            ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/orders.hpp
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/orders-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/orders-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
@@ -228,7 +226,7 @@ if (ODB_EXECUTABLE)
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/common_options.odb
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/product_id_options.odb
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
-            -I ${ODB_INCLUDE_DIRS} ${global_includes}
+            ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/product_id.hpp
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/product_id-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/product_id-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
@@ -243,7 +241,7 @@ if (ODB_EXECUTABLE)
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/common_options.odb
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/products_options.odb
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
-            -I ${ODB_INCLUDE_DIRS} ${global_includes}
+            ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/products.hpp
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/products-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/products-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
@@ -258,7 +256,7 @@ if (ODB_EXECUTABLE)
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/common_options.odb
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/shipper_id_options.odb
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
-            -I ${ODB_INCLUDE_DIRS} ${global_includes}
+            ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/shipper_id.hpp
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/shipper_id-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/shipper_id-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
@@ -273,7 +271,7 @@ if (ODB_EXECUTABLE)
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/common_options.odb
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/shippers_options.odb
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
-            -I ${ODB_INCLUDE_DIRS} ${global_includes}
+            ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/shippers.hpp
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/shippers-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/shippers-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
@@ -288,7 +286,7 @@ if (ODB_EXECUTABLE)
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/common_options.odb
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/supplier_id_options.odb
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
-            -I ${ODB_INCLUDE_DIRS} ${global_includes}
+            ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/supplier_id.hpp
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/supplier_id-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/supplier_id-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
@@ -303,7 +301,7 @@ if (ODB_EXECUTABLE)
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/common_options.odb
             --options-file ${CMAKE_CURRENT_SOURCE_DIR}/odb/suppliers_options.odb
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
-            -I ${ODB_INCLUDE_DIRS} ${global_includes}
+            ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/suppliers.hpp
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/suppliers-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/suppliers-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
