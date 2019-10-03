@@ -12,7 +12,7 @@ environment:
       msvc_setup_arg: x86_amd64
     - compiler: msvc
       generator: Visual Studio 15 2017 Win64
-      build_group: Continuous
+      build_group: Experimental
 
 matrix:
   allow_failures:
