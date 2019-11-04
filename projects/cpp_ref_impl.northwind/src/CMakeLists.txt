@@ -59,8 +59,8 @@ if (ODB_EXECUTABLE)
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
             ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/categories.hpp
-        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/categories-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/categories-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
+        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/categories-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         VERBATIM
     )
     add_dependencies(odb_cpp_ref_impl_northwind odb_cpp_ref_impl_northwind_categories)
@@ -74,8 +74,8 @@ if (ODB_EXECUTABLE)
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
             ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/category_id.hpp
-        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/category_id-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/category_id-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
+        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/category_id-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         VERBATIM
     )
     add_dependencies(odb_cpp_ref_impl_northwind odb_cpp_ref_impl_northwind_category_id)
@@ -89,8 +89,8 @@ if (ODB_EXECUTABLE)
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/package
             ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/package/class_0.hpp
-        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/package/class_0-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/package/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/package/class_0-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/package/
+        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/package/class_0-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/package/
         VERBATIM
     )
     add_dependencies(odb_cpp_ref_impl_northwind odb_cpp_ref_impl_northwind_class_0)
@@ -104,8 +104,8 @@ if (ODB_EXECUTABLE)
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
             ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/customer_id.hpp
-        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/customer_id-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/customer_id-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
+        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/customer_id-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         VERBATIM
     )
     add_dependencies(odb_cpp_ref_impl_northwind odb_cpp_ref_impl_northwind_customer_id)
@@ -119,8 +119,8 @@ if (ODB_EXECUTABLE)
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
             ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/customers.hpp
-        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/customers-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/customers-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
+        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/customers-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         VERBATIM
     )
     add_dependencies(odb_cpp_ref_impl_northwind odb_cpp_ref_impl_northwind_customers)
@@ -134,8 +134,8 @@ if (ODB_EXECUTABLE)
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
             ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/employee_id.hpp
-        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/employee_id-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/employee_id-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
+        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/employee_id-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         VERBATIM
     )
     add_dependencies(odb_cpp_ref_impl_northwind odb_cpp_ref_impl_northwind_employee_id)
@@ -149,8 +149,8 @@ if (ODB_EXECUTABLE)
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
             ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/employees.hpp
-        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/employees-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/employees-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
+        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/employees-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         VERBATIM
     )
     add_dependencies(odb_cpp_ref_impl_northwind odb_cpp_ref_impl_northwind_employees)
@@ -164,8 +164,8 @@ if (ODB_EXECUTABLE)
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
             ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/order_details.hpp
-        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/order_details-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/order_details-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
+        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/order_details-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         VERBATIM
     )
     add_dependencies(odb_cpp_ref_impl_northwind odb_cpp_ref_impl_northwind_order_details)
@@ -179,8 +179,8 @@ if (ODB_EXECUTABLE)
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
             ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/order_details_key.hpp
-        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/order_details_key-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/order_details_key-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
+        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/order_details_key-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         VERBATIM
     )
     add_dependencies(odb_cpp_ref_impl_northwind odb_cpp_ref_impl_northwind_order_details_key)
@@ -194,8 +194,8 @@ if (ODB_EXECUTABLE)
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
             ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/order_id.hpp
-        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/order_id-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/order_id-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
+        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/order_id-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         VERBATIM
     )
     add_dependencies(odb_cpp_ref_impl_northwind odb_cpp_ref_impl_northwind_order_id)
@@ -209,8 +209,8 @@ if (ODB_EXECUTABLE)
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
             ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/orders.hpp
-        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/orders-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/orders-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
+        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/orders-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         VERBATIM
     )
     add_dependencies(odb_cpp_ref_impl_northwind odb_cpp_ref_impl_northwind_orders)
@@ -224,8 +224,8 @@ if (ODB_EXECUTABLE)
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
             ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/product_id.hpp
-        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/product_id-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/product_id-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
+        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/product_id-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         VERBATIM
     )
     add_dependencies(odb_cpp_ref_impl_northwind odb_cpp_ref_impl_northwind_product_id)
@@ -239,8 +239,8 @@ if (ODB_EXECUTABLE)
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
             ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/products.hpp
-        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/products-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/products-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
+        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/products-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         VERBATIM
     )
     add_dependencies(odb_cpp_ref_impl_northwind odb_cpp_ref_impl_northwind_products)
@@ -254,8 +254,8 @@ if (ODB_EXECUTABLE)
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
             ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/shipper_id.hpp
-        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/shipper_id-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/shipper_id-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
+        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/shipper_id-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         VERBATIM
     )
     add_dependencies(odb_cpp_ref_impl_northwind odb_cpp_ref_impl_northwind_shipper_id)
@@ -269,8 +269,8 @@ if (ODB_EXECUTABLE)
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
             ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/shippers.hpp
-        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/shippers-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/shippers-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
+        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/shippers-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         VERBATIM
     )
     add_dependencies(odb_cpp_ref_impl_northwind odb_cpp_ref_impl_northwind_shippers)
@@ -284,8 +284,8 @@ if (ODB_EXECUTABLE)
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
             ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/supplier_id.hpp
-        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/supplier_id-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/supplier_id-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
+        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/supplier_id-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         VERBATIM
     )
     add_dependencies(odb_cpp_ref_impl_northwind odb_cpp_ref_impl_northwind_supplier_id)
@@ -299,8 +299,8 @@ if (ODB_EXECUTABLE)
             --output-dir ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb
             ${ODB_EXECUTABLE_GLOBAL_ARGS}
             ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/types/suppliers.hpp
-        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/suppliers-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/suppliers-odb-sqlite.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
+        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/../include/cpp_ref_impl.northwind/odb/suppliers-odb-pgsql.cxx ${CMAKE_CURRENT_SOURCE_DIR}/odb/
         VERBATIM
     )
     add_dependencies(odb_cpp_ref_impl_northwind odb_cpp_ref_impl_northwind_suppliers)
