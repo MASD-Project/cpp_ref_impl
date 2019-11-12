@@ -17,10 +17,10 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 # MA 02110-1301, USA.
 #
-set(name "cpp_ref_impl_std_model")
+set(name "cpp_ref_impl_cpp_model")
 set(lib_target_name ${name}) # .lib
-set(tests_binary_name ${name}.tests)
-set(tests_target_name ${name}.tests)
+set(tests_binary_name ${name}.generated_tests)
+set(tests_target_name ${name}.generated_tests)
 
 set(files "")
 file(GLOB_RECURSE files RELATIVE

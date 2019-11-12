@@ -17,57 +17,26 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 # MA 02110-1301, USA.
 #
-set(name "cpp_ref_impl.northwind")
-
-# FIXME: hack to deal with the fact that dogen is generatign legacy
-# cmake files.
-# set(lib_target_name ${name}.lib)
-set(lib_target_name cpp_ref_impl_northwind)
-set(tests_binary_name ${name}.tests)
-set(tests_target_name ${name}.tests)
+set(name "cpp_ref_impl_delete_extra")
+set(lib_target_name ${name}) # .lib
+set(tests_binary_name ${name}.generated_tests)
+set(tests_target_name ${name}.generated_tests)
 
 set(files "")
 file(GLOB_RECURSE files RELATIVE
     "${CMAKE_CURRENT_SOURCE_DIR}/"
     "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
 
-if (WITH_POSTGRES)
-    message(STATUS "Including postgres tests.")
-else()
-    message(STATUS "Excluding postgres tests.")
-    list(FILTER files EXCLUDE REGEX "odb_pgsql_tests.cpp")
-endif()
-
 add_executable(${tests_target_name} ${files})
-set_target_properties(${tests_target_name}
-    PROPERTIES OUTPUT_NAME ${tests_target_name})
 
-set(lib_target "")
-if(WIN32 OR APPLE)
-    set(lib_target "cpp_ref_impl_${name}")
-else()
-    set(lib_target
-        -Wl,--whole-archive cpp_ref_impl_${name} -Wl,--no-whole-archive)
-endif()
+set_target_properties(${tests_target_name} PROPERTIES
+    OUTPUT_NAME ${tests_binary_name})
 
-set(use_resolve_lib ON)
-if (WIN32)
-    set(use_resolve_lib OFF)
-endif ()
 
 target_link_libraries(${tests_target_name}
     ${lib_target_name}
-    utility
-    ${LIBXML2_LIBRARIES}
     ${Boost_LIBRARIES}
-    ${ODB_PGSQL_LIBRARIES}
-    ${ODB_SQLITE_LIBRARIES}
-    ${ODB_BOOST_LIBRARIES}
-    ${ODB_LIBODB_LIBRARIES}
-    ${PostgreSQL_LIBRARIES}
-    ${OPENSSL_LIBRARIES}
-    $<$<BOOL:${use_resolve_lib}>:resolv>
-    ${SQLite3_LIBRARY}
+    ${CMAKE_REQUIRED_LIBRARIES}
     ${CMAKE_THREAD_LIBS_INIT})
 
 set(command $<TARGET_FILE:${tests_target_name}> ${boost_test_parameters})
@@ -81,10 +50,12 @@ add_custom_target(run_${tests_target_name}
 add_dependencies(run_all_tests run_${tests_target_name})
 
 if(WITH_BENCHMARKS)
+    set(benchmark_file
+        ${benchmark_directory}/${benchmark_prefix}${tests_target_name}.csv)
     add_custom_target(benchmark_${tests_target_name}
         COMMENT "Benchmarking testing ${tests_target_name}" VERBATIM
-        COMMAND ${benchmark_command} ${benchmark_repeats}
-        ${benchmark_directory}/${benchmark_prefix}${tests_target_name}.csv ${command}
+        COMMAND ${benchmark_command} ${benchmark_repeats} ${benchmark_file}
+        ${command}
         WORKING_DIRECTORY ${stage_bin_dir}
         DEPENDS ${tests_target_name})
 

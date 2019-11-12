@@ -68,7 +68,7 @@
         <dia:point val="75,-140"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="74.95,-140.05;106.365,-115.85"/>
+        <dia:rectangle val="74.95,-140.05;105.21,-117.45"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -77,10 +77,10 @@
         <dia:point val="75,-140"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="31.315000000000001"/>
+        <dia:real val="30.160000000000004"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="24.100000000000005"/>
+        <dia:real val="22.500000000000004"/>
       </dia:attribute>
       <dia:attribute name="line_width">
         <dia:real val="0.10000000000000001"/>
@@ -120,9 +120,7 @@ It's objective is to test Dogen integration with ODB.
 #DOGEN masd.orm.database_system=sqlite
 #DOGEN masd.orm.database_system=postgresql
 #DOGEN masd.orm.letter_case=upper_case
-#DOGEN masd.orm.schema_name=northwind
-#DOGEN masd.generation.cpp.tests.enabled=true
-#DOGEN masd.generation.cpp.tests.cmakelists.enabled=false#</dia:string>
+#DOGEN masd.orm.schema_name=northwind#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="monospace" style="0" name="Courier"/>
@@ -4390,7 +4388,7 @@ It's objective is to test Dogen integration with ODB.
         <dia:point val="157.565,-92"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="156.815,-98.0004;162.572,-91.2"/>
+        <dia:rectangle val="156.815,-98.0004;162.573,-91.2"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -4461,7 +4459,7 @@ It's objective is to test Dogen integration with ODB.
         <dia:point val="158.988,-106.6"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="158.238,-107.35;162.572,-100.249"/>
+        <dia:rectangle val="158.238,-107.35;162.573,-100.249"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>

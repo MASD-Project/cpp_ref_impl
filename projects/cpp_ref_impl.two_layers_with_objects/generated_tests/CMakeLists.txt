@@ -17,10 +17,10 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 # MA 02110-1301, USA.
 #
-set(name "cpp_ref_impl_cpp_98")
+set(name "cpp_ref_impl_two_layers_with_objects")
 set(lib_target_name ${name}) # .lib
-set(tests_binary_name ${name}.tests)
-set(tests_target_name ${name}.tests)
+set(tests_binary_name ${name}.generated_tests)
+set(tests_target_name ${name}.generated_tests)
 
 set(files "")
 file(GLOB_RECURSE files RELATIVE
@@ -30,12 +30,8 @@ file(GLOB_RECURSE files RELATIVE
 add_executable(${tests_target_name} ${files})
 
 set_target_properties(${tests_target_name} PROPERTIES
-    CXX_STANDARD 98
     OUTPUT_NAME ${tests_binary_name})
 
-target_compile_options(${tests_target_name} PRIVATE
-    $<$<OR:$<CXX_COMPILER_ID:Clang>,$<CXX_COMPILER_ID:AppleClang>,$<CXX_COMPILER_ID:GNU>>:
-    -Wno-c99-extensions>)
 
 target_link_libraries(${tests_target_name}
     ${lib_target_name}

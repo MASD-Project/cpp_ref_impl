@@ -19,8 +19,8 @@
 #
 set(name "cpp_ref_impl_directory_settings")
 set(lib_target_name ${name}) # .lib
-set(tests_binary_name ${name}.tests)
-set(tests_target_name ${name}.tests)
+set(tests_binary_name ${name}.tests_dir)
+set(tests_target_name ${name}.tests_dir)
 
 set(files "")
 file(GLOB_RECURSE files RELATIVE
