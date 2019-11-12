@@ -17,16 +17,21 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 # MA 02110-1301, USA.
 #
+set(name "cpp_ref_impl.cpp_model")
+set(lib_binary_name ${name})
+set(lib_target_name ${name}.lib)
+
 set(files "")
 file(GLOB_RECURSE files RELATIVE
     "${CMAKE_CURRENT_SOURCE_DIR}/"
     "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
 
-add_library(cpp_ref_impl_cpp_model ${files})
-set_target_properties(cpp_ref_impl_cpp_model PROPERTIES
-    OUTPUT_NAME cpp_ref_impl_cpp_model)
+set(lib_files ${files})
+add_library(${lib_target_name} ${lib_files})
+set_target_properties(${lib_target_name} PROPERTIES
+    OUTPUT_NAME ${lib_binary_name})
 
-install(TARGETS cpp_ref_impl_cpp_model
+install(TARGETS ${lib_target_name}
     ARCHIVE DESTINATION lib
     LIBRARY DESTINATION lib
     COMPONENT libraries)

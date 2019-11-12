@@ -17,8 +17,8 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 # MA 02110-1301, USA.
 #
-set(name "cpp_ref_impl_do_not_delete_empty_dirs")
-set(lib_target_name ${name}) # .lib
+set(name "cpp_ref_impl.do_not_delete_empty_dirs")
+set(lib_target_name ${name}.lib)
 set(tests_binary_name ${name}.generated_tests)
 set(tests_target_name ${name}.generated_tests)
 
