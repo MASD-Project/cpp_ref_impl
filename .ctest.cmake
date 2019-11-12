@@ -135,6 +135,13 @@ if(DEFINED ENV{POSTGRES_SERVER_SETUP})
     set(cmake_defines ${cmake_defines} "-DWITH_POSTGRES=ON")
 endif()
 
+#
+# We only want to enable the relational model for Linux.
+#
+if(UNIX AND NOT APPLE)
+    set(cmake_defines ${cmake_defines} "-DWITH_RELATIONAL_SUPPORT=On")
+endif()
+
 # only run these for Nightly.
 set(WITH_MEMCHECK false)
 

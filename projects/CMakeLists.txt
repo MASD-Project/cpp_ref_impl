@@ -275,7 +275,8 @@ include_directories(
 #
 # feature specific projects
 #
-if(ODB_LIBODB_FOUND)
+
+if (WITH_RELATIONAL_SUPPORT AND ODB_LIBODB_FOUND)
     message(STATUS "Adding ODB feature test project")
     include_directories(${CMAKE_SOURCE_DIR}/projects/cpp_ref_impl.northwind/include)
 
