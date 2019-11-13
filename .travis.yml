@@ -30,17 +30,6 @@ git:
   depth: 2
 
 matrix:
-  allow_failures:
-    # OSX ODB libraries out of sync
-    - os: osx
-      compiler: clang
-      osx_image: xcode10
-      env: configuration=Release compiler="clang" generator="Unix Makefiles" build_group="Experimental"
-    - os: osx
-      compiler: clang
-      osx_image: xcode10
-      env: configuration=Debug compiler="clang" generator="Unix Makefiles" build_group="Experimental"
-
   include:
     #
     # OSX Clang
