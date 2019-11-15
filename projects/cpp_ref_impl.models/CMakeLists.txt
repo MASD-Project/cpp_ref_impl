@@ -93,13 +93,13 @@ if (DOGEN_CLI_EXECUTABLE)
     set(models ${models} cpp_ref_impl.lam_model)
     set(models ${models} cpp_ref_impl.split_project)
     set(models ${models} cpp_ref_impl.std_model)
-    set(models ${models} cpp_ref_impl.two_layers_with_objects)
+    set(models ${models} cpp_ref_impl.two_layers)
 
     # Uncomment the next line if you need to regenerate this model.
     # Ensue the extra files are not deleted and checked in.
     # set(models ${models} cpp_ref_impl.delete_extra)
 
-    set(models ${models} cpp_ref_impl.do_not_delete_empty_dirs)
+    set(models ${models} cpp_ref_impl.skip_empty_dirs)
     set(models ${models} cpp_ref_impl.force_write)
     set(models ${models} cpp_ref_impl.ignore_extra)
 
