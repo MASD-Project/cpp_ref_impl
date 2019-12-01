@@ -47,6 +47,7 @@ before_build:
 
 build_script:
   - ps: $env:BUILD_PROVIDER = "appveyor"
+  - ps: $env:BUILD_COMMIT = $env:APPVEYOR_REPO_COMMIT
   - ps: cd $project_dir
   - ps: ctest --extra-verbose --script ".ctest.cmake,configuration_type=$env:configuration,generator=$env:generator,compiler=$env:compiler,build_group=$env:build_group";
 

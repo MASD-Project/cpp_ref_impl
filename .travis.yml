@@ -81,6 +81,7 @@ before_script:
 script:
   - JOBS=2
   - export BUILD_PROVIDER=travis
+  - export BUILD_COMMIT=${TRAVIS_COMMIT}
   - export CMAKE_TOOLCHAIN_FILE="/tmp/vcpkg-export/scripts/buildsystems/vcpkg.cmake";
   - if [[ "${TRAVIS_OS_NAME}" == "osx" ]]; then
         export PATH="/usr/local/opt/ccache/libexec:$PATH";
