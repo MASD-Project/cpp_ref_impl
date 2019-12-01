@@ -40,9 +40,9 @@ set_target_properties(${tests_target_name} PROPERTIES
 
 target_link_libraries(${tests_target_name}
     ${lib_target_name}
-    ${Boost_LIBRARIES}
     ${CMAKE_REQUIRED_LIBRARIES}
-    ${CMAKE_THREAD_LIBS_INIT})
+    ${CMAKE_THREAD_LIBS_INIT}
+    ${Boost_LIBRARIES})
 
 set(command $<TARGET_FILE:${tests_target_name}> ${boost_test_parameters})
 
