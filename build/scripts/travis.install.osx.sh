@@ -39,3 +39,8 @@ echo "vcpkg version: ${vcpkg_folder}"
 # Upgrade CMake
 #
 brew upgrade cmake
+
+#
+# Remove the brew packages for boost
+#
+brew uninstall --force --ignore-dependencies boost || true
