@@ -447,7 +447,7 @@
           "type": "std::string",
           "tagged_values": {
             "masd.orm.is_nullable": "false",
-            "masd.generation.cpp.odb.pragma": "column(\"LASTNAME\")"
+            "masd.orm.odb_pragma": "column(\"LASTNAME\")"
           }
         },
         {
@@ -455,7 +455,7 @@
           "type": "std::string",
           "tagged_values": {
             "masd.orm.is_nullable": "false",
-            "masd.generation.cpp.odb.pragma": "column(\"FIRSTNAME\")"
+            "masd.orm.odb_pragma": "column(\"FIRSTNAME\")"
           }
         },
         {
@@ -477,7 +477,7 @@
           "type": "boost::gregorian::date",
           "tagged_values": {
             "masd.orm.is_nullable": "true",
-            "masd.generation.cpp.odb.pragma": "column(\"BIRTHDATE\")"
+            "masd.orm.odb_pragma": "column(\"BIRTHDATE\")"
           }
         },
         {
@@ -485,7 +485,7 @@
           "type": "boost::gregorian::date",
           "tagged_values": {
             "masd.orm.is_nullable": "true",
-            "masd.generation.cpp.odb.pragma": "column(\"HIREDATE\")"
+            "masd.orm.odb_pragma": "column(\"HIREDATE\")"
           }
         },
         {
