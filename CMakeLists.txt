@@ -321,9 +321,24 @@ if (DOGEN_CLI_EXECUTABLE)
     # Options to use for all Dogen invocations
     #
 
+    # model processing options
+    set(DOGEN_PROCESSING_OPTIONS "")
+    # uncomment the next line if you need dry runs.
+    # set(DOGEN_PROCESSING_OPTIONS ${DOGEN_PROCESSING_OPTIONS}
+    #    --dry-run-mode-enabled)
+    # set(DOGEN_PROCESSING_OPTIONS ${DOGEN_PROCESSING_OPTIONS}
+    #     --activity-timestamp "2020-01-18T12:45:33")
+
+    message(STATUS "Full generation: ${WITH_FULL_GENERATION}")
+    if (WITH_FULL_GENERATION)
+        set(profile "dogen.profiles.base.test_all_facets")
+        set(DOGEN_PROCESSING_OPTIONS ${DOGEN_PROCESSING_OPTIONS}
+            --variability-override masd.variability.profile,${profile})
+    endif()
+
     # uncomment to enable logging.
     set(DOGEN_LOGGING_OPTIONS "")
-    # set(DOGEN_LOG_LEVEL "trace")
+    set(DOGEN_LOG_LEVEL "trace")
     # set(DOGEN_LOGGING_OPTIONS --log-enabled --log-level ${DOGEN_LOG_LEVEL})
 
     set(DOGEN_TRACING_OPTIONS "")
@@ -332,22 +347,36 @@ if (DOGEN_CLI_EXECUTABLE)
     # set(DOGEN_TRACING_OPTIONS ${DOGEN_TRACING_OPTIONS} --tracing-level detail)
     # set(DOGEN_TRACING_OPTIONS ${DOGEN_TRACING_OPTIONS} --tracing-format org-mode)
     # set(DOGEN_TRACING_OPTIONS ${DOGEN_TRACING_OPTIONS} --tracing-guids-enabled)
+    # change to file or relational as required.
+    # set(DOGEN_TRACING_OPTIONS ${DOGEN_TRACING_OPTIONS} --tracing-backend relational)
+
+    set(DOGEN_DATABASE_OPTIONS "")
+    # uncomment to enable database tracing.
+    # set(DOGEN_DATABASE_OPTIONS ${DOGEN_DATABASE_OPTIONS} --database-host localhost)
+    # set(DOGEN_DATABASE_OPTIONS ${DOGEN_DATABASE_OPTIONS} --database-port 5433)
+    # set(DOGEN_DATABASE_OPTIONS ${DOGEN_DATABASE_OPTIONS} --database-name musseque)
+    # set(DOGEN_DATABASE_OPTIONS ${DOGEN_DATABASE_OPTIONS} --database-user build)
+    # set(DOGEN_DATABASE_OPTIONS ${DOGEN_DATABASE_OPTIONS} --database-password build)
+    # uncomment out if schema regeneration is required.
+    # WARNING: all data will be deleted.
+    # set(DOGEN_DATABASE_OPTIONS ${DOGEN_DATABASE_OPTIONS} --database-generate-schema)
 
     set(DOGEN_DIFFING_OPTIONS "")
     # uncomment to enable diffing
     # set(DOGEN_DIFFING_OPTIONS ${DOGEN_DIFFING_OPTIONS} --diffing-enabled)
     # set(DOGEN_DIFFING_OPTIONS ${DOGEN_DIFFING_OPTIONS}
     #    --diffing-destination console)
-    # set(DOGEN_DIFFING_OPTIONS ${DOGEN_DIFFING_OPTIONS} --dry-run-mode-enabled)
 
     set(DOGEN_REPORTING_OPTIONS "")
     # uncomment to enable reporting
     # set(DOGEN_REPORTING_OPTIONS ${DOGEN_REPORTING_OPTIONS} --reporting-enabled)
     # set(DOGEN_REPORTING_OPTIONS ${DOGEN_REPORTING_OPTIONS}
-    #     --reporting-style org-mode )
+    #    --reporting-style org-mode)
 
-    set(DOGEN_COMMON_OPTIONS ${DOGEN_LOGGING_OPTIONS} ${DOGEN_TRACING_OPTIONS}
-        ${DOGEN_DIFFING_OPTIONS} ${DOGEN_REPORTING_OPTIONS})
+    set(DOGEN_COMMON_OPTIONS ${DOGEN_PROCESSING_OPTIONS}
+        ${DOGEN_LOGGING_OPTIONS} ${DOGEN_TRACING_OPTIONS}
+        ${DOGEN_DATABASE_OPTIONS} ${DOGEN_DIFFING_OPTIONS}
+        ${DOGEN_REPORTING_OPTIONS})
 
     # uncomment the next line if you require compatibility support
     # set(DOGEN_COMMON_OPTIONS ${DOGEN_COMMON_OPTIONS} --compatibility-mode)
