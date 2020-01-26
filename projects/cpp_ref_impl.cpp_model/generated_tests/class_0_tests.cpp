@@ -37,7 +37,7 @@
 #include "cpp_ref_impl.cpp_model/hash/class_0_hash.hpp"
 #include "cpp_ref_impl.cpp_model/test_data/class_0_td.hpp"
 #include "cpp_ref_impl.cpp_model/serialization/class_0_ser.hpp"
-#include "cpp_ref_impl.cpp_model/serialization/registrar_ser.hpp"
+#include "cpp_ref_impl.cpp_model/serialization/new_registrar_ser.hpp"
 
 BOOST_AUTO_TEST_SUITE(class_0_tests)
 

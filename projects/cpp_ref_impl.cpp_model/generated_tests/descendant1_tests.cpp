@@ -38,8 +38,8 @@
 #include "cpp_ref_impl.cpp_model/types/descendant1.hpp"
 #include "cpp_ref_impl.cpp_model/hash/descendant1_hash.hpp"
 #include "cpp_ref_impl.cpp_model/test_data/descendant1_td.hpp"
-#include "cpp_ref_impl.cpp_model/serialization/registrar_ser.hpp"
 #include "cpp_ref_impl.cpp_model/serialization/descendant1_ser.hpp"
+#include "cpp_ref_impl.cpp_model/serialization/new_registrar_ser.hpp"
 
 BOOST_AUTO_TEST_SUITE(descendant1_tests)
 

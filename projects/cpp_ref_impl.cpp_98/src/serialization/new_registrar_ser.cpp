@@ -18,31 +18,35 @@
  * MA 02110-1301, USA.
  *
  */
-#include <string>
-#include <sstream>
-#include <boost/test/unit_test.hpp>
-#include <boost/serialization/nvp.hpp>
-#include <boost/property_tree/ptree.hpp>
 #include <boost/archive/xml_iarchive.hpp>
 #include <boost/archive/xml_oarchive.hpp>
 #include <boost/archive/text_iarchive.hpp>
 #include <boost/archive/text_oarchive.hpp>
 #include <boost/archive/binary_iarchive.hpp>
 #include <boost/archive/binary_oarchive.hpp>
-#include <boost/property_tree/json_parser.hpp>
 #include <boost/archive/polymorphic_iarchive.hpp>
 #include <boost/archive/polymorphic_oarchive.hpp>
-#include "cpp_ref_impl.cpp_model/io/class_d_io.hpp"
-#include "cpp_ref_impl.cpp_model/types/class_d.hpp"
-#include "cpp_ref_impl.cpp_model/hash/class_d_hash.hpp"
-#include "cpp_ref_impl.cpp_model/test_data/class_d_td.hpp"
-#include "cpp_ref_impl.cpp_model/serialization/class_d_ser.hpp"
-#include "cpp_ref_impl.cpp_model/serialization/new_registrar_ser.hpp"
+#include "cpp_ref_impl.cpp_98/serialization/child_ser.hpp"
+#include "cpp_ref_impl.cpp_98/serialization/new_registrar_ser.hpp"
 
-BOOST_AUTO_TEST_SUITE(class_d_tests)
+namespace cpp_ref_impl {
+namespace cpp_98 {
 
-BOOST_AUTO_TEST_CASE(fake_test) {
-    BOOST_CHECK(true);
+template<typename Archive>
+void new_registrar::register_types(Archive& ar) {
+    ar.template register_type<cpp_ref_impl::cpp_98::child>();
 }
 
-BOOST_AUTO_TEST_SUITE_END()
+template void new_registrar::register_types(boost::archive::polymorphic_oarchive& ar);
+template void new_registrar::register_types(boost::archive::polymorphic_iarchive& ar);
+
+template void new_registrar::register_types(boost::archive::text_oarchive& ar);
+template void new_registrar::register_types(boost::archive::text_iarchive& ar);
+
+template void new_registrar::register_types(boost::archive::binary_oarchive& ar);
+template void new_registrar::register_types(boost::archive::binary_iarchive& ar);
+
+template void new_registrar::register_types(boost::archive::xml_oarchive& ar);
+template void new_registrar::register_types(boost::archive::xml_iarchive& ar);
+
+} }

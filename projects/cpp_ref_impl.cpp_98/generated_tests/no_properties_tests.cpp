@@ -35,7 +35,7 @@
 #include "cpp_ref_impl.cpp_98/io/no_properties_io.hpp"
 #include "cpp_ref_impl.cpp_98/types/no_properties.hpp"
 #include "cpp_ref_impl.cpp_98/test_data/no_properties_td.hpp"
-#include "cpp_ref_impl.cpp_98/serialization/registrar_ser.hpp"
+#include "cpp_ref_impl.cpp_98/serialization/new_registrar_ser.hpp"
 #include "cpp_ref_impl.cpp_98/serialization/no_properties_ser.hpp"
 
 BOOST_AUTO_TEST_SUITE(no_properties_tests)

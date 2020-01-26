@@ -39,7 +39,7 @@
 #include "cpp_ref_impl.cpp_model/hash/base_hash.hpp"
 #include "cpp_ref_impl.cpp_model/test_data/base_td.hpp"
 #include "cpp_ref_impl.cpp_model/serialization/base_ser.hpp"
-#include "cpp_ref_impl.cpp_model/serialization/registrar_ser.hpp"
+#include "cpp_ref_impl.cpp_model/serialization/new_registrar_ser.hpp"
 
 BOOST_AUTO_TEST_SUITE(base_tests)
 

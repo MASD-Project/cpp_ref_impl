@@ -18,14 +18,14 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_SERIALIZATION_NEW_REGISTRAR_SER_HPP
-#define CPP_REF_IMPL_CPP_MODEL_SERIALIZATION_NEW_REGISTRAR_SER_HPP
+#ifndef CPP_REF_IMPL_STD_MODEL_SERIALIZATION_NEW_REGISTRAR_SER_HPP
+#define CPP_REF_IMPL_STD_MODEL_SERIALIZATION_NEW_REGISTRAR_SER_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
-namespace cpp_ref_impl::cpp_model {
+namespace cpp_ref_impl::std_model {
 
 class new_registrar {
 public:

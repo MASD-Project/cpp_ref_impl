@@ -35,7 +35,6 @@
 #include "cpp_ref_impl.directory_settings/io_dir/package_0/class_1_0_1_0_the_io.hh"
 #include "cpp_ref_impl.directory_settings/hash_dir/package_0/class_1_0_0_0_the_hash.hh"
 #include "cpp_ref_impl.directory_settings/types_dir/package_0/class_1_0_5_0_the_types.hh"
-#include "cpp_ref_impl.directory_settings/serialization_dir/registrar_0_3_7_the_serialization.hh"
 #include "cpp_ref_impl.directory_settings/test_data_dir/package_0/class_1_0_4_0_the_test_data.hh"
 #include "cpp_ref_impl.directory_settings/serialization_dir/package_0/class_1_0_3_0_the_serialization.hh"
 
@@ -155,7 +154,6 @@ BOOST_AUTO_TEST_CASE(xml_roundtrip_produces_the_same_entity) {
     std::ostringstream os;
     {
         xml_oarchive oa(os);
-        cpp_ref_impl::directory_settings::register_types<xml_oarchive>(oa);
         oa << BOOST_SERIALIZATION_NVP(a);
     }
 
@@ -163,7 +161,6 @@ BOOST_AUTO_TEST_CASE(xml_roundtrip_produces_the_same_entity) {
     std::istringstream is(os.str());
     {
         xml_iarchive ia(is);
-        cpp_ref_impl::directory_settings::register_types<xml_iarchive>(ia);
         ia >> BOOST_SERIALIZATION_NVP(b);
     }
 
@@ -178,7 +175,6 @@ BOOST_AUTO_TEST_CASE(text_roundtrip_produces_the_same_entity) {
     std::ostringstream os;
     {
         text_oarchive oa(os);
-        cpp_ref_impl::directory_settings::register_types<text_oarchive>(oa);
         oa << a;
     }
 
@@ -186,7 +182,6 @@ BOOST_AUTO_TEST_CASE(text_roundtrip_produces_the_same_entity) {
     std::istringstream is(os.str());
     {
         text_iarchive ia(is);
-        cpp_ref_impl::directory_settings::register_types<text_iarchive>(ia);
         ia >> b;
     }
 
@@ -201,7 +196,6 @@ BOOST_AUTO_TEST_CASE(binary_roundtrip_produces_the_same_entity) {
     std::ostringstream os;
     {
         binary_oarchive oa(os);
-        cpp_ref_impl::directory_settings::register_types<binary_oarchive>(oa);
         oa << a;
     }
 
@@ -209,7 +203,6 @@ BOOST_AUTO_TEST_CASE(binary_roundtrip_produces_the_same_entity) {
     std::istringstream is(os.str());
     {
         binary_iarchive ia(is);
-        cpp_ref_impl::directory_settings::register_types<binary_iarchive>(ia);
         ia >> b;
     }
 
