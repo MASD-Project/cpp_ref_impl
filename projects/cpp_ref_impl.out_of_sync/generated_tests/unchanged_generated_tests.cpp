@@ -34,7 +34,6 @@
 #include <boost/archive/polymorphic_oarchive.hpp>
 #include "cpp_ref_impl.out_of_sync/io/unchanged_generated_io.hpp"
 #include "cpp_ref_impl.out_of_sync/types/unchanged_generated.hpp"
-#include "cpp_ref_impl.out_of_sync/serialization/registrar_ser.hpp"
 #include "cpp_ref_impl.out_of_sync/hash/unchanged_generated_hash.hpp"
 #include "cpp_ref_impl.out_of_sync/test_data/unchanged_generated_td.hpp"
 #include "cpp_ref_impl.out_of_sync/serialization/unchanged_generated_ser.hpp"
@@ -155,7 +154,6 @@ BOOST_AUTO_TEST_CASE(xml_roundtrip_produces_the_same_entity) {
     std::ostringstream os;
     {
         xml_oarchive oa(os);
-        cpp_ref_impl::out_of_sync::register_types<xml_oarchive>(oa);
         oa << BOOST_SERIALIZATION_NVP(a);
     }
 
@@ -163,7 +161,6 @@ BOOST_AUTO_TEST_CASE(xml_roundtrip_produces_the_same_entity) {
     std::istringstream is(os.str());
     {
         xml_iarchive ia(is);
-        cpp_ref_impl::out_of_sync::register_types<xml_iarchive>(ia);
         ia >> BOOST_SERIALIZATION_NVP(b);
     }
 
@@ -178,7 +175,6 @@ BOOST_AUTO_TEST_CASE(text_roundtrip_produces_the_same_entity) {
     std::ostringstream os;
     {
         text_oarchive oa(os);
-        cpp_ref_impl::out_of_sync::register_types<text_oarchive>(oa);
         oa << a;
     }
 
@@ -186,7 +182,6 @@ BOOST_AUTO_TEST_CASE(text_roundtrip_produces_the_same_entity) {
     std::istringstream is(os.str());
     {
         text_iarchive ia(is);
-        cpp_ref_impl::out_of_sync::register_types<text_iarchive>(ia);
         ia >> b;
     }
 
@@ -201,7 +196,6 @@ BOOST_AUTO_TEST_CASE(binary_roundtrip_produces_the_same_entity) {
     std::ostringstream os;
     {
         binary_oarchive oa(os);
-        cpp_ref_impl::out_of_sync::register_types<binary_oarchive>(oa);
         oa << a;
     }
 
@@ -209,7 +203,6 @@ BOOST_AUTO_TEST_CASE(binary_roundtrip_produces_the_same_entity) {
     std::istringstream is(os.str());
     {
         binary_iarchive ia(is);
-        cpp_ref_impl::out_of_sync::register_types<binary_iarchive>(ia);
         ia >> b;
     }
 

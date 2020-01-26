@@ -325,6 +325,13 @@
           "type": "string_primitive"
         }
       ]
+    },
+    {
+      "name": "new_registrar",
+      "stereotypes": [
+        "masd::serialization::type_registrar"
+      ],
+      "fallback_element_type": "masd::object"
     }
   ]
 }

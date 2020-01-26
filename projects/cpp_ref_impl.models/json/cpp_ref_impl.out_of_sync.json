@@ -1,5 +1,5 @@
 {
-  "documentation": "This model is designed to be out of sync with the generated code. It\ntests the behaviour of Dogen when faced with the following scenarios:\n\n- model elements that have not changed.\n- model elements that have changed.\n- files that are expected to be ignored.\n- files that are unexpected.\n\nIf you need to regenerate this model, you need to remove the attribute\nchanged_generated in class changed_generated and delete the class\nhandcrafted_new.\n",
+  "documentation": "This model is designed to be out of sync with the generated code. It\ntests the behaviour of Dogen when faced with the following scenarios:\n\n- model elements that have not changed.\n- model elements that have changed.\n- files that are expected to be ignored.\n- files that are unexpected.\n\nIf you need to regenerate this model, you need to remove the attribute\nchanged_property in class changed_generated and delete the class\nhandcrafted_new.\n",
   "tagged_values": {
     "masd.injection.dia.comment": "true",
     "masd.injection.model_modules": "cpp_ref_impl.out_of_sync",

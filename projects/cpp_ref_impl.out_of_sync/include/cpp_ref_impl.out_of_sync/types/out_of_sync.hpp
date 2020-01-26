@@ -35,7 +35,7 @@
  * - files that are unexpected.
  *
  * If you need to regenerate this model, you need to remove the attribute
- * changed_generated in class changed_generated and delete the class
+ * changed_property in class changed_generated and delete the class
  * handcrafted_new.
  */
 namespace cpp_ref_impl::out_of_sync {
