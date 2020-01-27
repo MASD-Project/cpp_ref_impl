@@ -26,9 +26,9 @@
 #include <boost/archive/binary_oarchive.hpp>
 #include <boost/archive/polymorphic_iarchive.hpp>
 #include <boost/archive/polymorphic_oarchive.hpp>
+#include "cpp_ref_impl.cpp_model/serialization/registrar_ser.hpp"
 #include "cpp_ref_impl.cpp_model/serialization/descendant2_ser.hpp"
 #include "cpp_ref_impl.cpp_model/serialization/descendant3_ser.hpp"
-#include "cpp_ref_impl.cpp_model/serialization/new_registrar_ser.hpp"
 #include "cpp_ref_impl.cpp_model/serialization/non_final_leaf_ser.hpp"
 #include "cpp_ref_impl.cpp_model/serialization/package_6/child_ser.hpp"
 #include "cpp_ref_impl.cpp_model/serialization/package_8/child_ser.hpp"
@@ -49,7 +49,7 @@
 namespace cpp_ref_impl::cpp_model {
 
 template<typename Archive>
-void new_registrar::register_types(Archive& ar) {
+void registrar::register_types(Archive& ar) {
     ar.template register_type<cpp_ref_impl::cpp_model::child_of_a_child1>();
     ar.template register_type<cpp_ref_impl::cpp_model::child_of_a_child2>();
     ar.template register_type<cpp_ref_impl::cpp_model::child_via_settings>();
@@ -70,16 +70,16 @@ void new_registrar::register_types(Archive& ar) {
     ar.template register_type<cpp_ref_impl::cpp_model::second_child_without_members>();
 }
 
-template void new_registrar::register_types(boost::archive::polymorphic_oarchive& ar);
-template void new_registrar::register_types(boost::archive::polymorphic_iarchive& ar);
+template void registrar::register_types(boost::archive::polymorphic_oarchive& ar);
+template void registrar::register_types(boost::archive::polymorphic_iarchive& ar);
 
-template void new_registrar::register_types(boost::archive::text_oarchive& ar);
-template void new_registrar::register_types(boost::archive::text_iarchive& ar);
+template void registrar::register_types(boost::archive::text_oarchive& ar);
+template void registrar::register_types(boost::archive::text_iarchive& ar);
 
-template void new_registrar::register_types(boost::archive::binary_oarchive& ar);
-template void new_registrar::register_types(boost::archive::binary_iarchive& ar);
+template void registrar::register_types(boost::archive::binary_oarchive& ar);
+template void registrar::register_types(boost::archive::binary_iarchive& ar);
 
-template void new_registrar::register_types(boost::archive::xml_oarchive& ar);
-template void new_registrar::register_types(boost::archive::xml_iarchive& ar);
+template void registrar::register_types(boost::archive::xml_oarchive& ar);
+template void registrar::register_types(boost::archive::xml_iarchive& ar);
 
 }

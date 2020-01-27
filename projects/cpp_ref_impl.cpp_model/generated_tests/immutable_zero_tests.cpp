@@ -35,8 +35,8 @@
 #include "cpp_ref_impl.cpp_model/io/immutable_zero_io.hpp"
 #include "cpp_ref_impl.cpp_model/types/immutable_zero.hpp"
 #include "cpp_ref_impl.cpp_model/hash/immutable_zero_hash.hpp"
+#include "cpp_ref_impl.cpp_model/serialization/registrar_ser.hpp"
 #include "cpp_ref_impl.cpp_model/test_data/immutable_zero_td.hpp"
-#include "cpp_ref_impl.cpp_model/serialization/new_registrar_ser.hpp"
 #include "cpp_ref_impl.cpp_model/serialization/immutable_zero_ser.hpp"
 
 BOOST_AUTO_TEST_SUITE(immutable_zero_tests)

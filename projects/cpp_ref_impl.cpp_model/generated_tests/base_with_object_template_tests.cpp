@@ -34,8 +34,8 @@
 #include <boost/property_tree/json_parser.hpp>
 #include <boost/archive/polymorphic_iarchive.hpp>
 #include <boost/archive/polymorphic_oarchive.hpp>
+#include "cpp_ref_impl.cpp_model/serialization/registrar_ser.hpp"
 #include "cpp_ref_impl.cpp_model/io/base_with_object_template_io.hpp"
-#include "cpp_ref_impl.cpp_model/serialization/new_registrar_ser.hpp"
 #include "cpp_ref_impl.cpp_model/types/base_with_object_template.hpp"
 #include "cpp_ref_impl.cpp_model/hash/base_with_object_template_hash.hpp"
 #include "cpp_ref_impl.cpp_model/test_data/base_with_object_template_td.hpp"
@@ -61,7 +61,7 @@ BOOST_AUTO_TEST_CASE(xml_roundtrip_produces_the_same_entity) {
     std::ostringstream os;
     {
         xml_oarchive oa(os);
-        cpp_ref_impl::cpp_model::new_registrar::register_types<xml_oarchive>(oa);
+        cpp_ref_impl::cpp_model::registrar::register_types<xml_oarchive>(oa);
 
         oa << BOOST_SERIALIZATION_NVP(a);
     }
@@ -70,7 +70,7 @@ BOOST_AUTO_TEST_CASE(xml_roundtrip_produces_the_same_entity) {
     std::istringstream is(os.str());
     {
         xml_iarchive ia(is);
-        cpp_ref_impl::cpp_model::new_registrar::register_types<xml_iarchive>(ia);
+        cpp_ref_impl::cpp_model::registrar::register_types<xml_iarchive>(ia);
         ia >> BOOST_SERIALIZATION_NVP(b);
     }
 
@@ -87,7 +87,7 @@ BOOST_AUTO_TEST_CASE(text_roundtrip_produces_the_same_entity) {
     std::ostringstream os;
     {
         text_oarchive oa(os);
-        cpp_ref_impl::cpp_model::new_registrar::register_types<text_oarchive>(oa);
+        cpp_ref_impl::cpp_model::registrar::register_types<text_oarchive>(oa);
         oa << a;
     }
 
@@ -95,7 +95,7 @@ BOOST_AUTO_TEST_CASE(text_roundtrip_produces_the_same_entity) {
     std::istringstream is(os.str());
     {
         text_iarchive ia(is);
-        cpp_ref_impl::cpp_model::new_registrar::register_types<text_iarchive>(ia);
+        cpp_ref_impl::cpp_model::registrar::register_types<text_iarchive>(ia);
         ia >> b;
     }
 
@@ -112,7 +112,7 @@ BOOST_AUTO_TEST_CASE(binary_roundtrip_produces_the_same_entity) {
     std::ostringstream os;
     {
         binary_oarchive oa(os);
-        cpp_ref_impl::cpp_model::new_registrar::register_types<binary_oarchive>(oa);
+        cpp_ref_impl::cpp_model::registrar::register_types<binary_oarchive>(oa);
         oa << a;
     }
 
@@ -120,7 +120,7 @@ BOOST_AUTO_TEST_CASE(binary_roundtrip_produces_the_same_entity) {
     std::istringstream is(os.str());
     {
         binary_iarchive ia(is);
-        cpp_ref_impl::cpp_model::new_registrar::register_types<binary_iarchive>(ia);
+        cpp_ref_impl::cpp_model::registrar::register_types<binary_iarchive>(ia);
         ia >> b;
     }
 

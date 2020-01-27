@@ -26,27 +26,26 @@
 #include <boost/archive/binary_oarchive.hpp>
 #include <boost/archive/polymorphic_iarchive.hpp>
 #include <boost/archive/polymorphic_oarchive.hpp>
-#include "cpp_ref_impl.cpp_98/serialization/child_ser.hpp"
-#include "cpp_ref_impl.cpp_98/serialization/new_registrar_ser.hpp"
+#include "cpp_ref_impl.boost_model/serialization/registrar_ser.hpp"
+#include "cpp_ref_impl.boost_model/serialization/class_derived_ser.hpp"
 
-namespace cpp_ref_impl {
-namespace cpp_98 {
+namespace cpp_ref_impl::boost_model {
 
 template<typename Archive>
-void new_registrar::register_types(Archive& ar) {
-    ar.template register_type<cpp_ref_impl::cpp_98::child>();
+void registrar::register_types(Archive& ar) {
+    ar.template register_type<cpp_ref_impl::boost_model::class_derived>();
 }
 
-template void new_registrar::register_types(boost::archive::polymorphic_oarchive& ar);
-template void new_registrar::register_types(boost::archive::polymorphic_iarchive& ar);
+template void registrar::register_types(boost::archive::polymorphic_oarchive& ar);
+template void registrar::register_types(boost::archive::polymorphic_iarchive& ar);
 
-template void new_registrar::register_types(boost::archive::text_oarchive& ar);
-template void new_registrar::register_types(boost::archive::text_iarchive& ar);
+template void registrar::register_types(boost::archive::text_oarchive& ar);
+template void registrar::register_types(boost::archive::text_iarchive& ar);
 
-template void new_registrar::register_types(boost::archive::binary_oarchive& ar);
-template void new_registrar::register_types(boost::archive::binary_iarchive& ar);
+template void registrar::register_types(boost::archive::binary_oarchive& ar);
+template void registrar::register_types(boost::archive::binary_iarchive& ar);
 
-template void new_registrar::register_types(boost::archive::xml_oarchive& ar);
-template void new_registrar::register_types(boost::archive::xml_iarchive& ar);
+template void registrar::register_types(boost::archive::xml_oarchive& ar);
+template void registrar::register_types(boost::archive::xml_iarchive& ar);
 
-} }
+}

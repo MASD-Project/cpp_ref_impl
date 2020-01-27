@@ -84,7 +84,7 @@
       ]
     },
     {
-      "name": "new_registrar",
+      "name": "registrar",
       "stereotypes": [
         "masd::serialization::type_registrar"
       ],

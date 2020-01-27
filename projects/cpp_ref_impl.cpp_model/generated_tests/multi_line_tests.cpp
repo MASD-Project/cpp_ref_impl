@@ -36,8 +36,8 @@
 #include "cpp_ref_impl.cpp_model/types/multi_line.hpp"
 #include "cpp_ref_impl.cpp_model/hash/multi_line_hash.hpp"
 #include "cpp_ref_impl.cpp_model/test_data/multi_line_td.hpp"
+#include "cpp_ref_impl.cpp_model/serialization/registrar_ser.hpp"
 #include "cpp_ref_impl.cpp_model/serialization/multi_line_ser.hpp"
-#include "cpp_ref_impl.cpp_model/serialization/new_registrar_ser.hpp"
 
 BOOST_AUTO_TEST_SUITE(multi_line_tests)
 

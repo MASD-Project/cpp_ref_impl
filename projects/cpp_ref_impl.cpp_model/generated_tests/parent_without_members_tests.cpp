@@ -34,9 +34,9 @@
 #include <boost/property_tree/json_parser.hpp>
 #include <boost/archive/polymorphic_iarchive.hpp>
 #include <boost/archive/polymorphic_oarchive.hpp>
+#include "cpp_ref_impl.cpp_model/serialization/registrar_ser.hpp"
 #include "cpp_ref_impl.cpp_model/io/parent_without_members_io.hpp"
 #include "cpp_ref_impl.cpp_model/types/parent_without_members.hpp"
-#include "cpp_ref_impl.cpp_model/serialization/new_registrar_ser.hpp"
 #include "cpp_ref_impl.cpp_model/hash/parent_without_members_hash.hpp"
 #include "cpp_ref_impl.cpp_model/test_data/parent_without_members_td.hpp"
 #include "cpp_ref_impl.cpp_model/serialization/parent_without_members_ser.hpp"

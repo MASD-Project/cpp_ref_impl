@@ -18,8 +18,8 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_BOOST_MODEL_SERIALIZATION_NEW_REGISTRAR_SER_HPP
-#define CPP_REF_IMPL_BOOST_MODEL_SERIALIZATION_NEW_REGISTRAR_SER_HPP
+#ifndef CPP_REF_IMPL_BOOST_MODEL_SERIALIZATION_REGISTRAR_SER_HPP
+#define CPP_REF_IMPL_BOOST_MODEL_SERIALIZATION_REGISTRAR_SER_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
@@ -27,7 +27,7 @@
 
 namespace cpp_ref_impl::boost_model {
 
-class new_registrar {
+class registrar {
 public:
 
 template<typename Archive>

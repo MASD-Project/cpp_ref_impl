@@ -15302,13 +15302,13 @@ inside of a package.#</dia:string>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O146">
       <dia:attribute name="obj_pos">
-        <dia:point val="81,45"/>
+        <dia:point val="45,-9"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="80.95,44.95;96.565,48.05"/>
+        <dia:rectangle val="44.95,-9.05;60.565,-5.95"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="81,45"/>
+        <dia:point val="45,-9"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="15.515000000000001"/>
@@ -15317,7 +15317,7 @@ inside of a package.#</dia:string>
         <dia:real val="3"/>
       </dia:attribute>
       <dia:attribute name="name">
-        <dia:string>#new_registrar#</dia:string>
+        <dia:string>#registrar#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
         <dia:string>#masd::serialization::type_registrar#</dia:string>
