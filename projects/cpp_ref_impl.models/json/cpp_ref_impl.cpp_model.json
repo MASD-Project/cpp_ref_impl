@@ -1369,6 +1369,13 @@
         "masd::serialization::type_registrar"
       ],
       "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "cpp_ref_impl.cpp_model",
+      "stereotypes": [
+        "masd::build::visual_studio::component"
+      ],
+      "fallback_element_type": "masd::object"
     }
   ]
 }
