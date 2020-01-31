@@ -1371,9 +1371,9 @@
       "fallback_element_type": "masd::object"
     },
     {
-      "name": "abc",
+      "name": "project",
       "stereotypes": [
-        "masd::build::visual_studio::component"
+        "masd::build::visual_studio::project"
       ],
       "tagged_values": {
         "masd.injection.is_simple_name_internal": "true"
@@ -1381,12 +1381,24 @@
       "fallback_element_type": "masd::object",
       "attributes": [
         {
-          "name": "project_guid",
+          "name": "guid",
           "type": "",
           "value": "876B2828-8A0B-495F-8340-0357690162E4"
-        },
+        }
+      ]
+    },
+    {
+      "name": "solution",
+      "stereotypes": [
+        "masd::build::visual_studio::solution"
+      ],
+      "tagged_values": {
+        "masd.injection.is_simple_name_internal": "true"
+      },
+      "fallback_element_type": "masd::object",
+      "attributes": [
         {
-          "name": "project_solution_guid",
+          "name": "guid",
           "type": "",
           "value": "3103CA57-FD70-4EC9-98BD-1C2C7360AF53"
         }
