@@ -1371,10 +1371,13 @@
       "fallback_element_type": "masd::object"
     },
     {
-      "name": "cpp_ref_impl.cpp_model",
+      "name": "abc",
       "stereotypes": [
         "masd::build::visual_studio::component"
       ],
+      "tagged_values": {
+        "masd.injection.is_simple_name_internal": "true"
+      },
       "fallback_element_type": "masd::object",
       "attributes": [
         {
