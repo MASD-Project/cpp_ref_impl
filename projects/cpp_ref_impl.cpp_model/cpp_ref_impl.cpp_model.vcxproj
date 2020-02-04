@@ -29,7 +29,5 @@
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.Cpp.targets" />
 </Project>
