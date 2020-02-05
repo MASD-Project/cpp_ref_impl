@@ -1395,6 +1395,13 @@
           "value": "3103CA57-FD70-4EC9-98BD-1C2C7360AF53"
         }
       ]
+    },
+    {
+      "name": "main",
+      "stereotypes": [
+        "masd::entry_point"
+      ],
+      "fallback_element_type": "masd::object"
     }
   ]
 }
