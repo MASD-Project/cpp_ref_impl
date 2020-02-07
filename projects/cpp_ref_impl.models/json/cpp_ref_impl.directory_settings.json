@@ -17,8 +17,6 @@
     "masd.generation.cpp.enabled": "true",
     "masd.generation.cpp.standard": "c++-17",
     "masd.generation.cpp.msbuild.enabled": "false",
-    "masd.generation.cpp.visual_studio.project.enabled": "false",
-    "masd.generation.cpp.visual_studio.solution.enabled": "false",
     "masd.generation.cpp.directory": "cpp_backend",
     "masd.generation.cpp.source_directory_name": "sd",
     "masd.generation.cpp.include_directory_name": "id",
