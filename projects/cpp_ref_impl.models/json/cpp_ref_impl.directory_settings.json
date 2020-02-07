@@ -83,7 +83,7 @@
     "masd.generation.cpp.tests.postfix": "the_tests",
     "masd.generation.cpp.tests.class_implementation.postfix": "0_6_1",
     "masd.generation.cpp.tests.enum_implementation.postfix": "0_6_1",
-    "masd.generation.cpp.tests.main.postfix": "0_6_1"
+    "masd.generation.cpp.tests.new_main.postfix": "0_6_1"
   },
   "elements": [
     {
