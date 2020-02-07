@@ -1,4 +1,4 @@
-#define BOOST_TEST_MODULE cpp_ref_impl::delete_extra::entry_point
+#define BOOST_TEST_MODULE cpp_ref_impl::two_layers::main
 
 /* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*-
  *

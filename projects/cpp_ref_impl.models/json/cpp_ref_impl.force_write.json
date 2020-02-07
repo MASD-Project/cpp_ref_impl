@@ -44,6 +44,13 @@
           "documentation": "This property was added after the initial generation. It should not appear in code\ngeneration. If it does, the overwrite flag for handcrafted is not working.\n"
         }
       ]
+    },
+    {
+      "name": "main",
+      "stereotypes": [
+        "masd::entry_point"
+      ],
+      "fallback_element_type": "masd::object"
     }
   ]
 }

@@ -123,6 +123,13 @@
           "type": "masd::lam::numeric::integer"
         }
       ]
+    },
+    {
+      "name": "main",
+      "stereotypes": [
+        "masd::entry_point"
+      ],
+      "fallback_element_type": "masd::object"
     }
   ]
 }

@@ -1,4 +1,4 @@
-#define BOOST_TEST_MODULE cpp_ref_impl::compressed::entry_point
+#define BOOST_TEST_MODULE cpp_ref_impl::boost_model::main
 
 /* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*-
  *
