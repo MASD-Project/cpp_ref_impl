@@ -241,7 +241,7 @@
         <dia:point val="-31,-47"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-31.05,-47.05;1.135,21.95"/>
+        <dia:rectangle val="-31.05,-47.05;1.135,20.35"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -253,7 +253,7 @@
         <dia:real val="32.085000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="68.899999999999991"/>
+        <dia:real val="67.299999999999997"/>
       </dia:attribute>
       <dia:attribute name="line_width">
         <dia:real val="0.10000000000000001"/>
@@ -682,13 +682,13 @@
         <dia:point val="23,-46"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="22.95,-46.05;31.635,-42.95"/>
+        <dia:rectangle val="22.95,-46.05;42.415,-42.95"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="23,-46"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="8.5849999999999991"/>
+        <dia:real val="19.365000000000002"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="3"/>
@@ -697,7 +697,7 @@
         <dia:string>#main#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#masd::entry_point#</dia:string>
+        <dia:string>#masd::entry_point, cpp_ref_impl::untypable#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##</dia:string>

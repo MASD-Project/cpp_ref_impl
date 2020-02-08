@@ -498,6 +498,30 @@
           "documentation": "This is a code-generated file.\n"
         }
       ]
+    },
+    {
+      "name": "composable::untypable",
+      "documentation": "The element only has the testing facet enabled.\n",
+      "stereotypes": [
+        "masd::variability::profile_template"
+      ],
+      "tagged_values": {
+        "masd.variability.binding_point": "element",
+        "masd.variability.labels": "cpp_ref_impl::untypable"
+      },
+      "fallback_element_type": "masd::object",
+      "attributes": [
+        {
+          "name": "masd.generation.cpp.types.enabled",
+          "type": "",
+          "value": "false",
+          "tagged_values": {
+            "masd.variability.archetype_location.kernel": "masd",
+            "masd.variability.archetype_location.backend": "masd.generation.cpp",
+            "masd.variability.template_kind": "instance"
+          }
+        }
+      ]
     }
   ]
 }

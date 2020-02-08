@@ -48,7 +48,8 @@
     {
       "name": "main",
       "stereotypes": [
-        "masd::entry_point"
+        "masd::entry_point",
+        "cpp_ref_impl::untypable"
       ],
       "fallback_element_type": "masd::object"
     }
