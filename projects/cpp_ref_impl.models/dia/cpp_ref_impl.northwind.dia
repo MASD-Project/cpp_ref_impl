@@ -5083,13 +5083,13 @@ It's objective is to test Dogen integration with ODB.
         <dia:point val="92,-122"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="91.95,-122.05;111.415,-118.95"/>
+        <dia:rectangle val="91.95,-122.05;110.26,-118.95"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="92,-122"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="19.365000000000002"/>
+        <dia:real val="18.210000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="3"/>

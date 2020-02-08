@@ -241,7 +241,7 @@
         <dia:point val="-22,-43"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-22.05,-43.05;8.21,-27.65"/>
+        <dia:rectangle val="-22.05,-43.05;8.21,-28.45"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -253,7 +253,7 @@
         <dia:real val="30.160000000000004"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="15.300000000000001"/>
+        <dia:real val="14.500000000000002"/>
       </dia:attribute>
       <dia:attribute name="line_width">
         <dia:real val="0.10000000000000001"/>
@@ -283,7 +283,6 @@
 #DOGEN masd.generation.cpp.standard=c++-17
 #DOGEN masd.generation.cpp.msbuild.enabled=false
 #DOGEN masd.variability.profile=cpp_ref_impl.profiles.base.enable_all_facets
-#DOGEN masd.generation.cpp.tests.enabled=true
 #DOGEN masd.generation.decoration.marker_name=cpp_ref_impl.profiles.basic#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
@@ -650,13 +649,13 @@
         <dia:point val="11,-43"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="10.95,-43.05;30.415,-39.95"/>
+        <dia:rectangle val="10.95,-43.05;29.26,-39.95"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="11,-43"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="19.365000000000002"/>
+        <dia:real val="18.210000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="3"/>

@@ -329,13 +329,13 @@
         <dia:point val="22,-49"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="21.95,-49.05;41.415,-45.95"/>
+        <dia:rectangle val="21.95,-49.05;40.26,-45.95"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="22,-49"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="19.365000000000002"/>
+        <dia:real val="18.210000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="3"/>

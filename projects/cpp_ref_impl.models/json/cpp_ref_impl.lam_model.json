@@ -16,7 +16,6 @@
     "masd.generation.cpp.standard": "c++-17",
     "masd.generation.cpp.msbuild.enabled": "false",
     "masd.variability.profile": "cpp_ref_impl.profiles.base.enable_all_facets",
-    "masd.generation.cpp.tests.enabled": "true",
     "masd.generation.decoration.marker_name": "cpp_ref_impl.profiles.basic"
   },
   "elements": [
