@@ -726,6 +726,13 @@
         "cpp_ref_impl::untypable"
       ],
       "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "common_options",
+      "stereotypes": [
+        "masd::orm::common_odb_options"
+      ],
+      "fallback_element_type": "masd::object"
     }
   ]
 }
