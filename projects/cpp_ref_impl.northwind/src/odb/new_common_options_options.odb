@@ -20,6 +20,17 @@
 # enable C++11
 --std c++11
 
+# casing
+--sql-name-case upper
+
+# enable multi-database support
+--multi-database static
+
+# target databases
+--database common
+--database sqlite
+--database pgsql
+
 # use the boost profile
 --profile boost
 
