@@ -728,7 +728,7 @@
       "fallback_element_type": "masd::object"
     },
     {
-      "name": "common_options",
+      "name": "new_common",
       "stereotypes": [
         "masd::orm::common_odb_options"
       ],

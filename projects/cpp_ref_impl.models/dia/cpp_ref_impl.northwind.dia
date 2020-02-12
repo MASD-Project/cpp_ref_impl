@@ -5205,7 +5205,7 @@ It's objective is to test Dogen integration with ODB.
         <dia:real val="3"/>
       </dia:attribute>
       <dia:attribute name="name">
-        <dia:string>#common_options#</dia:string>
+        <dia:string>#new_common#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
         <dia:string>#masd::orm::common_odb_options#</dia:string>
