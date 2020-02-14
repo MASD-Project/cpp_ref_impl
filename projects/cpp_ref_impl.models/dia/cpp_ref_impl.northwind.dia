@@ -5318,7 +5318,7 @@ It's objective is to test Dogen integration with ODB.
         <dia:string>#msbuild#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#masd::build::visual_studio::msbuild_targets#</dia:string>
+        <dia:string>#masd::visual_studio::msbuild_targets#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##</dia:string>

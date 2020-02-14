@@ -15427,7 +15427,7 @@ inside of a package.#</dia:string>
         <dia:string>#project#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#masd::build::visual_studio::project#</dia:string>
+        <dia:string>#masd::visual_studio::project#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##</dia:string>
@@ -15561,7 +15561,7 @@ inside of a package.#</dia:string>
         <dia:string>#solution#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#masd::build::visual_studio::solution#</dia:string>
+        <dia:string>#masd::visual_studio::solution#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##</dia:string>
