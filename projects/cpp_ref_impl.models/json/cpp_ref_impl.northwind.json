@@ -733,6 +733,13 @@
         "masd::orm::common_odb_options"
       ],
       "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "new_msbuild",
+      "stereotypes": [
+        "masd::build::visual_studio::msbuild_targets"
+      ],
+      "fallback_element_type": "masd::object"
     }
   ]
 }
