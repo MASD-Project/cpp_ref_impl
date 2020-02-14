@@ -5315,7 +5315,7 @@ It's objective is to test Dogen integration with ODB.
         <dia:real val="3"/>
       </dia:attribute>
       <dia:attribute name="name">
-        <dia:string>#new_msbuild#</dia:string>
+        <dia:string>#msbuild#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
         <dia:string>#masd::build::visual_studio::msbuild_targets#</dia:string>
