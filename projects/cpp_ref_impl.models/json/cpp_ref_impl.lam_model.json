@@ -14,7 +14,6 @@
     "masd.extraction.output_technical_space": "cpp",
     "masd.generation.cpp.enabled": "true",
     "masd.generation.cpp.standard": "c++-17",
-    "masd.generation.cpp.msbuild.enabled": "false",
     "masd.variability.profile": "cpp_ref_impl.profiles.base.enable_all_facets",
     "masd.generation.decoration.marker_name": "cpp_ref_impl.profiles.basic"
   },
