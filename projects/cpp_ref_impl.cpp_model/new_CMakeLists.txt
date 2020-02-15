@@ -17,11 +17,11 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 # MA 02110-1301, USA.
 #
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/src)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/generated_tests)
 
 install(
-    DIRECTORY /
-    DESTINATION /
+    DIRECTORY include/
+    DESTINATION include/
     COMPONENT headers
-    FILES_MATCHING PATTERN "*.")
+    FILES_MATCHING PATTERN "*.hpp")
