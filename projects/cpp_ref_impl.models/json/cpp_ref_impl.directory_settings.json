@@ -128,6 +128,13 @@
         "cpp_ref_impl::untypable"
       ],
       "fallback_element_type": "masd::object"
+    },
+    {
+      "name": "CMakeLists",
+      "stereotypes": [
+        "masd::build::cmakelists"
+      ],
+      "fallback_element_type": "masd::object"
     }
   ]
 }

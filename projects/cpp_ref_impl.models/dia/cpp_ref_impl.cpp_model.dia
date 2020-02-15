@@ -15802,7 +15802,7 @@ inside of a package.#</dia:string>
         <dia:real val="3"/>
       </dia:attribute>
       <dia:attribute name="name">
-        <dia:string>#new_CMakeLists#</dia:string>
+        <dia:string>#CMakeLists#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
         <dia:string>#masd::build::cmakelists#</dia:string>

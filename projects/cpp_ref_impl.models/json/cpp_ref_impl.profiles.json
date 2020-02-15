@@ -138,6 +138,16 @@
             "masd.variability.archetype_location.backend": "masd.generation.cpp",
             "masd.variability.template_kind": "instance"
           }
+        },
+        {
+          "name": "masd.generation.cpp.build.enabled",
+          "type": "",
+          "value": "true",
+          "tagged_values": {
+            "masd.variability.archetype_location.kernel": "masd",
+            "masd.variability.archetype_location.backend": "masd.generation.cpp",
+            "masd.variability.template_kind": "instance"
+          }
         }
       ]
     },
@@ -309,6 +319,16 @@
             "masd.variability.archetype_location.backend": "masd.generation.cpp",
             "masd.variability.template_kind": "instance"
           }
+        },
+        {
+          "name": "masd.generation.cpp.build.enabled",
+          "type": "",
+          "value": "false",
+          "tagged_values": {
+            "masd.variability.archetype_location.kernel": "masd",
+            "masd.variability.archetype_location.backend": "masd.generation.cpp",
+            "masd.variability.template_kind": "instance"
+          }
         }
       ]
     },
@@ -362,6 +382,16 @@
       "attributes": [
         {
           "name": "masd.generation.cpp.cmake.enabled",
+          "type": "",
+          "value": "false",
+          "tagged_values": {
+            "masd.variability.archetype_location.kernel": "masd",
+            "masd.variability.archetype_location.backend": "masd.generation.cpp",
+            "masd.variability.template_kind": "instance"
+          }
+        },
+        {
+          "name": "masd.generation.cpp.build.enabled",
           "type": "",
           "value": "false",
           "tagged_values": {
