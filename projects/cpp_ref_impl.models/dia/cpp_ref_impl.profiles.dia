@@ -420,7 +420,7 @@ space; keep it technical space agnostic.
         <dia:point val="51,29"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="50.95,28.95;67.335,33.45"/>
+        <dia:rectangle val="50.95,28.95;67.335,32.65"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="51,29"/>
@@ -429,7 +429,7 @@ space; keep it technical space agnostic.
         <dia:real val="16.285"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="4.4000000000000004"/>
+        <dia:real val="3.6000000000000001"/>
       </dia:attribute>
       <dia:attribute name="name">
         <dia:string>#enable_cmake_types#</dia:string>
@@ -522,31 +522,6 @@ space; keep it technical space agnostic.
         <dia:composite type="umlattribute">
           <dia:attribute name="name">
             <dia:string>#masd.generation.cpp.types.enabled#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="type">
-            <dia:string>##</dia:string>
-          </dia:attribute>
-          <dia:attribute name="value">
-            <dia:string>#true#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="comment">
-            <dia:string>##DOGEN masd.variability.archetype_location.kernel=masd
-#DOGEN masd.variability.archetype_location.backend=masd.generation.cpp
-#DOGEN masd.variability.template_kind=instance#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="visibility">
-            <dia:enum val="0"/>
-          </dia:attribute>
-          <dia:attribute name="abstract">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-          <dia:attribute name="class_scope">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-        </dia:composite>
-        <dia:composite type="umlattribute">
-          <dia:attribute name="name">
-            <dia:string>#masd.generation.cpp.build.enabled#</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
             <dia:string>##</dia:string>
@@ -820,7 +795,7 @@ space; keep it technical space agnostic.
       <dia:attribute name="attributes">
         <dia:composite type="umlattribute">
           <dia:attribute name="name">
-            <dia:string>#masd.generation.cpp.cmake.enabled#</dia:string>
+            <dia:string>#masd.generation.cpp.build.enabled#</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
             <dia:string>##</dia:string>
@@ -1390,16 +1365,16 @@ space; keep it technical space agnostic.
     </dia:object>
     <dia:object type="UML - Generalization" version="1" id="O13">
       <dia:attribute name="obj_pos">
-        <dia:point val="59.1425,33.4"/>
+        <dia:point val="59.1425,32.6"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="47.6325,33.35;59.9925,37.05"/>
+        <dia:rectangle val="47.6325,32.55;59.9925,37.05"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
-        <dia:point val="59.1425,33.4"/>
+        <dia:point val="59.1425,32.6"/>
         <dia:point val="59.1425,35"/>
         <dia:point val="47.6825,35"/>
         <dia:point val="47.6825,37"/>
@@ -1432,16 +1407,16 @@ space; keep it technical space agnostic.
     </dia:object>
     <dia:object type="UML - Generalization" version="1" id="O14">
       <dia:attribute name="obj_pos">
-        <dia:point val="59.1425,33.4"/>
+        <dia:point val="59.1425,32.6"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="58.2925,33.35;59.9925,42.9999"/>
+        <dia:rectangle val="58.2925,32.55;59.9925,42.9999"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
-        <dia:point val="59.1425,33.4"/>
+        <dia:point val="59.1425,32.6"/>
         <dia:point val="59.1425,35"/>
         <dia:point val="59.7575,35"/>
         <dia:point val="59.7575,42.9499"/>
@@ -1474,16 +1449,16 @@ space; keep it technical space agnostic.
     </dia:object>
     <dia:object type="UML - Generalization" version="1" id="O15">
       <dia:attribute name="obj_pos">
-        <dia:point val="59.1425,33.4498"/>
+        <dia:point val="59.1425,32.6503"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="58.2925,33.3998;71,36.9996"/>
+        <dia:rectangle val="58.2925,32.6003;71,36.9996"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
-        <dia:point val="59.1425,33.4498"/>
+        <dia:point val="59.1425,32.6503"/>
         <dia:point val="59.1425,35"/>
         <dia:point val="70.95,35"/>
         <dia:point val="70.95,36.9496"/>
@@ -1509,7 +1484,7 @@ space; keep it technical space agnostic.
         <dia:string>##</dia:string>
       </dia:attribute>
       <dia:connections>
-        <dia:connection handle="0" to="O4" connection="12"/>
+        <dia:connection handle="0" to="O4" connection="10"/>
         <dia:connection handle="1" to="O11" connection="10"/>
       </dia:connections>
       <dia:childnode parent="O1"/>
@@ -2006,7 +1981,7 @@ space; keep it technical space agnostic.
         <dia:point val="89,37"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="88.95,36.95;105.72,42.25"/>
+        <dia:rectangle val="88.95,36.95;105.72,41.45"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="89,37"/>
@@ -2015,7 +1990,7 @@ space; keep it technical space agnostic.
         <dia:real val="16.669999999999998"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="5.2000000000000011"/>
+        <dia:real val="4.4000000000000004"/>
       </dia:attribute>
       <dia:attribute name="name">
         <dia:string>#disable_cmake#</dia:string>
@@ -2105,31 +2080,6 @@ space; keep it technical space agnostic.
         <dia:real val="0.69999999999999996"/>
       </dia:attribute>
       <dia:attribute name="attributes">
-        <dia:composite type="umlattribute">
-          <dia:attribute name="name">
-            <dia:string>#masd.generation.cpp.cmake.enabled#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="type">
-            <dia:string>##</dia:string>
-          </dia:attribute>
-          <dia:attribute name="value">
-            <dia:string>#false#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="comment">
-            <dia:string>##DOGEN masd.variability.archetype_location.kernel=masd
-#DOGEN masd.variability.archetype_location.backend=masd.generation.cpp
-#DOGEN masd.variability.template_kind=instance#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="visibility">
-            <dia:enum val="0"/>
-          </dia:attribute>
-          <dia:attribute name="abstract">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-          <dia:attribute name="class_scope">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-        </dia:composite>
         <dia:composite type="umlattribute">
           <dia:attribute name="name">
             <dia:string>#masd.generation.cpp.tests.enabled#</dia:string>
@@ -2277,7 +2227,7 @@ space; keep it technical space agnostic.
         <dia:point val="100.757,16.6503"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="99.9075,16.6003;109.502,21.0041"/>
+        <dia:rectangle val="99.9074,16.6003;109.503,21.0041"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -2319,7 +2269,7 @@ space; keep it technical space agnostic.
         <dia:point val="100.757,16.6503"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="97.285,16.6003;101.607,37.0021"/>
+        <dia:rectangle val="97.285,16.6003;101.607,37.0006"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -2328,7 +2278,7 @@ space; keep it technical space agnostic.
         <dia:point val="100.757,16.6503"/>
         <dia:point val="100.757,19"/>
         <dia:point val="97.335,19"/>
-        <dia:point val="97.335,36.9521"/>
+        <dia:point val="97.335,36.9506"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
@@ -2352,7 +2302,7 @@ space; keep it technical space agnostic.
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O16" connection="10"/>
-        <dia:connection handle="1" to="O19" connection="14"/>
+        <dia:connection handle="1" to="O19" connection="12"/>
       </dia:connections>
       <dia:childnode parent="O1"/>
     </dia:object>
@@ -2361,7 +2311,7 @@ space; keep it technical space agnostic.
         <dia:point val="71,29"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="70.95,28.95;87.72,33.45"/>
+        <dia:rectangle val="70.95,28.95;87.72,32.65"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="71,29"/>
@@ -2370,7 +2320,7 @@ space; keep it technical space agnostic.
         <dia:real val="16.669999999999998"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="4.4000000000000004"/>
+        <dia:real val="3.6000000000000001"/>
       </dia:attribute>
       <dia:attribute name="name">
         <dia:string>#disable_odb_cmake#</dia:string>
@@ -2460,31 +2410,6 @@ space; keep it technical space agnostic.
         <dia:real val="0.69999999999999996"/>
       </dia:attribute>
       <dia:attribute name="attributes">
-        <dia:composite type="umlattribute">
-          <dia:attribute name="name">
-            <dia:string>#masd.generation.cpp.cmake.enabled#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="type">
-            <dia:string>##</dia:string>
-          </dia:attribute>
-          <dia:attribute name="value">
-            <dia:string>#false#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="comment">
-            <dia:string>##DOGEN masd.variability.archetype_location.kernel=masd
-#DOGEN masd.variability.archetype_location.backend=masd.generation.cpp
-#DOGEN masd.variability.template_kind=instance#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="visibility">
-            <dia:enum val="0"/>
-          </dia:attribute>
-          <dia:attribute name="abstract">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-          <dia:attribute name="class_scope">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-        </dia:composite>
         <dia:composite type="umlattribute">
           <dia:attribute name="name">
             <dia:string>#masd.generation.cpp.build.enabled#</dia:string>

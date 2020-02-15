@@ -105,7 +105,7 @@
       "fallback_element_type": "masd::object",
       "attributes": [
         {
-          "name": "masd.generation.cpp.cmake.enabled",
+          "name": "masd.generation.cpp.build.enabled",
           "type": "",
           "value": "true",
           "tagged_values": {
@@ -131,16 +131,6 @@
       "attributes": [
         {
           "name": "masd.generation.cpp.types.enabled",
-          "type": "",
-          "value": "true",
-          "tagged_values": {
-            "masd.variability.archetype_location.kernel": "masd",
-            "masd.variability.archetype_location.backend": "masd.generation.cpp",
-            "masd.variability.template_kind": "instance"
-          }
-        },
-        {
-          "name": "masd.generation.cpp.build.enabled",
           "type": "",
           "value": "true",
           "tagged_values": {
@@ -284,6 +274,16 @@
             "masd.variability.archetype_location.backend": "masd.generation.cpp",
             "masd.variability.template_kind": "instance"
           }
+        },
+        {
+          "name": "masd.generation.cpp.build.enabled",
+          "type": "",
+          "value": "true",
+          "tagged_values": {
+            "masd.variability.archetype_location.kernel": "masd",
+            "masd.variability.archetype_location.backend": "masd.generation.cpp",
+            "masd.variability.template_kind": "instance"
+          }
         }
       ]
     },
@@ -300,16 +300,6 @@
       },
       "fallback_element_type": "masd::object",
       "attributes": [
-        {
-          "name": "masd.generation.cpp.cmake.enabled",
-          "type": "",
-          "value": "false",
-          "tagged_values": {
-            "masd.variability.archetype_location.kernel": "masd",
-            "masd.variability.archetype_location.backend": "masd.generation.cpp",
-            "masd.variability.template_kind": "instance"
-          }
-        },
         {
           "name": "masd.generation.cpp.tests.enabled",
           "type": "",
@@ -380,16 +370,6 @@
       },
       "fallback_element_type": "masd::object",
       "attributes": [
-        {
-          "name": "masd.generation.cpp.cmake.enabled",
-          "type": "",
-          "value": "false",
-          "tagged_values": {
-            "masd.variability.archetype_location.kernel": "masd",
-            "masd.variability.archetype_location.backend": "masd.generation.cpp",
-            "masd.variability.template_kind": "instance"
-          }
-        },
         {
           "name": "masd.generation.cpp.build.enabled",
           "type": "",
