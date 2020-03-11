@@ -1513,7 +1513,7 @@ space; keep it technical space agnostic.
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##DOGEN masd.variability.binding_point=global
-#DOGEN masd.variability.labels=default.root_module2#</dia:string>
+#DOGEN masd.variability.stereotype=default.root_module2#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -2706,7 +2706,7 @@ other layers can then configure features.
         <dia:string>#Configuration for model elements that are generated manually by the user.
 
 #DOGEN masd.variability.binding_point=element
-#DOGEN masd.variability.labels=cpp_ref_impl::handcrafted::typeable#</dia:string>
+#DOGEN masd.variability.stereotype=cpp_ref_impl::handcrafted::typeable#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -3321,7 +3321,7 @@ other layers can then configure features.
         <dia:string>#The element only has the testing facet enabled.
 
 #DOGEN masd.variability.binding_point=element
-#DOGEN masd.variability.labels=cpp_ref_impl::untypable#</dia:string>
+#DOGEN masd.variability.stereotype=cpp_ref_impl::untypable#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>

@@ -226,7 +226,7 @@
       ],
       "tagged_values": {
         "masd.variability.binding_point": "global",
-        "masd.variability.labels": "default.root_module2"
+        "masd.variability.stereotype": "default.root_module2"
       },
       "fallback_element_type": "masd::object",
       "attributes": [
@@ -420,7 +420,7 @@
       ],
       "tagged_values": {
         "masd.variability.binding_point": "element",
-        "masd.variability.labels": "cpp_ref_impl::handcrafted::typeable"
+        "masd.variability.stereotype": "cpp_ref_impl::handcrafted::typeable"
       },
       "fallback_element_type": "masd::object",
       "attributes": [
@@ -517,7 +517,7 @@
       ],
       "tagged_values": {
         "masd.variability.binding_point": "element",
-        "masd.variability.labels": "cpp_ref_impl::untypable"
+        "masd.variability.stereotype": "cpp_ref_impl::untypable"
       },
       "fallback_element_type": "masd::object",
       "attributes": [
