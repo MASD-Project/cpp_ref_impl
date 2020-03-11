@@ -224,7 +224,7 @@ space; keep it technical space agnostic.
         <dia:string>#decoration#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#masd::variability::profile_template#</dia:string>
+        <dia:string>#masd::variability::profile#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Top-level configuration for C++ Reference Model.
@@ -268,7 +268,7 @@ space; keep it technical space agnostic.
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="fill_color">
-        <dia:color val="#ede6f2"/>
+        <dia:color val="#b8f1f1"/>
       </dia:attribute>
       <dia:attribute name="text_color">
         <dia:color val="#000000"/>
@@ -435,7 +435,7 @@ space; keep it technical space agnostic.
         <dia:string>#enable_cmake_types#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#masd::variability::profile_template#</dia:string>
+        <dia:string>#masd::variability::profile#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##DOGEN masd.variability.binding_point=global#</dia:string>
@@ -477,7 +477,7 @@ space; keep it technical space agnostic.
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="fill_color">
-        <dia:color val="#ede6f2"/>
+        <dia:color val="#b8f1f1"/>
       </dia:attribute>
       <dia:attribute name="text_color">
         <dia:color val="#000000"/>
@@ -614,7 +614,7 @@ space; keep it technical space agnostic.
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="fill_color">
-        <dia:color val="#ede6f2"/>
+        <dia:color val="#dbeeee"/>
       </dia:attribute>
       <dia:attribute name="text_color">
         <dia:color val="#000000"/>
@@ -709,7 +709,7 @@ space; keep it technical space agnostic.
         <dia:string>#enable_cmake#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#masd::variability::profile_template#</dia:string>
+        <dia:string>#masd::variability::profile#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##DOGEN masd.variability.binding_point=global#</dia:string>
@@ -751,7 +751,7 @@ space; keep it technical space agnostic.
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="fill_color">
-        <dia:color val="#ede6f2"/>
+        <dia:color val="#b8f1f1"/>
       </dia:attribute>
       <dia:attribute name="text_color">
         <dia:color val="#000000"/>
@@ -972,7 +972,7 @@ space; keep it technical space agnostic.
         <dia:string>#enable_cmake_types_serialization#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#masd::variability::profile_template#</dia:string>
+        <dia:string>#masd::variability::profile#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##DOGEN masd.variability.binding_point=global#</dia:string>
@@ -1014,7 +1014,7 @@ space; keep it technical space agnostic.
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="fill_color">
-        <dia:color val="#ede6f2"/>
+        <dia:color val="#b8f1f1"/>
       </dia:attribute>
       <dia:attribute name="text_color">
         <dia:color val="#000000"/>
@@ -1109,7 +1109,7 @@ space; keep it technical space agnostic.
         <dia:string>#enable_cmake_types_hash#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#masd::variability::profile_template#</dia:string>
+        <dia:string>#masd::variability::profile#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##DOGEN masd.variability.binding_point=global#</dia:string>
@@ -1151,7 +1151,7 @@ space; keep it technical space agnostic.
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="fill_color">
-        <dia:color val="#ede6f2"/>
+        <dia:color val="#b8f1f1"/>
       </dia:attribute>
       <dia:attribute name="text_color">
         <dia:color val="#000000"/>
@@ -1231,13 +1231,13 @@ space; keep it technical space agnostic.
         <dia:point val="52,43"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="51.95,42.95;67.565,46.65"/>
+        <dia:rectangle val="51.95,42.95;67.18,46.65"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="52,43"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="15.515000000000001"/>
+        <dia:real val="15.130000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="3.6000000000000001"/>
@@ -1246,7 +1246,7 @@ space; keep it technical space agnostic.
         <dia:string>#enable_cmake_types_io#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#masd::variability::profile_template#</dia:string>
+        <dia:string>#masd::variability::profile#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##DOGEN masd.variability.binding_point=global#</dia:string>
@@ -1288,7 +1288,7 @@ space; keep it technical space agnostic.
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="fill_color">
-        <dia:color val="#ede6f2"/>
+        <dia:color val="#b8f1f1"/>
       </dia:attribute>
       <dia:attribute name="text_color">
         <dia:color val="#000000"/>
@@ -1418,8 +1418,8 @@ space; keep it technical space agnostic.
       <dia:attribute name="orth_points">
         <dia:point val="59.1425,32.6"/>
         <dia:point val="59.1425,35"/>
-        <dia:point val="59.7575,35"/>
-        <dia:point val="59.7575,42.9499"/>
+        <dia:point val="59.565,35"/>
+        <dia:point val="59.565,42.9499"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
@@ -1552,7 +1552,7 @@ space; keep it technical space agnostic.
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="fill_color">
-        <dia:color val="#ede6f2"/>
+        <dia:color val="#dbeeee"/>
       </dia:attribute>
       <dia:attribute name="text_color">
         <dia:color val="#000000"/>
@@ -1647,7 +1647,7 @@ space; keep it technical space agnostic.
         <dia:string>#disable_odb#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#masd::variability::profile_template#</dia:string>
+        <dia:string>#masd::variability::profile#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##DOGEN masd.variability.binding_point=global#</dia:string>
@@ -1689,7 +1689,7 @@ space; keep it technical space agnostic.
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="fill_color">
-        <dia:color val="#ede6f2"/>
+        <dia:color val="#b8f1f1"/>
       </dia:attribute>
       <dia:attribute name="text_color">
         <dia:color val="#000000"/>
@@ -1809,7 +1809,7 @@ space; keep it technical space agnostic.
         <dia:string>#disable_facet_directories#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#masd::variability::profile_template#</dia:string>
+        <dia:string>#masd::variability::profile#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##DOGEN masd.variability.binding_point=global#</dia:string>
@@ -1851,7 +1851,7 @@ space; keep it technical space agnostic.
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="fill_color">
-        <dia:color val="#ede6f2"/>
+        <dia:color val="#b8f1f1"/>
       </dia:attribute>
       <dia:attribute name="text_color">
         <dia:color val="#000000"/>
@@ -1978,13 +1978,13 @@ space; keep it technical space agnostic.
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O19">
       <dia:attribute name="obj_pos">
-        <dia:point val="89,37"/>
+        <dia:point val="89,29"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="88.95,36.95;105.72,41.45"/>
+        <dia:rectangle val="88.95,28.95;105.72,33.45"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="89,37"/>
+        <dia:point val="89,29"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="16.669999999999998"/>
@@ -1996,7 +1996,7 @@ space; keep it technical space agnostic.
         <dia:string>#disable_cmake#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#masd::variability::profile_template#</dia:string>
+        <dia:string>#masd::variability::profile#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##DOGEN masd.variability.binding_point=global#</dia:string>
@@ -2038,7 +2038,7 @@ space; keep it technical space agnostic.
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="fill_color">
-        <dia:color val="#ede6f2"/>
+        <dia:color val="#b8f1f1"/>
       </dia:attribute>
       <dia:attribute name="text_color">
         <dia:color val="#000000"/>
@@ -2227,7 +2227,7 @@ space; keep it technical space agnostic.
         <dia:point val="100.757,16.6503"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="99.9074,16.6003;109.503,21.0041"/>
+        <dia:rectangle val="99.9075,16.6003;109.502,21.0041"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -2269,7 +2269,7 @@ space; keep it technical space agnostic.
         <dia:point val="100.757,16.6503"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="97.285,16.6003;101.607,37.0006"/>
+        <dia:rectangle val="97.285,16.6003;101.607,29.0005"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -2278,7 +2278,7 @@ space; keep it technical space agnostic.
         <dia:point val="100.757,16.6503"/>
         <dia:point val="100.757,19"/>
         <dia:point val="97.335,19"/>
-        <dia:point val="97.335,36.9506"/>
+        <dia:point val="97.335,28.9505"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
@@ -2308,13 +2308,13 @@ space; keep it technical space agnostic.
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O24">
       <dia:attribute name="obj_pos">
-        <dia:point val="71,29"/>
+        <dia:point val="70,29"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="70.95,28.95;87.72,32.65"/>
+        <dia:rectangle val="69.95,28.95;86.72,32.65"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="71,29"/>
+        <dia:point val="70,29"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="16.669999999999998"/>
@@ -2326,7 +2326,7 @@ space; keep it technical space agnostic.
         <dia:string>#disable_odb_cmake#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#masd::variability::profile_template#</dia:string>
+        <dia:string>#masd::variability::profile#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##DOGEN masd.variability.binding_point=global#</dia:string>
@@ -2368,7 +2368,7 @@ space; keep it technical space agnostic.
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="fill_color">
-        <dia:color val="#ede6f2"/>
+        <dia:color val="#b8f1f1"/>
       </dia:attribute>
       <dia:attribute name="text_color">
         <dia:color val="#000000"/>
@@ -2448,7 +2448,7 @@ space; keep it technical space agnostic.
         <dia:point val="87.335,25.4498"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="79.285,25.3998;88.185,29.05"/>
+        <dia:rectangle val="78.285,25.3998;88.185,29.05"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -2456,8 +2456,8 @@ space; keep it technical space agnostic.
       <dia:attribute name="orth_points">
         <dia:point val="87.335,25.4498"/>
         <dia:point val="87.335,27"/>
-        <dia:point val="79.335,27"/>
-        <dia:point val="79.335,29"/>
+        <dia:point val="78.335,27"/>
+        <dia:point val="78.335,29"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
@@ -2561,7 +2561,7 @@ other layers can then configure features.
         <dia:string>#handcrafted#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#masd::variability::profile_template#</dia:string>
+        <dia:string>#masd::variability::profile#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Base profile for model elements that are manually generated.
@@ -2605,7 +2605,7 @@ other layers can then configure features.
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="fill_color">
-        <dia:color val="#ede6f2"/>
+        <dia:color val="#dbeeee"/>
       </dia:attribute>
       <dia:attribute name="text_color">
         <dia:color val="#000000"/>
@@ -2682,13 +2682,13 @@ other layers can then configure features.
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O28">
       <dia:attribute name="obj_pos">
-        <dia:point val="64,69"/>
+        <dia:point val="69,69"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="63.95,68.95;91.115,74.25"/>
+        <dia:rectangle val="68.95,68.95;96.115,74.25"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="64,69"/>
+        <dia:point val="69,69"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="27.064999999999998"/>
@@ -2700,7 +2700,7 @@ other layers can then configure features.
         <dia:string>#handcrafted_typeable#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#masd::variability::profile_template#</dia:string>
+        <dia:string>#masd::variability::profile#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#Configuration for model elements that are generated manually by the user.
@@ -2745,7 +2745,7 @@ other layers can then configure features.
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="fill_color">
-        <dia:color val="#ede6f2"/>
+        <dia:color val="#dbeeee"/>
       </dia:attribute>
       <dia:attribute name="text_color">
         <dia:color val="#000000"/>
@@ -2875,7 +2875,7 @@ other layers can then configure features.
         <dia:point val="91.3025,64.6"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="77.4825,64.55;92.1525,69.05"/>
+        <dia:rectangle val="82.4825,64.55;92.1525,69.05"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -2883,8 +2883,8 @@ other layers can then configure features.
       <dia:attribute name="orth_points">
         <dia:point val="91.3025,64.6"/>
         <dia:point val="91.3025,67"/>
-        <dia:point val="77.5325,67"/>
-        <dia:point val="77.5325,69"/>
+        <dia:point val="82.5325,67"/>
+        <dia:point val="82.5325,69"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
@@ -3315,7 +3315,7 @@ other layers can then configure features.
         <dia:string>#untypable#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
-        <dia:string>#masd::variability::profile_template#</dia:string>
+        <dia:string>#masd::variability::profile#</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>#The element only has the testing facet enabled.
@@ -3360,7 +3360,7 @@ other layers can then configure features.
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="fill_color">
-        <dia:color val="#ede6f2"/>
+        <dia:color val="#dbeeee"/>
       </dia:attribute>
       <dia:attribute name="text_color">
         <dia:color val="#000000"/>

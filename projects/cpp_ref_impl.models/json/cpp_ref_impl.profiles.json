@@ -21,7 +21,7 @@
       "name": "base::decoration",
       "documentation": "Top-level configuration for C++ Reference Model.\n",
       "stereotypes": [
-        "masd::variability::profile_template"
+        "masd::variability::profile"
       ],
       "tagged_values": {
         "masd.variability.binding_point": "global"
@@ -97,7 +97,7 @@
         "base::disable_all_facets"
       ],
       "stereotypes": [
-        "masd::variability::profile_template"
+        "masd::variability::profile"
       ],
       "tagged_values": {
         "masd.variability.binding_point": "global"
@@ -122,7 +122,7 @@
         "base::enable_cmake"
       ],
       "stereotypes": [
-        "masd::variability::profile_template"
+        "masd::variability::profile"
       ],
       "tagged_values": {
         "masd.variability.binding_point": "global"
@@ -147,7 +147,7 @@
         "base::enable_cmake_types"
       ],
       "stereotypes": [
-        "masd::variability::profile_template"
+        "masd::variability::profile"
       ],
       "tagged_values": {
         "masd.variability.binding_point": "global"
@@ -172,7 +172,7 @@
         "base::enable_cmake_types"
       ],
       "stereotypes": [
-        "masd::variability::profile_template"
+        "masd::variability::profile"
       ],
       "tagged_values": {
         "masd.variability.binding_point": "global"
@@ -197,7 +197,7 @@
         "base::enable_cmake_types"
       ],
       "stereotypes": [
-        "masd::variability::profile_template"
+        "masd::variability::profile"
       ],
       "tagged_values": {
         "masd.variability.binding_point": "global"
@@ -248,7 +248,7 @@
         "base::enable_all_facets"
       ],
       "stereotypes": [
-        "masd::variability::profile_template"
+        "masd::variability::profile"
       ],
       "tagged_values": {
         "masd.variability.binding_point": "global"
@@ -293,7 +293,7 @@
         "base::enable_all_facets"
       ],
       "stereotypes": [
-        "masd::variability::profile_template"
+        "masd::variability::profile"
       ],
       "tagged_values": {
         "masd.variability.binding_point": "global"
@@ -328,7 +328,7 @@
         "base::enable_all_facets"
       ],
       "stereotypes": [
-        "masd::variability::profile_template"
+        "masd::variability::profile"
       ],
       "tagged_values": {
         "masd.variability.binding_point": "global"
@@ -363,7 +363,7 @@
         "base::disable_odb"
       ],
       "stereotypes": [
-        "masd::variability::profile_template"
+        "masd::variability::profile"
       ],
       "tagged_values": {
         "masd.variability.binding_point": "global"
@@ -390,7 +390,7 @@
       "name": "composable::handcrafted",
       "documentation": "Base profile for model elements that are manually generated.\n",
       "stereotypes": [
-        "masd::variability::profile_template"
+        "masd::variability::profile"
       ],
       "tagged_values": {
         "masd.variability.binding_point": "element"
@@ -416,7 +416,7 @@
       ],
       "documentation": "Configuration for model elements that are generated manually by the user.\n",
       "stereotypes": [
-        "masd::variability::profile_template"
+        "masd::variability::profile"
       ],
       "tagged_values": {
         "masd.variability.binding_point": "element",
@@ -513,7 +513,7 @@
       "name": "composable::untypable",
       "documentation": "The element only has the testing facet enabled.\n",
       "stereotypes": [
-        "masd::variability::profile_template"
+        "masd::variability::profile"
       ],
       "tagged_values": {
         "masd.variability.binding_point": "element",
