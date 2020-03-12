@@ -668,6 +668,7 @@ space; keep it technical space agnostic.
           </dia:attribute>
           <dia:attribute name="comment">
             <dia:string>##DOGEN masd.variability.template_kind=facet_template
+#DOGEN masd.variability.instantiation_domain_name=masd.facet
 #DOGEN masd.variability.archetype_location.kernel=masd
 #DOGEN masd.variability.archetype_location.backend=masd.generation.cpp#</dia:string>
           </dia:attribute>
@@ -1606,6 +1607,7 @@ space; keep it technical space agnostic.
           </dia:attribute>
           <dia:attribute name="comment">
             <dia:string>##DOGEN masd.variability.template_kind=facet_template
+#DOGEN masd.variability.instantiation_domain_name=masd.facet
 #DOGEN masd.variability.archetype_location.kernel=masd
 #DOGEN masd.variability.archetype_location.backend=masd.generation.cpp#</dia:string>
           </dia:attribute>
@@ -2227,7 +2229,7 @@ space; keep it technical space agnostic.
         <dia:point val="100.757,16.6503"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="99.9075,16.6003;109.502,21.0041"/>
+        <dia:rectangle val="99.9075,16.6003;109.503,21.0041"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -2605,7 +2607,7 @@ other layers can then configure features.
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="fill_color">
-        <dia:color val="#dbeeee"/>
+        <dia:color val="#b8f1f1"/>
       </dia:attribute>
       <dia:attribute name="text_color">
         <dia:color val="#000000"/>
@@ -2745,7 +2747,7 @@ other layers can then configure features.
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="fill_color">
-        <dia:color val="#dbeeee"/>
+        <dia:color val="#b8f1f1"/>
       </dia:attribute>
       <dia:attribute name="text_color">
         <dia:color val="#000000"/>
@@ -3360,7 +3362,7 @@ other layers can then configure features.
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="fill_color">
-        <dia:color val="#dbeeee"/>
+        <dia:color val="#b8f1f1"/>
       </dia:attribute>
       <dia:attribute name="text_color">
         <dia:color val="#000000"/>
