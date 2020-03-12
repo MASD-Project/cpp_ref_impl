@@ -220,22 +220,12 @@
         {
           "name": "masd.generation.cpp.tests.enabled",
           "type": "",
-          "value": "false",
-          "tagged_values": {
-            "masd.variability.archetype_location.kernel": "masd",
-            "masd.variability.archetype_location.backend": "masd.generation.cpp",
-            "masd.variability.template_kind": "instance"
-          }
+          "value": "false"
         },
         {
           "name": "masd.generation.cpp.build.enabled",
           "type": "",
-          "value": "true",
-          "tagged_values": {
-            "masd.variability.archetype_location.kernel": "masd",
-            "masd.variability.archetype_location.backend": "masd.generation.cpp",
-            "masd.variability.template_kind": "instance"
-          }
+          "value": "true"
         }
       ]
     },
@@ -285,12 +275,7 @@
         {
           "name": "masd.generation.cpp.tests.enabled",
           "type": "",
-          "value": "false",
-          "tagged_values": {
-            "masd.variability.archetype_location.kernel": "masd",
-            "masd.variability.archetype_location.backend": "masd.generation.cpp",
-            "masd.variability.template_kind": "instance"
-          }
+          "value": "false"
         }
       ]
     },
