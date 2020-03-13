@@ -29,7 +29,6 @@
     "masd.generation.cpp.hash.enum_implementation.postfix": "0_0_3",
     "masd.generation.cpp.hash.primitive_header.postfix": "0_0_4",
     "masd.generation.cpp.hash.primitive_implementation.postfix": "0_0_5",
-    "masd.generation.cpp.hash.master_header.postfix": "0_0_6",
     "masd.generation.cpp.io.directory": "io_dir",
     "masd.generation.cpp.io.postfix": "the_io",
     "masd.generation.cpp.io.class_header.postfix": "0_1_0",

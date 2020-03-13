@@ -241,7 +241,7 @@
         <dia:point val="-31,-47"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-31.05,-47.05;1.135,19.55"/>
+        <dia:rectangle val="-31.05,-47.05;1.135,18.75"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -253,7 +253,7 @@
         <dia:real val="32.085000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="66.5"/>
+        <dia:real val="65.699999999999989"/>
       </dia:attribute>
       <dia:attribute name="line_width">
         <dia:real val="0.10000000000000001"/>
@@ -306,7 +306,6 @@
 #DOGEN masd.generation.cpp.io.enum_implementation.postfix=0_1_3
 #DOGEN masd.generation.cpp.io.primitive_header.postfix=0_1_4
 #DOGEN masd.generation.cpp.io.primitive_implementation.postfix=0_1_5
-#DOGEN masd.generation.cpp.io.master_header.postfix=0_1_6
 #DOGEN masd.generation.cpp.odb.directory=odb_dir
 #DOGEN masd.generation.cpp.odb.postfix=the_odb
 #DOGEN masd.generation.cpp.odb.class_header.postfix=0_2_0
