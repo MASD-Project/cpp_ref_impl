@@ -24,27 +24,28 @@
         "masd::variability::profile"
       ],
       "tagged_values": {
-        "masd.variability.binding_point": "global"
+        "masd.variability.binding_point": "global",
+        "masd.variability.key_prefix": "masd.generation.decoration"
       },
       "fallback_element_type": "masd::object",
       "attributes": [
         {
-          "name": "masd.generation.decoration.enabled",
+          "name": "enabled",
           "type": "",
           "value": "true"
         },
         {
-          "name": "masd.generation.decoration.licence_name",
+          "name": "licence_name",
           "type": "",
           "value": "masd.gpl_v3"
         },
         {
-          "name": "masd.generation.decoration.modeline_group_name",
+          "name": "modeline_group_name",
           "type": "",
           "value": "masd.emacs"
         },
         {
-          "name": "masd.generation.decoration.copyright_notice",
+          "name": "copyright_notice",
           "type": "",
           "tagged_values": {
             "masd.variability.value": "Copyright (C) 2012-2015 Marco Craveiro <marco.craveiro@gmail.com>"
@@ -84,12 +85,13 @@
         "masd::variability::profile"
       ],
       "tagged_values": {
-        "masd.variability.binding_point": "global"
+        "masd.variability.binding_point": "global",
+        "masd.variability.key_prefix": "masd.generation.cpp.build"
       },
       "fallback_element_type": "masd::object",
       "attributes": [
         {
-          "name": "masd.generation.cpp.build.enabled",
+          "name": "enabled",
           "type": "",
           "value": "true"
         }
@@ -104,12 +106,13 @@
         "masd::variability::profile"
       ],
       "tagged_values": {
-        "masd.variability.binding_point": "global"
+        "masd.variability.binding_point": "global",
+        "masd.variability.key_prefix": "masd.generation.cpp"
       },
       "fallback_element_type": "masd::object",
       "attributes": [
         {
-          "name": "masd.generation.cpp.types.enabled",
+          "name": "types.enabled",
           "type": "",
           "value": "true"
         }
@@ -124,12 +127,13 @@
         "masd::variability::profile"
       ],
       "tagged_values": {
-        "masd.variability.binding_point": "global"
+        "masd.variability.binding_point": "global",
+        "masd.variability.key_prefix": "masd.generation.cpp"
       },
       "fallback_element_type": "masd::object",
       "attributes": [
         {
-          "name": "masd.generation.cpp.serialization.enabled",
+          "name": "serialization.enabled",
           "type": "",
           "value": "true"
         }
@@ -144,12 +148,13 @@
         "masd::variability::profile"
       ],
       "tagged_values": {
-        "masd.variability.binding_point": "global"
+        "masd.variability.binding_point": "global",
+        "masd.variability.key_prefix": "masd.generation.cpp"
       },
       "fallback_element_type": "masd::object",
       "attributes": [
         {
-          "name": "masd.generation.cpp.hash.enabled",
+          "name": "hash.enabled",
           "type": "",
           "value": "true"
         }
@@ -164,12 +169,13 @@
         "masd::variability::profile"
       ],
       "tagged_values": {
-        "masd.variability.binding_point": "global"
+        "masd.variability.binding_point": "global",
+        "masd.variability.key_prefix": "masd.generation.cpp"
       },
       "fallback_element_type": "masd::object",
       "attributes": [
         {
-          "name": "masd.generation.cpp.io.enabled",
+          "name": "io.enabled",
           "type": "",
           "value": "true"
         }
@@ -208,22 +214,23 @@
         "masd::variability::profile"
       ],
       "tagged_values": {
-        "masd.variability.binding_point": "global"
+        "masd.variability.binding_point": "global",
+        "masd.variability.key_prefix": "masd.generation.cpp"
       },
       "fallback_element_type": "masd::object",
       "attributes": [
         {
-          "name": "masd.generation.cpp.disable_facet_directories",
+          "name": "disable_facet_directories",
           "type": "",
           "value": "true"
         },
         {
-          "name": "masd.generation.cpp.tests.enabled",
+          "name": "tests.enabled",
           "type": "",
           "value": "false"
         },
         {
-          "name": "masd.generation.cpp.build.enabled",
+          "name": "build.enabled",
           "type": "",
           "value": "true"
         }
@@ -238,17 +245,18 @@
         "masd::variability::profile"
       ],
       "tagged_values": {
-        "masd.variability.binding_point": "global"
+        "masd.variability.binding_point": "global",
+        "masd.variability.key_prefix": "masd.generation.cpp"
       },
       "fallback_element_type": "masd::object",
       "attributes": [
         {
-          "name": "masd.generation.cpp.tests.enabled",
+          "name": "tests.enabled",
           "type": "",
           "value": "false"
         },
         {
-          "name": "masd.generation.cpp.build.enabled",
+          "name": "build.enabled",
           "type": "",
           "value": "false"
         }
@@ -263,17 +271,18 @@
         "masd::variability::profile"
       ],
       "tagged_values": {
-        "masd.variability.binding_point": "global"
+        "masd.variability.binding_point": "global",
+        "masd.variability.key_prefix": "masd.generation.cpp"
       },
       "fallback_element_type": "masd::object",
       "attributes": [
         {
-          "name": "masd.generation.cpp.odb.enabled",
+          "name": "odb.enabled",
           "type": "",
           "value": "false"
         },
         {
-          "name": "masd.generation.cpp.tests.enabled",
+          "name": "tests.enabled",
           "type": "",
           "value": "false"
         }
@@ -332,22 +341,23 @@
       ],
       "tagged_values": {
         "masd.variability.binding_point": "element",
-        "masd.variability.stereotype": "cpp_ref_impl::handcrafted::typeable"
+        "masd.variability.stereotype": "cpp_ref_impl::handcrafted::typeable",
+        "masd.variability.key_prefix": "masd.generation.cpp"
       },
       "fallback_element_type": "masd::object",
       "attributes": [
         {
-          "name": "masd.generation.cpp.types.enabled",
+          "name": "types.enabled",
           "type": "",
           "value": "true"
         },
         {
-          "name": "masd.generation.cpp.types.overwrite",
+          "name": "types.overwrite",
           "type": "",
           "value": "false"
         },
         {
-          "name": "masd.generation.cpp.types.class_forward_declarations.enabled",
+          "name": "types.class_forward_declarations.enabled",
           "type": "",
           "value": "false"
         }
@@ -414,12 +424,13 @@
       ],
       "tagged_values": {
         "masd.variability.binding_point": "element",
-        "masd.variability.stereotype": "cpp_ref_impl::untypable"
+        "masd.variability.stereotype": "cpp_ref_impl::untypable",
+        "masd.variability.key_prefix": "masd.generation.cpp"
       },
       "fallback_element_type": "masd::object",
       "attributes": [
         {
-          "name": "masd.generation.cpp.types.enabled",
+          "name": "types.enabled",
           "type": "",
           "value": "false"
         }
