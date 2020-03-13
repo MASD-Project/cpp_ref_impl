@@ -241,7 +241,7 @@
         <dia:point val="-31,-47"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-31.05,-47.05;1.135,18.75"/>
+        <dia:rectangle val="-31.05,-47.05;1.135,17.95"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -253,7 +253,7 @@
         <dia:real val="32.085000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="65.699999999999989"/>
+        <dia:real val="64.899999999999991"/>
       </dia:attribute>
       <dia:attribute name="line_width">
         <dia:real val="0.10000000000000001"/>
@@ -297,7 +297,6 @@
 #DOGEN masd.generation.cpp.hash.enum_implementation.postfix=0_0_3
 #DOGEN masd.generation.cpp.hash.primitive_header.postfix=0_0_4
 #DOGEN masd.generation.cpp.hash.primitive_implementation.postfix=0_0_5
-#DOGEN masd.generation.cpp.hash.master_header.postfix=0_0_6
 #DOGEN masd.generation.cpp.io.directory=io_dir
 #DOGEN masd.generation.cpp.io.postfix=the_io
 #DOGEN masd.generation.cpp.io.class_header.postfix=0_1_0
@@ -313,7 +312,6 @@
 #DOGEN masd.generation.cpp.odb.primitive_header.postfix=0_2_2
 #DOGEN masd.generation.cpp.odb.common_odb_options.postfix=0_2_3
 #DOGEN masd.generation.cpp.odb.object_odb_options.postfix=0_2_3
-#DOGEN masd.generation.cpp.odb.master_header.postfix=0_2_4
 #DOGEN masd.generation.cpp.serialization.directory=serialization_dir
 #DOGEN masd.generation.cpp.serialization.postfix=the_serialization
 #DOGEN masd.generation.cpp.serialization.class_header.postfix=0_3_0
@@ -321,7 +319,6 @@
 #DOGEN masd.generation.cpp.serialization.enum_header.postfix=0_3_2
 #DOGEN masd.generation.cpp.serialization.primitive_header.postfix=0_3_3
 #DOGEN masd.generation.cpp.serialization.primitive_implementation.postfix=0_3_4
-#DOGEN masd.generation.cpp.serialization.master_header.postfix=0_3_5
 #DOGEN masd.generation.cpp.serialization.class_forward_declarations.postfix=0_3_6
 #DOGEN masd.generation.cpp.test_data.directory=test_data_dir
 #DOGEN masd.generation.cpp.test_data.postfix=the_test_data
@@ -331,7 +328,6 @@
 #DOGEN masd.generation.cpp.test_data.enum_implementation.postfix=0_4_3
 #DOGEN masd.generation.cpp.test_data.primitive_header.postfix=0_4_4
 #DOGEN masd.generation.cpp.test_data.primitive_implementation.postfix=0_4_5
-#DOGEN masd.generation.cpp.test_data.master_header.postfix=0_4_6
 #DOGEN masd.generation.cpp.types.directory=types_dir
 #DOGEN masd.generation.cpp.types.postfix=the_types
 #DOGEN masd.generation.cpp.types.class_header.postfix=0_5_0
@@ -340,7 +336,6 @@
 #DOGEN masd.generation.cpp.types.enum_implementation.postfix=0_5_3
 #DOGEN masd.generation.cpp.types.primitive_header.postfix=0_5_4
 #DOGEN masd.generation.cpp.types.primitive_implementation.postfix=0_5_5
-#DOGEN masd.generation.cpp.types.master_header.postfix=0_5_6
 #DOGEN masd.generation.cpp.types.class_forward_declarations.postfix=0_5_7
 #DOGEN masd.generation.cpp.tests.directory=tests_dir
 #DOGEN masd.generation.cpp.tests_directory_name=tests_dir
