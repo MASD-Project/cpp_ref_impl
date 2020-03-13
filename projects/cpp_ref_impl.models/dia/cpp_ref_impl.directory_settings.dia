@@ -294,7 +294,6 @@
 #DOGEN masd.generation.cpp.hash.class_header.postfix=0_0_0
 #DOGEN masd.generation.cpp.hash.class_implementation.postfix=0_0_1
 #DOGEN masd.generation.cpp.hash.enum_header.postfix=0_0_2
-#DOGEN masd.generation.cpp.hash.enum_implementation.postfix=0_0_3
 #DOGEN masd.generation.cpp.hash.primitive_header.postfix=0_0_4
 #DOGEN masd.generation.cpp.hash.primitive_implementation.postfix=0_0_5
 #DOGEN masd.generation.cpp.io.directory=io_dir
@@ -302,7 +301,6 @@
 #DOGEN masd.generation.cpp.io.class_header.postfix=0_1_0
 #DOGEN masd.generation.cpp.io.class_implementation.postfix=0_1_1
 #DOGEN masd.generation.cpp.io.enum_header.postfix=0_1_2
-#DOGEN masd.generation.cpp.io.enum_implementation.postfix=0_1_3
 #DOGEN masd.generation.cpp.io.primitive_header.postfix=0_1_4
 #DOGEN masd.generation.cpp.io.primitive_implementation.postfix=0_1_5
 #DOGEN masd.generation.cpp.odb.directory=odb_dir
@@ -325,7 +323,6 @@
 #DOGEN masd.generation.cpp.test_data.class_header.postfix=0_4_0
 #DOGEN masd.generation.cpp.test_data.class_implementation.postfix=0_4_1
 #DOGEN masd.generation.cpp.test_data.enum_header.postfix=0_4_2
-#DOGEN masd.generation.cpp.test_data.enum_implementation.postfix=0_4_3
 #DOGEN masd.generation.cpp.test_data.primitive_header.postfix=0_4_4
 #DOGEN masd.generation.cpp.test_data.primitive_implementation.postfix=0_4_5
 #DOGEN masd.generation.cpp.types.directory=types_dir
@@ -333,7 +330,6 @@
 #DOGEN masd.generation.cpp.types.class_header.postfix=0_5_0
 #DOGEN masd.generation.cpp.types.class_implementation.postfix=0_5_1
 #DOGEN masd.generation.cpp.types.enum_header.postfix=0_5_2
-#DOGEN masd.generation.cpp.types.enum_implementation.postfix=0_5_3
 #DOGEN masd.generation.cpp.types.primitive_header.postfix=0_5_4
 #DOGEN masd.generation.cpp.types.primitive_implementation.postfix=0_5_5
 #DOGEN masd.generation.cpp.types.class_forward_declarations.postfix=0_5_7
@@ -341,7 +337,6 @@
 #DOGEN masd.generation.cpp.tests_directory_name=tests_dir
 #DOGEN masd.generation.cpp.tests.postfix=the_tests
 #DOGEN masd.generation.cpp.tests.class_implementation.postfix=0_6_1
-#DOGEN masd.generation.cpp.tests.enum_implementation.postfix=0_6_1
 #DOGEN masd.generation.cpp.tests.main.postfix=0_6_1#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
