@@ -107,8 +107,8 @@ space; keep it technical space agnostic.
 #DOGEN masd.injection.model_modules=cpp_ref_impl.profiles
 #DOGEN masd.injection.input_technical_space=agnostic
 #DOGEN masd.injection.is_proxy_model=true
-#DOGEN masd.generation.cpp.enabled=false
-#DOGEN masd.generation.csharp.enabled=false#</dia:string>
+#DOGEN masd.cpp.enabled=false
+#DOGEN masd.csharp.enabled=false#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="monospace" style="0" name="Courier"/>
@@ -435,7 +435,7 @@ space; keep it technical space agnostic.
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##DOGEN masd.variability.binding_point=global
-#DOGEN masd.variability.key_prefix=masd.generation.cpp#</dia:string>
+#DOGEN masd.variability.key_prefix=masd.cpp#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -706,7 +706,7 @@ space; keep it technical space agnostic.
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##DOGEN masd.variability.binding_point=global
-#DOGEN masd.variability.key_prefix=masd.generation.cpp.build#</dia:string>
+#DOGEN masd.variability.key_prefix=masd.cpp.build#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -968,7 +968,7 @@ space; keep it technical space agnostic.
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##DOGEN masd.variability.binding_point=global
-#DOGEN masd.variability.key_prefix=masd.generation.cpp#</dia:string>
+#DOGEN masd.variability.key_prefix=masd.cpp#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -1104,7 +1104,7 @@ space; keep it technical space agnostic.
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##DOGEN masd.variability.binding_point=global
-#DOGEN masd.variability.key_prefix=masd.generation.cpp#</dia:string>
+#DOGEN masd.variability.key_prefix=masd.cpp#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -1240,7 +1240,7 @@ space; keep it technical space agnostic.
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##DOGEN masd.variability.binding_point=global
-#DOGEN masd.variability.key_prefix=masd.generation.cpp#</dia:string>
+#DOGEN masd.variability.key_prefix=masd.cpp#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -1638,7 +1638,7 @@ space; keep it technical space agnostic.
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##DOGEN masd.variability.binding_point=global
-#DOGEN masd.variability.key_prefix=masd.generation.cpp#</dia:string>
+#DOGEN masd.variability.key_prefix=masd.cpp#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -1797,7 +1797,7 @@ space; keep it technical space agnostic.
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##DOGEN masd.variability.binding_point=global
-#DOGEN masd.variability.key_prefix=masd.generation.cpp#</dia:string>
+#DOGEN masd.variability.key_prefix=masd.cpp#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -1979,7 +1979,7 @@ space; keep it technical space agnostic.
       </dia:attribute>
       <dia:attribute name="comment">
         <dia:string>##DOGEN masd.variability.binding_point=global
-#DOGEN masd.variability.key_prefix=masd.generation.cpp#</dia:string>
+#DOGEN masd.variability.key_prefix=masd.cpp#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -2388,7 +2388,7 @@ space; keep it technical space agnostic.
       <dia:attribute name="attributes">
         <dia:composite type="umlattribute">
           <dia:attribute name="name">
-            <dia:string>#masd.generation.cpp.build.enabled#</dia:string>
+            <dia:string>#masd.cpp.build.enabled#</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
             <dia:string>##</dia:string>
@@ -2679,7 +2679,7 @@ other layers can then configure features.
 
 #DOGEN masd.variability.binding_point=element
 #DOGEN masd.variability.stereotype=cpp_ref_impl::handcrafted::typeable
-#DOGEN masd.variability.key_prefix=masd.generation.cpp#</dia:string>
+#DOGEN masd.variability.key_prefix=masd.cpp#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
@@ -3289,7 +3289,7 @@ other layers can then configure features.
 
 #DOGEN masd.variability.binding_point=element
 #DOGEN masd.variability.stereotype=cpp_ref_impl::untypable
-#DOGEN masd.variability.key_prefix=masd.generation.cpp#</dia:string>
+#DOGEN masd.variability.key_prefix=masd.cpp#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>

@@ -10,9 +10,9 @@
     "masd.physical.delete_extra_files": "false",
     "masd.physical.delete_empty_directories": "true",
     "masd.physical.ignore_files_matching_regex": ".*/expected_ignore.*",
-    "masd.generation.cpp.enabled": "true",
-    "masd.generation.cpp.standard": "c++-17",
-    "masd.generation.csharp.enabled": "false",
+    "masd.cpp.enabled": "true",
+    "masd.cpp.standard": "c++-17",
+    "masd.csharp.enabled": "false",
     "masd.variability.profile": "cpp_ref_impl.profiles.base.enable_all_facets"
   },
   "elements": [
