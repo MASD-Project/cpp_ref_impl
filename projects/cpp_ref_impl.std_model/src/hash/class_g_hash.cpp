@@ -32,7 +32,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 inline std::size_t hash_std_vector_cpp_ref_impl_std_model_pkg1_class_c(const std::vector<cpp_ref_impl::std_model::pkg1::class_c>& v) {
     std::size_t seed(0);
-    for (const auto i : v) {
+    for (const auto& i : v) {
         combine(seed, i);
     }
     return seed;
@@ -40,7 +40,7 @@ inline std::size_t hash_std_vector_cpp_ref_impl_std_model_pkg1_class_c(const std
 
 inline std::size_t hash_std_unordered_map_cpp_ref_impl_std_model_class_a_std_vector_cpp_ref_impl_std_model_pkg1_class_c(const std::unordered_map<cpp_ref_impl::std_model::class_a, std::vector<cpp_ref_impl::std_model::pkg1::class_c> >& v) {
     std::size_t seed(0);
-    for (const auto i : v) {
+    for (const auto& i : v) {
         combine(seed, i.first);
         combine(seed, hash_std_vector_cpp_ref_impl_std_model_pkg1_class_c(i.second));
     }
@@ -49,7 +49,7 @@ inline std::size_t hash_std_unordered_map_cpp_ref_impl_std_model_class_a_std_vec
 
 inline std::size_t hash_std_list_cpp_ref_impl_std_model_class_a(const std::list<cpp_ref_impl::std_model::class_a>& v) {
     std::size_t seed(0);
-    for (const auto i : v) {
+    for (const auto& i : v) {
         combine(seed, i);
     }
     return seed;
@@ -57,7 +57,7 @@ inline std::size_t hash_std_list_cpp_ref_impl_std_model_class_a(const std::list<
 
 inline std::size_t hash_std_unordered_map_cpp_ref_impl_std_model_pkg1_class_c_std_list_cpp_ref_impl_std_model_class_a(const std::unordered_map<cpp_ref_impl::std_model::pkg1::class_c, std::list<cpp_ref_impl::std_model::class_a> >& v) {
     std::size_t seed(0);
-    for (const auto i : v) {
+    for (const auto& i : v) {
         combine(seed, i.first);
         combine(seed, hash_std_list_cpp_ref_impl_std_model_class_a(i.second));
     }
@@ -66,7 +66,7 @@ inline std::size_t hash_std_unordered_map_cpp_ref_impl_std_model_pkg1_class_c_st
 
 inline std::size_t hash_std_unordered_map_std_string_cpp_ref_impl_std_model_class_a(const std::unordered_map<std::string, cpp_ref_impl::std_model::class_a>& v) {
     std::size_t seed(0);
-    for (const auto i : v) {
+    for (const auto& i : v) {
         combine(seed, i.first);
         combine(seed, i.second);
     }

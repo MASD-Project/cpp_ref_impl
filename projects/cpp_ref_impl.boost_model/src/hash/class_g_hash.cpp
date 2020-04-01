@@ -36,7 +36,7 @@ inline std::size_t hash_boost_filesystem_path(const boost::filesystem::path& v) 
 
 inline std::size_t hash_std_list_boost_filesystem_path(const std::list<boost::filesystem::path>& v) {
     std::size_t seed(0);
-    for (const auto i : v) {
+    for (const auto& i : v) {
         combine(seed, hash_boost_filesystem_path(i));
     }
     return seed;

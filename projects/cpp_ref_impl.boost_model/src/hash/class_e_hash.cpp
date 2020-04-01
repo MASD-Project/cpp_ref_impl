@@ -74,7 +74,7 @@ inline std::size_t hash_boost_variant_int_cpp_ref_impl_boost_model_class_derived
 
 inline std::size_t hash_std_vector_boost_variant_int_cpp_ref_impl_boost_model_class_derived_double(const std::vector<boost::variant<int, cpp_ref_impl::boost_model::class_derived, double> >& v) {
     std::size_t seed(0);
-    for (const auto i : v) {
+    for (const auto& i : v) {
         combine(seed, hash_boost_variant_int_cpp_ref_impl_boost_model_class_derived_double(i));
     }
     return seed;

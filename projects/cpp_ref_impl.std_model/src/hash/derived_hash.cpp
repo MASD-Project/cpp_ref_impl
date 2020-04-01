@@ -32,7 +32,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 inline std::size_t hash_std_list_cpp_ref_impl_std_model_pkg1_class_c(const std::list<cpp_ref_impl::std_model::pkg1::class_c>& v) {
     std::size_t seed(0);
-    for (const auto i : v) {
+    for (const auto& i : v) {
         combine(seed, i);
     }
     return seed;

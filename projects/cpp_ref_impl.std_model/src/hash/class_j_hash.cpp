@@ -54,7 +54,7 @@ inline std::size_t hash_std_pair_std_string_int(const std::pair<std::string, int
 
 inline std::size_t hash_std_vector_std_pair_std_string_int(const std::vector<std::pair<std::string, int> >& v) {
     std::size_t seed(0);
-    for (const auto i : v) {
+    for (const auto& i : v) {
         combine(seed, hash_std_pair_std_string_int(i));
     }
     return seed;

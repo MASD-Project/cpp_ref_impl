@@ -39,7 +39,7 @@ inline std::size_t hash_boost_shared_ptr_cpp_ref_impl_boost_model_class_a(const 
 
 inline std::size_t hash_std_vector_boost_shared_ptr_cpp_ref_impl_boost_model_class_a(const std::vector<boost::shared_ptr<cpp_ref_impl::boost_model::class_a> >& v) {
     std::size_t seed(0);
-    for (const auto i : v) {
+    for (const auto& i : v) {
         combine(seed, hash_boost_shared_ptr_cpp_ref_impl_boost_model_class_a(i));
     }
     return seed;
@@ -47,7 +47,7 @@ inline std::size_t hash_std_vector_boost_shared_ptr_cpp_ref_impl_boost_model_cla
 
 inline std::size_t hash_std_unordered_map_int_boost_shared_ptr_cpp_ref_impl_boost_model_class_a(const std::unordered_map<int, boost::shared_ptr<cpp_ref_impl::boost_model::class_a> >& v) {
     std::size_t seed(0);
-    for (const auto i : v) {
+    for (const auto& i : v) {
         combine(seed, i.first);
         combine(seed, hash_boost_shared_ptr_cpp_ref_impl_boost_model_class_a(i.second));
     }
@@ -68,7 +68,7 @@ inline std::size_t hash_boost_shared_ptr_cpp_ref_impl_boost_model_class_base(con
 
 inline std::size_t hash_std_vector_boost_shared_ptr_cpp_ref_impl_boost_model_class_base(const std::vector<boost::shared_ptr<cpp_ref_impl::boost_model::class_base> >& v) {
     std::size_t seed(0);
-    for (const auto i : v) {
+    for (const auto& i : v) {
         combine(seed, hash_boost_shared_ptr_cpp_ref_impl_boost_model_class_base(i));
     }
     return seed;

@@ -32,7 +32,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 inline std::size_t hash_std_deque_std_string(const std::deque<std::string>& v) {
     std::size_t seed(0);
-    for (const auto i : v) {
+    for (const auto& i : v) {
         combine(seed, i);
     }
     return seed;
@@ -40,7 +40,7 @@ inline std::size_t hash_std_deque_std_string(const std::deque<std::string>& v) {
 
 inline std::size_t hash_std_deque_cpp_ref_impl_std_model_class_a(const std::deque<cpp_ref_impl::std_model::class_a>& v) {
     std::size_t seed(0);
-    for (const auto i : v) {
+    for (const auto& i : v) {
         combine(seed, i);
     }
     return seed;
@@ -48,7 +48,7 @@ inline std::size_t hash_std_deque_cpp_ref_impl_std_model_class_a(const std::dequ
 
 inline std::size_t hash_std_deque_cpp_ref_impl_std_model_pkg1_class_c(const std::deque<cpp_ref_impl::std_model::pkg1::class_c>& v) {
     std::size_t seed(0);
-    for (const auto i : v) {
+    for (const auto& i : v) {
         combine(seed, i);
     }
     return seed;
@@ -56,7 +56,7 @@ inline std::size_t hash_std_deque_cpp_ref_impl_std_model_pkg1_class_c(const std:
 
 inline std::size_t hash_std_deque_unsigned_int(const std::deque<unsigned int>& v) {
     std::size_t seed(0);
-    for (const auto i : v) {
+    for (const auto& i : v) {
         combine(seed, i);
     }
     return seed;
@@ -64,7 +64,7 @@ inline std::size_t hash_std_deque_unsigned_int(const std::deque<unsigned int>& v
 
 inline std::size_t hash_std_deque_std_deque_unsigned_int(const std::deque<std::deque<unsigned int> >& v) {
     std::size_t seed(0);
-    for (const auto i : v) {
+    for (const auto& i : v) {
         combine(seed, hash_std_deque_unsigned_int(i));
     }
     return seed;

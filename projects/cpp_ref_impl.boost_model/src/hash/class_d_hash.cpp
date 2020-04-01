@@ -62,7 +62,7 @@ inline std::size_t hash_boost_optional_cpp_ref_impl_boost_model_pkg1_class_c(con
 
 inline std::size_t hash_std_vector_cpp_ref_impl_boost_model_class_a(const std::vector<cpp_ref_impl::boost_model::class_a>& v) {
     std::size_t seed(0);
-    for (const auto i : v) {
+    for (const auto& i : v) {
         combine(seed, i);
     }
     return seed;

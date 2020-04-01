@@ -32,7 +32,7 @@ inline void combine(std::size_t& seed, const HashableType& value) {
 
 inline std::size_t hash_std_unordered_set_cpp_ref_impl_std_model_class_a(const std::unordered_set<cpp_ref_impl::std_model::class_a>& v) {
     std::size_t seed(0);
-    for (const auto i : v) {
+    for (const auto& i : v) {
         combine(seed, i);
     }
     return seed;
@@ -40,7 +40,7 @@ inline std::size_t hash_std_unordered_set_cpp_ref_impl_std_model_class_a(const s
 
 inline std::size_t hash_std_unordered_set_cpp_ref_impl_std_model_pkg1_class_c(const std::unordered_set<cpp_ref_impl::std_model::pkg1::class_c>& v) {
     std::size_t seed(0);
-    for (const auto i : v) {
+    for (const auto& i : v) {
         combine(seed, i);
     }
     return seed;

@@ -50,7 +50,7 @@ inline std::size_t hash_boost_posix_time_time_duration(const boost::posix_time::
 
 inline std::size_t hash_std_list_boost_gregorian_date(const std::list<boost::gregorian::date>& v) {
     std::size_t seed(0);
-    for (const auto i : v) {
+    for (const auto& i : v) {
         combine(seed, hash_boost_gregorian_date(i));
     }
     return seed;
@@ -58,7 +58,7 @@ inline std::size_t hash_std_list_boost_gregorian_date(const std::list<boost::gre
 
 inline std::size_t hash_std_list_boost_posix_time_ptime(const std::list<boost::posix_time::ptime>& v) {
     std::size_t seed(0);
-    for (const auto i : v) {
+    for (const auto& i : v) {
         combine(seed, hash_boost_posix_time_ptime(i));
     }
     return seed;
@@ -66,7 +66,7 @@ inline std::size_t hash_std_list_boost_posix_time_ptime(const std::list<boost::p
 
 inline std::size_t hash_std_list_boost_posix_time_time_duration(const std::list<boost::posix_time::time_duration>& v) {
     std::size_t seed(0);
-    for (const auto i : v) {
+    for (const auto& i : v) {
         combine(seed, hash_boost_posix_time_time_duration(i));
     }
     return seed;
