@@ -34,10 +34,12 @@ namespace cpp_ref_impl::cpp_model {
  */
 class char_primitive final {
 public:
-    char_primitive() = default;
     char_primitive(const char_primitive&) = default;
     char_primitive(char_primitive&&) = default;
     ~char_primitive() = default;
+public:
+    char_primitive();
+
 public:
     explicit char_primitive(const char value);
 

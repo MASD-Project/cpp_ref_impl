@@ -34,10 +34,12 @@ namespace cpp_ref_impl::cpp_model {
  */
 class double_primitive final {
 public:
-    double_primitive() = default;
     double_primitive(const double_primitive&) = default;
     double_primitive(double_primitive&&) = default;
     ~double_primitive() = default;
+public:
+    double_primitive();
+
 public:
     explicit double_primitive(const double value);
 

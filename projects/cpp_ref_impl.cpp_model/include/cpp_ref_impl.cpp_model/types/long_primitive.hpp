@@ -34,10 +34,12 @@ namespace cpp_ref_impl::cpp_model {
  */
 class long_primitive final {
 public:
-    long_primitive() = default;
     long_primitive(const long_primitive&) = default;
     long_primitive(long_primitive&&) = default;
     ~long_primitive() = default;
+public:
+    long_primitive();
+
 public:
     explicit long_primitive(const long value);
 

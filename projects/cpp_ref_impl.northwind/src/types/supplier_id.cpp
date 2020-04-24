@@ -22,6 +22,9 @@
 
 namespace cpp_ref_impl::northwind {
 
+supplier_id::supplier_id()
+    : value_(static_cast<int>(0)) { }
+
 supplier_id::supplier_id(const int value)
     : value_(value) { }
 

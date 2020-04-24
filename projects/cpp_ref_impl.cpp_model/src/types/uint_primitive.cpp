@@ -22,6 +22,9 @@
 
 namespace cpp_ref_impl::cpp_model {
 
+uint_primitive::uint_primitive()
+    : value_(static_cast<unsigned int>(0)) { }
+
 uint_primitive::uint_primitive(const unsigned int value)
     : value_(value) { }
 

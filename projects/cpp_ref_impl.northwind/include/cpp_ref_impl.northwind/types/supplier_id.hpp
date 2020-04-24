@@ -31,10 +31,12 @@
 namespace cpp_ref_impl::northwind {
 class supplier_id final {
 public:
-    supplier_id() = default;
     supplier_id(const supplier_id&) = default;
     supplier_id(supplier_id&&) = default;
     ~supplier_id() = default;
+public:
+    supplier_id();
+
 public:
     explicit supplier_id(const int value);
 

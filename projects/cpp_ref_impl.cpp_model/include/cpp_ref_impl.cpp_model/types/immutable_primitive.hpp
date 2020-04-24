@@ -34,11 +34,13 @@ namespace cpp_ref_impl::cpp_model {
  */
 class immutable_primitive final {
 public:
-    immutable_primitive() = default;
     immutable_primitive(const immutable_primitive&) = default;
     immutable_primitive(immutable_primitive&&) = default;
     ~immutable_primitive() = default;
     immutable_primitive& operator=(const immutable_primitive&) = delete;
+public:
+    immutable_primitive();
+
 public:
     explicit immutable_primitive(const short value);
 

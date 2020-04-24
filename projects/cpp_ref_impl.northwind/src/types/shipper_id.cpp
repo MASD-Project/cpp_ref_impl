@@ -22,6 +22,9 @@
 
 namespace cpp_ref_impl::northwind {
 
+shipper_id::shipper_id()
+    : value_(static_cast<int>(0)) { }
+
 shipper_id::shipper_id(const int value)
     : value_(value) { }
 

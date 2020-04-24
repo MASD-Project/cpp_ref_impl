@@ -34,10 +34,12 @@ namespace cpp_ref_impl::cpp_model {
  */
 class int_primitive final {
 public:
-    int_primitive() = default;
     int_primitive(const int_primitive&) = default;
     int_primitive(int_primitive&&) = default;
     ~int_primitive() = default;
+public:
+    int_primitive();
+
 public:
     explicit int_primitive(const int value);
 

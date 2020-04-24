@@ -22,6 +22,9 @@
 
 namespace cpp_ref_impl::cpp_model {
 
+char_primitive::char_primitive()
+    : value_(static_cast<char>(0)) { }
+
 char_primitive::char_primitive(const char value)
     : value_(value) { }
 

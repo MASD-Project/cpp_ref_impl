@@ -31,10 +31,12 @@
 namespace cpp_ref_impl::northwind {
 class shipper_id final {
 public:
-    shipper_id() = default;
     shipper_id(const shipper_id&) = default;
     shipper_id(shipper_id&&) = default;
     ~shipper_id() = default;
+public:
+    shipper_id();
+
 public:
     explicit shipper_id(const int value);
 

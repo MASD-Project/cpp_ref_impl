@@ -22,6 +22,9 @@
 
 namespace cpp_ref_impl::cpp_model {
 
+float_primitive::float_primitive()
+    : value_(static_cast<float>(0)) { }
+
 float_primitive::float_primitive(const float value)
     : value_(value) { }
 

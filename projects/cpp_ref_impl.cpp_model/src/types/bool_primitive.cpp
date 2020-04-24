@@ -22,6 +22,9 @@
 
 namespace cpp_ref_impl::cpp_model {
 
+bool_primitive::bool_primitive()
+    : value_(static_cast<bool>(0)) { }
+
 bool_primitive::bool_primitive(const bool value)
     : value_(value) { }
 

@@ -34,10 +34,12 @@ namespace cpp_ref_impl::cpp_model {
  */
 class bool_primitive final {
 public:
-    bool_primitive() = default;
     bool_primitive(const bool_primitive&) = default;
     bool_primitive(bool_primitive&&) = default;
     ~bool_primitive() = default;
+public:
+    bool_primitive();
+
 public:
     explicit bool_primitive(const bool value);
 

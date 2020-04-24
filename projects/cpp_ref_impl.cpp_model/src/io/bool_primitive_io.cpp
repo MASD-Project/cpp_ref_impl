@@ -25,6 +25,11 @@
 namespace cpp_ref_impl::cpp_model {
 
 std::ostream& operator<<(std::ostream& s, const bool_primitive& v) {
+    boost::io::ios_flags_saver ifs(s);
+    s.setf(std::ios_base::boolalpha);
+    s.setf(std::ios::fixed, std::ios::floatfield);
+    s.precision(6);
+    s.setf(std::ios::showpoint);
 
     s << " { "
       << "\"__type__\": " << "\"cpp_ref_impl::cpp_model::bool_primitive\"" << ", "

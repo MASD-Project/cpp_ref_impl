@@ -34,10 +34,12 @@ namespace cpp_ref_impl::cpp_model {
  */
 class ushort_primitive final {
 public:
-    ushort_primitive() = default;
     ushort_primitive(const ushort_primitive&) = default;
     ushort_primitive(ushort_primitive&&) = default;
     ~ushort_primitive() = default;
+public:
+    ushort_primitive();
+
 public:
     explicit ushort_primitive(const unsigned short value);
 

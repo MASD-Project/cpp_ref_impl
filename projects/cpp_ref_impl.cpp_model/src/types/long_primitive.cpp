@@ -22,6 +22,9 @@
 
 namespace cpp_ref_impl::cpp_model {
 
+long_primitive::long_primitive()
+    : value_(static_cast<long>(0)) { }
+
 long_primitive::long_primitive(const long value)
     : value_(value) { }
 

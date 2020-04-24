@@ -22,6 +22,9 @@
 
 namespace cpp_ref_impl::northwind {
 
+employee_id::employee_id()
+    : value_(static_cast<int>(0)) { }
+
 employee_id::employee_id(const int value)
     : value_(value) { }
 

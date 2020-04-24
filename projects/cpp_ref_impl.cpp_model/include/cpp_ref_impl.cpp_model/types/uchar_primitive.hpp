@@ -34,10 +34,12 @@ namespace cpp_ref_impl::cpp_model {
  */
 class uchar_primitive final {
 public:
-    uchar_primitive() = default;
     uchar_primitive(const uchar_primitive&) = default;
     uchar_primitive(uchar_primitive&&) = default;
     ~uchar_primitive() = default;
+public:
+    uchar_primitive();
+
 public:
     explicit uchar_primitive(const unsigned char value);
 

@@ -37,8 +37,10 @@ class time_duration_primitive final {
 public:
     time_duration_primitive() = default;
     time_duration_primitive(const time_duration_primitive&) = default;
-    time_duration_primitive(time_duration_primitive&&) = default;
     ~time_duration_primitive() = default;
+public:
+    time_duration_primitive(time_duration_primitive&& rhs);
+
 public:
     explicit time_duration_primitive(const boost::posix_time::time_duration& value);
 

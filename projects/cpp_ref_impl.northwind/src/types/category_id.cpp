@@ -22,6 +22,9 @@
 
 namespace cpp_ref_impl::northwind {
 
+category_id::category_id()
+    : value_(static_cast<int>(0)) { }
+
 category_id::category_id(const int value)
     : value_(value) { }
 

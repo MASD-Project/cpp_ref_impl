@@ -22,6 +22,9 @@
 
 namespace cpp_ref_impl::northwind {
 
+product_id::product_id()
+    : value_(static_cast<int>(0)) { }
+
 product_id::product_id(const int value)
     : value_(value) { }
 

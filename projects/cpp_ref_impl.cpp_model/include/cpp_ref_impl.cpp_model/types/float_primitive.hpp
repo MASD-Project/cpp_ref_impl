@@ -34,10 +34,12 @@ namespace cpp_ref_impl::cpp_model {
  */
 class float_primitive final {
 public:
-    float_primitive() = default;
     float_primitive(const float_primitive&) = default;
     float_primitive(float_primitive&&) = default;
     ~float_primitive() = default;
+public:
+    float_primitive();
+
 public:
     explicit float_primitive(const float value);
 

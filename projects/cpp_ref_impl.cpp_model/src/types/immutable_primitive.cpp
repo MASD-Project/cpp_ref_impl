@@ -22,6 +22,9 @@
 
 namespace cpp_ref_impl::cpp_model {
 
+immutable_primitive::immutable_primitive()
+    : value_(static_cast<short>(0)) { }
+
 immutable_primitive::immutable_primitive(const short value)
     : value_(value) { }
 

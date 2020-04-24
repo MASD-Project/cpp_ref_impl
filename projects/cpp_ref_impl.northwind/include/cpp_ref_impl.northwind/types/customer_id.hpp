@@ -31,10 +31,12 @@
 namespace cpp_ref_impl::northwind {
 class customer_id final {
 public:
-    customer_id() = default;
     customer_id(const customer_id&) = default;
     customer_id(customer_id&&) = default;
     ~customer_id() = default;
+public:
+    customer_id();
+
 public:
     explicit customer_id(const int value);
 

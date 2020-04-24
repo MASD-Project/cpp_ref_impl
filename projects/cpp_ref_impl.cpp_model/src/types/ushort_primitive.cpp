@@ -22,6 +22,9 @@
 
 namespace cpp_ref_impl::cpp_model {
 
+ushort_primitive::ushort_primitive()
+    : value_(static_cast<unsigned short>(0)) { }
+
 ushort_primitive::ushort_primitive(const unsigned short value)
     : value_(value) { }
 

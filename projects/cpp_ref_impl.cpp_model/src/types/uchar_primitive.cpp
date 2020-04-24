@@ -22,6 +22,9 @@
 
 namespace cpp_ref_impl::cpp_model {
 
+uchar_primitive::uchar_primitive()
+    : value_(static_cast<unsigned char>(0)) { }
+
 uchar_primitive::uchar_primitive(const unsigned char value)
     : value_(value) { }
 

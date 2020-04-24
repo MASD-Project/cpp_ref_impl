@@ -31,10 +31,12 @@
 namespace cpp_ref_impl::northwind {
 class product_id final {
 public:
-    product_id() = default;
     product_id(const product_id&) = default;
     product_id(product_id&&) = default;
     ~product_id() = default;
+public:
+    product_id();
+
 public:
     explicit product_id(const int value);
 

@@ -22,6 +22,9 @@
 
 namespace cpp_ref_impl::cpp_model {
 
+double_primitive::double_primitive()
+    : value_(static_cast<double>(0)) { }
+
 double_primitive::double_primitive(const double value)
     : value_(value) { }
 

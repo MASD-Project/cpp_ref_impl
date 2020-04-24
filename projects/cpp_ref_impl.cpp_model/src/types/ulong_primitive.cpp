@@ -22,6 +22,9 @@
 
 namespace cpp_ref_impl::cpp_model {
 
+ulong_primitive::ulong_primitive()
+    : value_(static_cast<unsigned long>(0)) { }
+
 ulong_primitive::ulong_primitive(const unsigned long value)
     : value_(value) { }
 

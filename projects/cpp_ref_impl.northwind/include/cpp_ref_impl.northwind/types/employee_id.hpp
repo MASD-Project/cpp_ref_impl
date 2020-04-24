@@ -31,10 +31,12 @@
 namespace cpp_ref_impl::northwind {
 class employee_id final {
 public:
-    employee_id() = default;
     employee_id(const employee_id&) = default;
     employee_id(employee_id&&) = default;
     ~employee_id() = default;
+public:
+    employee_id();
+
 public:
     explicit employee_id(const int value);
 

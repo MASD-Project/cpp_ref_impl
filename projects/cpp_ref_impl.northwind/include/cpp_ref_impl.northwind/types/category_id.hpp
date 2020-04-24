@@ -31,10 +31,12 @@
 namespace cpp_ref_impl::northwind {
 class category_id final {
 public:
-    category_id() = default;
     category_id(const category_id&) = default;
     category_id(category_id&&) = default;
     ~category_id() = default;
+public:
+    category_id();
+
 public:
     explicit category_id(const int value);
 

@@ -22,6 +22,9 @@
 
 namespace cpp_ref_impl::cpp_model {
 
+int_primitive::int_primitive()
+    : value_(static_cast<int>(0)) { }
+
 int_primitive::int_primitive(const int value)
     : value_(value) { }
 

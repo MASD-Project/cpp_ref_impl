@@ -34,10 +34,12 @@ namespace cpp_ref_impl::cpp_model {
  */
 class short_primitive final {
 public:
-    short_primitive() = default;
     short_primitive(const short_primitive&) = default;
     short_primitive(short_primitive&&) = default;
     ~short_primitive() = default;
+public:
+    short_primitive();
+
 public:
     explicit short_primitive(const short value);
 

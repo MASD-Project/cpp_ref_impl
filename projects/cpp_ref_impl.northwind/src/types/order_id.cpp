@@ -22,6 +22,9 @@
 
 namespace cpp_ref_impl::northwind {
 
+order_id::order_id()
+    : value_(static_cast<int>(0)) { }
+
 order_id::order_id(const int value)
     : value_(value) { }
 

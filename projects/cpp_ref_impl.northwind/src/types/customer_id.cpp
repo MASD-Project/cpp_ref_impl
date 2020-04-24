@@ -22,6 +22,9 @@
 
 namespace cpp_ref_impl::northwind {
 
+customer_id::customer_id()
+    : value_(static_cast<int>(0)) { }
+
 customer_id::customer_id(const int value)
     : value_(value) { }
 

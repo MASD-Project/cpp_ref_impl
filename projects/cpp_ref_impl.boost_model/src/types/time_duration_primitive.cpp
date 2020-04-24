@@ -22,6 +22,9 @@
 
 namespace cpp_ref_impl::boost_model {
 
+time_duration_primitive::time_duration_primitive(time_duration_primitive&& rhs)
+    : value_(std::move(rhs.value_)) { }
+
 time_duration_primitive::time_duration_primitive(const boost::posix_time::time_duration& value)
     : value_(value) { }
 

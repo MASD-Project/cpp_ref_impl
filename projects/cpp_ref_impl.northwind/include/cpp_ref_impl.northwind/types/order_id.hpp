@@ -31,10 +31,12 @@
 namespace cpp_ref_impl::northwind {
 class order_id final {
 public:
-    order_id() = default;
     order_id(const order_id&) = default;
     order_id(order_id&&) = default;
     ~order_id() = default;
+public:
+    order_id();
+
 public:
     explicit order_id(const int value);
 

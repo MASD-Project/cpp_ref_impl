@@ -34,10 +34,12 @@ namespace cpp_ref_impl::cpp_model {
  */
 class ulong_primitive final {
 public:
-    ulong_primitive() = default;
     ulong_primitive(const ulong_primitive&) = default;
     ulong_primitive(ulong_primitive&&) = default;
     ~ulong_primitive() = default;
+public:
+    ulong_primitive();
+
 public:
     explicit ulong_primitive(const unsigned long value);
 
