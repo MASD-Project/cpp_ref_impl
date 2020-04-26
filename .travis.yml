@@ -36,10 +36,10 @@ matrix:
     #
     - os: linux
       compiler: gcc
-      env: deploy="1" configuration=Release compiler="gcc9" generator="Ninja" build_group="Continuous" code_coverage="1"
+      env: configuration=Debug compiler="gcc9" generator="Ninja" build_group="Continuous" code_coverage="1"
     - os: linux
       compiler: gcc
-      env: configuration=Debug compiler="gcc9" generator="Ninja" build_group="Continuous"
+      env: deploy="1" configuration=Release compiler="gcc9" generator="Ninja" build_group="Continuous"
     #
     # Linux Clang
     #
