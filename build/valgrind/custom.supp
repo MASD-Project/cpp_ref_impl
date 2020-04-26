@@ -319,3 +319,16 @@
    fun:_ZN5boost3log12v2s_mt_posix7sources22basic_composite_loggerIcNS2_23severity_channel_loggerIN12cpp_ref_impl7utility3log14severity_levelENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEENS2_19single_thread_modelENS2_8featuresIJNS2_8severityIS8_EENS2_7channelISE_EEEEEE11open_recordINS_9parameter3aux15tagged_argumentINS1_8keywords3tag8severityEKS8_EEEENS1_6recordERKT_
    ...
 }
+
+{
+   boost log 12
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   ...
+   fun:_ZN5boost3log12v2s_mt_posix3aux11this_thread6get_idEv
+   fun:_ZN5boost3log12v2s_mt_posix4core14implementation11thread_data15get_random_seedEv
+   fun:_ZN5boost3log12v2s_mt_posix4core14implementation11thread_dataC1Ev
+   fun:_ZN5boost3log12v2s_mt_posix4core14implementation16init_thread_dataEv
+   fun:_ZN5boost3log12v2s_mt_posix4core14implementation15get_thread_dataEv
+   ...
+}
