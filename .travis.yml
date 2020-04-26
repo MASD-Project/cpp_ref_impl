@@ -32,22 +32,11 @@ git:
 matrix:
   include:
     #
-    # OSX Clang
-    #
-    - os: osx
-      compiler: clang
-      osx_image: xcode10
-      env: configuration=Release compiler="clang" generator="Unix Makefiles" build_group="Experimental"
-    - os: osx
-      compiler: clang
-      osx_image: xcode10
-      env: configuration=Debug compiler="clang" generator="Unix Makefiles" build_group="Experimental"
-    #
     # Linux GCC
     #
     - os: linux
       compiler: gcc
-      env: deploy="1" configuration=Release compiler="gcc9" generator="Ninja" build_group="Continuous"
+      env: deploy="1" configuration=Release compiler="gcc9" generator="Ninja" build_group="Continuous" code_coverage="1"
     - os: linux
       compiler: gcc
       env: configuration=Debug compiler="gcc9" generator="Ninja" build_group="Continuous"
@@ -56,11 +45,22 @@ matrix:
     #
     - os: linux
       compiler: clang
-      env: configuration=Release compiler="clang9" generator="Ninja" build_group="Continuous"
-    - os: linux
-      compiler: clang
       env: BUILD_TYPE=Debug COMPILER="clang"
       env: coverage=1 configuration=Debug compiler="clang9" generator="Ninja" build_group="Continuous"
+    - os: linux
+      compiler: clang
+      env: configuration=Release compiler="clang9" generator="Ninja" build_group="Continuous"
+    #
+    # OSX Clang
+    #
+    - os: osx
+      compiler: clang
+      osx_image: xcode10
+      env: configuration=Debug compiler="clang" generator="Unix Makefiles" build_group="Experimental"
+    - os: osx
+      compiler: clang
+      osx_image: xcode10
+      env: configuration=Release compiler="clang" generator="Unix Makefiles" build_group="Experimental"
 
 addons:
   apt:
@@ -86,12 +86,7 @@ script:
   - if [[ "${TRAVIS_OS_NAME}" == "osx" ]]; then
         export PATH="/usr/local/opt/ccache/libexec:$PATH";
     fi
-  - ctest --extra-verbose --script ".ctest.cmake,configuration_type=${configuration},generator=${generator},compiler=${compiler},number_of_jobs=${JOBS},build_group=${build_group}";
-
-after_success:
-  - if [[ "x${coverage}" == "x1" ]]; then
-       ${SCRIPTS_DIR}/coverage.linux.sh ${STAGE_DIR} /tmp/kcov ${TRAVIS_JOB_ID};
-    fi
+  - ctest --progress --script ".ctest.cmake,configuration_type=${configuration},generator=${generator},compiler=${compiler},number_of_jobs=${JOBS},build_group=${build_group},code_coverage=${code_coverage}";
 
 notifications:
   email:
