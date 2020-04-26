@@ -125,27 +125,6 @@ if (CMAKE_COMPILER_IS_GNUCXX OR CMAKE_COMPILER_IS_CLANGXX
     # make string constants const char*
     set(warning_flags "${warning_flags} -Wwrite-strings")
 
-    if(WITH_PROFILING)
-        # enable code profiling options
-        set(profiling_flags "-fprofile-arcs -ftest-coverage")
-
-        if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
-            # FIXME: profiling flags appear not to be used during
-            # compilation so disable the warning. bit of a hack, for now.
-            set(profiling_flags "${profiling_flags} -Qunused-arguments")
-
-            set(profiling_flags "${profiling_flags} --coverage")
-            set(profiling_flags
-                "${profiling_flags} -Xclang -coverage-cfg-checksum")
-            set(profiling_flags
-                "${profiling_flags} -Xclang -coverage-no-function-names-in-data")
-
-            # 408 for gcc 4.8 compatibility of the gcov format.
-            set(profiling_flags
-                "${profiling_flags} -Xclang -coverage-version='408*'")
-        endif()
-    endif()
-
     # enable RTTI
     add_definitions(-D_GLIBCXX_USE_CXX11_ABI=1)
     if(APPLE)
@@ -155,11 +134,23 @@ if (CMAKE_COMPILER_IS_GNUCXX OR CMAKE_COMPILER_IS_CLANGXX
         set(other_flags "${other_flags} -fvisibility=hidden")
     endif()
 
+    set(profiling_flags "")
+    if(WITH_PROFILING)
+        if (CMAKE_COMPILER_IS_GNUCXX)
+            # set absolute path to avoid problems with relative path. This
+            # only works with GCC.
+            set(profiling_flags "-fprofile-abs-path")
+        endif()
+
+        # do not use --coverage to support both gcc and clang.
+        set(profiling_flags "${profiling_flags} -fprofile-arcs")
+        set(profiling_flags "${profiling_flags} -ftest-coverage")
+    endif()
+
     # set the flags
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${optimisation_flags}")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${warning_flags}")
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${profiling_flags}")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${other_flags}")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${profiling_flags}")
 
     # ignore fuzzy link errors
     if (WIN32)

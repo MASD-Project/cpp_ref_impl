@@ -47,7 +47,6 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/build/cmake)
 #
 # options
 #
-option(WITH_COVERALLS "Generate coveralls coverage." OFF)
 option(WITH_PROFILING "Build the project with profiling support" OFF)
 option(WITH_MINIMAL_PACKAGING "Package just the main application" OFF)
 option(WITH_BENCHMARKS "Adds targets for running benchmarks" ON)
@@ -174,18 +173,6 @@ if (WITH_PROFILING)
     endif()
 else()
     message(STATUS "Profiling NOT enabled...")
-endif()
-
-#
-# Coverage
-#
-if (WITH_COVERALLS)
-    if (WITH_PROFILING)
-        message(STATUS "Coveralls enabled...")
-    else()
-        message(STATUS "Ignoring attempt to enable Coveralls without profiling.")
-        set(WITH_COVERALLS off)
-    endif()
 endif()
 
 #
