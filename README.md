@@ -8,8 +8,6 @@
 [![Build Dashboard](https://img.shields.io/badge/cdash-dashboard-00cc00.svg)](https://my.cdash.org/index.php?project=MASD+Project+-+C%2B%2B+Reference+Implementation)
 [![Build Status](https://travis-ci.org/MASD-Project/cpp_ref_impl.svg?branch=master)](https://travis-ci.org/MASD-Project/cpp_ref_impl)
 [![Build Status](https://img.shields.io/appveyor/ci/mcraveiro/cpp-ref-impl.svg?label=windows)](https://ci.appveyor.com/project/mcraveiro/cpp-ref-impl)
-[![Coverage Status](https://coveralls.io/repos/github/MASD-Project/cpp_ref_impl/badge.svg?branch=master)](https://coveralls.io/github/MASD-Project/cpp_ref_impl?branch=master)
-[![codecov](https://codecov.io/gh/MASD-Project/cpp_ref_impl/branch/master/graph/badge.svg)](https://codecov.io/gh/MASD-Project/cpp_ref_impl)
 [![Language](https://img.shields.io/badge/Language-C++-blue.svg)](https://www.openhub.net/p/dogen/analyses/latest/languages_summary)
 [![C++](https://img.shields.io/badge/std-C++17-blue.svg)](https://en.wikipedia.org/wiki/C%2B%2B17)
 [![gcc-9](https://img.shields.io/badge/GCC-8-blue.svg)](https://www.gnu.org/software/gcc/gcc-9)
