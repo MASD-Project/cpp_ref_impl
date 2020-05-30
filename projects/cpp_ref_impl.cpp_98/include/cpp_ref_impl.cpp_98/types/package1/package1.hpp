@@ -18,17 +18,22 @@
  * MA 02110-1301, USA.
  *
  */
-#ifndef CPP_REF_IMPL_CPP_MODEL_TYPES_PACKAGE_3_PACKAGE_3_HPP
-#define CPP_REF_IMPL_CPP_MODEL_TYPES_PACKAGE_3_PACKAGE_3_HPP
+#ifndef CPP_REF_IMPL_CPP_98_TYPES_PACKAGE1_PACKAGE1_HPP
+#define CPP_REF_IMPL_CPP_98_TYPES_PACKAGE1_PACKAGE1_HPP
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif
 
+namespace cpp_ref_impl {
+namespace cpp_98 {
+
 /**
- * @brief package
+ * @brief Test comment.
  */
-namespace cpp_ref_impl::cpp_model::package_3 {
+namespace package1 {
 }
+
+} }
 
 #endif

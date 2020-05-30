@@ -20,6 +20,10 @@
   "elements": [
     {
       "name": "package1",
+      "documentation": "Test comment.\n",
+      "tagged_values": {
+        "masd.injection.dia.comment": "true"
+      },
       "fallback_element_type": "masd::module"
     },
     {
