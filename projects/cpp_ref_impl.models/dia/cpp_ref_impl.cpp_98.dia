@@ -292,14 +292,14 @@
           <dia:attribute name="string">
             <dia:string>#Tests support for C++ 98.
 
-#DOGEN masd.injection.dia.comment=true
-#DOGEN masd.injection.model_modules=cpp_ref_impl.cpp_98
-#DOGEN masd.injection.input_technical_space=cpp
-#DOGEN masd.injection.reference=cpp.builtins
-#DOGEN masd.injection.reference=cpp.std
-#DOGEN masd.injection.reference=cpp.boost
-#DOGEN masd.injection.reference=masd
-#DOGEN masd.injection.reference=cpp_ref_impl.profiles
+#DOGEN masd.codec.dia.comment=true
+#DOGEN masd.codec.model_modules=cpp_ref_impl.cpp_98
+#DOGEN masd.codec.input_technical_space=cpp
+#DOGEN masd.codec.reference=cpp.builtins
+#DOGEN masd.codec.reference=cpp.std
+#DOGEN masd.codec.reference=cpp.boost
+#DOGEN masd.codec.reference=masd
+#DOGEN masd.codec.reference=cpp_ref_impl.profiles
 #DOGEN masd.physical.delete_extra_files=true
 #DOGEN masd.physical.delete_empty_directories=true
 #DOGEN masd.cpp.enabled=true
@@ -1509,7 +1509,7 @@
           <dia:attribute name="string">
             <dia:string>#Test comment.
 
-#DOGEN masd.injection.dia.comment=true#</dia:string>
+#DOGEN masd.codec.dia.comment=true#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="monospace" style="0" name="Courier"/>

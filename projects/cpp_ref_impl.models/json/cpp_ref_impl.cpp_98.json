@@ -1,14 +1,14 @@
 {
   "documentation": "Tests support for C++ 98.\n",
   "tagged_values": {
-    "masd.injection.dia.comment": "true",
-    "masd.injection.model_modules": "cpp_ref_impl.cpp_98",
-    "masd.injection.input_technical_space": "cpp",
-    "masd.injection.reference": "cpp.builtins",
-    "masd.injection.reference": "cpp.std",
-    "masd.injection.reference": "cpp.boost",
-    "masd.injection.reference": "masd",
-    "masd.injection.reference": "cpp_ref_impl.profiles",
+    "masd.codec.dia.comment": "true",
+    "masd.codec.model_modules": "cpp_ref_impl.cpp_98",
+    "masd.codec.input_technical_space": "cpp",
+    "masd.codec.reference": "cpp.builtins",
+    "masd.codec.reference": "cpp.std",
+    "masd.codec.reference": "cpp.boost",
+    "masd.codec.reference": "masd",
+    "masd.codec.reference": "cpp_ref_impl.profiles",
     "masd.physical.delete_extra_files": "true",
     "masd.physical.delete_empty_directories": "true",
     "masd.cpp.enabled": "true",
@@ -22,7 +22,7 @@
       "name": "package1",
       "documentation": "Test comment.\n",
       "tagged_values": {
-        "masd.injection.dia.comment": "true"
+        "masd.codec.dia.comment": "true"
       },
       "fallback_element_type": "masd::module"
     },

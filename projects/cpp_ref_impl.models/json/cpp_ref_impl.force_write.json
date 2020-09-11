@@ -1,11 +1,11 @@
 {
   "tagged_values": {
-    "masd.injection.dia.comment": "true",
-    "masd.injection.model_modules": "cpp_ref_impl.force_write",
-    "masd.injection.input_technical_space": "cpp",
-    "masd.injection.reference": "cpp.builtins",
-    "masd.injection.reference": "masd",
-    "masd.injection.reference": "cpp_ref_impl.profiles",
+    "masd.codec.dia.comment": "true",
+    "masd.codec.model_modules": "cpp_ref_impl.force_write",
+    "masd.codec.input_technical_space": "cpp",
+    "masd.codec.reference": "cpp.builtins",
+    "masd.codec.reference": "masd",
+    "masd.codec.reference": "cpp_ref_impl.profiles",
     "masd.physical.force_write": "true",
     "masd.cpp.enabled": "true",
     "masd.cpp.standard": "c++-17",

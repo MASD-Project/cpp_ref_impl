@@ -106,12 +106,12 @@ If you need to regenerate this model, you need to remove the attribute
 changed_property in class changed_generated and delete the class
 handcrafted_new.
 
-#DOGEN masd.injection.dia.comment=true
-#DOGEN masd.injection.model_modules=cpp_ref_impl.out_of_sync
-#DOGEN masd.injection.input_technical_space=cpp
-#DOGEN masd.injection.reference=cpp.builtins
-#DOGEN masd.injection.reference=masd
-#DOGEN masd.injection.reference=cpp_ref_impl.profiles
+#DOGEN masd.codec.dia.comment=true
+#DOGEN masd.codec.model_modules=cpp_ref_impl.out_of_sync
+#DOGEN masd.codec.input_technical_space=cpp
+#DOGEN masd.codec.reference=cpp.builtins
+#DOGEN masd.codec.reference=masd
+#DOGEN masd.codec.reference=cpp_ref_impl.profiles
 #DOGEN masd.physical.delete_extra_files=true
 #DOGEN masd.physical.delete_empty_directories=true
 #DOGEN masd.cpp.enabled=true

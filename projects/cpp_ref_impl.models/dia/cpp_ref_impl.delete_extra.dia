@@ -104,12 +104,12 @@ ensure the unexpected_remove files are not deleted before you check in.
 This can e done by setting delete_extra_files to false, regenerating
 and then setting it back to true.
 
-#DOGEN masd.injection.dia.comment=true
-#DOGEN masd.injection.model_modules=cpp_ref_impl.delete_extra
-#DOGEN masd.injection.input_technical_space=cpp
-#DOGEN masd.injection.reference=cpp.builtins
-#DOGEN masd.injection.reference=masd
-#DOGEN masd.injection.reference=cpp_ref_impl.profiles
+#DOGEN masd.codec.dia.comment=true
+#DOGEN masd.codec.model_modules=cpp_ref_impl.delete_extra
+#DOGEN masd.codec.input_technical_space=cpp
+#DOGEN masd.codec.reference=cpp.builtins
+#DOGEN masd.codec.reference=masd
+#DOGEN masd.codec.reference=cpp_ref_impl.profiles
 #DOGEN masd.physical.delete_extra_files=true
 #DOGEN masd.physical.delete_empty_directories=true
 #DOGEN masd.physical.ignore_files_matching_regex=.*/expected_ignore.*

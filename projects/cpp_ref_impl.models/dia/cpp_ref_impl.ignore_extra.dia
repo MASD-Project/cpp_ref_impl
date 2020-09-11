@@ -100,12 +100,12 @@
 - unexpected_remove: files we want to delete, but will ignore because
   delete extra files is set to false.
 
-#DOGEN masd.injection.dia.comment=true
-#DOGEN masd.injection.model_modules=cpp_ref_impl.ignore_extra
-#DOGEN masd.injection.input_technical_space=cpp
-#DOGEN masd.injection.reference=cpp.builtins
-#DOGEN masd.injection.reference=masd
-#DOGEN masd.injection.reference=cpp_ref_impl.profiles
+#DOGEN masd.codec.dia.comment=true
+#DOGEN masd.codec.model_modules=cpp_ref_impl.ignore_extra
+#DOGEN masd.codec.input_technical_space=cpp
+#DOGEN masd.codec.reference=cpp.builtins
+#DOGEN masd.codec.reference=masd
+#DOGEN masd.codec.reference=cpp_ref_impl.profiles
 #DOGEN masd.physical.delete_extra_files=false
 #DOGEN masd.physical.delete_empty_directories=true
 #DOGEN masd.physical.ignore_files_matching_regex=.*/expected_ignore.*

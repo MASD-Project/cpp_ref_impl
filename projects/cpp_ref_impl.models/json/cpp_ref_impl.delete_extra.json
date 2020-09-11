@@ -1,12 +1,12 @@
 {
   "documentation": "This model is designed to test extra files. These are named:\n\n- expected_ignore: files we do not want to delete.\n- unexpected_remove: files we want to delete.\n\nThis model should not be generated normally. If you do, you must\nensure the unexpected_remove files are not deleted before you check in.\nThis can e done by setting delete_extra_files to false, regenerating\nand then setting it back to true.\n",
   "tagged_values": {
-    "masd.injection.dia.comment": "true",
-    "masd.injection.model_modules": "cpp_ref_impl.delete_extra",
-    "masd.injection.input_technical_space": "cpp",
-    "masd.injection.reference": "cpp.builtins",
-    "masd.injection.reference": "masd",
-    "masd.injection.reference": "cpp_ref_impl.profiles",
+    "masd.codec.dia.comment": "true",
+    "masd.codec.model_modules": "cpp_ref_impl.delete_extra",
+    "masd.codec.input_technical_space": "cpp",
+    "masd.codec.reference": "cpp.builtins",
+    "masd.codec.reference": "masd",
+    "masd.codec.reference": "cpp_ref_impl.profiles",
     "masd.physical.delete_extra_files": "true",
     "masd.physical.delete_empty_directories": "true",
     "masd.physical.ignore_files_matching_regex": ".*/expected_ignore.*",
