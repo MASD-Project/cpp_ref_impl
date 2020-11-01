@@ -25,3 +25,6 @@ compile_commands.json
 
 # emacs
 .dir-locals.el
+
+# lsp
+.cache
