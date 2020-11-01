@@ -23,9 +23,6 @@
 namespace cpp_ref_impl {
 namespace cpp_98 {
 
-no_properties::no_properties()
-     { }
-
 bool no_properties::operator==(const no_properties& /*rhs*/) const {
     return true;
 }

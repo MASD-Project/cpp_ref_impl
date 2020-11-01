@@ -32,9 +32,6 @@ namespace cpp_ref_impl {
 namespace cpp_98 {
 
 class no_properties {
-public:
-    no_properties();
-
 private:
     template<typename Archive>
     friend void boost::serialization::save(Archive& ar, const cpp_ref_impl::cpp_98::no_properties& v, unsigned int version);
