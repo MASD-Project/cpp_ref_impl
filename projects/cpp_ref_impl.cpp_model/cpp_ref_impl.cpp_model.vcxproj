@@ -31,7 +31,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="generated_tests\a_class_tests.cpp" />
-    <ClCompile Include="generated_tests\a_service_tests.cpp" />
     <ClCompile Include="generated_tests\base_object_template_instance_tests.cpp" />
     <ClCompile Include="generated_tests\base_tests.cpp" />
     <ClCompile Include="generated_tests\base_with_object_template_tests.cpp" />
@@ -93,16 +92,12 @@
     <ClCompile Include="generated_tests\parent_without_members_tests.cpp" />
     <ClCompile Include="generated_tests\second_child_without_members_tests.cpp" />
     <ClCompile Include="generated_tests\second_descendant_object_template_instance_tests.cpp" />
-    <ClCompile Include="generated_tests\service_interface_tests.cpp" />
-    <ClCompile Include="generated_tests\service_tests.cpp" />
     <ClCompile Include="generated_tests\short_enum_tests.cpp" />
     <ClCompile Include="generated_tests\simple_object_template_instance_tests.cpp" />
-    <ClCompile Include="generated_tests\some_type_tests.cpp" />
     <ClCompile Include="generated_tests\test_all_knobs_tests.cpp" />
     <ClCompile Include="generated_tests\third_child_with_members_tests.cpp" />
     <ClCompile Include="generated_tests\value_tests.cpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\hash\a_class_hash.hpp" />
-    <ClInclude Include="include\cpp_ref_impl.cpp_model\hash\a_service_hash.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\hash\base_hash.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\hash\base_object_template_instance_hash.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\hash\base_with_object_template_hash.hpp" />
@@ -171,8 +166,6 @@
     <ClInclude Include="include\cpp_ref_impl.cpp_model\hash\parent_without_members_hash.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\hash\second_child_without_members_hash.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\hash\second_descendant_object_template_instance_hash.hpp" />
-    <ClInclude Include="include\cpp_ref_impl.cpp_model\hash\service_hash.hpp" />
-    <ClInclude Include="include\cpp_ref_impl.cpp_model\hash\service_interface_hash.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\hash\short_enum_hash.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\hash\short_primitive_hash.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\hash\simple_object_template_instance_hash.hpp" />
@@ -185,7 +178,6 @@
     <ClInclude Include="include\cpp_ref_impl.cpp_model\hash\ushort_primitive_hash.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\hash\value_hash.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\io\a_class_io.hpp" />
-    <ClInclude Include="include\cpp_ref_impl.cpp_model\io\a_service_io.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\io\base_io.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\io\base_object_template_instance_io.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\io\base_with_object_template_io.hpp" />
@@ -254,8 +246,6 @@
     <ClInclude Include="include\cpp_ref_impl.cpp_model\io\parent_without_members_io.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\io\second_child_without_members_io.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\io\second_descendant_object_template_instance_io.hpp" />
-    <ClInclude Include="include\cpp_ref_impl.cpp_model\io\service_interface_io.hpp" />
-    <ClInclude Include="include\cpp_ref_impl.cpp_model\io\service_io.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\io\short_enum_io.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\io\short_primitive_io.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\io\simple_object_template_instance_io.hpp" />
@@ -274,7 +264,6 @@
     <ClInclude Include="include\cpp_ref_impl.cpp_model\lexical_cast\short_enum_lc.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\lexical_cast\test_all_knobs_lc.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\odb\a_class_pragmas.hpp" />
-    <ClInclude Include="include\cpp_ref_impl.cpp_model\odb\a_service_pragmas.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\odb\base_object_template_instance_pragmas.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\odb\base_pragmas.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\odb\base_with_object_template_pragmas.hpp" />
@@ -343,8 +332,6 @@
     <ClInclude Include="include\cpp_ref_impl.cpp_model\odb\parent_without_members_pragmas.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\odb\second_child_without_members_pragmas.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\odb\second_descendant_object_template_instance_pragmas.hpp" />
-    <ClInclude Include="include\cpp_ref_impl.cpp_model\odb\service_interface_pragmas.hpp" />
-    <ClInclude Include="include\cpp_ref_impl.cpp_model\odb\service_pragmas.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\odb\short_enum_pragmas.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\odb\short_primitive_pragmas.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\odb\simple_object_template_instance_pragmas.hpp" />
@@ -358,8 +345,6 @@
     <ClInclude Include="include\cpp_ref_impl.cpp_model\odb\value_pragmas.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\serialization\a_class_fwd_ser.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\serialization\a_class_ser.hpp" />
-    <ClInclude Include="include\cpp_ref_impl.cpp_model\serialization\a_service_fwd_ser.hpp" />
-    <ClInclude Include="include\cpp_ref_impl.cpp_model\serialization\a_service_ser.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\serialization\base_fwd_ser.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\serialization\base_object_template_instance_fwd_ser.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\serialization\base_object_template_instance_ser.hpp" />
@@ -492,10 +477,6 @@
     <ClInclude Include="include\cpp_ref_impl.cpp_model\serialization\second_child_without_members_ser.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\serialization\second_descendant_object_template_instance_fwd_ser.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\serialization\second_descendant_object_template_instance_ser.hpp" />
-    <ClInclude Include="include\cpp_ref_impl.cpp_model\serialization\service_fwd_ser.hpp" />
-    <ClInclude Include="include\cpp_ref_impl.cpp_model\serialization\service_interface_fwd_ser.hpp" />
-    <ClInclude Include="include\cpp_ref_impl.cpp_model\serialization\service_interface_ser.hpp" />
-    <ClInclude Include="include\cpp_ref_impl.cpp_model\serialization\service_ser.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\serialization\short_enum_ser.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\serialization\short_primitive_fwd_ser.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\serialization\short_primitive_ser.hpp" />
@@ -517,7 +498,6 @@
     <ClInclude Include="include\cpp_ref_impl.cpp_model\serialization\value_fwd_ser.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\serialization\value_ser.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\test_data\a_class_td.hpp" />
-    <ClInclude Include="include\cpp_ref_impl.cpp_model\test_data\a_service_td.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\test_data\base_object_template_instance_td.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\test_data\base_td.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\test_data\base_with_object_template_td.hpp" />
@@ -586,8 +566,6 @@
     <ClInclude Include="include\cpp_ref_impl.cpp_model\test_data\parent_without_members_td.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\test_data\second_child_without_members_td.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\test_data\second_descendant_object_template_instance_td.hpp" />
-    <ClInclude Include="include\cpp_ref_impl.cpp_model\test_data\service_interface_td.hpp" />
-    <ClInclude Include="include\cpp_ref_impl.cpp_model\test_data\service_td.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\test_data\short_enum_td.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\test_data\short_primitive_td.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\test_data\simple_object_template_instance_td.hpp" />
@@ -602,7 +580,6 @@
     <ClInclude Include="include\cpp_ref_impl.cpp_model\types\a_class.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\types\a_class_fwd.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\types\a_service.hpp" />
-    <ClInclude Include="include\cpp_ref_impl.cpp_model\types\a_service_fwd.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\types\base.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\types\base_fwd.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\types\base_object_template_instance.hpp" />
@@ -740,9 +717,7 @@
     <ClInclude Include="include\cpp_ref_impl.cpp_model\types\second_descendant_object_template_instance.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\types\second_descendant_object_template_instance_fwd.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\types\service.hpp" />
-    <ClInclude Include="include\cpp_ref_impl.cpp_model\types\service_fwd.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\types\service_interface.hpp" />
-    <ClInclude Include="include\cpp_ref_impl.cpp_model\types\service_interface_fwd.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\types\short_enum.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\types\short_primitive.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\types\short_primitive_fwd.hpp" />
@@ -764,7 +739,6 @@
     <ClInclude Include="include\cpp_ref_impl.cpp_model\types\value.hpp" />
     <ClInclude Include="include\cpp_ref_impl.cpp_model\types\value_fwd.hpp" />
     <ClCompile Include="src\hash\a_class_hash.cpp" />
-    <ClCompile Include="src\hash\a_service_hash.cpp" />
     <ClCompile Include="src\hash\base_hash.cpp" />
     <ClCompile Include="src\hash\base_object_template_instance_hash.cpp" />
     <ClCompile Include="src\hash\base_with_object_template_hash.cpp" />
@@ -829,8 +803,6 @@
     <ClCompile Include="src\hash\parent_without_members_hash.cpp" />
     <ClCompile Include="src\hash\second_child_without_members_hash.cpp" />
     <ClCompile Include="src\hash\second_descendant_object_template_instance_hash.cpp" />
-    <ClCompile Include="src\hash\service_hash.cpp" />
-    <ClCompile Include="src\hash\service_interface_hash.cpp" />
     <ClCompile Include="src\hash\short_primitive_hash.cpp" />
     <ClCompile Include="src\hash\simple_object_template_instance_hash.cpp" />
     <ClCompile Include="src\hash\some_type_hash.cpp" />
@@ -841,7 +813,6 @@
     <ClCompile Include="src\hash\ushort_primitive_hash.cpp" />
     <ClCompile Include="src\hash\value_hash.cpp" />
     <ClCompile Include="src\io\a_class_io.cpp" />
-    <ClCompile Include="src\io\a_service_io.cpp" />
     <ClCompile Include="src\io\base_io.cpp" />
     <ClCompile Include="src\io\base_object_template_instance_io.cpp" />
     <ClCompile Include="src\io\base_with_object_template_io.cpp" />
@@ -910,8 +881,6 @@
     <ClCompile Include="src\io\parent_without_members_io.cpp" />
     <ClCompile Include="src\io\second_child_without_members_io.cpp" />
     <ClCompile Include="src\io\second_descendant_object_template_instance_io.cpp" />
-    <ClCompile Include="src\io\service_interface_io.cpp" />
-    <ClCompile Include="src\io\service_io.cpp" />
     <ClCompile Include="src\io\short_enum_io.cpp" />
     <ClCompile Include="src\io\short_primitive_io.cpp" />
     <ClCompile Include="src\io\simple_object_template_instance_io.cpp" />
@@ -924,7 +893,6 @@
     <ClCompile Include="src\io\ushort_primitive_io.cpp" />
     <ClCompile Include="src\io\value_io.cpp" />
     <ClCompile Include="src\odb\a_class_options.odb" />
-    <ClCompile Include="src\odb\a_service_options.odb" />
     <ClCompile Include="src\odb\base_object_template_instance_options.odb" />
     <ClCompile Include="src\odb\base_options.odb" />
     <ClCompile Include="src\odb\base_with_object_template_options.odb" />
@@ -989,8 +957,6 @@
     <ClCompile Include="src\odb\parent_without_members_options.odb" />
     <ClCompile Include="src\odb\second_child_without_members_options.odb" />
     <ClCompile Include="src\odb\second_descendant_object_template_instance_options.odb" />
-    <ClCompile Include="src\odb\service_interface_options.odb" />
-    <ClCompile Include="src\odb\service_options.odb" />
     <ClCompile Include="src\odb\short_primitive_options.odb" />
     <ClCompile Include="src\odb\simple_object_template_instance_options.odb" />
     <ClCompile Include="src\odb\some_type_options.odb" />
@@ -1001,7 +967,6 @@
     <ClCompile Include="src\odb\ushort_primitive_options.odb" />
     <ClCompile Include="src\odb\value_options.odb" />
     <ClCompile Include="src\serialization\a_class_ser.cpp" />
-    <ClCompile Include="src\serialization\a_service_ser.cpp" />
     <ClCompile Include="src\serialization\base_object_template_instance_ser.cpp" />
     <ClCompile Include="src\serialization\base_ser.cpp" />
     <ClCompile Include="src\serialization\base_with_object_template_ser.cpp" />
@@ -1066,8 +1031,6 @@
     <ClCompile Include="src\serialization\parent_without_members_ser.cpp" />
     <ClCompile Include="src\serialization\second_child_without_members_ser.cpp" />
     <ClCompile Include="src\serialization\second_descendant_object_template_instance_ser.cpp" />
-    <ClCompile Include="src\serialization\service_interface_ser.cpp" />
-    <ClCompile Include="src\serialization\service_ser.cpp" />
     <ClCompile Include="src\serialization\short_primitive_ser.cpp" />
     <ClCompile Include="src\serialization\simple_object_template_instance_ser.cpp" />
     <ClCompile Include="src\serialization\some_type_ser.cpp" />
@@ -1078,7 +1041,6 @@
     <ClCompile Include="src\serialization\ushort_primitive_ser.cpp" />
     <ClCompile Include="src\serialization\value_ser.cpp" />
     <ClCompile Include="src\test_data\a_class_td.cpp" />
-    <ClCompile Include="src\test_data\a_service_td.cpp" />
     <ClCompile Include="src\test_data\base_object_template_instance_td.cpp" />
     <ClCompile Include="src\test_data\base_td.cpp" />
     <ClCompile Include="src\test_data\base_with_object_template_td.cpp" />
@@ -1147,8 +1109,6 @@
     <ClCompile Include="src\test_data\parent_without_members_td.cpp" />
     <ClCompile Include="src\test_data\second_child_without_members_td.cpp" />
     <ClCompile Include="src\test_data\second_descendant_object_template_instance_td.cpp" />
-    <ClCompile Include="src\test_data\service_interface_td.cpp" />
-    <ClCompile Include="src\test_data\service_td.cpp" />
     <ClCompile Include="src\test_data\short_enum_td.cpp" />
     <ClCompile Include="src\test_data\short_primitive_td.cpp" />
     <ClCompile Include="src\test_data\simple_object_template_instance_td.cpp" />
