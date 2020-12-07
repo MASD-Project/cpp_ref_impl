@@ -12,6 +12,8 @@
     "masd.physical.delete_extra_files": "true",
     "masd.physical.delete_empty_directories": "true",
     "masd.physical.output_technical_space": "cpp",
+    "masd.physical.enable_backend_directories": "true",
+    "masd.csharp.enabled": "false",
     "masd.cpp.enabled": "true",
     "masd.cpp.standard": "c++-17",
     "masd.variability.profile": "cpp_ref_impl.profiles.base.enable_all_facets",
