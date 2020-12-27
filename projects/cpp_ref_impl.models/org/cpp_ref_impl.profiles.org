@@ -18,7 +18,7 @@ should not produce any output.
 You should be able to reference this model from any technical
 space; keep it technical space agnostic.
 
-* base                                                         :masd_element:
+* base                                                          :masd_module:
   :PROPERTIES:
   :masd.codec.dia.comment: true
   :END:
@@ -189,7 +189,7 @@ Top-level configuration for C++ Reference Model.
     :PROPERTIES:
     :masd.codec.value: false
     :END:
-* composable                                                   :masd_element:
+* composable                                                    :masd_module:
 ** handcrafted                                                 :masd_element:
    :PROPERTIES:
    :masd.variability.binding_point: element

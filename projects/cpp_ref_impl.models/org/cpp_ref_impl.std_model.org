@@ -53,7 +53,7 @@ test inclusion duplicates
    :PROPERTIES:
    :masd.codec.type: std::vector<std::vector<unsigned int>>
    :END:
-* pkg1                                                         :masd_element:
+* pkg1                                                          :masd_module:
 ** class_c                                                     :masd_element:
 *** prop_0                                                   :masd_attribute:
     :PROPERTIES:

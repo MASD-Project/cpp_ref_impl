@@ -20,7 +20,7 @@
 
 Tests support for C++ 98.
 
-* package1                                                     :masd_element:
+* package1                                                      :masd_module:
   :PROPERTIES:
   :masd.codec.dia.comment: true
   :END:

@@ -480,7 +480,7 @@ It's objective is to test Dogen integration with ODB.
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-* package                                                      :masd_element:
+* package                                                       :masd_module:
 ** class_0                                                     :masd_element:
    :PROPERTIES:
    :masd.codec.stereotypes: masd::orm::object

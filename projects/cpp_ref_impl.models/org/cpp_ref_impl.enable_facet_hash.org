@@ -16,7 +16,7 @@
 :masd.csharp.enabled: false
 :masd.variability.profile: cpp_ref_impl.profiles.base.enable_cmake_types_hash
 :END:
-* package1                                                     :masd_element:
+* package1                                                      :masd_module:
 ** first_class                                                 :masd_element:
 *** public_attribute                                         :masd_attribute:
     :PROPERTIES:

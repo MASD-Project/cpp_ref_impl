@@ -20,7 +20,7 @@
 :masd.variability.profile: cpp_ref_impl.profiles.base.enable_all_facets
 :masd.decoration.marker_name: cpp_ref_impl.profiles.basic
 :END:
-* package1                                                     :masd_element:
+* package1                                                      :masd_module:
 ** class_in_package                                            :masd_element:
 *** prop_0                                                   :masd_attribute:
     :PROPERTIES:

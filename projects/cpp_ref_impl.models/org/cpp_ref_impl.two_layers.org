@@ -16,13 +16,13 @@
 :masd.csharp.enabled: false
 :masd.variability.profile: cpp_ref_impl.profiles.base.enable_all_facets
 :END:
-* package_1                                                    :masd_element:
+* package_1                                                     :masd_module:
 ** class_1                                                     :masd_element:
 *** prop_0                                                   :masd_attribute:
     :PROPERTIES:
     :masd.codec.type: int
     :END:
-* Package_2                                                    :masd_element:
+* Package_2                                                     :masd_module:
 ** class_2                                                     :masd_element:
 *** prop_0                                                   :masd_attribute:
     :PROPERTIES:
