@@ -1,0 +1,82 @@
+#+title: cpp_ref_impl.cpp_98
+#+options: <:nil c:nil todo:nil ^:nil d:nil date:nil author:nil
+:PROPERTIES:
+:masd.codec.dia.comment: true
+:masd.codec.model_modules: cpp_ref_impl.cpp_98
+:masd.codec.input_technical_space: cpp
+:masd.codec.reference: cpp.builtins
+:masd.codec.reference: cpp.std
+:masd.codec.reference: cpp.boost
+:masd.codec.reference: masd
+:masd.codec.reference: cpp_ref_impl.profiles
+:masd.physical.delete_extra_files: true
+:masd.physical.delete_empty_directories: true
+:masd.cpp.enabled: true
+:masd.csharp.enabled: false
+:masd.cpp.standard: c++-98
+:masd.variability.profile: cpp_ref_impl.profiles.base.enable_all_facets
+:masd.cpp.hash.enabled: false
+:END:
+
+Tests support for C++ 98.
+
+* package1                                                     :masd_element:
+  :PROPERTIES:
+  :masd.codec.dia.comment: true
+  :END:
+
+Test comment.
+
+** first_class                                                 :masd_element:
+*** public_attribute                                         :masd_attribute:
+    :PROPERTIES:
+    :masd.codec.type: int
+    :END:
+*** private_attribute                                        :masd_attribute:
+    :PROPERTIES:
+    :masd.codec.type: int
+    :END:
+* parent                                                       :masd_element:
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+* child                                                        :masd_element:
+  :PROPERTIES:
+  :masd.codec.parent: parent
+  :END:
+** prop_1                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+* no_default_ctor                                              :masd_element:
+
+This class does not require a default constructor due to using simple types.
+
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::string
+   :END:
+* no_properties                                                :masd_element:
+* an_enumeration                                               :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::enumeration
+  :END:
+** first                                                     :masd_attribute:
+** second                                                    :masd_attribute:
+* an_exception                                                 :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::exception
+  :END:
+* registrar                                                    :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::serialization::type_registrar
+  :END:
+* main                                                         :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::entry_point, cpp_ref_impl::untypable
+  :END:
+* CMakeLists                                                   :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::build::cmakelists
+  :END:

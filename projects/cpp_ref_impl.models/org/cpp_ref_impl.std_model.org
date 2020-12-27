@@ -1,0 +1,249 @@
+#+title: cpp_ref_impl.std_model
+#+options: <:nil c:nil todo:nil ^:nil d:nil date:nil author:nil
+:PROPERTIES:
+:masd.codec.dia.comment: true
+:masd.codec.model_modules: cpp_ref_impl.std_model
+:masd.codec.input_technical_space: cpp
+:masd.codec.reference: cpp.builtins
+:masd.codec.reference: cpp.std
+:masd.codec.reference: cpp.boost
+:masd.codec.reference: masd
+:masd.codec.reference: cpp_ref_impl.profiles
+:masd.physical.delete_extra_files: true
+:masd.physical.delete_empty_directories: true
+:masd.cpp.enabled: true
+:masd.cpp.standard: c++-17
+:masd.csharp.enabled: false
+:masd.variability.profile: cpp_ref_impl.profiles.base.enable_all_facets
+:END:
+* class_a                                                      :masd_element:
+** prop0                                                     :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::string
+   :END:
+** prop1                                                     :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::string
+   :END:
+
+test inclusion duplicates
+
+* class_b                                                      :masd_element:
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::vector<std::string>
+   :END:
+** prop_1                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::vector<class_a>
+   :END:
+** prop_2                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::vector<pkg1::class_c>
+   :END:
+** prop_3                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::vector<unsigned int>
+   :END:
+** prop_4                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::vector<class_a>
+   :END:
+** prop_5                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::vector<std::vector<unsigned int>>
+   :END:
+* pkg1                                                         :masd_element:
+** class_c                                                     :masd_element:
+*** prop_0                                                   :masd_attribute:
+    :PROPERTIES:
+    :masd.codec.type: int
+    :END:
+*** prop_1                                                   :masd_attribute:
+    :PROPERTIES:
+    :masd.codec.type: std::vector<class_a>
+    :END:
+* class_d                                                      :masd_element:
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::list<std::string>
+   :END:
+** prop_1                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::list<class_a>
+   :END:
+** prop_2                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::list<pkg1::class_c>
+   :END:
+** prop_3                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::list<unsigned int>
+   :END:
+** prop_4                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::list<class_a>
+   :END:
+** prop_5                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::list<std::list<unsigned int>>
+   :END:
+* class_e                                                      :masd_element:
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::deque<std::string>
+   :END:
+** prop_1                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::deque<class_a>
+   :END:
+** prop_2                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::deque<pkg1::class_c>
+   :END:
+** prop_3                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::deque<unsigned int>
+   :END:
+** prop_4                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::deque<class_a>
+   :END:
+** prop_5                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::deque<std::deque<unsigned int>>
+   :END:
+* class_f                                                      :masd_element:
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::unordered_map<std::string,std::string>
+   :END:
+** prop_1                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::unordered_map<std::string,class_a>
+   :END:
+** prop_2                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::unordered_map<class_a,pkg1::class_c>
+   :END:
+* class_g                                                      :masd_element:
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::unordered_map<class_a,std::vector<pkg1::class_c>>
+   :END:
+** prop_1                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::unordered_map<pkg1::class_c,std::list<class_a>>
+   :END:
+** prop_2                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::unordered_map<std::string, class_a>
+   :END:
+* base                                                         :masd_element:
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::vector<std::string>
+   :END:
+* derived                                                      :masd_element:
+  :PROPERTIES:
+  :masd.codec.parent: base
+  :END:
+** prop_1                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::list<pkg1::class_c>
+   :END:
+* class_h                                                      :masd_element:
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::unordered_set<class_a>
+   :END:
+** prop_1                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::unordered_set<pkg1::class_c>
+   :END:
+* builtins                                                     :masd_element:
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::int8_t
+   :END:
+** prop_1                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::int16_t
+   :END:
+** prop_2                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::int32_t
+   :END:
+** prop_3                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::int64_t
+   :END:
+** prop_4                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::uint8_t
+   :END:
+** prop_5                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::uint16_t
+   :END:
+** prop_6                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::uint32_t
+   :END:
+** prop_7                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::uint64_t
+   :END:
+* some_service                                                 :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: cpp_ref_impl::handcrafted::typeable
+  :END:
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::shared_ptr<base>
+   :END:
+* class_j                                                      :masd_element:
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::pair<int,int>
+   :END:
+** prop_1                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::pair<std::string,std::string>
+   :END:
+** prop_2                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::vector<std::pair<std::string,int>>
+   :END:
+* enum_with_std_builtin                                        :masd_element:
+  :PROPERTIES:
+  :masd.enumeration.underlying_element: std::int8_t
+  :masd.codec.stereotypes: masd::enumeration
+  :END:
+** an_enumerator                                             :masd_attribute:
+** another_enumerator                                        :masd_attribute:
+* string_primitive                                             :masd_element:
+  :PROPERTIES:
+  :masd.primitive.underlying_element: std::string
+  :masd.codec.stereotypes: masd::primitive
+  :END:
+
+Test a primitive with an underlying string.
+
+* class_k                                                      :masd_element:
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: string_primitive
+   :END:
+* registrar                                                    :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::serialization::type_registrar
+  :END:
+* main                                                         :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::entry_point, cpp_ref_impl::untypable
+  :END:
+* CMakeLists                                                   :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::build::cmakelists
+  :END:

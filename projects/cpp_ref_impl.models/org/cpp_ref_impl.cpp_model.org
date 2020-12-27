@@ -1,0 +1,980 @@
+#+title: cpp_ref_impl.cpp_model
+#+options: <:nil c:nil todo:nil ^:nil d:nil date:nil author:nil
+:PROPERTIES:
+:masd.codec.dia.comment: true
+:masd.codec.model_modules: cpp_ref_impl.cpp_model
+:masd.codec.input_technical_space: cpp
+:masd.codec.reference: cpp.builtins
+:masd.codec.reference: cpp.std
+:masd.codec.reference: cpp.boost
+:masd.codec.reference: masd
+:masd.codec.reference: cpp_ref_impl.profiles
+:masd.physical.delete_extra_files: true
+:masd.physical.delete_empty_directories: true
+:masd.cpp.enabled: true
+:masd.cpp.standard: c++-17
+:masd.csharp.enabled: false
+:masd.variability.profile: cpp_ref_impl.profiles.base.enable_all_facets
+:END:
+* builtins                                                     :masd_element:
+** bool_property                                             :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: bool
+   :END:
+** char_property                                             :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: char
+   :END:
+** uchar_property                                            :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: unsigned char
+   :END:
+** int_property                                              :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+** uint_property                                             :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: unsigned int
+   :END:
+** long_property                                             :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: long
+   :END:
+** ulong_property                                            :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: unsigned long
+   :END:
+** long_long_property                                        :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: long long
+   :END:
+** ulong_long_property                                       :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: unsigned long long
+   :END:
+** short_property                                            :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: short
+   :END:
+** ushort_property                                           :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: unsigned short
+   :END:
+** double_property                                           :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: double
+   :END:
+** float_property                                            :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: float
+   :END:
+* package_1                                                    :masd_element:
+** class_1                                                     :masd_element:
+*** prop_0                                                   :masd_attribute:
+    :PROPERTIES:
+    :masd.codec.type: int
+    :END:
+** class_4                                                     :masd_element:
+*** prop_0                                                   :masd_attribute:
+    :PROPERTIES:
+    :masd.codec.type: int
+    :END:
+** class_2                                                     :masd_element:
+*** prop_0                                                   :masd_attribute:
+    :PROPERTIES:
+    :masd.codec.type: int
+    :END:
+** class_5                                                     :masd_element:
+*** prop_0                                                   :masd_attribute:
+    :PROPERTIES:
+    :masd.codec.type: int
+    :END:
+** class_3                                                     :masd_element:
+*** prop_0                                                   :masd_attribute:
+    :PROPERTIES:
+    :masd.codec.type: int
+    :END:
+* class_1                                                      :masd_element:
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+* package_2                                                    :masd_element:
+** class_1                                                     :masd_element:
+*** prop_0                                                   :masd_attribute:
+    :PROPERTIES:
+    :masd.codec.type: int
+    :END:
+** class_2                                                     :masd_element:
+*** prop_0                                                   :masd_attribute:
+    :PROPERTIES:
+    :masd.codec.type: class_1
+    :END:
+*** prop_1                                                   :masd_attribute:
+    :PROPERTIES:
+    :masd.codec.type: cpp_ref_impl::cpp_model::class_1
+    :END:
+* class_0                                                      :masd_element:
+* one_line                                                     :masd_element:
+
+this is the brief comment
+
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+
+another brief comment
+
+** prop_1                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+
+the brief comment
+
+a second line
+
+** prop_2                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+* multi_line                                                   :masd_element:
+
+first line
+
+second line
+third line with "quote"
+
+* package_3                                                    :masd_element:
+  :PROPERTIES:
+  :masd.codec.dia.comment: true
+  :END:
+
+package
+
+** package_1                                                   :masd_element:
+   :PROPERTIES:
+   :masd.codec.dia.comment: true
+   :END:
+
+inner package
+
+* book_types                                                   :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::enumeration
+  :END:
+
+this is a brief comment
+
+this is a long comment
+
+** great                                                     :masd_attribute:
+** not_so_great                                              :masd_attribute:
+** bad                                                       :masd_attribute:
+* colour_types                                                 :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::enumeration
+  :END:
+** red                                                       :masd_attribute:
+this is colour red
+
+** blue                                                      :masd_attribute:
+this is blue
+
+** green                                                     :masd_attribute:
+** gray                                                      :masd_attribute:
+another comment
+
+* a_class                                                      :masd_element:
+** colour_type                                               :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: colour_types
+   :END:
+** book_type                                                 :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: book_types
+   :END:
+** shape_type                                                :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: package_4::shape_types
+   :END:
+* short_enum                                                   :masd_element:
+  :PROPERTIES:
+  :masd.enumeration.underlying_element: short
+  :masd.codec.stereotypes: masd::enumeration
+  :END:
+** an_enumerator                                             :masd_attribute:
+** another_enumerator                                        :masd_attribute:
+* test_all_knobs                                               :masd_element:
+  :PROPERTIES:
+  :masd.enumeration.use_implementation_defined_underlying_element: true
+  :masd.enumeration.use_implementation_defined_enumerator_values: true
+  :masd.enumeration.add_invalid_enumerator: false
+  :masd.codec.stereotypes: masd::enumeration
+  :END:
+** an_enumerator                                             :masd_attribute:
+** another_enumerator                                        :masd_attribute:
+A comment.
+
+* hex_flags                                                    :masd_element:
+  :PROPERTIES:
+  :masd.enumeration.add_invalid_enumerator: false
+  :masd.codec.stereotypes: masd::enumeration
+  :END:
+
+This is an example of an enumeration using hex flags.
+
+** none                                                      :masd_attribute:
+   :PROPERTIES:
+   :masd.enumerator.value: 0x00
+   :END:
+** top                                                       :masd_attribute:
+   :PROPERTIES:
+   :masd.enumerator.value: 0x01
+   :END:
+** bottom                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.enumerator.value: 0x02
+   :END:
+** left                                                      :masd_attribute:
+   :PROPERTIES:
+   :masd.enumerator.value: 0x04
+   :END:
+** right                                                     :masd_attribute:
+   :PROPERTIES:
+   :masd.enumerator.value: 0x08
+   :END:
+* package_4                                                    :masd_element:
+** shape_types                                                 :masd_element:
+   :PROPERTIES:
+   :masd.codec.stereotypes: masd::enumeration
+   :END:
+*** triangle                                                 :masd_attribute:
+*** square                                                   :masd_attribute:
+*** rectangle                                                :masd_attribute:
+*** circle                                                   :masd_attribute:
+* my_error                                                     :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::exception
+  :END:
+
+this is an exception
+
+* package_5                                                    :masd_element:
+** catastrophic_error                                          :masd_element:
+   :PROPERTIES:
+   :masd.codec.stereotypes: masd::exception
+   :END:
+* immutable_primitive                                          :masd_element:
+  :PROPERTIES:
+  :masd.primitive.underlying_element: short
+  :masd.codec.stereotypes: masd::primitive, masd::immutable
+  :END:
+
+Test for a primitive which is also immutable.
+
+* consumer                                                     :masd_element:
+
+This type makes use of all primitves in this test model.
+
+** prop0                                                     :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: short_primitive
+   :END:
+** prop1                                                     :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: ushort_primitive
+   :END:
+** prop2                                                     :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: long_primitive
+   :END:
+** prop3                                                     :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: ulong_primitive
+   :END:
+** prop4                                                     :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int_primitive
+   :END:
+** prop5                                                     :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: uint_primitive
+   :END:
+** prop6                                                     :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: char_primitive
+   :END:
+** prop7                                                     :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: uchar_primitive
+   :END:
+** prop8                                                     :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: double_primitive
+   :END:
+** prop9                                                     :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: float_primitive
+   :END:
+** prop10                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: bool_primitive
+   :END:
+* short_primitive                                              :masd_element:
+  :PROPERTIES:
+  :masd.primitive.underlying_element: short
+  :masd.codec.stereotypes: masd::primitive
+  :END:
+
+Test a primitive with an underlying short.
+
+* long_primitive                                               :masd_element:
+  :PROPERTIES:
+  :masd.primitive.underlying_element: long
+  :masd.codec.stereotypes: masd::primitive
+  :END:
+
+Test a primitive with an underlying long.
+
+* int_primitive                                                :masd_element:
+  :PROPERTIES:
+  :masd.primitive.underlying_element: int
+  :masd.codec.stereotypes: masd::primitive
+  :END:
+
+Test a primitive with an underlying int.
+
+* char_primitive                                               :masd_element:
+  :PROPERTIES:
+  :masd.primitive.underlying_element: char
+  :masd.codec.stereotypes: masd::primitive
+  :END:
+
+Test a primitive with an underlying char.
+
+* uchar_primitive                                              :masd_element:
+  :PROPERTIES:
+  :masd.primitive.underlying_element: unsigned char
+  :masd.codec.stereotypes: masd::primitive
+  :END:
+
+Test a primitive with an underlying unsigned char.
+
+* ulong_primitive                                              :masd_element:
+  :PROPERTIES:
+  :masd.primitive.underlying_element: unsigned long
+  :masd.codec.stereotypes: masd::primitive
+  :END:
+
+Test a primitive with an underlying unsigned long.
+
+* uint_primitive                                               :masd_element:
+  :PROPERTIES:
+  :masd.primitive.underlying_element: unsigned int
+  :masd.codec.stereotypes: masd::primitive
+  :END:
+
+Test a primitive with an underlying unsigned int.
+
+* ushort_primitive                                             :masd_element:
+  :PROPERTIES:
+  :masd.primitive.underlying_element: unsigned short
+  :masd.codec.stereotypes: masd::primitive
+  :END:
+
+Test a primitive with an underlying unsgined short.
+
+* double_primitive                                             :masd_element:
+  :PROPERTIES:
+  :masd.primitive.underlying_element: double
+  :masd.codec.stereotypes: masd::primitive
+  :END:
+
+Test a primitive with an underlying double.
+
+* float_primitive                                              :masd_element:
+  :PROPERTIES:
+  :masd.primitive.underlying_element: float
+  :masd.codec.stereotypes: masd::primitive
+  :END:
+
+Test a primitive with an underlying float.
+
+* bool_primitive                                               :masd_element:
+  :PROPERTIES:
+  :masd.primitive.underlying_element: bool
+  :masd.codec.stereotypes: masd::primitive
+  :END:
+
+Test a primitive with an underlying bool.
+
+* service                                                      :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: cpp_ref_impl::handcrafted::typeable
+  :END:
+
+Type is a service.
+
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+* some_type                                                    :masd_element:
+  :PROPERTIES:
+  :masd.cpp.hash.enabled: true
+  :masd.cpp.hash.overwrite: false
+  :masd.cpp.io.enabled: true
+  :masd.cpp.io.overwrite: false
+  :masd.cpp.odb.enabled: true
+  :masd.cpp.odb.overwrite: false
+  :masd.cpp.serialization.enabled: true
+  :masd.cpp.serialization.overwrite: false
+  :masd.cpp.test_data.enabled: true
+  :masd.cpp.test_data.overwrite: false
+  :masd.cpp.types.class_forward_declarations.enabled: true
+  :masd.cpp.types.class_forward_declarations.overwrite: true
+  :masd.cpp.serialization.class_forward_declarations.overwrite: true
+  :masd.codec.stereotypes: cpp_ref_impl::handcrafted::typeable
+  :END:
+
+Type is non-generatable.
+
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+* fluent                                                       :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::fluent
+  :END:
+
+Tests the fluent scenario across the different types of properties.
+
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: unsigned int
+   :END:
+** prop_1                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::string
+   :END:
+** prop_2                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: value
+   :END:
+* immutable_zero                                               :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::immutable
+  :END:
+
+Immutable class with no properties.
+
+* immutable_two                                                :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::immutable
+  :END:
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: bool
+   :END:
+** prop_1                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::string
+   :END:
+* immutable_one_builtin                                        :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::immutable
+  :END:
+
+Immutable class with a built-in property.
+
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: bool
+   :END:
+* immutable_one_non_builtin                                    :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::immutable
+  :END:
+
+Immutable class with one pod property
+
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::string
+   :END:
+* immutable_four                                               :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::immutable
+  :END:
+
+Immutable class with non-immutable and immutable pods as properties.
+
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: bool
+   :END:
+** prop_1                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::string
+   :END:
+** prop_2                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: value
+   :END:
+** prop_3                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: immutable_one_builtin
+   :END:
+* SimpleObjectTemplate                                         :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::object_template
+  :END:
+
+This is an example of an object template.
+
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+
+This is a sample property in an object template.
+
+** prop_1                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: value
+   :END:
+
+Prove that includes of types get picked up.
+
+* simple_object_template_instance                              :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: SimpleObjectTemplate
+  :END:
+
+This class instantiates the simple object template.
+
+** prop_10                                                   :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+
+Property that belongs to class.
+
+* BaseObjectTemplate                                           :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::object_template
+  :END:
+
+This is the base object template.
+
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+
+Property in the base object template.
+
+* DescendantObjectTemplate                                     :masd_element:
+  :PROPERTIES:
+  :masd.codec.parent: BaseObjectTemplate
+  :masd.codec.stereotypes: masd::object_template
+  :END:
+
+This object template inherits from BaseObjectTemplate.
+
+** prop_1                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+* base_object_template_instance                                :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: BaseObjectTemplate
+  :END:
+
+This class instantiates the BaseObjectTemplate.
+
+* descendant_object_template_instance                          :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: DescendantObjectTemplate
+  :END:
+
+This class instantiates the DescendantObjectTemplate obje.
+
+* BaseObjectTemplate2                                          :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::object_template
+  :END:
+
+Base object template.
+
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: std::string
+   :END:
+
+Ensure we're testing header files inclusion.
+
+* FirstChildObjectTemplate                                     :masd_element:
+  :PROPERTIES:
+  :masd.codec.parent: BaseObjectTemplate2
+  :masd.codec.stereotypes: masd::object_template
+  :END:
+** prop_1                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+
+A property
+
+* SecondChildObjectTemplate                                    :masd_element:
+  :PROPERTIES:
+  :masd.codec.parent: BaseObjectTemplate2
+  :masd.codec.stereotypes: masd::object_template
+  :END:
+
+Second descendant
+
+** prop_2                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+
+Second descendant property
+
+* MultipleParentsObjectTemplate                                :masd_element:
+  :PROPERTIES:
+  :masd.codec.parent: FirstChildObjectTemplate, SecondChildObjectTemplate
+  :masd.codec.stereotypes: masd::object_template
+  :END:
+
+Multiple parents object template
+
+** prop_3                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+
+Multiple parents property.
+
+* second_descendant_object_template_instance                   :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: SecondChildObjectTemplate
+  :END:
+
+Second descendant instance
+
+** prop_10                                                   :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+
+Property of the class itself.
+
+* multiple_parents_object_template_instance                    :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: MultipleParentsObjectTemplate
+  :END:
+
+Instantiates object template MultipleParentsObjectTemplate.
+
+** prop_10                                                   :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+
+Property of the class itself.
+
+* multi_object_template_instance                               :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: FirstChildObjectTemplate, SecondChildObjectTemplate
+  :END:
+
+Type that instantiates more than one object template.
+
+** prop_10                                                   :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+
+Property of class.
+
+* base_with_object_template                                    :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: SecondChildObjectTemplate
+  :END:
+
+Base class that instantiates a derived object template.
+
+* further_inherited                                            :masd_element:
+  :PROPERTIES:
+  :masd.codec.parent: base_with_object_template
+  :masd.codec.stereotypes: MultipleParentsObjectTemplate
+  :END:
+
+Descendant class that instantiates an object template which is a descendant
+of the object template instantiated by the base class.
+
+* value                                                        :masd_element:
+
+Type is a value.
+
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+* class_a                                                      :masd_element:
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+* class_b                                                      :masd_element:
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: class_a
+   :END:
+* class_c                                                      :masd_element:
+* class_d                                                      :masd_element:
+* parent_without_members                                       :masd_element:
+* child_without_members                                        :masd_element:
+  :PROPERTIES:
+  :masd.codec.parent: parent_without_members
+  :END:
+* parent_with_members                                          :masd_element:
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+* second_child_without_members                                 :masd_element:
+  :PROPERTIES:
+  :masd.codec.parent: parent_with_members
+  :END:
+* third_child_with_members                                     :masd_element:
+  :PROPERTIES:
+  :masd.codec.parent: parent_with_members
+  :END:
+** prop_1                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: unsigned int
+   :END:
+* child_of_a_child1                                            :masd_element:
+  :PROPERTIES:
+  :masd.codec.parent: third_child_with_members
+  :END:
+* child_of_a_child2                                            :masd_element:
+  :PROPERTIES:
+  :masd.codec.parent: third_child_with_members
+  :END:
+** prop_2                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: unsigned int
+   :END:
+* child_with_members                                           :masd_element:
+  :PROPERTIES:
+  :masd.codec.parent: parent_without_members
+  :END:
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: unsigned int
+   :END:
+* service_interface                                            :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: cpp_ref_impl::handcrafted::typeable
+  :END:
+* a_service                                                    :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: cpp_ref_impl::handcrafted::typeable
+  :END:
+* base                                                         :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::visitable
+  :END:
+* descendant2                                                  :masd_element:
+  :PROPERTIES:
+  :masd.codec.parent: base
+  :END:
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: bool
+   :END:
+* descendant1                                                  :masd_element:
+  :PROPERTIES:
+  :masd.codec.parent: base
+  :END:
+* descendant3                                                  :masd_element:
+  :PROPERTIES:
+  :masd.codec.parent: descendant1
+  :END:
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: bool
+   :END:
+* move_ctor_base                                               :masd_element:
+
+Base class for scenario that tests code generated move contructors.
+
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: boost::filesystem::path
+   :END:
+
+Force manual move constructor.
+
+* move_ctor_descendant                                         :masd_element:
+  :PROPERTIES:
+  :masd.codec.parent: move_ctor_base
+  :END:
+
+Descendant class for scenario that tests code generated move contructors.
+
+** prop_1                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: boost::filesystem::path
+   :END:
+
+Force manual move constructor.
+
+* move_ctor_empty_descendant                                   :masd_element:
+  :PROPERTIES:
+  :masd.codec.parent: move_ctor_base
+  :END:
+
+Descendant class for scenario that tests code generated move contructors.
+
+* child_via_settings                                           :masd_element:
+  :PROPERTIES:
+  :masd.generalization.parent: parent_with_members
+  :END:
+** prop_1                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+* non_final_leaf                                               :masd_element:
+  :PROPERTIES:
+  :masd.generalization.is_final: false
+  :masd.codec.parent: descendant1
+  :END:
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+* non_final_orphan                                             :masd_element:
+  :PROPERTIES:
+  :masd.generalization.is_final: false
+  :END:
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+* package_6                                                    :masd_element:
+** parent                                                      :masd_element:
+*** prop_0                                                   :masd_attribute:
+    :PROPERTIES:
+    :masd.codec.type: unsigned int
+    :END:
+** child                                                       :masd_element:
+   :PROPERTIES:
+   :masd.codec.parent: package_6::parent
+   :END:
+*** prop_1                                                   :masd_attribute:
+    :PROPERTIES:
+    :masd.codec.type: int
+    :END:
+** child_via_settings                                          :masd_element:
+   :PROPERTIES:
+   :masd.generalization.parent: package_6::parent
+   :END:
+*** prop_1                                                   :masd_attribute:
+    :PROPERTIES:
+    :masd.codec.type: int
+    :END:
+* package_8                                                    :masd_element:
+** child                                                       :masd_element:
+   :PROPERTIES:
+   :masd.codec.parent: package_7::parent
+   :END:
+*** prop_1                                                   :masd_attribute:
+    :PROPERTIES:
+    :masd.codec.type: int
+    :END:
+** child_via_settings                                          :masd_element:
+   :PROPERTIES:
+   :masd.generalization.parent: package_7::parent
+   :END:
+*** prop_1                                                   :masd_attribute:
+    :PROPERTIES:
+    :masd.codec.type: int
+    :END:
+* package_7                                                    :masd_element:
+** parent                                                      :masd_element:
+*** prop_0                                                   :masd_attribute:
+    :PROPERTIES:
+    :masd.codec.type: int
+    :END:
+* package_9                                                    :masd_element:
+** child_via_settings                                          :masd_element:
+   :PROPERTIES:
+   :masd.generalization.parent: parent_outside
+   :END:
+*** prop_1                                                   :masd_attribute:
+    :PROPERTIES:
+    :masd.codec.type: int
+    :END:
+** child                                                       :masd_element:
+   :PROPERTIES:
+   :masd.codec.parent: parent_outside
+   :END:
+*** prop_1                                                   :masd_attribute:
+    :PROPERTIES:
+    :masd.codec.type: int
+    :END:
+* parent_outside                                               :masd_element:
+** prop_0                                                    :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.type: int
+   :END:
+* package_0                                                    :masd_element:
+* package_10                                                   :masd_element:
+** ObjectTemplateInAPackage                                    :masd_element:
+   :PROPERTIES:
+   :masd.codec.stereotypes: masd::object_template
+   :END:
+*** prop_0                                                   :masd_attribute:
+    :PROPERTIES:
+    :masd.codec.type: int
+    :END:
+** consume_object_template                                     :masd_element:
+   :PROPERTIES:
+   :masd.codec.stereotypes: ObjectTemplateInAPackage
+   :END:
+* registrar                                                    :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::serialization::type_registrar
+  :END:
+* project                                                      :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::visual_studio::project
+  :END:
+** guid                                                      :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.value: 876B2828-8A0B-495F-8340-0357690162E4
+   :END:
+* solution                                                     :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::visual_studio::solution
+  :END:
+** guid                                                      :masd_attribute:
+   :PROPERTIES:
+   :masd.codec.value: 3103CA57-FD70-4EC9-98BD-1C2C7360AF53
+   :END:
+* main                                                         :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::entry_point, cpp_ref_impl::untypable
+  :END:
+* CMakeLists                                                   :masd_element:
+  :PROPERTIES:
+  :masd.codec.stereotypes: masd::build::cmakelists
+  :END:
