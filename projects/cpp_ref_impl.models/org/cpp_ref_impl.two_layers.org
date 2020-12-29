@@ -18,22 +18,36 @@
 :masd.variability.profile: cpp_ref_impl.profiles.base.enable_all_facets
 :END:
 * package_1                                                          :module:
+  :PROPERTIES:
+  :custom_id: O0
+  :END:
 ** class_1                                                          :element:
+   :PROPERTIES:
+   :custom_id: O1
+   :END:
 *** prop_0                                                        :attribute:
     :PROPERTIES:
     :masd.codec.type: int
     :END:
 * Package_2                                                          :module:
+  :PROPERTIES:
+  :custom_id: O3
+  :END:
 ** class_2                                                          :element:
+   :PROPERTIES:
+   :custom_id: O4
+   :END:
 *** prop_0                                                        :attribute:
     :PROPERTIES:
     :masd.codec.type: int
     :END:
 * main                                                              :element:
   :PROPERTIES:
+  :custom_id: O5
   :masd.codec.stereotypes: masd::entry_point, cpp_ref_impl::untypable
   :END:
 * CMakeLists                                                        :element:
   :PROPERTIES:
+  :custom_id: O6
   :masd.codec.stereotypes: masd::build::cmakelists
   :END:

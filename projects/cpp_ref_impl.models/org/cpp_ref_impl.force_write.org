@@ -15,6 +15,9 @@
 :masd.variability.profile: cpp_ref_impl.profiles.base.enable_all_facets
 :END:
 * first_class                                                       :element:
+  :PROPERTIES:
+  :custom_id: O1
+  :END:
 ** public_attribute                                               :attribute:
    :PROPERTIES:
    :masd.codec.type: int
@@ -25,6 +28,7 @@
    :END:
 * changed_handcrafted                                               :element:
   :PROPERTIES:
+  :custom_id: O2
   :masd.codec.stereotypes: cpp_ref_impl::handcrafted::typeable
   :END:
 
@@ -40,9 +44,11 @@ generation. If it does, the overwrite flag for handcrafted is not working.
 
 * main                                                              :element:
   :PROPERTIES:
+  :custom_id: O3
   :masd.codec.stereotypes: masd::entry_point, cpp_ref_impl::untypable
   :END:
 * CMakeLists                                                        :element:
   :PROPERTIES:
+  :custom_id: O4
   :masd.codec.stereotypes: masd::build::cmakelists
   :END:

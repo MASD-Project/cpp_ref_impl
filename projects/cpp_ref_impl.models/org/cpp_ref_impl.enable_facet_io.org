@@ -18,7 +18,13 @@
 :masd.variability.profile: cpp_ref_impl.profiles.base.enable_cmake_types_io
 :END:
 * package1                                                           :module:
+  :PROPERTIES:
+  :custom_id: O0
+  :END:
 ** first_class                                                      :element:
+   :PROPERTIES:
+   :custom_id: O1
+   :END:
 *** public_attribute                                              :attribute:
     :PROPERTIES:
     :masd.codec.type: int
@@ -29,9 +35,11 @@
     :END:
 * main                                                              :element:
   :PROPERTIES:
+  :custom_id: O3
   :masd.codec.stereotypes: masd::entry_point, cpp_ref_impl::untypable
   :END:
 * CMakeLists                                                        :element:
   :PROPERTIES:
+  :custom_id: O4
   :masd.codec.stereotypes: masd::build::cmakelists
   :END:

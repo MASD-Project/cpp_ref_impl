@@ -18,6 +18,9 @@
 :masd.variability.profile: cpp_ref_impl.profiles.base.enable_all_facets
 :END:
 * class_b                                                           :element:
+  :PROPERTIES:
+  :custom_id: O0
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: boost::shared_ptr<class_a>
@@ -47,12 +50,21 @@
    :masd.codec.type: pkg1::class_c
    :END:
 * class_a                                                           :element:
+  :PROPERTIES:
+  :custom_id: O1
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: unsigned int
    :END:
 * pkg1                                                               :module:
+  :PROPERTIES:
+  :custom_id: O2
+  :END:
 ** class_c                                                          :element:
+   :PROPERTIES:
+   :custom_id: O3
+   :END:
 *** prop_0                                                        :attribute:
     :PROPERTIES:
     :masd.codec.type: int
@@ -62,12 +74,16 @@
     :masd.codec.type: std::vector<class_a>
     :END:
 * class_base                                                        :element:
+  :PROPERTIES:
+  :custom_id: O4
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: int
    :END:
 * class_derived                                                     :element:
   :PROPERTIES:
+  :custom_id: O5
   :masd.codec.parent: class_base
   :END:
 ** prop_1                                                         :attribute:
@@ -75,6 +91,9 @@
    :masd.codec.type: int
    :END:
 * class_d                                                           :element:
+  :PROPERTIES:
+  :custom_id: O7
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: boost::optional<int>
@@ -93,6 +112,7 @@
    :END:
 * some_service                                                      :element:
   :PROPERTIES:
+  :custom_id: O8
   :masd.codec.stereotypes: cpp_ref_impl::handcrafted::typeable
   :END:
 ** prop_0                                                         :attribute:
@@ -100,6 +120,9 @@
    :masd.codec.type: boost::shared_ptr<class_a>
    :END:
 * class_e                                                           :element:
+  :PROPERTIES:
+  :custom_id: O9
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: boost::variant<int,double>
@@ -117,6 +140,9 @@
    :masd.codec.type: boost::variant<int,std::string,char>
    :END:
 * class_f                                                           :element:
+  :PROPERTIES:
+  :custom_id: O10
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: boost::gregorian::date
@@ -142,6 +168,9 @@
    :masd.codec.type: std::list<boost::posix_time::time_duration>
    :END:
 * class_g                                                           :element:
+  :PROPERTIES:
+  :custom_id: O11
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: boost::filesystem::path
@@ -151,12 +180,16 @@
    :masd.codec.type: std::list<boost::filesystem::path>
    :END:
 * class_h                                                           :element:
+  :PROPERTIES:
+  :custom_id: O12
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: boost::property_tree::ptree
    :END:
 * ptime_primitive                                                   :element:
   :PROPERTIES:
+  :custom_id: O14
   :masd.primitive.underlying_element: boost::posix_time::ptime
   :masd.codec.stereotypes: masd::primitive
   :END:
@@ -165,6 +198,7 @@ Test a primitive with an underlying ptime.
 
 * time_duration_primitive                                           :element:
   :PROPERTIES:
+  :custom_id: O15
   :masd.primitive.underlying_element: boost::posix_time::time_duration
   :masd.codec.stereotypes: masd::primitive
   :END:
@@ -173,6 +207,7 @@ Test a primitive with an underlying time_duration.
 
 * date_primitive                                                    :element:
   :PROPERTIES:
+  :custom_id: O16
   :masd.primitive.underlying_element: boost::gregorian::date
   :masd.codec.stereotypes: masd::primitive
   :END:
@@ -180,6 +215,9 @@ Test a primitive with an underlying time_duration.
 Test a primitive with an underlying time_duration.
 
 * class_j                                                           :element:
+  :PROPERTIES:
+  :custom_id: O17
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: ptime_primitive
@@ -194,13 +232,16 @@ Test a primitive with an underlying time_duration.
    :END:
 * registrar                                                         :element:
   :PROPERTIES:
+  :custom_id: O18
   :masd.codec.stereotypes: masd::serialization::type_registrar
   :END:
 * main                                                              :element:
   :PROPERTIES:
+  :custom_id: O19
   :masd.codec.stereotypes: masd::entry_point, cpp_ref_impl::untypable
   :END:
 * CMakeLists                                                        :element:
   :PROPERTIES:
+  :custom_id: O20
   :masd.codec.stereotypes: masd::build::cmakelists
   :END:

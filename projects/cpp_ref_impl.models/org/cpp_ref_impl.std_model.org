@@ -18,6 +18,9 @@
 :masd.variability.profile: cpp_ref_impl.profiles.base.enable_all_facets
 :END:
 * class_a                                                           :element:
+  :PROPERTIES:
+  :custom_id: O0
+  :END:
 ** prop0                                                          :attribute:
    :PROPERTIES:
    :masd.codec.type: std::string
@@ -30,6 +33,9 @@
 test inclusion duplicates
 
 * class_b                                                           :element:
+  :PROPERTIES:
+  :custom_id: O1
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: std::vector<std::string>
@@ -55,7 +61,13 @@ test inclusion duplicates
    :masd.codec.type: std::vector<std::vector<unsigned int>>
    :END:
 * pkg1                                                               :module:
+  :PROPERTIES:
+  :custom_id: O2
+  :END:
 ** class_c                                                          :element:
+   :PROPERTIES:
+   :custom_id: O3
+   :END:
 *** prop_0                                                        :attribute:
     :PROPERTIES:
     :masd.codec.type: int
@@ -65,6 +77,9 @@ test inclusion duplicates
     :masd.codec.type: std::vector<class_a>
     :END:
 * class_d                                                           :element:
+  :PROPERTIES:
+  :custom_id: O4
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: std::list<std::string>
@@ -90,6 +105,9 @@ test inclusion duplicates
    :masd.codec.type: std::list<std::list<unsigned int>>
    :END:
 * class_e                                                           :element:
+  :PROPERTIES:
+  :custom_id: O5
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: std::deque<std::string>
@@ -115,6 +133,9 @@ test inclusion duplicates
    :masd.codec.type: std::deque<std::deque<unsigned int>>
    :END:
 * class_f                                                           :element:
+  :PROPERTIES:
+  :custom_id: O6
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: std::unordered_map<std::string,std::string>
@@ -128,6 +149,9 @@ test inclusion duplicates
    :masd.codec.type: std::unordered_map<class_a,pkg1::class_c>
    :END:
 * class_g                                                           :element:
+  :PROPERTIES:
+  :custom_id: O7
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: std::unordered_map<class_a,std::vector<pkg1::class_c>>
@@ -141,12 +165,16 @@ test inclusion duplicates
    :masd.codec.type: std::unordered_map<std::string, class_a>
    :END:
 * base                                                              :element:
+  :PROPERTIES:
+  :custom_id: O8
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: std::vector<std::string>
    :END:
 * derived                                                           :element:
   :PROPERTIES:
+  :custom_id: O9
   :masd.codec.parent: base
   :END:
 ** prop_1                                                         :attribute:
@@ -154,6 +182,9 @@ test inclusion duplicates
    :masd.codec.type: std::list<pkg1::class_c>
    :END:
 * class_h                                                           :element:
+  :PROPERTIES:
+  :custom_id: O11
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: std::unordered_set<class_a>
@@ -163,6 +194,9 @@ test inclusion duplicates
    :masd.codec.type: std::unordered_set<pkg1::class_c>
    :END:
 * builtins                                                          :element:
+  :PROPERTIES:
+  :custom_id: O12
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: std::int8_t
@@ -197,6 +231,7 @@ test inclusion duplicates
    :END:
 * some_service                                                      :element:
   :PROPERTIES:
+  :custom_id: O13
   :masd.codec.stereotypes: cpp_ref_impl::handcrafted::typeable
   :END:
 ** prop_0                                                         :attribute:
@@ -204,6 +239,9 @@ test inclusion duplicates
    :masd.codec.type: std::shared_ptr<base>
    :END:
 * class_j                                                           :element:
+  :PROPERTIES:
+  :custom_id: O14
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: std::pair<int,int>
@@ -218,6 +256,7 @@ test inclusion duplicates
    :END:
 * enum_with_std_builtin                                             :element:
   :PROPERTIES:
+  :custom_id: O16
   :masd.enumeration.underlying_element: std::int8_t
   :masd.codec.stereotypes: masd::enumeration
   :END:
@@ -225,6 +264,7 @@ test inclusion duplicates
 ** another_enumerator                                             :attribute:
 * string_primitive                                                  :element:
   :PROPERTIES:
+  :custom_id: O17
   :masd.primitive.underlying_element: std::string
   :masd.codec.stereotypes: masd::primitive
   :END:
@@ -232,19 +272,25 @@ test inclusion duplicates
 Test a primitive with an underlying string.
 
 * class_k                                                           :element:
+  :PROPERTIES:
+  :custom_id: O18
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: string_primitive
    :END:
 * registrar                                                         :element:
   :PROPERTIES:
+  :custom_id: O19
   :masd.codec.stereotypes: masd::serialization::type_registrar
   :END:
 * main                                                              :element:
   :PROPERTIES:
+  :custom_id: O20
   :masd.codec.stereotypes: masd::entry_point, cpp_ref_impl::untypable
   :END:
 * CMakeLists                                                        :element:
   :PROPERTIES:
+  :custom_id: O21
   :masd.codec.stereotypes: masd::build::cmakelists
   :END:

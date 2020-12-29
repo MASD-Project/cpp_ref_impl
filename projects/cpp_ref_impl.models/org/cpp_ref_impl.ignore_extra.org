@@ -24,6 +24,9 @@ This model is designed to test extra files. These are named:
   delete extra files is set to false.
 
 * one_property                                                      :element:
+  :PROPERTIES:
+  :custom_id: O1
+  :END:
 
 This class has not changed.
 
@@ -33,9 +36,11 @@ This class has not changed.
    :END:
 * main                                                              :element:
   :PROPERTIES:
+  :custom_id: O2
   :masd.codec.stereotypes: masd::entry_point, cpp_ref_impl::untypable
   :END:
 * CMakeLists                                                        :element:
   :PROPERTIES:
+  :custom_id: O3
   :masd.codec.stereotypes: masd::build::cmakelists
   :END:

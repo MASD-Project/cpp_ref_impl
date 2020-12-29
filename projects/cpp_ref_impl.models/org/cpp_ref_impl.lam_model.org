@@ -22,12 +22,21 @@
 :masd.decoration.marker_name: cpp_ref_impl.profiles.basic
 :END:
 * package1                                                           :module:
+  :PROPERTIES:
+  :custom_id: O0
+  :END:
 ** class_in_package                                                 :element:
+   :PROPERTIES:
+   :custom_id: O1
+   :END:
 *** prop_0                                                        :attribute:
     :PROPERTIES:
     :masd.codec.type: masd::lam::numeric::integer
     :END:
 * builtins                                                          :element:
+  :PROPERTIES:
+  :custom_id: O3
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: masd::lam::text::character
@@ -70,9 +79,11 @@
    :END:
 * main                                                              :element:
   :PROPERTIES:
+  :custom_id: O4
   :masd.codec.stereotypes: masd::entry_point, cpp_ref_impl::untypable
   :END:
 * CMakeLists                                                        :element:
   :PROPERTIES:
+  :custom_id: O5
   :masd.codec.stereotypes: masd::build::cmakelists
   :END:

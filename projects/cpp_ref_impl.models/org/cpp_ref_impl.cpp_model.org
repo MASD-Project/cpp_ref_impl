@@ -18,6 +18,9 @@
 :masd.variability.profile: cpp_ref_impl.profiles.base.enable_all_facets
 :END:
 * builtins                                                          :element:
+  :PROPERTIES:
+  :custom_id: O0
+  :END:
 ** bool_property                                                  :attribute:
    :PROPERTIES:
    :masd.codec.type: bool
@@ -71,43 +74,73 @@
    :masd.codec.type: float
    :END:
 * package_1                                                          :module:
+  :PROPERTIES:
+  :custom_id: O2
+  :END:
 ** class_1                                                          :element:
+   :PROPERTIES:
+   :custom_id: O3
+   :END:
 *** prop_0                                                        :attribute:
     :PROPERTIES:
     :masd.codec.type: int
     :END:
 ** class_4                                                          :element:
+   :PROPERTIES:
+   :custom_id: O4
+   :END:
 *** prop_0                                                        :attribute:
     :PROPERTIES:
     :masd.codec.type: int
     :END:
 ** class_2                                                          :element:
+   :PROPERTIES:
+   :custom_id: O5
+   :END:
 *** prop_0                                                        :attribute:
     :PROPERTIES:
     :masd.codec.type: int
     :END:
 ** class_5                                                          :element:
+   :PROPERTIES:
+   :custom_id: O6
+   :END:
 *** prop_0                                                        :attribute:
     :PROPERTIES:
     :masd.codec.type: int
     :END:
 ** class_3                                                          :element:
+   :PROPERTIES:
+   :custom_id: O7
+   :END:
 *** prop_0                                                        :attribute:
     :PROPERTIES:
     :masd.codec.type: int
     :END:
 * class_1                                                           :element:
+  :PROPERTIES:
+  :custom_id: O8
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: int
    :END:
 * package_2                                                          :module:
+  :PROPERTIES:
+  :custom_id: O9
+  :END:
 ** class_1                                                          :element:
+   :PROPERTIES:
+   :custom_id: O10
+   :END:
 *** prop_0                                                        :attribute:
     :PROPERTIES:
     :masd.codec.type: int
     :END:
 ** class_2                                                          :element:
+   :PROPERTIES:
+   :custom_id: O138
+   :END:
 *** prop_0                                                        :attribute:
     :PROPERTIES:
     :masd.codec.type: class_1
@@ -117,7 +150,13 @@
     :masd.codec.type: cpp_ref_impl::cpp_model::class_1
     :END:
 * class_0                                                           :element:
+  :PROPERTIES:
+  :custom_id: O11
+  :END:
 * one_line                                                          :element:
+  :PROPERTIES:
+  :custom_id: O12
+  :END:
 
 this is the brief comment
 
@@ -142,6 +181,9 @@ a second line
    :masd.codec.type: int
    :END:
 * multi_line                                                        :element:
+  :PROPERTIES:
+  :custom_id: O13
+  :END:
 
 first line
 
@@ -150,6 +192,7 @@ third line with "quote"
 
 * package_3                                                          :module:
   :PROPERTIES:
+  :custom_id: O16
   :masd.codec.dia.comment: true
   :END:
 
@@ -157,6 +200,7 @@ package
 
 ** package_1                                                         :module:
    :PROPERTIES:
+   :custom_id: O17
    :masd.codec.dia.comment: true
    :END:
 
@@ -164,6 +208,7 @@ inner package
 
 * book_types                                                        :element:
   :PROPERTIES:
+  :custom_id: O20
   :masd.codec.stereotypes: masd::enumeration
   :END:
 
@@ -176,6 +221,7 @@ this is a long comment
 ** bad                                                            :attribute:
 * colour_types                                                      :element:
   :PROPERTIES:
+  :custom_id: O21
   :masd.codec.stereotypes: masd::enumeration
   :END:
 ** red                                                            :attribute:
@@ -192,6 +238,9 @@ this is blue
 another comment
 
 * a_class                                                           :element:
+  :PROPERTIES:
+  :custom_id: O22
+  :END:
 ** colour_type                                                    :attribute:
    :PROPERTIES:
    :masd.codec.type: colour_types
@@ -206,6 +255,7 @@ another comment
    :END:
 * short_enum                                                        :element:
   :PROPERTIES:
+  :custom_id: O23
   :masd.enumeration.underlying_element: short
   :masd.codec.stereotypes: masd::enumeration
   :END:
@@ -213,6 +263,7 @@ another comment
 ** another_enumerator                                             :attribute:
 * test_all_knobs                                                    :element:
   :PROPERTIES:
+  :custom_id: O24
   :masd.enumeration.use_implementation_defined_underlying_element: true
   :masd.enumeration.use_implementation_defined_enumerator_values: true
   :masd.enumeration.add_invalid_enumerator: false
@@ -225,6 +276,7 @@ A comment.
 
 * hex_flags                                                         :element:
   :PROPERTIES:
+  :custom_id: O25
   :masd.enumeration.add_invalid_enumerator: false
   :masd.codec.stereotypes: masd::enumeration
   :END:
@@ -252,8 +304,12 @@ This is an example of an enumeration using hex flags.
    :masd.enumerator.value: 0x08
    :END:
 * package_4                                                          :module:
+  :PROPERTIES:
+  :custom_id: O26
+  :END:
 ** shape_types                                                      :element:
    :PROPERTIES:
+   :custom_id: O27
    :masd.codec.stereotypes: masd::enumeration
    :END:
 *** triangle                                                      :attribute:
@@ -262,18 +318,24 @@ This is an example of an enumeration using hex flags.
 *** circle                                                        :attribute:
 * my_error                                                          :element:
   :PROPERTIES:
+  :custom_id: O28
   :masd.codec.stereotypes: masd::exception
   :END:
 
 this is an exception
 
 * package_5                                                          :module:
+  :PROPERTIES:
+  :custom_id: O29
+  :END:
 ** catastrophic_error                                               :element:
    :PROPERTIES:
+   :custom_id: O30
    :masd.codec.stereotypes: masd::exception
    :END:
 * immutable_primitive                                               :element:
   :PROPERTIES:
+  :custom_id: O31
   :masd.primitive.underlying_element: short
   :masd.codec.stereotypes: masd::primitive, masd::immutable
   :END:
@@ -281,6 +343,9 @@ this is an exception
 Test for a primitive which is also immutable.
 
 * consumer                                                          :element:
+  :PROPERTIES:
+  :custom_id: O32
+  :END:
 
 This type makes use of all primitves in this test model.
 
@@ -330,6 +395,7 @@ This type makes use of all primitves in this test model.
    :END:
 * short_primitive                                                   :element:
   :PROPERTIES:
+  :custom_id: O33
   :masd.primitive.underlying_element: short
   :masd.codec.stereotypes: masd::primitive
   :END:
@@ -338,6 +404,7 @@ Test a primitive with an underlying short.
 
 * long_primitive                                                    :element:
   :PROPERTIES:
+  :custom_id: O34
   :masd.primitive.underlying_element: long
   :masd.codec.stereotypes: masd::primitive
   :END:
@@ -346,6 +413,7 @@ Test a primitive with an underlying long.
 
 * int_primitive                                                     :element:
   :PROPERTIES:
+  :custom_id: O35
   :masd.primitive.underlying_element: int
   :masd.codec.stereotypes: masd::primitive
   :END:
@@ -354,6 +422,7 @@ Test a primitive with an underlying int.
 
 * char_primitive                                                    :element:
   :PROPERTIES:
+  :custom_id: O36
   :masd.primitive.underlying_element: char
   :masd.codec.stereotypes: masd::primitive
   :END:
@@ -362,6 +431,7 @@ Test a primitive with an underlying char.
 
 * uchar_primitive                                                   :element:
   :PROPERTIES:
+  :custom_id: O37
   :masd.primitive.underlying_element: unsigned char
   :masd.codec.stereotypes: masd::primitive
   :END:
@@ -370,6 +440,7 @@ Test a primitive with an underlying unsigned char.
 
 * ulong_primitive                                                   :element:
   :PROPERTIES:
+  :custom_id: O38
   :masd.primitive.underlying_element: unsigned long
   :masd.codec.stereotypes: masd::primitive
   :END:
@@ -378,6 +449,7 @@ Test a primitive with an underlying unsigned long.
 
 * uint_primitive                                                    :element:
   :PROPERTIES:
+  :custom_id: O39
   :masd.primitive.underlying_element: unsigned int
   :masd.codec.stereotypes: masd::primitive
   :END:
@@ -386,6 +458,7 @@ Test a primitive with an underlying unsigned int.
 
 * ushort_primitive                                                  :element:
   :PROPERTIES:
+  :custom_id: O40
   :masd.primitive.underlying_element: unsigned short
   :masd.codec.stereotypes: masd::primitive
   :END:
@@ -394,6 +467,7 @@ Test a primitive with an underlying unsgined short.
 
 * double_primitive                                                  :element:
   :PROPERTIES:
+  :custom_id: O41
   :masd.primitive.underlying_element: double
   :masd.codec.stereotypes: masd::primitive
   :END:
@@ -402,6 +476,7 @@ Test a primitive with an underlying double.
 
 * float_primitive                                                   :element:
   :PROPERTIES:
+  :custom_id: O42
   :masd.primitive.underlying_element: float
   :masd.codec.stereotypes: masd::primitive
   :END:
@@ -410,6 +485,7 @@ Test a primitive with an underlying float.
 
 * bool_primitive                                                    :element:
   :PROPERTIES:
+  :custom_id: O43
   :masd.primitive.underlying_element: bool
   :masd.codec.stereotypes: masd::primitive
   :END:
@@ -418,6 +494,7 @@ Test a primitive with an underlying bool.
 
 * service                                                           :element:
   :PROPERTIES:
+  :custom_id: O44
   :masd.codec.stereotypes: cpp_ref_impl::handcrafted::typeable
   :END:
 
@@ -429,6 +506,7 @@ Type is a service.
    :END:
 * some_type                                                         :element:
   :PROPERTIES:
+  :custom_id: O45
   :masd.cpp.hash.enabled: true
   :masd.cpp.hash.overwrite: false
   :masd.cpp.io.enabled: true
@@ -453,6 +531,7 @@ Type is non-generatable.
    :END:
 * fluent                                                            :element:
   :PROPERTIES:
+  :custom_id: O46
   :masd.codec.stereotypes: masd::fluent
   :END:
 
@@ -472,6 +551,7 @@ Tests the fluent scenario across the different types of properties.
    :END:
 * immutable_zero                                                    :element:
   :PROPERTIES:
+  :custom_id: O47
   :masd.codec.stereotypes: masd::immutable
   :END:
 
@@ -479,6 +559,7 @@ Immutable class with no properties.
 
 * immutable_two                                                     :element:
   :PROPERTIES:
+  :custom_id: O48
   :masd.codec.stereotypes: masd::immutable
   :END:
 ** prop_0                                                         :attribute:
@@ -491,6 +572,7 @@ Immutable class with no properties.
    :END:
 * immutable_one_builtin                                             :element:
   :PROPERTIES:
+  :custom_id: O49
   :masd.codec.stereotypes: masd::immutable
   :END:
 
@@ -502,6 +584,7 @@ Immutable class with a built-in property.
    :END:
 * immutable_one_non_builtin                                         :element:
   :PROPERTIES:
+  :custom_id: O50
   :masd.codec.stereotypes: masd::immutable
   :END:
 
@@ -513,6 +596,7 @@ Immutable class with one pod property
    :END:
 * immutable_four                                                    :element:
   :PROPERTIES:
+  :custom_id: O51
   :masd.codec.stereotypes: masd::immutable
   :END:
 
@@ -536,6 +620,7 @@ Immutable class with non-immutable and immutable pods as properties.
    :END:
 * SimpleObjectTemplate                                              :element:
   :PROPERTIES:
+  :custom_id: O52
   :masd.codec.stereotypes: masd::object_template
   :END:
 
@@ -557,6 +642,7 @@ Prove that includes of types get picked up.
 
 * simple_object_template_instance                                   :element:
   :PROPERTIES:
+  :custom_id: O53
   :masd.codec.stereotypes: SimpleObjectTemplate
   :END:
 
@@ -571,6 +657,7 @@ Property that belongs to class.
 
 * BaseObjectTemplate                                                :element:
   :PROPERTIES:
+  :custom_id: O54
   :masd.codec.stereotypes: masd::object_template
   :END:
 
@@ -585,6 +672,7 @@ Property in the base object template.
 
 * DescendantObjectTemplate                                          :element:
   :PROPERTIES:
+  :custom_id: O55
   :masd.codec.parent: BaseObjectTemplate
   :masd.codec.stereotypes: masd::object_template
   :END:
@@ -597,6 +685,7 @@ This object template inherits from BaseObjectTemplate.
    :END:
 * base_object_template_instance                                     :element:
   :PROPERTIES:
+  :custom_id: O57
   :masd.codec.stereotypes: BaseObjectTemplate
   :END:
 
@@ -604,6 +693,7 @@ This class instantiates the BaseObjectTemplate.
 
 * descendant_object_template_instance                               :element:
   :PROPERTIES:
+  :custom_id: O58
   :masd.codec.stereotypes: DescendantObjectTemplate
   :END:
 
@@ -611,6 +701,7 @@ This class instantiates the DescendantObjectTemplate obje.
 
 * BaseObjectTemplate2                                               :element:
   :PROPERTIES:
+  :custom_id: O59
   :masd.codec.stereotypes: masd::object_template
   :END:
 
@@ -625,6 +716,7 @@ Ensure we're testing header files inclusion.
 
 * FirstChildObjectTemplate                                          :element:
   :PROPERTIES:
+  :custom_id: O60
   :masd.codec.parent: BaseObjectTemplate2
   :masd.codec.stereotypes: masd::object_template
   :END:
@@ -637,6 +729,7 @@ A property
 
 * SecondChildObjectTemplate                                         :element:
   :PROPERTIES:
+  :custom_id: O61
   :masd.codec.parent: BaseObjectTemplate2
   :masd.codec.stereotypes: masd::object_template
   :END:
@@ -652,6 +745,7 @@ Second descendant property
 
 * MultipleParentsObjectTemplate                                     :element:
   :PROPERTIES:
+  :custom_id: O64
   :masd.codec.parent: FirstChildObjectTemplate, SecondChildObjectTemplate
   :masd.codec.stereotypes: masd::object_template
   :END:
@@ -667,6 +761,7 @@ Multiple parents property.
 
 * second_descendant_object_template_instance                        :element:
   :PROPERTIES:
+  :custom_id: O67
   :masd.codec.stereotypes: SecondChildObjectTemplate
   :END:
 
@@ -681,6 +776,7 @@ Property of the class itself.
 
 * multiple_parents_object_template_instance                         :element:
   :PROPERTIES:
+  :custom_id: O68
   :masd.codec.stereotypes: MultipleParentsObjectTemplate
   :END:
 
@@ -695,6 +791,7 @@ Property of the class itself.
 
 * multi_object_template_instance                                    :element:
   :PROPERTIES:
+  :custom_id: O69
   :masd.codec.stereotypes: FirstChildObjectTemplate, SecondChildObjectTemplate
   :END:
 
@@ -709,6 +806,7 @@ Property of class.
 
 * base_with_object_template                                         :element:
   :PROPERTIES:
+  :custom_id: O70
   :masd.codec.stereotypes: SecondChildObjectTemplate
   :END:
 
@@ -716,6 +814,7 @@ Base class that instantiates a derived object template.
 
 * further_inherited                                                 :element:
   :PROPERTIES:
+  :custom_id: O71
   :masd.codec.parent: base_with_object_template
   :masd.codec.stereotypes: MultipleParentsObjectTemplate
   :END:
@@ -724,6 +823,9 @@ Descendant class that instantiates an object template which is a descendant
 of the object template instantiated by the base class.
 
 * value                                                             :element:
+  :PROPERTIES:
+  :custom_id: O73
+  :END:
 
 Type is a value.
 
@@ -732,33 +834,54 @@ Type is a value.
    :masd.codec.type: int
    :END:
 * class_a                                                           :element:
+  :PROPERTIES:
+  :custom_id: O75
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: int
    :END:
 * class_b                                                           :element:
+  :PROPERTIES:
+  :custom_id: O76
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: class_a
    :END:
 * class_c                                                           :element:
+  :PROPERTIES:
+  :custom_id: O77
+  :END:
 * class_d                                                           :element:
+  :PROPERTIES:
+  :custom_id: O79
+  :END:
 * parent_without_members                                            :element:
+  :PROPERTIES:
+  :custom_id: O88
+  :END:
 * child_without_members                                             :element:
   :PROPERTIES:
+  :custom_id: O89
   :masd.codec.parent: parent_without_members
   :END:
 * parent_with_members                                               :element:
+  :PROPERTIES:
+  :custom_id: O91
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: int
    :END:
 * second_child_without_members                                      :element:
   :PROPERTIES:
+  :custom_id: O92
   :masd.codec.parent: parent_with_members
   :END:
 * third_child_with_members                                          :element:
   :PROPERTIES:
+  :custom_id: O94
   :masd.codec.parent: parent_with_members
   :END:
 ** prop_1                                                         :attribute:
@@ -767,10 +890,12 @@ Type is a value.
    :END:
 * child_of_a_child1                                                 :element:
   :PROPERTIES:
+  :custom_id: O96
   :masd.codec.parent: third_child_with_members
   :END:
 * child_of_a_child2                                                 :element:
   :PROPERTIES:
+  :custom_id: O97
   :masd.codec.parent: third_child_with_members
   :END:
 ** prop_2                                                         :attribute:
@@ -779,6 +904,7 @@ Type is a value.
    :END:
 * child_with_members                                                :element:
   :PROPERTIES:
+  :custom_id: O101
   :masd.codec.parent: parent_without_members
   :END:
 ** prop_0                                                         :attribute:
@@ -787,18 +913,22 @@ Type is a value.
    :END:
 * service_interface                                                 :element:
   :PROPERTIES:
+  :custom_id: O103
   :masd.codec.stereotypes: cpp_ref_impl::handcrafted::typeable
   :END:
 * a_service                                                         :element:
   :PROPERTIES:
+  :custom_id: O104
   :masd.codec.stereotypes: cpp_ref_impl::handcrafted::typeable
   :END:
 * base                                                              :element:
   :PROPERTIES:
+  :custom_id: O106
   :masd.codec.stereotypes: masd::visitable
   :END:
 * descendant2                                                       :element:
   :PROPERTIES:
+  :custom_id: O107
   :masd.codec.parent: base
   :END:
 ** prop_0                                                         :attribute:
@@ -807,10 +937,12 @@ Type is a value.
    :END:
 * descendant1                                                       :element:
   :PROPERTIES:
+  :custom_id: O109
   :masd.codec.parent: base
   :END:
 * descendant3                                                       :element:
   :PROPERTIES:
+  :custom_id: O111
   :masd.codec.parent: descendant1
   :END:
 ** prop_0                                                         :attribute:
@@ -818,6 +950,9 @@ Type is a value.
    :masd.codec.type: bool
    :END:
 * move_ctor_base                                                    :element:
+  :PROPERTIES:
+  :custom_id: O113
+  :END:
 
 Base class for scenario that tests code generated move contructors.
 
@@ -830,6 +965,7 @@ Force manual move constructor.
 
 * move_ctor_descendant                                              :element:
   :PROPERTIES:
+  :custom_id: O114
   :masd.codec.parent: move_ctor_base
   :END:
 
@@ -844,6 +980,7 @@ Force manual move constructor.
 
 * move_ctor_empty_descendant                                        :element:
   :PROPERTIES:
+  :custom_id: O115
   :masd.codec.parent: move_ctor_base
   :END:
 
@@ -851,6 +988,7 @@ Descendant class for scenario that tests code generated move contructors.
 
 * child_via_settings                                                :element:
   :PROPERTIES:
+  :custom_id: O118
   :masd.generalization.parent: parent_with_members
   :END:
 ** prop_1                                                         :attribute:
@@ -859,6 +997,7 @@ Descendant class for scenario that tests code generated move contructors.
    :END:
 * non_final_leaf                                                    :element:
   :PROPERTIES:
+  :custom_id: O119
   :masd.generalization.is_final: false
   :masd.codec.parent: descendant1
   :END:
@@ -868,6 +1007,7 @@ Descendant class for scenario that tests code generated move contructors.
    :END:
 * non_final_orphan                                                  :element:
   :PROPERTIES:
+  :custom_id: O121
   :masd.generalization.is_final: false
   :END:
 ** prop_0                                                         :attribute:
@@ -875,13 +1015,20 @@ Descendant class for scenario that tests code generated move contructors.
    :masd.codec.type: int
    :END:
 * package_6                                                          :module:
+  :PROPERTIES:
+  :custom_id: O122
+  :END:
 ** parent                                                           :element:
+   :PROPERTIES:
+   :custom_id: O123
+   :END:
 *** prop_0                                                        :attribute:
     :PROPERTIES:
     :masd.codec.type: unsigned int
     :END:
 ** child                                                            :element:
    :PROPERTIES:
+   :custom_id: O124
    :masd.codec.parent: package_6::parent
    :END:
 *** prop_1                                                        :attribute:
@@ -890,6 +1037,7 @@ Descendant class for scenario that tests code generated move contructors.
     :END:
 ** child_via_settings                                               :element:
    :PROPERTIES:
+   :custom_id: O125
    :masd.generalization.parent: package_6::parent
    :END:
 *** prop_1                                                        :attribute:
@@ -897,8 +1045,12 @@ Descendant class for scenario that tests code generated move contructors.
     :masd.codec.type: int
     :END:
 * package_8                                                          :module:
+  :PROPERTIES:
+  :custom_id: O128
+  :END:
 ** child                                                            :element:
    :PROPERTIES:
+   :custom_id: O130
    :masd.codec.parent: package_7::parent
    :END:
 *** prop_1                                                        :attribute:
@@ -907,6 +1059,7 @@ Descendant class for scenario that tests code generated move contructors.
     :END:
 ** child_via_settings                                               :element:
    :PROPERTIES:
+   :custom_id: O132
    :masd.generalization.parent: package_7::parent
    :END:
 *** prop_1                                                        :attribute:
@@ -914,14 +1067,24 @@ Descendant class for scenario that tests code generated move contructors.
     :masd.codec.type: int
     :END:
 * package_7                                                          :module:
+  :PROPERTIES:
+  :custom_id: O127
+  :END:
 ** parent                                                           :element:
+   :PROPERTIES:
+   :custom_id: O129
+   :END:
 *** prop_0                                                        :attribute:
     :PROPERTIES:
     :masd.codec.type: int
     :END:
 * package_9                                                          :module:
+  :PROPERTIES:
+  :custom_id: O133
+  :END:
 ** child_via_settings                                               :element:
    :PROPERTIES:
+   :custom_id: O134
    :masd.generalization.parent: parent_outside
    :END:
 *** prop_1                                                        :attribute:
@@ -930,6 +1093,7 @@ Descendant class for scenario that tests code generated move contructors.
     :END:
 ** child                                                            :element:
    :PROPERTIES:
+   :custom_id: O135
    :masd.codec.parent: parent_outside
    :END:
 *** prop_1                                                        :attribute:
@@ -937,14 +1101,24 @@ Descendant class for scenario that tests code generated move contructors.
     :masd.codec.type: int
     :END:
 * parent_outside                                                    :element:
+  :PROPERTIES:
+  :custom_id: O100
+  :END:
 ** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: int
    :END:
 * package_0                                                          :module:
+  :PROPERTIES:
+  :custom_id: O137
+  :END:
 * package_10                                                         :module:
+  :PROPERTIES:
+  :custom_id: O141
+  :END:
 ** ObjectTemplateInAPackage                                         :element:
    :PROPERTIES:
+   :custom_id: O142
    :masd.codec.stereotypes: masd::object_template
    :END:
 *** prop_0                                                        :attribute:
@@ -953,14 +1127,17 @@ Descendant class for scenario that tests code generated move contructors.
     :END:
 ** consume_object_template                                          :element:
    :PROPERTIES:
+   :custom_id: O143
    :masd.codec.stereotypes: ObjectTemplateInAPackage
    :END:
 * registrar                                                         :element:
   :PROPERTIES:
+  :custom_id: O146
   :masd.codec.stereotypes: masd::serialization::type_registrar
   :END:
 * project                                                           :element:
   :PROPERTIES:
+  :custom_id: O147
   :masd.codec.stereotypes: masd::visual_studio::project
   :END:
 ** guid                                                           :attribute:
@@ -969,6 +1146,7 @@ Descendant class for scenario that tests code generated move contructors.
    :END:
 * solution                                                          :element:
   :PROPERTIES:
+  :custom_id: O148
   :masd.codec.stereotypes: masd::visual_studio::solution
   :END:
 ** guid                                                           :attribute:
@@ -977,9 +1155,11 @@ Descendant class for scenario that tests code generated move contructors.
    :END:
 * main                                                              :element:
   :PROPERTIES:
+  :custom_id: O149
   :masd.codec.stereotypes: masd::entry_point, cpp_ref_impl::untypable
   :END:
 * CMakeLists                                                        :element:
   :PROPERTIES:
+  :custom_id: O150
   :masd.codec.stereotypes: masd::build::cmakelists
   :END:

@@ -23,26 +23,35 @@ as possible, so we can evaluate how they work together.
 
 * palette_test_two_one                                              :element:
   :PROPERTIES:
+  :custom_id: O2
   :masd.codec.stereotypes: cpp_ref_impl::handcrafted::typeable
   :END:
 * palette_test_two_two                                              :element:
   :PROPERTIES:
+  :custom_id: O3
   :masd.codec.stereotypes: masd::cpp::header_only
   :END:
 * palette_test_two_three                                            :element:
   :PROPERTIES:
+  :custom_id: O4
   :masd.codec.stereotypes: masd::cpp::implementation_only
   :END:
 * package                                                            :module:
+  :PROPERTIES:
+  :custom_id: O1
+  :END:
 ** palette_test_two_one                                             :element:
    :PROPERTIES:
+   :custom_id: O5
    :masd.codec.stereotypes: cpp_ref_impl::handcrafted::typeable
    :END:
 ** palette_test_two_two                                             :element:
    :PROPERTIES:
+   :custom_id: O6
    :masd.codec.stereotypes: masd::cpp::header_only
    :END:
 ** palette_test_two_three                                           :element:
    :PROPERTIES:
+   :custom_id: O7
    :masd.codec.stereotypes: masd::cpp::implementation_only
    :END:

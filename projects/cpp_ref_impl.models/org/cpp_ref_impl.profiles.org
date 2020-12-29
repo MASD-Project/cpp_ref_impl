@@ -21,6 +21,7 @@ space; keep it technical space agnostic.
 
 * base                                                               :module:
   :PROPERTIES:
+  :custom_id: O1
   :masd.codec.dia.comment: true
   :END:
 
@@ -30,6 +31,7 @@ other layers can then configure features.
 
 ** decoration                                                       :element:
    :PROPERTIES:
+   :custom_id: O3
    :masd.variability.binding_point: global
    :masd.variability.key_prefix: masd.decoration
    :masd.codec.stereotypes: masd::variability::profile
@@ -55,6 +57,7 @@ Top-level configuration for C++ Reference Model.
     :END:
 ** disable_all_facets                                               :element:
    :PROPERTIES:
+   :custom_id: O5
    :masd.variability.binding_point: global
    :masd.codec.parent: base::decoration
    :masd.codec.stereotypes: masd::variability::profile_template
@@ -66,6 +69,7 @@ Top-level configuration for C++ Reference Model.
     :END:
 ** enable_cmake                                                     :element:
    :PROPERTIES:
+   :custom_id: O6
    :masd.variability.binding_point: global
    :masd.variability.key_prefix: masd.cpp.build
    :masd.codec.parent: base::disable_all_facets
@@ -77,6 +81,7 @@ Top-level configuration for C++ Reference Model.
     :END:
 ** enable_cmake_types                                               :element:
    :PROPERTIES:
+   :custom_id: O4
    :masd.variability.binding_point: global
    :masd.variability.key_prefix: masd.cpp
    :masd.codec.parent: base::enable_cmake
@@ -88,6 +93,7 @@ Top-level configuration for C++ Reference Model.
     :END:
 ** enable_cmake_types_serialization                                 :element:
    :PROPERTIES:
+   :custom_id: O10
    :masd.variability.binding_point: global
    :masd.variability.key_prefix: masd.cpp
    :masd.codec.parent: base::enable_cmake_types
@@ -99,6 +105,7 @@ Top-level configuration for C++ Reference Model.
     :END:
 ** enable_cmake_types_hash                                          :element:
    :PROPERTIES:
+   :custom_id: O11
    :masd.variability.binding_point: global
    :masd.variability.key_prefix: masd.cpp
    :masd.codec.parent: base::enable_cmake_types
@@ -110,6 +117,7 @@ Top-level configuration for C++ Reference Model.
     :END:
 ** enable_cmake_types_io                                            :element:
    :PROPERTIES:
+   :custom_id: O12
    :masd.variability.binding_point: global
    :masd.variability.key_prefix: masd.cpp
    :masd.codec.parent: base::enable_cmake_types
@@ -121,6 +129,7 @@ Top-level configuration for C++ Reference Model.
     :END:
 ** enable_all_facets                                                :element:
    :PROPERTIES:
+   :custom_id: O16
    :masd.variability.binding_point: global
    :masd.variability.stereotype: default.root_module2
    :masd.codec.parent: base::decoration
@@ -133,6 +142,7 @@ Top-level configuration for C++ Reference Model.
     :END:
 ** disable_facet_directories                                        :element:
    :PROPERTIES:
+   :custom_id: O18
    :masd.variability.binding_point: global
    :masd.variability.key_prefix: masd.cpp
    :masd.codec.parent: base::enable_all_facets
@@ -152,6 +162,7 @@ Top-level configuration for C++ Reference Model.
     :END:
 ** disable_cmake                                                    :element:
    :PROPERTIES:
+   :custom_id: O19
    :masd.variability.binding_point: global
    :masd.variability.key_prefix: masd.cpp
    :masd.codec.parent: base::enable_all_facets
@@ -167,6 +178,7 @@ Top-level configuration for C++ Reference Model.
     :END:
 ** disable_odb                                                      :element:
    :PROPERTIES:
+   :custom_id: O17
    :masd.variability.binding_point: global
    :masd.variability.key_prefix: masd.cpp
    :masd.codec.parent: base::enable_all_facets
@@ -182,6 +194,7 @@ Top-level configuration for C++ Reference Model.
     :END:
 ** disable_odb_cmake                                                :element:
    :PROPERTIES:
+   :custom_id: O24
    :masd.variability.binding_point: global
    :masd.codec.parent: base::disable_odb
    :masd.codec.stereotypes: masd::variability::profile
@@ -191,8 +204,12 @@ Top-level configuration for C++ Reference Model.
     :masd.codec.value: false
     :END:
 * composable                                                         :module:
+  :PROPERTIES:
+  :custom_id: O2
+  :END:
 ** handcrafted                                                      :element:
    :PROPERTIES:
+   :custom_id: O27
    :masd.variability.binding_point: element
    :masd.codec.stereotypes: masd::variability::profile
    :END:
@@ -205,6 +222,7 @@ Base profile for model elements that are manually generated.
     :END:
 ** handcrafted_typeable                                             :element:
    :PROPERTIES:
+   :custom_id: O28
    :masd.variability.binding_point: element
    :masd.variability.stereotype: cpp_ref_impl::handcrafted::typeable
    :masd.variability.key_prefix: masd.cpp
@@ -228,6 +246,7 @@ Configuration for model elements that are generated manually by the user.
     :END:
 ** untypable                                                        :element:
    :PROPERTIES:
+   :custom_id: O32
    :masd.variability.binding_point: element
    :masd.variability.stereotype: cpp_ref_impl::untypable
    :masd.variability.key_prefix: masd.cpp
@@ -242,6 +261,7 @@ The element only has the testing facet enabled.
     :END:
 * basic                                                             :element:
   :PROPERTIES:
+  :custom_id: O30
   :masd.codec.stereotypes: masd::decoration::generation_marker
   :END:
 ** add_date_time                                                  :attribute:
@@ -262,6 +282,7 @@ This is a code-generated file.
 
 * verbose                                                           :element:
   :PROPERTIES:
+  :custom_id: O31
   :masd.codec.stereotypes: masd::decoration::generation_marker
   :END:
 ** add_date_time                                                  :attribute:
