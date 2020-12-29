@@ -1,5 +1,6 @@
 #+title: cpp_ref_impl.out_of_sync
 #+options: <:nil c:nil todo:nil ^:nil d:nil date:nil author:nil
+#+tags: { element(e) attribute(a) module(m) }
 :PROPERTIES:
 :masd.codec.dia.comment: true
 :masd.codec.model_modules: cpp_ref_impl.out_of_sync
@@ -27,26 +28,26 @@ If you need to regenerate this model, you need to remove the attribute
 changed_property in class changed_generated and delete the class
 handcrafted_new.
 
-* unchanged_generated                                          :masd_element:
+* unchanged_generated                                               :element:
 
 This class has not changed.
 
-** public_attribute                                          :masd_attribute:
+** public_attribute                                               :attribute:
    :PROPERTIES:
    :masd.codec.type: int
    :END:
-** private_attribute                                         :masd_attribute:
+** private_attribute                                              :attribute:
    :PROPERTIES:
    :masd.codec.type: int
    :END:
-* changed_handcrafted                                          :masd_element:
+* changed_handcrafted                                               :element:
   :PROPERTIES:
   :masd.codec.stereotypes: cpp_ref_impl::handcrafted::typeable
   :END:
 
 This class is handcrafted. A new attribute was added after initial generation.
 
-** changed_property                                          :masd_attribute:
+** changed_property                                               :attribute:
    :PROPERTIES:
    :masd.codec.type: int
    :END:
@@ -54,15 +55,15 @@ This class is handcrafted. A new attribute was added after initial generation.
 This property was added after the initial generation. It should not appear in code
 generation. If it does, the overwrite flag for handcrafted is not working.
 
-* changed_generated                                            :masd_element:
+* changed_generated                                                 :element:
 
 This class has a new attribute.
 
-** public_attribute                                          :masd_attribute:
+** public_attribute                                               :attribute:
    :PROPERTIES:
    :masd.codec.type: int
    :END:
-** changed_property                                          :masd_attribute:
+** changed_property                                               :attribute:
    :PROPERTIES:
    :masd.codec.type: int
    :END:
@@ -70,25 +71,25 @@ This class has a new attribute.
 This is a new property and has not yet been generated. Do not check in the
 changes.
 
-* unchanged_handcrafted                                        :masd_element:
+* unchanged_handcrafted                                             :element:
   :PROPERTIES:
   :masd.codec.stereotypes: cpp_ref_impl::handcrafted::typeable
   :END:
 
 This class is handcrafted.
 
-* handcrafted_new                                              :masd_element:
+* handcrafted_new                                                   :element:
   :PROPERTIES:
   :masd.codec.stereotypes: cpp_ref_impl::handcrafted::typeable
   :END:
 
 This class is handcrafted but not yet generated. If you see it in git, do not check it in.
 
-* main                                                         :masd_element:
+* main                                                              :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::entry_point, cpp_ref_impl::untypable
   :END:
-* CMakeLists                                                   :masd_element:
+* CMakeLists                                                        :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::build::cmakelists
   :END:

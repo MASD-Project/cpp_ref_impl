@@ -1,5 +1,6 @@
 #+title: cpp_ref_impl.cpp_98
 #+options: <:nil c:nil todo:nil ^:nil d:nil date:nil author:nil
+#+tags: { element(e) attribute(a) module(m) }
 :PROPERTIES:
 :masd.codec.dia.comment: true
 :masd.codec.model_modules: cpp_ref_impl.cpp_98
@@ -20,63 +21,63 @@
 
 Tests support for C++ 98.
 
-* package1                                                      :masd_module:
+* package1                                                           :module:
   :PROPERTIES:
   :masd.codec.dia.comment: true
   :END:
 
 Test comment.
 
-** first_class                                                 :masd_element:
-*** public_attribute                                         :masd_attribute:
+** first_class                                                      :element:
+*** public_attribute                                              :attribute:
     :PROPERTIES:
     :masd.codec.type: int
     :END:
-*** private_attribute                                        :masd_attribute:
+*** private_attribute                                             :attribute:
     :PROPERTIES:
     :masd.codec.type: int
     :END:
-* parent                                                       :masd_element:
-** prop_0                                                    :masd_attribute:
+* parent                                                            :element:
+** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: int
    :END:
-* child                                                        :masd_element:
+* child                                                             :element:
   :PROPERTIES:
   :masd.codec.parent: parent
   :END:
-** prop_1                                                    :masd_attribute:
+** prop_1                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: int
    :END:
-* no_default_ctor                                              :masd_element:
+* no_default_ctor                                                   :element:
 
 This class does not require a default constructor due to using simple types.
 
-** prop_0                                                    :masd_attribute:
+** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: std::string
    :END:
-* no_properties                                                :masd_element:
-* an_enumeration                                               :masd_element:
+* no_properties                                                     :element:
+* an_enumeration                                                    :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::enumeration
   :END:
-** first                                                     :masd_attribute:
-** second                                                    :masd_attribute:
-* an_exception                                                 :masd_element:
+** first                                                          :attribute:
+** second                                                         :attribute:
+* an_exception                                                      :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::exception
   :END:
-* registrar                                                    :masd_element:
+* registrar                                                         :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::serialization::type_registrar
   :END:
-* main                                                         :masd_element:
+* main                                                              :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::entry_point, cpp_ref_impl::untypable
   :END:
-* CMakeLists                                                   :masd_element:
+* CMakeLists                                                        :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::build::cmakelists
   :END:

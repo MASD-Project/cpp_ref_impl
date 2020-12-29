@@ -1,5 +1,6 @@
 #+title: cpp_ref_impl.palette
 #+options: <:nil c:nil todo:nil ^:nil d:nil date:nil author:nil
+#+tags: { element(e) attribute(a) module(m) }
 :PROPERTIES:
 :masd.codec.dia.comment: true
 :masd.codec.reference: cpp.builtins
@@ -20,28 +21,28 @@ it looks good, then run it against all other dogen models.
 We should try to keep all elements in one screen as much
 as possible, so we can evaluate how they work together.
 
-* palette_test_two_one                                         :masd_element:
+* palette_test_two_one                                              :element:
   :PROPERTIES:
   :masd.codec.stereotypes: cpp_ref_impl::handcrafted::typeable
   :END:
-* palette_test_two_two                                         :masd_element:
+* palette_test_two_two                                              :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::cpp::header_only
   :END:
-* palette_test_two_three                                       :masd_element:
+* palette_test_two_three                                            :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::cpp::implementation_only
   :END:
-* package                                                       :masd_module:
-** palette_test_two_one                                        :masd_element:
+* package                                                            :module:
+** palette_test_two_one                                             :element:
    :PROPERTIES:
    :masd.codec.stereotypes: cpp_ref_impl::handcrafted::typeable
    :END:
-** palette_test_two_two                                        :masd_element:
+** palette_test_two_two                                             :element:
    :PROPERTIES:
    :masd.codec.stereotypes: masd::cpp::header_only
    :END:
-** palette_test_two_three                                      :masd_element:
+** palette_test_two_three                                           :element:
    :PROPERTIES:
    :masd.codec.stereotypes: masd::cpp::implementation_only
    :END:

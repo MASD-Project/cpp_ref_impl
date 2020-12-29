@@ -1,5 +1,6 @@
 #+title: cpp_ref_impl.northwind
 #+options: <:nil c:nil todo:nil ^:nil d:nil date:nil author:nil
+#+tags: { element(e) attribute(a) module(m) }
 :PROPERTIES:
 :masd.codec.dia.comment: true
 :masd.codec.model_modules: cpp_ref_impl.northwind
@@ -28,488 +29,488 @@ The Northwind model is a "transliteration" of Microsoft's
 Northwind database, provided as a sample for Access and SQL Server.
 It's objective is to test Dogen integration with ODB.
 
-* product_id                                                   :masd_element:
+* product_id                                                        :element:
   :PROPERTIES:
   :masd.primitive.underlying_element: int
   :masd.codec.stereotypes: masd::orm::value, masd::primitive
   :END:
-* products                                                     :masd_element:
+* products                                                          :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::orm::object
   :END:
-** product_id                                                :masd_attribute:
+** product_id                                                     :attribute:
    :PROPERTIES:
    :masd.orm.is_primary_key: true
    :masd.codec.type: product_id
    :END:
-** product_name                                              :masd_attribute:
+** product_name                                                   :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: false
    :masd.codec.type: std::string
    :END:
-** supplier_id                                               :masd_attribute:
+** supplier_id                                                    :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: supplier_id
    :END:
-** category_id                                               :masd_attribute:
+** category_id                                                    :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: category_id
    :END:
-** quantity_per_unit                                         :masd_attribute:
+** quantity_per_unit                                              :attribute:
    :PROPERTIES:
    :masd.codec.type: std::string
    :END:
-** unit_price                                                :masd_attribute:
+** unit_price                                                     :attribute:
    :PROPERTIES:
    :masd.codec.type: double
    :END:
-** units_in_stock                                            :masd_attribute:
+** units_in_stock                                                 :attribute:
    :PROPERTIES:
    :masd.codec.type: int
    :END:
-** units_in_order                                            :masd_attribute:
+** units_in_order                                                 :attribute:
    :PROPERTIES:
    :masd.codec.type: int
    :END:
-** reorder_level                                             :masd_attribute:
+** reorder_level                                                  :attribute:
    :PROPERTIES:
    :masd.codec.type: int
    :END:
-** discontinued                                              :masd_attribute:
+** discontinued                                                   :attribute:
    :PROPERTIES:
    :masd.codec.type: bool
    :END:
-* supplier_id                                                  :masd_element:
+* supplier_id                                                       :element:
   :PROPERTIES:
   :masd.primitive.underlying_element: int
   :masd.codec.stereotypes: masd::orm::value, masd::primitive
   :END:
-* suppliers                                                    :masd_element:
+* suppliers                                                         :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::orm::object
   :END:
-** supplier_id                                               :masd_attribute:
+** supplier_id                                                    :attribute:
    :PROPERTIES:
    :masd.orm.is_primary_key: true
    :masd.codec.type: supplier_id
    :END:
-** company_name                                              :masd_attribute:
+** company_name                                                   :attribute:
    :PROPERTIES:
    :masd.codec.type: std::string
    :END:
-** contact_name                                              :masd_attribute:
-   :PROPERTIES:
-   :masd.orm.is_nullable: true
-   :masd.codec.type: std::string
-   :END:
-** contact_title                                             :masd_attribute:
+** contact_name                                                   :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** address                                                   :masd_attribute:
+** contact_title                                                  :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** city                                                      :masd_attribute:
+** address                                                        :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** region                                                    :masd_attribute:
+** city                                                           :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** postal_code                                               :masd_attribute:
+** region                                                         :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** country                                                   :masd_attribute:
+** postal_code                                                    :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** phone                                                     :masd_attribute:
+** country                                                        :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** fax                                                       :masd_attribute:
+** phone                                                          :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** home_page                                                 :masd_attribute:
+** fax                                                            :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-* category_id                                                  :masd_element:
+** home_page                                                      :attribute:
+   :PROPERTIES:
+   :masd.orm.is_nullable: true
+   :masd.codec.type: std::string
+   :END:
+* category_id                                                       :element:
   :PROPERTIES:
   :masd.primitive.underlying_element: int
   :masd.codec.stereotypes: masd::orm::value, masd::primitive
   :END:
-* order_details                                                :masd_element:
+* order_details                                                     :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::orm::object
   :END:
-** order_details_key                                         :masd_attribute:
+** order_details_key                                              :attribute:
    :PROPERTIES:
    :masd.orm.is_primary_key: true
    :masd.orm.is_composite: true
    :masd.codec.type: order_details_key
    :END:
-** unit_price                                                :masd_attribute:
+** unit_price                                                     :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: false
    :masd.codec.type: double
    :END:
-** quantity                                                  :masd_attribute:
+** quantity                                                       :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: false
    :masd.codec.type: int
    :END:
-** discount                                                  :masd_attribute:
+** discount                                                       :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: false
    :masd.codec.type: double
    :END:
-* order_details_key                                            :masd_element:
+* order_details_key                                                 :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::orm::value
   :END:
-** order_id                                                  :masd_attribute:
+** order_id                                                       :attribute:
    :PROPERTIES:
    :masd.codec.type: order_id
    :END:
-** product_id                                                :masd_attribute:
+** product_id                                                     :attribute:
    :PROPERTIES:
    :masd.codec.type: product_id
    :END:
-* orders                                                       :masd_element:
+* orders                                                            :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::orm::object
   :END:
-** order_id                                                  :masd_attribute:
+** order_id                                                       :attribute:
    :PROPERTIES:
    :masd.orm.is_primary_key: true
    :masd.codec.type: order_id
    :END:
-** customer_id                                               :masd_attribute:
+** customer_id                                                    :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: customer_id
    :END:
-** employee_id                                               :masd_attribute:
+** employee_id                                                    :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: employee_id
    :END:
-** order_date                                                :masd_attribute:
+** order_date                                                     :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: boost::gregorian::date
    :END:
-** required_date                                             :masd_attribute:
+** required_date                                                  :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: boost::gregorian::date
    :END:
-** shipped_date                                              :masd_attribute:
+** shipped_date                                                   :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: boost::gregorian::date
    :END:
-** ship_via                                                  :masd_attribute:
+** ship_via                                                       :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: int
    :END:
-** freight                                                   :masd_attribute:
+** freight                                                        :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: double
    :END:
-** ship_name                                                 :masd_attribute:
+** ship_name                                                      :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** ship_address                                              :masd_attribute:
+** ship_address                                                   :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** ship_city                                                 :masd_attribute:
+** ship_city                                                      :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** ship_region                                               :masd_attribute:
+** ship_region                                                    :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** ship_postal_code                                          :masd_attribute:
+** ship_postal_code                                               :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** ship_country                                              :masd_attribute:
+** ship_country                                                   :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-* order_id                                                     :masd_element:
+* order_id                                                          :element:
   :PROPERTIES:
   :masd.primitive.underlying_element: int
   :masd.codec.stereotypes: masd::orm::value, masd::primitive
   :END:
-* employee_id                                                  :masd_element:
+* employee_id                                                       :element:
   :PROPERTIES:
   :masd.primitive.underlying_element: int
   :masd.codec.stereotypes: masd::orm::value, masd::primitive
   :END:
-* categories                                                   :masd_element:
+* categories                                                        :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::orm::object
   :END:
-** category_id                                               :masd_attribute:
+** category_id                                                    :attribute:
    :PROPERTIES:
    :masd.orm.is_primary_key: true
    :masd.codec.type: category_id
    :END:
-** category_name                                             :masd_attribute:
+** category_name                                                  :attribute:
    :PROPERTIES:
    :masd.codec.type: std::string
    :END:
-** description                                               :masd_attribute:
-   :PROPERTIES:
-   :masd.orm.is_nullable: true
-   :masd.codec.type: std::string
-   :END:
-** picture                                                   :masd_attribute:
+** description                                                    :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-* employees                                                    :masd_element:
+** picture                                                        :attribute:
+   :PROPERTIES:
+   :masd.orm.is_nullable: true
+   :masd.codec.type: std::string
+   :END:
+* employees                                                         :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::orm::object
   :END:
-** employee_id                                               :masd_attribute:
+** employee_id                                                    :attribute:
    :PROPERTIES:
    :masd.orm.is_primary_key: true
    :masd.codec.type: employee_id
    :END:
-** last_name                                                 :masd_attribute:
+** last_name                                                      :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: false
    :masd.orm.odb_pragma: column("LASTNAME")
    :masd.codec.type: std::string
    :END:
-** first_name                                                :masd_attribute:
+** first_name                                                     :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: false
    :masd.orm.odb_pragma: column("FIRSTNAME")
    :masd.codec.type: std::string
    :END:
-** title                                                     :masd_attribute:
+** title                                                          :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** title_of_courtesy                                         :masd_attribute:
+** title_of_courtesy                                              :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** birth_date                                                :masd_attribute:
+** birth_date                                                     :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.orm.odb_pragma: column("BIRTHDATE")
    :masd.codec.type: boost::gregorian::date
    :END:
-** hire_date                                                 :masd_attribute:
+** hire_date                                                      :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.orm.odb_pragma: column("HIREDATE")
    :masd.codec.type: boost::gregorian::date
    :END:
-** address                                                   :masd_attribute:
+** address                                                        :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** city                                                      :masd_attribute:
+** city                                                           :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** region                                                    :masd_attribute:
+** region                                                         :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** postal_code                                               :masd_attribute:
+** postal_code                                                    :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** country                                                   :masd_attribute:
+** country                                                        :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** home_phone                                                :masd_attribute:
+** home_phone                                                     :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** extension                                                 :masd_attribute:
+** extension                                                      :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** photo                                                     :masd_attribute:
+** photo                                                          :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** notes                                                     :masd_attribute:
+** notes                                                          :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** reports_to                                                :masd_attribute:
+** reports_to                                                     :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: employee_id
    :END:
-* shipper_id                                                   :masd_element:
+* shipper_id                                                        :element:
   :PROPERTIES:
   :masd.primitive.underlying_element: int
   :masd.codec.stereotypes: masd::orm::value, masd::primitive
   :END:
-* shippers                                                     :masd_element:
+* shippers                                                          :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::orm::object
   :END:
-** shipper_id                                                :masd_attribute:
+** shipper_id                                                     :attribute:
    :PROPERTIES:
    :masd.orm.is_primary_key: true
    :masd.codec.type: shipper_id
    :END:
-** company_name                                              :masd_attribute:
+** company_name                                                   :attribute:
    :PROPERTIES:
    :masd.codec.type: std::string
    :END:
-** phone                                                     :masd_attribute:
+** phone                                                          :attribute:
    :PROPERTIES:
    :masd.codec.type: std::string
    :END:
-* customer_id                                                  :masd_element:
+* customer_id                                                       :element:
   :PROPERTIES:
   :masd.primitive.underlying_element: int
   :masd.codec.stereotypes: masd::orm::value, masd::primitive
   :END:
-* customers                                                    :masd_element:
+* customers                                                         :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::orm::object
   :END:
-** customer_id                                               :masd_attribute:
+** customer_id                                                    :attribute:
    :PROPERTIES:
    :masd.orm.is_primary_key: true
    :masd.codec.type: customer_id
    :END:
-** customer_code                                             :masd_attribute:
+** customer_code                                                  :attribute:
    :PROPERTIES:
    :masd.codec.type: std::string
    :END:
-** company_name                                              :masd_attribute:
+** company_name                                                   :attribute:
    :PROPERTIES:
    :masd.codec.type: std::string
    :END:
-** contact_name                                              :masd_attribute:
-   :PROPERTIES:
-   :masd.orm.is_nullable: true
-   :masd.codec.type: std::string
-   :END:
-** contact_title                                             :masd_attribute:
+** contact_name                                                   :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** address                                                   :masd_attribute:
+** contact_title                                                  :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** city                                                      :masd_attribute:
+** address                                                        :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** region                                                    :masd_attribute:
+** city                                                           :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** postal_code                                               :masd_attribute:
+** region                                                         :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** country                                                   :masd_attribute:
+** postal_code                                                    :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** phone                                                     :masd_attribute:
+** country                                                        :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-** fax                                                       :masd_attribute:
+** phone                                                          :attribute:
    :PROPERTIES:
    :masd.orm.is_nullable: true
    :masd.codec.type: std::string
    :END:
-* package                                                       :masd_module:
-** class_0                                                     :masd_element:
+** fax                                                            :attribute:
+   :PROPERTIES:
+   :masd.orm.is_nullable: true
+   :masd.codec.type: std::string
+   :END:
+* package                                                            :module:
+** class_0                                                          :element:
    :PROPERTIES:
    :masd.codec.stereotypes: masd::orm::object
    :END:
-*** prop_0                                                   :masd_attribute:
+*** prop_0                                                        :attribute:
     :PROPERTIES:
     :masd.codec.type: int
     :END:
-* non_orm_class                                                :masd_element:
+* non_orm_class                                                     :element:
 
 test the ODB behaviour for non-ORM classes.
 
-** prop_0                                                    :masd_attribute:
+** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: int
    :END:
-* main                                                         :masd_element:
+* main                                                              :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::entry_point, cpp_ref_impl::untypable
   :END:
-* common                                                       :masd_element:
+* common                                                            :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::orm::common_odb_options
   :END:
-* msbuild                                                      :masd_element:
+* msbuild                                                           :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::visual_studio::msbuild_targets
   :END:
-* CMakeLists                                                   :masd_element:
+* CMakeLists                                                        :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::build::cmakelists
   :END:

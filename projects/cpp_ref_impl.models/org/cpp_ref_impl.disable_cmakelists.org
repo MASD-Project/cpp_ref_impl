@@ -1,5 +1,6 @@
 #+title: cpp_ref_impl.disable_cmakelists
 #+options: <:nil c:nil todo:nil ^:nil d:nil date:nil author:nil
+#+tags: { element(e) attribute(a) module(m) }
 :PROPERTIES:
 :masd.codec.dia.comment: true
 :masd.codec.model_modules: cpp_ref_impl.disable_cmakelists
@@ -16,17 +17,17 @@
 :masd.csharp.enabled: false
 :masd.variability.profile: cpp_ref_impl.profiles.base.disable_cmake
 :END:
-* package1                                                      :masd_module:
-** first_class                                                 :masd_element:
-*** public_attribute                                         :masd_attribute:
+* package1                                                           :module:
+** first_class                                                      :element:
+*** public_attribute                                              :attribute:
     :PROPERTIES:
     :masd.codec.type: int
     :END:
-*** private_attribute                                        :masd_attribute:
+*** private_attribute                                             :attribute:
     :PROPERTIES:
     :masd.codec.type: int
     :END:
-* main                                                         :masd_element:
+* main                                                              :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::entry_point, cpp_ref_impl::untypable
   :END:

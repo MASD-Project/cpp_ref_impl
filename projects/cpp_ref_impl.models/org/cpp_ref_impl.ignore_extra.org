@@ -1,5 +1,6 @@
 #+title: cpp_ref_impl.ignore_extra
 #+options: <:nil c:nil todo:nil ^:nil d:nil date:nil author:nil
+#+tags: { element(e) attribute(a) module(m) }
 :PROPERTIES:
 :masd.codec.dia.comment: true
 :masd.codec.model_modules: cpp_ref_impl.ignore_extra
@@ -22,19 +23,19 @@ This model is designed to test extra files. These are named:
 - unexpected_remove: files we want to delete, but will ignore because
   delete extra files is set to false.
 
-* one_property                                                 :masd_element:
+* one_property                                                      :element:
 
 This class has not changed.
 
-** public_attribute                                          :masd_attribute:
+** public_attribute                                               :attribute:
    :PROPERTIES:
    :masd.codec.type: int
    :END:
-* main                                                         :masd_element:
+* main                                                              :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::entry_point, cpp_ref_impl::untypable
   :END:
-* CMakeLists                                                   :masd_element:
+* CMakeLists                                                        :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::build::cmakelists
   :END:

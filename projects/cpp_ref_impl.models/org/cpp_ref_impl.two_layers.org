@@ -1,5 +1,6 @@
 #+title: cpp_ref_impl.two_layers
 #+options: <:nil c:nil todo:nil ^:nil d:nil date:nil author:nil
+#+tags: { element(e) attribute(a) module(m) }
 :PROPERTIES:
 :masd.codec.dia.comment: true
 :masd.codec.model_modules: cpp_ref_impl.two_layers
@@ -16,23 +17,23 @@
 :masd.csharp.enabled: false
 :masd.variability.profile: cpp_ref_impl.profiles.base.enable_all_facets
 :END:
-* package_1                                                     :masd_module:
-** class_1                                                     :masd_element:
-*** prop_0                                                   :masd_attribute:
+* package_1                                                          :module:
+** class_1                                                          :element:
+*** prop_0                                                        :attribute:
     :PROPERTIES:
     :masd.codec.type: int
     :END:
-* Package_2                                                     :masd_module:
-** class_2                                                     :masd_element:
-*** prop_0                                                   :masd_attribute:
+* Package_2                                                          :module:
+** class_2                                                          :element:
+*** prop_0                                                        :attribute:
     :PROPERTIES:
     :masd.codec.type: int
     :END:
-* main                                                         :masd_element:
+* main                                                              :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::entry_point, cpp_ref_impl::untypable
   :END:
-* CMakeLists                                                   :masd_element:
+* CMakeLists                                                        :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::build::cmakelists
   :END:

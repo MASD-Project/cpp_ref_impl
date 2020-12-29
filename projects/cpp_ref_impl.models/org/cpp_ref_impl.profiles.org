@@ -1,5 +1,6 @@
 #+title: cpp_ref_impl.profiles
 #+options: <:nil c:nil todo:nil ^:nil d:nil date:nil author:nil
+#+tags: { element(e) attribute(a) module(m) }
 :PROPERTIES:
 :masd.codec.dia.comment: true
 :masd.codec.model_modules: cpp_ref_impl.profiles
@@ -18,7 +19,7 @@ should not produce any output.
 You should be able to reference this model from any technical
 space; keep it technical space agnostic.
 
-* base                                                          :masd_module:
+* base                                                               :module:
   :PROPERTIES:
   :masd.codec.dia.comment: true
   :END:
@@ -27,7 +28,7 @@ The base layer profiles are designed to be applied first.
 Their objective is to set the initial state from which
 other layers can then configure features.
 
-** decoration                                                  :masd_element:
+** decoration                                                       :element:
    :PROPERTIES:
    :masd.variability.binding_point: global
    :masd.variability.key_prefix: masd.decoration
@@ -36,161 +37,161 @@ other layers can then configure features.
 
 Top-level configuration for C++ Reference Model.
 
-*** enabled                                                  :masd_attribute:
+*** enabled                                                       :attribute:
     :PROPERTIES:
     :masd.codec.value: true
     :END:
-*** licence_name                                             :masd_attribute:
+*** licence_name                                                  :attribute:
     :PROPERTIES:
     :masd.codec.value: masd.gpl_v3
     :END:
-*** modeline_group_name                                      :masd_attribute:
+*** modeline_group_name                                           :attribute:
     :PROPERTIES:
     :masd.codec.value: masd.emacs
     :END:
-*** copyright_notice                                         :masd_attribute:
+*** copyright_notice                                              :attribute:
     :PROPERTIES:
     :masd.variability.value: Copyright (C) 2012-2015 Marco Craveiro <marco.craveiro@gmail.com>
     :END:
-** disable_all_facets                                          :masd_element:
+** disable_all_facets                                               :element:
    :PROPERTIES:
    :masd.variability.binding_point: global
    :masd.codec.parent: base::decoration
    :masd.codec.stereotypes: masd::variability::profile_template
    :END:
-*** enabled                                                  :masd_attribute:
+*** enabled                                                       :attribute:
     :PROPERTIES:
     :masd.variability.instantiation_domain_name: masd.facet
     :masd.codec.value: false
     :END:
-** enable_cmake                                                :masd_element:
+** enable_cmake                                                     :element:
    :PROPERTIES:
    :masd.variability.binding_point: global
    :masd.variability.key_prefix: masd.cpp.build
    :masd.codec.parent: base::disable_all_facets
    :masd.codec.stereotypes: masd::variability::profile
    :END:
-*** enabled                                                  :masd_attribute:
+*** enabled                                                       :attribute:
     :PROPERTIES:
     :masd.codec.value: true
     :END:
-** enable_cmake_types                                          :masd_element:
+** enable_cmake_types                                               :element:
    :PROPERTIES:
    :masd.variability.binding_point: global
    :masd.variability.key_prefix: masd.cpp
    :masd.codec.parent: base::enable_cmake
    :masd.codec.stereotypes: masd::variability::profile
    :END:
-*** types.enabled                                            :masd_attribute:
+*** types.enabled                                                 :attribute:
     :PROPERTIES:
     :masd.codec.value: true
     :END:
-** enable_cmake_types_serialization                            :masd_element:
+** enable_cmake_types_serialization                                 :element:
    :PROPERTIES:
    :masd.variability.binding_point: global
    :masd.variability.key_prefix: masd.cpp
    :masd.codec.parent: base::enable_cmake_types
    :masd.codec.stereotypes: masd::variability::profile
    :END:
-*** serialization.enabled                                    :masd_attribute:
+*** serialization.enabled                                         :attribute:
     :PROPERTIES:
     :masd.codec.value: true
     :END:
-** enable_cmake_types_hash                                     :masd_element:
+** enable_cmake_types_hash                                          :element:
    :PROPERTIES:
    :masd.variability.binding_point: global
    :masd.variability.key_prefix: masd.cpp
    :masd.codec.parent: base::enable_cmake_types
    :masd.codec.stereotypes: masd::variability::profile
    :END:
-*** hash.enabled                                             :masd_attribute:
+*** hash.enabled                                                  :attribute:
     :PROPERTIES:
     :masd.codec.value: true
     :END:
-** enable_cmake_types_io                                       :masd_element:
+** enable_cmake_types_io                                            :element:
    :PROPERTIES:
    :masd.variability.binding_point: global
    :masd.variability.key_prefix: masd.cpp
    :masd.codec.parent: base::enable_cmake_types
    :masd.codec.stereotypes: masd::variability::profile
    :END:
-*** io.enabled                                               :masd_attribute:
+*** io.enabled                                                    :attribute:
     :PROPERTIES:
     :masd.codec.value: true
     :END:
-** enable_all_facets                                           :masd_element:
+** enable_all_facets                                                :element:
    :PROPERTIES:
    :masd.variability.binding_point: global
    :masd.variability.stereotype: default.root_module2
    :masd.codec.parent: base::decoration
    :masd.codec.stereotypes: masd::variability::profile_template
    :END:
-*** enabled                                                  :masd_attribute:
+*** enabled                                                       :attribute:
     :PROPERTIES:
     :masd.variability.instantiation_domain_name: masd.facet
     :masd.codec.value: true
     :END:
-** disable_facet_directories                                   :masd_element:
+** disable_facet_directories                                        :element:
    :PROPERTIES:
    :masd.variability.binding_point: global
    :masd.variability.key_prefix: masd.cpp
    :masd.codec.parent: base::enable_all_facets
    :masd.codec.stereotypes: masd::variability::profile
    :END:
-*** disable_facet_directories                                :masd_attribute:
+*** disable_facet_directories                                     :attribute:
     :PROPERTIES:
     :masd.codec.value: true
     :END:
-*** tests.enabled                                            :masd_attribute:
+*** tests.enabled                                                 :attribute:
     :PROPERTIES:
     :masd.codec.value: false
     :END:
-*** build.enabled                                            :masd_attribute:
+*** build.enabled                                                 :attribute:
     :PROPERTIES:
     :masd.codec.value: true
     :END:
-** disable_cmake                                               :masd_element:
+** disable_cmake                                                    :element:
    :PROPERTIES:
    :masd.variability.binding_point: global
    :masd.variability.key_prefix: masd.cpp
    :masd.codec.parent: base::enable_all_facets
    :masd.codec.stereotypes: masd::variability::profile
    :END:
-*** tests.enabled                                            :masd_attribute:
+*** tests.enabled                                                 :attribute:
     :PROPERTIES:
     :masd.codec.value: false
     :END:
-*** build.enabled                                            :masd_attribute:
+*** build.enabled                                                 :attribute:
     :PROPERTIES:
     :masd.codec.value: false
     :END:
-** disable_odb                                                 :masd_element:
+** disable_odb                                                      :element:
    :PROPERTIES:
    :masd.variability.binding_point: global
    :masd.variability.key_prefix: masd.cpp
    :masd.codec.parent: base::enable_all_facets
    :masd.codec.stereotypes: masd::variability::profile
    :END:
-*** odb.enabled                                              :masd_attribute:
+*** odb.enabled                                                   :attribute:
     :PROPERTIES:
     :masd.codec.value: false
     :END:
-*** tests.enabled                                            :masd_attribute:
+*** tests.enabled                                                 :attribute:
     :PROPERTIES:
     :masd.codec.value: false
     :END:
-** disable_odb_cmake                                           :masd_element:
+** disable_odb_cmake                                                :element:
    :PROPERTIES:
    :masd.variability.binding_point: global
    :masd.codec.parent: base::disable_odb
    :masd.codec.stereotypes: masd::variability::profile
    :END:
-*** masd.cpp.build.enabled                                   :masd_attribute:
+*** masd.cpp.build.enabled                                        :attribute:
     :PROPERTIES:
     :masd.codec.value: false
     :END:
-* composable                                                    :masd_module:
-** handcrafted                                                 :masd_element:
+* composable                                                         :module:
+** handcrafted                                                      :element:
    :PROPERTIES:
    :masd.variability.binding_point: element
    :masd.codec.stereotypes: masd::variability::profile
@@ -198,11 +199,11 @@ Top-level configuration for C++ Reference Model.
 
 Base profile for model elements that are manually generated.
 
-*** masd.variability.profile                                 :masd_attribute:
+*** masd.variability.profile                                      :attribute:
     :PROPERTIES:
     :masd.codec.value: cpp_ref_impl.profiles.base.disable_all_facets
     :END:
-** handcrafted_typeable                                        :masd_element:
+** handcrafted_typeable                                             :element:
    :PROPERTIES:
    :masd.variability.binding_point: element
    :masd.variability.stereotype: cpp_ref_impl::handcrafted::typeable
@@ -213,19 +214,19 @@ Base profile for model elements that are manually generated.
 
 Configuration for model elements that are generated manually by the user.
 
-*** types.enabled                                            :masd_attribute:
+*** types.enabled                                                 :attribute:
     :PROPERTIES:
     :masd.codec.value: true
     :END:
-*** types.overwrite                                          :masd_attribute:
+*** types.overwrite                                               :attribute:
     :PROPERTIES:
     :masd.codec.value: false
     :END:
-*** types.class_forward_declarations.enabled                 :masd_attribute:
+*** types.class_forward_declarations.enabled                      :attribute:
     :PROPERTIES:
     :masd.codec.value: false
     :END:
-** untypable                                                   :masd_element:
+** untypable                                                        :element:
    :PROPERTIES:
    :masd.variability.binding_point: element
    :masd.variability.stereotype: cpp_ref_impl::untypable
@@ -235,41 +236,43 @@ Configuration for model elements that are generated manually by the user.
 
 The element only has the testing facet enabled.
 
-*** types.enabled                                            :masd_attribute:
+*** types.enabled                                                 :attribute:
     :PROPERTIES:
     :masd.codec.value: false
     :END:
-* basic                                                        :masd_element:
+* basic                                                             :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::decoration::generation_marker
   :END:
-** add_date_time                                             :masd_attribute:
+** add_date_time                                                  :attribute:
    :PROPERTIES:
    :masd.codec.value: false
    :END:
-** add_warning                                               :masd_attribute:
+** add_warning                                                    :attribute:
    :PROPERTIES:
    :masd.codec.value: true
    :END:
-** add_dogen_version                                         :masd_attribute:
+** add_dogen_version                                              :attribute:
    :PROPERTIES:
    :masd.codec.value: true
    :END:
-** message                                                   :masd_attribute:
+** message                                                        :attribute:
+
 This is a code-generated file.
 
-* verbose                                                      :masd_element:
+* verbose                                                           :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::decoration::generation_marker
   :END:
-** add_date_time                                             :masd_attribute:
+** add_date_time                                                  :attribute:
    :PROPERTIES:
    :masd.codec.value: true
    :END:
-** add_warning                                               :masd_attribute:
+** add_warning                                                    :attribute:
    :PROPERTIES:
    :masd.codec.value: true
    :END:
-** message                                                   :masd_attribute:
+** message                                                        :attribute:
+
 This is a code-generated file.
 

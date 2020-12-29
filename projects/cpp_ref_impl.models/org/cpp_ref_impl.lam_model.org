@@ -1,5 +1,6 @@
 #+title: cpp_ref_impl.lam_model
 #+options: <:nil c:nil todo:nil ^:nil d:nil date:nil author:nil
+#+tags: { element(e) attribute(a) module(m) }
 :PROPERTIES:
 :masd.codec.dia.comment: true
 :masd.codec.model_modules: cpp_ref_impl.lam_model
@@ -20,58 +21,58 @@
 :masd.variability.profile: cpp_ref_impl.profiles.base.enable_all_facets
 :masd.decoration.marker_name: cpp_ref_impl.profiles.basic
 :END:
-* package1                                                      :masd_module:
-** class_in_package                                            :masd_element:
-*** prop_0                                                   :masd_attribute:
+* package1                                                           :module:
+** class_in_package                                                 :element:
+*** prop_0                                                        :attribute:
     :PROPERTIES:
     :masd.codec.type: masd::lam::numeric::integer
     :END:
-* builtins                                                     :masd_element:
-** prop_0                                                    :masd_attribute:
+* builtins                                                          :element:
+** prop_0                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: masd::lam::text::character
    :END:
-** prop_1                                                    :masd_attribute:
+** prop_1                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: masd::lam::core::byte
    :END:
-** prop_2                                                    :masd_attribute:
+** prop_2                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: masd::lam::numeric::integer8
    :END:
-** prop_3                                                    :masd_attribute:
+** prop_3                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: masd::lam::numeric::integer16
    :END:
-** prop_4                                                    :masd_attribute:
+** prop_4                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: masd::lam::numeric::integer32
    :END:
-** prop_5                                                    :masd_attribute:
+** prop_5                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: masd::lam::numeric::integer64
    :END:
-** prop_6                                                    :masd_attribute:
+** prop_6                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: masd::lam::numeric::integer
    :END:
-** prop_7                                                    :masd_attribute:
+** prop_7                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: masd::lam::numeric::single_float
    :END:
-** prop_8                                                    :masd_attribute:
+** prop_8                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: masd::lam::numeric::double_float
    :END:
-** prop_9                                                    :masd_attribute:
+** prop_9                                                         :attribute:
    :PROPERTIES:
    :masd.codec.type: masd::lam::core::boolean
    :END:
-* main                                                         :masd_element:
+* main                                                              :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::entry_point, cpp_ref_impl::untypable
   :END:
-* CMakeLists                                                   :masd_element:
+* CMakeLists                                                        :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::build::cmakelists
   :END:

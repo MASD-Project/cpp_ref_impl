@@ -1,5 +1,6 @@
 #+title: cpp_ref_impl.skip_empty_dirs
 #+options: <:nil c:nil todo:nil ^:nil d:nil date:nil author:nil
+#+tags: { element(e) attribute(a) module(m) }
 :PROPERTIES:
 :masd.codec.dia.comment: true
 :masd.codec.model_modules: cpp_ref_impl.skip_empty_dirs
@@ -27,19 +28,19 @@ directories and then check to see if they are deleted on generation.
 A similar test for the flag set to true can be done with any test
 model as they all have it.
 
-* one_property                                                 :masd_element:
+* one_property                                                      :element:
 
 This class has not changed.
 
-** public_attribute                                          :masd_attribute:
+** public_attribute                                               :attribute:
    :PROPERTIES:
    :masd.codec.type: int
    :END:
-* main                                                         :masd_element:
+* main                                                              :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::entry_point, cpp_ref_impl::untypable
   :END:
-* CMakeLists                                                   :masd_element:
+* CMakeLists                                                        :element:
   :PROPERTIES:
   :masd.codec.stereotypes: masd::build::cmakelists
   :END:
