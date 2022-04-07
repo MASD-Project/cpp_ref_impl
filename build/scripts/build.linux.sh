@@ -67,6 +67,10 @@ elif [ "${compiler}" = "gcc9" ]; then
     echo "* Compiler: ${compiler}"
     export CC=gcc-9
     export CXX=g++-9
+elif [ "${compiler}" = "clang15" ]; then
+    echo "* Compiler: ${compiler}"
+    export CC=clang-15
+    export CXX=clang++-15
 elif [ "${compiler}" = "clang11" ]; then
     echo "* Compiler: ${compiler}"
     export CC=clang-11
