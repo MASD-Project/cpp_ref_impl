@@ -75,20 +75,12 @@ if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     set(CMAKE_COMPILER_IS_CLANGXX "TRUE")
 endif()
 
-if (UNIX)
-    check_library_exists(rt clock_gettime "" HAVE_CLOCK_GETTIME)
-    if (HAVE_CLOCK_GETTIME)
-        message(STATUS "Requires clock_gettime.")
-        set(CMAKE_REQUIRED_LIBRARIES ${CMAKE_REQUIRED_LIBRARIES} rt)
-    else()
-        message(STATUS "Does NOT require clock_gettime.")
-    endif()
-endif()
-
 #
 # Use C++ 17 on all compilers.
 #
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 17 CACHE STRING "The C++ standard to use")
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 if (CMAKE_COMPILER_IS_GNUCXX OR CMAKE_COMPILER_IS_CLANGXX
         AND NOT "x${CMAKE_CXX_SIMULATE_ID}" STREQUAL "xMSVC")
@@ -97,15 +89,18 @@ if (CMAKE_COMPILER_IS_GNUCXX OR CMAKE_COMPILER_IS_CLANGXX
 
     if (CMAKE_COMPILER_IS_GNUCXX)
         set(warning_flags "${warning_flags} -Wno-maybe-uninitialized")
-
-        # Ignore self-assigns as we need this for generated tests.
-        set(warning_flags "${warning_flags} -Wno-self-assign-overloaded ")
     endif()
 
     if (CMAKE_COMPILER_IS_CLANGXX)
         # disable mismatched tags as there are STL inconsistencies that
         # make it a bit useless.
         set(warning_flags "${warning_flags} -Wno-mismatched-tags")
+
+        # Ignore self-assigns as we need this for generated tests.
+        set(warning_flags "${warning_flags} -Wno-self-assign-overloaded ")
+
+        # force DWARF version to 4 in order to keep Valgrind happy.
+        set(warning_flags "${warning_flags} -gdwarf-4")
         if(CCACHE_PROGRAM)
             # CCache and Clang don't seem to play nice when it comes
             # to unused arguments.
@@ -129,7 +124,6 @@ if (CMAKE_COMPILER_IS_GNUCXX OR CMAKE_COMPILER_IS_CLANGXX
     set(warning_flags "${warning_flags} -Wwrite-strings")
 
     # enable RTTI
-    add_definitions(-D_GLIBCXX_USE_CXX11_ABI=1)
     if(APPLE)
         set(other_flags "${other_flags} -fvisibility=default")
     else()
@@ -155,91 +149,13 @@ if (CMAKE_COMPILER_IS_GNUCXX OR CMAKE_COMPILER_IS_CLANGXX
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${other_flags}")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${profiling_flags}")
 
-    # ignore fuzzy link errors
-    if (WIN32)
-        set(CMAKE_EXE_LINKER_FLAGS
-            "${CMAKE_EXE_LINKER_FLAGS} -Wl,-enable-stdcall-fixup")
-        set(CMAKE_SHARED_LINKER_FLAGS
-            "${CMAKE_SHARED_LINKER_FLAGS} -Wl,-enable-stdcall-fixup")
-    endif()
-
-elseif(CMAKE_CXX_COMPILER_ID MATCHES "MSVC" OR
-        CMAKE_CXX_SIMULATE_ID MATCHES "MSVC")
-    if(${MSVC_VERSION} GREATER 1399) # 1400+ => VC2005+
-        # cannot use incremental rebuild
-        string(REPLACE "/Gm" "" CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG}")
-        string(REPLACE "/Gm" "" CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE}")
-        string(REPLACE "/Gm" "" CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}")
-        string(REPLACE "/Gm" "" CMAKE_CXX_FLAGS_RELEASE
-            "${CMAKE_CXX_FLAGS_RELEASE}")
-
-        # workaround for C1128: number of sections exceeded object
-        # file format limit.
-        set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /bigobj")
-    endif()
-
-    # It seems Wall and /W4 are not practical for now as it includes
-    # all of the third party headers.
-    # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4")
-    set(CMAKE_CXX_FLAGS
-        "${CMAKE_CXX_FLAGS} /D _SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING")
-    set(CMAKE_CXX_FLAGS
-        "${CMAKE_CXX_FLAGS} /D _SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING")
-    set(CMAKE_CXX_FLAGS
-        "${CMAKE_CXX_FLAGS} /D CRT_SECURE_NO_WARNINGS")
-
-    foreach(flag_var CMAKE_C_FLAGS_DEBUG CMAKE_CXX_FLAGS_DEBUG CMAKE_C_FLAGS_RELEASE CMAKE_CXX_FLAGS_RELEASE CMAKE_C_FLAGS_MINSIZEREL CMAKE_CXX_FLAGS_MINSIZEREL CMAKE_C_FLAGS_RELWITHDEBINFO CMAKE_CXX_FLAGS_RELWITHDEBINFO)
-        string(REGEX REPLACE "/MD" "/MT" ${flag_var} "${flag_var}")
-        string(REGEX REPLACE "/MDd" "/MTd" ${flag_var} "${flag_var}")
-    endforeach(flag_var)
-
-    # Options specific to clang-cl. We suppress a number of warnings
-    # because at present the code is littered with these coming out of
-    # third party libraries like boost.
-    if (CMAKE_COMPILER_IS_CLANGXX)
-        # Ingore the annoying "locally defined symbol imported"
-        # warning we get from boost thread on clang-cl.
-        set(CMAKE_EXE_LINKER_FLAGS
-            "${CMAKE_EXE_LINKER_FLAGS} /IGNORE:4217")
-
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Xclang -Wno-unknown-pragmas")
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Xclang -Wno-assume")
-        set(CMAKE_CXX_FLAGS
-            "${CMAKE_CXX_FLAGS} -Xclang -Wno-deprecated-declarations")
-        set(CMAKE_CXX_FLAGS
-            "${CMAKE_CXX_FLAGS} -Xclang -Wno-delete-non-virtual-dtor")
-        set(CMAKE_CXX_FLAGS
-            "${CMAKE_CXX_FLAGS} -Xclang -Wno-potentially-evaluated-expression")
-    endif()
-
-    if(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
-        # flag not supported by clang-cl
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MP")
-
-        # For some reason CMake seems to be including the debug
-        # version of this library on release builds as well so we
-        # need to ignore it. Not adding this to clang-cl as it
-        # does not seem to recognise it.
-        set(CMAKE_SHARED_LINKER_FLAGS_RELEASE
-            "${CMAKE_SHARED_LINKER_FLAGS_RELEASE} /NODEFAULTLIB:libcmtd")
-        set(CMAKE_EXE_LINKER_FLAGS_RELEASE
-            "${CMAKE_EXE_LINKER_FLAGS_RELEASE} /NODEFAULTLIB:libcmtd")
-    elseif(UNIX AND NOT APPLE)
+    if(UNIX AND NOT APPLE)
+        # use the Gold linker.
         set(CMAKE_EXE_LINKER_FLAGS
             "${CMAKE_EXE_LINKER_FLAGS} -Wl,-fuse-ld=gold")
         set(CMAKE_SHARED_LINKER_FLAGS
             "${CMAKE_SHARED_LINKER_FLAGS} -Wl,-fuse-ld=gold")
     endif()
-
-    set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG}" CACHE STRING "MSVC C Debug MT flags " FORCE)
-    set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}" CACHE STRING "MSVC CXX Debug MT flags " FORCE)
-    set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE}" CACHE STRING "MSVC C Release MT flags " FORCE)
-    set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE}" CACHE STRING "MSVC CXX Release MT flags " FORCE)
-    set(CMAKE_C_FLAGS_MINSIZEREL "${CMAKE_C_FLAGS_MINSIZEREL}" CACHE STRING "MSVC C Debug MT flags " FORCE)
-    set(CMAKE_CXX_FLAGS_MINSIZEREL "${CMAKE_CXX_FLAGS_MINSIZEREL}" CACHE STRING "MSVC C Release MT flags " FORCE)
-    set(CMAKE_C_FLAGS_RELWITHDEBINFO "${CMAKE_C_FLAGS_RELWITHDEBINFO}" CACHE STRING "MSVC CXX Debug MT flags " FORCE)
-    set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELWITHDEBINFO}" CACHE STRING "MSVC CXX Release MT flags " FORCE)
-
 endif()
 
 # user includes
