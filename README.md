@@ -3,10 +3,12 @@
 [![Status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat)](https://github.com/MASD-Project/cpp_ref_impl/pulse/monthly)
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/MASD-Project/Lobby)
 [![Issues](https://img.shields.io/github/issues/MASD-Project/cpp_ref_impl.svg)](https://github.com/MASD-Project/cpp_ref_impl/issues)
-[![Code Quality: Cpp](https://img.shields.io/lgtm/grade/cpp/g/MASD-Project/cpp_ref_impl.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/MASD-Project/cpp_ref_impl/context:cpp)
+[![Code Quality:
+Cpp](https://img.shields.io/lgtm/grade/cpp/g/MASD-Project/cpp_ref_impl.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/MASD-Project/cpp_ref_impl/context:cpp)
+[![Continuous Linux](https://github.com/MASD-Project/cpp_ref_impl/actions/workflows/continuous-linux.yml/badge.svg)](https://github.com/MASD-Project/cpp_ref_impl/actions/workflows/continuous-linux.yml)
+[![Continuous Windows](https://github.com/MASD-Project/cpp_ref_impl/actions/workflows/continuous-windows.yml/badge.svg)](https://github.com/MASD-Project/cpp_ref_impl/actions/workflows/continuous-windows.yml)
+[![Continuous MacOS](https://github.com/MASD-Project/cpp_ref_impl/actions/workflows/continuous-macos.yml/badge.svg)](https://github.com/MASD-Project/cpp_ref_impl/actions/workflows/continuous-macos.yml)
 [![Build Dashboard](https://img.shields.io/badge/cdash-dashboard-00cc00.svg)](https://my.cdash.org/index.php?project=MASD+Project+-+C%2B%2B+Reference+Implementation)
-[![Build Status](https://travis-ci.org/MASD-Project/cpp_ref_impl.svg?branch=master)](https://travis-ci.org/MASD-Project/cpp_ref_impl)
-[![Build Status](https://img.shields.io/appveyor/ci/mcraveiro/cpp-ref-impl.svg?label=windows)](https://ci.appveyor.com/project/mcraveiro/cpp-ref-impl)
 [![Language](https://img.shields.io/badge/Language-C++-blue.svg)](https://www.openhub.net/p/dogen/analyses/latest/languages_summary)
 [![Language](https://img.shields.io/badge/Language-C++-blue.svg)](https://www.openhub.net/p/dogen/analyses/latest/languages_summary)
 [![C++](https://img.shields.io/badge/std-C++17-blue.svg)](https://en.wikipedia.org/wiki/C%2B%2B17)
@@ -28,8 +30,8 @@ possible, the models are available in both Dia and JSON formats.
 
 # Building From Source
 
-For instructions on how to build the MASD C++ product reference implementation,
-follow the instructions on
+By design, the steps to build the MASD C++ product reference implementation from
+source are exactly the same as those of
 [Dogen](https://github.com/MASD-Project/dogen/releases).
 
 ## Running Tests
