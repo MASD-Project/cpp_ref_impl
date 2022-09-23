@@ -18,13 +18,36 @@ Thumbs.db
 # build directory
 build/output
 
-# cquery, clangd
-.cquery_cached_index
+# .Net ignores
+packages
+*.userprefs
+test-results
+obj
+bin
+*.suo
+TestResult.xml
+
+# coati
+*.coatidb
+*.coatiproject
+poly-stitch.elc
+
+# clangd
+.clangd/
 compile_commands.json
-.clangd
+
+# Task Juggler
+doc/agile/reports
+*.tjp
 
 # emacs
 .dir-locals.el
 
-# lsp
+# org-roam
+org-roam.db
+
 .cache
+.clangd
+
+# vcpkg
+vcpkg_installed
