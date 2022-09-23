@@ -55,10 +55,6 @@ jobs:
         with:
           appendedCacheKey: ${{matrix.name}}${{matrix.buildtype}}
 
-      - name: Setup test data
-        run: |
-          ./build/scripts/github.setup.${{matrix.family}}.sh
-
       - name: Run CTest workflow
         run: |
           export DOGEN_BUILD_PROVIDER="github"
@@ -73,19 +69,3 @@ jobs:
               echo "Code coverage not enabled. Build type: ${{matrix.buildtype}}"
           fi
           ctest -VV --preset ${preset} --script "CTest.cmake,${cmake_args}"
-
-      - name: Test package
-        run: ./build/scripts/test_package.linux.sh ${{matrix.family}}-${{matrix.compiler}}-${{matrix.buildtype}}
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v1
-        with:
-          name: ${{matrix.family}}-${{matrix.compiler}}-${{matrix.buildtype}}
-          path: ./build/output/${{matrix.family}}-${{matrix.compiler}}-${{matrix.buildtype}}/stage/pkg/dogen_1.0.32_amd64-applications.deb
-
-      # - name: Gitter
-      #   uses: juztcode/gitter-github-action@v1
-      #   with:
-      #     room-id: ${{secrets.GITTER_ROOM_ID}}
-      #     token: ${{secrets.GITTER_TOKEN}}
-      #     text: ${{github.actio}} - ${{job.status}}

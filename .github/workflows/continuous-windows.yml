@@ -47,10 +47,6 @@ jobs:
         with:
           appendedCacheKey: ${{matrix.name}}${{matrix.buildtype}}
 
-      - name: Setup test data
-        run: |
-          ./build/scripts/github.setup.${{matrix.family}}.ps1
-
       - name: Run CTest workflow
         run: |
           $env:DOGEN_BUILD_PROVIDER="github"
@@ -65,16 +61,3 @@ jobs:
           }
           $cmake_args="build_group=$build_group,build_name=$preset,with_presets=ON"
           ctest -VV --preset $preset --script "CTest.cmake,$cmake_args"
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v1
-        with:
-          name: ${{matrix.family}}-${{matrix.compiler}}-${{matrix.buildtype}}
-          path: ./build/output/${{matrix.family}}-${{matrix.compiler}}-${{matrix.buildtype}}/stage/pkg/DOGEN-1.0.32-Windows-AMD64.msi
-
-      # - name: Gitter
-      #   uses: juztcode/gitter-github-action@v1
-      #   with:
-      #     room-id: ${{secrets.GITTER_ROOM_ID}}
-      #     token: ${{secrets.GITTER_TOKEN}}
-      #     text: ${{github.actio}} - ${{job.status}}
