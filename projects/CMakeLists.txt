@@ -97,6 +97,9 @@ if (CMAKE_COMPILER_IS_GNUCXX OR CMAKE_COMPILER_IS_CLANGXX
 
     if (CMAKE_COMPILER_IS_GNUCXX)
         set(warning_flags "${warning_flags} -Wno-maybe-uninitialized")
+
+        # Ignore self-assigns as we need this for generated tests.
+        set(warning_flags "${warning_flags} -Wno-self-assign-overloaded ")
     endif()
 
     if (CMAKE_COMPILER_IS_CLANGXX)
@@ -164,11 +167,11 @@ elseif(CMAKE_CXX_COMPILER_ID MATCHES "MSVC" OR
         CMAKE_CXX_SIMULATE_ID MATCHES "MSVC")
     if(${MSVC_VERSION} GREATER 1399) # 1400+ => VC2005+
         # cannot use incremental rebuild
-        string(REPLACE "/Gm" "" CMAKE_C_FLAGS_DEBUG ${CMAKE_C_FLAGS_DEBUG})
-        string(REPLACE "/Gm" "" CMAKE_C_FLAGS_RELEASE ${CMAKE_C_FLAGS_RELEASE})
-        string(REPLACE "/Gm" "" CMAKE_CXX_FLAGS_DEBUG ${CMAKE_CXX_FLAGS_DEBUG})
+        string(REPLACE "/Gm" "" CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG}")
+        string(REPLACE "/Gm" "" CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE}")
+        string(REPLACE "/Gm" "" CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}")
         string(REPLACE "/Gm" "" CMAKE_CXX_FLAGS_RELEASE
-            ${CMAKE_CXX_FLAGS_RELEASE})
+            "${CMAKE_CXX_FLAGS_RELEASE}")
 
         # workaround for C1128: number of sections exceeded object
         # file format limit.
@@ -186,8 +189,8 @@ elseif(CMAKE_CXX_COMPILER_ID MATCHES "MSVC" OR
         "${CMAKE_CXX_FLAGS} /D CRT_SECURE_NO_WARNINGS")
 
     foreach(flag_var CMAKE_C_FLAGS_DEBUG CMAKE_CXX_FLAGS_DEBUG CMAKE_C_FLAGS_RELEASE CMAKE_CXX_FLAGS_RELEASE CMAKE_C_FLAGS_MINSIZEREL CMAKE_CXX_FLAGS_MINSIZEREL CMAKE_C_FLAGS_RELWITHDEBINFO CMAKE_CXX_FLAGS_RELWITHDEBINFO)
-        string(REGEX REPLACE "/MD" "/MT" ${flag_var} "${${flag_var}}")
-        string(REGEX REPLACE "/MDd" "/MTd" ${flag_var} "${${flag_var}}")
+        string(REGEX REPLACE "/MD" "/MT" ${flag_var} "${flag_var}")
+        string(REGEX REPLACE "/MDd" "/MTd" ${flag_var} "${flag_var}")
     endforeach(flag_var)
 
     # Options specific to clang-cl. We suppress a number of warnings
