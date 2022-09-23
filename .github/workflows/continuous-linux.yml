@@ -1,0 +1,91 @@
+name: Continuous Linux
+
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - '*'
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: ${{matrix.family}}-${{matrix.compiler}}-${{matrix.buildtype}}
+    runs-on: ${{matrix.os}}-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        name: [linux-gcc, linux-clang]
+        buildtype: [debug, release]
+        include:
+          - name: linux-gcc
+            family: linux
+            os: ubuntu
+            compiler: gcc
+          - name: linux-clang
+            family: linux
+            os: ubuntu
+            compiler: clang
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: Setup Clang
+        uses: egor-tensin/setup-clang@v1
+        if: ${{matrix.compiler}} == clang
+        with:
+          version: latest
+          platform: x64
+
+      - name: Setup ccache
+        uses: hendrikmuhs/ccache-action@v1.2
+        with:
+          variant: sccache
+          key: ${{matrix.family}}-${{matrix.compiler}}-${{matrix.buildtype}}
+          max-size: 1000M
+
+      - name: Get latest CMake
+        uses: lukka/get-cmake@latest
+
+      - name: Run vcpkg
+        uses: lukka/run-vcpkg@v10
+        with:
+          appendedCacheKey: ${{matrix.name}}${{matrix.buildtype}}
+
+      - name: Setup test data
+        run: |
+          ./build/scripts/github.setup.${{matrix.family}}.sh
+
+      - name: Run CTest workflow
+        run: |
+          export DOGEN_BUILD_PROVIDER="github"
+          export DOGEN_BUILD_COMMIT="${GITHUB_SHA}"
+          export DOGEN_BUILD_NUMBER="${GITHUB_RUN_NUMBER}"
+          export DOGEN_BUILD_TIMESTAMP=`date "+%Y/%m/%d %H:%M:%S"`
+          export preset=${{matrix.family}}-${{matrix.compiler}}-${{matrix.buildtype}}
+          export cmake_args="build_group=Continuous,build_name=${preset},with_presets=ON"
+          if [[ "${{matrix.buildtype}}" == "debug" ]]; then
+              cmake_args="${cmake_args},code_coverage=1"
+          else
+              echo "Code coverage not enabled. Build type: ${{matrix.buildtype}}"
+          fi
+          ctest -VV --preset ${preset} --script "CTest.cmake,${cmake_args}"
+
+      - name: Test package
+        run: ./build/scripts/test_package.linux.sh ${{matrix.family}}-${{matrix.compiler}}-${{matrix.buildtype}}
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: ${{matrix.family}}-${{matrix.compiler}}-${{matrix.buildtype}}
+          path: ./build/output/${{matrix.family}}-${{matrix.compiler}}-${{matrix.buildtype}}/stage/pkg/dogen_1.0.32_amd64-applications.deb
+
+      # - name: Gitter
+      #   uses: juztcode/gitter-github-action@v1
+      #   with:
+      #     room-id: ${{secrets.GITTER_ROOM_ID}}
+      #     token: ${{secrets.GITTER_TOKEN}}
+      #     text: ${{github.actio}} - ${{job.status}}

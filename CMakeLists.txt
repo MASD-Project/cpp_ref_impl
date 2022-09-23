@@ -17,29 +17,39 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 # MA 02110-1301, USA.
 #
-cmake_minimum_required(VERSION 3.3 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.20 FATAL_ERROR)
 
 message(STATUS "CMake: ${CMAKE_VERSION}")
+
+#
+# vcpkg
+#
+set(CMAKE_POLICY_DEFAULT_CMP0077 NEW)
+set(X_VCPKG_APPLOCAL_DEPS_INSTALL ON)
+set(CMAKE_TOOLCHAIN_FILE
+    ${CMAKE_CURRENT_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake
+    CACHE STRING "Vcpkg toolchain file")
+
+# Log CMake version. Useful for debugging CMake problems.
+message(STATUS "CMake Version: ${CMAKE_VERSION}")
 
 # ctest support
 enable_testing()
 
 #
-# setup CCache
+# Setup CCache
 #
-find_program(CCACHE_PROGRAM ccache)
+find_program(CCACHE_PROGRAM sccache)
 if (CCACHE_PROGRAM)
-    message(STATUS "Found CCache (${CCACHE_PROGRAM})...")
-    set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE "${CCACHE_PROGRAM}")
-
-    execute_process(COMMAND ${CCACHE_PROGRAM} --max-size=5G
-        ${CCACHE_PROGRAM} --show-stats
-        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
+    message(STATUS "Found SCCache (${CCACHE_PROGRAM})...")
+    set(CMAKE_C_COMPILER_LAUNCHER "${CCACHE_PROGRAM}" CACHE STRING "")
+    set(CMAKE_CXX_COMPILER_LAUNCHER "${CCACHE_PROGRAM}" CACHE STRING "")
 else()
-    message(STATUS "CCache NOT found.")
+    message(STATUS "SCCache NOT found.")
 endif()
 
-project(masd_cpp_ref_impl)
+project(cpp_ref_impl VERSION 1.0.32 LANGUAGES CXX
+    DESCRIPTION "C++ Product Reference Implementation for MASD.")
 
 # add our own modules
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/build/cmake)
@@ -72,21 +82,16 @@ set(Boost_USE_MULTITHREADED ON)
 set(Boost_USE_STATIC_RUNTIME ON)
 set(BOOST_ALL_DYN_LINK OFF)
 
-# note: it is possible to build with older versions of boost, but
+# Note: it is possible to build with older versions of boost, but
 # these require patches.
-find_package(Boost 1.61 REQUIRED COMPONENTS
-    system
-    serialization
+find_package(Boost 1.80 REQUIRED COMPONENTS
     date_time
-    log
-    thread
+    exception
     filesystem
+    log
     program_options
-    unit_test_framework
-    regex
-    chrono
-    atomic
-    )
+    serialization
+    unit_test_framework)
 
 if (Boost_FOUND)
     # FIXME: using global settings at present because dogen does not

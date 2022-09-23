@@ -1,0 +1,80 @@
+name: Continuous Windows
+
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - '*'
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  windows:
+    name: ${{matrix.family}}-${{matrix.compiler}}-${{matrix.buildtype}}
+    runs-on: ${{matrix.os}}-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        name: [windows-msvc] # , windows-msvc-clang-cl
+        buildtype: [debug, release]
+        include:
+          - name: windows-msvc
+            os: windows
+            family: windows
+            compiler: msvc
+            experimental: false
+          # FIXME: can't use this until allow_failures is added to github.
+          # See https://github.com/actions/toolkit/issues/399
+          # - name: windows-msvc-clang-cl
+          #   os: windows
+          #   family: windows
+          #   compiler: msvc-clang-cl
+          #   experimental: true
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - uses: ilammy/msvc-dev-cmd@v1
+
+      - name: Get latest CMake
+        uses: lukka/get-cmake@latest
+
+      - name: Run vcpkg
+        uses: lukka/run-vcpkg@v10
+        with:
+          appendedCacheKey: ${{matrix.name}}${{matrix.buildtype}}
+
+      - name: Setup test data
+        run: |
+          ./build/scripts/github.setup.${{matrix.family}}.ps1
+
+      - name: Run CTest workflow
+        run: |
+          $env:DOGEN_BUILD_PROVIDER="github"
+          $env:DOGEN_BUILD_COMMIT="$env:GITHUB_SHA"
+          $env:DOGEN_BUILD_NUMBER="$env:GITHUB_RUN_NUMBER"
+          $env:DOGEN_BUILD_TIMESTAMP=Get-Date -format "yyyy/MM/dd HH:mm:ss"
+          $preset="${{matrix.family}}-${{matrix.compiler}}-${{matrix.buildtype}}"
+          $build_group = "Continuous"
+          if ("${{matrix.experimental}}" -eq "true")
+          {
+              $build_group = "Experimental"
+          }
+          $cmake_args="build_group=$build_group,build_name=$preset,with_presets=ON"
+          ctest -VV --preset $preset --script "CTest.cmake,$cmake_args"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: ${{matrix.family}}-${{matrix.compiler}}-${{matrix.buildtype}}
+          path: ./build/output/${{matrix.family}}-${{matrix.compiler}}-${{matrix.buildtype}}/stage/pkg/DOGEN-1.0.32-Windows-AMD64.msi
+
+      # - name: Gitter
+      #   uses: juztcode/gitter-github-action@v1
+      #   with:
+      #     room-id: ${{secrets.GITTER_ROOM_ID}}
+      #     token: ${{secrets.GITTER_TOKEN}}
+      #     text: ${{github.actio}} - ${{job.status}}
