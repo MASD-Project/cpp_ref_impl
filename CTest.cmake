@@ -140,7 +140,6 @@ else()
 endif()
 
 set(CTEST_BUILD_NAME "${preset}")
-set(CTEST_BUILD_TARGET "package")
 
 # Set the generator. This will override the presets, but we have no option as
 # CTest refuses to configure unless there is a generator.
@@ -262,14 +261,6 @@ endif()
 
 # Setup the preset for configuration.
 set(cmake_args ${cmake_args} "--preset ${preset}")
-
-# For nightlies, we want to force full generation.
-if(${build_group} MATCHES Nightly)
-    message(STATUS "Full generation is ON.")
-    set(cmake_args ${cmake_args} "-DWITH_FULL_GENERATION=ON")
-else()
-    message(STATUS "Full generation is OFF.")
-endif()
 
 message(STATUS "CMake args: ${cmake_args}")
 ctest_configure(OPTIONS "${cmake_args}" RETURN_VALUE configure_result)
