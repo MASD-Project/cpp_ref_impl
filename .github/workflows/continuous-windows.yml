@@ -24,14 +24,12 @@ jobs:
             os: windows
             family: windows
             compiler: msvc
-            experimental: false
           # FIXME: can't use this until allow_failures is added to github.
           # See https://github.com/actions/toolkit/issues/399
           # - name: windows-msvc-clang-cl
           #   os: windows
           #   family: windows
           #   compiler: msvc-clang-cl
-          #   experimental: true
     steps:
       - uses: actions/checkout@v2
         with:
@@ -54,10 +52,5 @@ jobs:
           $env:DOGEN_BUILD_NUMBER="$env:GITHUB_RUN_NUMBER"
           $env:DOGEN_BUILD_TIMESTAMP=Get-Date -format "yyyy/MM/dd HH:mm:ss"
           $preset="${{matrix.family}}-${{matrix.compiler}}-${{matrix.buildtype}}"
-          $build_group = "Continuous"
-          if ("${{matrix.experimental}}" -eq "true")
-          {
-              $build_group = "Experimental"
-          }
-          $cmake_args="build_group=$build_group,build_name=$preset,with_presets=ON"
+          $cmake_args="build_group=Experimental,build_name=$preset,with_presets=ON"
           ctest -VV --preset $preset --script "CTest.cmake,$cmake_args"
