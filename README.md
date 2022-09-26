@@ -14,7 +14,7 @@ Cpp](https://img.shields.io/lgtm/grade/cpp/g/MASD-Project/cpp_ref_impl.svg?logo=
 [![C++](https://img.shields.io/badge/std-C++17-blue.svg)](https://en.wikipedia.org/wiki/C%2B%2B17)
 [![gcc-11](https://img.shields.io/badge/GCC-11-blue.svg)](https://www.gnu.org/software/gcc/gcc-11)
 [![clang-14](https://img.shields.io/badge/CLANG-14-blue.svg)](https://releases.llvm.org/14.0.0/tools/clang/docs/ReleaseNotes.html)
-[![msvc2017](https://img.shields.io/badge/MSVC-2017-blue.svg)](https://visualstudio.microsoft.com/vs/whatsnew/)
+[![msvc2022](https://img.shields.io/badge/MSVC-2022-blue.svg)](https://visualstudio.microsoft.com/vs/whatsnew/)
 [![TODOs](https://badgen.net/https/api.tickgit.com/badgen/github.com/MASD-Project/cpp_ref_impl)](https://www.tickgit.com/browse?repo=github.com/MASD-Project/cpp_ref_impl)
 
 # MASD C++ Reference Implementation
