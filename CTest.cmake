@@ -47,29 +47,28 @@ endif()
 #
 # Ensure all mandatory parameters have been set.
 #
-if(NOT DEFINED build_name)
-    message(FATAL_ERROR "Parameter build_name not defined.")
+if(NOT DEFINED preset)
+    message(FATAL_ERROR "Parameter preset not defined.")
 endif()
-set(preset ${build_name})
+message(STATUS "CDash preset: ${preset}")
+set(build_name ${preset})
 
 if(NOT DEFINED build_group)
     message(FATAL_ERROR "Parameter build_group not defined.")
 endif()
 
 #
-# Parse the build name to extract input parameters, and validate them.
+# Parse the preset to extract input parameters, and validate them.
 #
-string(TOLOWER "${build_name}" build_name_lower)
-message(STATUS "CDash build name: ${build_name}")
-
-string(REPLACE "-" ";" build_name_list ${build_name_lower})
-list(LENGTH build_name_list bn_length)
-if (NOT bn_length EQUAL 3)
-    message(FATAL_ERROR "Invalid build name: ${build_name}")
+string(TOLOWER "${preset}" preset_lower)
+string(REPLACE "-" ";" preset_list ${preset_lower})
+list(LENGTH preset_list pl_length)
+if (NOT pl_length EQUAL 3)
+    message(FATAL_ERROR "Invalid preset: ${preset}")
 endif()
 
 # Setup the operative system.
-list(GET build_name_list 0 operative_system)
+list(GET preset_list 0 operative_system)
 if(NOT DEFINED operative_system)
     message(FATAL_ERROR "Operative system not supplied.")
 endif()
@@ -85,7 +84,7 @@ endif()
 endif()
 
 # Setup the compiler.
-list(GET build_name_list 1 compiler)
+list(GET preset_list 1 compiler)
 if(NOT DEFINED compiler)
     message(FATAL_ERROR "Compiler not supplied.")
 endif()
@@ -103,7 +102,7 @@ else()
 endif()
 
 # Setup the configuration
-list(GET build_name_list 2 configuration)
+list(GET preset_list 2 configuration)
 if(NOT DEFINED configuration)
      message(FATAL_ERROR "Configuration not supplied.")
  endif()
@@ -139,7 +138,7 @@ else()
     set(CTEST_SITE "${APP_SITE}")
 endif()
 
-set(CTEST_BUILD_NAME "${preset}")
+set(CTEST_BUILD_NAME "${build_name}")
 
 # Set the generator. This will override the presets, but we have no option as
 # CTest refuses to configure unless there is a generator.
