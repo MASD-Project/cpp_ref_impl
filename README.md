@@ -8,6 +8,7 @@ Cpp](https://img.shields.io/lgtm/grade/cpp/g/MASD-Project/cpp_ref_impl.svg?logo=
 [![Continuous Linux](https://github.com/MASD-Project/cpp_ref_impl/actions/workflows/continuous-linux.yml/badge.svg)](https://github.com/MASD-Project/cpp_ref_impl/actions/workflows/continuous-linux.yml)
 [![Continuous Windows](https://github.com/MASD-Project/cpp_ref_impl/actions/workflows/continuous-windows.yml/badge.svg)](https://github.com/MASD-Project/cpp_ref_impl/actions/workflows/continuous-windows.yml)
 [![Continuous MacOS](https://github.com/MASD-Project/cpp_ref_impl/actions/workflows/continuous-macos.yml/badge.svg)](https://github.com/MASD-Project/cpp_ref_impl/actions/workflows/continuous-macos.yml)
+[![Nightly Build](https://github.com/MASD-Project/cpp_ref_impl/actions/workflows/nightly-linux.yml/badge.svg)](https://github.com/MASD-Project/cpp_ref_impl/actions/workflows/nightly-linux.yml)
 [![Build Dashboard](https://img.shields.io/badge/cdash-dashboard-00cc00.svg)](https://my.cdash.org/index.php?project=MASD+Project+-+C%2B%2B+Reference+Implementation)
 [![Language](https://img.shields.io/badge/Language-C++-blue.svg)](https://www.openhub.net/p/dogen/analyses/latest/languages_summary)
 [![Language](https://img.shields.io/badge/Language-C++-blue.svg)](https://www.openhub.net/p/dogen/analyses/latest/languages_summary)
