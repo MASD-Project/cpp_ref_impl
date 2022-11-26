@@ -54,3 +54,11 @@ jobs:
           $preset="${{matrix.family}}-${{matrix.compiler}}-${{matrix.buildtype}}"
           $cmake_args="build_group=Experimental,build_name=$preset,with_presets=ON"
           ctest -VV --preset $preset --script "CTest.cmake,$cmake_args"
+
+      - name: Gitter
+        if: always()
+        uses: juztcode/gitter-github-action@v2
+        with:
+          room-id: ${{secrets.GITTER_ROOM_ID}}
+          token: ${{secrets.GITTER_TOKEN}}
+          text: ${{github.workflow}} - ${{matrix.family}}-${{matrix.compiler}}-${{matrix.buildtype}} - ${{job.status}}
