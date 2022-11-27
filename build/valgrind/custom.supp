@@ -213,16 +213,6 @@
 }
 
 {
-   CMake
-   Memcheck:Leak
-   match-leak-kinds: reachable
-   fun:malloc
-   obj:/home/marco/local/cmake-3.15.3-Linux-x86_64/bin/cmake
-   obj:/home/marco/local/cmake-3.15.3-Linux-x86_64/bin/cmake
-   obj:/home/marco/local/cmake-3.15.3-Linux-x86_64/bin/cmake
-}
-
-{
    boost log 6
    Memcheck:Leak
    match-leak-kinds: reachable
@@ -320,4 +310,14 @@ fun:_Znwm
    fun:_ZN5boost3log12v2s_mt_posix4core14implementation16init_thread_dataEv
    fun:_ZN5boost3log12v2s_mt_posix4core14implementation15get_thread_dataEv
    ...
+}
+
+{
+   CMake Leak
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   obj:/home/runner/work/_temp/412950619/cmake-3.24.3-linux-x86_64/bin/cmake
+   obj:/home/runner/work/_temp/412950619/cmake-3.24.3-linux-x86_64/bin/cmake
+   fun:(below main)
 }
