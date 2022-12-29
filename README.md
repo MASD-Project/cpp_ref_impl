@@ -3,8 +3,6 @@
 [![Status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat)](https://github.com/MASD-Project/cpp_ref_impl/pulse/monthly)
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/MASD-Project/Lobby)
 [![Issues](https://img.shields.io/github/issues/MASD-Project/cpp_ref_impl.svg)](https://github.com/MASD-Project/cpp_ref_impl/issues)
-[![Code Quality:
-Cpp](https://img.shields.io/lgtm/grade/cpp/g/MASD-Project/cpp_ref_impl.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/MASD-Project/cpp_ref_impl/context:cpp)
 [![Continuous Linux](https://github.com/MASD-Project/cpp_ref_impl/actions/workflows/continuous-linux.yml/badge.svg)](https://github.com/MASD-Project/cpp_ref_impl/actions/workflows/continuous-linux.yml)
 [![Continuous Windows](https://github.com/MASD-Project/cpp_ref_impl/actions/workflows/continuous-windows.yml/badge.svg)](https://github.com/MASD-Project/cpp_ref_impl/actions/workflows/continuous-windows.yml)
 [![Continuous MacOS](https://github.com/MASD-Project/cpp_ref_impl/actions/workflows/continuous-macos.yml/badge.svg)](https://github.com/MASD-Project/cpp_ref_impl/actions/workflows/continuous-macos.yml)
