@@ -2,7 +2,6 @@
 #+options: <:nil c:nil todo:nil ^:nil d:nil date:nil author:nil
 #+tags: { element(e) attribute(a) module(m) }
 :PROPERTIES:
-:masd.codec.dia.comment: true
 :masd.codec.model_modules: cpp_ref_impl.cpp_98
 :masd.codec.input_technical_space: cpp
 :masd.codec.reference: cpp.builtins
@@ -24,7 +23,6 @@ Tests support for C++ 98.
 * package1                                                           :module:
   :PROPERTIES:
   :custom_id: O0
-  :masd.codec.dia.comment: true
   :END:
 
 Test comment.
