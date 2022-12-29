@@ -32,17 +32,5 @@ if (DOGEN_CLI_EXECUTABLE)
             ${DOGEN_COMMON_OPTIONS})
 
         add_dependencies(generate_all_${frontend} generate_${target_ext})
-
-        if (WITH_BENCHMARKS)
-            add_custom_target(benchmark_generate_${target_ext}
-                COMMENT "Benchmarking generating ${target_ext} model" VERBATIM
-                WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-                COMMAND ${benchmark_command} ${benchmark_repeats}
-                ${benchmark_directory}/${benchmark_prefix}${target}.csv
-                ${DOGEN_CLI_EXECUTABLE} generate --target ${target_path}
-                ${DOGEN_GENERATION_OPTIONS} ${DOGEN_COMMON_OPTIONS})
-            add_dependencies(benchmark_${frontend}
-                benchmark_generate_${target_ext})
-        endif()
     endforeach()
 endif()

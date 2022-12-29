@@ -393,40 +393,7 @@ if (DOGEN_CLI_EXECUTABLE)
     set(DOGEN_GENERATION_OPTIONS --output-directory ${projects_dir}/)
 endif()
 
-if (WITH_JSON_VALIDATION)
-    add_custom_target(iaj)
-    add_custom_target(vaj)
-
-    add_dependencies(iaj indent_all_json)
-    add_dependencies(vaj indent_all_json)
-endif()
-
-#
-# benchmarks
-#
-if(NOT UNIX)
-    set(WITH_BENCHMARKS "off")
-endif()
-
-if(WITH_BENCHMARKS)
-    set(benchmark_repeats "20")
-    set(benchmark_command "${CMAKE_SOURCE_DIR}/build/scripts/benchmark.linux.sh")
-    set(benchmark_directory "${stage_test_data_dir}/benchmarks/actual")
-    set(benchmark_prefix "")
-    if(NOT EXISTS "${benchmark_directory}")
-        make_directory("${benchmark_directory}")
-    endif()
-
-    add_custom_target(benchmark_stats)
-    add_custom_target(benchmark_all)
-    add_custom_target(ba)
-    add_dependencies(ba benchmark_all)
-
-    add_custom_target(benchmark_dia)
-    add_custom_target(benchmark_json)
-    add_custom_target(benchmark_org)
-    add_dependencies(benchmark_all benchmark_dia)
-endif()
+set(WITH_BENCHMARKS "off")
 
 #
 # include all sub directories

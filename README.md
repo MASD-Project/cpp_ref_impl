@@ -43,7 +43,7 @@ or its abbreviation ```rat```.
 ## Regenerating Models
 
 If you'd like to run Dogen to regenerate all models, you can do so by using the
-target ```generate_all_dia``` or its abbreviation ```gad```. This is useful, for
+target ```generate_all_org``` or its abbreviation ```gao```. This is useful, for
 example, to update the Reference Implementation to the latest version of Dogen,
 or just to see how Dogen works. However, note that Dogen must be on the path for
 the target to become available. If you installed Dogen via a package, it's
@@ -57,9 +57,6 @@ CMAKE_PROGRAM_PATH=/path/to/dogen/binary cmake ../..
 After regeneration, you can then use ```git diff``` to inspect the differences
 produced by regeneration, if any. The build directory contains all of the logs,
 under the directory ```log```.
-
-If you'd like to regenerate ODB code, you can use the target ```odb_all``` or
-the abbreviated target ```oa```. Note that
 
 # Test Models
 
