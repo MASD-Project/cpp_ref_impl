@@ -16,13 +16,13 @@ jobs:
         with:
           submodules: true
 
-      - name: Print latest commit
-        run: echo ${{ github.sha }}
-
-      - id: should_run
+      - name: check latest commit is less than a day
+        id: should_run
         continue-on-error: true
-        name: check latest commit is less than a day
-        run: test -z $(git rev-list --after="24 hours" ${{ github.sha }}) && echo "::set-output name=should_run::false"
+        run: |
+          export latest_commit="`git log -1 --format='%H'`"
+          echo "Latest commit: ${latest_commit}"
+          test -z $(git rev-list --after="24 hours" ${latest_commit}) && echo "should_run=false" >> $GITHUB_OUTPUT
 
   build:
     needs: [check_changes]
